@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1",
   "title": "Introduction to the course",
-  "body": " Introduction to the course     Explication of the different course resources.    Keys to success in the course.    Calculus as the science of functions.       Course resources  Course resources    Blah     "
+  "body": " Introduction to the course     Explication of the different course resources.    Keys to success in the course.    Calculus as the science of functions.       Course resources  Course resources are .    Blah     "
 },
 {
   "id": "s_intro-2",
