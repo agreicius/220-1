@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <article xml:id="my-great-book">
+    <title>Math 220-1 Single-variable differential calculus</title>
+    <subtitle>Kursobjekt</subtitle>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+  
+    <!-- Include chapters -->
+    <!-- <?xml version="1.0" encoding="UTF-8"?> -->
+    
+    <!-- <chapter xml:id="c_sing_diff_calc" xmlns:xi="http://www.w3.org/2001/XInclude"> -->
+      <!-- <title>Single-variable differential calculus</title> -->
+    <xi:include  href="s_intro.ptx"/>
+    <xi:include  href="s_limits_naive.ptx"/>
+
+  <!-- </chapter> -->
+    
+
+    
+    <backmatter>
+      <appendix xml:id="appendix-notation">
+        <title>Notation</title>
+        <notation-list/>
+      </appendix>
+      <appendix xml:id="appendix-defs">
+        <title>Definitions</title>
+        <list-of elements="definition convention" divisions="section" />
+      </appendix>
+      <appendix xml:id="appendix-thms">
+        <title>Theory and procedures</title>
+        <list-of elements="theorem corollary lemma algorithm" divisions="section" />
+      </appendix>
+      <appendix xml:id="appendix-egs">
+        <title>Examples</title>
+        <list-of elements="example" divisions="section" />
+      </appendix>
+      <appendix xml:id="appendix-interactives">
+        <title>Interactives and computational cells</title>
+        <list-of elements="project" divisions="chapter"/>
+      </appendix>
+      <appendix xml:id="appendix-dicta">
+        <title>Dicta, fiats, <etc/></title>
+        <list-of elements="principle assumption" divisions="chapter" />
+      </appendix>
+
+    </backmatter>
+
+  </article>
+</pretext>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_limits_naive" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Limits of functions and limit laws</title>
+    <introduction>
+        <p>
+            
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-naive-definition-of-limit">
+        <title>Naive definition of limit</title>
+        <definition xml:id="d_2">
+            <statement>
+                <p>
+                    The limit.
+                </p>
+            </statement>
+        </definition>
+    </subsection>
+
+</section>

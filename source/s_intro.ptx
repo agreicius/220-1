@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Introduction to the course</title>
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Explication of the different course resources. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Keys to success in the course.
+                </p>
+            </li>
+            <li>
+                <p>
+                   Calculus as the science of functions.  
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    <!-- <introduction>
+        <p>
+        </p>
+        
+        
+    </introduction> -->
+<subsection xml:id="ss_course_resources">
+    <title>Course resources</title>
+    <p>
+        Course resources
+    </p>
+    <definition xml:id="def-1">
+        <statement>
+            <p>
+             Blah   
+            </p>
+        </statement>
+    </definition>
+</subsection>
+</section>
