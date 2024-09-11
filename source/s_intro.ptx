@@ -30,14 +30,36 @@
 <subsection xml:id="ss_course_resources">
     <title>Course resources</title>
     <p>
-        Course resources are as follows.
+        There is relatively large variety of resources for this course, all of which you should make use of. Let's take a quick tour. 
     </p>
-    <definition xml:id="def-1">
-        <statement>
+    <ul>
+        <li>
             <p>
-             Blah   
+                The <url href="https://canvas.northwestern.edu/courses/221960">Canvas site</url> for the course. This is where you find all information about the course, including the syllabus, your current grades in the course, important announcements, and links to other course resources, including the ones below. 
             </p>
-        </statement>
-    </definition>
+        </li>
+        <li>
+            <p>
+                The <url href="https://mylabmastering.pearson.com/?courseId=12347781#/">MyLab Math site</url> for the course. This site has two important features you will use: 
+                <ul>
+                    <li>
+                        <p>
+                            Online homework. This is where you will access and submit your online homework assignments. 
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Online version of the textbook. A complete electronic version of the course textbook, <em>Thomas's Calculus</em>, can be accessed through this site. Click on <c>eText Contents</c> on the left menu, then click the link to the full text under the <c>eText</c> heading in the central panel. 
+                        </p>
+                    </li>
+                </ul> 
+            </p>
+        </li>
+        <li>
+            <p>
+                The <url href="https://agreicius.github.io/220-1">Kursobjekt</url> for the course. The <url href="https://agreicius.github.io/220-1">Kursobjekt</url> (German for <q>course object</q>) serves as an official and concise document of all and only the material we cover in the course. There will be a section for each of our 27 class meetings that serves as lecture notes for that meeting, complete with all statements of definitions, theory, examples and their solutions, and the occasional interactive cell. Furthermore, it contains a series of reference appendices that allow you to easily find specific definitions, bits of theory, procedures, and examples covered in class, making it an excellent review tool. So why the funny name? I like German compound nouns and sometimes give in to fits of pretension.
+            </p>
+        </li>
+    </ul>
 </subsection>
 </section>
