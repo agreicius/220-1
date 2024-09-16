@@ -30,8 +30,7 @@
 <subsection xml:id="ss_course_resources">
     <title>Course resources</title>
     <p>
-        There is relatively large variety of resources for this course, all of which you should make use of. Let's take a quick tour. 
-    </p>
+        There are a large variety of resources for this course, all of which you should make use of. Let's take a quick tour. 
     <ul>
         <li>
             <p>
@@ -60,6 +59,209 @@
                 The <url href="https://agreicius.github.io/220-1">Kursobjekt</url> for the course. The <url href="https://agreicius.github.io/220-1">Kursobjekt</url> (German for <q>course object</q>) serves as an official and concise document of all and only the material we cover in the course. There will be a section for each of our 27 class meetings that serves as lecture notes for that meeting, complete with all statements of definitions, theory, examples and their solutions, and the occasional interactive cell. Furthermore, it contains a series of reference appendices that allow you to easily find specific definitions, bits of theory, procedures, and examples covered in class, making it an excellent review tool. So why the funny name? I like German compound nouns and sometimes give in to fits of pretension.
             </p>
         </li>
+        <li>
+            <p>
+                Executive summaries, lecture notes, videos will be posted on the detailed <url href="https://canvas.northwestern.edu/courses/221960/pages/class-schedule" >Course Schedule </url> as the quarter unfolds. 
+            </p>
+        </li>
     </ul>
+</p>
+</subsection>
+<subsection xml:id="ss_keys_success">
+    <title>Keys to success</title>
+    <p>
+        <ol>
+            <li>
+                <p>
+                    Attend lectures and discussions. We give our own unique treatment of the topics in the textbook that includes a particular approach and a particular emphasis. Class meetings give you the opportunity to make a connection with your classmates, instructors, and TAs. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Show up to office hours. Students of Math 220-1 are permitted to attend any office hour of any one of the 15 instructors and TAs. As above this is a good way to make contact with students, instructors, and TAs. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Read our Canvas announcements carefully. Among other things, these give valuable clues about what to expect on quizzes and exams. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Do as many exercises as possible <em>by hand</em>, with pencil and paper, without technological distractions. Where can you find exercises? Your textbook is the best source. At the end of each section you find a large number of exercises of different flavors. The MLM online homework questions are drawn from these. Doing the exercises by hand (and asking about them in office hours) is one of the best ways to prepare for quizzes and exams. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Do the MLM homework. Doing the online versions of the textbook exercises is not as useful as doing them by hand with pencil and paper, however, this is a good way to stay connected with the course, and an easy way to shore up your grade. (MLM homework is worth 20% of your grade.)
+                </p>
+            </li>
+            <li>
+                <p>
+                    Take advantage of the various programs offered through <url href="https://www.northwestern.edu/academic-support-learning/">Academic Support and Learning Advancement (ASLA)</url>. The most effective option is the <url href="https://www.northwestern.edu/academic-support-learning/course-support/peer-guided-study-groups/">Peer Guided Study Group (PGSG)</url>, which requires enrolling in one of the PGSG sections for Math 220-1. 
+                </p>
+            </li>
+        </ol>
+    </p>
+</subsection>
+<subsection xml:id="ss_calc_science_">
+    <title>Calculus as the science of functions</title>
+    <p>
+      Calculus in its modern form, and as it will be presented to you at Northwestern, can be concisely described as the <em>science of functions</em>. We will make this statement more precise in <xref ref="dict_calc_science"/>. To do so we first recall the definition of a function and some related concepts.  
+</p>
+<definition xml:id="d_function">
+    <title>Function</title>
+          <notation>
+            <usage><m>f\colon X\rightarrow Y</m></usage>
+            <description>a function from <m>X</m> to <m>Y</m></description>
+          </notation>
+          <notation>
+            <usage><m>\range f</m></usage>
+            <description>range of function <m>f</m></description>
+          </notation>
+          <statement>
+            <p>
+            Let <m>X</m> and <m>Y</m> be sets. A <term>function</term> <m>f</m> from <m>X</m> to <m>Y</m>, denoted <m>f\colon X\rightarrow Y</m>, is a rule which, given any <term>input</term> <m>x\in X</m>, returns an <term>output</term> <m>y\in Y</m>. We write <m>y=f(x)</m> in this case, and call <m>y</m> the <term>image</term> of <m>x</m> under <m>f</m>, or the <term>value</term> of <m>f</m> at <m>x</m>. Similarly, we say <m>f</m> <term>maps</term> (or <term>sends</term>) the input <m>x</m> to the output <m>y=f(x)</m>.
+            </p>
+            <p>
+              The set <m>X</m> is called the <term>domain</term> of <m>f</m>; the set <m>Y</m> is called the <term>codomain</term> of <m>f</m>. The <term>range</term> of <m>f</m>, denoted <m>\range f</m>, is the set of all outputs of <m>f</m>. Using <xref ref="d_set_builder_notation" text="custom">set-builder notation</xref>, we have 
+              <men xml:id="eq_range">
+                \range f=\{y\in Y\colon y=f(x) \text{ for some } x\in X\}
+              </men>.
+            </p>
+          </statement>
+</definition>
+<remark>
+    <title>Domain and codomain</title>
+    <p>
+        The domain and codomain of a function are, strictly speaking, part of its definition. In this regard, the statement
+        <men xml:id="eq_incomp_state">
+            \text{ let } f(x)=\sqrt{x}
+        </men>
+        is not a complete definition of a function, as it does not specify the domain and codomain. We will take more care than the text does in this regard. A completed version of <xref ref="eq_incomp_state"/> looks something like 
+        <men xml:id="eq_comp_state">
+            \text{let } f\colon [0, \infty)\rightarrow \R \text{ be defined as } f(x)=\sqrt{x}
+        </men>.
+    </p>
+</remark>
+<remark>
+    <title>Range versus codomain</title>
+    <p>
+        The <xref ref="eq_range" text="custom">range</xref> of a function <m>f\colon X\rightarrow Y</m> is by definition a <xref ref="d_set_inclusion" text="custom">subset</xref> of the codomain <m>Y</m>, but it need not be equal to the entire set <m>Y</m>. In other words, using set inclusion notation, we always have <m>\range f\subseteq Y</m>, but it is not always the case that <m>\range f=Y</m>. 
+    </p>
+    <p>
+        As an example, consider the function <m>f\colon \R\rightarrow \R</m> defined as <m>f(x)=x^2</m>. The codomain of <m>f</m> is <m>\R</m> and the range of <m>f</m> is <m>[0,\infty)</m> (the set of <em>nonnegative</em> real numbers), which is a <xref ref="d_set_inclusion" text="custom">proper subset</xref> of <m>\R</m>: <ie/>, <m>[0,\infty)\subsetneq \R</m>. 
+    </p>
+</remark>
+<p>
+    With these notions in place we can now precisely describe the kind of functions that (single-variable) calculus studies. We do so officially, as a dictum.  
+</p>
+<principle xml:id="dict_calc_science">
+    <title>Calculus is the science of functions</title>
+    <statement>
+        <p>
+         Single-variable calculus is the study of functions of the form <m>f\colon D\rightarrow \R</m>, where <m>D</m> is a subset of <m>\R</m> (<ie/>, <m>D\subseteq \R</m>). This study is conducted in large part with the help of two fundamental tools: the <em>derivative</em> and the <em>integral</em>. The definitions of the derivative and integral rely in turn on an even more fundamental concept: the <em>limit</em>. 
+        </p>
+    </statement>
+</principle>
+<p>
+    In Math 220-1 (single-variable differential calculus), we introduce the limit and develop the theory of the derivative; in Math 220-2 (single-variable integral calculus), we study the integral. From now on, for the sake of convenience, we will assume that all functions considered in this course are of the particular form described in <xref ref="dict_calc_science"/>. We record this as an official declaration, or <em>fiat</em>. 
+</p>
+<assumption xml:id="fiat_function_form">
+    <title>Calculus functions</title>
+    <statement>
+        <p>
+            Unless stated otherwise, any function <m>f</m> considered in this course will be assumed to be of the form <m>f\colon D\rightarrow \R</m>, where <m>D</m> is a subset of <m>\R</m> (<ie/>, <m>D\subseteq \R</m>).
+        </p>
+    </statement>
+</assumption>
+<remark>
+    <title>Calculus functions</title>
+    <p>
+        <xref ref="fiat_function_form"/> allows us a small shortcut when defining a function: namely, we do not need to specify the codomain, as this is always <m>\R</m>. Thus the the function defined by <xref ref="eq_comp_state"/> can now be described as the function <m>f</m> with domain <m>D=[0,\infty)</m> defined as <m>f(x)=\sqrt{x}</m>. 
+    </p>
+</remark>
+<p>
+    What is so important about studying functions, and what sort of properties of functions do we wish to examine? The short answer is that functions are one of the most fundamental tools for <em>modeling</em> empirical phenomena. Scientific inquiry will often begin by treating one empirical quantity <m>q</m> as being determined or dependent on some other empirical quantity <m>x</m> (or even multiple quantities <m>x_1, x_2,\dots, x_n</m> in a multivariable model). In this situation it is natural to model the quantity <m>q</m> as a function of these other quantities: <ie/>, we assume there is a function <m>f</m> satisfying <m>q=f(x)</m> (or <m>q=f(x_1,x_2,\dots, x_n)</m> in a multivariable model). Some examples: 
+    <ul>
+        <li>
+            <p>
+                Model the vertical velocity <m>v</m> of a skydiver in free fall as a function of the time <m>t</m> elapsed since jumping from the plane. In this case we assume <m>v=f(t)</m> for some function <m>f</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Model the atmospheric temperature <m>T</m> as a function of altitude <m>a</m>. In this case we assume <m>T=f(a)</m> for some function <m>f</m>.  
+            </p>
+        </li>
+        <li>
+            <p>
+                A marketing firm models the yearly sales <m>S</m> of a certain product as a function of its price <m>p</m> and the yearly amount <m>a</m> the producer spends on advertising. In this case we assume <m>S=f(p,a)</m> for some (multivariable) function <m>f</m>.  
+            </p>
+        </li>
+    </ul>
+Observe how in these modeling situations the defining characteristic of a function <m>f</m>, that each input <m>x</m> <em>determines</em> a fixed output <m>f(x)</m>, captures our intuitive idea of one quantity being <em>dependent</em> on another. (This is where the language of <em>dependent</em> and <em>independent</em> variables comes from.) 
+</p>
+
+<!-- <convention>
+    <title>Elaborated function notation</title>
+    <p>
+        The notation <m>f\colon X\rightarrow Y</m> simply indicates that <m>f</m> is a function with domain <m>X</m> and codomain <m>Y</m>. When we wish to indicate what the actual rule is that defines <m>f</m>, we sometimes use the elaborated notation
+        <md>
+          <mrow>f\colon X \amp\rightarrow Y</mrow>
+          <mrow> x \amp\mapsto f(x)</mrow>
+        </md>.
+        This is read as <q><m>f</m> is the function with domain <m>X</m> and codomain <m>Y</m> that maps an input <m>x</m> to the output <m>f(x)</m></q>. 
+      </p>
+</convention>  -->
+</subsection>
+<subsection xml:id="ss_sets">
+    <title>Set definitions and notation</title>
+    <definition xml:id="d_sets">
+        <idx><h>sets</h></idx>
+        <idx><h>sets</h><h>empty sets</h></idx>
+        <idx><h>sets</h><h>membership</h></idx>
+        <notation>
+          <usage> <m>x\in A</m> </usage>
+          <description>set membership</description>
+        </notation>
+          <title>Sets and set membership</title>
+          <statement>
+            <p>
+            A <term>set</term> <m>X</m> is a collection of objects, called the <term>members</term> or <term>elements</term> of <m>X</m>. We write <m>x\in X</m> if the object <m>x</m> is a member of <m>X</m>, and <m>x\notin X</m> if <m>x</m> is not a member of <m>X</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <definition xml:id="d_set_inclusion">
+            <title>Subsets</title>
+            <idx><h>sets</h><h>subset</h></idx>
+            <idx><h>sets</h><h>inclusion</h></idx>
+            <notation>
+              <usage><m>A\subseteq B</m></usage>
+              <description>set inclusion</description>
+            </notation>
+            <statement>
+              <p>
+              A set <m>X</m> is a <term>subset</term> of a set <m>Y</m>, denoted <m>X \subseteq Y</m>, if every member of <m>X</m> is a member of <m>Y</m>:  <ie />, <m>x\in X</m> implies <m>x\in Y</m> for any object <m>x</m>. The relation <m>X\subseteq Y</m> is called <term>set inclusion</term>.
+              </p>
+              <p>
+                If <m>X\subseteq Y</m> but <m>X\ne Y</m>, we say <m>X</m> is a <term>proper subset</term> of <m>Y</m>, denoted <m>X\subsetneq Y</m>. 
+              </p>
+            </statement>
+          </definition>
+
+          <definition xml:id="d_set_builder_notation">
+            <title>Set-builder notation</title>
+            <idx><h>sets</h><h>set builder notation</h></idx>
+            <statement>
+              <p>
+              Let <m>X</m> be a set, and let <m>P</m> be a property that elements of <m>X</m> either satisfy or do not satisfy. For an element <m>x\in X</m>, let <m>P(x)</m> denote the statement that <m>x</m> satisfies <m>P</m>.  The set of all elements of <m>X</m> satisfying <m>P</m> is denoted
+              <me>
+                \{x \in X \colon P(x) \}
+              </me>.
+              </p>
+            </statement>
+          </definition>
 </subsection>
 </section>
