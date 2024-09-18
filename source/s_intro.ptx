@@ -288,6 +288,9 @@ Observe how in these modeling situations the defining characteristic of a functi
 <p>
     Historically, the development of calculus was most plagued by the challenge of coming up with rigorous mathematical definitions for the notions of <em>approaching a value</em> to arbitrarily close degree without necessarily attaining it. Much nonsense was produced in this endeavor (Isaac Newton's <em>fluxions</em> and <em>fluents</em>, and Gottfried Wilhelm Leibniz's <em>infinitesimals</em>, for example), as well as a fair dose of vitriolic recriminations (George Berkeley accusing Newton and Leibniz of peddling in dubious <q>ghosts of departed quantities</q>).
     <aside>
+        <title>Historical reading</title>
+        
+        
         <p>
             If you are interested in the history of calculus, which is fascinating, you might check out <em>The History of the calculus and its conceptual development</em> by Carl B. Boyer.
         </p>
@@ -335,6 +338,10 @@ Observe how in these modeling situations the defining characteristic of a functi
               <usage><m>A\subseteq B</m></usage>
               <description>set inclusion</description>
             </notation>
+            <notation>
+                <usage><m>A\subsetneq B</m></usage>
+                <description>proper set inclusion</description>
+              </notation>
             <statement>
               <p>
               A set <m>X</m> is a <term>subset</term> of a set <m>Y</m>, denoted <m>X \subseteq Y</m>, if every member of <m>X</m> is a member of <m>Y</m>:  <ie />, <m>x\in X</m> implies <m>x\in Y</m> for any object <m>x</m>. The relation <m>X\subseteq Y</m> is called <term>set inclusion</term>.
