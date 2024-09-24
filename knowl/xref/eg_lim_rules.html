@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Using limit rules.</span>
+</h4>
+<div class="para logical">
+<div class="para">Compute the limit below. Your answer should be a <em class="emphasis">chain of equalities</em> with steps justified by limit rules.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to -2}\frac{x^3+x+1}{\sqrt[3]{4x^2+11}}
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to -2}\frac{x^3+x+1}{\sqrt[3]{4x^2+11}} \amp = \frac{\lim\limits_{x\to -2}(x^3+x+1)}{\lim\limits_{x\to -2}\sqrt[3]{4x^2+11}}
+\amp \text{(quot. rule)}\\
+\amp =\frac{(\lim\limits_{x\to -2}x)^3+\lim\limits_{x\to -2}x+\lim\limits_{x\to -2}1}{\sqrt[3]{\lim\limits_{x\to -2}(4x^2+11)}}
+\amp \text{(sum, power rule/root rule)}\\
+\amp =\frac{(-2)^3-2+1}{\sqrt[3]{\lim_{x\to -2}(4x^2)+\lim\limits_{x\to -2}11}}
+\amp \text{(ident., const. rule/sum rule)}\\
+\amp =\frac{-9}{\sqrt[3]{4(\lim\limits_{x\to -2}x)^2+11}}
+\amp \text{(scal. mult., power, const. rule)}\\
+\amp =-\frac{9}{\sqrt[3]{4(-2)^2+11}} \amp \text{(ident. rule)}\\
+\amp =-\frac{9}{\sqrt[3]{27}}=-3\text{.}
+\end{align*}
+</div></div></div></details></div></article><span class="incontext"><a class="internal" href="s_limits_naive.html#eg_lim_rules">in-context</a></span>
+</body>
+</html>
