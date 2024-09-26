@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2",
   "title": "Informal definition of limits",
-  "body": " Informal definition of limits     Give an informal definition of the limit of a function at a given value.    Investigate the existence and\/or value of a function graphically, by examining a a graph.    Use rigorous limit laws to compute limits of functions formed from other functions using common arithmetic operations.      Many of the questions we will study in regard to functions revolve around how the output of a function changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The limit of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with an example the type of statements we wish to formalize with limit language.   Function behavior   Suppose is the function whose graph is given below.   Graph of function   Graph of complicated function     Describe how the output behaves as the input approaches each of the values . For some of these values, you might consider how approaches from the left and right separately.    As approaches , either from the left or right, the values of the function get arbitrarily large and negative.  As approaches from the left, the values of get closer and closer to . However, as approaches from the right, the values get closer and closer to .  As approaches from the left or right, the values of the function approach the real number . We also happen to have : , the value of at is equal to .  As approaches from the left, the values of the function approach . However, as approaches from the right, the values oscillate wildly above and below and do not seem to approach any single value.  As approaches from the left or right, the values of the function approach . Interestingly, however, the actual value of at the input is not equal to .     Greater than, less than, large, larger than  The terms greater than , less than , large , and larger than have very particular meanings when used in mathematics. This can be a significant source of confusion, in part because some of those terms are roughly synonymous in vernacular English. Let us disambiguate.   Greater than  We say that the real number is greater than if . In terms of location on the real line, being greater than simply means lying to the right of:  is greater than if and only if lies to the right of on the number line.    Less than  We say that the real number is less than if . In terms of location on the real line, being less than simply means lying to the left of:  is less than if and only if lies to the left of on the number line.    Large, larger than  We say that a real number is large if its distance to the origin is large: , if its absolute value is a large positive number. Consequently, a number is larger than a number if the absolute value of is greater than the absolute value of : , is larger than if .  Thus, according to our definition is larger than (since ) even though is less than .      Informal definition of limit   Function defined on set   Let be a function with domain . Given , we say that is defined at if is an element of the domain: , . Similarly, given a subset , we say that is defined on if is included in the domain: , .     Limit (informal)   Suppose is a function defined everywhere on an open interval containing the point , except possibly at itself. We say that the limit of as approaches exists if there is a value such that the function value can be made arbitrarily close to provided is sufficiently close (but not equal) to .  When this is the case, we call the limit of as approaches and write . When the limit does not exist we will say that does not exist.     Limit description of graph   Let be the function with graph given in . Use the language and notation of limits to describe the behavior of for inputs near the values .    The limit does not exist. There is no value that approaches for inputs sufficiently close to . Indeed, as gets arbitrarily close to , becomes arbitrarily large and negative.  The limit does not exist. If is arbitrarily close to , and less than (to the left), then the values gets arbitrarily close to ; thus if the limit existed it would have to be equal to . And yet for inputs arbitrarily close to but greater than (to the right), the values are greater than : , they get no closer than a distance of from the value . This implies is not the limit, and hence that no limit exists.  We have . Since , we have in this case.  The limit does not exist. See the explanation in .  We have . Note that in this case is an element of the domain and .     Limit as compared to value   Provide graphs of the following functions on their entire implied domain: . For each function discuss the limit behavior at as compared with the value of the function at .      Graph of   Graph of f      Graph of   Graph of g      Graph of   Graph of h          Limit rules  We now state some useful limit formulas and rules. These will give us a means of breaking down the limit computation of a complicated function into limits of simpler functions. Technically speaking we must prove the validity of each of these rules and formulas; however this would be a fool's errand until we have a rigorous definition of the limit to work with. Such a definition will be provided in the near future, though even then we will not concern ourselves overly with proofs; we are more interested in learning how to make valid use of the rules.  Our first theorem gives us formulas for computing the limits of particular types of functions: constant functions, and the identity function.   Constant and identity functions      Constant function  Fix a real number and let be the constant function defined as for all . Given any we have .    Identity function  Let be the identity function defined as for all . Given any we have .       In contrast to the last theorem, our next theorem does not provide any formulas per se, but rather gives us rules governing how limits interact with various function operations .   Limit rules   Let and be functions, and suppose and exist for the real number .   Sum rule   .    Difference rule   .    Scalar multiple rule   for all .    Product rule   .    Quotient rule  If , then .    Power rule   for all positive integers .    Root rule   for all positive integers , where we must assume is positive if is even.    Replacement rule  If is a function satisfying for all in an open interval about , then .        Limit rules  It is useful to think of as giving us a bunch of algebraic rules for computing limits of functions defined using addition, subtraction, multiplication, etc. For the most part these rules tell us that we can bring the limit into various operations: for example, the first two rules tell us that we can bring the limit into sums and differences of functions. Or better, using plain English, they tell us that the limit of a sum (of functions) is the sum of the limits, and that the limit of a difference (of functions) is the difference of the limits.  In fact most of the rules in can be nicely summarized in plain English ( , the limit of a product is the product of the limits , the limit of an -th power is the -th power of the limit ), and these summaries are helpful for remembering how the limit interacts with function operations.    Quotient rule  Assume as in that and exist and consider the limit . Mark well that we can only make use of the quotient rule if , in which case we can conclude that the limit of the quotient is the quotient of the limits.  Note further that in the case where , we cannot automatically conclude that the limit does not exist; it simply the case that we cannot make use of the quotient rule to evaluate this limit. When this happens, we must look to other means for investigating the limit. See .    Using limit rules  Compute the limit below. Your answer should be a chain of equalities with steps justified by limit rules.     .     Evaluation (polynomials and rational functions)      Polynomial evaluation  Let be a polynomial. Given any , we have .    Rational evaluation  Let and be polynomials. For any satisfying , we have .        Polynomial evaluation  Give a simplified computation of the limit in using .    Quotient rule does not apply  Compute the limit below. Your answer should be a chain of equalities with each step justified.     "
+  "body": " Informal definition of limits     Give an informal definition of the limit of a function at a given value.    Investigate the existence and\/or value of a function graphically, by examining a a graph.    Use rigorous limit laws to compute limits of functions formed from other functions using common arithmetic operations.      Many of the questions we will study in regard to functions revolve around how the output of a function changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The limit of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is.   Graph of function   Given a function , where , its graph is the set . In other words the graph of is the set of all points in the -plane of the form , where .     Function behavior   Suppose is the function whose graph is given below.   Graph of function   Graph of complicated function     Describe how the output behaves as the input approaches each of the values . For some of these values, you might consider how approaches from the left and right separately.    As approaches , either from the left or right, the values of the function get arbitrarily large and negative.  As approaches from the left, the values of get closer and closer to . However, as approaches from the right, the values get closer and closer to .  As approaches from the left or right, the values of the function approach the real number . We also happen to have : , the value of at is equal to .  As approaches from the left, the values of the function approach . However, as approaches from the right, the values oscillate wildly above and below and do not seem to approach any single value.  As approaches from the left or right, the values of the function approach . Interestingly, however, the actual value of at the input is not equal to .     Large and small, greater than and less than  This is a good point to elucidate what we mean in mathematics when we talk about a number being large or small. Both these attributes refer to the size or magnitude of the number, and these in turn are defined as the absolute value of the number. Furthermore, geometrically, the absolute value measures the distance from to the origin. Thus, we say a number is large or small depending on whether its absolute value is large or small, which depends on whether is far away from or close to on the real line. As a result, we say that both of the following are sequences where the numbers get arbitrarily large: . In more detail we say that the first sequence gets arbitrarily large and positive, while the second sequence gets arbitrarily large and negative.  Contrast this with the use of greater than and less than . These refer specifically to the ordering relation defined on : , . The relation is related to, but not completely determined by size of numbers. A good way of thinking of the relation geometrically is in terms of position on the real number line: we have if and only if lies to the left of as points on the number line. Thus, the number is less than the number (since ), even though is smaller than (since ).   Informal definition of limit   Function defined on set   Let be a function with domain . Given , we say that is defined at if is an element of the domain: , . Similarly, given a subset , we say that is defined on if is included in the domain: , .     Limit (informal)   Suppose is a function defined everywhere on an open interval containing the point , except possibly at itself. We say that the limit of as approaches exists if there is a value such that the function value can be made arbitrarily close to provided is sufficiently close (but not equal) to .  When this is the case, we call the limit of as approaches and write . When the limit does not exist we will say that does not exist.     Limit description of graph   Let be the function with graph given in . Use the language and notation of limits to describe the behavior of for inputs near the values .    The limit does not exist. There is no value that approaches for inputs sufficiently close to . Indeed, as gets arbitrarily close to , becomes arbitrarily large and negative.  The limit does not exist. If is arbitrarily close to , and less than (to the left), then the values gets arbitrarily close to ; thus if the limit existed it would have to be equal to . And yet for inputs arbitrarily close to but greater than (to the right), the values are greater than : , they get no closer than a distance of from the value . This implies is not the limit, and hence that no limit exists.  We have . Since , we have in this case.  The limit does not exist. See the explanation in .  We have . Note that in this case is an element of the domain and .     Limit as compared to value   Provide graphs of the following functions on their entire implied domain: . For each function discuss the limit behavior at as compared with the value of the function at .      Graph of   Graph of f      Graph of   Graph of g      Graph of   Graph of h          Limit rules  We now state some useful limit formulas and rules. These will give us a means of breaking down the limit computation of a complicated function into limits of simpler functions. Technically speaking we must prove the validity of each of these rules and formulas; however this would be a fool's errand until we have a rigorous definition of the limit to work with. Such a definition will be provided in the near future, though even then we will not concern ourselves overly with proofs; we are more interested in learning how to make valid use of the rules.  Our first theorem gives us formulas for computing the limits of particular types of functions: constant functions, and the identity function.   Constant and identity functions      Constant function  Fix a real number and let be the constant function defined as for all . Given any we have .    Identity function  Let be the identity function defined as for all . Given any we have .       In contrast to the last theorem, our next theorem does not provide any formulas per se, but rather gives us rules governing how limits interact with various function operations .   Limit rules   Let and be functions, and suppose and exist for the real number .   Sum rule   .    Difference rule   .    Scalar multiple rule   for all .    Product rule   .    Quotient rule  If , then .    Power rule   for all positive integers .    Root rule   for all positive integers , where we must assume is positive if is even.    Replacement rule  If is a function satisfying for all in an open interval about , then .        Limit rules  It is useful to think of as giving us a bunch of algebraic rules for computing limits of functions defined using addition, subtraction, multiplication, etc. For the most part these rules tell us that we can bring the limit into various operations: for example, the first two rules tell us that we can bring the limit into sums and differences of functions. Or better, using plain English, they tell us that the limit of a sum (of functions) is the sum of the limits, and that the limit of a difference (of functions) is the difference of the limits.  In fact most of the rules in can be nicely summarized in plain English ( , the limit of a product is the product of the limits , the limit of an -th power is the -th power of the limit ), and these summaries are helpful for remembering how the limit interacts with function operations.    Quotient rule  Assume as in that and exist and consider the limit . Mark well that we can only make use of the quotient rule if , in which case we can conclude that the limit of the quotient is the quotient of the limits.  Note further that in the case where , we cannot automatically conclude that the limit does not exist; it simply the case that we cannot make use of the quotient rule to evaluate this limit. When this happens, we must look to other means for investigating the limit. See .    Using limit rules  Compute the limit below. Your answer should be a chain of equalities with steps justified by limit rules.     .     Evaluation (polynomials and rational functions)      Polynomial evaluation  Let be a polynomial. Given any , we have .    Rational evaluation  Let and be polynomials. For any satisfying , we have .        Polynomial evaluation  Give a simplified computation of the limit in using .    Quotient rule does not apply  Compute the limit below. Your answer should be a chain of equalities with each step justified.     "
 },
 {
   "id": "s_limits_naive-2",
@@ -154,11 +154,20 @@ var ptx_lunr_docs = [
   "body": "   Give an informal definition of the limit of a function at a given value.    Investigate the existence and\/or value of a function graphically, by examining a a graph.    Use rigorous limit laws to compute limits of functions formed from other functions using common arithmetic operations.    "
 },
 {
+  "id": "d_function_graph",
+  "level": "2",
+  "url": "s_limits_naive.html#d_function_graph",
+  "type": "Definition",
+  "number": "2.1",
+  "title": "Graph of function.",
+  "body": " Graph of function   Given a function , where , its graph is the set . In other words the graph of is the set of all points in the -plane of the form , where .   "
+},
+{
   "id": "eg_function_behavior",
   "level": "2",
   "url": "s_limits_naive.html#eg_function_behavior",
   "type": "Example",
-  "number": "2.1",
+  "number": "2.2",
   "title": "Function behavior.",
   "body": " Function behavior   Suppose is the function whose graph is given below.   Graph of function   Graph of complicated function     Describe how the output behaves as the input approaches each of the values . For some of these values, you might consider how approaches from the left and right separately.    As approaches , either from the left or right, the values of the function get arbitrarily large and negative.  As approaches from the left, the values of get closer and closer to . However, as approaches from the right, the values get closer and closer to .  As approaches from the left or right, the values of the function approach the real number . We also happen to have : , the value of at is equal to .  As approaches from the left, the values of the function approach . However, as approaches from the right, the values oscillate wildly above and below and do not seem to approach any single value.  As approaches from the left or right, the values of the function approach . Interestingly, however, the actual value of at the input is not equal to .   "
 },
@@ -167,16 +176,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#rm_greater_less_large",
   "type": "Remark",
-  "number": "2.3",
-  "title": "Greater than, less than, large, larger than.",
-  "body": " Greater than, less than, large, larger than  The terms greater than , less than , large , and larger than have very particular meanings when used in mathematics. This can be a significant source of confusion, in part because some of those terms are roughly synonymous in vernacular English. Let us disambiguate.   Greater than  We say that the real number is greater than if . In terms of location on the real line, being greater than simply means lying to the right of:  is greater than if and only if lies to the right of on the number line.    Less than  We say that the real number is less than if . In terms of location on the real line, being less than simply means lying to the left of:  is less than if and only if lies to the left of on the number line.    Large, larger than  We say that a real number is large if its distance to the origin is large: , if its absolute value is a large positive number. Consequently, a number is larger than a number if the absolute value of is greater than the absolute value of : , is larger than if .  Thus, according to our definition is larger than (since ) even though is less than .     "
+  "number": "2.4",
+  "title": "Large and small, greater than and less than.",
+  "body": " Large and small, greater than and less than  This is a good point to elucidate what we mean in mathematics when we talk about a number being large or small. Both these attributes refer to the size or magnitude of the number, and these in turn are defined as the absolute value of the number. Furthermore, geometrically, the absolute value measures the distance from to the origin. Thus, we say a number is large or small depending on whether its absolute value is large or small, which depends on whether is far away from or close to on the real line. As a result, we say that both of the following are sequences where the numbers get arbitrarily large: . In more detail we say that the first sequence gets arbitrarily large and positive, while the second sequence gets arbitrarily large and negative.  Contrast this with the use of greater than and less than . These refer specifically to the ordering relation defined on : , . The relation is related to, but not completely determined by size of numbers. A good way of thinking of the relation geometrically is in terms of position on the real number line: we have if and only if lies to the left of as points on the number line. Thus, the number is less than the number (since ), even though is smaller than (since ).  "
 },
 {
   "id": "d_defined_at",
   "level": "2",
   "url": "s_limits_naive.html#d_defined_at",
   "type": "Definition",
-  "number": "2.4",
+  "number": "2.5",
   "title": "Function defined on set.",
   "body": " Function defined on set   Let be a function with domain . Given , we say that is defined at if is an element of the domain: , . Similarly, given a subset , we say that is defined on if is included in the domain: , .   "
 },
@@ -185,18 +194,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#d_limit_informal",
   "type": "Definition",
-  "number": "2.5",
+  "number": "2.6",
   "title": "Limit (informal).",
   "body": " Limit (informal)   Suppose is a function defined everywhere on an open interval containing the point , except possibly at itself. We say that the limit of as approaches exists if there is a value such that the function value can be made arbitrarily close to provided is sufficiently close (but not equal) to .  When this is the case, we call the limit of as approaches and write . When the limit does not exist we will say that does not exist.   "
-},
-{
-  "id": "subsec-naive-definition-of-limit-7",
-  "level": "2",
-  "url": "s_limits_naive.html#subsec-naive-definition-of-limit-7",
-  "type": "Example",
-  "number": "2.6",
-  "title": "Limit description of graph.",
-  "body": " Limit description of graph   Let be the function with graph given in . Use the language and notation of limits to describe the behavior of for inputs near the values .    The limit does not exist. There is no value that approaches for inputs sufficiently close to . Indeed, as gets arbitrarily close to , becomes arbitrarily large and negative.  The limit does not exist. If is arbitrarily close to , and less than (to the left), then the values gets arbitrarily close to ; thus if the limit existed it would have to be equal to . And yet for inputs arbitrarily close to but greater than (to the right), the values are greater than : , they get no closer than a distance of from the value . This implies is not the limit, and hence that no limit exists.  We have . Since , we have in this case.  The limit does not exist. See the explanation in .  We have . Note that in this case is an element of the domain and .   "
 },
 {
   "id": "subsec-naive-definition-of-limit-8",
@@ -204,6 +204,15 @@ var ptx_lunr_docs = [
   "url": "s_limits_naive.html#subsec-naive-definition-of-limit-8",
   "type": "Example",
   "number": "2.7",
+  "title": "Limit description of graph.",
+  "body": " Limit description of graph   Let be the function with graph given in . Use the language and notation of limits to describe the behavior of for inputs near the values .    The limit does not exist. There is no value that approaches for inputs sufficiently close to . Indeed, as gets arbitrarily close to , becomes arbitrarily large and negative.  The limit does not exist. If is arbitrarily close to , and less than (to the left), then the values gets arbitrarily close to ; thus if the limit existed it would have to be equal to . And yet for inputs arbitrarily close to but greater than (to the right), the values are greater than : , they get no closer than a distance of from the value . This implies is not the limit, and hence that no limit exists.  We have . Since , we have in this case.  The limit does not exist. See the explanation in .  We have . Note that in this case is an element of the domain and .   "
+},
+{
+  "id": "subsec-naive-definition-of-limit-9",
+  "level": "2",
+  "url": "s_limits_naive.html#subsec-naive-definition-of-limit-9",
+  "type": "Example",
+  "number": "2.8",
   "title": "Limit as compared to value.",
   "body": " Limit as compared to value   Provide graphs of the following functions on their entire implied domain: . For each function discuss the limit behavior at as compared with the value of the function at .      Graph of   Graph of f      Graph of   Graph of g      Graph of   Graph of h       "
 },
@@ -212,7 +221,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#th_lim_const_id",
   "type": "Theorem",
-  "number": "2.11",
+  "number": "2.12",
   "title": "Constant and identity functions.",
   "body": " Constant and identity functions      Constant function  Fix a real number and let be the constant function defined as for all . Given any we have .    Identity function  Let be the identity function defined as for all . Given any we have .      "
 },
@@ -221,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#th_lim_rules",
   "type": "Theorem",
-  "number": "2.12",
+  "number": "2.13",
   "title": "Limit rules.",
   "body": " Limit rules   Let and be functions, and suppose and exist for the real number .   Sum rule   .    Difference rule   .    Scalar multiple rule   for all .    Product rule   .    Quotient rule  If , then .    Power rule   for all positive integers .    Root rule   for all positive integers , where we must assume is positive if is even.    Replacement rule  If is a function satisfying for all in an open interval about , then .      "
 },
@@ -230,7 +239,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#ss_limit_laws-7",
   "type": "Remark",
-  "number": "2.13",
+  "number": "2.14",
   "title": "Limit rules.",
   "body": " Limit rules  It is useful to think of as giving us a bunch of algebraic rules for computing limits of functions defined using addition, subtraction, multiplication, etc. For the most part these rules tell us that we can bring the limit into various operations: for example, the first two rules tell us that we can bring the limit into sums and differences of functions. Or better, using plain English, they tell us that the limit of a sum (of functions) is the sum of the limits, and that the limit of a difference (of functions) is the difference of the limits.  In fact most of the rules in can be nicely summarized in plain English ( , the limit of a product is the product of the limits , the limit of an -th power is the -th power of the limit ), and these summaries are helpful for remembering how the limit interacts with function operations.  "
 },
@@ -239,7 +248,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#ss_limit_laws-8",
   "type": "Remark",
-  "number": "2.14",
+  "number": "2.15",
   "title": "Quotient rule.",
   "body": " Quotient rule  Assume as in that and exist and consider the limit . Mark well that we can only make use of the quotient rule if , in which case we can conclude that the limit of the quotient is the quotient of the limits.  Note further that in the case where , we cannot automatically conclude that the limit does not exist; it simply the case that we cannot make use of the quotient rule to evaluate this limit. When this happens, we must look to other means for investigating the limit. See .  "
 },
@@ -248,7 +257,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#eg_lim_rules",
   "type": "Example",
-  "number": "2.15",
+  "number": "2.16",
   "title": "Using limit rules.",
   "body": " Using limit rules  Compute the limit below. Your answer should be a chain of equalities with steps justified by limit rules.     .   "
 },
@@ -257,7 +266,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#cor_poly_rational",
   "type": "Corollary",
-  "number": "2.16",
+  "number": "2.17",
   "title": "Evaluation (polynomials and rational functions).",
   "body": " Evaluation (polynomials and rational functions)      Polynomial evaluation  Let be a polynomial. Given any , we have .    Rational evaluation  Let and be polynomials. For any satisfying , we have .      "
 },
@@ -266,7 +275,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#ss_limit_laws-11",
   "type": "Example",
-  "number": "2.17",
+  "number": "2.18",
   "title": "Polynomial evaluation.",
   "body": " Polynomial evaluation  Give a simplified computation of the limit in using .  "
 },
@@ -275,7 +284,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_limits_naive.html#eg_lim_quot_fail",
   "type": "Example",
-  "number": "2.18",
+  "number": "2.19",
   "title": "Quotient rule does not apply.",
   "body": " Quotient rule does not apply  Compute the limit below. Your answer should be a chain of equalities with each step justified.   "
 },
