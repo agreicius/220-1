@@ -25,7 +25,9 @@
     <subsection xml:id="subsec-naive-definition-of-limit">
         <title>Informal definition of the limit</title>
         
-        
+        <p>
+            What is deal?
+        </p>
         <p>
             Many of the questions we will study in regard to functions revolve around how the output of a function <m>f</m> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em>limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is. 
         </p> 
