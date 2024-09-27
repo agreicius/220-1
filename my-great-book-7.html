@@ -105,6 +105,12 @@ window.MathJax = {
 #cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
 #cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
 #cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
+#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
+#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
+#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
+#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
+#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
+#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -124,7 +130,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_limits_naive.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_limit_sandwich.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -239,14 +245,21 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition and rules</span></a></div>
+<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of the limit</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_limit_sandwich.html" class="internal"><span class="codenumber">3</span> <span class="title">Limits: algebraic technique and sandwich theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_alg_tech" class="internal"><span class="title">Algebraic techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_sandwich" class="internal"><span class="title">Sandwich theorem</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter active">
-<div class="toc-title-box"><a href="my-great-book-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -257,7 +270,7 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="backmatter" id="my-great-book-6"><nav class="summary-links"><ul>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="backmatter" id="my-great-book-7"><nav class="summary-links"><ul>
 <li><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
 <li><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></li>
 <li><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></li>
@@ -266,7 +279,7 @@ window.MathJax = {
 <li><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></li>
 </ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_limits_naive.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_limit_sandwich.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

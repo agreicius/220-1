@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Informal definition of limits</title>
+<title>Limits: informal definition</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -105,6 +105,12 @@ window.MathJax = {
 #cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
 #cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
 #cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
+#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
+#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
+#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
+#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
+#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
+#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -124,7 +130,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -239,14 +245,21 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section active">
-<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Informal definition of limits</span></a></div>
+<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of the limit</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_limit_sandwich.html" class="internal"><span class="codenumber">3</span> <span class="title">Limits: algebraic technique and sandwich theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_alg_tech" class="internal"><span class="title">Algebraic techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_sandwich" class="internal"><span class="title">Sandwich theorem</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -258,7 +271,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_limits_naive"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Informal definition of limits</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Limits: informal definition</span>
 </h2>
 <article class="objectives goal-like" id="s_limits_naive-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ol class="decimal" id="s_limits_naive-2-1">
@@ -266,9 +279,9 @@ window.MathJax = {
 <li id="s_limits_naive-2-1-2"><div class="para" id="s_limits_naive-2-1-2-1">Investigate the existence and/or value of a function graphically, by examining a a graph.</div></li>
 <li id="s_limits_naive-2-1-3"><div class="para" id="s_limits_naive-2-1-3-1">Use rigorous limit laws to compute limits of functions <span class="process-math">\(f\)</span> formed from other functions using common arithmetic operations.</div></li>
 </ol></article><section class="subsection" id="subsec-naive-definition-of-limit"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Informal definition of limit</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Informal definition of the limit</span>
 </h3>
-<div class="para" id="subsec-naive-definition-of-limit-1">Many of the questions we will study in regard to functions revolve around how the output of a function <span class="process-math">\(f\)</span> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em class="emphasis">limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is.</div>
+<div class="para" id="subsec-naive-definition-of-limit-2">Many of the questions we will study in regard to functions revolve around how the output of a function <span class="process-math">\(f\)</span> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em class="emphasis">limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is.</div>
 <article class="definition definition-like" id="d_function_graph"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Graph of function.</span>
 </h4> <div class="para logical" id="d_function_graph-2-1">
@@ -291,18 +304,18 @@ window.MathJax = {
 </div> <div class="para" id="eg_function_behavior-3-4">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the left, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(C\text{.}\)</span> However, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the right, the values <span class="process-math">\(f(x)\)</span> oscillate wildly above and below <span class="process-math">\(C\)</span> and do not seem to approach any single value.</div> <div class="para" id="eg_function_behavior-3-5">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(e\)</span> from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(D\text{.}\)</span> Interestingly, however, the actual value of <span class="process-math">\(f\)</span> at the input <span class="process-math">\(x=e\)</span> is not equal to <span class="process-math">\(D\text{.}\)</span>
 </div>
 </div></details></div></article><article class="remark remark-like" id="rm_greater_less_large"><h4 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Large and small, greater than and less than.</span>
-</h4> <div class="para logical" id="rm_greater_less_large-2">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Large and small, greater than and less thanLarge and small, greater than and less than</span>
+</h4>  <div class="para logical" id="rm_greater_less_large-3">
 <div class="para">This is a good point to elucidate what we mean in mathematics when we talk about a number being large or small. Both these attributes refer to the <em class="emphasis">size</em> or <em class="emphasis">magnitude</em> of the number, and these in turn are defined as the <em class="emphasis">absolute value</em> of the number. Furthermore, geometrically, the absolute value <span class="process-math">\(\abs{x}\)</span> measures the <em class="emphasis">distance</em> from <span class="process-math">\(x\)</span> to the origin. Thus, we say a number <span class="process-math">\(x\in \R\)</span> is large or small depending on whether its absolute value <span class="process-math">\(\abs{x}\)</span> is large or small, which depends on whether <span class="process-math">\(x\)</span> is far away from or close to <span class="process-math">\(0\)</span> on the real line. As a result, we say that both of the following are sequences where the numbers get arbitrarily large:</div>
-<div class="displaymath process-math" id="rm_greater_less_large-2-11">
+<div class="displaymath process-math" id="rm_greater_less_large-3-11">
 \begin{align*}
 1, 10, 100, 1000, 10000,\dots \amp  \amp -1, -10,-100, -1000,-10000,\dots \amp \text{.}
 \end{align*}
 </div>
 <div class="para">In more detail we say that the first sequence gets arbitrarily large and positive, while the second sequence gets arbitrarily large and negative.</div>
-</div> <div class="para logical" id="rm_greater_less_large-3">
+</div> <div class="para logical" id="rm_greater_less_large-4">
 <div class="para">Contrast this with the use of “greater than” and “less than”. These refer specifically to the ordering relation <span class="process-math">\(&lt;\)</span> defined on <span class="process-math">\(\R\text{:}\)</span> i.e.,</div>
-<div class="displaymath process-math" id="rm_greater_less_large-3-6">
+<div class="displaymath process-math" id="rm_greater_less_large-4-6">
 \begin{align*}
 x \text{ is less than } y \amp \iff x&lt; y \\
 x \text{ is greater than } y \amp \iff x&gt; y \text{.}
@@ -476,20 +489,46 @@ x+1 \amp \text{if } x\ne 1\\
 </div>
 </div>
 </li>
-</ol></div></article><article class="example example-like" id="ss_limit_laws-11"><h4 class="heading">
+</ol></div></article><article class="example example-like" id="eg_poly_eval"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial evaluation.</span>
-</h4> <div class="para" id="ss_limit_laws-11-2">Give a simplified computation of the limit in <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a> using <a href="s_limits_naive.html#cor_poly_rational" class="xref" data-knowl="./knowl/xref/cor_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.17: Evaluation (polynomials and rational functions)">Corollary 2.17</a>.</div></article><article class="example example-like" id="eg_lim_quot_fail"><h4 class="heading">
+</h4>
+<div class="para" id="eg_poly_eval-2-1">Give a simplified computation of the limit in <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a> using <a href="s_limits_naive.html#cor_poly_rational" class="xref" data-knowl="./knowl/xref/cor_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.17: Evaluation (polynomials and rational functions)">Corollary 2.17</a>.</div>
+<div class="solutions"><details id="eg_poly_eval-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_poly_eval-3-1">
+<div class="para">The polynomial evaluation formula allows us to skip a few steps in our computation from <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a>:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_lim_rules.html" id="eg_poly_eval-3-1-2">
+\begin{align*}
+\lim_{x\to -2}\frac{x^3+x+1}{\sqrt[3]{4x^2+11}} \amp = \frac{\lim\limits_{x\to -2}(x^3+x+1)}{\lim\limits_{x\to -2}\sqrt[3]{4x^2+11}}
+\amp \text{(quot. rule)}\\
+\amp =\frac{(-2)^3+(-2)+1}{\sqrt[3]{\lim\limits_{x\to -2}(4x^2+11)}}
+\amp \text{(poly. eval./root rule)}\\
+\amp =\frac{-9}{\sqrt[3]{4(-2)^2+11}}
+\amp \text{(poly eval.)}\\
+\amp =-\frac{9}{\sqrt[3]{27}}=-3\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_lim_quot_fail"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule does not apply.</span>
-</h4> <div class="para logical" id="eg_lim_quot_fail-2">
+</h4>
+<div class="para logical" id="eg_lim_quot_fail-2-1">
 <div class="para">Compute the limit below. Your answer should be a chain of equalities with each step justified.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \lim_{x\to 1}\frac{x^2-1}{x-1}
 \end{equation*}
 </div>
-</div></article></section></section></div>
+</div>
+<div class="solutions"><details id="eg_lim_quot_fail-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_quot_fail-3-1">
+<div class="para">Note that since the limit of the denominator function is 0, we are not able to use the quotient (or rational function) rule. We begin instead with some algebra:</div>
+<div class="displaymath process-math" id="eg_lim_quot_fail-3-1-1">
+\begin{align*}
+\lim_{x\to 1}\frac{x^2-1}{x-1}\amp =\lim_{x\to 1}\frac{(x-1)(x+1)}{x-1} \\
+\amp = \lim_{x\to 1}x+1 \amp \text{(repl. rule)}\\
+\amp =2 \amp \text{(poly eval.)}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

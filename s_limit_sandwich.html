@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Notation</title>
+<title>Limits: algebraic technique and sandwich theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -130,7 +130,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="my-great-book-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book-7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-defs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_limits_naive.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -251,17 +251,17 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="s_limit_sandwich.html" class="internal"><span class="codenumber">3</span> <span class="title">Limits: algebraic technique and sandwich theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_alg_tech" class="internal"><span class="title">Algebraic techniques</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_sandwich" class="internal"><span class="title">Sandwich theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter contains-active">
+<li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-7.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
@@ -270,45 +270,158 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="appendix" id="appendix-notation"><h2 class="heading">
-<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">A</span><span class="space"> </span><span class="title">Notation</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_limit_sandwich"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3</span><span class="space"> </span><span class="title">Limits: algebraic technique and sandwich theorem</span>
 </h2>
-<table class="notation-list">
-<tr>
-<th>Symbol</th>
-<th>Description</th>
-<th>Location</th>
-</tr>
-<tr>
-<td><span class="process-math">\(f\colon X\rightarrow Y\)</span></td>
-<td>a function from <span class="process-math">\(X\)</span> to <span class="process-math">\(Y\)</span>
-</td>
-<td><a href="s_intro.html#d_function" class="xref" data-knowl="./knowl/notation/d_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1: Function">Definition 1.1</a></td>
-</tr>
-<tr>
-<td><span class="process-math">\(\range f\)</span></td>
-<td>range of function <span class="process-math">\(f\)</span>
-</td>
-<td><a href="s_intro.html#d_function" class="xref" data-knowl="./knowl/notation/d_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1: Function">Definition 1.1</a></td>
-</tr>
-<tr>
-<td><span class="process-math">\(x\in A\)</span></td>
-<td>set membership</td>
-<td><a href="s_intro.html#d_sets" class="xref" data-knowl="./knowl/notation/d_sets.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.10: Sets and set membership">Definition 1.10</a></td>
-</tr>
-<tr>
-<td><span class="process-math">\(A\subseteq B\)</span></td>
-<td>set inclusion</td>
-<td><a href="s_intro.html#d_set_inclusion" class="xref" data-knowl="./knowl/notation/d_set_inclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11: Subsets">Definition 1.11</a></td>
-</tr>
-<tr>
-<td><span class="process-math">\(A\subsetneq B\)</span></td>
-<td>proper set inclusion</td>
-<td><a href="s_intro.html#d_set_inclusion" class="xref" data-knowl="./knowl/notation/d_set_inclusion.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.11: Subsets">Definition 1.11</a></td>
-</tr>
-</table></section></div>
+<section class="subsection" id="ss_alg_tech"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Algebraic techniques</span>
+</h3>
+<div class="para" id="ss_alg_tech-2">As we saw in <a href="s_limits_naive.html#eg_lim_quot_fail" class="xref" data-knowl="./knowl/xref/eg_lim_quot_fail.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.19: Quotient rule does not apply">Example 2.19</a>, there are limits to usefulness of our limit rules. In many cases, if we run into a dead end, some algebraic manipulation of the function expression can help us find a way forward. The following examples serve to illustrate this technique and remind you of some algebraic techniques.</div>
+<article class="example example-like" id="ss_alg_tech-3"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic limit technique: factoring.</span>
+</h4>
+<div class="para" id="ss_alg_tech-3-2-1">Compute the limit below. Your answer should be a chain of equalities with steps justified.</div>
+<div class="solutions"><details id="ss_alg_tech-3-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="ss_alg_tech-3-3-1"></div></div></details></div></article><article class="example example-like" id="eg_lim_factor"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic limit technique: factoring.</span>
+</h4>
+<div class="para logical" id="eg_lim_factor-2-1">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{v\to 2}\frac{v^3-8}{v^4-16}\text{.}
+\end{equation*}
+</div>
+<div class="para">Your answer should be a chain of equalities with steps justified.</div>
+</div>
+<div class="solutions"><details id="eg_lim_factor-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_factor-3-1">
+<div class="para">Note that the limit of the denominator expression as <span class="process-math">\(v\to 2\)</span> is zero, and thus we cannot directly use the quotient rule. Thus we begin with some algebraic manipulation. The key algebraic technique here is factoring.</div>
+<div class="displaymath process-math" id="eg_lim_factor-3-1-2">
+\begin{align*}
+\lim_{v\to 2}\frac{v^3-8}{v^4-16} \amp=\lim_{v\to 2}\frac{(v-2)(v^2+2v+8)}{(v^2-4)(v^2+4)} \\
+\amp = \lim_{v\to 2}\frac{(v-2)(v^2+2v+8)}{(v-2)(v+2)(v^2+4)}\\
+\amp = \lim_{v\to 2}\frac{v^2+2v+8}{(v+2)(v^2+4)} \amp \text{(repl. rule)}\\
+\amp = \frac{2^2+2\cdot 2+8}{(2+2)(2^2+4)} \amp \text{(rational eval.)}\\
+\amp = \frac{16}{32}=\frac{1}{2}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_limit_clear_denom"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic limit technique: clear denominator.</span>
+</h4>
+<div class="para logical" id="eg_limit_clear_denom-2-1">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{t\to 1}\frac{t-1}{\frac{t^2}{t+2}-\frac{1}{3}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Your answer should be a chain of equalities with steps justified.</div>
+</div>
+<div class="solutions"><details id="eg_limit_clear_denom-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_limit_clear_denom-3-1">
+<div class="para">Again, the quotient rule is not available to us, as the limit of the denominator function is zero. Accordingly, we begin with some algebra.</div>
+<div class="displaymath process-math" id="eg_limit_clear_denom-3-1-1">
+\begin{align*}
+\lim\limits_{t\to 1}\frac{t-1}{\frac{t^2}{t+2}-\frac{1}{3}} \amp =
+\lim\limits_{t\to 1}\frac{t-1}{\frac{3t^2-t-2}{3(t+2)}} \amp \text{(like denominators)}\\
+\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}\cdot \frac{3(t+2)}{3(t+2)} \\
+\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}\cdot \frac{3(t+2)}{3(t+2)} 
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_lim_radical"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic limit technique: radicals.</span>
+</h4>
+<div class="para logical" id="eg_lim_radical-2-1">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Your answer should be a chain of equalities with steps justified.</div>
+</div>
+<div class="solutions"><details id="eg_lim_radical-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_radical-3-1">
+<div class="para">We use the technique of multiplying the numerator and denominator by a “conjugate radical” expression <span class="process-math">\(\sqrt{x^2+100}+10\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="eg_lim_radical-3-1-3">
+\begin{align*}
+\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\amp =\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\frac{\sqrt{x^2+100}+10}{\sqrt{x^2+100}+10} \amp \text{(repl. rule)}\\
+\amp = \lim_{x\to 0}\frac{x^2+100-10}{x^2(\sqrt{x^2+100}+10)}\\
+\amp = \lim_{x\to 0}\frac{1}{\sqrt{x^2+100}+10}\\
+\amp = \frac{1}{\sqrt{\lim\limits_{x\to 0}x^2+100}+\lim\limits_{x\to 0}10}
+\amp \text{(quot., sum, power)}\\
+\amp = \frac{1}{\sqrt{100}+10} \amp \text{(poly. eval.)}\\
+\amp = \frac{1}{20}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article></section><section class="subsection" id="ss_sandwich"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Sandwich theorem</span>
+</h3>
+<div class="para" id="ss_sandwich-2">Another situation where our basic limit rules might not suffice to compute a given limit is when the function <span class="process-math">\(f\)</span> in question is unreasonably complicated, making its behavior near a point difficult to pin down. The <a href="s_limit_sandwich.html#th_sandwich" class="xref" data-knowl="./knowl/xref/th_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.5: Sandwich theorem">sandwich theorem</a> potentially gives a technique for getting around this issue. You can think of it as a means of replacing the complicated function <span class="process-math">\(f\text{,}\)</span> whose behavior is a mystery to us, with two simpler “bounding” functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{,}\)</span> whose behavior we understand. It is called the sandwich theorem as the necessary inequality <span class="process-math">\(g(x)\leq f(x)\leq h(x)\)</span> has <span class="process-math">\(f\)</span> “sandwiched” between the functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span>
+</div>
+<article class="theorem theorem-like" id="th_sandwich"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem.</span>
+</h4>
+<div class="para logical" id="th_sandwich-2-1">
+<div class="para">Fix a point <span class="process-math">\(a\in \R\)</span> and suppose that functions <span class="process-math">\(f,g,h\)</span> satisfy <span class="process-math">\(g(x)\leq f(x)\leq h(x)\)</span> for all <span class="process-math">\(x\ne a\)</span> lying in an open interval containing <span class="process-math">\(a\text{.}\)</span> If</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to a}g(x)=\lim_{x\to a}h(x)=L\text{,}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to a}f(x)=L\text{.}
+\end{equation*}
+</div>
+<div class="para">Using logical shorthand:</div>
+<div class="displaymath process-math" id="th_sandwich-2-1-8">
+\begin{align*}
+\left(g(x)\leq f(x)\leq h(x) \text{ and }  \lim_{x\to a}g(x)=\lim_{x\to a}h(x)=L\right)\amp\implies \lim_{x\to a}f(x)=L \text{.}
+\end{align*}
+</div>
+</div></article><details id="th_sandwich-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_sandwich-3-1">As with all bits of theory in mathematics, this statement requires proof; and as with most bits of theory in this course, we will not provide that proof. Interested in seeing how one would prove this and other statements from calculus? Take Math 320-1 or Math 321-1!</div></article></details><div class="para" id="ss_sandwich-4">Making use of the sandwich theorem requires carrying out a number of steps (with justification). The following procedure will be useful for doing this in an organized manner.</div>
+<article class="algorithm theorem-like" id="proc_sandwich"><h4 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem.</span>
+</h4>
+<div class="para logical" id="proc_sandwich-2-1">
+<div class="para">To compute <span class="process-math">\(\lim_{x\to a}f(x)\)</span> using the sandwich theorem, proceed as follows.</div>
+<ol class="decimal" id="proc_sandwich-2-1-2">
+<li id="proc_sandwich-2-1-2-1"><div class="para logical" id="proc_sandwich-2-1-2-1-1">
+<div class="para">Find bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span> satisfying the two following conditions:</div>
+<ol class="lower-alpha" id="proc_sandwich-2-1-2-1-1-3">
+<li id="proc_sandwich-2-1-2-1-1-3-1"><div class="para" id="proc_sandwich-2-1-2-1-1-3-1-1">
+<span class="process-math">\(g(x)\leq f(x)\leq h(x)\)</span> for all <span class="process-math">\(x\ne a\)</span> lying in an open interval containing <span class="process-math">\(a\text{.}\)</span>
+</div></li>
+<li id="proc_sandwich-2-1-2-1-1-3-2"><div class="para" id="proc_sandwich-2-1-2-1-1-3-2-1">
+<span class="process-math">\(\lim\limits_{x\to a}g(x)=\lim\limits_{x\to a}h(x)=L\)</span> for some <span class="process-math">\(L\in \R\text{.}\)</span>
+</div></li>
+</ol>
+</div></li>
+<li id="proc_sandwich-2-1-2-2"><div class="para" id="proc_sandwich-2-1-2-2-1">Conclude (citing the sandwich theorem) that <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\)</span>
+</div></li>
+</ol>
+</div></article><div class="para" id="ss_sandwich-6">The art of using the sandwich theorem consists in finding <em class="emphasis">useful</em> bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span> We illustrate with two examples.</div>
+<article class="example example-like" id="ss_sandwich-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: easy.</span>
+</h4>
+<div class="para logical" id="ss_sandwich-7-2-1">
+<div class="para">Suppose the function <span class="process-math">\(f(x)\)</span> satisfies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1-\frac{x^2}{4}\leq f(x)\leq 1+\frac{x^2}{4}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\ne 0\)</span> in the interval <span class="process-math">\((-1/3, 1/3)\text{.}\)</span> Compute <span class="process-math">\(\lim_{x\to 0}f(x)\text{.}\)</span>
+</div>
+</div>
+<div class="solutions"><details id="ss_sandwich-7-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="ss_sandwich-7-3-1"></div></div></details></div></article><article class="example example-like" id="ss_sandwich-8"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: harder.</span>
+</h4>
+<div class="para" id="ss_sandwich-8-2-1">Use the sandwich theorem to compute <span class="process-math">\(\lim\limits_{x\to 0}x^2\cos(1/x)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="ss_sandwich-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="ss_sandwich-8-3-1"></div></div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="my-great-book-7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-defs.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_limits_naive.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
