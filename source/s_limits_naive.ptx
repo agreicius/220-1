@@ -24,13 +24,22 @@
     
     <subsection xml:id="subsec-naive-definition-of-limit">
         <title>Informal definition of the limit</title>
-        
-        <p>
-            What is deal?
-        </p>
         <p>
             Many of the questions we will study in regard to functions revolve around how the output of a function <m>f</m> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em>limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is. 
+            Many of the questions we will study in regard to functions revolve around how the output of a function <m>f</m> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em>limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is. 
         </p> 
+        <definition xml:id="d_function_graph">
+            <title>Graph of function</title>
+            <statement>
+                <p>
+                    Given a function <m>f\colon D\rightarrow \R</m>, where <m>D\subseteq \R</m>, its <term>graph</term> is the set 
+                    <me>
+                        \{(x,y)\in \R^2\colon x\in D \text{ and } y=f(x)\}
+                    </me>.
+                    In other words the graph of <m>f</m> is the set of all points <m>P</m> in the <m>xy</m>-plane of the form <m>P=(x,f(x))</m>, where <m>x\in D</m>. 
+                </p>
+            </statement>
+        </definition>
         <definition xml:id="d_function_graph">
             <title>Graph of function</title>
             <statement>
@@ -108,6 +117,7 @@
         </solution>
         </example>
         <remark xml:id="rm_greater_less_large">
+            <title>Large and small, greater than and less than</title>
             <title>Large and small, greater than and less than</title>
             <p>
                 This is a good point to elucidate what we mean in mathematics when we talk about a number being large or small. Both these attributes refer to the <em>size</em> or <em>magnitude</em> of the number, and these in turn are defined as the <em>absolute value</em> of the number. Furthermore, geometrically, the absolute value <m>\abs{x}</m> measures the <em>distance</em> from <m>x</m> to the origin. Thus, we say a number <m>x\in \R</m> is large or small depending on whether its absolute value <m>\abs{x}</m> is large or small, which depends on whether <m>x</m> is far away from or close to <m>0</m> on the real line. As a result, we say that both of the following are sequences where the numbers get arbitrarily large:
