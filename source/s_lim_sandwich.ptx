@@ -161,9 +161,28 @@
                 </p>
             </statement>
         </algorithm>
-    <p>
-        As the examples below will illustrate, the art of using the sandwich theorem consists in finding <em>useful</em> bounding functions <m>g</m> and <m>h</m>. The examples We will illustrate <xref ref="proc_sandwich"/> with a few examples. Use the explanations there as a model for your own use of the sandwich theorem.  We illustrate with two examples. 
-    </p>
+    <remark xml:id="rm_sandwich">
+        <title>Sandwich theorem</title>
+        <p>
+        As the examples below will illustrate, the art of using <xref ref="proc_sandwich"/> lies in being able to find <em>useful</em> bounding functions <m>g</m> and <m>h</m>.  Use these examples as a model for your own use of <xref ref="proc_sandwich"/>. Note in particular how 
+        <ul>
+            <li>
+                <p>
+                    the explanations make explicit the two conditions that the bounding functions must satisfy;
+                </p>
+            </li>
+            <li>
+                <p>
+                    the explanations end with a concluding statement explicitly citing the sandwich theorem;
+                </p>
+            </li>
+            <li>
+                <p>
+                    giving the bounding functions <em>names</em> (<eg/>, <m>g</m> and <m>h</m>), as opposed to just providing formulas (<eg/>, <m>1-x^2/4</m>, <m>1+x^2/4</m>), makes these explanations more concise. 
+                </p>
+            </li>
+        </ul>
+    </p></remark>
     <example xml:id="eg_sandwich_easy">
         <title>Sandwich theorem: easy</title>
         <statement>
