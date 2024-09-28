@@ -401,9 +401,17 @@ window.MathJax = {
 <li id="proc_sandwich-2-1-2-2"><div class="para" id="proc_sandwich-2-1-2-2-1">Conclude (citing the sandwich theorem) that <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\)</span>
 </div></li>
 </ol>
-</div></article><div class="para" id="ss_sandwich-6">The art of using the sandwich theorem consists in finding <em class="emphasis">useful</em> bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span> We illustrate with two examples.</div>
-<article class="example example-like" id="eg_sandwich_easy"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: easy.</span>
+</div></article><article class="remark remark-like" id="rm_sandwich"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem.</span>
+</h4> <div class="para logical" id="rm_sandwich-2">
+<div class="para">As the examples below will illustrate, the art of using <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a> lies in being able to find <em class="emphasis">useful</em> bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span>  Use these examples as a model for your own use of <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a>. Note in particular how</div>
+<ul class="disc" id="rm_sandwich-2-6">
+<li id="rm_sandwich-2-6-1"><div class="para" id="rm_sandwich-2-6-1-1">the explanations make explicit the two conditions that the bounding functions must satisfy;</div></li>
+<li id="rm_sandwich-2-6-2"><div class="para" id="rm_sandwich-2-6-2-1">the explanations end with a concluding statement explicitly citing the sandwich theorem</div></li>
+<li id="rm_sandwich-2-6-3"><div class="para" id="rm_sandwich-2-6-3-1">giving the bounding functions <em class="emphasis">names</em> (e.g., <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span>), as opposed to just providing formulas (e.g., <span class="process-math">\(1-x^2/4\text{,}\)</span> <span class="process-math">\(1+x^2/4\)</span>), makes these explanations more concise.</div></li>
+</ul>
+</div></article><article class="example example-like" id="eg_sandwich_easy"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: easy.</span>
 </h4>
 <div class="para logical" id="eg_sandwich_easy-2-1">
 <div class="para">Suppose the function <span class="process-math">\(f(x)\)</span> satisfies</div>
@@ -416,14 +424,31 @@ window.MathJax = {
 </div>
 </div>
 <div class="solutions"><details id="eg_sandwich_easy-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_sandwich_easy-3-1">
-<div class="para">We follow the steps of <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a>. In this case our bounding functions <span class="process-math">\(g(x)=1-x^2/4\)</span> and <span class="process-math">\(h(x)=1+x^2/4\)</span> are provided for us, making life much easier. Note that by assumption our mystery function <span class="process-math">\(f\)</span> satisfies</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sandwich.html">
+<div class="para">We follow the steps of <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a>. In this case our bounding functions <span class="process-math">\(g(x)=1-x^2/4\)</span> and <span class="process-math">\(h(x)=1+x^2/4\)</span> are provided for us, making life much easier. By assumption our mystery function <span class="process-math">\(f\)</span> satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sandwich.html ./knowl/xref/eq_sand_easy.html" id="eq_sand_easy">
+\begin{equation}
+g(x)\leq f(x)\leq h(x)\tag{3.1}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\ne 0\in (-1/3, 1/3)\text{.}\)</span> Next we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sandwich.html ./knowl/xref/eq_sand_easy.html" id="eg_sandwich_easy-3-1-7">
+\begin{align*}
+\lim_{x\to 0}g(x) \amp = 1-0^2/4 \amp \text{(poly. eval.)}\\
+\amp =1\\
+\lim_{x\to 0}h(x) \amp = 1+0^2/4 \amp \text{(poly. eval.)}\\
+\amp =1\text{.}
+\end{align*}
+</div>
+<div class="para">Since <a href="s_limit_sandwich.html#eq_sand_easy" class="xref" data-knowl="./knowl/xref/eq_sand_easy.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.1">(3.1)</a> holds for all <span class="process-math">\(x\ne 0\in (-1/3,1/3)\text{,}\)</span> and since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_sandwich.html ./knowl/xref/eq_sand_easy.html">
 \begin{equation*}
-g(x)\leq f(x)\leq h(x)\text{.}
+\lim_{x\to 0}g(x)=\lim_{x\to 0}h(x)=1\text{,}
 \end{equation*}
 </div>
+<div class="para">we conclude that <span class="process-math">\(\lim\limits_{x\to 0}f(x)=1\text{.}\)</span>
+</div>
 </div></div></details></div></article><article class="example example-like" id="ss_sandwich-8"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: harder.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: harder.</span>
 </h4>
 <div class="para" id="ss_sandwich-8-2-1">Use the sandwich theorem to compute <span class="process-math">\(\lim\limits_{x\to 0}x^2\cos(1/x)\text{.}\)</span>
 </div>
