@@ -149,6 +149,7 @@
                                         </p>
                                     </li>
                                 </ol>
+                            For your own convenience, make sure to <em>name</em> these functions, as opposed to just providing formulas for them. 
                             </p>
                         </li>
                         <li>
@@ -161,9 +162,9 @@
             </statement>
         </algorithm>
     <p>
-        The art of using the sandwich theorem consists in finding <em>useful</em> bounding functions <m>g</m> and <m>h</m>. We illustrate with two examples. 
+        As the examples below will illustrate, the art of using the sandwich theorem consists in finding <em>useful</em> bounding functions <m>g</m> and <m>h</m>. The examples We will illustrate <xref ref="proc_sandwich"/> with a few examples. Use the explanations there as a model for your own use of the sandwich theorem.  We illustrate with two examples. 
     </p>
-    <example xml:base="eg_sandwich_easy">
+    <example xml:id="eg_sandwich_easy">
         <title>Sandwich theorem: easy</title>
         <statement>
             <p>
@@ -176,7 +177,25 @@
         </statement>
         <solution>
             <p>
-                
+            We follow the steps of <xref ref="proc_sandwich"/>. In this case our bounding functions <m>g(x)=1-x^2/4</m> and <m>h(x)=1+x^2/4</m> are provided for us, making life much easier. By assumption our mystery function <m>f</m> satisfies 
+            <men xml:id="eq_sand_easy">
+                g(x)\leq f(x)\leq h(x)
+            </men>
+            for all <m>x\ne 0\in (-1/3, 1/3)</m>. Next we compute 
+            <md>
+                <mrow>\lim_{x\to 0}g(x) \amp = 1-0^2/4 \amp \text{(poly. eval.)}</mrow>
+                <mrow> \amp =1</mrow>
+                <mrow>\lim_{x\to 0}h(x) \amp = 1+0^2/4 \amp \text{(poly. eval.)}</mrow>
+                <mrow> \amp =1</mrow>
+            </md>.
+            Since <xref ref="eq_sand_easy"/> holds for all <m>x\ne 0\in (-1/3,1/3)</m>, and since 
+            <me>
+                \lim_{x\to 0}g(x)=\lim_{x\to 0}h(x)=1
+            </me>,
+            we conclude that <m>\lim\limits_{x\to 0}f(x)=1</m>. 
+            
+
+            
             </p>
         </solution>
     </example>
