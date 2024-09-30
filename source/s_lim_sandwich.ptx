@@ -7,20 +7,6 @@
        <p>
         As we saw in <xref ref="eg_lim_quot_fail"/>, there are limits to usefulness of our limit rules. In many cases, if we run into a dead end, some algebraic manipulation of the function expression can help us find a way forward. The following examples serve to illustrate this technique and remind you of some algebraic techniques. 
        </p> 
-       <example>
-        <title>Algebraic limit technique: factoring</title>
-        <statement>
-            <p>
-              Compute the limit below. Your answer should be a chain of equalities with steps justified. 
-
-            </p>
-        </statement>
-        <solution>
-            <p>
-                
-            </p>
-        </solution>
-       </example>
        <example xml:id="eg_lim_factor">
         <title>Algebraic limit technique: factoring</title>
         <statement>
@@ -384,7 +370,7 @@
     <p>
         Our final result uses the sandwich theorem to investigate the limits of sine and cosine at zero. 
     </p>
-    <theorem xml:id="th_sandwich_cons">
+    <theorem xml:id="th_lim_sine_cos">
         <title>Sine and cosine evaluation at zero</title>
         <statement>
             <p>
@@ -418,7 +404,7 @@
                                 -\abs{\theta}\leq \sin \theta\leq \abs{\theta}
                             </men>
                             for all <m>\theta\in \R</m>. The proof of this inequality (given at the end of this section) is nontrivial, but also instructive: it appeals to some of the unit circle geometry that goes into the definition of the trigonometric functions. In any case, we will simply assume <xref ref="eq_sine_ineq"/> holds for the purpose of this proof. 
-                            But then our result is an easy consequence of the sandwich theorem. Indeed, setting <m>g(\theta)=-\abs{\theta}</m> and <m>h(\theta)=\abs{\theta}</m>, we have 
+                            With that in place, our result is an easy consequence of the sandwich theorem. Indeed, setting <m>g(\theta)=-\abs{\theta}</m> and <m>h(\theta)=\abs{\theta}</m>, we have 
                             <me>
                                 g(\theta)\leq \sin \theta\leq h(\theta)
                             </me>
@@ -450,7 +436,41 @@
             </p>
         </proof>
     </theorem>
-    
+    <p>
+        As promised in the proof of <xref ref="th_lim_sine_cos"/>, we provide a proof of the inequality <m>-\abs{\theta}\leq \sin \theta\leq \abs{\theta}</m>, or equivalently, <m>\abs{\sin \theta}\leq \abs{\theta}</m> for all <m>\theta\in \R</m>. You are not responsible for understanding this proof, but you might find the argument instructive nonetheless. 
+    </p>
+    <proof>
+        <title>Proof of <m>\abs{\sin\theta}\leq \abs{\theta}</m></title>
+        <p>
+        We will prove that 
+        <men xml:id="eq_sine_ineq_abs">
+            \abs{\sin \theta}\leq \abs{\theta}
+        </men>
+        for all <m>\theta\in \R</m>. First, observer that since <m>\sin(-\theta)=-\sin\theta</m>, we have 
+        <me>
+            \abs{\sin (-\theta)}=\abs{-\sin \theta}=\abs{\sin \theta}
+        </me>. 
+        Thus the function <m>f(\theta)=\abs{\sin \theta}</m> is even. Since <m>g(\theta)=\abs{\theta}</m> is also even, it suffices to prove <xref ref="eq_sine_ineq_abs"/> for all <m>\theta\geq 0</m>. Furthermore, since 
+        <me>
+            \theta\geq \pi/2\implies \sin\theta\leq 1 \leq \pi/2 \leq \theta
+        </me>,
+        and since <m>\sin(0)=0</m>, it suffices to show <xref ref="eq_sine_ineq_abs"/> for all <m>\theta\in (0,\pi/2)</m>. To this end, take any <m>\theta\in (0,\pi/2)</m>. The triangle <m>T=\Delta\, PQR</m>, where <m>P=(0,0)</m>,<m>Q=(\cos\theta, \sin\theta)</m>, and <m>R=(1,0)</m> lies within the the sector <m>S</m> of the unit disc determined by <m>P, Q, R</m>. (Diagram to appear sometime soon.) Elementary trigonometry tells us that <m>\operatorname{area} T=\frac{1}{2}\sin \theta</m>; elementary geometry tells us that <m>\operatorname{area} S=\frac{pi}\cdot \frac{\theta}{2\pi}=\frac{\theta}{2}</m>. We conclude that 
+        <md>
+            <mrow>\frac{1}{2}\sin \theta \amp= \operatorname{area} T</mrow>
+            <mrow> \amp \leq \operatorname{area} S</mrow>
+            <mrow> \amp =\frac{\theta}{2}</mrow>
+        </md>,
+        or equivalently, 
+        <me>
+            \sin\theta\leq \theta
+        </me>
+        for all <m>\theta\in (0,\pi/2)</m>. Since furthermore <m>\sin\theta\geq 0</m> and <m>\theta\geq 0</m> for <m>\theta\in (0,\pi/2)</m>, we see that 
+        <me>
+            \abs{\sin\theta}\leq \abs{\theta}
+        </me>
+        for all <m>\theta\in (0,\pi/2)</m>, as desired. 
+        </p>
+    </proof>
     </subsection>
 
 </section>
