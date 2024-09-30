@@ -2,7 +2,40 @@
 
 <section xml:id="s_lim_formal" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Limits: formal definition</title>
-
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Provide a rigorous definition of the limit. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Understand the quantifier logic underlying the formal definition of a limit in a <q>challenge and response</q> manner. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use the formal definition of the limit to compute a limit and/or decide whether a limit exists. 
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    <p>
+        As mentioned before, what makes <xref ref="d_limit_informal"/> less than rigorous is the use of the vague phrases <q>arbitrarily close</q> and <q>sufficiently close</q>. 
+    </p>
+    <definition xml:id="d_lim_formal">
+        <title>Limit (formal)</title>
+        <statement>
+            <p>
+                Suppose <m>f</m> is a function defined everywhere on an open interval containing the point <m>a\in \R</m>, except possibly at <m>a</m> itself. We say that the <term>limit</term> of <m>f</m> as <m>x</m> approaches <m>a</m> exists if there is a value <m>L</m> satisfying the following property: 
+                for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta &gt; 0</m> such that if <m>\abs{x-a}&lt; \delta</m>, then <m>\abs{f(x)-L}&lt; \epsilon</m>. Using logical shorthand:
+                <men xml:id="eq_lim_formal">
+                    \text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                </men>.
+            </p>
+        </statement>
+    </definition>
     
 
 </section>

@@ -42,11 +42,11 @@
             <p>
                 Note that the limit of the denominator expression as <m>v\to 2</m> is zero, and thus we cannot directly use the quotient rule. Thus we begin with some algebraic manipulation. The key algebraic technique here is factoring.  
                 <md>
-                    <mrow>\lim_{v\to 2}\frac{v^3-8}{v^4-16} \amp=\lim_{v\to 2}\frac{(v-2)(v^2+2v+8)}{(v^2-4)(v^2+4)} </mrow>
-                    <mrow> \amp = \lim_{v\to 2}\frac{(v-2)(v^2+2v+8)}{(v-2)(v+2)(v^2+4)}</mrow>
-                    <mrow> \amp = \lim_{v\to 2}\frac{v^2+2v+8}{(v+2)(v^2+4)} \amp \text{(repl. rule)}</mrow>
-                    <mrow> \amp = \frac{2^2+2\cdot 2+8}{(2+2)(2^2+4)} \amp \text{(rational eval.)}</mrow>
-                    <mrow> \amp = \frac{16}{32}=\frac{1}{2}</mrow>
+                    <mrow>\lim_{v\to 2}\frac{v^3-8}{v^4-16} \amp=\lim_{v\to 2}\frac{(v-2)(v^2+2v+4)}{(v^2-4)(v^2+4)} </mrow>
+                    <mrow> \amp = \lim_{v\to 2}\frac{(v-2)(v^2+2v+4)}{(v-2)(v+2)(v^2+4)}</mrow>
+                    <mrow> \amp = \lim_{v\to 2}\frac{v^2+2v+4}{(v+2)(v^2+4)} \amp \text{(repl. rule)}</mrow>
+                    <mrow> \amp = \frac{2^2+2\cdot 2+4}{(2+2)(2^2+4)} \amp \text{(rational eval.)}</mrow>
+                    <mrow> \amp = \frac{12}{32}=\frac{3}{8}</mrow>
                 </md>.
             </p>
         </solution>
@@ -71,7 +71,7 @@
                 <mrow> \amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}</mrow>
                 <mrow> \amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{(3t+2)(t-1)} </mrow>
                 <mrow> \amp =\lim\limits_{t\to 1}\frac{3(t+2)}{3t+2} \amp \text{(repl. rule)}</mrow>
-                <mrow> \amp = \frac{9}{5} \amp \text{(poly. eval.)}</mrow>
+                <mrow> \amp = \frac{9}{5} \amp \text{(rational eval.)}</mrow>
                </md> 
             </p>
         </solution>
@@ -92,10 +92,10 @@
                We use the technique of multiplying the numerator and denominator by a <q>conjugate radical</q> expression <m>\sqrt{x^2+100}+10</m>:
                <md>
                 <mrow> \lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\amp =\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\frac{\sqrt{x^2+100}+10}{\sqrt{x^2+100}+10} \amp \text{(repl. rule)}</mrow>
-                <mrow> \amp = \lim_{x\to 0}\frac{x^2+100-10}{x^2(\sqrt{x^2+100}+10)}</mrow>
+                <mrow> \amp = \lim_{x\to 0}\frac{x^2+100-100}{x^2(\sqrt{x^2+100}+10)}</mrow>
                 <mrow> \amp = \lim_{x\to 0}\frac{1}{\sqrt{x^2+100}+10}</mrow>
-                <mrow> \amp = \frac{1}{\sqrt{\lim\limits_{x\to 0}x^2+100}+\lim\limits_{x\to 0}10}
-                    \amp \text{(quot., sum, power)}
+                <mrow> \amp = \frac{1}{\sqrt{\lim\limits_{x\to 0}(x^2+100)}+\lim\limits_{x\to 0}10}
+                    \amp \text{(quot., sum, root)}
                 </mrow>
                 <mrow> \amp = \frac{1}{\sqrt{100}+10} \amp \text{(poly. eval.)}</mrow>
                 <mrow> \amp = \frac{1}{20}</mrow>
