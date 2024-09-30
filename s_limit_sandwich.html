@@ -111,6 +111,18 @@ window.MathJax = {
 #proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
 #proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
 #proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
+#th_abs_lim-2-1-1 { counter-set: th_abs_lim-2-1-1 0; }
+#th_abs_lim-2-1-1 > li::marker { content: ""counter(th_abs_lim-2-1-1,decimal)"."; }
+#th_abs_lim-2-1-1 > li { counter-increment: th_abs_lim-2-1-1; }
+#th_abs_lim-3-1-1 { counter-set: th_abs_lim-3-1-1 0; }
+#th_abs_lim-3-1-1 > li::marker { content: ""counter(th_abs_lim-3-1-1,decimal)"."; }
+#th_abs_lim-3-1-1 > li { counter-increment: th_abs_lim-3-1-1; }
+#th_sandwich_cons-2-1-1 { counter-set: th_sandwich_cons-2-1-1 0; }
+#th_sandwich_cons-2-1-1 > li::marker { content: ""counter(th_sandwich_cons-2-1-1,decimal)"."; }
+#th_sandwich_cons-2-1-1 > li { counter-increment: th_sandwich_cons-2-1-1; }
+#th_sandwich_cons-3-1-1 { counter-set: th_sandwich_cons-3-1-1 0; }
+#th_sandwich_cons-3-1-1 > li::marker { content: ""counter(th_sandwich_cons-3-1-1,decimal)"."; }
+#th_sandwich_cons-3-1-1 > li { counter-increment: th_sandwich_cons-3-1-1; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -322,8 +334,10 @@ window.MathJax = {
 \begin{align*}
 \lim\limits_{t\to 1}\frac{t-1}{\frac{t^2}{t+2}-\frac{1}{3}} \amp =
 \lim\limits_{t\to 1}\frac{t-1}{\frac{3t^2-t-2}{3(t+2)}} \amp \text{(like denominators)}\\
-\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}\cdot \frac{3(t+2)}{3(t+2)} \\
-\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}\cdot \frac{3(t+2)}{3(t+2)} 
+\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{3t^2-t-2}\\
+\amp =\lim\limits_{t\to 1}\frac{3(t-1)(t+2)}{(3t+2)(t-1)} \\
+\amp =\lim\limits_{t\to 1}\frac{3(t+2)}{3t+2} \amp \text{(repl. rule)}\\
+\amp = \frac{9}{5} \amp \text{(poly. eval.)}
 \end{align*}
 </div>
 </div></div></details></div></article><article class="example example-like" id="eg_lim_radical"><h4 class="heading">
@@ -407,7 +421,7 @@ window.MathJax = {
 <div class="para">As the examples below will illustrate, the art of using <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a> lies in being able to find <em class="emphasis">useful</em> bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span>  Use these examples as a model for your own use of <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.6: Sandwich theorem">Procedure 3.6</a>. Note in particular how</div>
 <ul class="disc" id="rm_sandwich-2-6">
 <li id="rm_sandwich-2-6-1"><div class="para" id="rm_sandwich-2-6-1-1">the explanations make explicit the two conditions that the bounding functions must satisfy;</div></li>
-<li id="rm_sandwich-2-6-2"><div class="para" id="rm_sandwich-2-6-2-1">the explanations end with a concluding statement explicitly citing the sandwich theorem</div></li>
+<li id="rm_sandwich-2-6-2"><div class="para" id="rm_sandwich-2-6-2-1">the explanations end with a concluding statement explicitly citing the sandwich theorem;</div></li>
 <li id="rm_sandwich-2-6-3"><div class="para" id="rm_sandwich-2-6-3-1">giving the bounding functions <em class="emphasis">names</em> (e.g., <span class="process-math">\(g\)</span> and <span class="process-math">\(h\)</span>), as opposed to just providing formulas (e.g., <span class="process-math">\(1-x^2/4\text{,}\)</span> <span class="process-math">\(1+x^2/4\)</span>), makes these explanations more concise.</div></li>
 </ul>
 </div></article><article class="example example-like" id="eg_sandwich_easy"><h4 class="heading">
@@ -448,11 +462,222 @@ g(x)\leq f(x)\leq h(x)\tag{3.1}
 <div class="para">we conclude that <span class="process-math">\(\lim\limits_{x\to 0}f(x)=1\text{.}\)</span>
 </div>
 </div></div></details></div></article><article class="example example-like" id="ss_sandwich-8"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: harder.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem: less easy.</span>
 </h4>
 <div class="para" id="ss_sandwich-8-2-1">Use the sandwich theorem to compute <span class="process-math">\(\lim\limits_{x\to 0}x^2\cos(1/x)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="ss_sandwich-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="ss_sandwich-8-3-1"></div></div></details></div></article></section></section></div>
+<div class="solutions"><details id="ss_sandwich-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ss_sandwich-8-3-1">
+<div class="para">Here we make use of a well-known and important inequality for the cosine function: namely, that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html">
+\begin{equation*}
+-1\leq \cos t\leq 1
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in \R\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html" id="eq_cos_ineq">
+\begin{equation}
+-1\leq \cos(1/x)\leq 1\tag{3.2}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\ne 0\text{.}\)</span> Since <span class="process-math">\(x^2\geq 0\)</span> for all <span class="process-math">\(x\text{,}\)</span> the inequalities in <a href="s_limit_sandwich.html#eq_cos_ineq" class="xref" data-knowl="./knowl/xref/eq_cos_ineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.2">(3.2)</a> still hold after multiplying each expression by <span class="process-math">\(x^2\text{:}\)</span> that is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html">
+\begin{equation*}
+-x^2\leq x^2\cos(1/x)\leq x^2
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\ne 0\text{.}\)</span> Thus, letting <span class="process-math">\(g(x)=-x^2\)</span> and <span class="process-math">\(h(x)=x^2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html" id="eq_harder">
+\begin{equation}
+g(x)\leq f(x)\leq h(x)\tag{3.3}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\ne 0\)</span> in the open inteval <span class="process-math">\(\R=(-\infty,\infty)\text{.}\)</span> Lastly, we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html" id="ss_sandwich-8-3-1-16">
+\begin{align*}
+\lim_{x\to 0}g(x) \amp = -0^2 \amp \text{(poly. eval.)}\\
+\amp = 0\\
+\lim_{x\to 0}h(x) \amp = 0^2 \amp \text{(poly. eval.)}\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">Since <a href="s_limit_sandwich.html#eq_harder" class="xref" data-knowl="./knowl/xref/eq_harder.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.3">(3.3)</a> holds for all <span class="process-math">\(x\ne 0\)</span> in <span class="process-math">\(\R\text{,}\)</span> and since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_cos_ineq.html ./knowl/xref/eq_harder.html">
+\begin{equation*}
+\lim_{x\to 0}g(x)=\lim_{x\to 0}h(x)=0\text{,}
+\end{equation*}
+</div>
+<div class="para">we conclude using the sandwich theorem that <span class="process-math">\(\lim\limits_{x\to 0}f(x)=0\text{.}\)</span>
+</div>
+</div></div></details></div></article><div class="para" id="ss_sandwich-9">Our next theorem concerns the absolute value, the definition of which we now recall.</div>
+<article class="definition definition-like" id="d_absolute_value"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value.</span>
+</h4> <div class="para logical" id="d_absolute_value-2-1">
+<div class="para">The <dfn class="terminology">absolute value</dfn> of a real number <span class="process-math">\(x\text{,}\)</span> denoted <span class="process-math">\(\abs{x}\text{,}\)</span> is defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{x}=\begin{cases}x\amp \text{if } x\geq 0 \\
+-x\amp \text{if } x&lt; 0
+\end{cases}\text{.}
+\end{equation*}
+</div>
+</div></article><article class="remark remark-like" id="rm_abs_val"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value.</span>
+</h4> <div class="para logical" id="rm_abs_val-2">
+<div class="para">Below we gather some useful remarks and facts about the absolute value.</div>
+<ul class="disc" id="rm_abs_val-2-1">
+<li id="rm_abs_val-2-1-1"><div class="para logical" id="rm_abs_val-2-1-1-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="rm_abs_val-2-1-1-1-1">
+\begin{align*}
+\abs{x} \amp \geq 0\\
+-\abs{x} \amp \leq x\leq \abs{x}
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+</div></li>
+<li id="rm_abs_val-2-1-2"><div class="para logical" id="rm_abs_val-2-1-2-1">
+<div class="para">Fix a nonnegative number <span class="process-math">\(a\geq 0\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="rm_abs_val-2-1-2-1-2">
+\begin{align*}
+\abs{x}=a \amp \iff x=\pm a\\
+\abs{x}\leq a \amp \iff -a\leq x\leq a
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+</div></li>
+<li id="rm_abs_val-2-1-3"><div class="para logical" id="rm_abs_val-2-1-3-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eq_abs_rad">
+\begin{equation}
+\sqrt{x^2}=\abs{x}\tag{3.4}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(x\in \R\text{.}\)</span>
+</div>
+</div></li>
+<li id="rm_abs_val-2-1-4"><div class="para" id="rm_abs_val-2-1-4-1">Fix a real number <span class="process-math">\(a\text{.}\)</span> Geometrically speaking <span class="process-math">\(\abs{x-a}\)</span> is the <em class="emphasis">distance</em> between <span class="process-math">\(x\)</span> and <span class="process-math">\(a\)</span> on the real line. In particular, taking <span class="process-math">\(a=0\text{,}\)</span> we see that <span class="process-math">\(\abs{x}=\abs{x-0}\)</span> is the distance between <span class="process-math">\(x\)</span> and the origin <span class="process-math">\(0\)</span> on the real line.</div></li>
+</ul>
+</div></article><article class="theorem theorem-like" id="th_abs_lim"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value limits.</span>
+</h4>
+<div class="para logical" id="th_abs_lim-2-1"><ol class="decimal" id="th_abs_lim-2-1-1">
+<li id="th_abs_lim-2-1-1-1">
+<span class="heading"><span class="title">Absolute value evaluation.</span></span><div class="para" id="th_abs_lim-2-1-1-1-2">
+<span class="process-math">\(\lim\limits_{x\to a}\abs{x}=\abs{a}\)</span> for all <span class="process-math">\(a\in \R\text{.}\)</span>
+</div>
+</li>
+<li id="th_abs_lim-2-1-1-2">
+<span class="heading"><span class="title">Absolute value implication.</span></span><div class="para logical" id="th_abs_lim-2-1-1-2-2">
+<div class="para">Fix <span class="process-math">\(a\in \R\text{.}\)</span> If <span class="process-math">\(\lim\limits_{x\to a}\abs{f(x)}=0\text{,}\)</span> then <span class="process-math">\(\lim\limits_{x\to a}f(x)=0\text{.}\)</span> Using logical shorthand:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to a}\abs{f(x)}=0\implies \lim_{x\to a}f(x)=0\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+</ol></div></article><details id="th_abs_lim-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_abs_lim-3-1"><ol class="decimal" id="th_abs_lim-3-1-1">
+<li id="th_abs_lim-3-1-1-1"><div class="para logical" id="th_abs_lim-3-1-1-1-1">
+<div class="para">Using the identity <span class="process-math">\(\abs{x}=\sqrt{x^2}\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_abs_rad.html ./knowl/xref/eq_abs_rad.html" id="th_abs_lim-3-1-1-1-1-2">
+\begin{align*}
+\lim_{x\to a}\abs{x} \amp = \lim_{x\to a}\sqrt{x^2} \amp \knowl{./knowl/xref/eq_abs_rad.html}{\text{(3.4)}}\\
+\amp = \sqrt{\lim_{x\to a}x^2} \amp \text{(power rule)}\\
+\amp = \sqrt{a^2} \amp \text{(poly. eval.)}\\
+\amp = \abs{a} \amp \knowl{./knowl/xref/eq_abs_rad.html}{\text{(3.4)}}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="th_abs_lim-3-1-1-2"><div class="para logical" id="th_abs_lim-3-1-1-2-1">
+<div class="para">To prove this implication (i.e., if-then statement), we <em class="emphasis">assume</em> that <span class="process-math">\(\lim\limits_{x\to a}\abs{f(x)}=0\)</span> and <em class="emphasis">prove</em>  that <span class="process-math">\(\lim\limits_{x\to a}f(x)=0  \text{.}\)</span> We do so using the sandwich theorem. Indeed, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\abs{t}\leq t\leq \abs{t}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(t\in \R\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\abs{f(x)}\leq f(x)\leq \abs{f(x)}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> Thus, letting <span class="process-math">\(g(x)=-\abs{f(x)}\)</span> and <span class="process-math">\(h(x)=\abs{f(x)}\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x)\leq f(x)\leq h(x)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{,}\)</span> and</div>
+<div class="displaymath process-math" id="th_abs_lim-3-1-1-2-1-16">
+\begin{align*}
+\lim_{x\to a}g(x) \amp = \lim_{x\to a}-\abs{f(x)}\\
+\amp = -\lim_{x\to a}\abs{f(x)} \amp \text{(scal. mult.)}\\
+\amp =0 \amp \text{(by assumption)}\\
+\lim_{x\to a}h(x) \amp = \lim_{x\to a}\abs{f(x)}\\
+\amp =0 \amp \text{(by assumption)}\text{.}
+\end{align*}
+</div>
+<div class="para">It now follows from the sandwich theorem that <span class="process-math">\(\lim\limits_{x\to a}f(x)=0\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></article></details><div class="para" id="ss_sandwich-13">Our final result uses the sandwich theorem to investigate the limits of sine and cosine at zero.</div>
+<article class="theorem theorem-like" id="th_sandwich_cons"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Sine and cosine evaluation at zero.</span>
+</h4>
+<div class="para logical" id="th_sandwich_cons-2-1"><ol class="decimal" id="th_sandwich_cons-2-1-1">
+<li id="th_sandwich_cons-2-1-1-1">
+<span class="heading"><span class="title">Sine evaluation at zero.</span></span><div class="para" id="th_sandwich_cons-2-1-1-1-2"><span class="process-math">\(\lim\limits_{\theta\to 0}\sin \theta=0
+\text{.}\)</span></div>
+</li>
+<li id="th_sandwich_cons-2-1-1-2">
+<span class="heading"><span class="title">Cosine evaluation at zero.</span></span><div class="para" id="th_sandwich_cons-2-1-1-2-2"><span class="process-math">\(\lim\limits_{\theta\to 0}\cos \theta=1
+\text{.}\)</span></div>
+</li>
+</ol></div></article><details id="th_sandwich_cons-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_sandwich_cons-3-1"><ol class="decimal" id="th_sandwich_cons-3-1-1">
+<li id="th_sandwich_cons-3-1-1-1"><div class="para logical" id="th_sandwich_cons-3-1-1-1-1">
+<div class="para">We use the sandwich theorem to prove this limit formula. Our choice of bounding functions will rely on an important inequality involving the sine function: namely</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sine_ineq.html ./knowl/xref/eq_sine_ineq.html" id="eq_sine_ineq">
+\begin{equation}
+-\abs{\theta}\leq \sin \theta\leq \abs{\theta}\tag{3.5}
+\end{equation}
+</div>
+<div class="para">for all <span class="process-math">\(\theta\in \R\text{.}\)</span> The proof of this inequality (given at the end of this section) is nontrivial, but also instructive: it appeals to some of the unit circle geometry that goes into the definition of the trigonometric functions. In any case, we will simply assume <a href="s_limit_sandwich.html#eq_sine_ineq" class="xref" data-knowl="./knowl/xref/eq_sine_ineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5">(3.5)</a> holds for the purpose of this proof. But then our result is an easy consequence of the sandwich theorem. Indeed, setting <span class="process-math">\(g(\theta)=-\abs{\theta}\)</span> and <span class="process-math">\(h(\theta)=\abs{\theta}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sine_ineq.html ./knowl/xref/eq_sine_ineq.html">
+\begin{equation*}
+g(\theta)\leq \sin \theta\leq h(\theta)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(\theta\text{,}\)</span> by inequality <a href="s_limit_sandwich.html#eq_sine_ineq" class="xref" data-knowl="./knowl/xref/eq_sine_ineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 3.5">(3.5)</a>, and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sine_ineq.html ./knowl/xref/eq_sine_ineq.html">
+\begin{equation*}
+\lim_{\theta\to 0}g(\theta)=\lim_{\theta\to 0}h(\theta)=0\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(\lim_{\theta\to 0}\abs{\theta}=0\text{.}\)</span> The sandwich theorem now implies <span class="process-math">\(\lim\limits_{\theta\to 0}\sin \theta=0\text{.}\)</span>
+</div>
+</div></li>
+<li id="th_sandwich_cons-3-1-1-2"><div class="para logical" id="th_sandwich_cons-3-1-1-2-1">
+<div class="para">First note that for all <span class="process-math">\(\theta\in (-\pi/2, \pi/2)\text{,}\)</span> we have <span class="process-math">\(\cos \theta\geq 0\text{,}\)</span> and hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_abs_rad.html" id="th_sandwich_cons-3-1-1-2-1-3">
+\begin{align*}
+\cos \theta  \amp = \abs{\cos \theta} \amp (\cos \theta\geq 0) \\
+\amp = \sqrt{\cos^2\theta} \amp \knowl{./knowl/xref/eq_abs_rad.html}{\text{(3.4)}}\\
+\amp = \sqrt{1-\sin^2\theta}
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(\theta\in (-\pi/2, \pi,2)\text{.}\)</span> We then have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_abs_rad.html" id="th_sandwich_cons-3-1-1-2-1-5">
+\begin{align*}
+\lim_{\theta\to 0}\cos\theta \amp = \lim_{\theta\to 0}\sqrt{1-\sin^2\theta} \amp (\text{repl. rule})\\
+\amp = \sqrt{\lim_{\theta\to 0}1-(\lim_{\theta\to 0}\sin\theta)^2} \amp \text{(root, sum,power)}\\
+\amp = \sqrt{1-0^2} \amp \text{(sine eval.)}\\
+\amp = 1\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_limits_naive.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
