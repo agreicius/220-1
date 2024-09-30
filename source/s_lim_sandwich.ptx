@@ -2,6 +2,26 @@
 
 <section xml:id="s_limit_sandwich" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Limits: algebraic technique and sandwich theorem</title>
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Use algebraic techniques to help compute limits.        
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use the sandwich theorem to compute limits. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Apply the sandwich theorem technique to limits involving absolute value, sine, and cosine. 
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    
     <subsection xml:id="ss_alg_tech">
         <title>Algebraic techniques</title>
        <p>
