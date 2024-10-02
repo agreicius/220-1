@@ -22,7 +22,7 @@
         </ol>
     </objectives>
     <p>
-        As mentioned before, what makes <xref ref="d_limit_informal"/> less than rigorous is the use of the vague phrases <q>arbitrarily close</q> and <q>sufficiently close</q>. The <q><m>\epsilon</m>-<m>\delta</m></q> formulation given in <xref ref="d_lim_formal"/> is a mathematically precise way of of capturing these notions. 
+        As mentioned before, what makes <xref ref="d_limit_informal"/> less than rigorous is the use of the vague phrases <q>arbitrarily close</q> and <q>sufficiently close</q>. The <q>epsilon-delta</q> formulation given in <xref ref="d_lim_formal"/> is a mathematically precise way of of capturing these notions. 
     </p>
     <definition xml:id="d_lim_formal">
         <title>Limit (formal)</title>
