@@ -72,7 +72,7 @@
                     <p>
                        Lastly, consider what effect the <em>universal quantifier</em> <q>for all <m>\epsilon</m></q> has. The full statement 
                        <me>
-                        \text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                        \text{for all } \epsilon &gt; 0, \text{ there is } \delta &gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
                        </me>
                        asserts that <em>for any positive</em> <m>\epsilon</m>, the value <m>f(x)</m> is within a distance <m>\epsilon</m> for all <m>x</m> sufficiently close to <m>a</m>. In particular, choosing <m>\epsilon</m> to be as small as you like, we have <m>f(x)</m> within that small distance <m>\epsilon</m> of <m>L</m> for all <m>x</m> sufficiently close to <m>a</m>. In other words, we can make <m>f(x)</m> <em>arbitrarily close</em> for all <m>x</m> sufficiently close (but not equal) to <m>a</m>.   
                     </p>
@@ -108,7 +108,7 @@
         <ol>
             <li>
                 <p>
-                    Treating <m>\epsilon</m> as an arbitrary undetermined positive constant, solve the inequality 
+                    Treating <m>\epsilon</m> as an arbitrary positive constant, solve the inequality 
                     <men xml:id="eq_proc_lim_def">
                         \abs{f(x)-L}&lt; \epsilon
                     </men>
@@ -141,8 +141,38 @@
     </statement>
     <solution>
         <p>
-            
+           We follow <xref ref="proc_epsilon_delta"/>.  
         </p>
+        <case>
+        <title>Step 1</title>
+        <p>
+            Treating <m>\epsilon</m> as a fixed arbitrary constant we attempt to solve the inequality <m>\abs{f(x)-3}&lt; \epsilon</m>:
+            <md>
+                <mrow> \abs{f(x)-3}&lt; \epsilon\amp \iff \abs{-4x+7-3}&lt; \epsilon </mrow>
+                <mrow> \amp \iff \abs{-4x+4}&lt; \epsilon</mrow>
+                <mrow> \amp \iff \abs{-4(x-1)}&lt; \epsilon</mrow>
+                <mrow> \amp \iff \abs{-4}\abs{x-1}&lt; \epsilon \amp \text{(abs. val. prop.)}</mrow>
+                <mrow> \amp \iff 4\abs{x-1}&lt; \epsilon</mrow>
+                <mrow> \amp \iff \abs{x-1}&lt; \frac{\epsilon}{4} \text{(abs. val. prop.)}</mrow>
+                <mrow> \amp \iff -\frac{\epsilon}{4}&lt; x-1&lt; \frac{\epsilon}{4}</mrow>
+                <mrow> \amp \iff 1-\frac{\epsilon}{4}&lt; x &lt; 1+\frac{\epsilon}{4}</mrow>
+            </md>.
+        </p>
+        </case>
+        <case>
+        <title>Step 2</title>
+        <p>
+        By step 1, we see that the solution <m>S</m> to our starting inequality is the set of <m>x</m> satisfying <m>1-\frac{\epsilon}{4}&lt; x &lt; 1+\frac{\epsilon}{4}</m>. In other words, <m>S=(1-\epsilon/4, 1+\epsilon/4)</m>. Thus <m>S</m> itself is of the form <m>(1-\delta, 1+\delta)</m>, where <m>\delta=\frac{\epsilon}{4}</m>. 
+        </p>
+        </case>
+        <case>
+        <title>Step 3</title>
+        <p>
+        Thus given any <m>\epsilon &gt; 0</m>, setting <m>\delta=\frac{\epsilon}{4}</m>, we have <m>\abs{f(x)-3}&lt; \epsilon</m> for all <m>x</m> satisfying <m>\abs{x-1}&lt; \delta=\epsilon/4</m>. We conclude that <m>\lim\limits_{x\to 1}f(x)=3</m>. 
+        </p>
+        </case>
+        
+        
     </solution>
 </example>
 <project>
@@ -182,7 +212,7 @@
         </p>
     </statement>
     <solution>
-        <!-- <p>
+        <p>
             Following <xref ref="eq_proc_lim_def"/> we treat <m>\epsilon</m> as an arbitrary positive constant and attempt to solve the inequality 
                 <me>
                     \abs{f(x)-1}&lt; \epsilon
@@ -190,26 +220,50 @@
             We have 
             <md>
                 <mrow>\abs{f(x)-1}&lt; \epsilon\amp \iff -\epsilon &lt; f(x)-1 &lt; \epsilon</mrow>
-                <mrow> \amp \iff -\epsilon &lt; \sqrt{x-1}-1 &lt; \epsilon</mrow>
-                <mrow> \amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1</mrow>
+                <mrow> \amp \iff -\epsilon &lt; \sqrt{x-2}-1 &lt; \epsilon</mrow>
+                <mrow> \amp \iff 1-\epsilon &lt; \sqrt{x-2}&lt; \epsilon+1</mrow>
             </md>.
             We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule 
             <me>
                 a&lt; b \iff a^2&lt; b^2
             </me>
             to apply, we need <m>a</m> and <m>b</m> to both be nonnegative. (Example: <m>-3&lt; -1</m>, but <m>9\not\lt 1</m>.) To deal with this, we will treat two separate cases: <m>\epsilon\leq 1</m> and <m>\epsilon&gt; 1</m>.
+        </p>
         <case>
         <title>Case: <m>\epsilon \leq 1</m></title>
         <p>
             When <m>\epsilon \leq 1</m>, all terms in the last inequality above are positive, and we may continue on to conclude 
             <md>
-                <mrow>\abs{f(x)-1}&lt; \epsilon\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1</mrow>
-                <mrow> \amp \iff (\epsilon-1)^2 &lt; x-1 &lt; (\epsilon +1)^2</mrow>
-                <mrow> \amp \iff (\epsilon-1)^2+1 &lt; x &lt; (\epsilon +1)^2+1</mrow>
+                <mrow>\abs{f(x)-1}&lt; \epsilon\amp \iff 1-\epsilon &lt; \sqrt{x-2}&lt; \epsilon+1</mrow>
+                <mrow> \amp \iff (1-\epsilon)^2 &lt; x-2 &lt; (\epsilon +1)^2</mrow>
+                <mrow> \amp \iff 2+(1-\epsilon)^2 &lt; x &lt; 2+(\epsilon +1)^2</mrow>
+                <mrow> \amp \iff 3-\epsilon(2-\epsilon)&lt; x &lt; 3+\epsilon(2 +\epsilon)</mrow>
             </md>.
+            Thus the set of solutions to our original inequality, assuming <m>\epsilon\geq 1</m>, is 
+            <me>
+                S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)
+            </me>, 
+            where 
+            <md>
+            <mrow>\delta_1 \amp = \epsilon(2-\epsilon)</mrow>  
+            <mrow>\delta_2 \amp = \epsilon(2 +\epsilon))</mrow>  
+            </md>. 
+            Note that since <m>0&lt; \epsilon\leq 1</m>, both <m>\delta_1</m> and <m>\delta_2</m> are positive. It is clear that <m>3\in S</m>. 
+            Setting <m>\delta</m> to be the <em>minimum</em> of <m>\delta_1, \delta_2</m>, guarantees that  <m>(3-\delta, 3+\delta)\subseteq S</m>. We conclude that for any positive <m>\epsilon\leq 1</m>, setting <m>\delta=\min\{(\delta_1, \delta_2\}</m>, we have <m>\abs{f(x)-1}&lt; \epsilon</m> for all <m>x</m> satisfying <m>\abs{x-3}&lt; \delta</m>. 
+        </p>
+        <p>
+        Note: in fact, it is not difficult to see in this case that 
+        <me>\delta_1=\epsilon(2-\epsilon)\leq \delta_2=\epsilon(2+\epsilon)</me>
+        and so we could have more explicitly set <m>\delta=\epsilon(2-\epsilon)</m> in this case. Nonetheless, declaring <m>\delta=\min\{\delta_1, \delta_2\}</m> works just as well here, as well as in other examples. 
         </p>
         </case>
-    </p> -->
+        <case>
+        <title>Case: <m></m></title>
+        <p>
+        
+        </p>
+        </case>
+        
         
     </solution>
     
