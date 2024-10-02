@@ -11,42 +11,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta: radical function.</span>
-</h3>
-<div class="para">Let <span class="process-math">\(f(x)=\sqrt{x-2}\text{.}\)</span> Verify that <span class="process-math">\(\lim\limits_{x\to 3}f(x)=1\)</span> using the epsilon-delta definition of the limit.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
-<div class="para">Following <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a> we treat <span class="process-math">\(\epsilon\)</span> as an arbitrary positive constant and attempt to solve the inequality</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html">
-\begin{equation*}
-\abs{f(x)-1}&lt; \epsilon\text{.}
-\end{equation*}
-</div>
-<div class="para">We have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html">
-\begin{align*}
-\abs{f(x)-1}&lt; \epsilon\amp \iff -\epsilon &lt; f(x)-1 &lt; \epsilon\\
-\amp \iff -\epsilon &lt; \sqrt{x-1}-1 &lt; \epsilon\\
-\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1\text{.}
-\end{align*}
-</div>
-<div class="para">We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html">
-\begin{equation*}
-a&lt; b \iff a^2&lt; b^2
-\end{equation*}
-</div>
-<div class="para">to apply, we need <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> to both be nonnegative. (Example: <span class="process-math">\(-3&lt; -1\text{,}\)</span> but <span class="process-math">\(9\not\lt 1\text{.}\)</span>) To deal with this, we will treat two separate cases: <span class="process-math">\(\epsilon\leq 1\)</span> and <span class="process-math">\(\epsilon&gt; 1\text{.}\)</span> <article class="case"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4> <div class="para logical">
-<div class="para">When <span class="process-math">\(\epsilon \leq 1\text{,}\)</span> all terms in the last inequality above are positive, and we may continue on to conclude</div>
-<div class="displaymath process-math">
-\begin{align*}
-\abs{f(x)-1}&lt; \epsilon\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1\\
-\amp \iff (\epsilon-1)^2 &lt; x-1 &lt; (\epsilon +1)^2\\
-\amp \iff (\epsilon-1)^2+1 &lt; x &lt; (\epsilon +1)^2+1\text{.}
-\end{align*}
-</div>
-</div></article>
-</div>
-</div></div></details></div></article><span class="incontext"><a class="internal" href="s_lim_formal.html#s_lim_formal-10">in-context</a></span>
+<article class="project project-like"><h3 class="heading">
+<span class="type">Interactive example</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Visualizing epsilon-delta proofs.</span>
+</h3> <div class="para logical">
+<div class="para">The Geogebra interactive below provides a means of visualizing the challenge-response nature of the epsilon-delta proof of a limit claim <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\)</span> in terms of the graph of <span class="process-math">\(f\text{.}\)</span> (The window below is a bit narrow. Go to the <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra page</a><details class="ptx-footnote" aria-live="polite" id="s_lim_formal-10-2-4"><summary class="ptx-footnote__number" title="Footnote 4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="s_lim_formal-10-2-4"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details> of the interactive for a larger rendition.) We elucidate how to parse this graphical representation.</div>
+<ul class="disc" id="s_lim_formal-10-2-5">
+<li><div class="para">The specific <span class="process-math">\(\epsilon\)</span>-challenge is indicated by a horizontal band centered about <span class="process-math">\(y=L\text{;}\)</span>
+</div></li>
+<li><div class="para">The <span class="process-math">\(\delta\)</span>-response is indicated by a vertical band centered about <span class="process-math">\(x=a\text{;}\)</span>
+</div></li>
+<li><div class="para">The game is, given a specific <span class="process-math">\(\epsilon\)</span>-challenge, find an appropriate <span class="process-math">\(\delta\)</span> such that when <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{,}\)</span> the values <span class="process-math">\(f(x)\)</span> are within <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span> Visually, this is accomplished when all points <span class="process-math">\((x,f(x))\)</span> on the segment of the graph of <span class="process-math">\(f\)</span> lying in the vertical band about <span class="process-math">\(x=a\)</span> also lie within the horizontal band about <span class="process-math">\(y=L\text{.}\)</span>
+</div></li>
+</ul>
+</div> <figure class="figure figure-like"><iframe id="int_geo_ep_delta" width="600" height="450" src="int_geo_ep_delta-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6<span class="period">.</span></span><span class="space"> </span>Visualizing epsilon-delta proofs. Made with <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra</a><details class="ptx-footnote" aria-live="polite" id="s_lim_formal-10-3-1-2"><summary class="ptx-footnote__number" title="Footnote 4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="s_lim_formal-10-3-1-2"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details></figcaption></figure></article><span class="incontext"><a class="internal" href="s_lim_formal.html#s_lim_formal-10">in-context</a></span>
 </body>
 </html>
