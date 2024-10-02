@@ -424,6 +424,87 @@ var ptx_lunr_docs = [
   "body": " Proof of  We will prove that for all . First, observer that since , we have . Thus the function is even. Since is also even, it suffices to prove for all . Furthermore, since , and since , it suffices to show for all . To this end, take any . The triangle , where , , and lies within the the sector of the unit disc determined by . (Diagram to appear sometime soon.) Elementary trigonometry tells us that ; elementary geometry tells us that . We conclude that , or equivalently, for all . Since furthermore and for , we see that for all , as desired.  "
 },
 {
+  "id": "s_lim_formal",
+  "level": "1",
+  "url": "s_lim_formal.html",
+  "type": "Section",
+  "number": "4",
+  "title": "Limits: formal definition",
+  "body": " Limits: formal definition     Provide a rigorous definition of the limit.    Understand the quantifier logic underlying the formal definition of a limit in a challenge and response manner.    Use the formal definition of the limit to compute a limit and\/or decide whether a limit exists.     As mentioned before, what makes less than rigorous is the use of the vague phrases arbitrarily close and sufficiently close . The - formulation given in is a mathematically precise way of of capturing these notions.   Limit (formal)   Suppose is a function defined everywhere on an open interval containing the point , except possibly at itself. We say that the limit of as approaches exists if there is a value satisfying the following property: for all , there exists a such that if , then . Using logical shorthand: .     Anatomy of a definition   can come off as forbiddingly technical. This is due to its combination of mathematical and logical details. We endeavor now to unpack and explicate some of these details. We will start with the mathematical nuts and bolts in the interior of the statement and work our way outward through the logical layers.   Absolute value  The absolute value expressions and are measures of how close is to and how close is to . To say is to say is within a distance of ; similarly says is within a distance of .    Conditional The conditional (or if-then ) statement asserts that if  is within a distance of (but not equal to ), then  is within a distance of .   Existential quantifier  How does adding the existential quantifier  there exists a change the meaning? Considering to be fixed for the moment, the statement asserts that for all  sufficiently close (but not equal) to , is within a distance of . Indeed, it provides a sort of safety distance  and says that as long as is within this safety distance of (but not equal to ), then is within a distance of .    Universal quantifier  Lastly, consider what effect the universal quantifier  for all has. The full statement asserts that for any positive  , the value is within a distance for all sufficiently close to . In particular, choosing to be as small as you like, we have within that small distance of for all sufficiently close to . In other words, we can make  arbitrarily close for all sufficiently close (but not equal) to .       Challenge and response  It is useful to think of the process of verifying to establish a limit claim as a challenge and response type of procedure:   for each positive , we are challenged to show that for sufficiently close to , ;    to meet this -challenge we respond by providing a for which implies .   Note that the we provide in response to a particular -challenge will typically depend on : and indeed, we typically see that the smaller the , the smaller the . This is illustrated in the examples below.    Epsilon-delta proof for limits   To prove for a function and real numbers , proceed as follows.   Treating as an arbitrary undetermined positive constant, solve the inequality for . That is, find the set of all satisfying . This set is typically a union of one or more intervals.    Find a positive such that the set of solutions to contains the interval , with the possible exception of itself. The you provide will be expressed in terms of .    It follows that . Since was arbitrary, conclude that .       Our first example illustrating treats a function of the form . Such functions are called affine functions .   Epsilon-delta: affine function   Let . Verify that using the epsilon-delta definition of the limit.         Epsilon-delta: radical function   Let . Verify that using the epsilon-delta definition of the limit.    Following we treat as an arbitrary positive constant and attempt to solve the inequality . We have . We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule to apply, we need and to both be nonnegative. (Example: , but .) To deal with this, we will treat two separate cases: and .  Case:  When , all terms in the last inequality above are positive, and we may continue on to conclude .      As the last example illustrates, as our function becomes more complicated, solving the relevant inequality can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of limit claim, we will sometimes ask you to give you a partial proof: namely we will give you one specific as a challenge, and ask you to find a that satisfies for this particular .   Partial epsilon-delta: quadratic function   Let . It is a fact that . Verify the epsilon-delta definition for this limit statement for the specific epsilon .    "
+},
+{
+  "id": "s_lim_formal-2",
+  "level": "2",
+  "url": "s_lim_formal.html#s_lim_formal-2",
+  "type": "Objectives",
+  "number": "4",
+  "title": "",
+  "body": "   Provide a rigorous definition of the limit.    Understand the quantifier logic underlying the formal definition of a limit in a challenge and response manner.    Use the formal definition of the limit to compute a limit and\/or decide whether a limit exists.    "
+},
+{
+  "id": "d_lim_formal",
+  "level": "2",
+  "url": "s_lim_formal.html#d_lim_formal",
+  "type": "Definition",
+  "number": "4.1",
+  "title": "Limit (formal).",
+  "body": " Limit (formal)   Suppose is a function defined everywhere on an open interval containing the point , except possibly at itself. We say that the limit of as approaches exists if there is a value satisfying the following property: for all , there exists a such that if , then . Using logical shorthand: .   "
+},
+{
+  "id": "rm_def_anat",
+  "level": "2",
+  "url": "s_lim_formal.html#rm_def_anat",
+  "type": "Remark",
+  "number": "4.2",
+  "title": "Anatomy of a definition.",
+  "body": " Anatomy of a definition   can come off as forbiddingly technical. This is due to its combination of mathematical and logical details. We endeavor now to unpack and explicate some of these details. We will start with the mathematical nuts and bolts in the interior of the statement and work our way outward through the logical layers.   Absolute value  The absolute value expressions and are measures of how close is to and how close is to . To say is to say is within a distance of ; similarly says is within a distance of .    Conditional The conditional (or if-then ) statement asserts that if  is within a distance of (but not equal to ), then  is within a distance of .   Existential quantifier  How does adding the existential quantifier  there exists a change the meaning? Considering to be fixed for the moment, the statement asserts that for all  sufficiently close (but not equal) to , is within a distance of . Indeed, it provides a sort of safety distance  and says that as long as is within this safety distance of (but not equal to ), then is within a distance of .    Universal quantifier  Lastly, consider what effect the universal quantifier  for all has. The full statement asserts that for any positive  , the value is within a distance for all sufficiently close to . In particular, choosing to be as small as you like, we have within that small distance of for all sufficiently close to . In other words, we can make  arbitrarily close for all sufficiently close (but not equal) to .     "
+},
+{
+  "id": "s_lim_formal-6",
+  "level": "2",
+  "url": "s_lim_formal.html#s_lim_formal-6",
+  "type": "Remark",
+  "number": "4.3",
+  "title": "Challenge and response.",
+  "body": " Challenge and response  It is useful to think of the process of verifying to establish a limit claim as a challenge and response type of procedure:   for each positive , we are challenged to show that for sufficiently close to , ;    to meet this -challenge we respond by providing a for which implies .   Note that the we provide in response to a particular -challenge will typically depend on : and indeed, we typically see that the smaller the , the smaller the . This is illustrated in the examples below.  "
+},
+{
+  "id": "proc_epsilon_delta",
+  "level": "2",
+  "url": "s_lim_formal.html#proc_epsilon_delta",
+  "type": "Procedure",
+  "number": "4.4",
+  "title": "Epsilon-delta proof for limits.",
+  "body": " Epsilon-delta proof for limits   To prove for a function and real numbers , proceed as follows.   Treating as an arbitrary undetermined positive constant, solve the inequality for . That is, find the set of all satisfying . This set is typically a union of one or more intervals.    Find a positive such that the set of solutions to contains the interval , with the possible exception of itself. The you provide will be expressed in terms of .    It follows that . Since was arbitrary, conclude that .      "
+},
+{
+  "id": "eg_ep_delt_affine",
+  "level": "2",
+  "url": "s_lim_formal.html#eg_ep_delt_affine",
+  "type": "Example",
+  "number": "4.5",
+  "title": "Epsilon-delta: affine function.",
+  "body": " Epsilon-delta: affine function   Let . Verify that using the epsilon-delta definition of the limit.       "
+},
+{
+  "id": "s_lim_formal-10",
+  "level": "2",
+  "url": "s_lim_formal.html#s_lim_formal-10",
+  "type": "Example",
+  "number": "4.6",
+  "title": "Epsilon-delta: radical function.",
+  "body": " Epsilon-delta: radical function   Let . Verify that using the epsilon-delta definition of the limit.    Following we treat as an arbitrary positive constant and attempt to solve the inequality . We have . We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule to apply, we need and to both be nonnegative. (Example: , but .) To deal with this, we will treat two separate cases: and .  Case:  When , all terms in the last inequality above are positive, and we may continue on to conclude .     "
+},
+{
+  "id": "eg_ep_delt_quad",
+  "level": "2",
+  "url": "s_lim_formal.html#eg_ep_delt_quad",
+  "type": "Example",
+  "number": "4.7",
+  "title": "Partial epsilon-delta: quadratic function.",
+  "body": " Partial epsilon-delta: quadratic function   Let . It is a fact that . Verify the epsilon-delta definition for this limit statement for the specific epsilon .   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

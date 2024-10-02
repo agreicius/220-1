@@ -129,6 +129,9 @@ window.MathJax = {
 #s_lim_formal-2-1 { counter-set: s_lim_formal-2-1 0; }
 #s_lim_formal-2-1 > li::marker { content: ""counter(s_lim_formal-2-1,decimal)"."; }
 #s_lim_formal-2-1 > li { counter-increment: s_lim_formal-2-1; }
+#proc_epsilon_delta-2-1-4 { counter-set: proc_epsilon_delta-2-1-4 0; }
+#proc_epsilon_delta-2-1-4 > li::marker { content: ""counter(proc_epsilon_delta-2-1-4,decimal)"."; }
+#proc_epsilon_delta-2-1-4 > li { counter-increment: proc_epsilon_delta-2-1-4; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -297,16 +300,137 @@ window.MathJax = {
 <li id="s_lim_formal-2-1-1"><div class="para" id="s_lim_formal-2-1-1-1">Provide a rigorous definition of the limit.</div></li>
 <li id="s_lim_formal-2-1-2"><div class="para" id="s_lim_formal-2-1-2-1">Understand the quantifier logic underlying the formal definition of a limit in a “challenge and response” manner.</div></li>
 <li id="s_lim_formal-2-1-3"><div class="para" id="s_lim_formal-2-1-3-1">Use the formal definition of the limit to compute a limit and/or decide whether a limit exists.</div></li>
-</ol></article><div class="para" id="s_lim_formal-3">As mentioned before, what makes <a href="s_limits_naive.html#d_limit_informal" class="xref" data-knowl="./knowl/xref/d_limit_informal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.6: Limit (informal)">Definition 2.6</a> less than rigorous is the use of the vague phrases “arbitrarily close” and “sufficiently close”.</div>
+</ol></article><div class="para" id="s_lim_formal-3">As mentioned before, what makes <a href="s_limits_naive.html#d_limit_informal" class="xref" data-knowl="./knowl/xref/d_limit_informal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.6: Limit (informal)">Definition 2.6</a> less than rigorous is the use of the vague phrases “arbitrarily close” and “sufficiently close”. The “<span class="process-math">\(\epsilon\)</span>-<span class="process-math">\(\delta\)</span>” formulation given in <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> is a mathematically precise way of of capturing these notions.</div>
 <article class="definition definition-like" id="d_lim_formal"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Limit (formal).</span>
 </h3> <div class="para logical" id="d_lim_formal-2-1">
-<div class="para">Suppose <span class="process-math">\(f\)</span> is a function defined everywhere on an open interval containing the point <span class="process-math">\(a\in \R\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. We say that the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> exists if there is a value <span class="process-math">\(L\)</span> satisfying the following property: for all <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta &gt; 0\)</span> such that if <span class="process-math">\(\abs{x-a}&lt; \delta\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Using logical shorthand:</div>
+<div class="para">Suppose <span class="process-math">\(f\)</span> is a function defined everywhere on an open interval containing the point <span class="process-math">\(a\in \R\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. We say that the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> exists if there is a value <span class="process-math">\(L\)</span> satisfying the following property: for all <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta &gt; 0\)</span> such that if <span class="process-math">\(0&lt; \abs{x-a}&lt; \delta\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Using logical shorthand:</div>
 <div class="displaymath process-math" id="eq_lim_formal">
 \begin{equation}
-\text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon\text{.}\tag{4.1}
+\text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon\text{.}\tag{4.1}
 \end{equation}
 </div>
+</div></article><article class="remark remark-like" id="rm_def_anat"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Anatomy of a definition.</span>
+</h3> <div class="para logical" id="rm_def_anat-2">
+<div class="para">
+<a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> can come off as forbiddingly technical. This is due to its combination of mathematical and logical details. We endeavor now to unpack and explicate some of these details. We will start with the mathematical nuts and bolts in the interior of the statement and work our way outward through the logical layers.</div>
+<ul class="disc" id="rm_def_anat-2-2">
+<li id="rm_def_anat-2-2-1">
+<span class="heading"><span class="title">Absolute value.</span></span><div class="para" id="rm_def_anat-2-2-1-2">The absolute value expressions <span class="process-math">\(\abs{f(x)-L}\)</span> and <span class="process-math">\(\abs{x-a}\)</span> are measures of how close <span class="process-math">\(f(x)\)</span> is to <span class="process-math">\(L\)</span> and how close <span class="process-math">\(x\)</span> is to <span class="process-math">\(a\text{.}\)</span> To say <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\)</span> is to say <span class="process-math">\(f(x)\)</span> is within a distance <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{;}\)</span> similarly <span class="process-math">\(\abs{x-a}&lt; \delta\)</span> says <span class="process-math">\(x\)</span> is within a distance <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{.}\)</span>
+</div>
+</li>
+<li id="rm_def_anat-2-2-2">
+<span class="heading"><span class="title">Conditional.</span></span><div class="para" id="p-derived-rm_def_anat-2-2-2"> The <em class="emphasis">conditional</em> (or <em class="emphasis">if-then</em>) statement<div class="displaymath process-math" id="eq_def_anat">
+\begin{equation}
+0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon\tag{4.2}
+\end{equation}
+</div>asserts that <em class="emphasis">if</em> <span class="process-math">\(x\)</span> is within a distance <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\)</span> (but not equal to <span class="process-math">\(a\)</span>), <em class="emphasis">then</em> <span class="process-math">\(f(x)\)</span> is within a distance <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span>
+</div>
+</li>
+<li id="rm_def_anat-2-2-3">
+<span class="heading"><span class="title">Existential quantifier.</span></span><div class="para logical" id="rm_def_anat-2-2-3-2">
+<div class="para">How does adding the <em class="emphasis">existential quantifier</em> “there exists a <span class="process-math">\(\delta\)</span>” change the meaning? Considering <span class="process-math">\(\epsilon\)</span> to be fixed for the moment, the statement</div>
+<div class="displaymath process-math" id="eq_def_anat_exists">
+\begin{equation}
+\text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon\tag{4.3}
+\end{equation}
+</div>
+<div class="para">asserts that for all <span class="process-math">\(x\)</span> <em class="emphasis">sufficiently close</em> (but not equal) to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(f(x)\)</span> is within a distance <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span> Indeed, it provides a sort of “safety distance” <span class="process-math">\(\delta\)</span> and says that as long as <span class="process-math">\(x\)</span> is within this safety distance of <span class="process-math">\(a\)</span> (but not equal to <span class="process-math">\(a\)</span>), then <span class="process-math">\(f(x)\)</span> is within a distance <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span>
+</div>
+</div>
+</li>
+<li id="rm_def_anat-2-2-4">
+<span class="heading"><span class="title">Universal quantifier.</span></span><div class="para logical" id="rm_def_anat-2-2-4-2">
+<div class="para">Lastly, consider what effect the <em class="emphasis">universal quantifier</em> “for all <span class="process-math">\(\epsilon\)</span>” has. The full statement</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+\end{equation*}
+</div>
+<div class="para">asserts that <em class="emphasis">for any positive</em> <span class="process-math">\(\epsilon\text{,}\)</span> the value <span class="process-math">\(f(x)\)</span> is within a distance <span class="process-math">\(\epsilon\)</span> for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> In particular, choosing <span class="process-math">\(\epsilon\)</span> to be as small as you like, we have <span class="process-math">\(f(x)\)</span> within that small distance <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\)</span> for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> In other words, we can make <span class="process-math">\(f(x)\)</span> <em class="emphasis">arbitrarily close</em> for all <span class="process-math">\(x\)</span> sufficiently close (but not equal) to <span class="process-math">\(a\text{.}\)</span>
+</div>
+</div>
+</li>
+</ul>
+</div></article><article class="remark remark-like" id="s_lim_formal-6"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Challenge and response.</span>
+</h3> <div class="para logical" id="s_lim_formal-6-2">
+<div class="para">It is useful to think of the process of verifying <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> to establish a limit claim <span class="process-math">\(\lim_{x\to a}f(x)=L\)</span> as a <em class="emphasis">challenge and response</em> type of procedure:</div>
+<ul class="disc" id="s_lim_formal-6-2-4">
+<li id="s_lim_formal-6-2-4-1"><div class="para" id="s_lim_formal-6-2-4-1-1">for each positive <span class="process-math">\(\epsilon\text{,}\)</span> we are challenged to show that for <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{;}\)</span>
+</div></li>
+<li id="s_lim_formal-6-2-4-2"><div class="para" id="s_lim_formal-6-2-4-2-1">to meet this <span class="process-math">\(\epsilon\)</span>-challenge we respond by providing a <span class="process-math">\(\delta\)</span> for which <span class="process-math">\(0&lt; \abs{x-a}&lt; \delta\)</span> implies <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Note that the <span class="process-math">\(\delta\)</span> we provide in response to a particular <span class="process-math">\(\epsilon\)</span>-challenge will typically depend on <span class="process-math">\(\epsilon\text{:}\)</span> and indeed, we typically see that the smaller the <span class="process-math">\(\epsilon\text{,}\)</span> the smaller the <span class="process-math">\(\delta\text{.}\)</span> This is illustrated in the examples below.</div>
+</div></article><article class="algorithm theorem-like" id="proc_epsilon_delta"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta proof for limits.</span>
+</h3>
+<div class="para logical" id="proc_epsilon_delta-2-1">
+<div class="para">To prove <span class="process-math">\(\lim_{x\to a}f(x)=L\)</span> for a function <span class="process-math">\(f\)</span> and real numbers <span class="process-math">\(a,L\in \R\text{,}\)</span> proceed as follows.</div>
+<ol class="decimal" id="proc_epsilon_delta-2-1-4">
+<li id="proc_epsilon_delta-2-1-4-1"><div class="para logical" id="proc_epsilon_delta-2-1-4-1-1">
+<div class="para">Treating <span class="process-math">\(\epsilon\)</span> as an arbitrary undetermined positive constant, solve the inequality</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html" id="eq_proc_lim_def">
+\begin{equation}
+\abs{f(x)-L}&lt; \epsilon\tag{4.4}
+\end{equation}
+</div>
+<div class="para">for <span class="process-math">\(x\text{.}\)</span> That is, find the set <span class="process-math">\(S\)</span> of all <span class="process-math">\(x\)</span> satisfying <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a>. This set is typically a union of one or more intervals.</div>
+</div></li>
+<li id="proc_epsilon_delta-2-1-4-2"><div class="para" id="proc_epsilon_delta-2-1-4-2-1">Find a positive <span class="process-math">\(\delta\)</span> such that the set <span class="process-math">\(S\)</span> of solutions to <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a> contains the interval <span class="process-math">\((a-\delta, a+\delta)\text{,}\)</span> with the possible exception of <span class="process-math">\(a\)</span> itself. The <span class="process-math">\(\delta\)</span> you provide will be expressed in terms of <span class="process-math">\(\epsilon\text{.}\)</span>
+</div></li>
+<li id="proc_epsilon_delta-2-1-4-3"><div class="para" id="proc_epsilon_delta-2-1-4-3-1">It follows that <span class="process-math">\(0&lt; \abs{x-a}&lt; \delta \implies \abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Since <span class="process-math">\(\epsilon\)</span> was arbitrary, conclude that <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><div class="para" id="s_lim_formal-8">Our first example illustrating <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a> treats a function of the form <span class="process-math">\(f(x)=ax+b\text{.}\)</span> Such functions are called <em class="emphasis">affine functions</em>.</div>
+<article class="example example-like" id="eg_ep_delt_affine"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta: affine function.</span>
+</h3>
+<div class="para" id="eg_ep_delt_affine-2-1">Let <span class="process-math">\(f(x)=-4x+7\text{.}\)</span> Verify that <span class="process-math">\(\lim\limits_{x\to 1}f(x)=3\)</span> using the epsilon-delta definition of the limit.</div>
+<div class="solutions"><details id="eg_ep_delt_affine-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_ep_delt_affine-3-1"></div></div></details></div></article><article class="example example-like" id="s_lim_formal-10"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta: radical function.</span>
+</h3>
+<div class="para" id="s_lim_formal-10-2-1">Let <span class="process-math">\(f(x)=\sqrt{x-2}\text{.}\)</span> Verify that <span class="process-math">\(\lim\limits_{x\to 3}f(x)=1\)</span> using the epsilon-delta definition of the limit.</div>
+<div class="solutions"><details id="s_lim_formal-10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="s_lim_formal-10-3-1">
+<div class="para">Following <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a> we treat <span class="process-math">\(\epsilon\)</span> as an arbitrary positive constant and attempt to solve the inequality</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html">
+\begin{equation*}
+\abs{f(x)-1}&lt; \epsilon\text{.}
+\end{equation*}
+</div>
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html" id="s_lim_formal-10-3-1-4">
+\begin{align*}
+\abs{f(x)-1}&lt; \epsilon\amp \iff -\epsilon &lt; f(x)-1 &lt; \epsilon\\
+\amp \iff -\epsilon &lt; \sqrt{x-1}-1 &lt; \epsilon\\
+\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1\text{.}
+\end{align*}
+</div>
+<div class="para">We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_proc_lim_def.html">
+\begin{equation*}
+a&lt; b \iff a^2&lt; b^2
+\end{equation*}
+</div>
+<div class="para">to apply, we need <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> to both be nonnegative. (Example: <span class="process-math">\(-3&lt; -1\text{,}\)</span> but <span class="process-math">\(9\not\lt 1\text{.}\)</span>) To deal with this, we will treat two separate cases: <span class="process-math">\(\epsilon\leq 1\)</span> and <span class="process-math">\(\epsilon&gt; 1\text{.}\)</span> <article class="case" id="s_lim_formal-10-3-1-12"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4> <div class="para logical" id="s_lim_formal-10-3-1-12-2">
+<div class="para">When <span class="process-math">\(\epsilon \leq 1\text{,}\)</span> all terms in the last inequality above are positive, and we may continue on to conclude</div>
+<div class="displaymath process-math" id="s_lim_formal-10-3-1-12-2-2">
+\begin{align*}
+\abs{f(x)-1}&lt; \epsilon\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1\\
+\amp \iff (\epsilon-1)^2 &lt; x-1 &lt; (\epsilon +1)^2\\
+\amp \iff (\epsilon-1)^2+1 &lt; x &lt; (\epsilon +1)^2+1\text{.}
+\end{align*}
+</div>
+</div></article>
+</div>
+</div></div></details></div></article><div class="para" id="s_lim_formal-11">As the last example illustrates, as our function <span class="process-math">\(f\)</span> becomes more complicated, solving the relevant inequality <a href="s_lim_formal.html#eq_proc_lim_def" class="xref" data-knowl="./knowl/xref/eq_proc_lim_def.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.4">(4.4)</a> can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of limit claim, we will sometimes ask you to give you a <em class="emphasis">partial</em> proof: namely we will give you one specific <span class="process-math">\(\epsilon\)</span> as a challenge, and ask you to find a <span class="process-math">\(\delta\)</span> that satisfies <a href="s_lim_formal.html#eq_lim_formal" class="xref" data-knowl="./knowl/xref/eq_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.1">(4.1)</a> for this particular <span class="process-math">\(\epsilon\text{.}\)</span>
+</div>
+<article class="example example-like" id="eg_ep_delt_quad"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Partial epsilon-delta: quadratic function.</span>
+</h3>
+<div class="para" id="eg_ep_delt_quad-2-1">Let <span class="process-math">\(f(x)=1-3x^2\text{.}\)</span> It is a fact that <span class="process-math">\(\lim\limits_{x\to 1}f(x)=-2\text{.}\)</span> Verify the epsilon-delta definition for this limit statement for the specific epsilon <span class="process-math">\(\epsilon=\frac{1}{2}\text{.}\)</span>
 </div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_limit_sandwich.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-8.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
