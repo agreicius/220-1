@@ -49,11 +49,13 @@
                 </li>
                 <li>
                     <title>Conditional</title>
+                   <p>
                     The <em>conditional</em> (or <em>if-then</em>) statement
                     <men xml:id="eq_def_anat">
                         0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
                     </men>
                     asserts that <em>if</em> <m>x</m> is within a distance <m>\delta</m> of <m>a</m> (but not equal to <m>a</m>), <em>then</em> <m>f(x)</m> is within a distance <m>\epsilon</m> of <m>L</m>. 
+                   </p>
                 </li>
                 <li>
                     <title>Existential quantifier</title>
@@ -145,14 +147,32 @@
 </example>
 <project>
     <title>Visualizing epsilon-delta proofs</title>
+    <p>The Geogebra interactive below provides a means of visualizing the challenge-response nature of the epsilon-delta proof of a limit claim <m>\lim\limits_{x\to a}f(x)=L</m> in terms of the graph of <m>f</m>. (The window below is a bit narrow. Go to the <url href="https://www.geogebra.org/m/degz8kgk">Geogebra page</url> of the interactive for a larger rendition.) We elucidate how to parse this graphical representation. 
+    <ul>
+        <li>
+            <p>
+                The specific <m>\epsilon</m>-challenge is indicated by a horizontal band centered about <m>y=L</m>.  
+            </p>
+        </li>
+        <li>
+            <p>
+                The <m>\delta</m>-response is indicated by a vertical band centered about <m>x=a</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                The game is, given a specific <m>\epsilon</m>-challenge, find an appropriate <m>\delta</m> such that when <m>x</m> is within <m>\delta</m> of <m>a</m>, the values <m>f(x)</m> are within <m>\epsilon</m> of <m>L</m>. Visually, this is accomplished when all points <m>(x,f(x))</m> on the segment of the graph of <m>f</m> lying in the vertical band about <m>x=a</m> also lie within the horizontal band about <m>y=L</m>.
+            </p>
+        </li>
+    </ul> 
+</p>
     <figure>
-        <caption>Visualizing epsilon-delta proofs. </caption>
+        <caption>Visualizing epsilon-delta proofs. Made with <url href="https://www.geogebra.org/m/degz8kgk">Geogebra</url></caption>
         <interactive xml:id="int_geo_ep_delta" platform="geogebra" width="100%" aspect="4:3">
-          <slate xml:id="geo_ep_delta" surface="geogebra" material="degz8kgk" aspect="2:1">
+          <slate xml:id="geo_ep_delta" surface="geogebra" material="degz8kgk" aspect="4:3">
           </slate>
         </interactive>
       </figure>
-    
 </project>
 <example xml:base="eg_ep_delt_rad">
     <title>Epsilon-delta: radical function</title>
