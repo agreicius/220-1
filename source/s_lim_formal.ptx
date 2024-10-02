@@ -182,7 +182,7 @@
         </p>
     </statement>
     <solution>
-        <p>
+        <!-- <p>
             Following <xref ref="eq_proc_lim_def"/> we treat <m>\epsilon</m> as an arbitrary positive constant and attempt to solve the inequality 
                 <me>
                     \abs{f(x)-1}&lt; \epsilon
@@ -209,7 +209,7 @@
             </md>.
         </p>
         </case>
-    </p>
+    </p> -->
         
     </solution>
     
