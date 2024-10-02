@@ -22,20 +22,177 @@
         </ol>
     </objectives>
     <p>
-        As mentioned before, what makes <xref ref="d_limit_informal"/> less than rigorous is the use of the vague phrases <q>arbitrarily close</q> and <q>sufficiently close</q>. 
+        As mentioned before, what makes <xref ref="d_limit_informal"/> less than rigorous is the use of the vague phrases <q>arbitrarily close</q> and <q>sufficiently close</q>. The <q><m>\epsilon</m>-<m>\delta</m></q> formulation given in <xref ref="d_lim_formal"/> is a mathematically precise way of of capturing these notions. 
     </p>
     <definition xml:id="d_lim_formal">
         <title>Limit (formal)</title>
         <statement>
             <p>
                 Suppose <m>f</m> is a function defined everywhere on an open interval containing the point <m>a\in \R</m>, except possibly at <m>a</m> itself. We say that the <term>limit</term> of <m>f</m> as <m>x</m> approaches <m>a</m> exists if there is a value <m>L</m> satisfying the following property: 
-                for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta &gt; 0</m> such that if <m>\abs{x-a}&lt; \delta</m>, then <m>\abs{f(x)-L}&lt; \epsilon</m>. Using logical shorthand:
+                for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta &gt; 0</m> such that if <m>0&lt; \abs{x-a}&lt; \delta</m>, then <m>\abs{f(x)-L}&lt; \epsilon</m>. Using logical shorthand:
                 <men xml:id="eq_lim_formal">
-                    \text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                    \text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
                 </men>.
             </p>
         </statement>
     </definition>
-    
+    <remark xml:id="rm_def_anat">
+        <title>Anatomy of a definition</title>
+        <p>
+            <xref ref="d_lim_formal"/> can come off as forbiddingly technical. This is due to its combination of mathematical and logical details. We endeavor now to unpack and explicate some of these details. We will start with the mathematical nuts and bolts in the interior of the statement and work our way outward through the logical layers. 
+            <ul>
+                <li>
+                    <title>Absolute value</title>
+                    <p>
+                        The absolute value expressions <m>\abs{f(x)-L}</m> and <m>\abs{x-a}</m> are measures of how close <m>f(x)</m> is to <m>L</m> and how close <m>x</m> is to <m>a</m>. To say <m>\abs{f(x)-L}&lt; \epsilon</m> is to say <m>f(x)</m> is within a distance <m>\epsilon</m> of <m>L</m>; similarly <m>\abs{x-a}&lt; \delta</m> says <m>x</m> is within a distance <m>\delta</m> of <m>a</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Conditional</title>
+                    The <em>conditional</em> (or <em>if-then</em>) statement
+                    <men xml:id="eq_def_anat">
+                        0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                    </men>
+                    asserts that <em>if</em> <m>x</m> is within a distance <m>\delta</m> of <m>a</m> (but not equal to <m>a</m>), <em>then</em> <m>f(x)</m> is within a distance <m>\epsilon</m> of <m>L</m>. 
+                </li>
+                <li>
+                    <title>Existential quantifier</title>
+                    <p>
+                        How does adding the <em>existential quantifier</em> <q>there exists a <m>\delta</m></q> change the meaning? Considering <m>\epsilon</m> to be fixed for the moment, the statement
+                        <men xml:id="eq_def_anat_exists">
+                            \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                        </men>
+                        asserts that for all <m>x</m> <em>sufficiently close</em> (but not equal) to <m>a</m>, <m>f(x)</m> is within a distance <m>\epsilon</m> of <m>L</m>. Indeed, it provides a sort of <q>safety distance</q> <m>\delta</m> and says that as long as <m>x</m> is within this safety distance of <m>a</m> (but not equal to <m>a</m>), then <m>f(x)</m> is within a distance <m>\epsilon</m> of <m>L</m>.
+                    </p>
+                </li>
+                <li>
+                    <title>Universal quantifier</title>
+                    <p>
+                       Lastly, consider what effect the <em>universal quantifier</em> <q>for all <m>\epsilon</m></q> has. The full statement 
+                       <me>
+                        \text{for all } \epsilon &gt; 0, \text{ there is } \delta&gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
+                       </me>
+                       asserts that <em>for any positive</em> <m>\epsilon</m>, the value <m>f(x)</m> is within a distance <m>\epsilon</m> for all <m>x</m> sufficiently close to <m>a</m>. In particular, choosing <m>\epsilon</m> to be as small as you like, we have <m>f(x)</m> within that small distance <m>\epsilon</m> of <m>L</m> for all <m>x</m> sufficiently close to <m>a</m>. In other words, we can make <m>f(x)</m> <em>arbitrarily close</em> for all <m>x</m> sufficiently close (but not equal) to <m>a</m>.   
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </remark>
+    <remark>
+        <title>Challenge and response</title>
+        <p>
+            It is useful to think of the process of verifying <xref ref="d_lim_formal"/> to establish a limit claim <m>\lim_{x\to a}f(x)=L</m> as a <em>challenge and response</em> type of procedure:
+            <ul>
+                <li>
+                    <p>
+                        for each positive <m>\epsilon</m>, we are challenged to show that for <m>x</m> sufficiently close to <m>a</m>, <m>\abs{f(x)-L}&lt; \epsilon</m>;
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        to meet this <m>\epsilon</m>-challenge we respond by providing a <m>\delta</m> for which <m>0&lt; \abs{x-a}&lt; \delta</m> implies <m>\abs{f(x)-L}&lt; \epsilon</m>. 
+                    </p>
+                </li>
+            </ul>
+            Note that the <m>\delta</m> we provide in response to a particular <m>\epsilon</m>-challenge will typically depend on <m>\epsilon</m>: and indeed, we typically see that the smaller the <m>\epsilon</m>, the smaller the <m>\delta</m>. This is illustrated in the examples below. 
+        </p>
+    </remark>
 
+<algorithm xml:id="proc_epsilon_delta">
+    <title>Epsilon-delta proof for limits</title>
+    <statement>
+        <p>
+          To prove <m>\lim_{x\to a}f(x)=L</m> for a function <m>f</m> and real numbers <m>a,L\in \R</m>, proceed as follows.   
+        <ol>
+            <li>
+                <p>
+                    Treating <m>\epsilon</m> as an arbitrary undetermined positive constant, solve the inequality 
+                    <men xml:id="eq_proc_lim_def">
+                        \abs{f(x)-L}&lt; \epsilon
+                    </men>
+                    for <m>x</m>. That is, find the set <m>S</m> of all <m>x</m> satisfying <xref ref="eq_proc_lim_def"/>. This set is typically a union of one or more intervals.  
+                </p>
+            </li>
+            <li>
+                <p>
+                    Find a positive <m>\delta</m> such that the set <m>S</m> of solutions to <xref ref="eq_proc_lim_def"/> contains the interval <m>(a-\delta, a+\delta)</m>, with the possible exception of <m>a</m> itself. The <m>\delta</m> you provide will be expressed in terms of <m>\epsilon</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    It follows that <m>0&lt; \abs{x-a}&lt; \delta \implies \abs{f(x)-L}&lt; \epsilon</m>. Since <m>\epsilon</m> was arbitrary, conclude that <m>\lim\limits_{x\to a}f(x)=L</m>. 
+                </p>
+            </li>
+        </ol>
+    </p>
+    </statement>
+</algorithm>
+<p>
+    Our first example illustrating <xref ref="eq_proc_lim_def"/> treats a function of the form <m>f(x)=ax+b</m>. Such functions are called <em>affine functions</em>. 
+</p>
+<example xml:id="eg_ep_delt_affine">
+    <title>Epsilon-delta: affine function</title>
+    <statement>
+        <p>
+            Let <m>f(x)=-4x+7</m>. Verify that <m>\lim\limits_{x\to 1}f(x)=3</m> using the epsilon-delta definition of the limit. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            
+        </p>
+    </solution>
+</example>
+<example xml:base="eg_ep_delt_rad">
+    <title>Epsilon-delta: radical function</title>
+    <statement>
+        <p>
+            Let <m>f(x)=\sqrt{x-2}</m>. Verify that <m>\lim\limits_{x\to 3}f(x)=1</m> using the epsilon-delta definition of the limit. 
+        </p>
+    </statement>
+    <solution>
+        <p>
+            Following <xref ref="eq_proc_lim_def"/> we treat <m>\epsilon</m> as an arbitrary positive constant and attempt to solve the inequality 
+                <me>
+                    \abs{f(x)-1}&lt; \epsilon
+                </me>. 
+            We have 
+            <md>
+                <mrow>\abs{f(x)-1}&lt; \epsilon\amp \iff -\epsilon &lt; f(x)-1 &lt; \epsilon</mrow>
+                <mrow> \amp \iff -\epsilon &lt; \sqrt{x-1}-1 &lt; \epsilon</mrow>
+                <mrow> \amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1</mrow>
+            </md>.
+            We are tempted now to square all terms in the above inequality to get rid of the radical, but recall that in order for the rule 
+            <me>
+                a&lt; b \iff a^2&lt; b^2
+            </me>
+            to apply, we need <m>a</m> and <m>b</m> to both be nonnegative. (Example: <m>-3&lt; -1</m>, but <m>9\not\lt 1</m>.) To deal with this, we will treat two separate cases: <m>\epsilon\leq 1</m> and <m>\epsilon&gt; 1</m>.
+        <case>
+        <title>Case: <m>\epsilon \leq 1</m></title>
+        <p>
+            When <m>\epsilon \leq 1</m>, all terms in the last inequality above are positive, and we may continue on to conclude 
+            <md>
+                <mrow>\abs{f(x)-1}&lt; \epsilon\amp \iff 1-\epsilon &lt; \sqrt{x-1}&lt; \epsilon+1</mrow>
+                <mrow> \amp \iff (\epsilon-1)^2 &lt; x-1 &lt; (\epsilon +1)^2</mrow>
+                <mrow> \amp \iff (\epsilon-1)^2+1 &lt; x &lt; (\epsilon +1)^2+1</mrow>
+            </md>.
+        </p>
+        </case>
+    </p>
+        
+    </solution>
+    
+</example>
+<p>
+    As the last example illustrates, as our function <m>f</m> becomes more complicated, solving the relevant inequality <xref ref="eq_proc_lim_def"/> can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of limit claim, we will sometimes ask you to give you a <em>partial</em> proof: namely we will give you one specific <m>\epsilon</m> as a challenge, and ask you to find a <m>\delta</m> that satisfies <xref ref="eq_lim_formal"/> for this particular <m>\epsilon</m>.
+</p>
+<example xml:id="eg_ep_delt_quad">
+    <title>Partial epsilon-delta: quadratic function</title>
+    <statement>
+        <p>
+            Let <m>f(x)=1-3x^2</m>. It is a fact that <m>\lim\limits_{x\to 1}f(x)=-2</m>. Verify the epsilon-delta definition for this limit statement for the specific epsilon <m>\epsilon=\frac{1}{2}</m>.
+        </p>
+    </statement>
+    
+</example>
 </section>
