@@ -322,7 +322,7 @@
     </p>
     </remark>
     <theorem xml:id="th_abs_lim">
-        <title>Absolute value limits</title>
+        <title>Limits and absolute value</title>
         <statement>
             <p>
               <ol>
@@ -352,7 +352,7 @@
                             Using the identity <m>\abs{x}=\sqrt{x^2}</m>, we see that 
                             <md>
                                 <mrow>\lim_{x\to a}\abs{x} \amp = \lim_{x\to a}\sqrt{x^2} \amp <xref ref="eq_abs_rad"/></mrow>
-                                <mrow> \amp = \sqrt{\lim_{x\to a}x^2} \amp \text{(power rule)}</mrow>
+                                <mrow> \amp = \sqrt{\lim_{x\to a}x^2} \amp \text{(root rule)}</mrow>
                                 <mrow> \amp = \sqrt{a^2} \amp \text{(poly. eval.)}</mrow>
                                 <mrow> \amp = \abs{a} \amp <xref ref="eq_abs_rad"/></mrow>
                             </md>.

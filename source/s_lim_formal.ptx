@@ -184,7 +184,7 @@
     
 </example>
 <p>
-    As the last example illustrates, as our function <m>f</m> becomes more complicated, solving the relevant inequality <xref ref="eq_proc_lim_def"/> can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of limit claim, we will sometimes ask you to give you a <em>partial</em> proof: namely we will give you one specific <m>\epsilon</m> as a challenge, and ask you to find a <m>\delta</m> that satisfies <xref ref="eq_lim_formal"/> for this particular <m>\epsilon</m>.
+    As the last example illustrates, as our function <m>f</m> becomes more complicated, solving the relevant inequality <xref ref="eq_proc_lim_def"/> can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of a given limit claim, we will sometimes ask you to give a <em>partial</em> proof: namely we will give you one specific <m>\epsilon</m> as a challenge, and ask you to find a <m>\delta</m> that satisfies <xref ref="eq_lim_formal"/> for this particular <m>\epsilon</m>.
 </p>
 <example xml:id="eg_ep_delt_quad">
     <title>Partial epsilon-delta: quadratic function</title>
