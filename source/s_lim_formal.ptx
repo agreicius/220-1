@@ -143,6 +143,17 @@
         </p>
     </solution>
 </example>
+<project>
+    <title>Visualizing epsilon-delta proofs</title>
+    <figure>
+        <caption>Visualizing epsilon-delta proofs. </caption>
+        <interactive xml:id="int_geo_ep_delta" platform="geogebra" width="100%" aspect="4:3">
+          <slate xml:id="geo_ep_delta" surface="geogebra" material="degz8kgk" aspect="2:1">
+          </slate>
+        </interactive>
+      </figure>
+    
+</project>
 <example xml:base="eg_ep_delt_rad">
     <title>Epsilon-delta: radical function</title>
     <statement>
