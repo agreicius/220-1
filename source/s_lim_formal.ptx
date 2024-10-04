@@ -242,7 +242,7 @@
   \draw[decorate]   (current bounding box.south) coordinate (aux)
     (d|-aux) -- node[below=1ex]{$\delta_2=d-a$} (a|-aux);
   \draw[decorate]   (current bounding box.north) coordinate (aux)
-    (c|-aux) -- node[above=1ex]{$\delta_1=a-d$} (a|-aux);
+    (c|-aux) -- node[above=1ex]{$\delta_1=a-c$} (a|-aux);
  \end{scope} 
 \end{tikzpicture}
     </latex-image>
