@@ -388,4 +388,29 @@
         </p>
     </solution>
 </example>
+<p>
+    We gather here some inequality properties that came to light in the examples above, and which are useful for solving inequalities. 
+</p>
+<theorem xml:id="th_inequalities">
+    <title>Inequality rules</title>
+    <statement>
+        <p>
+            Let <m>a</m> be a nonnegative number; <ie/>, <m>a\geq 0</m>.
+            For all <m>x\in \R</m> we have 
+                <md>
+                <mrow>\abs{x}&lt; a \amp\iff -a&lt;  x&lt;  a </mrow>
+                <mrow>a&lt; \abs{x} \amp\iff x&lt; -a \text{ or } a&lt; x </mrow>
+                <mrow>a&lt; x \amp \implies a^2\leq x^2</mrow>
+                <mrow>a&lt; x \amp \implies \sqrt{a}\leq \sqrt{x}</mrow>
+                </md>.
+            It follows that for all nonnegative <m>x\geq 0</m>, we have
+            <md>
+                <mrow>a&lt; x \amp \iff a^2\leq x^2</mrow>
+                <mrow>a&lt; x \amp \iff \sqrt{a}\leq \sqrt{x}</mrow>
+                </md> .
+        </p>
+                
+    </statement>
+</theorem>
+
 </section>
