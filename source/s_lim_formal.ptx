@@ -204,7 +204,7 @@
         </interactive>
       </figure>
 </project>
-<remark>
+<remark xml:id="rm_find_delta">
     <title>Finding <m>\delta</m> such that <m>(a-\delta, a+\delta)\subseteq S</m></title>
     <p>
         In the final step of applying <xref ref="proc_epsilon_delta"/> to a limit statment <m>\lim\limits_{x\to a}f(x)=L</m>, we usually have found an open interval <m>(c,d)</m> containing <m>a</m>, and then must find a <m>\delta</m> such that 
