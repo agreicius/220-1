@@ -389,25 +389,49 @@
     </solution>
 </example>
 <p>
-    We gather here some inequality properties that came to light in the examples above, and which are useful for solving inequalities. 
+    We gather here some inequality properties that came to light in the examples above. These are essential for solving inequalities, and thus for performing epsilon-delta proofs. 
 </p>
 <theorem xml:id="th_inequalities">
     <title>Inequality rules</title>
     <statement>
         <p>
-            Let <m>a</m> be a nonnegative number; <ie/>, <m>a\geq 0</m>.
-            For all <m>x\in \R</m> we have 
-                <md>
-                <mrow>\abs{x}&lt; a \amp\iff -a&lt;  x&lt;  a </mrow>
-                <mrow>a&lt; \abs{x} \amp\iff x&lt; -a \text{ or } a&lt; x </mrow>
-                <mrow>a&lt; x \amp \implies a^2\leq x^2</mrow>
+            <ol>
+                <li>
+                    <title>Multiply by constant</title>
+                    <p>
+                        Assume <m>a&gt; 0</m> is a positive constant and <m>b&lt; 0</m> is a negative one. For all <m>x,y\in \R</m> we have
+                        <md>
+                            <mrow>x&lt; y \amp \iff ax&lt; ab</mrow>
+                            <mrow>x&lt; y \amp \iff by&lt; bx</mrow>
+                        </md>.              
+                    </p>
+                </li>
+                <li>
+                    <title>Absolute value</title>
+                    <p>
+                        Assume <m>a\geq 0</m> is a nonnegative constant. For all <m>x\in \R</m>, we have 
+                        <md>
+                            <mrow>\abs{x}&lt; a \amp \iff -a&lt; x&lt; a</mrow>
+                            <mrow> \abs{x}&gt; a\amp \iff x&lt; -a \text{ or } a&gt; x</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <title>Squaring and square-rooting</title>
+                    <p>
+                        Assume <m>a\geq 0</m> is a nonnegative constant. For all <m>x\in \R</m>, we have 
+                        <md>
+                            <mrow>a&lt; x \amp \implies a^2\leq x^2</mrow>
                 <mrow>a&lt; x \amp \implies \sqrt{a}\leq \sqrt{x}</mrow>
                 </md>.
             It follows that for all nonnegative <m>x\geq 0</m>, we have
             <md>
                 <mrow>a&lt; x \amp \iff a^2\leq x^2</mrow>
                 <mrow>a&lt; x \amp \iff \sqrt{a}\leq \sqrt{x}</mrow>
-                </md> .
+                </md>.
+                    </p>
+                </li>
+            </ol>
         </p>
                 
     </statement>
