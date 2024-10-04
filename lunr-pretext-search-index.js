@@ -496,9 +496,9 @@ var ptx_lunr_docs = [
   "body": " Visualizing epsilon-delta proofs  The Geogebra interactive below provides a means of visualizing the challenge-response nature of the epsilon-delta proof of a limit claim in terms of the graph of . (The window below is a bit narrow. Go to the Geogebra page of the interactive for a larger rendition.) We elucidate how to parse this graphical representation.   The specific -challenge is indicated by a horizontal band centered about .    The -response is indicated by a vertical band centered about .    The game is, given a specific -challenge, find an appropriate such that when is within of , the values are within of . Visually, this is accomplished when all points on the segment of the graph of lying in the vertical band about also lie within the horizontal band about .      Visualizing epsilon-delta proofs. Made with Geogebra    "
 },
 {
-  "id": "s_lim_formal-11",
+  "id": "rm_find_delta",
   "level": "2",
-  "url": "s_lim_formal.html#s_lim_formal-11",
+  "url": "s_lim_formal.html#rm_find_delta",
   "type": "Remark",
   "number": "4.7",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
