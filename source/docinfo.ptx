@@ -131,7 +131,7 @@
     \usetikzlibrary{positioning}
     \usetikzlibrary{arrows}
     \usetikzlibrary{calc}
-    \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+    \usetikzlibrary{through,intersections,shadows,fadings,calligraphy}
   </latex-image-preamble>
 
   <!-- Renamings -->

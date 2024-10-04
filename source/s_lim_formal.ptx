@@ -74,7 +74,7 @@
                        <me>
                         \text{for all } \epsilon &gt; 0, \text{ there is } \delta &gt; 0, \text{ s.t., } 0&lt; \abs{x-a}&lt; \delta\implies \abs{f(x)-L}&lt; \epsilon
                        </me>
-                       asserts that <em>for any positive</em> <m>\epsilon</m>, the value <m>f(x)</m> is within a distance <m>\epsilon</m> for all <m>x</m> sufficiently close to <m>a</m>. In particular, choosing <m>\epsilon</m> to be as small as you like, we have <m>f(x)</m> within that small distance <m>\epsilon</m> of <m>L</m> for all <m>x</m> sufficiently close to <m>a</m>. In other words, we can make <m>f(x)</m> <em>arbitrarily close</em> for all <m>x</m> sufficiently close (but not equal) to <m>a</m>.   
+                       asserts that <em>for any positive</em> <m>\epsilon</m>, the value <m>f(x)</m> is within a distance <m>\epsilon</m> for all <m>x</m> sufficiently close to <m>a</m>. In particular, choosing <m>\epsilon</m> to be as small as you like, we have <m>f(x)</m> within that small distance <m>\epsilon</m> of <m>L</m> for all <m>x</m> sufficiently close to <m>a</m>. In other words, we can make <m>f(x)</m> <em>arbitrarily close</em> to <m>L</m> for all <m>x</m> sufficiently close (but not equal) to <m>a</m>.   
                     </p>
                 </li>
             </ul>
@@ -196,7 +196,7 @@
         </li>
     </ul> 
 </p>
-    <figure>
+    <figure xml:id="fig_vis_ep_delta">
         <caption>Visualizing epsilon-delta proofs. Made with <url href="https://www.geogebra.org/m/degz8kgk">Geogebra</url></caption>
         <interactive xml:id="int_geo_ep_delta" platform="geogebra" width="100%" aspect="4:3">
           <slate xml:id="geo_ep_delta" surface="geogebra" material="degz8kgk" aspect="4:3">
@@ -204,6 +204,64 @@
         </interactive>
       </figure>
 </project>
+<remark>
+    <title>Finding <m>\delta</m> such that <m>(a-\delta, a+\delta)\subseteq S</m></title>
+    <p>
+        In the final step of applying <xref ref="proc_epsilon_delta"/> to a limit statment <m>\lim\limits_{x\to a}f(x)=L</m>, we usually have found an open interval <m>(c,d)</m> containing <m>a</m>, and then must find a <m>\delta</m> such that 
+        <me>
+            (a-\delta, a+\delta)\subseteq (c,d)
+        </me>.
+        The following approach is useful in this regard. Observe that 
+        <md>
+            <mrow>c \amp =a-(a-c)</mrow>
+            <mrow>d \amp =a+(d-a)</mrow>
+        </md>
+        and thus 
+        <m>
+            (c,d)=(a-\delta_1, a+\delta_2)
+        </m>,
+        where 
+        <md>
+            <mrow>\delta_1 \amp = a-c</mrow>
+            <mrow>\delta_2 \amp = d-a</mrow>
+        </md>,
+        are the distances from <m>a</m> to the left and right endpoints of the interval.
+    </p>
+    <figure xml:id="fig_delta_interval">
+        <caption>Visualizing distances to endpoints of interval</caption>
+    <image width="50%">
+    <shortdescription>Visualizing distances to endpoints of interval</shortdescription>
+        <latex-image>
+        \begin{tikzpicture}
+        \draw (-1/2,0) -- (3.5,0);
+        \path foreach \X/\Y  in 
+        {0/c, 1/a, 3/d}
+        { (\X,0) node[circle,fill,blue,inner sep=0.5mm,
+        label=above:{$\Y$}] (\Y) {}};
+ \begin{scope}[thick,decoration={calligraphic brace, amplitude=6pt}]
+  \draw[decorate]   (current bounding box.south) coordinate (aux)
+    (d|-aux) -- node[below=1ex]{$\delta_2=d-a$} (a|-aux);
+  \draw[decorate]   (current bounding box.north) coordinate (aux)
+    (c|-aux) -- node[above=1ex]{$\delta_1=a-d$} (a|-aux);
+ \end{scope} 
+\end{tikzpicture}
+    </latex-image>
+    </image>
+        
+    </figure>
+    <p>
+        Setting <m>\delta=\min\{\delta_1,\delta_2\}</m> as the minimum of these distances, we now have 
+        <me>
+            (a-\delta, a+\delta)\subseteq (a-\delta_1,a+\delta_2)=(c,d)
+        </me>,
+        as desired.
+    </p>
+    <p>
+        Depending on the example, we can sometimes easily determine which of <m>\delta_1</m> and <m>\delta_2</m> is the minimum, giving us an explicit expression for <m>\delta</m>. When things are too complicated, however, it is perfectly fine to set <m>\delta=\min\{\delta_1,\delta_2\}</m>.
+    </p>
+    
+    
+</remark>
 <example xml:base="eg_ep_delt_rad">
     <title>Epsilon-delta: radical function</title>
     <statement>
@@ -246,7 +304,7 @@
             where 
             <md>
             <mrow>\delta_1 \amp = \epsilon(2-\epsilon)</mrow>  
-            <mrow>\delta_2 \amp = \epsilon(2 +\epsilon))</mrow>  
+            <mrow>\delta_2 \amp = \epsilon(2 +\epsilon)</mrow>  
             </md>. 
             Note that since <m>0&lt; \epsilon\leq 1</m>, both <m>\delta_1</m> and <m>\delta_2</m> are positive. It is clear that <m>3\in S</m>. 
             Setting <m>\delta</m> to be the <em>minimum</em> of <m>\delta_1, \delta_2</m>, guarantees that  <m>(3-\delta, 3+\delta)\subseteq S</m>. We conclude that for any positive <m>\epsilon\leq 1</m>, setting <m>\delta=\min\{(\delta_1, \delta_2\}</m>, we have <m>\abs{f(x)-1}&lt; \epsilon</m> for all <m>x</m> satisfying <m>\abs{x-3}&lt; \delta</m>. 
@@ -258,26 +316,76 @@
         </p>
         </case>
         <case>
-        <title>Case: <m></m></title>
+        <title>Case: <m>\epsilon&gt; 1</m></title>
         <p>
-        
+            Now assume <m>\epsilon\geq 1</m>. We need to find a <m>\delta</m> such that <m>0&lt; \abs{x-3}&lt; \delta</m> implies <m>\abs{f(x)-1}&lt; \epsilon</m>. From the previous case (<m>\epsilon\leq 1</m>), we know there is a <m>\delta</m> such that <m>0&lt; \abs{x-3}&lt; \delta</m> implies <m>\abs{f(x)-1}&lt; 1</m>. But since <m>\epsilon &gt; 1</m>, we have 
+            <md>
+                <mrow>0&lt; \abs{x-3}&lt; \delta \amp\implies \abs{f(x)-1}&lt; 1  </mrow>
+                <mrow> \amp \implies \abs{f(x)-1}&lt;  \epsilon</mrow>
+            </md>,
+            as desired. 
         </p>
         </case>
-        
-        
+        <p>
+            Our two cases, taken together, show that for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta&gt; 0</m> such that 
+            <me>
+               0 &lt;\abs{x-3}&lt; \delta\implies \abs{f(x)-1}&lt; \epsilon
+            </me>.
+            Thus <m>\lim\limits_{x\to 3}f(x)=1</m>. 
+        </p>      
     </solution>
-    
 </example>
 <p>
     As the last example illustrates, as our function <m>f</m> becomes more complicated, solving the relevant inequality <xref ref="eq_proc_lim_def"/> can be a delicate and difficult affair. Mindful of this fact, instead of asking you to give a full epsilon-delta proof of a given limit claim, we will sometimes ask you to give a <em>partial</em> proof: namely we will give you one specific <m>\epsilon</m> as a challenge, and ask you to find a <m>\delta</m> that satisfies <xref ref="eq_lim_formal"/> for this particular <m>\epsilon</m>.
 </p>
 <example xml:id="eg_ep_delt_quad">
-    <title>Partial epsilon-delta: quadratic function</title>
+    <title>Finding <m>\delta</m> for specific <m>\epsilon</m>: quadratic function</title>
     <statement>
         <p>
             Let <m>f(x)=1-3x^2</m>. It is a fact that <m>\lim\limits_{x\to 1}f(x)=-2</m>. Verify the epsilon-delta definition for this limit statement for the specific epsilon <m>\epsilon=\frac{1}{2}</m>.
         </p>
     </statement>
-    
+    <solution>
+        <p>
+            We wish to find <m>\delta</m> satisfying 
+            <me>
+                0&lt; \abs{x-1}&lt; \delta \implies \abs{f(x)-(-2)}&lt; \frac{1}{2}
+            </me>.
+            Proceeding as in <xref ref="proc_epsilon_delta"/>, we first solve the inequality <m>\abs{f(x)-(-2)}&lt; \frac{1}{2}</m>:
+            <md>
+                <mrow> \abs{f(x)-(-2)}&lt; \frac{1}{2} \amp \iff \abs{(1-3x^2)+2}&lt; \frac{1}{2} </mrow>
+                <mrow> \amp \iff \abs{3-3x^2}&lt; \frac{1}{2}</mrow>
+                <mrow> \amp \iff \abs{(-3)(x^2-1)}&lt; \frac{1}{2}</mrow>
+                <mrow> \amp \iff 3\abs{x^2-1}&lt; \frac{1}{2}</mrow>
+                <mrow> \amp \iff \abs{x^2-1}&lt; \frac{1}{6}</mrow>
+                <mrow> \amp\iff -\frac{1}{6}&lt; x^2-1&lt; \frac{1}{6}</mrow>
+                <mrow> \amp \iff\frac{5}{6}&lt; x^2&lt; \frac{7}{6}</mrow>
+                <mrow> \amp \iff\sqrt{\frac{5}{6}}&lt; \abs{x}&lt; \sqrt{\frac{7}{6}} \amp \text{(rad. ineq. prop.)}</mrow>
+                <mrow> \amp \iff -\sqrt{\frac{7}{6}}&lt; x &lt; -\sqrt{\frac{5}{6}} \text{ or } \sqrt{\frac{5}{6}}&lt; x &lt; \sqrt{\frac{7}{6}}</mrow>
+            </md>.
+            Notice that in this case, the set of solutions <m>S</m> to the inequality is a union of two intervals: 
+            <me>
+                S=\left(-\sqrt{\frac{7}{6}},-\sqrt{\frac{5}{6}}\right)\cup \left(\sqrt{\frac{5}{6}},\sqrt{\frac{7}{6}}\right)
+            </me>.
+            Notice further that our limit point <m>1</m> is an element of the second interval, and that we have 
+            <me>
+                \left(\sqrt{\frac{5}{6}},\sqrt{\frac{7}{6}}\right)=(1-\delta_1,1+\delta_2) 
+            </me>,
+            where 
+            <md>
+                <mrow>\delta_1 \amp = 1-\sqrt{\frac{5}{6}} </mrow>
+                <mrow>\delta_2 \amp = \sqrt{\frac{7}{6}}-1</mrow>
+            </md>.
+            Thus, setting <m>\delta=\min\{\delta_1,\delta_2\}</m>, we have 
+            <me>
+                (1-\delta, 1+\delta)\subseteq \left(\sqrt{\frac{5}{6}},\sqrt{\frac{7}{6}}\right)\subseteq S
+            </me>.
+             It follows that 
+             <me>
+                0&lt; \abs{x-1}&lt; \delta \implies \abs{f(x)-(-2)}&lt; \frac{1}{2}
+             </me>,
+            as desired.
+        </p>
+    </solution>
 </example>
 </section>
