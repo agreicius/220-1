@@ -53,7 +53,7 @@
                     <li>
                         <title>Right-hand limit</title>
                         <p>
-                            Assume <m>f</m> is defined on an open interval of the form <m>(a,d)</m>. We say the <term>right-hand limit</term> of <m>f</m> as <m>x</m> approaches <m>a</m> from the right exists if there is a value <m>L</m> satisfying the following property: for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta&gt; 0</m> such that if <m>a&gt; x&gt; a+\delta</m>, then <m>\abs{f(x)-L}&lt; \epsilon</m>.
+                            Assume <m>f</m> is defined on an open interval of the form <m>(a,d)</m>. We say the <term>right-hand limit</term> of <m>f</m> as <m>x</m> approaches <m>a</m> from the right exists if there is a value <m>L</m> satisfying the following property: for all <m>\epsilon &gt; 0</m>, there exists a <m>\delta&gt; 0</m> such that if <m>a&lt; x&lt; a+\delta</m>, then <m>\abs{f(x)-L}&lt; \epsilon</m>.
                         </p>
                         <p> When this is the case we call <m>L</m> the <term>right-hand limit</term> of <m>f</m> as <m>x</m> approaches <m>a</m> from the right, and write 
                             <me>
@@ -151,7 +151,7 @@
 <p>
     Previously our definition of limit only applied to points <m>a\in \R</m> for which the function was defined for all <m>x\ne a</m> on an open interval <m>(c,d)</m> containing <m>a</m>. The language of one-sided limits allows us to extend this definition to <q>endpoints</q> of the domain, as the next definition makes clear. <xref ref="th_limit_left_right"/> guarantees that this definition is a consistent extension of <xref ref="d_lim_formal"/>.    
 </p>
-<definition xml:id="th_limit_extended">
+<definition xml:id="d_limit_extended">
     <title>Limit at endpoints of domain</title>
     <statement>
         <p>
