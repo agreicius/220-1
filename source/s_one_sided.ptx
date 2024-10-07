@@ -28,10 +28,10 @@
     </objectives></introduction>
     
     <subsection xml:id="ss_def">
+        <title>Definition</title>
         <p>
             One-sided limits provide a convenient means of describing how a function <m>f</m> behaves as its inputs approach a value <m>a</m> from one side or the other. We go straight to their formal definitions, mainly to introduce the notation and terminology.  
         </p>
-        <title>Definition</title>
     <definition xml:id="d_one_sided_limits">
         <title>One-sided limits</title>
         <statement>
