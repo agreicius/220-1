@@ -496,9 +496,9 @@ var ptx_lunr_docs = [
   "body": " Visualizing epsilon-delta proofs  The Geogebra interactive below provides a means of visualizing the challenge-response nature of the epsilon-delta proof of a limit claim in terms of the graph of . (The window below is a bit narrow. Go to the Geogebra page of the interactive for a larger rendition.) We elucidate how to parse this graphical representation.   The specific -challenge is indicated by a horizontal band centered about .    The -response is indicated by a vertical band centered about .    The game is, given a specific -challenge, find an appropriate such that when is within of , the values are within of . Visually, this is accomplished when all points on the segment of the graph of lying in the vertical band about also lie within the horizontal band about .      Visualizing epsilon-delta proofs. Made with Geogebra    "
 },
 {
-  "id": "s_lim_formal-11",
+  "id": "rm_find_delta",
   "level": "2",
-  "url": "s_lim_formal.html#s_lim_formal-11",
+  "url": "s_lim_formal.html#rm_find_delta",
   "type": "Remark",
   "number": "4.7",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
@@ -577,9 +577,9 @@ var ptx_lunr_docs = [
   "body": " One-sided limit rules  Since the definition of a one-sided limit differs from that of the limit, only in so far as we restrict our attention to inputs lying to one side or the other of the limit point  , it should come as no surprise that all the limit rules (sum, quotient, sandwich, etc.) and formulas (polynomial evaluation, rational evaluation, etc.) discussed thus far apply with equal validity to one-sided limits. This means you may compute one-sided limits with these rules in exactly the same way as you do with normal limits.  "
 },
 {
-  "id": "d_limit_extended",
+  "id": "th_limit_extended",
   "level": "2",
-  "url": "s_one_sided.html#d_limit_extended",
+  "url": "s_one_sided.html#th_limit_extended",
   "type": "Definition",
   "number": "5.5",
   "title": "Limit at endpoints of domain.",
@@ -629,123 +629,6 @@ var ptx_lunr_docs = [
   "number": "5.10",
   "title": "Affine substitution in limits.",
   "body": " Affine substitution in limits  Our second computation of the limit in seemed to use a substitution rule of the following sort: that is, we computed a limit of the form by observing that and then computing, using the substitution , that . Intuitively this seems straightforward, since as approaches , approaches . But in fact the claim is simply not true in general! Luckily for us, the approach does work when the substitution function is of the form , a so-called affine function . As such we will use such methods without further comment.  "
-},
-{
-  "id": "s_continuous_def",
-  "level": "1",
-  "url": "s_continuous_def.html",
-  "type": "Section",
-  "number": "6",
-  "title": "Continuity: definition",
-  "body": " Continuity: definition     Interior points and endpoints   Let be a function with domain .   Interior point  An element is an interior point of if contains an open interval that contains : , and .    Endpoints  An element is a left endpoint of if it is not an interior point of and contains an interval of the form .  An element is a right endpoint of if it is not an interior point of and contains an interval of the form . with .  An element is an endpoint of if it is either left or right endpoint.        Continuity   Let be a function with domain , and suppose is either an interior point or an endpoint of . The function is continuous at if the limit of at exists and is equal to the value of at : , if    exists, and     .   The function is discontinuous at if it is not continuous there.  For a subset , we say is continuous on if is continuous at all interior or endpoint points of lying in . We say is continuous if it is continuous on its entire domain.     Continuity at  Let be a function with domain . Observe that our definition of continuity (and discontinuity) only applies to elements of the domain. (In fact, it only applies to elements of the domain that are either interior points or endpoints.)  For example, consider the function with domain . Since is not an element of the domain of , we do not say that is continuous or discontinuous at .    Endpoints  Let be a function with domain , and let be a right endpoint of . Since by definition contains an interval of the form but not a full open interval containing , we are in a situation where only the left limit of is defined at . Recall ( ) that we define in this case. A similar remark applies to left endpoints of .    Continuity at endpoint   Let , with domain . Decide whether is continuous at .    First observe that since is a left endpoint of , we define . We compute Thus exists and is equal to 0. Since , we see further that and thus that is continuous at .     Continuity: graphical  When scanning the graph of a function for points of continuity or discontinuity, we look for problem points . These are locations on the graph where either (a) the limit of the function appears not to exist, or (b) where the limit does exist but does not agree with the value of the function.  A well-loved adage in this regard is the phrase a continuous function is one whose graph can be traced without lifting the pencil . This is cute, and helpful for guidance, but should not be taken too literally. Indeed, there are some pretty wacky continuous functions out there. For example, the function is continuous everywhere on its domain, and yet there are some peculiar properties of its graph that make it unclear it what sense it could be traced by a pencil .    Continuity: graphical   For the function whose graph is given below, find all points of discontinuity and explain what conditions of fail to attain. Make use of some of the following descriptors of discontinuities: jump , removeable , oscillating , infinite .   Graph of function   Graph of complicated function       Note that we do not speak of being continuous or discontinuous at , as this is not an element of the domain of .     Continuous everywhere   Let . Prove, using that is continuous.    Next we state some theorems that allow facilitate our (non-graphical) analysis of continuity for a given function. A first result provides us with a large zoo of continuous functions.   Continuous functions      Absolute value  The function is continuous everywhere on its domain. In other words, the absolute value function is a continuous function.    Polynomials and rational functions  If is either a polynomial or a rational function, then is continuous everywhere on its domain. In other words, polynomials and rational functions are continuous functions.    Trigonometric functions  The functions , , and are continuous everywhere on their domains. In other words, , , and are continuous functions.          This is a direct consequence of and .    This is a direct consequence of and .        Continuity rules   Assume and are both continuous at the point .   Linear combination  For all constants , the function is continuous at .    Product  The function is continuous at .    Quotient  Assume further that . The function is continuous at .    Power  Let be a positive integer. The function is continuous at .    Root rule  Let be a positive integer. If is even, assume further that . The function is continuous at .        Continuity composition rule   Assume and are functions, and suppose the range of is a subset of the domain of . If , and if is continuous at , then .  It follows that if is continuous at , then the composition is continuous at .     Continuity rules   Prove, using our various continuity rules, that the function is continuous.    "
-},
-{
-  "id": "d_interior_endpoint",
-  "level": "2",
-  "url": "s_continuous_def.html#d_interior_endpoint",
-  "type": "Definition",
-  "number": "6.1",
-  "title": "Interior points and endpoints.",
-  "body": " Interior points and endpoints   Let be a function with domain .   Interior point  An element is an interior point of if contains an open interval that contains : , and .    Endpoints  An element is a left endpoint of if it is not an interior point of and contains an interval of the form .  An element is a right endpoint of if it is not an interior point of and contains an interval of the form . with .  An element is an endpoint of if it is either left or right endpoint.      "
-},
-{
-  "id": "d_continuity",
-  "level": "2",
-  "url": "s_continuous_def.html#d_continuity",
-  "type": "Definition",
-  "number": "6.2",
-  "title": "Continuity.",
-  "body": " Continuity   Let be a function with domain , and suppose is either an interior point or an endpoint of . The function is continuous at if the limit of at exists and is equal to the value of at : , if    exists, and     .   The function is discontinuous at if it is not continuous there.  For a subset , we say is continuous on if is continuous at all interior or endpoint points of lying in . We say is continuous if it is continuous on its entire domain.   "
-},
-{
-  "id": "s_continuous_def-5",
-  "level": "2",
-  "url": "s_continuous_def.html#s_continuous_def-5",
-  "type": "Remark",
-  "number": "6.3",
-  "title": "Continuity at <span class=\"process-math\">\\(a\\)<\/span>.",
-  "body": " Continuity at  Let be a function with domain . Observe that our definition of continuity (and discontinuity) only applies to elements of the domain. (In fact, it only applies to elements of the domain that are either interior points or endpoints.)  For example, consider the function with domain . Since is not an element of the domain of , we do not say that is continuous or discontinuous at .  "
-},
-{
-  "id": "s_continuous_def-6",
-  "level": "2",
-  "url": "s_continuous_def.html#s_continuous_def-6",
-  "type": "Remark",
-  "number": "6.4",
-  "title": "Endpoints.",
-  "body": " Endpoints  Let be a function with domain , and let be a right endpoint of . Since by definition contains an interval of the form but not a full open interval containing , we are in a situation where only the left limit of is defined at . Recall ( ) that we define in this case. A similar remark applies to left endpoints of .  "
-},
-{
-  "id": "eg_cont_endpoint",
-  "level": "2",
-  "url": "s_continuous_def.html#eg_cont_endpoint",
-  "type": "Example",
-  "number": "6.5",
-  "title": "Continuity at endpoint.",
-  "body": " Continuity at endpoint   Let , with domain . Decide whether is continuous at .    First observe that since is a left endpoint of , we define . We compute Thus exists and is equal to 0. Since , we see further that and thus that is continuous at .   "
-},
-{
-  "id": "s_continuous_def-8",
-  "level": "2",
-  "url": "s_continuous_def.html#s_continuous_def-8",
-  "type": "Remark",
-  "number": "6.6",
-  "title": "Continuity: graphical.",
-  "body": " Continuity: graphical  When scanning the graph of a function for points of continuity or discontinuity, we look for problem points . These are locations on the graph where either (a) the limit of the function appears not to exist, or (b) where the limit does exist but does not agree with the value of the function.  A well-loved adage in this regard is the phrase a continuous function is one whose graph can be traced without lifting the pencil . This is cute, and helpful for guidance, but should not be taken too literally. Indeed, there are some pretty wacky continuous functions out there. For example, the function is continuous everywhere on its domain, and yet there are some peculiar properties of its graph that make it unclear it what sense it could be traced by a pencil .  "
-},
-{
-  "id": "eg_cont_graph",
-  "level": "2",
-  "url": "s_continuous_def.html#eg_cont_graph",
-  "type": "Example",
-  "number": "6.7",
-  "title": "Continuity: graphical.",
-  "body": " Continuity: graphical   For the function whose graph is given below, find all points of discontinuity and explain what conditions of fail to attain. Make use of some of the following descriptors of discontinuities: jump , removeable , oscillating , infinite .   Graph of function   Graph of complicated function       Note that we do not speak of being continuous or discontinuous at , as this is not an element of the domain of .   "
-},
-{
-  "id": "eg_cont_on_domain",
-  "level": "2",
-  "url": "s_continuous_def.html#eg_cont_on_domain",
-  "type": "Example",
-  "number": "6.9",
-  "title": "Continuous everywhere.",
-  "body": " Continuous everywhere   Let . Prove, using that is continuous.   "
-},
-{
-  "id": "th_cont_poly_rational",
-  "level": "2",
-  "url": "s_continuous_def.html#th_cont_poly_rational",
-  "type": "Theorem",
-  "number": "6.10",
-  "title": "Continuous functions.",
-  "body": " Continuous functions      Absolute value  The function is continuous everywhere on its domain. In other words, the absolute value function is a continuous function.    Polynomials and rational functions  If is either a polynomial or a rational function, then is continuous everywhere on its domain. In other words, polynomials and rational functions are continuous functions.    Trigonometric functions  The functions , , and are continuous everywhere on their domains. In other words, , , and are continuous functions.          This is a direct consequence of and .    This is a direct consequence of and .      "
-},
-{
-  "id": "th_cont_rules",
-  "level": "2",
-  "url": "s_continuous_def.html#th_cont_rules",
-  "type": "Theorem",
-  "number": "6.11",
-  "title": "Continuity rules.",
-  "body": " Continuity rules   Assume and are both continuous at the point .   Linear combination  For all constants , the function is continuous at .    Product  The function is continuous at .    Quotient  Assume further that . The function is continuous at .    Power  Let be a positive integer. The function is continuous at .    Root rule  Let be a positive integer. If is even, assume further that . The function is continuous at .      "
-},
-{
-  "id": "th_cont_comp",
-  "level": "2",
-  "url": "s_continuous_def.html#th_cont_comp",
-  "type": "Theorem",
-  "number": "6.12",
-  "title": "Continuity composition rule.",
-  "body": " Continuity composition rule   Assume and are functions, and suppose the range of is a subset of the domain of . If , and if is continuous at , then .  It follows that if is continuous at , then the composition is continuous at .   "
-},
-{
-  "id": "eg_cont_rules",
-  "level": "2",
-  "url": "s_continuous_def.html#eg_cont_rules",
-  "type": "Example",
-  "number": "6.13",
-  "title": "Continuity rules.",
-  "body": " Continuity rules   Prove, using our various continuity rules, that the function is continuous.   "
 },
 {
   "id": "appendix-notation",
