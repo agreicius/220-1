@@ -2,7 +2,8 @@
 
 <section xml:id="s_one_sided" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>One-sided limits</title>
-    <introduction><objectives>
+    <introduction>
+        <objectives>
         <ol>
             <li>
                 <p>
@@ -25,7 +26,8 @@
                 </p>
             </li>
         </ol>
-    </objectives></introduction>
+    </objectives>
+</introduction>
     
     <subsection xml:id="ss_def">
         <title>Definition</title>
