@@ -36,10 +36,10 @@
 <path transform="matrix(1.00003,0,0,-1.00005,15.26992,34.310068)" d="M28.52501 16.05177C27.6284 17.8451 25.35797 19.35002 22.36914 19.35002 21.84311 19.35002 21.84311 18.553 22.36914 18.553 25.35797 18.553 27.27197 17.6669 28.1686 15.87358 28.28621 15.63832 28.64264 15.81653 28.52501 16.05177"/>
 <path transform="matrix(1.00003,0,0,-1.00005,15.26992,34.310068)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M20.15105 18.9515H22.36914"/>
 <path transform="matrix(1.00003,0,0,-1.00005,15.26992,34.310068)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d=""/>
-<use data-text="&#x03b4;" xlink:href="#font_1_1" transform="matrix(9.962899,0,0,-9.963098,7.475685,8.838795)"/>
-<use data-text="1" xlink:href="#font_2_1" transform="matrix(6.9740097,0,0,-6.9741489,11.903816,10.33387)"/>
-<use data-text="=" xlink:href="#font_3_1" transform="matrix(9.962899,0,0,-9.963098,19.141037,8.838795)"/>
-<use data-text="a" xlink:href="#font_1_2" transform="matrix(9.962899,0,0,-9.963098,29.657349,8.838795)"/>
-<use data-text="&#x2212;" xlink:href="#font_4_1" transform="matrix(9.962899,0,0,-9.963098,37.13758,8.838795)"/>
-<use data-text="c" xlink:href="#font_1_3" transform="matrix(9.962899,0,0,-9.963098,47.099885,8.838795)"/>
+<use data-text="&#x03b4;" xlink:href="#font_1_1" transform="matrix(9.962899,0,0,-9.963098,7.0386736,8.838795)"/>
+<use data-text="1" xlink:href="#font_2_1" transform="matrix(6.9740097,0,0,-6.9741489,11.4668049,10.33387)"/>
+<use data-text="=" xlink:href="#font_3_1" transform="matrix(9.962899,0,0,-9.963098,18.704026,8.838795)"/>
+<use data-text="a" xlink:href="#font_1_2" transform="matrix(9.962899,0,0,-9.963098,29.220337,8.838795)"/>
+<use data-text="&#x2212;" xlink:href="#font_4_1" transform="matrix(9.962899,0,0,-9.963098,36.70057,8.838795)"/>
+<use data-text="d" xlink:href="#font_1_4" transform="matrix(9.962899,0,0,-9.963098,46.662874,8.838795)"/>
 </svg>
