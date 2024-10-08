@@ -250,7 +250,7 @@
             </p>
         </statement>
     </example>
-    <remark>
+    <remark xml:id="rm_affine_sub">
         <title>Affine substitution in limits</title>
         <p>
             Our second computation of the limit in <xref ref="eg_classic_trig"/> seemed to use a <q>substitution</q> rule of the following sort: that is, we computed a limit of the form <m>\lim_{x\rightarrow a}f(g(x))</m> by observing that <m>\lim_{x\to a}g(x)=b</m> and then computing, using the substitution <m>t=g(x)</m>,  that 
