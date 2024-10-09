@@ -293,6 +293,21 @@
                             This is a direct consequence of <xref ref="d_continuity"/> and <xref ref="cor_poly_rational"/>.    
                         </p>
                     </li>
+                    <li>
+                        <p>
+                            This result actually requires some work, since currently we only have an evaluation limit formula for sine at <m>0</m>. This gives us a chance to illustrate the affine substitution technique again. (See <xref ref="rm_affine_sub"/>.) Take any <m>a\in \R</m>. We have 
+                            <md>
+                                <mrow> \lim_{x\to a}\sin x\amp = \lim_{x\to a}\sin ((x-a)+a) </mrow>
+                                <mrow> \amp = \lim_{x\to a}(\sin(x-a)\cos a+\cos(x-a)\sin a) \amp \text{(trig. ident.)}</mrow>
+                                <mrow> \amp = \lim_{x\to a}\sin(x-a)\lim_{x\to a}\cos a+\lim_{x\to a}\cos(x-a)\lim_{x\to a}\sin a \amp \text{(sum, prod. rule.)}</mrow>
+                                <mrow> \amp = \lim_{x\to a}\sin(x-a)\cos a+\lim_{x\to a}\cos(x-a)\sin a \amp \text{(const. rule)}</mrow>
+                                <mrow> \amp = (\lim_{t\to 0}\sin(t))\cos a+(\lim_{t\to 0})\cos(t)\sin a \amp (\text{subst. } t=x-a)</mrow>
+                                <mrow> \amp =0\cos a+1\sin a \amp (<xref ref="th_lim_sine_cos" text="global"/>)</mrow>
+                                <mrow> \amp = \sin a</mrow>
+                            </md>.
+                            The computation shows both that (i) the limit of <m>\sin</m> exists at <m>a</m>, and (ii) the limit agrees with the value of <m>\sin</m> at <m>a</m>. We conclude that <m>\sin</m> is continuous at <m>a</m>. Since <m>a</m> was arbitrary, we conclude that <m>f</m> is continuous everywhere, hence continuous. 
+                        </p>
+                    </li>
                 </ol>
                
             </p>
