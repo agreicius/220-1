@@ -2,7 +2,6 @@
 
 <section xml:id="s_one_sided" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>One-sided limits</title>
-    <introduction>
         <objectives>
         <ol>
             <li>
@@ -27,7 +26,6 @@
             </li>
         </ol>
     </objectives>
-</introduction>
     
     <subsection xml:id="ss_def">
         <title>Definition</title>
@@ -215,6 +213,20 @@
             Use <xref ref="th_limit_left_right"/> to decide whether <m>\lim_{x\to 0}f(x)</m> exists. 
         </p>
     </statement>
+    <solution>
+        <p>
+            We compute the left and right limits of <m>f</m> at <m>0</m> separately. As you will see, the piecewise nature of the definition of <m>\abs{x}</m> will make these quite easy. 
+            <md>
+                <mrow>\lim_{x\to 0^+}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^+}\frac{x}{x} \amp (x\geq 0\implies \abs{x}=x) </mrow>
+                <mrow> \amp = \lim\limits_{x\to 0^+}1</mrow>
+                <mrow> \amp = 1</mrow>
+                <mrow>\lim_{x\to 0^-}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^-}\frac{x}{-x} \amp (x\leq 0\implies \abs{x}=-x) </mrow>
+                <mrow> \amp = \lim\limits_{x\to 0^+}-1</mrow>
+                <mrow> \amp = -1</mrow>
+            </md>.
+        We thus see that the two one-sided limits exist, but are not equal to one another. We conclude, using <xref ref="th_limit_left_right"/> that the limit of <m>f</m> at 0 does not exist. 
+        </p>
+    </solution>
 </example>
 
 </subsection>
@@ -241,6 +253,11 @@
                 </ol>
             </p>
         </statement>
+        <proof>
+            <p>
+                I will eventually give a proof here. For now, take a look at the proof in the text. 
+            </p>
+        </proof>
     </theorem>
     <example xml:id="eg_classic_trig">
         <title>Classic trig limits</title>
@@ -249,6 +266,25 @@
                 Compute <m>\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}</m>.
             </p>
         </statement>
+        <solution>
+            <p>
+                We give two computations. The first uses the double-angle formula. 
+                <md>
+                    <mrow> \lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta} \amp
+                        = \frac{2\sin\theta\cos\theta}{\theta} \amp \text{(double-angle)} </mrow>
+                        <mrow> \amp =2\lim_{0\to \theta}\frac{\sin\theta}{\theta}\lim_{\theta\to 0}\cos\theta \amp \text{(scal. mult., prod.)}</mrow>
+                        <mrow> \amp = 2\cdot 1 \cdot 1 \amp (<xref ref="th_trig_lims" text="global"/>, \text{cos eval.})</mrow>
+                </md>.
+                The second uses a substitution technique that I call <em>affine substitution</em>. See <xref ref="rm_affine_sub"/> for a discussion of its legitimacy. 
+                <md>
+                    <mrow> \lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\amp 
+                        = \lim\limits_{\theta\to 0}\frac{2\sin(2\theta)}{2\theta}
+                    </mrow>
+                    <mrow> \amp = \lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)</mrow>
+                    <mrow> \amp = 1 \amp (<xref ref="th_trig_lims" text="global"/>)</mrow>
+                </md>.
+            </p>
+        </solution>
     </example>
     <remark xml:id="rm_affine_sub">
         <title>Affine substitution in limits</title>
