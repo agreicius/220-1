@@ -15,6 +15,26 @@
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Classic trig limits.</span>
 </h4>
 <div class="para">Compute <span class="process-math">\(\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\text{.}\)</span>
-</div></article><span class="incontext"><a class="internal" href="s_one_sided.html#eg_classic_trig">in-context</a></span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">We give two computations. The first uses the double-angle formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_trig_lims.html ./knowl/xref/rm_affine_sub.html ./knowl/xref/th_trig_lims.html">
+\begin{align*}
+\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta} \amp
+= \frac{2\sin\theta\cos\theta}{\theta} \amp \text{(double-angle)} \\
+\amp =2\lim_{0\to \theta}\frac{\sin\theta}{\theta}\lim_{\theta\to 0}\cos\theta \amp \text{(scal. mult., prod.)}\\
+\amp = 2\cdot 1 \cdot 1 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}}, \text{cos eval.})\text{.}
+\end{align*}
+</div>
+<div class="para">The second uses a substitution technique that I call <em class="emphasis">affine substitution</em>. See <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a> for a discussion of its legitimacy.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_trig_lims.html ./knowl/xref/rm_affine_sub.html ./knowl/xref/th_trig_lims.html">
+\begin{align*}
+\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\amp 
+= \lim\limits_{\theta\to 0}\frac{2\sin(2\theta)}{2\theta}\\
+\amp = \lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)\\
+\amp = 1 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}})\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_one_sided.html#eg_classic_trig">in-context</a></span>
 </body>
 </html>

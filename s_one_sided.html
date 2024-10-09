@@ -135,9 +135,9 @@ window.MathJax = {
 #th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
 #th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
 #th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
-#s_one_sided-2-1-1 { counter-set: s_one_sided-2-1-1 0; }
-#s_one_sided-2-1-1 > li::marker { content: ""counter(s_one_sided-2-1-1,decimal)"."; }
-#s_one_sided-2-1-1 > li { counter-increment: s_one_sided-2-1-1; }
+#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
+#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
+#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
 #d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
 #d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
 #d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
@@ -331,16 +331,16 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_one_sided"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">5</span><span class="space"> </span><span class="title">One-sided limits</span>
 </h2>
-<section class="introduction" id="s_one_sided-2"><article class="objectives goal-like" id="s_one_sided-2-1"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="decimal" id="s_one_sided-2-1-1">
-<li id="s_one_sided-2-1-1-1"><div class="para" id="s_one_sided-2-1-1-1-1">Provide a rigorous definition of one-sided limits.</div></li>
-<li id="s_one_sided-2-1-1-2"><div class="para" id="s_one_sided-2-1-1-2-1">Use one-sided limits to evaluate limits at a point.</div></li>
-<li id="s_one_sided-2-1-1-3"><div class="para" id="s_one_sided-2-1-1-3-1">Use limit rules and formulas for one-sided limits.</div></li>
-<li id="s_one_sided-2-1-1-4"><div class="para" id="s_one_sided-2-1-1-4-1">Use one-sided limits to evaluate the limit at a point.</div></li>
-</ol></article></section><section class="subsection" id="ss_def"><h3 class="heading hide-type">
+<article class="objectives goal-like" id="s_one_sided-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_one_sided-2-1">
+<li id="s_one_sided-2-1-1"><div class="para" id="s_one_sided-2-1-1-1">Provide a rigorous definition of one-sided limits.</div></li>
+<li id="s_one_sided-2-1-2"><div class="para" id="s_one_sided-2-1-2-1">Use one-sided limits to evaluate limits at a point.</div></li>
+<li id="s_one_sided-2-1-3"><div class="para" id="s_one_sided-2-1-3-1">Use limit rules and formulas for one-sided limits.</div></li>
+<li id="s_one_sided-2-1-4"><div class="para" id="s_one_sided-2-1-4-1">Use one-sided limits to evaluate the limit at a point.</div></li>
+</ol></article><section class="subsection" id="ss_def"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Definition</span>
 </h3>
-<div class="para" id="ss_def-1">One-sided limits provide a convenient means of describing how a function <span class="process-math">\(f\)</span> behaves as its inputs approach a value <span class="process-math">\(a\)</span> from one side or the other. We go straight to their formal definitions, mainly to introduce the notation and terminology.</div>
+<div class="para" id="ss_def-2">One-sided limits provide a convenient means of describing how a function <span class="process-math">\(f\)</span> behaves as its inputs approach a value <span class="process-math">\(a\)</span> from one side or the other. We go straight to their formal definitions, mainly to introduce the notation and terminology.</div>
 <article class="definition definition-like" id="d_one_sided_limits"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">One-sided limits.</span>
 </h4> <div class="para logical" id="d_one_sided_limits-2-1">
@@ -460,7 +460,21 @@ D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
 </div>
 <div class="para">defined as <span class="process-math">\(f(x)=\frac{x}{\abs{x}}\text{.}\)</span>
 </div>
-</div> <div class="para" id="ss_one_sided_test-5-2-2">Use <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> to decide whether <span class="process-math">\(\lim_{x\to 0}f(x)\)</span> exists.</div></article></section><section class="subsection" id="ss_trig_lims"><h3 class="heading hide-type">
+</div> <div class="para" id="ss_one_sided_test-5-2-2">Use <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> to decide whether <span class="process-math">\(\lim_{x\to 0}f(x)\)</span> exists.</div>
+<div class="solutions"><details id="ss_one_sided_test-5-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="ss_one_sided_test-5-3-1">
+<div class="para">We compute the left and right limits of <span class="process-math">\(f\)</span> at <span class="process-math">\(0\)</span> separately. As you will see, the piecewise nature of the definition of <span class="process-math">\(\abs{x}\)</span> will make these quite easy.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html" id="ss_one_sided_test-5-3-1-4">
+\begin{align*}
+\lim_{x\to 0^+}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^+}\frac{x}{x} \amp (x\geq 0\implies \abs{x}=x) \\
+\amp = \lim\limits_{x\to 0^+}1\\
+\amp = 1\\
+\lim_{x\to 0^-}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^-}\frac{x}{-x} \amp (x\leq 0\implies \abs{x}=-x) \\
+\amp = \lim\limits_{x\to 0^+}-1\\
+\amp = -1\text{.}
+\end{align*}
+</div>
+<div class="para">We thus see that the two one-sided limits exist, but are not equal to one another. We conclude, using <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> that the limit of <span class="process-math">\(f\)</span> at 0 does not exist.</div>
+</div></div></details></div></article></section><section class="subsection" id="ss_trig_lims"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Classic trig limits</span>
 </h3>
 <div class="para" id="ss_trig_lims-2">The following classic limit formulas are proved using one-sided limits computed with the help of some lovely geometric arguments and the sandwich theorem.</div>
@@ -470,13 +484,33 @@ D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
 <div class="para logical" id="th_trig_lims-2-1"><ol class="decimal" id="th_trig_lims-2-1-1">
 <li id="th_trig_lims-2-1-1-1"><div class="para" id="th_trig_lims-2-1-1-1-1"><span class="process-math">\(\lim\limits_{\theta\to 0}\frac{\sin\theta}{\theta}=1\text{.}\)</span></div></li>
 <li id="th_trig_lims-2-1-1-2"><div class="para" id="th_trig_lims-2-1-1-2-1"><span class="process-math">\(\lim\limits_{\theta\to 0}\frac{\cos\theta-1}{\theta}=0\text{.}\)</span></div></li>
-</ol></div></article><article class="example example-like" id="eg_classic_trig"><h4 class="heading">
+</ol></div></article><details id="th_trig_lims-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="th_trig_lims-3-1">I will eventually give a proof here. For now, take a look at the proof in the text.</div></article></details><article class="example example-like" id="eg_classic_trig"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Classic trig limits.</span>
 </h4>
 <div class="para" id="eg_classic_trig-2-1">Compute <span class="process-math">\(\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\text{.}\)</span>
-</div></article><article class="remark remark-like" id="ss_trig_lims-5"><h4 class="heading">
+</div>
+<div class="solutions"><details id="eg_classic_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_classic_trig-3-1">
+<div class="para">We give two computations. The first uses the double-angle formula.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_trig_lims.html ./knowl/xref/rm_affine_sub.html ./knowl/xref/th_trig_lims.html" id="eg_classic_trig-3-1-1">
+\begin{align*}
+\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta} \amp
+= \frac{2\sin\theta\cos\theta}{\theta} \amp \text{(double-angle)} \\
+\amp =2\lim_{0\to \theta}\frac{\sin\theta}{\theta}\lim_{\theta\to 0}\cos\theta \amp \text{(scal. mult., prod.)}\\
+\amp = 2\cdot 1 \cdot 1 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}}, \text{cos eval.})\text{.}
+\end{align*}
+</div>
+<div class="para">The second uses a substitution technique that I call <em class="emphasis">affine substitution</em>. See <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a> for a discussion of its legitimacy.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_trig_lims.html ./knowl/xref/rm_affine_sub.html ./knowl/xref/th_trig_lims.html" id="eg_classic_trig-3-1-4">
+\begin{align*}
+\lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\amp 
+= \lim\limits_{\theta\to 0}\frac{2\sin(2\theta)}{2\theta}\\
+\amp = \lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)\\
+\amp = 1 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}})\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="remark remark-like" id="rm_affine_sub"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Affine substitution in limits.</span>
-</h4> <div class="para logical" id="ss_trig_lims-5-2">
+</h4> <div class="para logical" id="rm_affine_sub-2">
 <div class="para">Our second computation of the limit in <a href="s_one_sided.html#eg_classic_trig" class="xref" data-knowl="./knowl/xref/eg_classic_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.9: Classic trig limits">Example 5.9</a> seemed to use a “substitution” rule of the following sort: that is, we computed a limit of the form <span class="process-math">\(\lim_{x\rightarrow a}f(g(x))\)</span> by observing that <span class="process-math">\(\lim_{x\to a}g(x)=b\)</span> and then computing, using the substitution <span class="process-math">\(t=g(x)\text{,}\)</span>  that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_classic_trig.html">
 \begin{equation*}

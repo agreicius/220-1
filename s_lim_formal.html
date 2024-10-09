@@ -135,9 +135,9 @@ window.MathJax = {
 #th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
 #th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
 #th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
-#s_one_sided-2-1-1 { counter-set: s_one_sided-2-1-1 0; }
-#s_one_sided-2-1-1 > li::marker { content: ""counter(s_one_sided-2-1-1,decimal)"."; }
-#s_one_sided-2-1-1 > li { counter-increment: s_one_sided-2-1-1; }
+#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
+#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
+#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
 #d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
 #d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
 #d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
@@ -460,9 +460,9 @@ window.MathJax = {
 <li id="s_lim_formal-10-2-5-3"><div class="para" id="s_lim_formal-10-2-5-3-1">The game is, given a specific <span class="process-math">\(\epsilon\)</span>-challenge, find an appropriate <span class="process-math">\(\delta\)</span> such that when <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{,}\)</span> the values <span class="process-math">\(f(x)\)</span> are within <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span> Visually, this is accomplished when all points <span class="process-math">\((x,f(x))\)</span> on the segment of the graph of <span class="process-math">\(f\)</span> lying in the vertical band about <span class="process-math">\(x=a\)</span> also lie within the horizontal band about <span class="process-math">\(y=L\text{.}\)</span>
 </div></li>
 </ul>
-</div> <figure class="figure figure-like" id="fig_vis_ep_delta"><iframe id="int_geo_ep_delta" width="600" height="450" src="int_geo_ep_delta-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6<span class="period">.</span></span><span class="space"> </span>Visualizing epsilon-delta proofs. Made with <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra</a><details class="ptx-footnote" aria-live="polite" id="fig_vis_ep_delta-1-2"><summary class="ptx-footnote__number" title="Footnote 4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="fig_vis_ep_delta-1-2"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details></figcaption></figure></article><article class="remark remark-like" id="s_lim_formal-11"><h3 class="heading">
+</div> <figure class="figure figure-like" id="fig_vis_ep_delta"><iframe id="int_geo_ep_delta" width="600" height="450" src="int_geo_ep_delta-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6<span class="period">.</span></span><span class="space"> </span>Visualizing epsilon-delta proofs. Made with <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra</a><details class="ptx-footnote" aria-live="polite" id="fig_vis_ep_delta-1-2"><summary class="ptx-footnote__number" title="Footnote 4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="fig_vis_ep_delta-1-2"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details></figcaption></figure></article><article class="remark remark-like" id="rm_find_delta"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Finding <span class="process-math">\(\delta\)</span> such that <span class="process-math">\((a-\delta, a+\delta)\subseteq S\)</span>.</span>
-</h3> <div class="para logical" id="s_lim_formal-11-2">
+</h3> <div class="para logical" id="rm_find_delta-2">
 <div class="para">In the final step of applying <a href="s_lim_formal.html#proc_epsilon_delta" class="xref" data-knowl="./knowl/xref/proc_epsilon_delta.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 4.4: Epsilon-delta proof for limits">Procedure 4.4</a> to a limit statment <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\text{,}\)</span> we usually have found an open interval <span class="process-math">\((c,d)\)</span> containing <span class="process-math">\(a\text{,}\)</span> and then must find a <span class="process-math">\(\delta\)</span> such that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html">
 \begin{equation*}
@@ -470,7 +470,7 @@ window.MathJax = {
 \end{equation*}
 </div>
 <div class="para">The following approach is useful in this regard. Observe that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html" id="s_lim_formal-11-2-7">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html" id="rm_find_delta-2-7">
 \begin{align*}
 c \amp =a-(a-c)\\
 d \amp =a+(d-a)
@@ -478,7 +478,7 @@ d \amp =a+(d-a)
 </div>
 <div class="para">and thus <span class="process-math">\((c,d)=(a-\delta_1, a+\delta_2)
 \text{,}\)</span> where</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html" id="s_lim_formal-11-2-9">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html" id="rm_find_delta-2-9">
 \begin{align*}
 \delta_1 \amp = a-c\\
 \delta_2 \amp = d-a\text{,}
@@ -486,7 +486,7 @@ d \amp =a+(d-a)
 </div>
 <div class="para">are the distances from <span class="process-math">\(a\)</span> to the left and right endpoints of the interval.</div>
 </div> <figure class="figure figure-like" id="fig_delta_interval"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig_delta_interval-2.svg" role="img" class="contained" alt="Visualizing distances to endpoints of interval"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.8<span class="period">.</span></span><span class="space"> </span>Visualizing distances to endpoints of interval</figcaption></figure> <div class="para logical" id="s_lim_formal-11-4">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.8<span class="period">.</span></span><span class="space"> </span>Visualizing distances to endpoints of interval</figcaption></figure> <div class="para logical" id="rm_find_delta-4">
 <div class="para">Setting <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\)</span> as the minimum of these distances, we now have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -494,7 +494,7 @@ d \amp =a+(d-a)
 \end{equation*}
 </div>
 <div class="para">as desired.</div>
-</div> <div class="para" id="s_lim_formal-11-5">Depending on the example, we can sometimes easily determine which of <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> is the minimum, giving us an explicit expression for <span class="process-math">\(\delta\text{.}\)</span> When things are too complicated, however, it is perfectly fine to set <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\text{.}\)</span>
+</div> <div class="para" id="rm_find_delta-5">Depending on the example, we can sometimes easily determine which of <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> is the minimum, giving us an explicit expression for <span class="process-math">\(\delta\text{.}\)</span> When things are too complicated, however, it is perfectly fine to set <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\text{.}\)</span>
 </div></article><article class="example example-like" id="s_lim_formal-12"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta: radical function.</span>
 </h3>
