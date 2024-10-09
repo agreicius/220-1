@@ -159,6 +159,12 @@ window.MathJax = {
 #th_cont_rules-2-1-4 { counter-set: th_cont_rules-2-1-4 0; }
 #th_cont_rules-2-1-4 > li::marker { content: ""counter(th_cont_rules-2-1-4,decimal)"."; }
 #th_cont_rules-2-1-4 > li { counter-increment: th_cont_rules-2-1-4; }
+#s_cont_ivt-2-1 { counter-set: s_cont_ivt-2-1 0; }
+#s_cont_ivt-2-1 > li::marker { content: ""counter(s_cont_ivt-2-1,decimal)"."; }
+#s_cont_ivt-2-1 > li { counter-increment: s_cont_ivt-2-1; }
+#eg_cont_piecewise-2-1-4 { counter-set: eg_cont_piecewise-2-1-4 0; }
+#eg_cont_piecewise-2-1-4 > li::marker { content: ""counter(eg_cont_piecewise-2-1-4,decimal)"."; }
+#eg_cont_piecewise-2-1-4 > li { counter-increment: eg_cont_piecewise-2-1-4; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -316,8 +322,15 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_continuous_def.html" class="internal"><span class="codenumber">6</span> <span class="title">Continuity: definition</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_cont_ivt.html" class="internal"><span class="codenumber">7</span> <span class="title">Continuity: intermediate value theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_piecewise" class="internal"><span class="title">Continuity of piecewise defined functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_ivt" class="internal"><span class="title">Intermediate value theorem</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-10.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-11.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -504,8 +517,8 @@ D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
 \begin{align*}
 \lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\amp 
 = \lim\limits_{\theta\to 0}\frac{2\sin(2\theta)}{2\theta}\\
-\amp = \lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)\\
-\amp = 1 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}})\text{.}
+\amp = 2\lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)\\
+\amp = 2 \amp (\knowl{./knowl/xref/th_trig_lims.html}{\text{5.8}})\text{.}
 \end{align*}
 </div>
 </div></div></details></div></article><article class="remark remark-like" id="rm_affine_sub"><h4 class="heading">

@@ -748,6 +748,87 @@ var ptx_lunr_docs = [
   "body": " Continuity rules   Prove, using our various continuity rules, that the function is continuous.    Let be an interior element of the domain of . Recall that by definition is in the domain of if and only if we can evaluate the defining formula of at . Thus we have .  Now, let , and let . Since is continuous everywhere, the power rule for continuity implies is continuous at . Since is continuous at and , it follows from the root rule for continuity that is continuous at . Since furthermore , the quotient rule for continuity implies is continuous at .  Next, another application of the root rule for continuity implies is continuous at . Lastly, since the absolute value function is continuous and is continuous at , we conclude from that is continuous at . Since was an arbitrary interior element of the domain of , we conclude that is continuous.   "
 },
 {
+  "id": "s_cont_ivt",
+  "level": "1",
+  "url": "s_cont_ivt.html",
+  "type": "Section",
+  "number": "7",
+  "title": "Continuity: intermediate value theorem",
+  "body": " Continuity: intermediate value theorem     Investigate continuity properties of piecewise-defined functions.    Understand the statement and utility of the intermediate value theorem (IVT).    Use the IVT to argue that a function assumes a particular value.    Use the IVT to prove the existence of solutions to a given equation.    Use the IVT to determine the range of a continuous function.      Continuity of piecewise defined functions  As you may have gathered by now, most of the functions that we write down via formula are essentially automatically continuous. This is a formal consequence of . Since most formulas we use are built up using some basic continuous functions (polynomials, rational functions, trig functions), and some operations that preserve continuity (sum, product, quotient, ), it follows that such formulas end up defining continuous functions.  In this sense it is actually somewhat difficult to write down a discontinuous function, at least if we restrict ourselves to using formulas of the type described above. Piecewise-defined functions give us an easy way of getting around this issue, providing us with a useful source of functions that potentially have discontinuities. Of course, being defined in a piecewise manner does not guarantee the existence of a continuity; consider for the example the absolute value function , which is continuous, but defined piecewise as . The example below illustrates in general how we determine whether a piecewise-defined function is continuous at various inputs.   Continuity: piecewise   Let be defined as , where is a fixed constant.   Argue that is continuous at all inputs .    Find all values of for which is continuous at the input , and hence everywhere.         Intermediate value theorem  Recall the cute informal description of a continuous function as one whose graph can be traced without lifting your pencil. This can be further interpreted as saying that as we trace a segment of the graph lying over some interval in the -axis, it should not be possible to skip over a particular -value. Indeed, to skip this value, we would have to lift our pencil. This seems plausible, starting from our cutesy informal description of continuity, but can we prove it rigorously? Yes, we can as witnessed by the intermediate value theorem .   Intermediate value theorem (IVT)   Let be continuous on the closed interval . If , then given any value lying strictly between and , there is an element such that .     IVT and existence of solutions  A common application of the IVT is to prove that an equation of the form has a solution in a given open interval . Indeed, if is continuous on , and if lies strictly between and , then the IVT guarantees the existence of an element satisfying .  Interestingly, however, this method does not actually provide the solution ; it only tells us that it exists. This is probably the first time you have encountered what is called a nonconstructive proof in mathematics. The theorem tells us that the value exists (assuming the necessary conditions hold), but does not explicitly tell us what is.    Sine equation   Prove that the equation has a solution that lies in the interval .    Note that is continuous on , and that . Since , the IVT implies that for every there is an input such that . In other words, the given equation has a solution lying in the interval .     Roots of polynomials   Show that the polynomial has a root.    A root of is an input satisfying . Since is continuous everywhere, the IVT will guarantee the existence of such a as long as we can find inputs , satisfying and . Let's make a table of values of for small inputs : . This so far is not helpful to us, as all the values are positive. Let's try another negative value: . That's more like it! Since is continuous on , and since , the IVT now implies there is a such that .  Observe that this not only shows that has a real root, it tells us further that there is a root lying between -2 and -1. Are there any other roots of this function? Further investigation is required. We will have the tools to answer this later.     Complicated equation   Prove that the equation has a solution.    To get this problem into a state where we can apply the IVT, we rewrite the equation as and define . Thus we are looking for a solution to . As with , this will boil down to finding inputs where is positive and negative, respectively. Let's create a table of values for : . We observe that . Since is continuous on , the IVT now implies there is an element satisfying . Thus we have shown, not only that there is a solution, but one lying in this particular interval.  Note that the same reasoning tells us there is another solution between and . That is the inequality implies there is another solution lying between and . Thus, we are able to roughly locate two solutions to the original equation, using the IVT twice.  Note: since the given function happens to be even ( ), from our first solution lying in we obtain a second solution lying in .    Recall that the range of a function is the set of all outputs of : . The intermediate value theorem implies that if is a continuous function and is an interval, then given any two values , if , then . This observation often allows us to explicitly compute the range of a continuous function.   Range of sine   Prove that the range of the sine function is the entire interval .    Since by definition is the -value of a certain point lying on the unit circle, and since all such -values lie between and , we know that for all . Note that so far this only tells us that the outputs of form a subset of : that is, this only tells us that . To show this set inclusion is in fact a set equality , we need to show that given any , : , given any , there is an such that .  To this end, note that and . Thus . Furthermore given any , since is continuous on , and since , we conclude by the IVT that there is an element satisfying . Thus , as desired.     "
+},
+{
+  "id": "s_cont_ivt-2",
+  "level": "2",
+  "url": "s_cont_ivt.html#s_cont_ivt-2",
+  "type": "Objectives",
+  "number": "7",
+  "title": "",
+  "body": "   Investigate continuity properties of piecewise-defined functions.    Understand the statement and utility of the intermediate value theorem (IVT).    Use the IVT to argue that a function assumes a particular value.    Use the IVT to prove the existence of solutions to a given equation.    Use the IVT to determine the range of a continuous function.    "
+},
+{
+  "id": "eg_cont_piecewise",
+  "level": "2",
+  "url": "s_cont_ivt.html#eg_cont_piecewise",
+  "type": "Example",
+  "number": "7.1",
+  "title": "Continuity: piecewise.",
+  "body": " Continuity: piecewise   Let be defined as , where is a fixed constant.   Argue that is continuous at all inputs .    Find all values of for which is continuous at the input , and hence everywhere.      "
+},
+{
+  "id": "th_ivt",
+  "level": "2",
+  "url": "s_cont_ivt.html#th_ivt",
+  "type": "Theorem",
+  "number": "7.2",
+  "title": "Intermediate value theorem (IVT).",
+  "body": " Intermediate value theorem (IVT)   Let be continuous on the closed interval . If , then given any value lying strictly between and , there is an element such that .   "
+},
+{
+  "id": "rm_IVT_solutions",
+  "level": "2",
+  "url": "s_cont_ivt.html#rm_IVT_solutions",
+  "type": "Remark",
+  "number": "7.3",
+  "title": "IVT and existence of solutions.",
+  "body": " IVT and existence of solutions  A common application of the IVT is to prove that an equation of the form has a solution in a given open interval . Indeed, if is continuous on , and if lies strictly between and , then the IVT guarantees the existence of an element satisfying .  Interestingly, however, this method does not actually provide the solution ; it only tells us that it exists. This is probably the first time you have encountered what is called a nonconstructive proof in mathematics. The theorem tells us that the value exists (assuming the necessary conditions hold), but does not explicitly tell us what is.  "
+},
+{
+  "id": "eg_ivt_sine",
+  "level": "2",
+  "url": "s_cont_ivt.html#eg_ivt_sine",
+  "type": "Example",
+  "number": "7.4",
+  "title": "Sine equation.",
+  "body": " Sine equation   Prove that the equation has a solution that lies in the interval .    Note that is continuous on , and that . Since , the IVT implies that for every there is an input such that . In other words, the given equation has a solution lying in the interval .   "
+},
+{
+  "id": "eg_ivt_poly",
+  "level": "2",
+  "url": "s_cont_ivt.html#eg_ivt_poly",
+  "type": "Example",
+  "number": "7.5",
+  "title": "Roots of polynomials.",
+  "body": " Roots of polynomials   Show that the polynomial has a root.    A root of is an input satisfying . Since is continuous everywhere, the IVT will guarantee the existence of such a as long as we can find inputs , satisfying and . Let's make a table of values of for small inputs : . This so far is not helpful to us, as all the values are positive. Let's try another negative value: . That's more like it! Since is continuous on , and since , the IVT now implies there is a such that .  Observe that this not only shows that has a real root, it tells us further that there is a root lying between -2 and -1. Are there any other roots of this function? Further investigation is required. We will have the tools to answer this later.   "
+},
+{
+  "id": "eg_ivt_trig",
+  "level": "2",
+  "url": "s_cont_ivt.html#eg_ivt_trig",
+  "type": "Example",
+  "number": "7.6",
+  "title": "Complicated equation.",
+  "body": " Complicated equation   Prove that the equation has a solution.    To get this problem into a state where we can apply the IVT, we rewrite the equation as and define . Thus we are looking for a solution to . As with , this will boil down to finding inputs where is positive and negative, respectively. Let's create a table of values for : . We observe that . Since is continuous on , the IVT now implies there is an element satisfying . Thus we have shown, not only that there is a solution, but one lying in this particular interval.  Note that the same reasoning tells us there is another solution between and . That is the inequality implies there is another solution lying between and . Thus, we are able to roughly locate two solutions to the original equation, using the IVT twice.  Note: since the given function happens to be even ( ), from our first solution lying in we obtain a second solution lying in .   "
+},
+{
+  "id": "ss_ivt-9",
+  "level": "2",
+  "url": "s_cont_ivt.html#ss_ivt-9",
+  "type": "Example",
+  "number": "7.7",
+  "title": "Range of sine.",
+  "body": " Range of sine   Prove that the range of the sine function is the entire interval .    Since by definition is the -value of a certain point lying on the unit circle, and since all such -values lie between and , we know that for all . Note that so far this only tells us that the outputs of form a subset of : that is, this only tells us that . To show this set inclusion is in fact a set equality , we need to show that given any , : , given any , there is an such that .  To this end, note that and . Thus . Furthermore given any , since is continuous on , and since , we conclude by the IVT that there is an element satisfying . Thus , as desired.   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

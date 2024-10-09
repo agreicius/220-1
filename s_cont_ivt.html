@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Front Matter</title>
+<title>Continuity: intermediate value theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -184,7 +184,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_intro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_continuous_def.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-11.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -288,7 +288,7 @@ window.MathJax = {
 \)</span></div>
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
-<li class="toc-item toc-frontmatter active"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></div>
 <ul class="structural toc-item-list">
@@ -322,7 +322,7 @@ window.MathJax = {
 </ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_continuous_def.html" class="internal"><span class="codenumber">6</span> <span class="title">Continuity: definition</span></a></div></li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section active">
 <div class="toc-title-box"><a href="s_cont_ivt.html" class="internal"><span class="codenumber">7</span> <span class="title">Continuity: intermediate value theorem</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_piecewise" class="internal"><span class="title">Continuity of piecewise defined functions</span></a></div></li>
@@ -341,21 +341,207 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="frontmatter" id="frontmatter"><h2 class="heading">
-<span class="title">Math 220-1 Single-variable differential calculus:</span> <span class="subtitle">Kursobjekt</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_cont_ivt"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">7</span><span class="space"> </span><span class="title">Continuity: intermediate value theorem</span>
 </h2>
-<div class="author">
-<div class="author-name">Aaron Greicius</div>
-<div class="author-info">Department of Mathematics<br>Northwestern University</div>
-</div>
-<div class="date">October 9, 2024</div>
-<section class="colophon" id="frontmatter-2"><h3 class="heading hide-type">
-<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+<article class="objectives goal-like" id="s_cont_ivt-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_cont_ivt-2-1">
+<li id="s_cont_ivt-2-1-1"><div class="para" id="s_cont_ivt-2-1-1-1">Investigate continuity properties of piecewise-defined functions.</div></li>
+<li id="s_cont_ivt-2-1-2"><div class="para" id="s_cont_ivt-2-1-2-1">Understand the statement and utility of the intermediate value theorem (IVT).</div></li>
+<li id="s_cont_ivt-2-1-3"><div class="para" id="s_cont_ivt-2-1-3-1">Use the IVT to argue that a function assumes a particular value.</div></li>
+<li id="s_cont_ivt-2-1-4"><div class="para" id="s_cont_ivt-2-1-4-1">Use the IVT to prove the existence of solutions to a given equation.</div></li>
+<li id="s_cont_ivt-2-1-5"><div class="para" id="s_cont_ivt-2-1-5-1">Use the IVT to determine the range of a continuous function.</div></li>
+</ol></article><section class="subsection" id="ss_piecewise"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Continuity of piecewise defined functions</span>
 </h3>
-<p class="copyright">©2024–2025 You</p>
-<p class="license">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-2-1-3-2"><summary class="ptx-footnote__number" title="Footnote 0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-2-1-3-2"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by-sa/4.0</code></div></details></p></section></section></div>
+<div class="para" id="ss_piecewise-2">As you may have gathered by now, most of the functions that we write down via formula are essentially automatically continuous. This is a formal consequence of <a href="s_continuous_def.html#th_cont_poly_rational" class="xref" data-knowl="./knowl/xref/th_cont_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.10: Continuous functions">Theorem 6.10–6.12</a>. Since most formulas we use are built up using some basic continuous functions (polynomials, rational functions, trig functions), and some operations that preserve continuity (sum, product, quotient,etc.), it follows that such formulas end up defining continuous functions.</div>
+<div class="para logical" id="ss_piecewise-3">
+<div class="para">In this sense it is actually somewhat difficult to write down a discontinuous function, at least if we restrict ourselves to using formulas of the type described above. Piecewise-defined functions give us an easy way of getting around this issue, providing us with a useful source of functions that potentially have discontinuities. Of course, being defined in a piecewise manner does not guarantee the existence of a continuity; consider for the example the absolute value function <span class="process-math">\(f(x)=\abs{x}\text{,}\)</span> which is continuous, but defined piecewise as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{x}=\begin{cases}
+x \amp x\geq 0\\
+-x \amp x&lt; 0
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">The example below illustrates in general how we determine whether a piecewise-defined function is continuous at various inputs.</div>
+</div>
+<article class="example example-like" id="eg_cont_piecewise"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span><span class="space"> </span><span class="title">Continuity: piecewise.</span>
+</h4>
+<div class="para logical" id="eg_cont_piecewise-2-1">
+<div class="para">Let <span class="process-math">\(f\colon \R\rightarrow \R\)</span> be defined as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\begin{cases}
+c^2x \amp \text{if } x&lt; 1\\
+3cx-2 \amp \text{if } x\geq 1
+\end{cases}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(c\in \R\)</span> is a fixed constant.</div>
+<ol class="decimal" id="eg_cont_piecewise-2-1-4">
+<li id="eg_cont_piecewise-2-1-4-1"><div class="para" id="eg_cont_piecewise-2-1-4-1-1">Argue that <span class="process-math">\(f\)</span> is continuous at all inputs <span class="process-math">\(a\ne 1\text{.}\)</span>
+</div></li>
+<li id="eg_cont_piecewise-2-1-4-2"><div class="para" id="eg_cont_piecewise-2-1-4-2-1">Find all values of <span class="process-math">\(c\)</span> for which <span class="process-math">\(f\)</span> is continuous at the input <span class="process-math">\(1\text{,}\)</span> and hence everywhere.</div></li>
+</ol>
+</div></article></section><section class="subsection" id="ss_ivt"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Intermediate value theorem</span>
+</h3>
+<div class="para" id="ss_ivt-2">Recall the cute informal description of a continuous function as one whose graph can be traced without lifting your pencil. This can be further interpreted as saying that as we trace a segment of the graph lying over some interval in the <span class="process-math">\(x\)</span>-axis, it should not be possible to “skip” over a particular <span class="process-math">\(y\)</span>-value. Indeed, to skip this value, we would have to lift our pencil. This seems plausible, starting from our cutesy informal description of continuity, but can we prove it rigorously? Yes, we can as witnessed by the <a href="s_cont_ivt.html#th_ivt" class="xref" data-knowl="./knowl/xref/th_ivt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.2: Intermediate value theorem (IVT)">intermediate value theorem</a>.</div>
+<article class="theorem theorem-like" id="th_ivt"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span><span class="space"> </span><span class="title">Intermediate value theorem (IVT).</span>
+</h4>
+<div class="para" id="th_ivt-2-1">Let <span class="process-math">\(f\)</span> be continuous on the closed interval <span class="process-math">\([a,b]\text{.}\)</span> If <span class="process-math">\(f(a)\ne f(b)\text{,}\)</span> then given any value <span class="process-math">\(d\in \R\)</span> lying strictly between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> there is an element <span class="process-math">\(c\in (a,b)\)</span> such that <span class="process-math">\(f(c)=d\text{.}\)</span>
+</div></article><article class="remark remark-like" id="rm_IVT_solutions"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.3</span><span class="period">.</span><span class="space"> </span><span class="title">IVT and existence of solutions.</span>
+</h4> <div class="para" id="rm_IVT_solutions-2">A common application of the IVT is to prove that an equation of the form <span class="process-math">\(f(x)=d\)</span> has a solution in a given open interval <span class="process-math">\((a,b)\text{.}\)</span> Indeed, if <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> and if <span class="process-math">\(d\)</span> lies strictly between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> then the IVT guarantees the existence of an element <span class="process-math">\(c\in (a,b)\)</span> satisfying <span class="process-math">\(f(c)=d\text{.}\)</span>
+</div> <div class="para" id="rm_IVT_solutions-3">Interestingly, however, this method does not actually <em class="emphasis">provide</em> the solution <span class="process-math">\(c\text{;}\)</span> it only tells us that it exists. This is probably the first time you have encountered what is called a “nonconstructive proof” in mathematics. The theorem tells us that the value <span class="process-math">\(c\)</span> exists (assuming the necessary conditions hold), but does not explicitly tell us what <span class="process-math">\(c\)</span> is.</div></article><article class="example example-like" id="eg_ivt_sine"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">Sine equation.</span>
+</h4>
+<div class="para" id="eg_ivt_sine-2-1">Prove that the equation <span class="process-math">\(\sin x=\frac{7}{8}\)</span> has a solution that lies in the interval <span class="process-math">\((\pi/6, \pi/2)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="eg_ivt_sine-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_ivt_sine-3-1">
+<div class="para">Note that <span class="process-math">\(\sin\)</span> is continuous on <span class="process-math">\([\pi/6, \pi/2]\text{,}\)</span> and that</div>
+<div class="displaymath process-math" id="eg_ivt_sine-3-1-3">
+\begin{align*}
+\sin(\pi/6) \amp = \frac{1}{2}\\
+\sin(\pi/2) \amp = 1\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(\frac{1}{2}&lt; \frac{7}{8}&lt; 1\text{,}\)</span> the IVT implies that for every there is an input <span class="process-math">\(c\in (\pi/6, \pi/2)\)</span> such that <span class="process-math">\(f(c)=7/8\text{.}\)</span> In other words, the given equation has a solution lying in the interval <span class="process-math">\((\pi/6, \pi/2)\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_ivt_poly"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Roots of polynomials.</span>
+</h4>
+<div class="para" id="eg_ivt_poly-2-1">Show that the polynomial <span class="process-math">\(f(x)=x^5-x+1\)</span> has a root.</div>
+<div class="solutions"><details id="eg_ivt_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_ivt_poly-3-1">
+<div class="para">A root of <span class="process-math">\(f\)</span> is an input <span class="process-math">\(c\)</span> satisfying <span class="process-math">\(f(c)=0\text{.}\)</span> Since <span class="process-math">\(f\)</span> is continuous everywhere, the IVT will guarantee the existence of such a <span class="process-math">\(c\)</span> as long as we can find inputs <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> satisfying <span class="process-math">\(f(a)&gt; 0\)</span> and <span class="process-math">\(f(b)&lt; 0\text{.}\)</span> Let’s make a table of values of <span class="process-math">\(f\)</span> for small inputs <span class="process-math">\(x\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|c}
+x \amp f(x) \\
+\hline 
+-1 \amp 1 \\
+0\amp 1 \\
+1 \amp 1\\
+2 \amp 31
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">This so far is not helpful to us, as all the values are positive. Let’s try another negative value:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{c|c}
+x \amp f(x) \\
+\hline 
+-2 \amp -29\\
+-1 \amp 1 \\
+0\amp 1 \\
+1 \amp 1\\
+2 \amp 31
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">That’s more like it! Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([-2,-1]\text{,}\)</span> and since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-29=f(-2)&lt; 0 &lt; f(-1)=1\text{,}
+\end{equation*}
+</div>
+<div class="para">the IVT now implies there is a <span class="process-math">\(c\in (-2,-1)\)</span> such that <span class="process-math">\(f(c)=0\text{.}\)</span>
+</div>
+</div> <div class="para" id="eg_ivt_poly-3-2">Observe that this not only shows that <span class="process-math">\(f\)</span> has a real root, it tells us further that there is a root lying between -2 and -1. Are there any other roots of this function? Further investigation is required. We will have the tools to answer this later.</div>
+</div></details></div></article><article class="example example-like" id="eg_ivt_trig"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.6</span><span class="period">.</span><span class="space"> </span><span class="title">Complicated equation.</span>
+</h4>
+<div class="para logical" id="eg_ivt_trig-2-1">
+<div class="para">Prove that the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\cos x=\frac{1}{\sqrt{x^2+4}}
+\end{equation*}
+</div>
+<div class="para">has a solution.</div>
+</div>
+<div class="solutions"><details id="eg_ivt_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_ivt_trig-3-1">
+<div class="para">To get this problem into a state where we can apply the IVT, we rewrite the equation as</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_ivt_poly.html">
+\begin{equation*}
+\cos x-\frac{1}{\sqrt{x^2+4}}=0
+\end{equation*}
+</div>
+<div class="para">and define <span class="process-math">\(f(x)=\cos x-\frac{1}{\sqrt{x^2+4}}\text{.}\)</span> Thus we are looking for a solution to <span class="process-math">\(f(x)=0\text{.}\)</span> As with <a href="s_cont_ivt.html#eg_ivt_poly" class="xref" data-knowl="./knowl/xref/eg_ivt_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.5: Roots of polynomials">Example 7.5</a>, this will boil down to finding inputs where <span class="process-math">\(f\)</span> is positive and negative, respectively. Let’s create a table of values for <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_ivt_poly.html">
+\begin{equation*}
+\begin{array}{r|l}
+x\amp f(x)\\
+\hline
+-\pi/2 \amp 0-\frac{1}{\sqrt{\pi^2/4+4}}=-\frac{1}{\sqrt{\pi^2/4+4}}\\
+0   \amp 1-\frac{1}{\sqrt{4}}=\frac{1}{2}\\
+\pi/2  \amp -\frac{1}{\sqrt{\pi^2/4+4}}
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">We observe that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_ivt_poly.html">
+\begin{equation*}
+-\frac{1}{\sqrt{\pi^2/4+4}}=f(-\pi/2)&lt; 0&lt; f(0)=\frac{1}{2}  \text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([-\pi/2, 0]\text{,}\)</span> the IVT now implies there is an element <span class="process-math">\(c\in (\pi/2, 0)\)</span> satisfying <span class="process-math">\(f(c)=0\text{.}\)</span> Thus we have shown, not only that there is a solution, but one lying in this particular interval.</div>
+</div> <div class="para logical" id="eg_ivt_trig-3-2">
+<div class="para">Note that the same reasoning tells us there is another solution between <span class="process-math">\(0\)</span> and <span class="process-math">\(\pi/2\text{.}\)</span>  That is the inequality</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(0)&gt; 0 &gt; f(\pi/2)
+\end{equation*}
+</div>
+<div class="para">implies there is another solution <span class="process-math">\(d\)</span> lying between <span class="process-math">\(0\)</span> and <span class="process-math">\(\pi/2\text{.}\)</span> Thus, we are able to roughly locate two solutions to the original equation, using the IVT twice.</div>
+</div> <div class="para" id="eg_ivt_trig-3-3">Note: since the given function happens to be <em class="emphasis">even</em> (<span class="process-math">\(f(-x)=f(x)\)</span>), from our first solution <span class="process-math">\(c\)</span> lying in <span class="process-math">\((-\pi/2, 0)\)</span> we obtain a second solution <span class="process-math">\(-c\)</span> lying in <span class="process-math">\((0,\pi/2)\text{.}\)</span>
+</div>
+</div></details></div></article><div class="para logical" id="ss_ivt-8">
+<div class="para">Recall that the range of a function <span class="process-math">\(f\colon D\rightarrow \R\)</span> is the set of all outputs of <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\range f=\{b \in \R\colon b=f(x) \text{ for some } x\in D\}=\{f(x)\colon x\in D\}\text{.}
+\end{equation*}
+</div>
+<div class="para">The intermediate value theorem implies that if <span class="process-math">\(f\)</span> is a continuous function and <span class="process-math">\(D\)</span> is an interval, then given any two values <span class="process-math">\(c&lt; d\text{,}\)</span> if <span class="process-math">\(c,d\in \range f\text{,}\)</span> then <span class="process-math">\([c,d]\subseteq \range f\text{.}\)</span> This observation often allows us to explicitly compute the range of a continuous function.</div>
+</div>
+<article class="example example-like" id="ss_ivt-9"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Range of sine.</span>
+</h4>
+<div class="para" id="ss_ivt-9-2-1">Prove that the range of the sine function <span class="process-math">\(f(x)=\sin x\)</span> is the entire interval <span class="process-math">\([-1,1]\text{.}\)</span>
+</div>
+<div class="solutions"><details id="ss_ivt-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="ss_ivt-9-3-1">
+<div class="para">Since by definition <span class="process-math">\(\sin(x)\)</span> is the <span class="process-math">\(y\)</span>-value of a certain point lying on the unit circle, and since all such <span class="process-math">\(y\)</span>-values lie between <span class="process-math">\(-1\)</span> and <span class="process-math">\(1\text{,}\)</span> we know that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-1\leq \sin x\leq 1
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in \R\text{.}\)</span> Note that so far this only tells us that the outputs of <span class="process-math">\(\sin\)</span> form a subset of <span class="process-math">\([-1,1]\text{:}\)</span> that is, this only tells us that <span class="process-math">\(\range f\subseteq [-1,1]\text{.}\)</span> To show this set inclusion is in fact a set <em class="emphasis">equality</em>, we need to show that given any <span class="process-math">\(b\in [-1,1]\text{,}\)</span> <span class="process-math">\(b\in \range f\text{:}\)</span> i.e., given any <span class="process-math">\(b\in [-1,1]\text{,}\)</span> there is an <span class="process-math">\(a\in \R\)</span> such that <span class="process-math">\(\sin(a)=b\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="ss_ivt-9-3-2">
+<div class="para">To this end, note that <span class="process-math">\(\sin(-\pi/2)=-1\)</span> and <span class="process-math">\(\sin(\pi/2)=1\text{.}\)</span> Thus <span class="process-math">\(-1,1\in \range f\text{.}\)</span> Furthermore given any <span class="process-math">\(b\in (-1,1)\text{,}\)</span> since <span class="process-math">\(\sin\)</span> is continuous on <span class="process-math">\([-\pi/2, \pi/2]\text{,}\)</span> and since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-1=\sin(-\pi/2)&lt; b &lt; \sin(\pi/2)=1\text{,}
+\end{equation*}
+</div>
+<div class="para">we conclude by the IVT that there is an element <span class="process-math">\(a\in (-\pi/2, \pi/2)\)</span> satisfying <span class="process-math">\(\sin(a)=b\text{.}\)</span> Thus <span class="process-math">\(b\in \range f\text{,}\)</span> as desired.</div>
+</div>
+</div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="my-great-book.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_intro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_continuous_def.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-11.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
