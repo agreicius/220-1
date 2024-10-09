@@ -280,8 +280,8 @@
                     <mrow> \lim\limits_{\theta\to 0}\frac{\sin(2\theta)}{\theta}\amp 
                         = \lim\limits_{\theta\to 0}\frac{2\sin(2\theta)}{2\theta}
                     </mrow>
-                    <mrow> \amp = \lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)</mrow>
-                    <mrow> \amp = 1 \amp (<xref ref="th_trig_lims" text="global"/>)</mrow>
+                    <mrow> \amp = 2\lim\limits_{t\to 0}\frac{\sin(t)}{t} \amp (t=2\theta)</mrow>
+                    <mrow> \amp = 2 \amp (<xref ref="th_trig_lims" text="global"/>)</mrow>
                 </md>.
             </p>
         </solution>

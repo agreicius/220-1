@@ -22,6 +22,7 @@
     <xi:include  href="s_lim_formal.ptx"/>
     <xi:include  href="s_one_sided.ptx"/>
     <xi:include  href="s_continuous_def.ptx"/>
+    <xi:include  href="s_cont_ivt.ptx"/>
 
   <!-- </chapter> -->
     
