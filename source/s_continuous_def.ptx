@@ -128,7 +128,7 @@
                 Thus <m>\lim\limits_{x\to 0}f(x)</m> exists and is equal to 0.
                 Since <m>f(0)=\sqrt{0}=0</m>, we see further that
                 <me>
-                    \lim_{x\to 0^}f(x)=\lim_{x\to 0^+}f(x)=f(0)=0
+                    \lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}f(x)=f(0)=0
                 </me>
                 and thus that <m>f</m> is continuous at <m>0</m>.
             </p>
@@ -206,6 +206,24 @@
             <p>
                 Note that we do not speak of <m>f</m> being continuous or discontinuous at <m>a</m>, as this is not an element of the domain of <m>f</m>.
             </p>
+            <p>
+                The limit of <m>f</m> at <m>b</m> does not exist, since the left limit does not equal the right limit (<xref ref="th_limit_left_right" text="global"/>). Thus (i) of <xref ref="d_continuity"/> fails, and <m>f</m> is not continuous at <m>b</m>. Such a discontinuity is called a <term>jump discontinuity</term>, as the difference between the left- and right-hand limit values is manifested graphically as a discrete jump in the height of the graph of <m>f</m>. 
+            </p>
+            <p>
+                The limit of <m>f</m> at <m>c</m> exists, and is equal to the value of <m>f</m> at <m>c</m>: that is, we have 
+                <me>\lim\limits_{x\to c}f(x)=f(c)=B</me>.
+                Thus (i) and (ii) of <xref ref="d_continuity"/> are satisfied, and <m>f</m> is continuous at <m>c</m>. 
+            </p>
+            <p>
+                The limit of <m>f</m> at <m>d</m> does not exist, since the right-hand limit does not exist. Thus (i) of <xref ref="d_continuity"/> fails, and <m>f</m> is not continuous at <m>d</m>. Such a discontinuity is called an <term>oscillating discontinuity</term>, as the wild oscillation is the reason why the limit does not exist. 
+            </p>
+            <p>
+                The limit of <m>f</m> exists at <m>e</m>, but is not equal to the value of <m>f</m> at <m>e</m>. In more detail, we have 
+                <me>
+                    \lim\limits_{x\to e}f(x)=D&lt; f(e)
+                </me>.
+                Thus <m>f</m> is not continuous at <m>e</m>. Such a discontinuity is called a <term>removeable discontinuity</term> as a simple redefining of <m>f</m> at <m>e</m> (<ie/>, setting <m>f(e)=D</m>) would make the discontinuity disappear.
+            </p>
         </solution>
     </example>
     <example xml:id="eg_cont_on_domain">
@@ -215,6 +233,19 @@
                 Let <m>\displaystyle f(x)=\frac{x}{\sqrt{x^2-1}}</m>. Prove, using <xref ref="d_continuity"/> that <m>f</m> is continuous. 
             </p>
         </statement>
+        <solution>
+            <p>
+                Let <m>a</m> be any interior element in the implied domain of <m>f</m>. By definition of this domain, this means <m>a^2-1&gt; 0</m>. It follows that 
+                <md>
+                    <mrow>\lim_{x\to a}f(x) \amp =\lim_{x\to a}\frac{x}{\sqrt{x^2-1}}</mrow>
+                    <mrow> \amp =\frac{\lim_{x\to a}x}{\lim_{x\to a}\sqrt{x^2-1}}</mrow>
+                    <mrow> \amp =\frac{a}{\sqrt{\lim_{x\to a}x^2-1}}</mrow>
+                    <mrow> \amp = \frac{a}{\sqrt{a^2-1}}</mrow>
+                    <mrow> \amp = f(a)</mrow>
+                </md>. 
+                This computation shows both that (i) <m>\lim\limits_{x\to a}f(x)</m> exists, and (ii) <m>\lim\limits_{x\to a}f(x)=f(a)</m>, and thus by <xref ref="d_continuity"/>, that <m>f</m> is continuous at <m>a</m>. Since <m>a</m> was an arbitrary element of the domain of <m>f</m>, we conclude that <m>f</m> is continuous at all points of its domain, and hence continuous. 
+            </p>
+        </solution>
     </example>
     <p>
         Next we state some theorems that allow facilitate our (non-graphical) analysis of continuity for a given function. A first result provides us with a large zoo of continuous functions.   
@@ -330,6 +361,22 @@
                 is continuous.
             </p>
         </statement>
+        <solution>
+            <p>
+                Let <m>a</m> be an interior element of the domain of <m>f</m>. Recall that by definition <m>a</m> is in the domain of <m>f</m> if and only if we can evaluate the defining formula of <m>f</m> at <m>a</m>. Thus we have <m>\cos a&gt; 0</m>.  
+            </p>
+            <p>
+                Now, let <m>g(x)=\sin^3 x=(\sin x)^3</m>, and let <m>h(x)=\sqrt{\cos x}</m>. Since <m>\sin</m> is continuous everywhere, the power rule for continuity implies <m>g(x)=\sin^3(x)</m> is continuous at <m>a</m>. Since <m>\cos</m> is continuous at <m>a</m> and <m>\cos a&gt; 0</m>, it follows from the root rule for continuity that <m>h(x)=\sqrt{\cos(x)}</m> is continuous at <m>a</m>. Since furthermore <m>h(a)\ne 0</m>, the quotient rule for continuity implies <m>g(x)/h(x)</m> is continuous at <m>a</m>.   
+            </p>
+            <p>
+                Next, another application of the root rule for continuity implies <m>\sqrt[5]{g(x)/h(x)}</m> is continuous at <m>a</m>. Lastly, since the absolute value function <m>p(x)=\abs{x}</m> is continuous and <m>q(x)=\sqrt[5]{g(x)/h(x)}</m> is continuous at <m>a</m>, we conclude from <xref ref="th_cont_comp"/> that 
+                <me>
+                    f(x)=p(q(x))=\abs{p(x)}
+                </me>
+                is continuous at <m>a</m>. Since <m>a</m> was an arbitrary interior element of the domain of <m>f</m>, we conclude that <m>f</m> is continuous. 
+                
+            </p>
+        </solution>
         
     </example>
     
