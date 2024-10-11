@@ -168,6 +168,7 @@
     </example>
     <p>
         Fix a positive integer <m>n</m> and define <m>f\colon \R-\{0\}\rightarrow \R</m> as <m>f(x)=\frac{1}{x^n}</m>. We recall that the graph of such a function looks like one of the graphs in <xref ref="fig_reciprocal"/>, depending on whether <m>n</m> is even or odd. 
+    </p>
         <figure xml:id="fig_reciprocal">
             <caption>Graphs of <m>f(x)=\frac{1}{x^n}</m>, for positive integer <m>n</m>.</caption>
             <sidebyside valigns="middle middle">
@@ -197,7 +198,8 @@
     </figure>
     </sidebyside>
         </figure> 
-    In all cases we see that the graph of any such function <m>f(x)=\frac{1}{x^n}</m> has <m>y=0</m> both as a right and left asymptote. This suggests that 
+    <p>
+        In all cases we see that the graph of any such function <m>f(x)=\frac{1}{x^n}</m> has <m>y=0</m> both as a right and left asymptote. This suggests that 
     <me>
         \lim_{x\to \infty}\frac{1}{x^n}=\lim_{x\to -\infty}\frac{1}{x^n}=0
     </me>.
@@ -243,7 +245,7 @@
     <title>Limit at infinity: radical function</title>
     <statement>
     <p>
-     Let <m>f(x)=\displaystyle \frac{\sqrt{x^2+4}}{2x+1}</m>. Compute <m>\lim\limits_{x\to -\infty}f(x)</m>. 
+     Let <m>f(x)=\displaystyle \frac{\sqrt{x^2+4}}{2x^2+1}</m>. Compute <m>\lim\limits_{x\to -\infty}f(x)</m>. 
     </p>
     </statement>
     <solution>
