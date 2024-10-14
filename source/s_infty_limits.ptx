@@ -129,13 +129,18 @@ Let <m>f(x)=\tan x</m>. Recall that the domain of <m>f</m> is
     <title>Infinite limit formulas</title>
     <statement>
         <p>
+            In what follows <m>a</m> can denote either a real number, or <m>\pm \infty</m>. We assume <m>\lim\limits_{x\to }</m>
             <ol>
                 <li>
                     <p>
                         Let <m>n</m> be a positive integer. We have 
             <md>
-                <mrow>\lim_{x\to \infty}x^n \amp= \infty \amp \lim_{x\to -\infty}x^n\amp=\infty \amp (\text{ if } n \text{ even}) </mrow>
-                <mrow>\lim_{x\to \infty}x^n \amp= \infty \amp \lim_{x\to -\infty}x^n\amp=-\infty \amp (\text{ if } n \text{ odd}) </mrow>
+                <mrow>\lim_{x\to \infty}x^n \amp= \infty</mrow>
+                <mrow>\lim_{x\to -\infty}x^n \amp= \begin{cases}
+                \infty \text{if } n \text{ even}\\
+                -\infty \text{ if } n \text{ odd}
+                \end{cases}
+                </mrow>
             </md>.
                     </p>
                 </li>
