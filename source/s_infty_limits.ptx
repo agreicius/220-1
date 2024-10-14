@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_infinite_limits" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Infinite limits</title>
+<objectives>
+    <ol>
+        <li>
+            <p>
+                Provide a rigorous definition of infinite limits at points <m>a\in \R</m> and at infinity. 
+            </p>
+        </li>
+        <li>
+            <p>
+               Investigate infinite limits graphically.  
+            </p>
+        </li>
+        <li>
+            <p>
+                Define vertical asymptotes using language of infinite limits. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Develop computation techniques for infinite limits. 
+            </p>
+        </li>  
+    </ol>
+</objectives>
+<definition xml:id="d_infty_lims">
+<title>Infinite limits (informal)</title>
+<statement>
+<p>
+Let <m>f</m> be a function. 
+<ol>
+    <li>
+        <title>Infinite limits at <m>a\in \R</m></title>
+        <p>
+            Fix <m>a\in \R</m> and assume <m>f</m> is defined everywhere on an open interval containing <m>a</m>, except possibly at <m>a</m> itself. We say that <m>f</m> has <term>limit <m>\infty</m></term> (resp., <term>limit <m>-\infty</m></term>) at <m>a</m> if the values of <m>f(x)</m> can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided <m>x</m> is sufficiently close (but not equal) to <m>a</m>. We write <m>\lim\limits_{x\to a}f(x)=\infty</m> (resp., <m>\lim\limits_{x\to a}f(x)=-\infty</m>) when this is the case. 
+        </p>
+    </li>
+    <li>
+        <title>Infinite limit at <m>\infty</m></title>
+        <p>
+            Assume <m>f</m> is defined on an open interval of the form <m>(c,\infty)</m>. We say that <m>f</m> has <term>limit <m>\infty</m></term> (resp., <term>limit <m>-\infty</m></term>) at <m>\infty</m> if the values of <m>f(x)</m> can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided <m>x</m> is sufficiently large and positive. We write <m>\lim\limits_{x\to \infty}f(x)=\infty</m> (resp., <m>\lim\limits_{x\to \infty}f(x)=-\infty</m>) when this is the case.
+        </p>
+    </li>
+    <li>
+        <title>Infinite limit at <m>-\infty</m></title>
+        <p>
+            Assume <m>f</m> is defined on an open interval of the form <m>(-\infty,c)</m>. We say that <m>f</m> has <term>limit <m>\infty</m></term> (resp., <term>limit <m>-\infty</m></term>) at <m>-\infty</m> if the values of <m>f(x)</m> can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided <m>x</m> is sufficiently large and negative. We write <m>\lim\limits_{x\to -\infty}f(x)=\infty</m> (resp., <m>\lim\limits_{x\to -\infty}f(x)=-\infty</m>) when this is the case.
+        </p>
+    </li>
+</ol>
+</p>
+</statement>
+</definition>
+<remark xml:id="rm_infty_lims">
+<title>Infinite limits</title>
+<p>
+It is important to observe that the various notions of infinite limit defined in <xref ref="d_infty_lims"/> all cover situations where the limit of the function <em>does not exist</em>. The best way to understand an infinite limit statement of the form <m>\lim\limits_{x\to a}f(x)=\pm \infty</m>, where <m>a</m> denotes either a real number, <m>\infty</m>, or <m>-\infty</m>, is as an assertion that
+<ol marker="(a)">
+    <li>
+        <p>
+            the limit in question does not exist, and 
+        </p>
+    </li>
+    <li>
+        <p>
+            its failure to exist is due to values of the function getting arbitrarily large (in positive or negative direction) as <m>x</m> approaches <m>a</m>. 
+        </p>
+    </li>
+</ol>
+Accordingly, we must understand this new notation as an extended version of our original limit notation. In particular, we are <em>not</em> treating <m>\infty</m> or <m>-\infty</m> here as if they were actual real numbers. 
+</p>
+</remark>
+<remark xml:id="rm_infty_lims_onesided">
+<title>One-sided infinite limits</title>
+<p>
+Yet more variants of infinite limits can be defined for one-sided limits: that is, we can make sense of the following statements for any <m>a\in \R</m>:
+<md>
+    <mrow>\lim\limits_{x\to a^+}f(x) \amp = \infty \amp \lim\limits_{x\to a^+}f(x)\amp =-\infty</mrow>
+    <mrow>\lim\limits_{x\to a^-}f(x) \amp = \infty \amp \lim\limits_{x\to a^-}f(x)\amp =-\infty</mrow>
+</md>.
+We thought <xref ref="d_infty_lims"/> was long enough as it is. 
+</p>
+</remark>
+<definition xml:id="d_ver_asymp">
+<title>Vertical asymptote</title>
+<statement>
+<p>
+Fix a constant <m>a\in \R</m>. The line <m>x=a</m> is a <term>vertical asymptote</term> of the graph of a function <m>f</m> if at least one the of the following conditions holds:
+<md>
+    <mrow>\lim\limits_{x\to a^+}f(x) \amp = \infty \amp \lim\limits_{x\to a^+}f(x)\amp =-\infty</mrow>
+    <mrow>\lim\limits_{x\to a^-}f(x) \amp = \infty \amp \lim\limits_{x\to a^-}f(x)\amp =-\infty</mrow>
+</md>.
+</p>
+</statement>
+</definition>
+<example xml:id="eg_infty_lim_tan">
+<title>Vertical asymptotes: <m>\tan</m></title>
+<statement>
+<p>
+Let <m>f(x)=\tan x</m>. Recall that the domain of <m>f</m> is 
+<me>
+    D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\ne \frac{\pi}{2}+\pi\, n \text{ for some } n\in \Z \right\}
+</me>.
+<ol>
+    <li>
+        <p>
+            Sketch a graph of <m>f</m> on its entire domain. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Find any and all vertical or horizontal asymptotes of <m>f</m>. 
+        </p>
+    </li>
+</ol>
+
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<theorem xml:id="th_infinite_limits">
+    <title>Infinite limit formulas</title>
+    <statement>
+        <p>
+            <ol>
+                <li>
+                    <p>
+                        Let <m>n</m> be a positive integer. We have 
+            <md>
+                <mrow>\lim_{x\to \infty}x^n \amp= \infty \amp \lim_{x\to -\infty}x^n\amp=\infty \amp (\text{ if } n \text{ even}) </mrow>
+                <mrow>\lim_{x\to \infty}x^n \amp= \infty \amp \lim_{x\to -\infty}x^n\amp=-\infty \amp (\text{ if } n \text{ odd}) </mrow>
+            </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Fix a constants <m>a,b\in \R</m>, where <m>b&gt; 0</m>. Let <m>f</m> be a function. 
+                        <ol>
+                            <li>
+                                <p>
+                                    If <m>\lim\limits_{x\to a^+}f(x)=0</m>, then 
+                                    <me>
+                                        \lim\limits_{x\to a^+}\frac{b}{f(x)}=\begin{cases}
+                                        \infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (0,c) \\
+                                        -\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (0,c) 
+                                        \end{cases}
+                                    </me>
+                                    
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If <m>\lim\limits_{x\to a^-}f(x)=0</m>, then 
+                                    <me>
+                                        \lim\limits_{x\to a^-}\frac{1}{f(x)}=\begin{cases}
+                                        \infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (c,0) \\
+                                        -\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (c,0) 
+                                        \end{cases}
+                                    </me>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<remark xml:id="rm_def_indef">
+<title>Definite forms</title>
+<p>
+There is considerable more subtlety involved when trying to formulate limit laws that are applicable to infinite limits. Instead of burdening you with a long official theorem with many cases and subcases, we instead enumerate a few informal principles you can use when dealing with infinite limits. The bits arithmetic notation that accompany these principles are called <term>definite forms</term>. They are to be considered simply as shorthand for a careful observation about functions whose value approach <m>\infty</m>, <m>-\infty</m>, or <m>0</m>. You can cite these definite forms in your <em>parenthetical justifications</em> of steps in limit computations. See examples below for models of these computations. 
+<ol>
+    <li>
+        <p>
+            Definite form: 
+            <md>
+                <mrow>\infty+\infty \amp =\infty \amp -\infty-\infty=-\infty</mrow>
+            </md>.
+            Principle: large positive number <m>+</m> large positive number <m>=</m> large positive number. (Similarly for negative case.)
+        </p>
+    </li>
+    <li><p>
+        Definite form: 
+        <md>
+            <mrow>\infty\cdot \infty \amp =\infty \amp \infty\cdot(-\infty)=-\infty</mrow>
+        </md>.
+        Principle: large positive number <m>\times</m> large positive number <m>=</m> large positive number; large positive number <m>\times</m> large negative number <m>=</m> large negative number. 
+    </p>
+</li>
+    <li>
+        <p>
+            Definite form: 
+            <md>
+                <mrow>\frac{\text{bounded}}{\pm \infty} \amp = 0</mrow>
+            </md>.
+            Principle: if numerator values are bounded in absolute value, and denominator values get arbitrarily large, then quotient approaches <m>0</m>. A common instance of this principle is encoded by the definite form 
+            <me>
+                \frac{c}{\pm \infty}=0
+            </me>,
+            where <m>c</m> is a constant. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Definite form:
+            <md>
+                <mrow>\frac{\pm \infty}{\text{ nonzero bounded}} \amp = \pm \infty </mrow>
+            </md>.
+            Principle: if numerator gets arbitrarily large and 
+        </p>
+    </li>
+
+</ol> 
+</p>
+</remark>
+
+
+    
+
+</section>
