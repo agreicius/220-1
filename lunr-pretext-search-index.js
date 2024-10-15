@@ -946,6 +946,96 @@ var ptx_lunr_docs = [
   "body": " Limit at infinity: radical function   Let . Compute .       "
 },
 {
+  "id": "s_infinite_limits",
+  "level": "1",
+  "url": "s_infinite_limits.html",
+  "type": "Section",
+  "number": "9",
+  "title": "Infinite limits",
+  "body": " Infinite limits     Provide a rigorous definition of infinite limits at points and at infinity.    Investigate infinite limits graphically.    Define vertical asymptotes using language of infinite limits.    Develop computation techniques for infinite limits.      Infinite limits (informal)   Let be a function.   Infinite limits at  Fix and assume is defined everywhere on an open interval containing , except possibly at itself. We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently close (but not equal) to . We write (resp., ) when this is the case.    Infinite limit at  Assume is defined on an open interval of the form . We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently large and positive. We write (resp., ) when this is the case.    Infinite limit at  Assume is defined on an open interval of the form . We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently large and negative. We write (resp., ) when this is the case.        Infinite limits  It is important to observe that the various notions of infinite limit defined in all cover situations where the limit of the function does not exist . The best way to understand an infinite limit statement of the form , where denotes either a real number, , or , is as an assertion that   the limit in question does not exist, and    its failure to exist is due to values of the function getting arbitrarily large (in positive or negative direction) as approaches .   Accordingly, we must understand this new notation as an extended version of our original limit notation. In particular, we are not treating or here as if they were actual real numbers.    One-sided infinite limits  Yet more variants of infinite limits can be defined for one-sided limits: that is, we can make sense of the following statements for any : . We thought was long enough as it is.    Vertical asymptote   Fix a constant . The line is a vertical asymptote of the graph of a function if at least one the of the following conditions holds: .     Vertical asymptotes:   Let . Recall that the domain of is .   Sketch a graph of on its entire domain.    Find any and all vertical or horizontal asymptotes of .           As illustrated by , infinite limit formulas can be easily deduced from graphs of familiar functions. can be thought of as directly translating properties of the graphs of power functions and their reciprocals into limit statements.   Power functions and their reciprocals   Let be a positive integer.     The next theorem helps us to compute the limit of functions built from other functions that may have infinite limits. Instead of trying to commit all the details of this theorem to memory, it is easier to understand the simple arithmetical arguments that go into establishing these results. For example, the fact that if and , then , essentially follows from the fact that if the numerator is approaching some finite number as , while the denominator gets arbitrarily large, then the quotient is roughly described as divided by a very large number, which is very small. Thus the limit is equal to 0.  All of the arguments behind the results of are of a similar elementary nature. The type descriptions of each result ( , , , ) should be thought of as helpful shorthand for the simple principles at work. You should use these in the parenthetical justifications of steps in an infinite limit computation. Note that the type descriptions alone don't indicate the sign ( ) of your result.   Infinite limit formulas   In what follows denotes either a real number or . Assume that and are both infinite.   Type  If for some , then     Type       Type       Type  If for some , then     Type  If for some , then .    Type  If and , then     Type  If is a positive integer, then     Type  If is a positive integer, then         Infinite limit: polynomial   Compute . Your answer should be a real number or .    Note first that ( ), (type ). Unfortunately, we do not have any infinite limit principles with descriptive type , so we cannot use any of the results of directly. Instead, we first do some algebra, using our intuition that the term dominates the term: , since and .    "
+},
+{
+  "id": "s_infinite_limits-2",
+  "level": "2",
+  "url": "s_infinite_limits.html#s_infinite_limits-2",
+  "type": "Objectives",
+  "number": "9",
+  "title": "",
+  "body": "   Provide a rigorous definition of infinite limits at points and at infinity.    Investigate infinite limits graphically.    Define vertical asymptotes using language of infinite limits.    Develop computation techniques for infinite limits.    "
+},
+{
+  "id": "d_infty_lims",
+  "level": "2",
+  "url": "s_infinite_limits.html#d_infty_lims",
+  "type": "Definition",
+  "number": "9.1",
+  "title": "Infinite limits (informal).",
+  "body": " Infinite limits (informal)   Let be a function.   Infinite limits at  Fix and assume is defined everywhere on an open interval containing , except possibly at itself. We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently close (but not equal) to . We write (resp., ) when this is the case.    Infinite limit at  Assume is defined on an open interval of the form . We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently large and positive. We write (resp., ) when this is the case.    Infinite limit at  Assume is defined on an open interval of the form . We say that has limit (resp., limit ) at if the values of can be made arbitrarily large and positive (resp. arbitrarily large and negative) provided is sufficiently large and negative. We write (resp., ) when this is the case.      "
+},
+{
+  "id": "rm_infty_lims",
+  "level": "2",
+  "url": "s_infinite_limits.html#rm_infty_lims",
+  "type": "Remark",
+  "number": "9.2",
+  "title": "Infinite limits.",
+  "body": " Infinite limits  It is important to observe that the various notions of infinite limit defined in all cover situations where the limit of the function does not exist . The best way to understand an infinite limit statement of the form , where denotes either a real number, , or , is as an assertion that   the limit in question does not exist, and    its failure to exist is due to values of the function getting arbitrarily large (in positive or negative direction) as approaches .   Accordingly, we must understand this new notation as an extended version of our original limit notation. In particular, we are not treating or here as if they were actual real numbers.  "
+},
+{
+  "id": "rm_infty_lims_onesided",
+  "level": "2",
+  "url": "s_infinite_limits.html#rm_infty_lims_onesided",
+  "type": "Remark",
+  "number": "9.3",
+  "title": "One-sided infinite limits.",
+  "body": " One-sided infinite limits  Yet more variants of infinite limits can be defined for one-sided limits: that is, we can make sense of the following statements for any : . We thought was long enough as it is.  "
+},
+{
+  "id": "d_ver_asymp",
+  "level": "2",
+  "url": "s_infinite_limits.html#d_ver_asymp",
+  "type": "Definition",
+  "number": "9.4",
+  "title": "Vertical asymptote.",
+  "body": " Vertical asymptote   Fix a constant . The line is a vertical asymptote of the graph of a function if at least one the of the following conditions holds: .   "
+},
+{
+  "id": "eg_infty_lim_tan",
+  "level": "2",
+  "url": "s_infinite_limits.html#eg_infty_lim_tan",
+  "type": "Example",
+  "number": "9.5",
+  "title": "Vertical asymptotes: <span class=\"process-math\">\\(\\tan\\)<\/span>.",
+  "body": " Vertical asymptotes:   Let . Recall that the domain of is .   Sketch a graph of on its entire domain.    Find any and all vertical or horizontal asymptotes of .          "
+},
+{
+  "id": "th_power_functions",
+  "level": "2",
+  "url": "s_infinite_limits.html#th_power_functions",
+  "type": "Theorem",
+  "number": "9.6",
+  "title": "Power functions and their reciprocals.",
+  "body": " Power functions and their reciprocals   Let be a positive integer.    "
+},
+{
+  "id": "th_infinite_limit",
+  "level": "2",
+  "url": "s_infinite_limits.html#th_infinite_limit",
+  "type": "Theorem",
+  "number": "9.7",
+  "title": "Infinite limit formulas.",
+  "body": " Infinite limit formulas   In what follows denotes either a real number or . Assume that and are both infinite.   Type  If for some , then     Type       Type       Type  If for some , then     Type  If for some , then .    Type  If and , then     Type  If is a positive integer, then     Type  If is a positive integer, then       "
+},
+{
+  "id": "eg_infty_lim_poly",
+  "level": "2",
+  "url": "s_infinite_limits.html#eg_infty_lim_poly",
+  "type": "Example",
+  "number": "9.8",
+  "title": "Infinite limit: polynomial.",
+  "body": " Infinite limit: polynomial   Compute . Your answer should be a real number or .    Note first that ( ), (type ). Unfortunately, we do not have any infinite limit principles with descriptive type , so we cannot use any of the results of directly. Instead, we first do some algebra, using our intuition that the term dominates the term: , since and .   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
