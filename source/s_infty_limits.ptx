@@ -125,107 +125,160 @@ Let <m>f(x)=\tan x</m>. Recall that the domain of <m>f</m> is
 </p>
 </solution>
 </example>
-<theorem xml:id="th_infinite_limits">
+<p>
+    As illustrated by <xref ref="eg_infty_lim_tan"/>, infinite limit formulas can be easily deduced from graphs of familiar functions. <xref ref="th_power_functions"/> can be thought of as directly translating properties of the graphs of power functions <m>f(x)=x^n</m> and their reciprocals <m>g(x)=\frac{1}{x^n}</m>into limit statements. 
+</p>
+<theorem xml:id="th_power_functions">
+    <title>Power functions and their reciprocals</title>
+    <statement>
+        <p>
+            Let <m>n</m> be a positive integer.  
+            <md>
+                <mrow>\lim_{x\to \infty}x^n \amp= \infty.</mrow>
+                <mrow>\lim_{x\to -\infty}x^n \amp= \begin{cases}
+                \infty 
+                \amp \text{if } n \text{ is even}\\
+                -\infty \amp \text{ if } n \text{ is odd.}
+                \end{cases}
+                </mrow>
+                <mrow>\lim_{x\to 0^+}\frac{1}{x^n} \amp = \infty.</mrow>
+                <mrow>\lim_{x\to 0^-}\frac{1}{x^n}  \amp =\begin{cases}
+                    \infty\amp \text{if } n \text{ is even}\\
+                    -\infty\amp\text{if } n \text{ is odd. }
+                \end{cases} </mrow>
+            </md>
+        </p>
+    </statement>
+</theorem>
+<p>
+    The next theorem helps us to compute the limit of functions built from other functions that may have infinite limits. Instead of trying to commit all the details of this theorem to memory, it is easier to understand the simple arithmetical arguments that go into establishing these results. For example, the fact that if 
+    <m>
+        \lim\limits_{x\to a}f(x)=\pm \infty
+    </m>
+     and <m>\lim\limits_{x\to a}p(x)=c</m>, then <m>\lim\limits_{x\to a}\frac{p(x)}{f(x)}=0</m>, essentially follows from the fact that if the numerator <m>p(x)</m> is approaching some finite number <m>c</m> as <m>x\to a</m>, while the denominator <m>f(x)</m> gets arbitrarily large, then the quotient <m>p(x)/f(x)</m> is roughly described as <m>c</m> divided by a very large number, which is very small. Thus the limit is equal to 0.  
+</p>
+<p>
+    All of the arguments behind the results of <xref ref="th_infinite_limit"/> are of a similar elementary nature. The type descriptions of each result (<eg/>, <m>\infty+\infty</m>, <m>\infty\cdot c</m>, <etc/>) should be thought of as helpful shorthand for the simple principles at work. You should use these in the parenthetical justifications of steps in an infinite limit computation. Note that the type descriptions alone don't indicate the sign (<m>\pm</m>) of your result: <eg/>, a limit computation of type <m>\infty\cdot \infty</m>, can yield <m>\infty</m> or <m>-\infty</m>, depending on the behavior of the functions near the limit point <m>a</m>. 
+</p>
+<theorem xml:id="th_infinite_limit">
     <title>Infinite limit formulas</title>
     <statement>
         <p>
-            In what follows <m>a</m> can denote either a real number, or <m>\pm \infty</m>. We assume <m>\lim\limits_{x\to }</m>
+            In what follows <m>a</m> denotes either a real number or <m>\pm \infty</m>. Assume that <m>\lim\limits_{x\to a}f(x)</m> and <m>\lim\limits_{x\to a}g(x)</m> are both infinite.
             <ol>
                 <li>
+                    <title>Type <m>\infty+c</m></title>
                     <p>
-                        Let <m>n</m> be a positive integer. We have 
-            <md>
-                <mrow>\lim_{x\to \infty}x^n \amp= \infty</mrow>
-                <mrow>\lim_{x\to -\infty}x^n \amp= \begin{cases}
-                \infty \text{if } n \text{ even}\\
-                -\infty \text{ if } n \text{ odd}
-                \end{cases}
-                </mrow>
-            </md>.
+                        If <m>\lim\limits_{x\to a}p(x)=c</m> for some <m>c\in \R</m>, then 
+                        <me>\lim\limits_{x\to a}f(x)+p(x)=\begin{cases}
+                        \infty\amp \text{if } \lim\limits_{x\to a}f(x)=\infty\\
+                        -\infty\amp \text{if } \lim\limits_{x\to a}f(x)=-\infty.
+                        \end{cases}
+                        </me>
                     </p>
                 </li>
                 <li>
+                    <title>Type <m>\infty+\infty</m></title>
+                    <p> 
+                        <me>\lim\limits_{x\to a}f(x)+g(x)=\begin{cases}
+                        \infty \amp \text{if } \lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=\infty\\
+                        -\infty \amp \text{if } \lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}g(x)=-\infty.
+                        \end{cases}
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\infty\cdot \infty</m></title>
                     <p>
-                        Fix a constants <m>a,b\in \R</m>, where <m>b&gt; 0</m>. Let <m>f</m> be a function. 
-                        <ol>
-                            <li>
-                                <p>
-                                    If <m>\lim\limits_{x\to a^+}f(x)=0</m>, then 
-                                    <me>
-                                        \lim\limits_{x\to a^+}\frac{b}{f(x)}=\begin{cases}
-                                        \infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (0,c) \\
-                                        -\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (0,c) 
-                                        \end{cases}
-                                    </me>
-                                    
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    If <m>\lim\limits_{x\to a^-}f(x)=0</m>, then 
-                                    <me>
-                                        \lim\limits_{x\to a^-}\frac{1}{f(x)}=\begin{cases}
-                                        \infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (c,0) \\
-                                        -\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (c,0) 
-                                        \end{cases}
-                                    </me>
-                                </p>
-                            </li>
-                        </ol>
+                        <me>\lim\limits_{x\to a}f(x)g(x)=\begin{cases}
+                    \infty \amp \text{if } f(x)g(x)&gt;0 \text{ for all } x \text{ near } a\\
+                    -\infty \amp \text{if } f(x)g(x)&lt;0 \text{ for all } x \text{ near } a.\\
+                        \end{cases}
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\infty\cdot c</m></title>
+                    <p>
+                        If <m>\lim\limits_{x\to a}p(x)=c</m> for some <m>c\in \R</m>, then  <me>\lim\limits_{x\to a}f(x)p(x)=\begin{cases}
+                        \infty \amp \text{if } f(x)p(x)&gt; 0 \text{ for all } x \text{ near } a\\
+                        -\infty \amp \text{if } f(x)p(x)&lt; 0 \text{ for all } x \text{ near } a.
+                        \end{cases}
+                        </me>
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\frac{c}{\infty}</m></title>
+                    <p>
+                       If <m>\lim\limits_{x\to a}p(x)=c</m> for some <m>c\in \R</m>, then 
+                       <me>
+                        \lim\limits_{x\to a}\frac{p(x)}{f(x)}=0
+                       </me>.
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\frac{c}{0}</m></title>
+                    <p>
+                        If <m>\lim\limits_{x\to a}p(x)=c</m> and <m>\lim\limits_{x\to a}q(x)=0</m>, then 
+                        <me>
+                            \lim\limits_{x\to a}\frac{p(x)}{q(x)}=\begin{cases}
+                            \infty\amp \text{if }\frac{p(x)}{q(x)}&gt; 0 \text{ for all } x \text{ near } a \\
+                            -\infty\amp \text{if } \frac{p(x)}{q(x)}&lt; 0 \text{ for all } x \text{ near } a.
+                            \end{cases}
+                        </me>
+                        
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\infty^n</m></title>
+                    <p>
+                        If <m>n</m> is a positive integer, then 
+                        <me>
+                            \lim\limits_{x\to a}\left(f(x)\right)^n=\begin{cases}
+                            \infty \amp \text{if } \lim\limits_{x\to a}f(x)=\infty \text{ or } n \text{ is even} \\
+                            -\infty \amp \text{if } \lim\limits_{x\to a}f(x)=-\infty \text{ and } n \text{ is odd}. 
+                            \end{cases}
+                        </me>
+                        
+                    </p>
+                </li>
+                <li>
+                    <title>Type <m>\sqrt[n]{\infty}</m></title>
+                    <p>
+                        If <m>n</m> is a positive integer, then 
+                        <me>
+                            \lim\limits_{x\to a}\sqrt[n]{f(x)}=\begin{cases}
+                            \infty \amp \text{if } \lim\limits_{x\to a}f(x)=\infty \\
+                            -\infty \amp \text{if } \lim\limits_{x\to a}f(x)=-\infty \text{ and } n \text{ is odd}. 
+                            \end{cases}
+                        </me>
+                        
                     </p>
                 </li>
             </ol>
         </p>
     </statement>
 </theorem>
-<remark xml:id="rm_def_indef">
-<title>Definite forms</title>
+<example xml:id="eg_infty_lim_poly">
+<title>Infinite limit: polynomial</title>
+<statement>
 <p>
-There is considerable more subtlety involved when trying to formulate limit laws that are applicable to infinite limits. Instead of burdening you with a long official theorem with many cases and subcases, we instead enumerate a few informal principles you can use when dealing with infinite limits. The bits arithmetic notation that accompany these principles are called <term>definite forms</term>. They are to be considered simply as shorthand for a careful observation about functions whose value approach <m>\infty</m>, <m>-\infty</m>, or <m>0</m>. You can cite these definite forms in your <em>parenthetical justifications</em> of steps in limit computations. See examples below for models of these computations. 
-<ol>
-    <li>
-        <p>
-            Definite form: 
-            <md>
-                <mrow>\infty+\infty \amp =\infty \amp -\infty-\infty=-\infty</mrow>
-            </md>.
-            Principle: large positive number <m>+</m> large positive number <m>=</m> large positive number. (Similarly for negative case.)
-        </p>
-    </li>
-    <li><p>
-        Definite form: 
-        <md>
-            <mrow>\infty\cdot \infty \amp =\infty \amp \infty\cdot(-\infty)=-\infty</mrow>
-        </md>.
-        Principle: large positive number <m>\times</m> large positive number <m>=</m> large positive number; large positive number <m>\times</m> large negative number <m>=</m> large negative number. 
-    </p>
-</li>
-    <li>
-        <p>
-            Definite form: 
-            <md>
-                <mrow>\frac{\text{bounded}}{\pm \infty} \amp = 0</mrow>
-            </md>.
-            Principle: if numerator values are bounded in absolute value, and denominator values get arbitrarily large, then quotient approaches <m>0</m>. A common instance of this principle is encoded by the definite form 
-            <me>
-                \frac{c}{\pm \infty}=0
-            </me>,
-            where <m>c</m> is a constant. 
-        </p>
-    </li>
-    <li>
-        <p>
-            Definite form:
-            <md>
-                <mrow>\frac{\pm \infty}{\text{ nonzero bounded}} \amp = \pm \infty </mrow>
-            </md>.
-            Principle: if numerator gets arbitrarily large and 
-        </p>
-    </li>
-
-</ol> 
+Compute  <m>\lim_{x\to -\infty}x^3+7x^2</m>. Your answer should be a real number or <m>\pm \infty</m>. 
 </p>
-</remark>
+</statement>
+<solution>
+<p>
+Note first that <m>\lim\limits_{x\to -\infty}x^3=-\infty</m> (<xref ref="th_power_functions" text="global"/>), <m>\lim\limits_{x\to -\infty}7x^2=\infty</m> (type <m>\infty\cdot c</m>). Unfortunately, we do not have any infinite limit principles with descriptive type <m>\infty-\infty</m>, so we cannot use any of the results of <xref ref="th_infinite_limit"/> directly. Instead, we first do some algebra, using our intuition that the <m>x^3</m> term <q>dominates</q> the <m>7x^2</m> term: 
+<md>
+    <mrow>\lim\limits_{x\to -\infty}x^3+7x^2 \amp = \lim\limits_{x\to -\infty}x^3(1+7/x) </mrow>
+    <mrow> \amp = -\infty \amp (\text{type } \infty\cdot c)</mrow>
+</md>,
+since <m>\lim\limits_{x\to -\infty}x^3=-\infty</m> and 
+<m>\lim\limits_{x\to -\infty}1+\frac{7}{x}=1+0=1</m>.
+</p>
+</solution>
+</example>
+
 
 
     
