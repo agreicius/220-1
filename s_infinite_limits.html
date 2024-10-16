@@ -655,19 +655,84 @@ D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\n
 </div>
 </li>
 <li id="th_rational_function-2-1-5-3">
-<span class="heading"><span class="title">Numerator degree bigger.</span></span><div class="para" id="th_rational_function-2-1-5-3-2"><div class="para logical" id="th_rational_function-2-1-5-3-2-1">
+<span class="heading"><span class="title">Numerator degree bigger.</span></span><div class="para logical" id="th_rational_function-2-1-5-3-2">
 <div class="para">If <span class="process-math">\(m&gt; n\text{,}\)</span> then</div>
-<div class="displaymath process-math" id="th_rational_function-2-1-5-3-2-1-2">
+<div class="displaymath process-math" id="th_rational_function-2-1-5-3-2-2">
 \begin{align*}
 \lim\limits_{x\to \infty}\frac{f(x)}{g(x)} \amp =\lim\limits_{x\to \infty}\frac{a}{b}x^{m-n}\\
 \lim\limits_{x\to -\infty}\frac{f(x)}{g(x)} \amp =\lim\limits_{x\to -\infty}\frac{a}{b}x^{m-n}\text{.}
 \end{align*}
 </div>
-<div class="para">Furthermore, both these limits are infinite. However, their sign depends on whether <span class="process-math">\(a/b\)</span> is positive or negative, and whether <span class="process-math">\(m-n\)</span> is even or odd.</div>
-</div></div>
+<div class="para">Furthermore, both these limits are infinite. However, their sign depends on whether <span class="process-math">\(a/b\)</span> is positive or negative, and whether <span class="process-math">\(m-n\)</span> is even or odd. Alternatively, the sign of the limit depends on the limits of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> at <span class="process-math">\(\infty\)</span> and <span class="process-math">\(-\infty\text{,}\)</span> respectively.</div>
+</div>
+<div class="para" id="th_rational_function-2-1-5-3-3">Since both limits at infinity do not exist, <span class="process-math">\(f\)</span> does not have any horizontal asymptotes.</div>
 </li>
 </ol>
-</div></article></section></div>
+</div></article><article class="example example-like" id="eg_vert_hor_asym"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span><span class="space"> </span><span class="title">Asymptotes: rational function.</span>
+</h3>
+<div class="para" id="eg_vert_hor_asym-2-1">Let <span class="process-math">\(\displaystyle f(x)=\frac{x^5-2x^4}{-x^2+3x-2}\text{.}\)</span> Find all and any horizontal and vertical asymptotes of <span class="process-math">\(f\text{.}\)</span> For any vertical asymptotes, compute both one-sided limits.</div>
+<div class="solutions"><details id="eg_vert_hor_asym-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<article class="case" id="eg_vert_hor_asym-3-1"><h4 class="heading">Horizontal asymptotes.</h4> <div class="para logical" id="eg_vert_hor_asym-3-1-2">
+<div class="para">For our horizontal asymptote investigation we compute the limits at infinity of <span class="process-math">\(f\text{.}\)</span> At <span class="process-math">\(\infty\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_rational_function.html" id="eg_vert_hor_asym-3-1-2-3">
+\begin{align*}
+\lim\limits_{x\to \infty}f(x) \amp= \lim\limits_{x\to \infty}\frac{x^5-2x^4}{-x^2+3x-2} \\
+\amp =\lim\limits_{x\to \infty}-x^{3} \amp (\knowl{./knowl/xref/th_rational_function.html}{\text{Theorem 9.10}}) \\
+\amp = -\infty \amp (\infty\cdot c) 
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(\lim\limits_{x\to \infty}x^3=\infty\text{,}\)</span> and <span class="process-math">\(-x^3\)</span> is negative eventually as <span class="process-math">\(x\to \infty\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="eg_vert_hor_asym-3-1-3">
+<div class="para">At <span class="process-math">\(-\infty\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_rational_function.html" id="eg_vert_hor_asym-3-1-3-2">
+\begin{align*}
+\lim\limits_{x\to -\infty}f(x) \amp= \lim\limits_{x\to -\infty}\frac{x^5-2x^4}{-x^2+3x-2} \\
+\amp =\lim\limits_{x\to -\infty}-x^{3} \amp (\knowl{./knowl/xref/th_rational_function.html}{\text{Theorem 9.10}}) \\
+\amp = \infty \amp (\infty\cdot c) 
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(\lim\limits_{x\to -\infty}x^3=-\infty\text{,}\)</span> and <span class="process-math">\(-x^3\)</span> is positive eventually as <span class="process-math">\(x\to -\infty\text{.}\)</span>
+</div>
+</div></article> <article class="case" id="eg_vert_hor_asym-3-2"><h4 class="heading">Vertical asymptotes.</h4> <div class="para logical" id="eg_vert_hor_asym-3-2-2">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f\)</span> is continuous everywhere on its domain, the only candidates for vertical asymptotes are the lines <span class="process-math">\(x=2\)</span> and <span class="process-math">\(x=1\text{.}\)</span> We investigate the limits at these points:</div>
+<div class="displaymath process-math" id="eg_vert_hor_asym-3-2-2-5">
+\begin{align*}
+\lim\limits_{x\to 2 }f(x)\amp=\lim\limits_{x\to 2}\frac{x^4(x-2)}{-(x-2)(x-1)} \\
+\amp = \lim\limits_{x\to 2 }\frac{x^4}{-(x-1)} \amp \text{(repl.)}\\
+\amp = -16 \amp \text{(poly. eval.)}\text{.}
+\end{align*}
+</div>
+<div class="para">Since the limit exists here, the line <span class="process-math">\(x=2\)</span> is not a vertical asymptote.</div>
+</div> <div class="para logical" id="eg_vert_hor_asym-3-2-3">
+<div class="para">We now compute the one-sided limits at <span class="process-math">\(x=1\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="eg_vert_hor_asym-3-2-3-2">
+\begin{align*}
+\lim\limits_{x\to 1^-}f(x) \amp = \lim\limits_{x\to 1^-}\frac{-x^4}{x-1} \amp \text{(repl.)}\\
+\amp = \infty \amp (\infty\cdot c)\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(\lim\limits_{x\to 1^-}x-1=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\to 1^-}-x^4=-1\text{,}\)</span> and <span class="process-math">\(-x^4/(x-1)\)</span> is positive for all <span class="process-math">\(x\)</span> close to and less than <span class="process-math">\(1\text{.}\)</span> Since once of the one-sided limits is infinite, we conclude that <span class="process-math">\(x=1\)</span> is a vertical asymptote of the graph of <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div> <div class="para logical" id="eg_vert_hor_asym-3-2-4">
+<div class="para">We are asked to compute the other one-sided limit. The computation is similar:</div>
+<div class="displaymath process-math" id="eg_vert_hor_asym-3-2-4-1">
+\begin{align*}
+\lim\limits_{x\to 1^+}f(x) \amp = \lim\limits_{x\to 1^+}\frac{-x^4}{x-1} \amp \text{(repl.)}\\
+\amp = -\infty \amp (\infty\cdot c)\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(\lim\limits_{x\to 1^-}x-1=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\to 1^-}-x^4=-1\text{,}\)</span> and <span class="process-math">\(-x^4/(x-1)\)</span> is negative for all <span class="process-math">\(x\)</span> close to and greater than <span class="process-math">\(1\text{.}\)</span>
+</div>
+</div></article>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_lim_at_infty.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-13.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
