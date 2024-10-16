@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Math 220-1 Single-variable differential calculus</title>
+<title>Derivative at a point</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -226,7 +226,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_infinite_limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-14.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -373,7 +373,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -386,22 +386,129 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="article" id="my-great-book"><nav class="summary-links"><ul>
-<li><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></li>
-<li><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></li>
-<li><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition</span></a></li>
-<li><a href="s_limit_sandwich.html" class="internal"><span class="codenumber">3</span> <span class="title">Limits: algebraic technique and sandwich theorem</span></a></li>
-<li><a href="s_lim_formal.html" class="internal"><span class="codenumber">4</span> <span class="title">Limits: formal definition</span></a></li>
-<li><a href="s_one_sided.html" class="internal"><span class="codenumber">5</span> <span class="title">One-sided limits</span></a></li>
-<li><a href="s_continuous_def.html" class="internal"><span class="codenumber">6</span> <span class="title">Continuity: definition</span></a></li>
-<li><a href="s_cont_ivt.html" class="internal"><span class="codenumber">7</span> <span class="title">Continuity: intermediate value theorem</span></a></li>
-<li><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></li>
-<li><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></li>
-<li><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></li>
-<li><a href="my-great-book-14.html" class="internal"><span class="title">Back Matter</span></a></li>
-</ul></nav></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_der_at_point"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">10</span><span class="space"> </span><span class="title">Derivative at a point</span>
+</h2>
+<article class="objectives goal-like" id="s_der_at_point-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_der_at_point-2-1">
+<li id="s_der_at_point-2-1-1"><div class="para" id="s_der_at_point-2-1-1-1">Give formal limit definition of the derivative of a function at a point.</div></li>
+<li id="s_der_at_point-2-1-2"><div class="para" id="s_der_at_point-2-1-2-1">Understand the different quotient of a function in terms of rates of change and slopes of secants.</div></li>
+<li id="s_der_at_point-2-1-3"><div class="para" id="s_der_at_point-2-1-3-1">Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point.</div></li>
+</ol></article><div class="para" id="s_der_at_point-3">We will launch directly into an unmotivated definition of the derivative of a function <span class="process-math">\(f\)</span> at a point, and then motivate this definition retroactively in terms of important properties of <span class="process-math">\(f\)</span> and its graph.</div>
+<article class="definition definition-like" id="d_der_at_point"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at a point.</span>
+</h3> <div class="para logical" id="d_der_at_point-2-1">
+<div class="para">Suppose <span class="process-math">\(a\in \R\)</span> is an interior point or endpoint of the domain of <span class="process-math">\(f\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <dfn class="terminology">differentiable</dfn> at <span class="process-math">\(a\)</span> if the limit</div>
+<div class="displaymath process-math" id="eq_der_at_point_h">
+\begin{equation}
+\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h},\tag{10.1}
+\end{equation}
+</div>
+<div class="para">or equivalently, the limit</div>
+<div class="displaymath process-math" id="eq_der_at_point_ab">
+\begin{equation}
+\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}\text{,}\tag{10.2}
+\end{equation}
+</div>
+<div class="para">exists. When this is the case, we call this limit the <dfn class="terminology">derivative</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\text{,}\)</span> denoted <span class="process-math">\(f'(a)\text{:}\)</span> i.e.,</div>
+<div class="displaymath process-math" id="eq_der_at_point">
+\begin{equation}
+f'(a)= \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}\text{.}\tag{10.3}
+\end{equation}
+</div>
+</div></article><article class="remark remark-like" id="s_der_at_point-5"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at a point.</span>
+</h3> <div class="para logical" id="s_der_at_point-5-2">
+<div class="para">Implicit in our definition is that the two limit expressions</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rm_affine_sub.html" id="s_der_at_point-5-2-1">
+\begin{align*}
+\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h} \amp \amp \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
+\end{align*}
+</div>
+<div class="para">are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a>, preserves the value of a limit.</div>
+</div> <div class="para" id="s_der_at_point-5-3">In more detail, the <span class="process-math">\(x\to a\)</span> limit can be transformed to the <span class="process-math">\(h\to 0\)</span> limit by using the substitution <span class="process-math">\(h=x-a\text{;}\)</span> and conversely, the <span class="process-math">\(h\to 0\)</span> limit can be transformed to the <span class="process-math">\(x\to a\)</span> limit using the substitution <span class="process-math">\(x=h+a\text{.}\)</span>
+</div></article><article class="example example-like" id="eg_der_at_point"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at point: elementary.</span>
+</h3>
+<div class="para logical" id="eg_der_at_point-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=x^2\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_der_at_point-2-1-2">
+<li id="eg_der_at_point-2-1-2-1"><div class="para" id="eg_der_at_point-2-1-2-1-1">Show that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(-2\)</span> and compute <span class="process-math">\(f'(-2)\)</span> using the limit definition of the derivative.</div></li>
+<li id="eg_der_at_point-2-1-2-2"><div class="para" id="eg_der_at_point-2-1-2-2-1">More generally, fix any <span class="process-math">\(a\in \R\text{.}\)</span> Show that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and compute <span class="process-math">\(f'(a)\)</span> using the limit definition of the derivative.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_der_at_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_at_point-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_difference_quot"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Difference quotient.</span>
+</h3> <div class="para logical" id="d_difference_quot-2-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be a function. Given two distinct points <span class="process-math">\(a\ne b\)</span> in the domain of <span class="process-math">\(f\text{,}\)</span> the value</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<div class="para">is called a <dfn class="terminology">difference</dfn> quotient of <span class="process-math">\(f\text{.}\)</span> We have two useful ways of understanding this quantity.</div>
+<ul class="disc" id="d_difference_quot-2-1-7">
+<li id="d_difference_quot-2-1-7-1">
+<span class="heading"><span class="title">Average rate of change.</span></span><div class="para logical" id="d_difference_quot-2-1-7-1-2">
+<div class="para">The difference quotient <span class="process-math">\(\frac{f(b)-f(a)}{b-a}\)</span> is called the <dfn class="terminology">average rate of change</dfn> of <span class="process-math">\(f\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> In this context we often use the <span class="process-math">\(\Delta\)</span> notation below to emphasize the relation to changing values of <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{f(b)-f(a)}{b-a}=\frac{\Delta f}{\Delta x}=\frac{\Delta y}{\Delta x}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(y=f(x)\text{.}\)</span>
+</div>
+</div>
+</li>
+<li id="d_difference_quot-2-1-7-2">
+<span class="heading"><span class="title">Slope of secant line.</span></span><div class="para logical" id="d_difference_quot-2-1-7-2-2">
+<div class="para">Consider the points <span class="process-math">\(P=(a,f(a))\)</span> and <span class="process-math">\(Q=(b,f(b))\text{,}\)</span> which lie on the graph of <span class="process-math">\(f\text{.}\)</span> The unique line <span class="process-math">\(L\)</span> in <span class="process-math">\(\R^2\)</span> that passes through <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> is called the <dfn class="terminology">secant line</dfn> on <span class="process-math">\(f\)</span> between <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span> This line can be defined, using point-slope form with respect to <span class="process-math">\(P=(a,f(a))\text{,}\)</span> by the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y-f(a)=\underset{\text{slope}}{\underbrace{\left (\frac{f(b)-f(a)}{b-a}\right)}}(x-a)\text{.}
+\end{equation*}
+</div>
+<div class="para">We recognize in this context that the difference quotient <span class="process-math">\(\frac{f(b)-f(a)}{b-a}\)</span> is the slope of the secant line <span class="process-math">\(L\text{.}\)</span>
+</div>
+</div>
+</li>
+</ul>
+</div></article><article class="definition definition-like" id="d_der_interpretations"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative interpretations.</span>
+</h3> <div class="para logical" id="d_der_interpretations-2-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be differentiable at the point <span class="process-math">\(a\text{.}\)</span>
+</div>
+<ol class="decimal" id="d_der_interpretations-2-1-3">
+<li id="d_der_interpretations-2-1-3-1">
+<span class="heading"><span class="title">Instantaneous rate of change.</span></span><div class="para logical" id="d_der_interpretations-2-1-3-1-2">
+<div class="para">We call the derivative value</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(a)=\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
+\end{equation*}
+</div>
+<div class="para">the <dfn class="terminology">instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> with respect to <span class="process-math">\(x\)</span></dfn>, or more simply, the rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> with respect to <span class="process-math">\(a\text{.}\)</span>
+</div>
+</div>
+</li>
+<li id="d_der_interpretations-2-1-3-2">
+<span class="heading"><span class="title">Tangent line.</span></span><div class="para logical" id="d_der_interpretations-2-1-3-2-2">
+<div class="para">Let <span class="process-math">\(P=(a,f(a))\text{.}\)</span> The <dfn class="terminology">tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(P\)</span></dfn> (or <dfn class="terminology">at <span class="process-math">\(x=a\)</span></dfn>) is the line <span class="process-math">\(L\)</span> defined by the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y-a=f'(a)(x-a)\text{.}
+\end{equation*}
+</div>
+<div class="para">In this context, we see that the derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> is the slope of the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(P\text{.}\)</span>
+</div>
+</div>
+</li>
+</ol>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="frontmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_infinite_limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-14.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

@@ -1063,6 +1063,69 @@ var ptx_lunr_docs = [
   "body": " Asymptotes: rational function   Let . Find all and any horizontal and vertical asymptotes of . For any vertical asymptotes, compute both one-sided limits.     Horizontal asymptotes  For our horizontal asymptote investigation we compute the limits at infinity of . At we have since , and is negative eventually as .  At we have since , and is positive eventually as .    Vertical asymptotes  We have . Since is continuous everywhere on its domain, the only candidates for vertical asymptotes are the lines and . We investigate the limits at these points: . Since the limit exists here, the line is not a vertical asymptote.  We now compute the one-sided limits at . We have , since , , and is positive for all close to and less than . Since once of the one-sided limits is infinite, we conclude that is a vertical asymptote of the graph of .  We are asked to compute the other one-sided limit. The computation is similar: , since , , and is negative for all close to and greater than .    "
 },
 {
+  "id": "s_der_at_point",
+  "level": "1",
+  "url": "s_der_at_point.html",
+  "type": "Section",
+  "number": "10",
+  "title": "Derivative at a point",
+  "body": " Derivative at a point     Give formal limit definition of the derivative of a function at a point.    Understand the different quotient of a function in terms of rates of change and slopes of secants.    Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point.     We will launch directly into an unmotivated definition of the derivative of a function at a point, and then motivate this definition retroactively in terms of important properties of and its graph.   Derivative at a point   Suppose is an interior point or endpoint of the domain of . We say that is differentiable at if the limit or equivalently, the limit , exists. When this is the case, we call this limit the derivative of at , denoted : , .     Derivative at a point  Implicit in our definition is that the two limit expressions are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to , preserves the value of a limit.  In more detail, the limit can be transformed to the limit by using the substitution ; and conversely, the limit can be transformed to the limit using the substitution .    Derivative at point: elementary   Let .   Show that is differentiable at and compute using the limit definition of the derivative.    More generally, fix any . Show that is differentiable at and compute using the limit definition of the derivative.            Difference quotient   Let be a function. Given two distinct points in the domain of , the value is called a difference quotient of . We have two useful ways of understanding this quantity.   Average rate of change  The difference quotient is called the average rate of change of between and . In this context we often use the notation below to emphasize the relation to changing values of : , where .    Slope of secant line  Consider the points and , which lie on the graph of . The unique line in that passes through and is called the secant line on between and . This line can be defined, using point-slope form with respect to , by the equation . We recognize in this context that the difference quotient is the slope of the secant line .        Derivative interpretations   Let be differentiable at the point .   Instantaneous rate of change  We call the derivative value the instantaneous rate of change of at with respect to , or more simply, the rate of change of at with respect to .    Tangent line  Let . The tangent line to the graph of at (or at ) is the line defined by the equation . In this context, we see that the derivative of at is the slope of the tangent line to the graph of at .       "
+},
+{
+  "id": "s_der_at_point-2",
+  "level": "2",
+  "url": "s_der_at_point.html#s_der_at_point-2",
+  "type": "Objectives",
+  "number": "10",
+  "title": "",
+  "body": "   Give formal limit definition of the derivative of a function at a point.    Understand the different quotient of a function in terms of rates of change and slopes of secants.    Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point.    "
+},
+{
+  "id": "d_der_at_point",
+  "level": "2",
+  "url": "s_der_at_point.html#d_der_at_point",
+  "type": "Definition",
+  "number": "10.1",
+  "title": "Derivative at a point.",
+  "body": " Derivative at a point   Suppose is an interior point or endpoint of the domain of . We say that is differentiable at if the limit or equivalently, the limit , exists. When this is the case, we call this limit the derivative of at , denoted : , .   "
+},
+{
+  "id": "s_der_at_point-5",
+  "level": "2",
+  "url": "s_der_at_point.html#s_der_at_point-5",
+  "type": "Remark",
+  "number": "10.2",
+  "title": "Derivative at a point.",
+  "body": " Derivative at a point  Implicit in our definition is that the two limit expressions are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to , preserves the value of a limit.  In more detail, the limit can be transformed to the limit by using the substitution ; and conversely, the limit can be transformed to the limit using the substitution .  "
+},
+{
+  "id": "eg_der_at_point",
+  "level": "2",
+  "url": "s_der_at_point.html#eg_der_at_point",
+  "type": "Example",
+  "number": "10.3",
+  "title": "Derivative at point: elementary.",
+  "body": " Derivative at point: elementary   Let .   Show that is differentiable at and compute using the limit definition of the derivative.    More generally, fix any . Show that is differentiable at and compute using the limit definition of the derivative.          "
+},
+{
+  "id": "d_difference_quot",
+  "level": "2",
+  "url": "s_der_at_point.html#d_difference_quot",
+  "type": "Definition",
+  "number": "10.4",
+  "title": "Difference quotient.",
+  "body": " Difference quotient   Let be a function. Given two distinct points in the domain of , the value is called a difference quotient of . We have two useful ways of understanding this quantity.   Average rate of change  The difference quotient is called the average rate of change of between and . In this context we often use the notation below to emphasize the relation to changing values of : , where .    Slope of secant line  Consider the points and , which lie on the graph of . The unique line in that passes through and is called the secant line on between and . This line can be defined, using point-slope form with respect to , by the equation . We recognize in this context that the difference quotient is the slope of the secant line .      "
+},
+{
+  "id": "d_der_interpretations",
+  "level": "2",
+  "url": "s_der_at_point.html#d_der_interpretations",
+  "type": "Definition",
+  "number": "10.5",
+  "title": "Derivative interpretations.",
+  "body": " Derivative interpretations   Let be differentiable at the point .   Instantaneous rate of change  We call the derivative value the instantaneous rate of change of at with respect to , or more simply, the rate of change of at with respect to .    Tangent line  Let . The tangent line to the graph of at (or at ) is the line defined by the equation . In this context, we see that the derivative of at is the slope of the tangent line to the graph of at .      "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

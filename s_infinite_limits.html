@@ -198,6 +198,15 @@ window.MathJax = {
 #th_rational_function-2-1-5 { counter-set: th_rational_function-2-1-5 0; }
 #th_rational_function-2-1-5 > li::marker { content: ""counter(th_rational_function-2-1-5,decimal)"."; }
 #th_rational_function-2-1-5 > li { counter-increment: th_rational_function-2-1-5; }
+#s_der_at_point-2-1 { counter-set: s_der_at_point-2-1 0; }
+#s_der_at_point-2-1 > li::marker { content: ""counter(s_der_at_point-2-1,decimal)"."; }
+#s_der_at_point-2-1 > li { counter-increment: s_der_at_point-2-1; }
+#eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
+#eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
+#eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
+#d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
+#d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
+#d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -217,7 +226,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_lim_at_infty.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-13.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_lim_at_infty.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_der_at_point.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -364,8 +373,9 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-13.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-14.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -690,7 +700,7 @@ D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\n
 \begin{align*}
 \lim\limits_{x\to -\infty}f(x) \amp= \lim\limits_{x\to -\infty}\frac{x^5-2x^4}{-x^2+3x-2} \\
 \amp =\lim\limits_{x\to -\infty}-x^{3} \amp (\knowl{./knowl/xref/th_rational_function.html}{\text{Theorem 9.10}}) \\
-\amp = \infty \amp (\infty\cdot c) 
+\amp = \infty \amp (\text{type } \infty\cdot c) 
 \end{align*}
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to -\infty}x^3=-\infty\text{,}\)</span> and <span class="process-math">\(-x^3\)</span> is positive eventually as <span class="process-math">\(x\to -\infty\text{.}\)</span>
@@ -716,7 +726,7 @@ f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
 <div class="displaymath process-math" id="eg_vert_hor_asym-3-2-3-2">
 \begin{align*}
 \lim\limits_{x\to 1^-}f(x) \amp = \lim\limits_{x\to 1^-}\frac{-x^4}{x-1} \amp \text{(repl.)}\\
-\amp = \infty \amp (\infty\cdot c)\text{,}
+\amp = \infty \amp (\text{type } c/0)\text{,}
 \end{align*}
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to 1^-}x-1=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\to 1^-}-x^4=-1\text{,}\)</span> and <span class="process-math">\(-x^4/(x-1)\)</span> is positive for all <span class="process-math">\(x\)</span> close to and less than <span class="process-math">\(1\text{.}\)</span> Since once of the one-sided limits is infinite, we conclude that <span class="process-math">\(x=1\)</span> is a vertical asymptote of the graph of <span class="process-math">\(f\text{.}\)</span>
@@ -726,7 +736,7 @@ f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
 <div class="displaymath process-math" id="eg_vert_hor_asym-3-2-4-1">
 \begin{align*}
 \lim\limits_{x\to 1^+}f(x) \amp = \lim\limits_{x\to 1^+}\frac{-x^4}{x-1} \amp \text{(repl.)}\\
-\amp = -\infty \amp (\infty\cdot c)\text{,}
+\amp = -\infty \amp (\text{type } c/0)\text{,}
 \end{align*}
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to 1^-}x-1=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\to 1^-}-x^4=-1\text{,}\)</span> and <span class="process-math">\(-x^4/(x-1)\)</span> is negative for all <span class="process-math">\(x\)</span> close to and greater than <span class="process-math">\(1\text{.}\)</span>
@@ -734,7 +744,7 @@ f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
 </div></article>
 </div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_lim_at_infty.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-13.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_lim_at_infty.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_at_point.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
