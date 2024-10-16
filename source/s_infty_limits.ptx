@@ -358,20 +358,85 @@ since <m>\lim\limits_{x\to -\infty}x^3=-\infty</m> and
                 <li>
                     <title>Numerator degree bigger</title>
                     <p>
-                        <p>
                             If <m>m&gt; n</m>, then 
                             <md>
                                 <mrow>\lim\limits_{x\to \infty}\frac{f(x)}{g(x)} \amp =\lim\limits_{x\to \infty}\frac{a}{b}x^{m-n}</mrow>
                                 <mrow>\lim\limits_{x\to -\infty}\frac{f(x)}{g(x)} \amp =\lim\limits_{x\to -\infty}\frac{a}{b}x^{m-n}</mrow>
                             </md>.
                             Furthermore, both these limits are infinite. However, their sign depends on whether <m>a/b</m> is positive or negative, and whether <m>m-n</m> is even or odd. Alternatively, the sign of the limit depends on the limits of <m>f</m> and <m>g</m> at <m>\infty</m> and <m>-\infty</m>, respectively. 
-                        </p>
+                    </p>
+                    <p>
+                        Since both limits at infinity do not exist, <m>f</m> does not have any horizontal asymptotes. 
                     </p>
                 </li>
             </ol>
         </p>
     </statement>
 </theorem>
+<example xml:id="eg_vert_hor_asym">
+<title>Asymptotes: rational function</title>
+<statement>
+<p>
+Let <m>\displaystyle f(x)=\frac{x^5-2x^4}{-x^2+3x-2}</m>. Find all and any horizontal and vertical asymptotes of <m>f</m>. For any vertical asymptotes, compute both one-sided limits. 
+</p>
+</statement>
+<solution>
+    <case>
+        <title>Horizontal asymptotes</title>  
+    <p>
+For our horizontal asymptote investigation we compute the limits at infinity of <m>f</m>. At <m>\infty</m> we have 
+<md>
+    <mrow> \lim\limits_{x\to \infty}f(x) \amp= \lim\limits_{x\to \infty}\frac{x^5-2x^4}{-x^2+3x-2} </mrow>
+    <mrow> \amp =\lim\limits_{x\to \infty}-x^{3} \amp (<xref ref="th_rational_function"/>) </mrow>
+    <mrow> \amp = -\infty \amp (\infty\cdot c) </mrow>
+</md>
+since <m>\lim\limits_{x\to \infty}x^3=\infty</m>, and <m>-x^3</m> is negative eventually as <m>x\to \infty</m>. 
+</p>
+<p>
+    At <m>-\infty</m> we have 
+    <md>
+        <mrow> \lim\limits_{x\to -\infty}f(x) \amp= \lim\limits_{x\to -\infty}\frac{x^5-2x^4}{-x^2+3x-2} </mrow>
+        <mrow> \amp =\lim\limits_{x\to -\infty}-x^{3} \amp (<xref ref="th_rational_function"/>) </mrow>
+        <mrow> \amp = \infty \amp (\text{type } \infty\cdot c) </mrow>
+    </md>
+    since <m>\lim\limits_{x\to -\infty}x^3=-\infty</m>, and <m>-x^3</m> is positive eventually as <m>x\to -\infty</m>. 
+</p>
+</case>
+<case>
+<title>Vertical asymptotes</title>
+<p>
+We have 
+<me>
+    f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}
+</me>.
+Since <m>f</m> is continuous everywhere on its domain, the only candidates for vertical asymptotes are the lines <m>x=2</m> and <m>x=1</m>. We investigate the limits at these points: 
+<md>
+    <mrow> \lim\limits_{x\to 2 }f(x)\amp=\lim\limits_{x\to 2}\frac{x^4(x-2)}{-(x-2)(x-1)} </mrow>
+    <mrow> \amp = \lim\limits_{x\to 2 }\frac{x^4}{-(x-1)} \amp \text{(repl.)}</mrow>
+    <mrow> \amp = -16 \amp \text{(poly. eval.)}</mrow>
+</md>.
+Since the limit exists here, the line <m>x=2</m> is not a vertical asymptote.
+</p>
+<p>
+    We now compute the one-sided limits at <m>x=1</m>. We have 
+    <md>
+        <mrow>\lim\limits_{x\to 1^-}f(x) \amp = \lim\limits_{x\to 1^-}\frac{-x^4}{x-1} \amp \text{(repl.)}</mrow>
+        <mrow> \amp = \infty \amp (\text{type } c/0)</mrow>
+    </md>,
+     since <m>\lim\limits_{x\to 1^-}x-1=0</m>, <m>\lim\limits_{x\to 1^-}-x^4=-1</m>, and <m>-x^4/(x-1)</m> is positive for all <m>x</m> close to and less than <m>1</m>. Since once of the one-sided limits is infinite, we conclude that <m>x=1</m> is a vertical asymptote of the graph of <m>f</m>. 
+</p>
+<p>
+    We are asked to compute the other one-sided limit. The computation is similar: 
+    <md>
+        <mrow>\lim\limits_{x\to 1^+}f(x) \amp = \lim\limits_{x\to 1^+}\frac{-x^4}{x-1} \amp \text{(repl.)}</mrow>
+        <mrow> \amp = -\infty \amp (\text{type } c/0)</mrow>
+    </md>,
+     since <m>\lim\limits_{x\to 1^-}x-1=0</m>, <m>\lim\limits_{x\to 1^-}-x^4=-1</m>, and <m>-x^4/(x-1)</m> is negative for all <m>x</m> close to and greater than <m>1</m>.
+</p>
+</case>
+
+</solution>
+</example>
 
 
 
