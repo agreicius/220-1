@@ -207,6 +207,12 @@ window.MathJax = {
 #d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
 #d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
 #d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
+#eg_der_at_point_tangent-2-1-2 { counter-set: eg_der_at_point_tangent-2-1-2 0; }
+#eg_der_at_point_tangent-2-1-2 > li::marker { content: ""counter(eg_der_at_point_tangent-2-1-2,decimal)"."; }
+#eg_der_at_point_tangent-2-1-2 > li { counter-increment: eg_der_at_point_tangent-2-1-2; }
+#eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
+#eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
+#eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -506,7 +512,57 @@ y-a=f'(a)(x-a)\text{.}
 </div>
 </li>
 </ol>
-</div></article></section></div>
+</div></article><article class="example example-like" id="eg_der_at_point_tangent"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent line at point.</span>
+</h3>
+<div class="para logical" id="eg_der_at_point_tangent-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_der_at_point_tangent-2-1-2">
+<li id="eg_der_at_point_tangent-2-1-2-1"><div class="para" id="eg_der_at_point_tangent-2-1-2-1-1">Sketch the graph of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="eg_der_at_point_tangent-2-1-2-2"><div class="para" id="eg_der_at_point_tangent-2-1-2-2-1">Find an equation for the tangent line <span class="process-math">\(L\)</span> to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span>
+</div></li>
+<li id="eg_der_at_point_tangent-2-1-2-3"><div class="para" id="eg_der_at_point_tangent-2-1-2-3-1">Add <span class="process-math">\(L\)</span> to your sketch of the graph of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_der_at_point_tangent-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_at_point_tangent-3-1"><ol class="decimal" id="eg_der_at_point_tangent-3-1-1">
+<li id="eg_der_at_point_tangent-3-1-1-1"><div class="para" id="eg_der_at_point_tangent-3-1-1-1-1">Below you find the graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span> How do we come up with something like this by hand. The quick and dirty way is to remember what the graph of $g(x)=\sqrt{x}$ and realize that the graph of <span class="process-math">\(f\)</span> will have roughly the same shape, but perhaps shifted/scaled/reflected. A matter of a few plotted points (e.g., <span class="process-math">\((5,0)\text{,}\)</span> <span class="process-math">\((4,1)\text{,}\)</span> <span class="process-math">\((1,2)\)</span>), will then give us something like the following. <figure class="figure figure-like" id="fig_graph_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\)</span></figcaption></figure>
+</div></li>
+<li id="eg_der_at_point_tangent-3-1-1-2">
+<div class="para logical" id="eg_der_at_point_tangent-3-1-1-2-1">
+<div class="para">Let <span class="process-math">\(L\)</span> be the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span> By definition the slope of <span class="process-math">\(L\)</span> is <span class="process-math">\(f'(1)\text{,}\)</span> which we now compute:</div>
+<div class="displaymath process-math" id="eg_der_at_point_tangent-3-1-1-2-1-6">
+\begin{align*}
+f'(1) \amp = \lim\limits_{h\to 0}\frac{f(1+h)-f(1)}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{\sqrt{5-(1+h)}-\sqrt{5-1}}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}\frac{\sqrt{4-h}+2}{\sqrt{4-h}+2}\\
+\amp =\lim\limits_{h\to 0}\frac{4-h-4}{h(\sqrt{4-h}+2)} \\
+\amp = \lim\limits_{h\to 0}\frac{-h}{h\sqrt{4-h}+2}\\
+\amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{4-h}+2}\\
+\amp = -\frac{1}{4} \amp \text{(cont.)}\text{,}
+\end{align*}
+</div>
+<div class="para">where the last step uses the fact that <span class="process-math">\(g(h)=-\frac{1}{\sqrt{4-h}+2}\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="eg_der_at_point_tangent-3-1-1-2-2">
+<div class="para">We conclude that  the slope of <span class="process-math">\(L\)</span> is <span class="process-math">\(f'(1)=-\frac{1}{4}\text{.}\)</span> We now use point-slope form to find an equation for <span class="process-math">\(L\text{.}\)</span> By definition the tangent line <span class="process-math">\(L\)</span> passes through the point <span class="process-math">\(P=(1,f(1))=(1,2)\)</span> on the graph of <span class="process-math">\(f\text{.}\)</span> With respect to this point we have the following point-slope equation for <span class="process-math">\(L\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y-2=-\frac{1}{4}(x-1)\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+<li id="eg_der_at_point_tangent-3-1-1-3"><div class="para" id="eg_der_at_point_tangent-3-1-1-3-1">We now add both the point <span class="process-math">\(P\)</span> and the tangent line <span class="process-math">\(L\)</span> to our graph of <span class="process-math">\(f\text{.}\)</span> <figure class="figure figure-like" id="fig_graph_tangent_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_tang_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x together with tangent"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{,}\)</span> <span class="process-math">\(P\text{,}\)</span> and <span class="process-math">\(L\)</span></figcaption></figure>
+</div></li>
+</ol></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_infinite_limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-14.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
