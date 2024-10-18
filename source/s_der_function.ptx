@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_function" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivative function</title>
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Give formal limit definition of the derivative of a function at a point.
+                </p>
+            </li>
+            <li>
+                <p>
+                   Understand the different quotient of a function in terms of rates of change and slopes of secants. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point. 
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    
+    
+</section>

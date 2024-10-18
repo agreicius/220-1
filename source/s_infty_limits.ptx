@@ -121,7 +121,23 @@ Let <m>f(x)=\tan x</m>. Recall that the domain of <m>f</m> is
 </statement>
 <solution>
 <p>
-
+    <ol>
+        <li>
+            <p>
+                The graph of <m>f(x)=\tan(x)=\frac{\sin x}{\cos x}</m> is given below. 
+                <figure xml:id="fig_graph_tan">
+                    <caption>Graph of <m>f(x)=\tan x</m></caption>
+                    <image>
+                        <shortdescription>Graph of tan</shortdescription>
+                        <sageplot>
+                        f=plot(sin(x),x,-pi/2, pi/2)
+                        f
+                        </sageplot>
+                    </image>
+                </figure>
+            </p>
+        </li>
+    </ol>
 </p>
 </solution>
 </example>
