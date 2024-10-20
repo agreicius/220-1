@@ -1144,6 +1144,78 @@ var ptx_lunr_docs = [
   "body": " Tangent line at point   Let .   Sketch the graph of .    Find an equation for the tangent line to the graph of at .    Add to your sketch of the graph of .          Below you find the graph of . How do we come up with something like this by hand. The quick and dirty way is to remember what the graph of $g(x)=\\sqrt{x}$ and realize that the graph of will have roughly the same shape, but perhaps shifted\/scaled\/reflected. A matter of a few plotted points ( , , , ), will then give us something like the following.   Graph of   Graph of radical of 5-x       Let be the tangent line to the graph of at . By definition the slope of is , which we now compute: , where the last step uses the fact that is continuous at .  We conclude that the slope of is . We now use point-slope form to find an equation for . By definition the tangent line passes through the point on the graph of . With respect to this point we have the following point-slope equation for : .    We now add both the point and the tangent line to our graph of .   Graph of , , and   Graph of radical of 5-x together with tangent         "
 },
 {
+  "id": "s_der_function",
+  "level": "1",
+  "url": "s_der_function.html",
+  "type": "Section",
+  "number": "11",
+  "title": "Derivative function",
+  "body": " Derivative function     Extend the notion of derivative at a point to a definition of the derivative function associated to a function .    Compute formulas for derivative functions using the limit definition of the derivative.    Introduce Leibniz notation in addition to prime notation. Understand the specific advantages of each notional style.    Understand both analytically and graphically common ways in which a function can fail to be differentiable at an input.     Whereas previously we focused on the notion of the derivative of a function at a specific input, we now switch perspectives somewhat and consider the derivative operation as defining a function associated to .   Derivative function   Let be a function, and let be the set of points where is differentiable. The derivative operation defines a function that is called the derivative of .    Note that the domain of the derivative function need not be the entire domain of : indeed, by definition it consists precisely of the points where is differentiable. The next example illustrates this.   Derivative function: radical   Let be defined as .   Compute the domain of : that is, find all points where is differentiable.    Derive a formula for the derivative function .          Take an element in the domain of and compute: . We now note that for all , this last limit expression evaluates to , after the application of simple limit rules. Thus is differentiable for such elements. For , however, the last limit becomes which is a limit of type , and hence infinite. In particular the limit doesn't exist for , showing that is not differentiable at .  We conclude that the domain of is . Note that is strictly smaller than the domain of in this case: indeed, it is every element of the domain of with the exception of .    For , we can finish our limit computation above to compute : .        Failing to be differentiable  By definition, a function fails to be differentiable at an input if the limit does not exist. The precise reason for that failure to exist is reflected in the graph of , using the slope of tangent line interpretation of the derivative. Some examples and their graphical analogues:   Infinite limit vertical slope  If the limit is infinite at , then the tangent line to the curve at (if it exists) is vertical: , its slope is undefined.  This evident in the graph of . (See .) As , ; equivalently, the slopes of the tangent lines to the graph of at , get arbitrarily large and negative. At itself, the tangent line to the graph of is in fact the vertical line .    Jump discontinuity  corner point  If the limit at doesn't exist because of a discrepancy between the left- and right-hand limits, both of which exist, then we typically see the slope of tangent lines at points to the left of approaching one limiting slope, while the slope of tangent lines of points to the right of will approach another value. Geometrically, such a point will look like a corner or kink in the graph of .  The classic illustration of this phenomenon is the absolute value function . As we show in this function is differentiable everywhere except at . Graphically we see why this is the case in the corner nature of the point on the graph: to the left the slope of the graph is ; and to the right the slope is .    Wild oscillation  If a function is wildly oscillating near an input to such a degree that limit of of doesn't exist at , then it turns out that the derivative also cannot exist at . See the point at for the function with graph in as an example.       Derivative function: absolute value   Let .   Show that the domain of is and compute a formula for .    Add a geometric argument about why is not differentiable at using .      Graph of   Graph of absolute value            Derivative function:   Let . Compute the domain of and derive a formula for .        We end this section by introducing an alternative notation for denoting the derivative of a function. The notation is called Leibniz notation , as it was favored in Gottlieb Leibniz's development of calculus. Isaac Newton, on the other hand favored the prime notation . Leibniz notation comes in very handy when considering the derivative as an operation that we apply to functions; it also strongly evokes the interpretation of the interpretation of the derivative as a rate of change. It is very much less convenient as an alternative notation for , as exhibited by .   Leibniz notation   Let be a function relating the output variable as a function of the input variable , and let be the set of points where is differentiable. We introduce the following notation, called Leibniz notation , to denote various concepts related to    Derivative function  The derivative function is denoted as or . In other words, we have have .    Derivative at a point  Given , the derivative of at is denoted as or . In other words, we have     Derivative operation  We denote by the operation of taking the derivative of a function with respect to . Thus is the derivative of : , .       "
+},
+{
+  "id": "s_der_function-2",
+  "level": "2",
+  "url": "s_der_function.html#s_der_function-2",
+  "type": "Objectives",
+  "number": "11",
+  "title": "",
+  "body": "   Extend the notion of derivative at a point to a definition of the derivative function associated to a function .    Compute formulas for derivative functions using the limit definition of the derivative.    Introduce Leibniz notation in addition to prime notation. Understand the specific advantages of each notional style.    Understand both analytically and graphically common ways in which a function can fail to be differentiable at an input.    "
+},
+{
+  "id": "d_derivative_function",
+  "level": "2",
+  "url": "s_der_function.html#d_derivative_function",
+  "type": "Definition",
+  "number": "11.1",
+  "title": "Derivative function.",
+  "body": " Derivative function   Let be a function, and let be the set of points where is differentiable. The derivative operation defines a function that is called the derivative of .   "
+},
+{
+  "id": "eg_der_func_rad",
+  "level": "2",
+  "url": "s_der_function.html#eg_der_func_rad",
+  "type": "Example",
+  "number": "11.2",
+  "title": "Derivative function: radical.",
+  "body": " Derivative function: radical   Let be defined as .   Compute the domain of : that is, find all points where is differentiable.    Derive a formula for the derivative function .          Take an element in the domain of and compute: . We now note that for all , this last limit expression evaluates to , after the application of simple limit rules. Thus is differentiable for such elements. For , however, the last limit becomes which is a limit of type , and hence infinite. In particular the limit doesn't exist for , showing that is not differentiable at .  We conclude that the domain of is . Note that is strictly smaller than the domain of in this case: indeed, it is every element of the domain of with the exception of .    For , we can finish our limit computation above to compute : .      "
+},
+{
+  "id": "s_der_function-7",
+  "level": "2",
+  "url": "s_der_function.html#s_der_function-7",
+  "type": "Remark",
+  "number": "11.3",
+  "title": "Failing to be differentiable.",
+  "body": " Failing to be differentiable  By definition, a function fails to be differentiable at an input if the limit does not exist. The precise reason for that failure to exist is reflected in the graph of , using the slope of tangent line interpretation of the derivative. Some examples and their graphical analogues:   Infinite limit vertical slope  If the limit is infinite at , then the tangent line to the curve at (if it exists) is vertical: , its slope is undefined.  This evident in the graph of . (See .) As , ; equivalently, the slopes of the tangent lines to the graph of at , get arbitrarily large and negative. At itself, the tangent line to the graph of is in fact the vertical line .    Jump discontinuity  corner point  If the limit at doesn't exist because of a discrepancy between the left- and right-hand limits, both of which exist, then we typically see the slope of tangent lines at points to the left of approaching one limiting slope, while the slope of tangent lines of points to the right of will approach another value. Geometrically, such a point will look like a corner or kink in the graph of .  The classic illustration of this phenomenon is the absolute value function . As we show in this function is differentiable everywhere except at . Graphically we see why this is the case in the corner nature of the point on the graph: to the left the slope of the graph is ; and to the right the slope is .    Wild oscillation  If a function is wildly oscillating near an input to such a degree that limit of of doesn't exist at , then it turns out that the derivative also cannot exist at . See the point at for the function with graph in as an example.     "
+},
+{
+  "id": "eg_der_funct_abs",
+  "level": "2",
+  "url": "s_der_function.html#eg_der_funct_abs",
+  "type": "Example",
+  "number": "11.4",
+  "title": "Derivative function: absolute value.",
+  "body": " Derivative function: absolute value   Let .   Show that the domain of is and compute a formula for .    Add a geometric argument about why is not differentiable at using .      Graph of   Graph of absolute value          "
+},
+{
+  "id": "eg_der_func_reciprocal",
+  "level": "2",
+  "url": "s_der_function.html#eg_der_func_reciprocal",
+  "type": "Example",
+  "number": "11.6",
+  "title": "Derivative function: <span class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
+  "body": " Derivative function:   Let . Compute the domain of and derive a formula for .       "
+},
+{
+  "id": "d_Leibniz_notation",
+  "level": "2",
+  "url": "s_der_function.html#d_Leibniz_notation",
+  "type": "Definition",
+  "number": "11.7",
+  "title": "Leibniz notation.",
+  "body": " Leibniz notation   Let be a function relating the output variable as a function of the input variable , and let be the set of points where is differentiable. We introduce the following notation, called Leibniz notation , to denote various concepts related to    Derivative function  The derivative function is denoted as or . In other words, we have have .    Derivative at a point  Given , the derivative of at is denoted as or . In other words, we have     Derivative operation  We denote by the operation of taking the derivative of a function with respect to . Thus is the derivative of : , .      "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",

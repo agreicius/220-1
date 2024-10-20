@@ -225,6 +225,18 @@ window.MathJax = {
 #eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
 #eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
 #eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
+#s_der_function-2-1 { counter-set: s_der_function-2-1 0; }
+#s_der_function-2-1 > li::marker { content: ""counter(s_der_function-2-1,decimal)"."; }
+#s_der_function-2-1 > li { counter-increment: s_der_function-2-1; }
+#eg_der_func_rad-2-1-3 { counter-set: eg_der_func_rad-2-1-3 0; }
+#eg_der_func_rad-2-1-3 > li::marker { content: ""counter(eg_der_func_rad-2-1-3,decimal)"."; }
+#eg_der_func_rad-2-1-3 > li { counter-increment: eg_der_func_rad-2-1-3; }
+#eg_der_func_rad-3-1-1 { counter-set: eg_der_func_rad-3-1-1 0; }
+#eg_der_func_rad-3-1-1 > li::marker { content: ""counter(eg_der_func_rad-3-1-1,decimal)"."; }
+#eg_der_func_rad-3-1-1 > li { counter-increment: eg_der_func_rad-3-1-1; }
+#eg_der_funct_abs-2-1-2 { counter-set: eg_der_funct_abs-2-1-2 0; }
+#eg_der_funct_abs-2-1-2 > li::marker { content: ""counter(eg_der_funct_abs-2-1-2,decimal)"."; }
+#eg_der_funct_abs-2-1-2 > li { counter-increment: eg_der_funct_abs-2-1-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -244,7 +256,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="appendix-notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book-14.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-thms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="appendix-notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book-15.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-thms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -392,8 +404,9 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
 <li class="toc-item toc-backmatter contains-active">
-<div class="toc-title-box"><a href="my-great-book-14.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-15.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -473,7 +486,14 @@ window.MathJax = {
 <div>
 <a href="s_der_at_point.html#d_difference_quot" class="xref" data-knowl="./knowl/list-of/d_difference_quot.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.5: Difference quotient">Definition 10.5</a> Difference quotient</div>
 <div>
-<a href="s_der_at_point.html#d_der_interpretations" class="xref" data-knowl="./knowl/list-of/d_der_interpretations.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.6: Derivative interpretations">Definition 10.6</a> Derivative interpretations</div></section></div>
+<a href="s_der_at_point.html#d_der_interpretations" class="xref" data-knowl="./knowl/list-of/d_der_interpretations.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.6: Derivative interpretations">Definition 10.6</a> Derivative interpretations</div>
+<h3 class="heading hide-type" title="Section 11: Derivative function">
+<span class="codenumber">11</span><span class="space"> </span><span class="title">Derivative function</span>
+</h3>
+<div>
+<a href="s_der_function.html#d_derivative_function" class="xref" data-knowl="./knowl/list-of/d_derivative_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 11.1: Derivative function">Definition 11.1</a> Derivative function</div>
+<div>
+<a href="s_der_function.html#d_Leibniz_notation" class="xref" data-knowl="./knowl/list-of/d_Leibniz_notation.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 11.7: Leibniz notation">Definition 11.7</a> Leibniz notation</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="appendix-notation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-thms.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
