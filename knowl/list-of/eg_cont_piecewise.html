@@ -30,6 +30,54 @@ c^2x \amp \text{if } x&lt; 1\\
 </div></li>
 <li><div class="para">Find all values of <span class="process-math">\(c\)</span> for which <span class="process-math">\(f\)</span> is continuous at the input <span class="process-math">\(1\text{,}\)</span> and hence everywhere.</div></li>
 </ol>
-</div></article><span class="incontext"><a class="internal" href="s_cont_ivt.html#eg_cont_piecewise">in-context</a></span>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<ol class="decimal" id="eg_cont_piecewise-3-1-1">
+<li>
+<div class="para">Take any <span class="process-math">\(a\in \R\)</span> with <span class="process-math">\(a\ne 1\text{.}\)</span>
+</div>
+<div class="para">If <span class="process-math">\(a&lt; 1\text{,}\)</span> then <span class="process-math">\(f(x)=cx^2\)</span> for inputs near <span class="process-math">\(a\text{.}\)</span> Since <span class="process-math">\(g(x)=cx^2\)</span> is a polynomial, and since polynomials are continuous on their domain, it follows that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="para">Similarly, if <span class="process-math">\(a\geq 1\text{,}\)</span> then <span class="process-math">\(f(x)=3cx-2\)</span> for inputs <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span> Again since <span class="process-math">\(h(x)=3cx-2\)</span> is a polynomial, it is continuous at all such inputs, and hence also at <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="para">This shows that <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(a\)</span> for all <span class="process-math">\(a\ne 1\text{,}\)</span> no matter what the value of <span class="process-math">\(c\text{.}\)</span>
+</div>
+</li>
+<li>
+<div class="para logical">
+<div class="para">We use the definition of continuity to see what <span class="process-math">\(c\)</span> must satisfy for <span class="process-math">\(f\)</span> to be differentiable at <span class="process-math">\(1\text{.}\)</span> Namely, this is true if and only if</div>
+<ol class="lower-roman" id="eg_cont_piecewise-3-1-1-2-1-4">
+<li><div class="para">
+<span class="process-math">\(\lim\limits_{x\to 1}f(x)\)</span> exists, and further</div></li>
+<li><div class="para"><span class="process-math">\(\displaystyle \lim\limits_{x\to 1}f(x)=f(1)\)</span></div></li>
+</ol>
+<div class="para">Condition (i) holds if and only if <span class="process-math">\(\lim\limits_{x\to 1^-}f(x)=\lim\limits_{x\to 1^-}f(x)\text{.}\)</span> We compute both one-sided limits:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim\limits_{x\to 1^-}f(x) \amp = \lim\limits_{x\to 1^-}c^2x \amp (\text{def., } x&lt; 1)\\
+\amp c^2 \amp \text{(poly. eval.)} \\
+\lim\limits_{x\to 1^+}f(x) \amp = \lim\limits_{x\to 1^+}3cx-2 \amp (\text{def., } x&gt; 1)\\
+\amp 3c-2\amp \text{(poly. eval.)} \text{.}
+\end{align*}
+</div>
+<div class="para">We see that (i) is satisfied if and only if <span class="process-math">\(c^2=3c-2\text{,}\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c^2-3c+2=0\text{,}
+\end{equation*}
+</div>
+<div class="para">which is true if and only if <span class="process-math">\(c=1\)</span> or <span class="process-math">\(c=2\text{.}\)</span>
+</div>
+</div>
+<div class="para">It remains to determine which choices of <span class="process-math">\(c\)</span> guarantee condition (ii). We claim that both work: indeed, since both <span class="process-math">\(c=1\)</span> and <span class="process-math">\(c=2\)</span> guarantee that <span class="process-math">\(\lim\limits_{x\to 1 }f(x)=c^2=3c-2\text{,}\)</span> and since <span class="process-math">\(f(1)=3c-2\)</span> using the piecewise definition, we conclude that for both choices of <span class="process-math">\(c\)</span> we have <span class="process-math">\(\lim\limits_{x\to 1}f(x)=f(1)=3c-2\text{,}\)</span> as desired.</div>
+</li>
+</ol>
+<div class="para">The figure below shows the resulting graph for <span class="process-math">\(f\text{,}\)</span> taking <span class="process-math">\(c=1\)</span> and <span class="process-math">\(c=2\text{.}\)</span> You can think of condition (i) as guaranteeing that our two linear segments join up correctly at <span class="process-math">\(x=1\text{.}\)</span> <figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:50%;"><figure class="figure figure-like"><img src="generated/sageplot/im_f_piecewise_c1.svg" role="img" class="contained" alt="Graph of piecewise-defined function"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(c=1\)</span></figcaption></figure></div>
+<div class="sbspanel middle" style="width:50%;"><figure class="figure figure-like"><img src="generated/sageplot/im_f_piecewise_c2.svg" role="img" class="contained" alt="Graph of piecewise-defined function"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(c=2\)</span></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.2<span class="period">.</span></span><span class="space"> </span>Graphs of <span class="process-math">\(f\text{:}\)</span> <span class="process-math">\(c=1\)</span> and <span class="process-math">\(c=2\)</span></figcaption></figure>
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_cont_ivt.html#eg_cont_piecewise">in-context</a></span>
 </body>
 </html>

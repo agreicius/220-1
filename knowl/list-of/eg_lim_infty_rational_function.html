@@ -12,10 +12,30 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: rational function.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: rational function.</span>
 </h3>
 <div class="para">Let <span class="process-math">\(f(x)=\displaystyle\frac{3x^3-100x}{4\abs{x}^3+x^2+1}\text{.}\)</span> Compute <span class="process-math">\(\lim\limits_{x\to \infty}f(x)\)</span> and <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)\text{.}\)</span>
 </div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_lim_at_infty.html#eg_lim_infty_rational_function">in-context</a></span>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">Note that both the numerator and denominator approach <span class="process-math">\(\pm \infty\)</span> as <span class="process-math">\(x\to \pm \infty\text{.}\)</span> Our intuition is that the highest power of <span class="process-math">\(x\)</span> is the “dominant” term for large <span class="process-math">\(x\text{.}\)</span> To crystallize this intuition algebraically, we factor out the <span class="process-math">\(x^3\)</span> in the top and bottom, after first dealing with the absolute value:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim\limits_{x\to \infty} \frac{3x^3-100x}{4\abs{x}^3+x^2+1}\amp = 
+\lim\limits_{x\to \infty}\frac{3x^3-100x}{4x^3+x^2+1} \amp (x\geq 0\implies \abs{x}=x) \\
+\amp = \lim\limits_{x\to \infty}\frac{x^3(3-\frac{100}{x^2})}{x^3(4+\frac{1}{x}+\frac{1}{x^3})}\\
+\amp = \lim\limits_{x\to \infty}\frac{3-\frac{100}{x^2}}{4+\frac{1}{x}+\frac{1}{x^3}} \amp (\text{repl.}) \\
+\amp\frac{3-100\lim\limits_{x\to\infty }\frac{1}{x^2}}{4+\lim\limits_{x\to\infty }\frac{1}{x}+\lim\limits_{x\to\infty }\frac{1}{x^3}} \amp (\text{quot., sum, scal. mult.}) \\
+\amp = \frac{4+0}{3+0+0} \amp (1/x^n\to 0)\\
+\amp = \frac{4}{3}\\
+\lim\limits_{x\to -\infty} \frac{3x^3-100x}{4\abs{x}^3+x^2+1}\amp = 
+\lim\limits_{x\to -\infty}\frac{3x^3-100x}{-4x^3+x^2+1} \amp (x\leq 0\implies \abs{x}=-x) \\
+\amp = \lim\limits_{x\to -\infty}\frac{x^3(3-\frac{100}{x^2})}{x^3(-4+\frac{1}{x}+\frac{1}{x^3})}\\
+\amp = \lim\limits_{x\to -\infty}\frac{3-\frac{100}{x^2}}{-4+\frac{1}{x}+\frac{1}{x^3}} \amp (\text{repl.}) \\
+\amp\frac{3-100\lim\limits_{x\to-\infty }\frac{1}{x^2}}{-4+\lim\limits_{x\to-\infty }\frac{1}{x}+\lim\limits_{x\to-\infty }\frac{1}{x^3}} \amp (\text{quot., sum, scal. mult.}) \\
+\amp = \frac{4+0}{-3+0+0} \amp (1/x^n\to 0)\\
+\amp = -\frac{4}{3}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_lim_at_infty.html#eg_lim_infty_rational_function">in-context</a></span>
 </body>
 </html>
