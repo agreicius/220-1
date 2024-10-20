@@ -213,6 +213,9 @@ window.MathJax = {
 #eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
 #eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
 #eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
+#eg_der_at_point-3-1-1 { counter-set: eg_der_at_point-3-1-1 0; }
+#eg_der_at_point-3-1-1 > li::marker { content: ""counter(eg_der_at_point-3-1-1,decimal)"."; }
+#eg_der_at_point-3-1-1 > li { counter-increment: eg_der_at_point-3-1-1; }
 #d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
 #d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
 #d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
@@ -442,8 +445,18 @@ f'(a)= \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-
 </div>
 <div class="para">are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a>, preserves the value of a limit.</div>
 </div> <div class="para" id="s_der_at_point-5-3">In more detail, the <span class="process-math">\(x\to a\)</span> limit can be transformed to the <span class="process-math">\(h\to 0\)</span> limit by using the substitution <span class="process-math">\(h=x-a\text{;}\)</span> and conversely, the <span class="process-math">\(h\to 0\)</span> limit can be transformed to the <span class="process-math">\(x\to a\)</span> limit using the substitution <span class="process-math">\(x=h+a\text{.}\)</span>
+</div></article><article class="remark remark-like" id="s_der_at_point-6"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span><span class="space"> </span><span class="title">Limit definition of derivative.</span>
+</h3> <div class="para logical" id="s_der_at_point-6-2">
+<div class="para">Note that the limit</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{h\to 0}\frac{f(a+h)-f(a)}{h}
+\end{equation*}
+</div>
+<div class="para">always involves a denominator that approaches 0 as <span class="process-math">\(h\to 0\text{.}\)</span> This means we can <em class="emphasis">never</em> apply the quotient rule to such a limit directly; we will <em class="emphasis">always</em> have to do some algebra (or the like) to get to a place where we can potentially use limit rules.</div>
 </div></article><article class="example example-like" id="eg_der_at_point"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at point: elementary.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at point: elementary.</span>
 </h3>
 <div class="para logical" id="eg_der_at_point-2-1">
 <div class="para">Let <span class="process-math">\(f(x)=x^2\text{.}\)</span>
@@ -453,8 +466,40 @@ f'(a)= \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-
 <li id="eg_der_at_point-2-1-2-2"><div class="para" id="eg_der_at_point-2-1-2-2-1">More generally, fix any <span class="process-math">\(a\in \R\text{.}\)</span> Show that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and compute <span class="process-math">\(f'(a)\)</span> using the limit definition of the derivative.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_der_at_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_at_point-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_difference_quot"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Difference quotient.</span>
+<div class="solutions"><details id="eg_der_at_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_at_point-3-1"><ol class="decimal" id="eg_der_at_point-3-1-1">
+<li id="eg_der_at_point-3-1-1-1"><div class="para logical" id="eg_der_at_point-3-1-1-1-1">
+<div class="para">We compute</div>
+<div class="displaymath process-math" id="eg_der_at_point-3-1-1-1-1-1">
+\begin{align*}
+\lim\limits_{h\to 0 }\frac{f(-2+h)-f(-2)}{h} \amp = 
+\lim\limits_{h\to 0}\frac{(-2+h)^2-4}{h} \\
+\amp = \lim\limits_{h\to 0}\frac{4-4h+h^2-4}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{h(-4+h)}{h}\\
+\amp = \lim\limits_{h\to 0}-4+h\\
+\amp = -4 \amp \text{(poly. eval.)}\text{.}
+\end{align*}
+</div>
+<div class="para">Since the limit exists, we conclude that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(-2\text{,}\)</span> and that <span class="process-math">\(f'(-2)=-4\text{.}\)</span>
+</div>
+</div></li>
+<li id="eg_der_at_point-3-1-1-2"><div class="para logical" id="eg_der_at_point-3-1-1-2-1">
+<div class="para">The computation above is very similar for an arbitrary constant <span class="process-math">\(a\in \R\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="eg_der_at_point-3-1-1-2-1-2">
+\begin{align*}
+\lim\limits_{h\to 0 }\frac{f(a+h)-f(a)}{h} \amp = 
+\lim\limits_{h\to 0}\frac{(a+h)^2-a^2}{h} \\
+\amp = \lim\limits_{h\to 0}\frac{a^2+2ah+h^2-a^2}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{h(2a+h)}{h}\\
+\amp = \lim\limits_{h\to 0}2a+h\\
+\amp = 2a \amp \text{(poly. eval.)}\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(f\)</span> is differentiable at all <span class="process-math">\(a\in \R\text{,}\)</span> and that <span class="process-math">\(f'(a)=2a\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="definition definition-like" id="d_difference_quot"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Difference quotient.</span>
 </h3> <div class="para logical" id="d_difference_quot-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function. Given two distinct points <span class="process-math">\(a\ne b\)</span> in the domain of <span class="process-math">\(f\text{,}\)</span> the value</div>
 <div class="displaymath process-math">
@@ -491,7 +536,7 @@ y-f(a)=\underset{\text{slope}}{\underbrace{\left (\frac{f(b)-f(a)}{b-a}\right)}}
 </li>
 </ul>
 </div></article><article class="definition definition-like" id="d_der_interpretations"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative interpretations.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative interpretations.</span>
 </h3> <div class="para logical" id="d_der_interpretations-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be differentiable at the point <span class="process-math">\(a\text{.}\)</span>
 </div>
@@ -522,7 +567,7 @@ y-a=f'(a)(x-a)\text{.}
 </li>
 </ol>
 </div></article><article class="example example-like" id="eg_der_at_point_tangent"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent line at point.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent line at point.</span>
 </h3>
 <div class="para logical" id="eg_der_at_point_tangent-2-1">
 <div class="para">Let <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span>
@@ -540,7 +585,7 @@ y-a=f'(a)(x-a)\text{.}
 <li id="eg_der_at_point_tangent-3-1-1-1">
 <div class="para" id="eg_der_at_point_tangent-3-1-1-1-1">Below you find the graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span> How do we come up with something like this by hand. The quick and dirty way is to remember what the graph of $g(x)=\sqrt{x}$ and realize that the graph of <span class="process-math">\(f\)</span> will have roughly the same shape, but perhaps shifted/scaled/reflected. A matter of a few plotted points (e.g., <span class="process-math">\((5,0)\text{,}\)</span> <span class="process-math">\((4,1)\text{,}\)</span> <span class="process-math">\((1,2)\)</span>), will then give us something like the following.</div>
 <figure class="figure figure-like" id="fig_graph_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.7<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\)</span></figcaption></figure>
 </li>
 <li id="eg_der_at_point_tangent-3-1-1-2">
 <div class="para logical" id="eg_der_at_point_tangent-3-1-1-2-1">
@@ -574,7 +619,7 @@ y-2=-\frac{1}{4}(x-1)\text{.}
 <div class="para" id="eg_der_at_point_tangent-3-1-1-3-1">We now add both the point <span class="process-math">\(P\)</span> and the tangent line <span class="process-math">\(L\)</span> to our graph of <span class="process-math">\(f\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="fig_graph_tangent_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_tang_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x together with tangent"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{,}\)</span> <span class="process-math">\(P\text{,}\)</span> and <span class="process-math">\(L\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{,}\)</span> <span class="process-math">\(P\text{,}\)</span> and <span class="process-math">\(L\)</span></figcaption></figure>
 </li>
 </ol></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
