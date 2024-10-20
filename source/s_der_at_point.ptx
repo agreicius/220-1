@@ -57,6 +57,17 @@
         In more detail, the <m>x\to a</m> limit can be transformed to the <m>h\to 0</m> limit by using the substitution <m>h=x-a</m>; and conversely, the <m>h\to 0</m> limit can be transformed to the <m>x\to a</m> limit using the substitution <m>x=h+a</m>. 
     </p>
     </remark>
+    <remark>
+        <title>Limit definition of derivative</title>
+        <p>
+            Note that the limit 
+            <me>
+                \lim\limits_{h\to 0}\frac{f(a+h)-f(a)}{h}
+            </me>
+            always involves a denominator that approaches 0 as <m>h\to 0</m>. This means we can <em>never</em> apply the quotient rule to such a limit directly; we will <em>always</em> have to do some algebra (or the like) to get to a place where we can potentially use limit rules.
+        </p>
+        
+    </remark>
     <example xml:id="eg_der_at_point">
     <title>Derivative at point: elementary</title>
     <statement>
@@ -77,10 +88,39 @@
     </p>
     </statement>
     <solution>
-    <p>
-    
-    </p>
-    </solution>
+        <p>
+        <ol>
+            <li>
+                <p>
+                    We compute 
+                    <md>
+                        <mrow>\lim\limits_{h\to 0 }\frac{f(-2+h)-f(-2)}{h} \amp = 
+                            \lim\limits_{h\to 0}\frac{(-2+h)^2-4}{h} </mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}\frac{4-4h+h^2-4}{h}</mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}\frac{h(-4+h)}{h}</mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}-4+h</mrow>
+                        <mrow> \amp = -4 \amp \text{(poly. eval.)}</mrow>
+                    </md>.
+                    Since the limit exists, we conclude that <m>f</m> is differentiable at <m>-2</m>, and that <m>f'(-2)=-4</m>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The computation above is very similar for an arbitrary constant <m>a\in \R</m>: 
+                    <md>
+                        <mrow>\lim\limits_{h\to 0 }\frac{f(a+h)-f(a)}{h} \amp = 
+                            \lim\limits_{h\to 0}\frac{(a+h)^2-a^2}{h} </mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}\frac{a^2+2ah+h^2-a^2}{h}</mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}\frac{h(2a+h)}{h}</mrow>
+                        <mrow> \amp = \lim\limits_{h\to 0}2a+h</mrow>
+                        <mrow> \amp = 2a \amp \text{(poly. eval.)}</mrow>
+                    </md>.
+                    We conclude that <m>f</m> is differentiable at all <m>a\in \R</m>, and that <m>f'(a)=2a</m>. 
+                </p>
+            </li>
+        </ol>
+        </p>
+        </solution>
     </example>
     
     
