@@ -1,87 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="s_der_at_point" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Derivative at a point</title>
+<section xml:id="s_der_function" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivative function</title>
     <objectives>
         <ol>
             <li>
                 <p>
-                    Give formal limit definition of the derivative of a function at a point.
+                  Extend the notion of derivative at a point to a definition of the derivative function <m>f'</m> associated to a function <m>f</m>.   
                 </p>
             </li>
             <li>
                 <p>
-                   Understand the different quotient of a function in terms of rates of change and slopes of secants. 
+                    Compute formulas for derivative functions <m>f'</m> using the limit definition of the derivative. 
                 </p>
             </li>
             <li>
                 <p>
-                    Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point. 
+                    Introduce Leibniz notation in addition to prime notation. Understand the specific advantages of each notional style. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Understand both analytically and graphically common ways in which a function <m>f</m> can fail to be differentiable at an input.  
                 </p>
             </li>
         </ol>
     </objectives>
     <p>
-        We will launch directly into an unmotivated definition of the derivative of a function <m>f</m> at a point, and then motivate this definition retroactively in terms of important properties of <m>f</m> and its graph.  
+       Whereas previously we focused on the notion of the derivative of a function <m>f</m> at a specific input, we now switch perspectives somewhat and consider the derivative operation as defining a function <m>f'</m> associated to <m>f</m>. 
     </p>
-    <definition xml:id="d_der_at_point">
-    <title>Derivative at a point</title>
+    <definition xml:id="d_derivative_function">
+    <title>Derivative function</title>
     <statement>
     <p>
-    Suppose <m>a\in \R</m> is an interior point or endpoint of the domain of <m>f</m>. We say that <m>f</m> is <term>differentiable</term> at <m>a</m> if the limit 
-    <men xml:id="eq_der_at_point_h">
-        \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h},
-    </men>
-    or equivalently, the limit 
-    <men xml:id="eq_der_at_point_ab">
-        \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
-    </men>,
-    exists. When this is the case, we call this limit 
-    the <term>derivative</term> of <m>f</m> at <m>a</m>, denoted <m>f'(a)</m>: <ie/>, 
-    <men xml:id="eq_der_at_point">
-        f'(a)= \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
-    </men>.
+    Let <m>f</m> be a function, and let <m>D\subseteq \R</m> be the set of points where <m>f</m> is differentiable. The derivative operation defines a function 
+    <md>
+        <mrow>f'\colon D \amp\rightarrow \R </mrow>
+        <mrow>x \amp \mapsto f'(x)</mrow>
+    </md> 
+    that is called the <term>derivative of <m>f</m></term>. 
     </p>
     </statement>
+    
     </definition>
-    <remark>
-    <title>Derivative at a point</title>
     <p>
-    Implicit in our definition is that the two limit expressions
-    <md>
-        <mrow> \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h} \amp \amp \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}</mrow>
-    </md>
-    are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to <xref ref="rm_affine_sub"/>, preserves the value of a limit.
+        Note that the domain of the derivative function <m>f'</m> need not be the entire domain of <m>f</m>: indeed, by definition it consists precisely of the points where <m>f</m> is differentiable. The next example illustrates this. 
     </p>
-    <p>
-        In more detail, the <m>x\to a</m> limit can be transformed to the <m>h\to 0</m> limit by using the substitution <m>h=x-a</m>; and conversely, the <m>h\to 0</m> limit can be transformed to the <m>x\to a</m> limit using the substitution <m>x=h+a</m>. 
-    </p>
-    </remark>
-    <remark>
-        <title>Limit definition of derivative</title>
-        <p>
-            Note that the limit 
-            <me>
-                \lim\limits_{h\to 0}\frac{f(a+h)-f(a)}{h}
-            </me>
-            always involves a denominator that approaches 0 as <m>h\to 0</m>. This means we can <em>never</em> apply the quotient rule to such a limit directly; we will <em>always</em> have to do some algebra (or the like) to get to a place where we can potentially use limit rules.
-        </p>
-        
-    </remark>
-    <example xml:id="eg_der_at_point">
-    <title>Derivative at point: elementary</title>
+    <example xml:id="eg_der_func_rad">
+    <title>Derivative function: radical</title>
     <statement>
     <p>
-    Let <m>f(x)=x^2</m>. 
+    Let <m>f\colon (-\infty, 5]\rightarrow \R</m> be defined as <m>f(x)=\sqrt{5-x}</m>. 
     <ol>
         <li>
             <p>
-                Show that <m>f</m> is differentiable at <m>-2</m> and compute <m>f'(-2)</m> using the limit definition of the derivative. 
+                Compute the domain <m>D</m> of <m>f'</m>: that is, find all points where <m>f</m> is differentiable. 
             </p>
         </li>
         <li>
             <p>
-                More generally, fix any <m>a\in \R</m>. Show that <m>f</m> is differentiable at <m>a</m> and compute <m>f'(a)</m> using the limit definition of the derivative. 
+                Derive a formula for the derivative function <m>f'\colon D\rightarrow \R</m>. 
             </p>
         </li>
     </ol>
@@ -92,191 +70,171 @@
     <ol>
         <li>
             <p>
-                We compute 
+                Take an element <m>x\in (-\infty, 5]</m> in the domain of <m>f</m> and compute:
                 <md>
-                    <mrow>\lim\limits_{h\to 0 }\frac{f(-2+h)-f(-2)}{h} \amp = 
-                        \lim\limits_{h\to 0}\frac{(-2+h)^2-4}{h} </mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{4-4h+h^2-4}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{h(-4+h)}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}-4+h</mrow>
-                    <mrow> \amp = -4 \amp \text{(poly. eval.)}</mrow>
+                    <mrow>\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h} \amp = \lim\limits_{h\to 0}\frac{\sqrt{5-(x+h)}-\sqrt{5-x}}{h}</mrow>
+                    <mrow> \amp =\lim\limits_{h\to 0}\frac{\sqrt{5-(x+h)}-\sqrt{5-x}}{h}\cdot \frac{\sqrt{5-(x+h)}+\sqrt{5-x}}{\sqrt{5-(x+h)}+\sqrt{5-x}}</mrow>
+                    <mrow> \amp = \lim\limits_{h\to 0}\frac{5-(x+h)-(5-x)}{h(\sqrt{5-(x+h)}+\sqrt{5-x})}</mrow>
+                    <mrow> \amp = \lim\limits_{h\to 0}\frac{-h}{h(\sqrt{5-(x+h)}+\sqrt{5-x})}</mrow>
+                    <mrow> \amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{5-(x+h)}+\sqrt{5-x}}</mrow>
                 </md>.
-                Since the limit exists, we conclude that <m>f</m> is differentiable at <m>-2</m>, and that <m>f'(-2)=-4</m>. 
+                We now note that for all <m>x\in (-\infty, 5)</m>, this last limit expression evaluates to <m>-\frac{1}{2\sqrt{5-x}</m>, after the application of simple limit rules. Thus <m>f</m> is differentiable for such elements. For <m>x=5</m>, however, the last limit becomes 
+                <me>
+                    \lim\limits_{h\to 0}-\frac{1}{\sqrt{-h}}
+                </me>
+                which is a limit of type <m>c/\infty</m>, and hence infinite. In particular the limit doesn't exist for <m>x=5</m>, showing that <m>f</m> is not differentiable at <m>5</m>. 
+            </p>
+            <p>
+                We conclude that the domain of <m>f'</m> is <m>D=(-\infty, 5)</m>. Note that <m>D</m> is strictly smaller than the domain of <m>f</m> in this case: indeed, it is every element of the domain of <m>f</m> with the exception of <m>5</m>. 
             </p>
         </li>
         <li>
             <p>
-                The computation above is very similar for an arbitrary constant <m>a\in \R</m>: 
+                For <m>x\ne 5</m>, we can finish our limit computation above to compute <m>f'(x)</m>:
                 <md>
-                    <mrow>\lim\limits_{h\to 0 }\frac{f(a+h)-f(a)}{h} \amp = 
-                        \lim\limits_{h\to 0}\frac{(a+h)^2-a^2}{h} </mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{a^2+2ah+h^2-a^2}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{h(2a+h)}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}2a+h</mrow>
-                    <mrow> \amp = 2a \amp \text{(poly. eval.)}</mrow>
+                    <mrow>f'(x) \amp = \lim\limits_{h\to 0 }\frac{f(x+h)-f(x)}{h}</mrow>
+                    <mrow> \amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{5-(x+h)}+\sqrt{5-x}}</mrow>
+                    <mrow> \amp =-\frac{1}{\sqrt{\lim\limits_{h\to 0}5-(x+h)}-\sqrt{5-x}}\amp \text{(quot., root,sum)}</mrow>
+                    <mrow> \amp = -\frac{1}{\sqrt{5-x}+\sqrt{5-x}} \amp \text{(poly. eval.)}</mrow>
+                    <mrow> \amp = -\frac{1}{2\sqrt{5-x}}</mrow>
                 </md>.
-                We conclude that <m>f</m> is differentiable at all <m>a\in \R</m>, and that <m>f'(a)=2a</m>. 
             </p>
         </li>
     </ol>
     </p>
     </solution>
     </example>
-    
-    
-    <definition xml:id="d_difference_quot">
-    <title>Difference quotient</title>
+    <remark>
+    <title>Failing to be differentiable</title>
+    <p>
+        By definition, a function <m>f</m> fails to be differentiable at an input <m>a</m> if the limit <xref ref="eq_der_at_point_h"/> does not exist. The precise reason for that failure to exist is reflected in the graph of <m>f</m>, using the slope of tangent line interpretation of the derivative. Some examples and their graphical analogues: 
+        <ul>
+            <li>
+                <title>Infinite limit <m>\iff</m> vertical slope</title>
+                <p>
+                    If the limit <xref ref="eq_der_at_point_h"/> is infinite at <m>a</m>, then the tangent line to the curve at <m>a</m> (if it exists) is vertical: <ie/>, its slope is undefined.  
+                </p>
+                <p>
+                    This evident in the graph of <m>f(x)=\sqrt{5-x}</m>. (See <xref ref="fig_graph_radical"/>.) As <m>x\to 5</m>, <m>f'(x)\to -\infty</m>; equivalently, the slopes of the tangent lines to the graph of <m>f</m> at <m>x</m>, get arbitrarily large and negative. At <m>x=5</m> itself, the tangent line to the graph of <m>f</m> is in fact the vertical line <m>x=5</m>.
+                </p>
+            </li>
+            <li>
+                <title>Jump discontinuity <m>\iff</m> <q>corner point</q></title>
+                <p>
+                   If the limit <xref ref="eq_der_at_point_h"/> at <m>a</m> doesn't exist because of a discrepancy between the left- and right-hand limits, both of which exist, then we typically see the slope of tangent lines at points <m>x</m> to the left of <m>a</m> approaching one limiting slope, while the slope of tangent lines of points <m>x</m> to the right of <m>a</m> will approach another value. Geometrically, such a point will look like a corner or kink in the graph of <m>f</m>.  
+                </p>
+                <p>
+                    The classic illustration of this phenomenon is the absolute value function <m>f(x)=\abs{x}</m>. As we show in <xref ref="eg_der_funct_abs"/> this function is differentiable everywhere except at <m>x=0</m>. Graphically we see why this is the case in the corner nature of the point <m>P=(0,0)</m> on the graph: to the left the slope of the graph is <m>-1</m>; and to the right the slope is <m>1</m>. 
+                </p>
+            </li>
+            <li>
+                <title>Wild oscillation</title>
+                <p>
+                    If a function is wildly oscillating near an input <m>a</m> to such a degree that limit of of <m>f</m> doesn't exist at <m>a</m>, then it turns out that the derivative also cannot exist at <m>a</m>. See the point at <m>x=d</m> for the function with graph in <xref ref="fig_limit_naive"/> as an example. 
+                </p>
+            </li>
+        </ul>
+    </p>
+    </remark>
+    <example xml:id="eg_der_funct_abs">
+    <title>Derivative function: absolute value</title>
     <statement>
     <p>
-    Let <m>f</m> be a function. Given two distinct points <m>a\ne b</m> in the domain of <m>f</m>, the value 
-    <me>
-        \frac{f(b)-f(a)}{b-a}
-    </me>
-    is called a <term>difference</term> quotient of <m>f</m>. We have two useful ways of understanding this quantity. 
-    <ul>
+    Let <m>f(x)=\abs{x}</m>. 
+    <ol>
         <li>
-            <title>Average rate of change</title>
             <p>
-                The difference quotient <m>\frac{f(b)-f(a)}{b-a}</m> is called the <term>average rate of change</term> of <m>f</m> between <m>a</m> and <m>b</m>. In this context we often use the <m>\Delta</m> notation below to emphasize the relation to changing values of <m>f</m>: 
-                <me>
-                    \frac{f(b)-f(a)}{b-a}=\frac{\Delta f}{\Delta x}=\frac{\Delta y}{\Delta x}
-                </me>,
-                where <m>y=f(x)</m>. 
+                Show that the domain of <m>f'</m> is 
+    <me>
+        D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
+    </me>
+    and compute a formula for <m>f'\colon D\rightarrow \R</m>. 
             </p>
         </li>
         <li>
-            <title>Slope of secant line</title>
             <p>
-                Consider the points <m>P=(a,f(a))</m> and <m>Q=(b,f(b))</m>, which lie on the graph of <m>f</m>. The unique line <m>L</m> in <m>\R^2</m> that passes through <m>P</m> and <m>Q</m> is called the <term>secant line</term> on <m>f</m> between <m>P</m> and <m>Q</m>. This line can be defined, using point-slope form with respect to <m>P=(a,f(a))</m>, by the equation 
+                Add a geometric argument about why <m>f</m> is not differentiable at <m>0</m> using <xref ref="fig_graph_abs"/>.
+            </p>
+        </li>
+    </ol> 
+    </p>
+    <figure xml:id="fig_graph_abs">
+        <caption>Graph of <m>f(x)=\abs{x}</m></caption>
+    <image xml:id="im_graph_abs" width="50%">
+        <shortdescription>Graph of absolute value</shortdescription>
+        <sageplot>
+        f=plot(abs(x),x,-2,2)
+        f
+        </sageplot>
+    </image>
+    </figure>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_der_func_reciprocal">
+    <title>Derivative function: <m>\frac{1}{x}</m></title>
+    <statement>
+    <p>
+    Let <m>f(x)=\frac{1}{x}</m>. Compute the domain <m>D</m> of <m>f'</m> and derive a formula for <m>f'\colon D\rightarrow \R</m>. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <p>
+        We end this section by introducing an alternative notation for denoting the derivative of a function. The notation is called <em>Leibniz notation</em>, as it was favored in Gottlieb Leibniz's development of calculus. Isaac Newton, on the other hand favored the prime notation <m>f'</m>. Leibniz notation comes in very handy when considering the derivative as an <em>operation</em> that we apply to functions; it also strongly evokes the interpretation of the interpretation of the derivative as a rate of change. It is very much less convenient as an alternative notation for <m>f'(a)</m>, as exhibited by <xref ref="eq_Leib_at_point"/>. 
+    </p>
+    <definition xml:id="d_Leibniz_notation">
+    <title>Leibniz notation</title>
+    <statement>
+    <p>
+    Let <m>f</m> be a function relating the output variable <m>y</m> as a function <m>y=f(x)</m> of the input variable <m>x</m>, and let <m>D\subseteq \R</m> be the set of points where <m>f</m> is differentiable. We introduce the following notation, called <term>Leibniz notation</term>, to denote various concepts related to <m>f'</m>
+    <ul>
+        <li>
+            <title>Derivative function</title>
+            <p>
+                The derivative function <m>f'</m> is denoted as <m>\displaystyle\frac{df}{dx}</m> or <m>\displaystyle\frac{dy}{dx}</m>. In other words, we have have 
+                <men xml:id="eq_Leib_func">
+                    f'=\frac{df}{dx}=\frac{dy}{dx}
+                </men>.
+            </p>
+        </li>
+        <li>
+            <title>Derivative at a point</title>
+            <p>
+                Given <m>a\in D</m>, the derivative <m>f'(a)</m> of <m>f</m> at <m>a</m> is denoted as 
+                <m>
+                    \frac{df}{dx}\Bigr\vert_{x=a}
+                </m>
+                 or <m>\frac{dy}{dx}\Bigr\vert_{x=a}</m>. In other words, we have 
+                 <men xml:id="eq_Leib_at_point">
+                    f'(a)=\frac{df}{dx}\Bigr\vert_{x=a}=\frac{dy}{dx}\Bigr\vert_{x=a}
+                 </men>
+                 
+            </p>
+        </li>
+        <li>
+            <title>Derivative operation</title>
+            <p>
+                We denote by <m>\frac{d}{dx}</m> the <em>operation</em> of taking the derivative of a function with respect to <m>x</m>. Thus <m>\frac{d}{dx}(f)</m> is the derivative of <m>f</m>: <ie/>, 
                 <me>
-                    y-f(a)=\underset{\text{slope}}{\underbrace{\left (\frac{f(b)-f(a)}{b-a}\right)}}(x-a)
+                    \frac{d}{dx}(f)=f'
                 </me>.
-                We recognize in this context that the difference quotient <m>\frac{f(b)-f(a)}{b-a}</m> is the slope of the secant line <m>L</m>. 
             </p>
         </li>
     </ul>
     </p>
     </statement>
     </definition>
-    <definition xml:id="d_der_interpretations">
-        <title>Derivative interpretations</title>
-        <statement>
-            <p>
-                Let <m>f</m> be differentiable at the point <m>a</m>. 
-                <ol>
-                    <li>
-                        <title>Instantaneous rate of change</title>
-                        <p>
-                            We call the derivative value 
-                            <me>
-                                f'(a)=\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
-                            </me>
-                            the <term>instantaneous rate of change of <m>f</m> at <m>a</m> with respect to <m>x</m></term>, or more simply, the rate of change of <m>f</m> at <m>a</m> with respect to <m>a</m>. 
-                        </p>
-                    </li>
-                    <li>
-                        <title>Tangent line</title>
-                        <p>
-                            Let <m>P=(a,f(a))</m>. The <term>tangent line to the graph of <m>f</m> at <m>P</m></term> (or <term>at <m>x=a</m></term>) is the line <m>L</m> defined by the equation 
-                            <me>
-                                y-a=f'(a)(x-a)
-                            </me>. 
-                            In this context, we see that the derivative of <m>f</m> at <m>a</m> is the slope of the tangent line to the graph of <m>f</m> at <m>P</m>. 
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </statement>
-    </definition>
-    <example xml:id="eg_der_at_point_tangent">
-    <title>Tangent line at point</title>
-    <statement>
-    <p>
-    Let <m>f(x)=\sqrt{5-x}</m>. 
-    <ol>
-        <li>
-            <p>
-                Sketch the graph of <m>f</m>. 
-            </p>
-        </li>
-        <li>
-            <p>
-                Find an equation for the tangent line <m>L</m> to the graph of <m>f</m> at <m>x=1</m>. 
-            </p>
-        </li>
-        <li>
-            <p>
-                Add <m>L</m> to your sketch of the graph of <m>f</m>. 
-            </p>
-        </li>
-    </ol>
-    </p>
-    </statement>
-    <solution>
-    <p>
-    <ol>
-        <li>
-            <p>
-                Below you find the graph of <m>f(x)=\sqrt{5-x}</m>. How do we come up with something like this by hand. The quick and dirty way is to remember what the graph of $g(x)=\sqrt{x}$ and realize that the graph of <m>f</m> will have roughly the same shape, but perhaps shifted/scaled/reflected. A matter of a few plotted points (<eg/>, <m>(5,0)</m>, <m>(4,1)</m>, <m>(1,2)</m>), will then give us something like the following. 
-            </p>
-                <figure xml:id="fig_graph_radical">
-                    <caption>Graph of <m>f(x)=\sqrt{5-x}</m></caption>
-                    <image xml:id="im_graph_radical" width="75%">
-                        <shortdescription>Graph of radical of 5-x</shortdescription>
-                        <sageplot>
-                            f=plot(sqrt(5-x),x,-5,5)
-                            f
-                            </sageplot>
-                        
-                    </image>
-                </figure>
-        </li>
-        <li>
-            <p>
-                Let <m>L</m> be the tangent line to the graph of <m>f</m> at <m>x=1</m>. By definition the slope of <m>L</m> is <m>f'(1)</m>, which we now compute: 
-                <md>
-                    <mrow>f'(1) \amp = \lim\limits_{h\to 0}\frac{f(1+h)-f(1)}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{\sqrt{5-(1+h)}-\sqrt{5-1}}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}\cdot\frac{\sqrt{4-h}+2}{\sqrt{4-h}+2}</mrow>
-                    <mrow> \amp =\lim\limits_{h\to 0}\frac{4-h-4}{h(\sqrt{4-h}+2)} </mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}\frac{-h}{h\sqrt{4-h}+2}</mrow>
-                    <mrow> \amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{4-h}+2}</mrow>
-                    <mrow> \amp = -\frac{1}{4} \amp \text{(cont.)}</mrow>
-                </md>,
-                where the last step uses the fact that <m>g(h)=-\frac{1}{\sqrt{4-h}+2}</m> is continuous at <m>0</m>.
-                </p>
-                <p> We conclude that  the slope of <m>L</m> is <m>f'(1)=-\frac{1}{4}</m>. We now use point-slope form to find an equation for <m>L</m>. By definition the tangent line <m>L</m> passes through the point <m>P=(1,f(1))=(1,2)</m> on the graph of <m>f</m>. With respect to this point we have the following point-slope equation for <m>L</m>: 
-                    <me>
-                        y-2=-\frac{1}{4}(x-1)
-                    </me>.
-            </p>
-        </li>
-        <li>
-            <p>
-                We now add both the point <m>P</m> and the tangent line <m>L</m> to our graph of <m>f</m>.
-            </p> 
-                <figure xml:id="fig_graph_tangent_radical">
-                    <caption>Graph of <m>f(x)=\sqrt{5-x}</m>, <m>P</m>, and <m>L</m></caption>
-                <image xml:id="im_graph_tang_radical" width="75%">
-                    <shortdescription>Graph of radical of 5-x together with tangent</shortdescription>
-                    <sageplot>
-                    f=plot(sqrt(5-x),x,-5,5)
-                    L=plot(-(x-1)/4+2,x,-5,5, color="green")
-                    P=point([1,2],size="50", color="red")
-                    t1=text(r"$P=(1,2)$",[1,2.25], color="black")
-                    t2=text(r"$L$",[-3,3.25], color="black")
-                    f+L+P+t1+t2
-                    </sageplot>
-                </image>
-                </figure>
-        </li>
-    </ol>
-    </p>
-    </solution>
-    </example>
     
     
     
-
+    
 </section>
