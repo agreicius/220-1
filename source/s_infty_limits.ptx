@@ -130,11 +130,21 @@ Let <m>f(x)=\tan x</m>. Recall that the domain of <m>f</m> is
                     <image>
                         <shortdescription>Graph of tan</shortdescription>
                         <sageplot>
-                        f=plot(sin(x),x,-pi/2, pi/2)
+                        f=plot(tan(x), x,-2*pi,2*pi, detect_poles=show, ymin=-10, ymax=10, ticks=[[-3*pi/2,-pi/2,pi/2,3*pi/2],[-10,-5,5,10]],tick_formatter=(pi,None))
                         f
                         </sageplot>
                     </image>
                 </figure>
+            </p>
+        </li>
+        <li>
+            <p>
+                For each integer <m>n</m>, let <m>a_n=\frac{\pi}{2}+\pi n</m>. We see visually that 
+                <md>
+                    <mrow>\lim_{x\to a_n^-}f(x) \amp= \infty </mrow>
+                    <mrow>\lim_{x\to a_n^+}f(x) \amp= -\infty </mrow>
+                </md>
+                for all <m>n</m>, and hence that each line <m>x=a_n</m> is a vertical asymptote of the graph of <m>f</m>.
             </p>
         </li>
     </ol>
