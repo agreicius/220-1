@@ -248,6 +248,18 @@
     </p>
     </statement>
     </definition>
+    <theorem xml:id="th_diff_implies_contin">
+        <title>Differentiable implies continuous</title>
+        <statement>
+            <p>
+                Suppose the function <m>f</m> is defined at <m>a\in \R</m>. If <m>f</m> is differentiable at <m>a</m>, then <m>f</m> is continuous at <m>a</m>. Using logical shorthand: 
+                <me>
+                    f \text{ diff. at  } a \implies f \text{ cont. at } a
+                </me>.
+            </p>
+        </statement>
+    </theorem>
+    
     
     
     

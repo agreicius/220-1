@@ -6,7 +6,7 @@
     We now examine how the operation of taking the derivative of a function interacts with our basic function operations: <eg/>, scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation <m>\frac{d}{dx}</m>, which denotes the operation of taking the derivative with respect to <m>x</m>. In this context we will either write <m>\frac{d}{dx}(f)</m>, where <m>f</m> is the name of a function, or else <m>\frac{d}{dx}(\text{blah})</m>, where <c>blah</c> denotes some expression in <m>x</m>. In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example <m>\frac{d}{dx}(5)</m> denotes the derivative of the constant function <m>f(x)=5</m>; and <m>\frac{d}{dx}(x)</m> denotes the derivative of the identity function <m>f(x)=x</m>. 
 </p>
 <theorem xml:id="th_der_formulas_basic">
-    <title>Basic derivative formulas</title>
+    <title>Derivative formulas: constant and power functions</title>
     <statement>
         <p>
             <ol>
@@ -52,6 +52,125 @@
  In fact, it is true more generally that for any power function <m>f(x)=x^r</m>, where <m>r\in \R</m> is a fixed real number, we have <m>f'(x)=rx^{r-1}</m>. Since we do not even define what the expression <m>x^r</m> means for arbitrary real number <m>r</m> until Math 220-2, however, we will not make much use of this formula unless <m>r</m> is a rational number as in <xref ref="th_der_formula_rat_power"/>.  
 </p>
 </remark>
+<example xml:id="eg_der_power">
+<title>Power rule: radicals</title>
+<statement>
+<p>
+Let <m>f(x)=\sqrt[3]{x^2}</m>. Compute <m>f'(x)</m>. 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
+<theorem xml:id="th_der_rules">
+    <title>Derivative rules</title>
+    <statement>
+        <p>
+            <ol>
+                <li>
+                    <title>Linear combination</title>
+                    <p>
+                      For all constants <m>c,d\in \R</m>, we have 
+                      <men xml:id="eq_der_rules_lin_comb">
+                        \frac{d}{dx}(cf(x)+dg(x))=cf'(x)+dg'(x)
+                      </men>.
+                    </p>
+                </li>
+                <li>
+                    <title>Product rule</title>
+                    <p>
+                       We have 
+                       <men xml:id="eq_der_rule_prod">
+                        \frac{d}{dx}(f(x)g(x))=f'(x)g(x)+f(x)g'(x)
+                       </men>.
+                    </p>
+                </li>
+                <li>
+                    <title>Quotient rule</title>
+                    <p>
+                        We have 
+                        <men xml:id="eq_der_rule_quot">
+                         \frac{d}{dx}\left(\frac{f(x)}{g(x)}\right)=\frac{f'(x)g(x)-f(x)g'(x)}{\left(g(x)\right)^2}
+                        </men>. 
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<remark>
+<title>Linear combination rule</title>
+<p>
+Note that our <em>linear combination rule</em> for derivatives implies the following three rules: 
+<md>
+    <mrow>\frac{d}{dx}(cf(x)) \amp = cf'(x) \amp \text{(scal. mult.)}</mrow>
+    <mrow>\frac{d}{dx}(f(x)+g(x)) \amp = f'(x)+g'(x) \amp \text{(sum rule)}</mrow>
+    <mrow>\frac{d}{dx}(f(x)-g(x)) \amp =f'(x)-g'(x) \amp \text{(diff. rule)}</mrow>
+</md>.
+Indeed, the first follows from taking <m>d=0</m> in <xref ref="eq_der_rules_lin_comb"/>, the second from taking <m>c=d=1</m>, and the third from taking <m>c=1</m> and <m>d=-1</m>. 
+</p>
+</remark>
+<example xml:id="eg_der_rules">
+<title>Derivative rules</title>
+<statement>
+<p>
+Compute a formula for <m>f'</m> for the given <m>f</m>. 
+<ol>
+    <li>
+        <p>
+            <m>f(x)=\anpoly</m>, where <m>a_n,a_{n-1},\dots, a_0</m> are fixed constants. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\displaystyle f(x)=\frac{3x}{4x^2-3x+1}</m>
+        </p>
+    </li>
+    <li>
+        <p>
+            <m>\displaystyle f(x)=\frac{(2+\sqrt{x})(x-2)}{\sqrt[3]{x}}</m>
+        </p>
+    </li>
+</ol>
+
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<definition xml:id="d_der_higher_order">
+<title>Higher order derivatives</title>
+<statement>
+<p>
+Let <m>f</m> be a function with derivative <m>f'=\frac{df}{dx}</m>. Continuing to compute derivatives in succession yields the <term>higher order</term> derivatives of <m>f</m>. In particular, the <term>second derivative</term> is defined as <m>\frac{d}{dx}(f')</m>, and denoted as <m>f''</m> or <m>\frac{d^2 f}{dx^2}</m>; and the <term>third derivative </term> is defined as <m>\frac{d}{dx}(f'')</m>, and is denoted <m>f'''</m> or <m>\frac{d^3 f}{dx^3}</m>.
+</p>
+<p>
+    More generally, for any <m>n\geq 1</m>, the <term><m>n</m>-th derivative of <m>f</m></term> is the result of applying the derivative operation <m>n</m> times in succession, and is denoted <m>f^{(n)}</m> or <m>\frac{d^n f}{dx^n}</m>
+</p>
+</statement>
+</definition>
+<example xml:id="eg_higher_ders">
+<title>Higher-order derivatives</title>
+<statement>
+<p>
+Let <m>f(x)=x-2x^2</m>. Compute formulas for <m>f'</m>, <m>f''</m>, and <m>f'''</m>. 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
+
 
     
 
