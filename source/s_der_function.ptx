@@ -104,6 +104,21 @@
     </p>
     </solution>
     </example>
+    <p>
+        Using the slope interpretation of the derivative, we can begin to see how the derivative function <m>f'</m> implies information about the original function <m>f</m>, and conversely. 
+    </p>
+    <remark>
+        <title>Slope interpretation</title>
+        <p>
+        Let <m>D</m> be the set of points where <m>f</m> is differentiable, and let <m>f'\colon D\rightarrow \R</m> be the derivative of <m>f</m>. Given any <m>x\in D</m>, we have the following equivalences:
+        <md>
+            <mrow>f'(x)&gt; 0 \amp \iff \text{slope of tangent line to } f \text{ at } a \text{ is positive} </mrow>
+            <mrow>f'(x)&lt; 0 \amp \iff \text{slope of tangent line to } f \text{ at } a \text{ is negative} </mrow>
+            <mrow>f'(x)=0 \amp \iff \text{tangent line to } f \text{ at } a \text{ is horizontal} </mrow>
+        </md>.
+        We will elaborate further on these equivalences when we discuss the rate of change interpretation of the derivative in more detail. 
+        </p>
+        </remark>
     <remark>
     <title>Failing to be differentiable</title>
     <p>

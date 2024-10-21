@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_der_rules" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Differentiation rules</title>
+<p>
+    We now examine how the operation of taking the derivative of a function interacts with our basic function operations: <eg/>, scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation <m>\frac{d}{dx}</m>, which denotes the operation of taking the derivative with respect to <m>x</m>. In this context we will either write <m>\frac{d}{dx}(f)</m>, where <m>f</m> is the name of a function, or else <m>\frac{d}{dx}(\text{blah})</m>, where <c>blah</c> denotes some expression in <m>x</m>. In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example <m>\frac{d}{dx}(5)</m> denotes the derivative of the constant function <m>f(x)=5</m>; and <m>\frac{d}{dx}(x)</m> denotes the derivative of the identity function <m>f(x)=x</m>. 
+</p>
+<theorem xml:id="th_der_formulas_basic">
+    <title>Basic derivative formulas</title>
+    <statement>
+        <p>
+            <ol>
+                
+                <li xml:id="th_der_formula_const">
+                    <title>Constant functions</title>
+                    <p>
+                        For all <m>c\in \R</m> we have 
+                        <men xml:id="eq_der_formula_const">
+                            \frac{d}{dx}(c)=0
+                        </men>.
+                        In other words, if <m>f</m> is the constant function <m>f(x)=c</m>, then <m>f'</m> is the zero function defined as <m>f'(x)=0</m> for all <m>x\in \R</m>. 
+                        
+                    </p>
+                </li>
+                <li xml:id="th_der_formula_id">
+                    <title>Identity function</title>
+                    <p>
+                        We have 
+                        <men xml:id="eq_der_formula_id">
+                            \frac{d}{dx}(x)=1
+                        </men>.
+                        In other words, if <m>f</m> is the identity function <m>f(x)=x</m>, then <m>f'</m> is the constant function <m>f'(x)=1</m> defined as <m>f'(x)=1</m> for all <m>x\in \R</m>. 
+                        
+                    </p>
+                </li>
+                <li xml:id="th_der_formula_rat_power">
+                    <title>Rational power functions</title>
+                    <p>
+                        Let <m>n</m> be a rational number: <ie/>, <m>n=\frac{p}{q}</m> where <m>p</m> and <m>q</m> are integers, and <m>q\ne 0</m>. We have 
+                        <men xml:id="eq_der_formula_rat_power" >
+                            \frac{d}{dx}(x^n)=nx^{n-1}
+                        </men>.
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </statement>
+</theorem>
+<remark>
+<title>Power functions</title>
+<p>
+ In fact, it is true more generally that for any power function <m>f(x)=x^r</m>, where <m>r\in \R</m> is a fixed real number, we have <m>f'(x)=rx^{r-1}</m>. Since we do not even define what the expression <m>x^r</m> means for arbitrary real number <m>r</m> until Math 220-2, however, we will not make much use of this formula unless <m>r</m> is a rational number as in <xref ref="th_der_formula_rat_power"/>.  
+</p>
+</remark>
+
+    
+
+</section>
