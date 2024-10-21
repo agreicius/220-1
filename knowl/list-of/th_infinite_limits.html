@@ -12,25 +12,48 @@
 </head>
 <body class="ignore-math">
 <article class="theorem theorem-like"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Power functions and their reciprocals.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite limit formulas.</span>
 </h3>
-<div class="para logical">
-<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer.</div>
+<div class="para logical"><ol class="decimal" id="th_infinite_limits-2-1-1">
+<li><div class="para logical">
+<div class="para">Let <span class="process-math">\(n\)</span> be a positive integer. We have</div>
 <div class="displaymath process-math">
 \begin{align*}
-\lim_{x\to \infty}x^n \amp= \infty.\\
+\lim_{x\to \infty}x^n \amp= \infty\\
 \lim_{x\to -\infty}x^n \amp= \begin{cases}
-\infty 
-\amp \text{if } n \text{ is even}\\
--\infty \amp \text{ if } n \text{ is odd.}
-\end{cases}\\
-\lim_{x\to 0^+}\frac{1}{x^n} \amp = \infty.\\
-\lim_{x\to 0^-}\frac{1}{x^n}  \amp =\begin{cases}
-\infty\amp \text{if } n \text{ is even}\\
--\infty\amp\text{if } n \text{ is odd. }
-\end{cases} 
+\infty \text{if } n \text{ even}\\
+-\infty \text{ if } n \text{ odd}
+\end{cases}\text{.}
 \end{align*}
 </div>
-</div></article><span class="incontext"><a class="internal" href="s_infinite_limits.html#th_infinite_limits">in-context</a></span>
+</div></li>
+<li><div class="para logical">
+<div class="para">Fix a constants <span class="process-math">\(a,b\in \R\text{,}\)</span> where <span class="process-math">\(b&gt; 0\text{.}\)</span> Let <span class="process-math">\(f\)</span> be a function.</div>
+<ol class="lower-alpha" id="th_infinite_limits-2-1-1-2-1-4">
+<li><div class="para logical">
+<div class="para">If <span class="process-math">\(\lim\limits_{x\to a^+}f(x)=0\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{x\to a^+}\frac{b}{f(x)}=\begin{cases}
+\infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (0,c) \\
+-\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (0,c) 
+\end{cases}
+\end{equation*}
+</div>
+</div></li>
+<li><div class="para logical">
+<div class="para">If <span class="process-math">\(\lim\limits_{x\to a^-}f(x)=0\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{x\to a^-}\frac{1}{f(x)}=\begin{cases}
+\infty \amp \text{if } f(x)&gt; 0 \text{ on open interval } (c,0) \\
+-\infty \amp \text{if } f(x)&lt; 0 \text{ on open interval } (c,0) 
+\end{cases}
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div></li>
+</ol></div></article><span class="incontext"><a class="internal" href="s_infinite_limits.html#th_infinite_limits">in-context</a></span>
 </body>
 </html>

@@ -240,6 +240,12 @@ window.MathJax = {
 #th_der_formulas_basic-2-1-1 { counter-set: th_der_formulas_basic-2-1-1 0; }
 #th_der_formulas_basic-2-1-1 > li::marker { content: ""counter(th_der_formulas_basic-2-1-1,decimal)"."; }
 #th_der_formulas_basic-2-1-1 > li { counter-increment: th_der_formulas_basic-2-1-1; }
+#th_der_rules-2-1-1 { counter-set: th_der_rules-2-1-1 0; }
+#th_der_rules-2-1-1 > li::marker { content: ""counter(th_der_rules-2-1-1,decimal)"."; }
+#th_der_rules-2-1-1 > li { counter-increment: th_der_rules-2-1-1; }
+#eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
+#eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
+#eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -427,7 +433,7 @@ window.MathJax = {
 <div class="para" id="s_der_rules-2">We now examine how the operation of taking the derivative of a function interacts with our basic function operations: e.g., scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation <span class="process-math">\(\frac{d}{dx}\text{,}\)</span> which denotes the operation of taking the derivative with respect to <span class="process-math">\(x\text{.}\)</span> In this context we will either write <span class="process-math">\(\frac{d}{dx}(f)\text{,}\)</span> where <span class="process-math">\(f\)</span> is the name of a function, or else <span class="process-math">\(\frac{d}{dx}(\text{blah})\text{,}\)</span> where <code class="code-inline tex2jax_ignore">blah</code> denotes some expression in <span class="process-math">\(x\text{.}\)</span> In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example <span class="process-math">\(\frac{d}{dx}(5)\)</span> denotes the derivative of the constant function <span class="process-math">\(f(x)=5\text{;}\)</span> and <span class="process-math">\(\frac{d}{dx}(x)\)</span> denotes the derivative of the identity function <span class="process-math">\(f(x)=x\text{.}\)</span>
 </div>
 <article class="theorem theorem-like" id="th_der_formulas_basic"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Basic derivative formulas.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative formulas: constant and power functions.</span>
 </h3>
 <div class="para logical" id="th_der_formulas_basic-2-1"><ol class="decimal" id="th_der_formulas_basic-2-1-1">
 <li id="th_der_formula_const">
@@ -450,7 +456,7 @@ window.MathJax = {
 \frac{d}{dx}(x)=1\text{.}\tag{12.2}
 \end{equation}
 </div>
-<div class="para">In other words, if <span class="process-math">\(f\)</span> is the identity function <span class="process-math">\(f(x)=x\text{,}\)</span> then <span class="process-math">\(f'\)</span> is constant function <span class="process-math">\(f'(x)=1\)</span> defined as <span class="process-math">\(f'(x)=1\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span>
+<div class="para">In other words, if <span class="process-math">\(f\)</span> is the identity function <span class="process-math">\(f(x)=x\text{,}\)</span> then <span class="process-math">\(f'\)</span> is the constant function <span class="process-math">\(f'(x)=1\)</span> defined as <span class="process-math">\(f'(x)=1\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span>
 </div>
 </div>
 </li>
@@ -466,7 +472,81 @@ window.MathJax = {
 </li>
 </ol></div></article><article class="remark remark-like" id="s_der_rules-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Power functions.</span>
-</h3> <div class="para" id="s_der_rules-4-2">In fact, it is true more generally that for any power function <span class="process-math">\(f(x)=x^r\text{,}\)</span> where <span class="process-math">\(r\in \R\)</span> is a fixed real number, we have <span class="process-math">\(f'(x)=rx^{r-1}\text{.}\)</span> Since we do not even define what the expression <span class="process-math">\(x^r\)</span> means for arbitrary real number <span class="process-math">\(r\)</span> until Math 220-2, however, we will not make much use of this formula unless <span class="process-math">\(r\)</span> is a rational number as in <a href="s_der_rules.html#th_der_formula_rat_power" class="xref" data-knowl="./knowl/xref/th_der_formula_rat_power.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3: Rational power functions">Item 3</a>.</div></article></section></div>
+</h3> <div class="para" id="s_der_rules-4-2">In fact, it is true more generally that for any power function <span class="process-math">\(f(x)=x^r\text{,}\)</span> where <span class="process-math">\(r\in \R\)</span> is a fixed real number, we have <span class="process-math">\(f'(x)=rx^{r-1}\text{.}\)</span> Since we do not even define what the expression <span class="process-math">\(x^r\)</span> means for arbitrary real number <span class="process-math">\(r\)</span> until Math 220-2, however, we will not make much use of this formula unless <span class="process-math">\(r\)</span> is a rational number as in <a href="s_der_rules.html#th_der_formula_rat_power" class="xref" data-knowl="./knowl/xref/th_der_formula_rat_power.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3: Rational power functions">Item 3</a>.</div></article><article class="example example-like" id="eg_der_power"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power rule: radicals.</span>
+</h3>
+<div class="para" id="eg_der_power-2-1">Let <span class="process-math">\(f(x)=\sqrt[3]{x^2}\text{.}\)</span> Compute <span class="process-math">\(f'(x)\text{.}\)</span>
+</div>
+<div class="solutions"><details id="eg_der_power-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_power-3-1"></div></div></details></div></article><article class="theorem theorem-like" id="th_der_rules"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative rules.</span>
+</h3>
+<div class="para logical" id="th_der_rules-2-1"><ol class="decimal" id="th_der_rules-2-1-1">
+<li id="th_der_rules-2-1-1-1">
+<span class="heading"><span class="title">Linear combination.</span></span><div class="para logical" id="th_der_rules-2-1-1-1-2">
+<div class="para">For all constants <span class="process-math">\(c,d\in \R\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="eq_der_rules_lin_comb">
+\begin{equation}
+\frac{d}{dx}(cf(x)+dg(x))=cf'(x)+dg'(x)\text{.}\tag{12.4}
+\end{equation}
+</div>
+</div>
+</li>
+<li id="th_der_rules-2-1-1-2">
+<span class="heading"><span class="title">Product rule.</span></span><div class="para logical" id="th_der_rules-2-1-1-2-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eq_der_rule_prod">
+\begin{equation}
+\frac{d}{dx}(f(x)g(x))=f'(x)g(x)+f(x)g'(x)\text{.}\tag{12.5}
+\end{equation}
+</div>
+</div>
+</li>
+<li id="th_der_rules-2-1-1-3">
+<span class="heading"><span class="title">Quotient rule.</span></span><div class="para logical" id="th_der_rules-2-1-1-3-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eq_der_rule_quot">
+\begin{equation}
+\frac{d}{dx}\left(\frac{f(x)}{g(x)}\right)=\frac{f'(x)g(x)-f(x)g'(x)}{\left(g(x)\right)^2}\text{.}\tag{12.6}
+\end{equation}
+</div>
+</div>
+</li>
+</ol></div></article><article class="remark remark-like" id="s_der_rules-7"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combination rule.</span>
+</h3> <div class="para logical" id="s_der_rules-7-2">
+<div class="para">Note that our <em class="emphasis">linear combination rule</em> for derivatives implies the following three rules:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_der_rules_lin_comb.html" id="s_der_rules-7-2-2">
+\begin{align*}
+\frac{d}{dx}(cf(x)) \amp = cf'(x) \amp \text{(scal. mult.)}\\
+\frac{d}{dx}(f(x)+g(x)) \amp = f'(x)+g'(x) \amp \text{(sum rule)}\\
+\frac{d}{dx}(f(x)-g(x)) \amp =f'(x)-g'(x) \amp \text{(diff. rule)}\text{.}
+\end{align*}
+</div>
+<div class="para">Indeed, the first follows from taking <span class="process-math">\(d=0\)</span> in <a href="s_der_rules.html#eq_der_rules_lin_comb" class="xref" data-knowl="./knowl/xref/eq_der_rules_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.4">(12.4)</a>, the second from taking <span class="process-math">\(c=d=1\text{,}\)</span> and the third from taking <span class="process-math">\(c=1\)</span> and <span class="process-math">\(d=-1\text{.}\)</span>
+</div>
+</div></article><article class="example example-like" id="eg_der_rules"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative rules.</span>
+</h3>
+<div class="para logical" id="eg_der_rules-2-1">
+<div class="para">Compute a formula for <span class="process-math">\(f'\)</span> for the given <span class="process-math">\(f\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_der_rules-2-1-3">
+<li id="eg_der_rules-2-1-3-1"><div class="para" id="eg_der_rules-2-1-3-1-1">
+<span class="process-math">\(f(x)=\anpoly\text{,}\)</span> where <span class="process-math">\(a_n,a_{n-1},\dots, a_0\)</span> are fixed constants.</div></li>
+<li id="eg_der_rules-2-1-3-2"><div class="para" id="eg_der_rules-2-1-3-2-1"><span class="process-math">\(\displaystyle \displaystyle f(x)=\frac{3x}{4x^2-3x+1}\)</span></div></li>
+<li id="eg_der_rules-2-1-3-3"><div class="para" id="eg_der_rules-2-1-3-3-1"><span class="process-math">\(\displaystyle \displaystyle f(x)=\frac{(2+\sqrt{x})(x-2)}{\sqrt[3]{x}}\)</span></div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_der_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_rules-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_der_higher_order"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Higher order derivatives.</span>
+</h3> <div class="para" id="d_der_higher_order-2-1">Let <span class="process-math">\(f\)</span> be a function with derivative <span class="process-math">\(f'=\frac{df}{dx}\text{.}\)</span> Continuing to compute derivatives in succession yields the <dfn class="terminology">higher order</dfn> derivatives of <span class="process-math">\(f\text{.}\)</span> In particular, the <dfn class="terminology">second derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f')\text{,}\)</span> and denoted as <span class="process-math">\(f''\)</span> or <span class="process-math">\(\frac{d^2 f}{dx^2}\text{;}\)</span> and the <dfn class="terminology">third derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f'')\text{,}\)</span> and is denoted <span class="process-math">\(f'''\)</span> or <span class="process-math">\(\frac{d^3 f}{dx^3}\text{.}\)</span>
+</div> <div class="para" id="d_der_higher_order-2-2">More generally, for any <span class="process-math">\(n\geq 1\text{,}\)</span> the <dfn class="terminology"><span class="process-math">\(n\)</span>-th derivative of <span class="process-math">\(f\)</span></dfn> is the result of applying the derivative operation <span class="process-math">\(n\)</span> times in succession, and is denoted <span class="process-math">\(f^{(n)}\)</span> or <span class="process-math">\(\frac{d^n f}{dx^n}\)</span>
+</div></article><article class="example example-like" id="eg_higher_ders"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Higher-order derivatives.</span>
+</h3>
+<div class="para" id="eg_higher_ders-2-1">Let <span class="process-math">\(f(x)=x-2x^2\text{.}\)</span> Compute formulas for <span class="process-math">\(f'\text{,}\)</span> <span class="process-math">\(f''\text{,}\)</span> and <span class="process-math">\(f'''\text{.}\)</span>
+</div>
+<div class="solutions"><details id="eg_higher_ders-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_higher_ders-3-1"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-16.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -1150,7 +1150,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "11",
   "title": "Derivative function",
-  "body": " Derivative function     Extend the notion of derivative at a point to a definition of the derivative function associated to a function .    Compute formulas for derivative functions using the limit definition of the derivative.    Introduce Leibniz notation in addition to prime notation. Understand the specific advantages of each notional style.    Understand both analytically and graphically common ways in which a function can fail to be differentiable at an input.     Whereas previously we focused on the notion of the derivative of a function at a specific input, we now switch perspectives somewhat and consider the derivative operation as defining a function associated to .   Derivative function   Let be a function, and let be the set of points where is differentiable. The derivative operation defines a function that is called the derivative of .    Note that the domain of the derivative function need not be the entire domain of : indeed, by definition it consists precisely of the points where is differentiable. The next example illustrates this.   Derivative function: radical   Let be defined as .   Compute the domain of : that is, find all points where is differentiable.    Derive a formula for the derivative function .          Take an element in the domain of and compute: . We now note that for all , this last limit expression evaluates to , after the application of simple limit rules. Thus is differentiable for such elements. For , however, the last limit becomes which is a limit of type , and hence infinite. In particular the limit doesn't exist for , showing that is not differentiable at .  We conclude that the domain of is . Note that is strictly smaller than the domain of in this case: indeed, it is every element of the domain of with the exception of .    For , we can finish our limit computation above to compute : .       Using the slope interpretation of the derivative, we can begin to see how the derivative function implies information about the original function , and conversely.   Slope interpretation  Let be the set of points where is differentiable, and let be the derivative of . Given any , we have the following equivalences: . We will elaborate further on these equivalences when we discuss the rate of change interpretation of the derivative in more detail.    Failing to be differentiable  By definition, a function fails to be differentiable at an input if the limit does not exist. The precise reason for that failure to exist is reflected in the graph of , using the slope of tangent line interpretation of the derivative. Some examples and their graphical analogues:   Infinite limit vertical slope  If the limit is infinite at , then the tangent line to the curve at (if it exists) is vertical: , its slope is undefined.  This evident in the graph of . (See .) As , ; equivalently, the slopes of the tangent lines to the graph of at , get arbitrarily large and negative. At itself, the tangent line to the graph of is in fact the vertical line .    Jump discontinuity  corner point  If the limit at doesn't exist because of a discrepancy between the left- and right-hand limits, both of which exist, then we typically see the slope of tangent lines at points to the left of approaching one limiting slope, while the slope of tangent lines of points to the right of will approach another value. Geometrically, such a point will look like a corner or kink in the graph of .  The classic illustration of this phenomenon is the absolute value function . As we show in this function is differentiable everywhere except at . Graphically we see why this is the case in the corner nature of the point on the graph: to the left the slope of the graph is ; and to the right the slope is .    Wild oscillation  If a function is wildly oscillating near an input to such a degree that limit of of doesn't exist at , then it turns out that the derivative also cannot exist at . See the point at for the function with graph in as an example.       Derivative function: absolute value   Let .   Show that the domain of is and compute a formula for .    Add a geometric argument about why is not differentiable at using .      Graph of   Graph of absolute value            Derivative function:   Let . Compute the domain of and derive a formula for .        We end this section by introducing an alternative notation for denoting the derivative of a function. The notation is called Leibniz notation , as it was favored in Gottlieb Leibniz's development of calculus. Isaac Newton, on the other hand favored the prime notation . Leibniz notation comes in very handy when considering the derivative as an operation that we apply to functions; it also strongly evokes the interpretation of the interpretation of the derivative as a rate of change. It is very much less convenient as an alternative notation for , as exhibited by .   Leibniz notation   Let be a function relating the output variable as a function of the input variable , and let be the set of points where is differentiable. We introduce the following notation, called Leibniz notation , to denote various concepts related to    Derivative function  The derivative function is denoted as or . In other words, we have have .    Derivative at a point  Given , the derivative of at is denoted as or . In other words, we have     Derivative operation  We denote by the operation of taking the derivative of a function with respect to . Thus is the derivative of : , .       "
+  "body": " Derivative function     Extend the notion of derivative at a point to a definition of the derivative function associated to a function .    Compute formulas for derivative functions using the limit definition of the derivative.    Introduce Leibniz notation in addition to prime notation. Understand the specific advantages of each notional style.    Understand both analytically and graphically common ways in which a function can fail to be differentiable at an input.     Whereas previously we focused on the notion of the derivative of a function at a specific input, we now switch perspectives somewhat and consider the derivative operation as defining a function associated to .   Derivative function   Let be a function, and let be the set of points where is differentiable. The derivative operation defines a function that is called the derivative of .    Note that the domain of the derivative function need not be the entire domain of : indeed, by definition it consists precisely of the points where is differentiable. The next example illustrates this.   Derivative function: radical   Let be defined as .   Compute the domain of : that is, find all points where is differentiable.    Derive a formula for the derivative function .          Take an element in the domain of and compute: . We now note that for all , this last limit expression evaluates to , after the application of simple limit rules. Thus is differentiable for such elements. For , however, the last limit becomes which is a limit of type , and hence infinite. In particular the limit doesn't exist for , showing that is not differentiable at .  We conclude that the domain of is . Note that is strictly smaller than the domain of in this case: indeed, it is every element of the domain of with the exception of .    For , we can finish our limit computation above to compute : .       Using the slope interpretation of the derivative, we can begin to see how the derivative function implies information about the original function , and conversely.   Slope interpretation  Let be the set of points where is differentiable, and let be the derivative of . Given any , we have the following equivalences: . We will elaborate further on these equivalences when we discuss the rate of change interpretation of the derivative in more detail.    Failing to be differentiable  By definition, a function fails to be differentiable at an input if the limit does not exist. The precise reason for that failure to exist is reflected in the graph of , using the slope of tangent line interpretation of the derivative. Some examples and their graphical analogues:   Infinite limit vertical slope  If the limit is infinite at , then the tangent line to the curve at (if it exists) is vertical: , its slope is undefined.  This evident in the graph of . (See .) As , ; equivalently, the slopes of the tangent lines to the graph of at , get arbitrarily large and negative. At itself, the tangent line to the graph of is in fact the vertical line .    Jump discontinuity  corner point  If the limit at doesn't exist because of a discrepancy between the left- and right-hand limits, both of which exist, then we typically see the slope of tangent lines at points to the left of approaching one limiting slope, while the slope of tangent lines of points to the right of will approach another value. Geometrically, such a point will look like a corner or kink in the graph of .  The classic illustration of this phenomenon is the absolute value function . As we show in this function is differentiable everywhere except at . Graphically we see why this is the case in the corner nature of the point on the graph: to the left the slope of the graph is ; and to the right the slope is .    Wild oscillation  If a function is wildly oscillating near an input to such a degree that limit of of doesn't exist at , then it turns out that the derivative also cannot exist at . See the point at for the function with graph in as an example.       Derivative function: absolute value   Let .   Show that the domain of is and compute a formula for .    Add a geometric argument about why is not differentiable at using .      Graph of   Graph of absolute value            Derivative function:   Let . Compute the domain of and derive a formula for .        We end this section by introducing an alternative notation for denoting the derivative of a function. The notation is called Leibniz notation , as it was favored in Gottlieb Leibniz's development of calculus. Isaac Newton, on the other hand favored the prime notation . Leibniz notation comes in very handy when considering the derivative as an operation that we apply to functions; it also strongly evokes the interpretation of the interpretation of the derivative as a rate of change. It is very much less convenient as an alternative notation for , as exhibited by .   Leibniz notation   Let be a function relating the output variable as a function of the input variable , and let be the set of points where is differentiable. We introduce the following notation, called Leibniz notation , to denote various concepts related to    Derivative function  The derivative function is denoted as or . In other words, we have have .    Derivative at a point  Given , the derivative of at is denoted as or . In other words, we have     Derivative operation  We denote by the operation of taking the derivative of a function with respect to . Thus is the derivative of : , .        Differentiable implies continuous   Suppose the function is defined at . If is differentiable at , then is continuous at . Using logical shorthand: .    "
 },
 {
   "id": "s_der_function-2",
@@ -1225,13 +1225,22 @@ var ptx_lunr_docs = [
   "body": " Leibniz notation   Let be a function relating the output variable as a function of the input variable , and let be the set of points where is differentiable. We introduce the following notation, called Leibniz notation , to denote various concepts related to    Derivative function  The derivative function is denoted as or . In other words, we have have .    Derivative at a point  Given , the derivative of at is denoted as or . In other words, we have     Derivative operation  We denote by the operation of taking the derivative of a function with respect to . Thus is the derivative of : , .      "
 },
 {
+  "id": "th_diff_implies_contin",
+  "level": "2",
+  "url": "s_der_function.html#th_diff_implies_contin",
+  "type": "Theorem",
+  "number": "11.9",
+  "title": "Differentiable implies continuous.",
+  "body": " Differentiable implies continuous   Suppose the function is defined at . If is differentiable at , then is continuous at . Using logical shorthand: .   "
+},
+{
   "id": "s_der_rules",
   "level": "1",
   "url": "s_der_rules.html",
   "type": "Section",
   "number": "12",
   "title": "Differentiation rules",
-  "body": " Differentiation rules  We now examine how the operation of taking the derivative of a function interacts with our basic function operations: , scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation , which denotes the operation of taking the derivative with respect to . In this context we will either write , where is the name of a function, or else , where blah denotes some expression in . In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example denotes the derivative of the constant function ; and denotes the derivative of the identity function .   Basic derivative formulas      Constant functions  For all we have . In other words, if is the constant function , then is the zero function defined as for all .    Identity function  We have . In other words, if is the identity function , then is constant function defined as for all .    Rational power functions  Let be a rational number: , where and are integers, and . We have .        Power functions  In fact, it is true more generally that for any power function , where is a fixed real number, we have . Since we do not even define what the expression means for arbitrary real number until Math 220-2, however, we will not make much use of this formula unless is a rational number as in .   "
+  "body": " Differentiation rules  We now examine how the operation of taking the derivative of a function interacts with our basic function operations: , scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation , which denotes the operation of taking the derivative with respect to . In this context we will either write , where is the name of a function, or else , where blah denotes some expression in . In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example denotes the derivative of the constant function ; and denotes the derivative of the identity function .   Derivative formulas: constant and power functions      Constant functions  For all we have . In other words, if is the constant function , then is the zero function defined as for all .    Identity function  We have . In other words, if is the identity function , then is the constant function defined as for all .    Rational power functions  Let be a rational number: , where and are integers, and . We have .        Power functions  In fact, it is true more generally that for any power function , where is a fixed real number, we have . Since we do not even define what the expression means for arbitrary real number until Math 220-2, however, we will not make much use of this formula unless is a rational number as in .    Power rule: radicals   Let . Compute .         Derivative rules      Linear combination  For all constants , we have .    Product rule  We have .    Quotient rule  We have .        Linear combination rule  Note that our linear combination rule for derivatives implies the following three rules: . Indeed, the first follows from taking in , the second from taking , and the third from taking and .    Derivative rules   Compute a formula for for the given .    , where are fixed constants.                      Higher order derivatives   Let be a function with derivative . Continuing to compute derivatives in succession yields the higher order derivatives of . In particular, the second derivative is defined as , and denoted as or ; and the third derivative is defined as , and is denoted or .  More generally, for any , the -th derivative of is the result of applying the derivative operation times in succession, and is denoted or      Higher-order derivatives   Let . Compute formulas for , , and .        "
 },
 {
   "id": "th_der_formulas_basic",
@@ -1239,8 +1248,8 @@ var ptx_lunr_docs = [
   "url": "s_der_rules.html#th_der_formulas_basic",
   "type": "Theorem",
   "number": "12.1",
-  "title": "Basic derivative formulas.",
-  "body": " Basic derivative formulas      Constant functions  For all we have . In other words, if is the constant function , then is the zero function defined as for all .    Identity function  We have . In other words, if is the identity function , then is constant function defined as for all .    Rational power functions  Let be a rational number: , where and are integers, and . We have .      "
+  "title": "Derivative formulas: constant and power functions.",
+  "body": " Derivative formulas: constant and power functions      Constant functions  For all we have . In other words, if is the constant function , then is the zero function defined as for all .    Identity function  We have . In other words, if is the identity function , then is the constant function defined as for all .    Rational power functions  Let be a rational number: , where and are integers, and . We have .      "
 },
 {
   "id": "s_der_rules-4",
@@ -1250,6 +1259,60 @@ var ptx_lunr_docs = [
   "number": "12.2",
   "title": "Power functions.",
   "body": " Power functions  In fact, it is true more generally that for any power function , where is a fixed real number, we have . Since we do not even define what the expression means for arbitrary real number until Math 220-2, however, we will not make much use of this formula unless is a rational number as in .  "
+},
+{
+  "id": "eg_der_power",
+  "level": "2",
+  "url": "s_der_rules.html#eg_der_power",
+  "type": "Example",
+  "number": "12.3",
+  "title": "Power rule: radicals.",
+  "body": " Power rule: radicals   Let . Compute .       "
+},
+{
+  "id": "th_der_rules",
+  "level": "2",
+  "url": "s_der_rules.html#th_der_rules",
+  "type": "Theorem",
+  "number": "12.4",
+  "title": "Derivative rules.",
+  "body": " Derivative rules      Linear combination  For all constants , we have .    Product rule  We have .    Quotient rule  We have .      "
+},
+{
+  "id": "s_der_rules-7",
+  "level": "2",
+  "url": "s_der_rules.html#s_der_rules-7",
+  "type": "Remark",
+  "number": "12.5",
+  "title": "Linear combination rule.",
+  "body": " Linear combination rule  Note that our linear combination rule for derivatives implies the following three rules: . Indeed, the first follows from taking in , the second from taking , and the third from taking and .  "
+},
+{
+  "id": "eg_der_rules",
+  "level": "2",
+  "url": "s_der_rules.html#eg_der_rules",
+  "type": "Example",
+  "number": "12.6",
+  "title": "Derivative rules.",
+  "body": " Derivative rules   Compute a formula for for the given .    , where are fixed constants.                    "
+},
+{
+  "id": "d_der_higher_order",
+  "level": "2",
+  "url": "s_der_rules.html#d_der_higher_order",
+  "type": "Definition",
+  "number": "12.7",
+  "title": "Higher order derivatives.",
+  "body": " Higher order derivatives   Let be a function with derivative . Continuing to compute derivatives in succession yields the higher order derivatives of . In particular, the second derivative is defined as , and denoted as or ; and the third derivative is defined as , and is denoted or .  More generally, for any , the -th derivative of is the result of applying the derivative operation times in succession, and is denoted or    "
+},
+{
+  "id": "eg_higher_ders",
+  "level": "2",
+  "url": "s_der_rules.html#eg_higher_ders",
+  "type": "Example",
+  "number": "12.8",
+  "title": "Higher-order derivatives.",
+  "body": " Higher-order derivatives   Let . Compute formulas for , , and .       "
 },
 {
   "id": "appendix-notation",
