@@ -28,6 +28,7 @@
     <xi:include href="s_der_at_point.ptx" />
     <xi:include href="s_der_function.ptx" />
     <xi:include href="s_der_rules.ptx" />
+    <xi:include href="s_der_rate_change.ptx" />
 
   <!-- </chapter> -->
     

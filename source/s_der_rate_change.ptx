@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_der_rate_change" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivative as rate of change</title>
+<objectives>
+    <ol>
+        <li>
+            <p>
+                Understand and use the rate of change interpretation of the derivative. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Apply the rate of change interpretation to the position, velocity, and acceleration functions of an object.  
+            </p>
+        </li>
+    </ol>
+</objectives>
+    <subsection xml:id="ss_der_rate_of">
+        <title>Rate of change</title>
+        <p>
+            Recall that the key to understanding the rate of change interpretation of the derivative is to use the particular formulation
+            <me>
+                f'(a)=\lim\limits_{b\to a}\frac{f(b)-f(a)}{b-a}
+            </me>,
+            and to interpret the difference quotient 
+            <men xml:id="eq_avg_rate">
+                \frac{f(b)-f(a)}{b-a}
+            </men>
+            as the <em>average rate of change</em> of <m>f</m> between <m>a</m> and <m>b</m>. The idea is that as <m>b\to a</m>, the <em>average</em> rate of change computed as by <xref ref="eq_avg_rate"/> gets closer and closer to an <em>instantaneous</em> rate of change of <m>f</m> at <m>a</m>. This is the motivation behind the definition of instantaneous rate of change given in <xref ref="d_der_interpretations"/>.
+        </p>
+        <algorithm xml:id="proc_rate_of_change">
+            <title>Rate of change interpretations</title>
+            <statement>
+                <p>
+                    Suppose quantity <m>q</m> is modeled as a function <m>q=f(s)</m> of some other quantity <m>s</m>. Roughly speaking, the derivative
+                    <me>
+                        f'=\frac{df}{ds}=\frac{dq}{ds}
+                    </me>
+                    computes the (instantaneous) rate of change of <m>q</m> with respect to <m>s</m>. We elaborate below.
+                    <ul>
+                        <li>
+                            <title>Difference quotient</title>
+                            <p>
+                                Let <m>s_0</m> and <m>s_1</m> be particular values of quantity <m>s</m> satisfying <m>s_0 &lt; s_1</m>. The difference quotient <m>\frac{f(s_1)-f(s_0)}{s_1-s_0}</m> computes the average rate of change of <m>q</m> as the quantity <m>s</m> varies from <m>s_0</m> to <m>s_1</m>: <ie/>, 
+                                <me>
+                                    \left( \begin{array}{c}\text{ avg rate of change of  } q\\
+                                            \text{ between } s_0 \text{ and } s_1\end{array}\right) = \underset{\frac{\Delta q}{\Delta s}}{\underbrace{\frac{f(s_1)-f(s_0)}{s_1-s_0}}}
+                                            \text{ units  }q \text{ per } \text{units } s 
+                                    </me>.
+                              For each choice of <m>s_1</m>, the difference quotient gives an <em>approximation</em> of the instantaneous rate of change of <m>q</m> with respect to <m>s</m> at <m>s=s_0</m>. 
+                            </p>
+                        </li>
+                        <li>
+                            <title>Rate of change of <m>q</m> with respect to <m>s</m></title>
+                            <p>
+                                Let <m>s_0</m> be a particular value of the quantity <m>q</m>. The value <m>f'(s_0)</m> of the derivative at <m>s=s_0</m> is the (instantaneous) <em>rate of change</em> of <m>q</m> with respect to <m>s</m> at the particular input <m>s_0</m>: <ie/>, 
+                                <men xml:id="eq_der_rate_change">
+                                \left( \begin{array}{c}\text{ rate of change of  } q\\
+                                        \text{w/r to } s \text{ at } s_0 \end{array}\right) = f'(s_0)  \ \text{ units  }q \text{ per } \text{units } s 
+                                </men>
+                                
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </statement>
+        </algorithm>
+        <example xml:id="eg_height_age">
+        <title>Height versus age</title>
+        <statement>
+        <p>
+        Suppose the average height <m>h</m> (in meters) of an individual in a population is given as a function <m>h=f(a)</m> of their age <m>a</m> (in years). 
+        <ol>
+            <li>
+                <p>
+                    Interpret the two statements below in terms of the height and age of people. Your interpretation should include units, and should address all numeric details in the statements. 
+                    <md>
+                        <mrow> f(12)\amp =  1.5</mrow>
+                        <mrow> f'(12) \amp = 0.06 </mrow>
+                    </md>.
+                </p>
+            </li>
+            <li>
+                <p>
+                    What does the following sequence of statements tell us about the relation of height versus age? Be specific. 
+                    <md>
+                        <mrow>f'(12) \amp = 0.06</mrow>
+                        <mrow>f'(15) \amp = 0.025</mrow>
+                        <mrow>f'(18) \amp = 0.001</mrow>
+                    </md>.
+                </p>
+            </li>
+        </ol>
+        </p>
+
+        </statement>
+        <solution>
+        <p>
+        
+        </p>
+        </solution>
+        </example>
+        
+    </subsection>
+    <subsection xml:id="ss_dynamics">
+        <title>Position, velocity, acceleration</title>
+        <definition xml:id="d_pos_vel_acc">
+            <statement>
+                <p>
+                    Suppose an object moves along an oriented axis with origin <m>O</m>. To simplify the units discussion, we assume below that distance is measured in meters (m) and time is measured in seconds (s). 
+                    <ul>
+                        <li>
+                            <title>Position</title>
+                            <p>
+                                At any given time <m>t</m>, the <term>position</term> <m>x(t)</m> of the object is its <em>directed distance</em> (positive or negative) to the origin.  
+                            </p>
+                        </li>
+                        <li>
+                            <title>Displacement</title>
+                            <p>
+                                Given times <m>t_0&lt; t_1</m>, the <term>displacement</term> of the object from time <m>t_0</m> to time <m>t_1</m> is the difference <m>x(t_1)-x(t_0)</m>, often denoted as <m>\Delta x</m> for short. 
+                            </p>
+                        </li>
+                        <li>
+                            <title>Velocity</title>
+                            <p>
+                               At any given time <m>t_0</m> the <term>velocity</term> <m>v(t_0)</m> of the object is defined as rate of change of position with respect to time at <m>t=t_0</m>. In other words, we have 
+                               <me>
+                                v(t)=\frac{dx}{dt}=x'(t) \text{ m/s}
+                               </me>.
+                               Values of velocity can be positive or negative. We define the <term>speed</term> <m>s(t)</m> of the object at time <m>t</m> as <m>s(t)=\abs{v(t)}.</m>
+                            </p>
+                        </li>
+                        <li>
+                            <title>Acceleration</title>
+                            <p>
+                                At any given time <m>t_0</m> we define the <term>acceleration</term> <m>a(t_0)</m> of the object as the rate of change of its velocity with respect to time at <m>t=t_0</m>. In other words, 
+                                <md>
+                                    <mrow>a(t) \amp =\frac{dv}{dt}=v'(t)=x''(t) \text{ (m/s) per s}</mrow>
+                                </md>.
+                            </p>
+                        </li>
+                    </ul> 
+                </p>
+            </statement>
+        </definition>
+        <example xml:id="eg_dynamics_drone">
+        <title>Drone</title>
+        <statement>
+        <p>
+        Dudley gets his hands on the remote control for a drone and pilots it for a glorious 3 seconds. Luckily, the drone can only move directly up and down. The altitude <m>h</m> (in meters) of the drone <m>t</m> seconds after Dudley takes control is given as 
+        <me>
+            h=h(t)=t^3-6t^2+9t
+        </me>.
+        <ol>
+            <li>
+                <p>
+                    Derive formulas for the velocity <m>v(t)</m>, speed <m>s(t)</m>, and acceleration <m>a(t)</m> of the drone <m>t</m> seconds after Dudley takes control. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Find the time intervals when the drone is ascending, and the time intervals when it is descending. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Describe the end of Dudley's flight at time <m>t=3</m> seconds. Where is the drone? Did a fatal crash happen? 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Compute (a) the displacement of the drone over the time interval <m>[0,3]</m>, and (b) the total distance traveled. 
+                </p>
+            </li>
+        </ol>
+        </p>
+        </statement>
+        <solution>
+        <p>
+        
+        </p>
+        </solution>
+        </example>
+        
+    </subsection>
+    <subsection xml:id="ss_marginal_cost">
+        <title>Rates of change in economics</title>
+        <p>
+            Derivative play a crucial role in economics, where this notion is often described in that field's particular jargon as some variety of <em>marginal</em>. 
+        </p>
+        <definition xml:id="d_marginals">
+        <title>Marginal cost, revenue, profit</title>
+        <statement>
+        <p>
+        Suppose the cost <m>C</m> (in dollars) of making a product is modeled as a function <m>C=f(q)</m> of the total quantity of the good produced. The <term>marginal cost function</term> is defined as <m>f'=\frac{dC}{dq}</m>. Thus <m>f'(q_0)</m> computes the marginal cost (in dollars per unit producion) at a current level of production <m>q=q_0</m>: this is the rate of change of cost with respect to quantity produced at the given production level <m>q=q_0</m>. 
+        </p>
+        <p>
+            We get notions of <term>marginal revenue</term> and <term>marginal profit</term> by replacing the cost function above with a revenue or profit function. 
+        </p>
+        </statement>
+
+        </definition>
+        <example xml:id="eg_marginal">
+        <title>Marginals</title>
+        <statement>
+        <p>
+        Suppose the cost <m>C</m> (in dollars) for a farmer to produce <m>q</m> barrels of milk on a given day is given by 
+        <me>
+            C=f(q)=100+10q-\frac{q^2}{100}+\frac{b^3}{250}
+        </me>. 
+        Suppose further that farmer can charge a price <m>P</m> of  
+        <me>
+            P=\frac{20000}{100+b} \text{ dollar per barrel}
+        </me>
+        when producing <m>b</m> barrels of milk. 
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Determine the marginal cost of producing 100 barrels of milk. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Determine the marginal profit of producing 100 barrels of milk. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>Estimate</em> the profit of of producing 103 barrels of milk. 
+                </p>
+            </li>
+        </ol>
+        </statement>
+        <solution>
+        <p>
+        
+        </p>
+        </solution>
+        </example>
+        
+    </subsection>
+
+    
+
+</section>

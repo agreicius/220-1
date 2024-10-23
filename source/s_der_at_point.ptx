@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_der_at_point" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Derivative at a point</title>
+    <title>Derivative: at a point</title>
     <objectives>
         <ol>
             <li>
@@ -179,7 +179,7 @@
                         <p>
                             Let <m>P=(a,f(a))</m>. The <term>tangent line to the graph of <m>f</m> at <m>P</m></term> (or <term>at <m>x=a</m></term>) is the line <m>L</m> defined by the equation 
                             <me>
-                                y-a=f'(a)(x-a)
+                                y-f(a)=f'(a)(x-a)
                             </me>. 
                             In this context, we see that the derivative of <m>f</m> at <m>a</m> is the slope of the tangent line to the graph of <m>f</m> at <m>P</m>. 
                         </p>
