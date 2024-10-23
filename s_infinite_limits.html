@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -438,7 +458,8 @@ window.MathJax = {
 <li id="s_infinite_limits-2-1-4"><div class="para" id="s_infinite_limits-2-1-4-1">Develop computation techniques for infinite limits.</div></li>
 </ol></article><article class="definition definition-like" id="d_infty_lims"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite limits (informal).</span>
-</h3> <div class="para logical" id="d_infty_lims-2-1">
+</h3>
+<div class="para logical" id="d_infty_lims-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function.</div>
 <ol class="decimal" id="d_infty_lims-2-1-2">
 <li id="d_infty_lims-2-1-2-1">
@@ -453,7 +474,8 @@ window.MathJax = {
 </ol>
 </div></article><article class="remark remark-like" id="rm_infty_lims"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.2</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite limits.</span>
-</h3> <div class="para logical" id="rm_infty_lims-2">
+</h3>
+<div class="para logical" id="rm_infty_lims-2">
 <div class="para">It is important to observe that the various notions of infinite limit defined in <a href="s_infinite_limits.html#d_infty_lims" class="xref" data-knowl="./knowl/xref/d_infty_lims.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.1: Infinite limits (informal)">Definition 9.1</a> all cover situations where the limit of the function <em class="emphasis">does not exist</em>. The best way to understand an infinite limit statement of the form <span class="process-math">\(\lim\limits_{x\to a}f(x)=\pm \infty\text{,}\)</span> where <span class="process-math">\(a\)</span> denotes either a real number, <span class="process-math">\(\infty\text{,}\)</span> or <span class="process-math">\(-\infty\text{,}\)</span> is as an assertion that</div>
 <ol class="lower-alpha" id="rm_infty_lims-2-7">
 <li id="rm_infty_lims-2-7-1"><div class="para" id="rm_infty_lims-2-7-1-1">the limit in question does not exist, and</div></li>
@@ -463,7 +485,8 @@ window.MathJax = {
 <div class="para">Accordingly, we must understand this new notation as an extended version of our original limit notation. In particular, we are <em class="emphasis">not</em> treating <span class="process-math">\(\infty\)</span> or <span class="process-math">\(-\infty\)</span> here as if they were actual real numbers.</div>
 </div></article><article class="remark remark-like" id="rm_infty_lims_onesided"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">9.3</span><span class="period">.</span><span class="space"> </span><span class="title">One-sided infinite limits.</span>
-</h3> <div class="para logical" id="rm_infty_lims_onesided-2">
+</h3>
+<div class="para logical" id="rm_infty_lims_onesided-2">
 <div class="para">Yet more variants of infinite limits can be defined for one-sided limits: that is, we can make sense of the following statements for any <span class="process-math">\(a\in \R\text{:}\)</span>
 </div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/d_infty_lims.html" id="rm_infty_lims_onesided-2-2">
@@ -475,7 +498,8 @@ window.MathJax = {
 <div class="para">We thought <a href="s_infinite_limits.html#d_infty_lims" class="xref" data-knowl="./knowl/xref/d_infty_lims.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 9.1: Infinite limits (informal)">Definition 9.1</a> was long enough as it is.</div>
 </div></article><article class="definition definition-like" id="d_ver_asymp"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span><span class="space"> </span><span class="title">Vertical asymptote.</span>
-</h3> <div class="para logical" id="d_ver_asymp-2-1">
+</h3>
+<div class="para logical" id="d_ver_asymp-2-1">
 <div class="para">Fix a constant <span class="process-math">\(a\in \R\text{.}\)</span> The line <span class="process-math">\(x=a\)</span> is a <dfn class="terminology">vertical asymptote</dfn> of the graph of a function <span class="process-math">\(f\)</span> if at least one the of the following conditions holds:</div>
 <div class="displaymath process-math" id="d_ver_asymp-2-1-5">
 \begin{align*}
@@ -739,7 +763,8 @@ D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\n
 </h3>
 <div class="para" id="eg_vert_hor_asym-2-1">Let <span class="process-math">\(\displaystyle f(x)=\frac{x^5-2x^4}{-x^2+3x-2}\text{.}\)</span> Find all and any horizontal and vertical asymptotes of <span class="process-math">\(f\text{.}\)</span> For any vertical asymptotes, compute both one-sided limits.</div>
 <div class="solutions"><details id="eg_vert_hor_asym-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<article class="case" id="eg_vert_hor_asym-3-1"><h4 class="heading">Horizontal asymptotes.</h4> <div class="para logical" id="eg_vert_hor_asym-3-1-2">
+<article class="case" id="eg_vert_hor_asym-3-1"><h4 class="heading">Horizontal asymptotes.</h4>
+<div class="para logical" id="eg_vert_hor_asym-3-1-2">
 <div class="para">For our horizontal asymptote investigation we compute the limits at infinity of <span class="process-math">\(f\text{.}\)</span> At <span class="process-math">\(\infty\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_rational_function.html" id="eg_vert_hor_asym-3-1-2-3">
 \begin{align*}
@@ -750,7 +775,8 @@ D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\n
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to \infty}x^3=\infty\text{,}\)</span> and <span class="process-math">\(-x^3\)</span> is negative eventually as <span class="process-math">\(x\to \infty\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="eg_vert_hor_asym-3-1-3">
+</div>
+<div class="para logical" id="eg_vert_hor_asym-3-1-3">
 <div class="para">At <span class="process-math">\(-\infty\)</span> we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_rational_function.html" id="eg_vert_hor_asym-3-1-3-2">
 \begin{align*}
@@ -761,7 +787,8 @@ D=\R-\left\{\frac{\pi}{2}+\pi\, n\colon n\in \Z\right\}=\left\{x\in \R\colon x\n
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to -\infty}x^3=-\infty\text{,}\)</span> and <span class="process-math">\(-x^3\)</span> is positive eventually as <span class="process-math">\(x\to -\infty\text{.}\)</span>
 </div>
-</div></article> <article class="case" id="eg_vert_hor_asym-3-2"><h4 class="heading">Vertical asymptotes.</h4> <div class="para logical" id="eg_vert_hor_asym-3-2-2">
+</div></article><article class="case" id="eg_vert_hor_asym-3-2"><h4 class="heading">Vertical asymptotes.</h4>
+<div class="para logical" id="eg_vert_hor_asym-3-2-2">
 <div class="para">We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -777,7 +804,8 @@ f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
 \end{align*}
 </div>
 <div class="para">Since the limit exists here, the line <span class="process-math">\(x=2\)</span> is not a vertical asymptote.</div>
-</div> <div class="para logical" id="eg_vert_hor_asym-3-2-3">
+</div>
+<div class="para logical" id="eg_vert_hor_asym-3-2-3">
 <div class="para">We now compute the one-sided limits at <span class="process-math">\(x=1\text{.}\)</span> We have</div>
 <div class="displaymath process-math" id="eg_vert_hor_asym-3-2-3-2">
 \begin{align*}
@@ -787,7 +815,8 @@ f(x)=\frac{x^5-2x^4}{-x^2+3x-2}=\frac{x^4(x-2)}{-(x-2)(x-1)}\text{.}
 </div>
 <div class="para">since <span class="process-math">\(\lim\limits_{x\to 1^-}x-1=0\text{,}\)</span> <span class="process-math">\(\lim\limits_{x\to 1^-}-x^4=-1\text{,}\)</span> and <span class="process-math">\(-x^4/(x-1)\)</span> is positive for all <span class="process-math">\(x\)</span> close to and less than <span class="process-math">\(1\text{.}\)</span> Since once of the one-sided limits is infinite, we conclude that <span class="process-math">\(x=1\)</span> is a vertical asymptote of the graph of <span class="process-math">\(f\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="eg_vert_hor_asym-3-2-4">
+</div>
+<div class="para logical" id="eg_vert_hor_asym-3-2-4">
 <div class="para">We are asked to compute the other one-sided limit. The computation is similar:</div>
 <div class="displaymath process-math" id="eg_vert_hor_asym-3-2-4-1">
 \begin{align*}

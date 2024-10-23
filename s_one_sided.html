@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -442,7 +462,8 @@ window.MathJax = {
 <div class="para" id="ss_def-2">One-sided limits provide a convenient means of describing how a function <span class="process-math">\(f\)</span> behaves as its inputs approach a value <span class="process-math">\(a\)</span> from one side or the other. We go straight to their formal definitions, mainly to introduce the notation and terminology.</div>
 <article class="definition definition-like" id="d_one_sided_limits"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">One-sided limits.</span>
-</h4> <div class="para logical" id="d_one_sided_limits-2-1">
+</h4>
+<div class="para logical" id="d_one_sided_limits-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function, and let <span class="process-math">\(a\in \R\text{.}\)</span>
 </div>
 <ol class="decimal" id="d_one_sided_limits-2-1-3">
@@ -502,10 +523,12 @@ window.MathJax = {
 </div></li>
 </ul></div></div></details></div></article><article class="remark remark-like" id="ss_def-6"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">One-sided limit rules.</span>
-</h4> <div class="para" id="ss_def-6-2">Since the definition of a one-sided limit differs from that of the limit, only in so far as we restrict our attention to inputs <span class="process-math">\(x\)</span> lying to one side or the other of the “limit point” <span class="process-math">\(a\text{,}\)</span> it should come as no surprise that all the limit rules (sum, quotient, sandwich, etc.) and formulas (polynomial evaluation, rational evaluation, etc.) discussed thus far apply with equal validity to one-sided limits. This means you may compute one-sided limits with these rules in exactly the same way as you do with normal limits.</div></article><div class="para" id="ss_def-7">Previously our definition of limit only applied to points <span class="process-math">\(a\in \R\)</span> for which the function was defined for all <span class="process-math">\(x\ne a\)</span> on an open interval <span class="process-math">\((c,d)\)</span> containing <span class="process-math">\(a\text{.}\)</span> The language of one-sided limits allows us to extend this definition to “endpoints” of the domain, as the next definition makes clear. <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> guarantees that this definition is a consistent extension of <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a>.</div>
+</h4>
+<div class="para" id="ss_def-6-2">Since the definition of a one-sided limit differs from that of the limit, only in so far as we restrict our attention to inputs <span class="process-math">\(x\)</span> lying to one side or the other of the “limit point” <span class="process-math">\(a\text{,}\)</span> it should come as no surprise that all the limit rules (sum, quotient, sandwich, etc.) and formulas (polynomial evaluation, rational evaluation, etc.) discussed thus far apply with equal validity to one-sided limits. This means you may compute one-sided limits with these rules in exactly the same way as you do with normal limits.</div></article><div class="para" id="ss_def-7">Previously our definition of limit only applied to points <span class="process-math">\(a\in \R\)</span> for which the function was defined for all <span class="process-math">\(x\ne a\)</span> on an open interval <span class="process-math">\((c,d)\)</span> containing <span class="process-math">\(a\text{.}\)</span> The language of one-sided limits allows us to extend this definition to “endpoints” of the domain, as the next definition makes clear. <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> guarantees that this definition is a consistent extension of <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a>.</div>
 <article class="definition definition-like" id="d_limit_extended"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at endpoints of domain.</span>
-</h4> <div class="para logical" id="d_limit_extended-2-1">
+</h4>
+<div class="para logical" id="d_limit_extended-2-1">
 <div class="para">Let <span class="process-math">\(f\)</span> be a function, and let <span class="process-math">\(a\in \R\text{.}\)</span>
 </div>
 <ol class="decimal" id="d_limit_extended-2-1-3">
@@ -609,7 +632,8 @@ D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
 </div>
 </div></div></details></div></article><article class="remark remark-like" id="rm_affine_sub"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Affine substitution in limits.</span>
-</h4> <div class="para logical" id="rm_affine_sub-2">
+</h4>
+<div class="para logical" id="rm_affine_sub-2">
 <div class="para">Our second computation of the limit in <a href="s_one_sided.html#eg_classic_trig" class="xref" data-knowl="./knowl/xref/eg_classic_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.9: Classic trig limits">Example 5.9</a> seemed to use a “substitution” rule of the following sort: that is, we computed a limit of the form <span class="process-math">\(\lim_{x\rightarrow a}f(g(x))\)</span> by observing that <span class="process-math">\(\lim_{x\to a}g(x)=b\)</span> and then computing, using the substitution <span class="process-math">\(t=g(x)\text{,}\)</span>  that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_classic_trig.html">
 \begin{equation*}

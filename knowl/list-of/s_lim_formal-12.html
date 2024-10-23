@@ -39,7 +39,9 @@ a&lt; b \iff a^2&lt; b^2
 </div>
 <div class="para">to apply, we need <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> to both be nonnegative. (Example: <span class="process-math">\(-3&lt; -1\text{,}\)</span> but <span class="process-math">\(9\not\lt 1\text{.}\)</span>) To deal with this, we will treat two separate cases: <span class="process-math">\(\epsilon\leq 1\)</span> and <span class="process-math">\(\epsilon&gt; 1\text{.}\)</span>
 </div>
-</div> <article class="case"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4> <div class="para logical">
+</div>
+<article class="case"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4>
+<div class="para logical">
 <div class="para">When <span class="process-math">\(\epsilon \leq 1\text{,}\)</span> all terms in the last inequality above are positive, and we may continue on to conclude</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -64,7 +66,8 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 </div>
 <div class="para">Note that since <span class="process-math">\(0&lt; \epsilon\leq 1\text{,}\)</span> both <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> are positive. It is clear that <span class="process-math">\(3\in S\text{.}\)</span> Setting <span class="process-math">\(\delta\)</span> to be the <em class="emphasis">minimum</em> of <span class="process-math">\(\delta_1, \delta_2\text{,}\)</span> guarantees that  <span class="process-math">\((3-\delta, 3+\delta)\subseteq S\text{.}\)</span> We conclude that for any positive <span class="process-math">\(\epsilon\leq 1\text{,}\)</span> setting <span class="process-math">\(\delta=\min\{(\delta_1, \delta_2\}\text{,}\)</span> we have <span class="process-math">\(\abs{f(x)-1}&lt; \epsilon\)</span> for all <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(\abs{x-3}&lt; \delta\text{.}\)</span>
 </div>
-</div> <div class="para logical">
+</div>
+<div class="para logical">
 <div class="para">Note: in fact, it is not difficult to see in this case that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -72,7 +75,8 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 \end{equation*}
 </div>
 <div class="para">and so we could have more explicitly set <span class="process-math">\(\delta=\epsilon(2-\epsilon)\)</span> in this case. Nonetheless, declaring <span class="process-math">\(\delta=\min\{\delta_1, \delta_2\}\)</span> works just as well here, as well as in other examples.</div>
-</div></article> <article class="case"><h4 class="heading">Case: <span class="process-math">\(\epsilon&gt; 1\)</span>.</h4> <div class="para logical">
+</div></article><article class="case"><h4 class="heading">Case: <span class="process-math">\(\epsilon&gt; 1\)</span>.</h4>
+<div class="para logical">
 <div class="para">Now assume <span class="process-math">\(\epsilon\geq 1\text{.}\)</span> We need to find a <span class="process-math">\(\delta\)</span> such that <span class="process-math">\(0&lt; \abs{x-3}&lt; \delta\)</span> implies <span class="process-math">\(\abs{f(x)-1}&lt; \epsilon\text{.}\)</span> From the previous case (<span class="process-math">\(\epsilon\leq 1\)</span>), we know there is a <span class="process-math">\(\delta\)</span> such that <span class="process-math">\(0&lt; \abs{x-3}&lt; \delta\)</span> implies <span class="process-math">\(\abs{f(x)-1}&lt; 1\text{.}\)</span> But since <span class="process-math">\(\epsilon &gt; 1\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{align*}
@@ -81,7 +85,7 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 \end{align*}
 </div>
 <div class="para">as desired.</div>
-</div></article> <div class="para logical">
+</div></article><div class="para logical">
 <div class="para">Our two cases, taken together, show that for all <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt; 0\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}

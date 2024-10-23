@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -563,7 +583,8 @@ window.MathJax = {
 </ol>
 </div></article><article class="remark remark-like" id="rm_sandwich"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Sandwich theorem.</span>
-</h4> <div class="para logical" id="rm_sandwich-2">
+</h4>
+<div class="para logical" id="rm_sandwich-2">
 <div class="para">As the examples below will illustrate, the art of using <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.5: Sandwich theorem">Procedure 3.5</a> lies in being able to find <em class="emphasis">useful</em> bounding functions <span class="process-math">\(g\)</span> and <span class="process-math">\(h\text{.}\)</span>  Use these examples as a model for your own use of <a href="s_limit_sandwich.html#proc_sandwich" class="xref" data-knowl="./knowl/xref/proc_sandwich.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 3.5: Sandwich theorem">Procedure 3.5</a>. Note in particular how</div>
 <ul class="disc" id="rm_sandwich-2-6">
 <li id="rm_sandwich-2-6-1"><div class="para" id="rm_sandwich-2-6-1-1">the explanations make explicit the two conditions that the bounding functions must satisfy;</div></li>
@@ -657,7 +678,8 @@ g(x)\leq f(x)\leq h(x)\tag{3.3}
 </div></div></details></div></article><div class="para" id="ss_sandwich-9">Our next theorem concerns the absolute value, the definition of which we now recall.</div>
 <article class="definition definition-like" id="d_absolute_value"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value.</span>
-</h4> <div class="para logical" id="d_absolute_value-2-1">
+</h4>
+<div class="para logical" id="d_absolute_value-2-1">
 <div class="para">The <dfn class="terminology">absolute value</dfn> of a real number <span class="process-math">\(x\text{,}\)</span> denoted <span class="process-math">\(\abs{x}\text{,}\)</span> is defined as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -668,7 +690,8 @@ g(x)\leq f(x)\leq h(x)\tag{3.3}
 </div>
 </div></article><article class="remark remark-like" id="rm_abs_val"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute value.</span>
-</h4> <div class="para logical" id="rm_abs_val-2">
+</h4>
+<div class="para logical" id="rm_abs_val-2">
 <div class="para">Below we gather some useful remarks and facts about the absolute value.</div>
 <ul class="disc" id="rm_abs_val-2-1">
 <li id="rm_abs_val-2-1-1"><div class="para logical" id="rm_abs_val-2-1-1-1">
@@ -824,7 +847,7 @@ g(\theta)\leq \sin \theta\leq h(\theta)
 </div>
 </div></li>
 </ol></div></article></details><div class="para" id="ss_sandwich-15">As promised in the proof of <a href="s_limit_sandwich.html#th_lim_sine_cos" class="xref" data-knowl="./knowl/xref/th_lim_sine_cos.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.12: Sine and cosine evaluation at zero">Theorem 3.12</a>, we provide a proof of the inequality <span class="process-math">\(-\abs{\theta}\leq \sin \theta\leq \abs{\theta}\text{,}\)</span> or equivalently, <span class="process-math">\(\abs{\sin \theta}\leq \abs{\theta}\)</span> for all <span class="process-math">\(\theta\in \R\text{.}\)</span> You are not responsible for understanding this proof, but you might find the argument instructive nonetheless.</div>
-<details id="ss_sandwich-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Proof of <span class="process-math">\(\abs{\sin\theta}\leq \abs{\theta}\)</span>.</span></h4></summary><article class="hiddenproof knowl__content"> <div class="para logical" id="ss_sandwich-16-2">
+<details id="ss_sandwich-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="title">Proof of <span class="process-math">\(\abs{\sin\theta}\leq \abs{\theta}\)</span>.</span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="ss_sandwich-16-2">
 <div class="para">We will prove that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_sine_ineq_abs.html ./knowl/xref/eq_sine_ineq_abs.html" id="eq_sine_ineq_abs">
 \begin{equation}

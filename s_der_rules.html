@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Differentiation rules</title>
+<title>Derivative: rules</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -265,7 +277,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-16.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_der_rate_change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -428,7 +448,7 @@ window.MathJax = {
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_der_rules"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">12</span><span class="space"> </span><span class="title">Differentiation rules</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">12</span><span class="space"> </span><span class="title">Derivative: rules</span>
 </h2>
 <div class="para" id="s_der_rules-2">We now examine how the operation of taking the derivative of a function interacts with our basic function operations: e.g., scalar multiplication, addition, multiplication, and quotients. We will make heavy use of the Leibniz notation <span class="process-math">\(\frac{d}{dx}\text{,}\)</span> which denotes the operation of taking the derivative with respect to <span class="process-math">\(x\text{.}\)</span> In this context we will either write <span class="process-math">\(\frac{d}{dx}(f)\text{,}\)</span> where <span class="process-math">\(f\)</span> is the name of a function, or else <span class="process-math">\(\frac{d}{dx}(\text{blah})\text{,}\)</span> where <code class="code-inline tex2jax_ignore">blah</code> denotes some expression in <span class="process-math">\(x\text{.}\)</span> In the latter case, the expression in question is understood to define a function, with the usual implied domain convention. Thus for example <span class="process-math">\(\frac{d}{dx}(5)\)</span> denotes the derivative of the constant function <span class="process-math">\(f(x)=5\text{;}\)</span> and <span class="process-math">\(\frac{d}{dx}(x)\)</span> denotes the derivative of the identity function <span class="process-math">\(f(x)=x\text{.}\)</span>
 </div>
@@ -461,18 +481,19 @@ window.MathJax = {
 </div>
 </li>
 <li id="th_der_formula_rat_power">
-<span class="heading"><span class="title">Rational power functions.</span></span><div class="para logical" id="th_der_formula_rat_power-2">
-<div class="para">Let <span class="process-math">\(n\)</span> be a rational number: i.e., <span class="process-math">\(n=\frac{p}{q}\)</span> where <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are integers, and <span class="process-math">\(q\ne 0\text{.}\)</span> We have</div>
+<span class="heading"><span class="title">Power functions.</span></span><div class="para logical" id="th_der_formula_rat_power-2">
+<div class="para">Let <span class="process-math">\(r\)</span> be a real number. We have</div>
 <div class="displaymath process-math" id="eq_der_formula_rat_power">
 \begin{equation}
-\frac{d}{dx}(x^n)=nx^{n-1}\text{.}\tag{12.3}
+\frac{d}{dx}(x^r)=rx^{r-1}\text{.}\tag{12.3}
 \end{equation}
 </div>
 </div>
 </li>
 </ol></div></article><article class="remark remark-like" id="s_der_rules-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Power functions.</span>
-</h3> <div class="para" id="s_der_rules-4-2">In fact, it is true more generally that for any power function <span class="process-math">\(f(x)=x^r\text{,}\)</span> where <span class="process-math">\(r\in \R\)</span> is a fixed real number, we have <span class="process-math">\(f'(x)=rx^{r-1}\text{.}\)</span> Since we do not even define what the expression <span class="process-math">\(x^r\)</span> means for arbitrary real number <span class="process-math">\(r\)</span> until Math 220-2, however, we will not make much use of this formula unless <span class="process-math">\(r\)</span> is a rational number as in <a href="s_der_rules.html#th_der_formula_rat_power" class="xref" data-knowl="./knowl/xref/th_der_formula_rat_power.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 3: Rational power functions">Item 3</a>.</div></article><article class="example example-like" id="eg_der_power"><h3 class="heading">
+</h3>
+<div class="para" id="s_der_rules-4-2">Although we state the power function formula for general <span class="process-math">\(r\in \R\text{,}\)</span> for now we will only make use of it when <span class="process-math">\(r\)</span> is a rational number: i.e., <span class="process-math">\(r=\frac{m}{n}\text{,}\)</span> where <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers. Indeed, as of yet we have not ever defined what the expression <span class="process-math">\(x^r\)</span> means for an arbitrary real number <span class="process-math">\(r\text{.}\)</span> We can make sense of <span class="process-math">\(x^5\text{,}\)</span> <span class="process-math">\(x^{-7}\text{,}\)</span> and even <span class="process-math">\(x^{-3/2}\text{,}\)</span> but what does <span class="process-math">\(x^\pi\)</span> or <span class="process-math">\(x^{\sqrt{2}}\)</span> mean? We will have to wait until Math 220-2 to give a precise and general definition.</div></article><article class="example example-like" id="eg_der_power"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power rule: radicals.</span>
 </h3>
 <div class="para" id="eg_der_power-2-1">Let <span class="process-math">\(f(x)=\sqrt[3]{x^2}\text{.}\)</span> Compute <span class="process-math">\(f'(x)\text{.}\)</span>
@@ -511,9 +532,44 @@ window.MathJax = {
 </div>
 </div>
 </li>
-</ol></div></article><article class="remark remark-like" id="s_der_rules-7"><h3 class="heading">
+</ol></div></article><details id="th_der_rules-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_der_rules-3-1">With all of our mastery of limit techniques, it turns out that the proofs of these three statements are not so difficult. We provide a proof of (1) and (2).</div>
+<article class="case" id="th_der_rules-3-2"><h4 class="heading">Proof of (1).</h4>
+<div class="para logical" id="th_der_rules-3-2-2">
+<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable at <span class="process-math">\(x\text{.}\)</span> We have</div>
+<div class="displaymath process-math" id="th_der_rules-3-2-2-4">
+\begin{align*}
+(cf(x)+dg(x))' \amp =\lim\limits_{h\to 0}\frac{cf(x+h)+dg(x+h)-(cf(x)+dg(x))}{h}
+\amp \text{(def.)}\\
+\amp =\lim\limits_{h\to 0}\frac{cf(x+h)-cf(x)}{h}+\frac{dg(x+h)-dg(x)}{h}\\
+\amp = c\lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}+d\lim\limits_{h\to 0}\frac{g(x+h)-g(x)}{h} \amp \text{(sum, scal. mult.)}\\
+\amp = cf'(x)+dg'(x) \amp \text{(def.)}\text{.}
+\end{align*}
+</div>
+</div></article><article class="case" id="th_der_rules-3-3"><h4 class="heading">Proof of (2).</h4>
+<div class="para logical" id="th_der_rules-3-3-2">
+<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable at <span class="process-math">\(x\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_diff_implies_contin.html" id="th_der_rules-3-3-2-4">
+\begin{align*}
+(f(x)g(x))' \amp = \lim\limits_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h} \amp \text{(def.)} \\
+(f(x)g(x))' \amp = \lim\limits_{h\to 0}\frac{(f(x+h)-f(x))g(x+h)-f(x)(g(x+h)-g(x))}{h} \amp \text{(alg.)} \\
+\amp = \lim\limits_{h\to 0}\frac{f(x+h)-f(x)}{h}\cdot \lim\limits_{h\to 0}g(x+h)
++\lim\limits_{h\to 0}f(x)\cdot\lim\limits_{h\to 0}\frac{g(x+h)-g(x)}{h} 
+\amp (\text{sum, prod.}) \\
+\amp =f'(x)g(x)+f(x)g'(x)\text{,}
+\end{align*}
+</div>
+<div class="para">where this last step uses both the definition of the derivative and the fact that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_diff_implies_contin.html" id="th_der_rules-3-3-2-5">
+\begin{align*}
+\lim\limits_{h\to 0}f(x+h)\amp =f(x) \\
+\lim\limits_{h\to 0}g(x)\amp =g(x) \text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous by <a href="s_der_function.html#th_diff_implies_contin" class="xref" data-knowl="./knowl/xref/th_diff_implies_contin.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 11.9: Differentiable implies continuous">Theorem 11.9</a>.</div>
+</div></article></article></details><article class="remark remark-like" id="s_der_rules-7"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.5</span><span class="period">.</span><span class="space"> </span><span class="title">Linear combination rule.</span>
-</h3> <div class="para logical" id="s_der_rules-7-2">
+</h3>
+<div class="para logical" id="s_der_rules-7-2">
 <div class="para">Note that our <em class="emphasis">linear combination rule</em> for derivatives implies the following three rules:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_der_rules_lin_comb.html" id="s_der_rules-7-2-2">
 \begin{align*}
@@ -524,8 +580,20 @@ window.MathJax = {
 </div>
 <div class="para">Indeed, the first follows from taking <span class="process-math">\(d=0\)</span> in <a href="s_der_rules.html#eq_der_rules_lin_comb" class="xref" data-knowl="./knowl/xref/eq_der_rules_lin_comb.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 12.4">(12.4)</a>, the second from taking <span class="process-math">\(c=d=1\text{,}\)</span> and the third from taking <span class="process-math">\(c=1\)</span> and <span class="process-math">\(d=-1\text{.}\)</span>
 </div>
+</div></article><article class="remark remark-like" id="s_der_rules-8"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span><span class="space"> </span><span class="title">Product and quotient rule.</span>
+</h3>
+<div class="para logical" id="s_der_rules-8-2">
+<div class="para">The product and quotient rules for the derivative might come as somewhat of a surprise. In particular, mark well the following <em class="emphasis">non-equalities</em>:</div>
+<div class="displaymath process-math" id="s_der_rules-8-2-2">
+\begin{align}
+\frac{d}{dx}(f(x)g(x)) \amp \ne f'(x)g'(x) \tag{12.7}\\
+\frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) \amp \ne \frac{f'(x)}{g'(x)}\text{.}\tag{12.8}
+\end{align}
+</div>
+<div class="para">In plain English: it is simply not the case that the derivative of a product is the product of the derivatives; and it is not the case that the derivative of a quotient is the quotient of the derivatives. This of course is in stark contrast to the product and quotient rules for the limit.</div>
 </div></article><article class="example example-like" id="eg_der_rules"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative rules.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative rules.</span>
 </h3>
 <div class="para logical" id="eg_der_rules-2-1">
 <div class="para">Compute a formula for <span class="process-math">\(f'\)</span> for the given <span class="process-math">\(f\text{.}\)</span>
@@ -538,17 +606,18 @@ window.MathJax = {
 </ol>
 </div>
 <div class="solutions"><details id="eg_der_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_rules-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_der_higher_order"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.7</span><span class="period">.</span><span class="space"> </span><span class="title">Higher order derivatives.</span>
-</h3> <div class="para" id="d_der_higher_order-2-1">Let <span class="process-math">\(f\)</span> be a function with derivative <span class="process-math">\(f'=\frac{df}{dx}\text{.}\)</span> Continuing to compute derivatives in succession yields the <dfn class="terminology">higher order</dfn> derivatives of <span class="process-math">\(f\text{.}\)</span> In particular, the <dfn class="terminology">second derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f')\text{,}\)</span> and denoted as <span class="process-math">\(f''\)</span> or <span class="process-math">\(\frac{d^2 f}{dx^2}\text{;}\)</span> and the <dfn class="terminology">third derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f'')\text{,}\)</span> and is denoted <span class="process-math">\(f'''\)</span> or <span class="process-math">\(\frac{d^3 f}{dx^3}\text{.}\)</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Higher order derivatives.</span>
+</h3>
+<div class="para" id="d_der_higher_order-2-1">Let <span class="process-math">\(f\)</span> be a function with derivative <span class="process-math">\(f'=\frac{df}{dx}\text{.}\)</span> Continuing to compute derivatives in succession yields the <dfn class="terminology">higher order</dfn> derivatives of <span class="process-math">\(f\text{.}\)</span> In particular, the <dfn class="terminology">second derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f')\text{,}\)</span> and denoted as <span class="process-math">\(f''\)</span> or <span class="process-math">\(\frac{d^2 f}{dx^2}\text{;}\)</span> and the <dfn class="terminology">third derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f'')\text{,}\)</span> and is denoted <span class="process-math">\(f'''\)</span> or <span class="process-math">\(\frac{d^3 f}{dx^3}\text{.}\)</span>
 </div> <div class="para" id="d_der_higher_order-2-2">More generally, for any <span class="process-math">\(n\geq 1\text{,}\)</span> the <dfn class="terminology"><span class="process-math">\(n\)</span>-th derivative of <span class="process-math">\(f\)</span></dfn> is the result of applying the derivative operation <span class="process-math">\(n\)</span> times in succession, and is denoted <span class="process-math">\(f^{(n)}\)</span> or <span class="process-math">\(\frac{d^n f}{dx^n}\)</span>
 </div></article><article class="example example-like" id="eg_higher_ders"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Higher-order derivatives.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Higher-order derivatives.</span>
 </h3>
 <div class="para" id="eg_higher_ders-2-1">Let <span class="process-math">\(f(x)=x-2x^2\text{.}\)</span> Compute formulas for <span class="process-math">\(f'\text{,}\)</span> <span class="process-math">\(f''\text{,}\)</span> and <span class="process-math">\(f'''\text{.}\)</span>
 </div>
 <div class="solutions"><details id="eg_higher_ders-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_higher_ders-3-1"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-16.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_rate_change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

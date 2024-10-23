@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -438,7 +458,8 @@ window.MathJax = {
 </ol></article><div class="para" id="s_lim_formal-3">As mentioned before, what makes <a href="s_limits_naive.html#d_limit_informal" class="xref" data-knowl="./knowl/xref/d_limit_informal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 2.6: Limit (informal)">Definition 2.6</a> less than rigorous is the use of the vague phrases “arbitrarily close” and “sufficiently close”. The “epsilon-delta” formulation given in <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> is a mathematically precise way of of capturing these notions.</div>
 <article class="definition definition-like" id="d_lim_formal"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Limit (formal).</span>
-</h3> <div class="para logical" id="d_lim_formal-2-1">
+</h3>
+<div class="para logical" id="d_lim_formal-2-1">
 <div class="para">Suppose <span class="process-math">\(f\)</span> is a function defined everywhere on an open interval containing the point <span class="process-math">\(a\in \R\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. We say that the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> exists if there is a value <span class="process-math">\(L\)</span> satisfying the following property: for all <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta &gt; 0\)</span> such that if <span class="process-math">\(0&lt; \abs{x-a}&lt; \delta\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Using logical shorthand:</div>
 <div class="displaymath process-math" id="eq_lim_formal">
 \begin{equation}
@@ -447,7 +468,8 @@ window.MathJax = {
 </div>
 </div></article><article class="remark remark-like" id="rm_def_anat"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Anatomy of a definition.</span>
-</h3> <div class="para logical" id="rm_def_anat-2">
+</h3>
+<div class="para logical" id="rm_def_anat-2">
 <div class="para">
 <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> can come off as forbiddingly technical. This is due to its combination of mathematical and logical details. We endeavor now to unpack and explicate some of these details. We will start with the mathematical nuts and bolts in the interior of the statement and work our way outward through the logical layers.</div>
 <ul class="disc" id="rm_def_anat-2-2">
@@ -494,7 +516,8 @@ window.MathJax = {
 </ul>
 </div></article><article class="remark remark-like" id="s_lim_formal-6"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Challenge and response.</span>
-</h3> <div class="para logical" id="s_lim_formal-6-2">
+</h3>
+<div class="para logical" id="s_lim_formal-6-2">
 <div class="para">It is useful to think of the process of verifying <a href="s_lim_formal.html#d_lim_formal" class="xref" data-knowl="./knowl/xref/d_lim_formal.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 4.1: Limit (formal)">Definition 4.1</a> to establish a limit claim <span class="process-math">\(\lim_{x\to a}f(x)=L\)</span> as a <em class="emphasis">challenge and response</em> type of procedure:</div>
 <ul class="disc" id="s_lim_formal-6-2-4">
 <li id="s_lim_formal-6-2-4-1"><div class="para" id="s_lim_formal-6-2-4-1-1">for each positive <span class="process-math">\(\epsilon\text{,}\)</span> we are challenged to show that for <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{;}\)</span>
@@ -529,7 +552,9 @@ window.MathJax = {
 </h3>
 <div class="para" id="eg_ep_delt_affine-2-1">Let <span class="process-math">\(f(x)=-4x+7\text{.}\)</span> Verify that <span class="process-math">\(\lim\limits_{x\to 1}f(x)=3\)</span> using the epsilon-delta definition of the limit.</div>
 <div class="solutions"><details id="eg_ep_delt_affine-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="eg_ep_delt_affine-3-1">We follow <a href="s_lim_formal.html#proc_epsilon_delta" class="xref" data-knowl="./knowl/xref/proc_epsilon_delta.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 4.4: Epsilon-delta proof for limits">Procedure 4.4</a>.</div> <article class="case" id="eg_ep_delt_affine-3-2"><h4 class="heading">Step 1.</h4> <div class="para logical" id="eg_ep_delt_affine-3-2-2">
+<div class="para" id="eg_ep_delt_affine-3-1">We follow <a href="s_lim_formal.html#proc_epsilon_delta" class="xref" data-knowl="./knowl/xref/proc_epsilon_delta.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 4.4: Epsilon-delta proof for limits">Procedure 4.4</a>.</div>
+<article class="case" id="eg_ep_delt_affine-3-2"><h4 class="heading">Step 1.</h4>
+<div class="para logical" id="eg_ep_delt_affine-3-2-2">
 <div class="para">Treating <span class="process-math">\(\epsilon\)</span> as a fixed arbitrary constant we attempt to solve the inequality <span class="process-math">\(\abs{f(x)-3}&lt; \epsilon\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="eg_ep_delt_affine-3-2-2-3">
@@ -544,12 +569,15 @@ window.MathJax = {
 \amp \iff 1-\frac{\epsilon}{4}&lt; x &lt; 1+\frac{\epsilon}{4}\text{.}
 \end{align*}
 </div>
-</div></article> <article class="case" id="eg_ep_delt_affine-3-3"><h4 class="heading">Step 2.</h4> <div class="para" id="eg_ep_delt_affine-3-3-2">By step 1, we see that the solution <span class="process-math">\(S\)</span> to our starting inequality is the set of <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(1-\frac{\epsilon}{4}&lt; x &lt; 1+\frac{\epsilon}{4}\text{.}\)</span> In other words, <span class="process-math">\(S=(1-\epsilon/4, 1+\epsilon/4)\text{.}\)</span> Thus <span class="process-math">\(S\)</span> itself is of the form <span class="process-math">\((1-\delta, 1+\delta)\text{,}\)</span> where <span class="process-math">\(\delta=\frac{\epsilon}{4}\text{.}\)</span>
-</div></article> <article class="case" id="eg_ep_delt_affine-3-4"><h4 class="heading">Step 3.</h4> <div class="para" id="eg_ep_delt_affine-3-4-2">Thus given any <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> setting <span class="process-math">\(\delta=\frac{\epsilon}{4}\text{,}\)</span> we have <span class="process-math">\(\abs{f(x)-3}&lt; \epsilon\)</span> for all <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(\abs{x-1}&lt; \delta=\epsilon/4\text{.}\)</span> We conclude that <span class="process-math">\(\lim\limits_{x\to 1}f(x)=3\text{.}\)</span>
+</div></article><article class="case" id="eg_ep_delt_affine-3-3"><h4 class="heading">Step 2.</h4>
+<div class="para" id="eg_ep_delt_affine-3-3-2">By step 1, we see that the solution <span class="process-math">\(S\)</span> to our starting inequality is the set of <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(1-\frac{\epsilon}{4}&lt; x &lt; 1+\frac{\epsilon}{4}\text{.}\)</span> In other words, <span class="process-math">\(S=(1-\epsilon/4, 1+\epsilon/4)\text{.}\)</span> Thus <span class="process-math">\(S\)</span> itself is of the form <span class="process-math">\((1-\delta, 1+\delta)\text{,}\)</span> where <span class="process-math">\(\delta=\frac{\epsilon}{4}\text{.}\)</span>
+</div></article><article class="case" id="eg_ep_delt_affine-3-4"><h4 class="heading">Step 3.</h4>
+<div class="para" id="eg_ep_delt_affine-3-4-2">Thus given any <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> setting <span class="process-math">\(\delta=\frac{\epsilon}{4}\text{,}\)</span> we have <span class="process-math">\(\abs{f(x)-3}&lt; \epsilon\)</span> for all <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(\abs{x-1}&lt; \delta=\epsilon/4\text{.}\)</span> We conclude that <span class="process-math">\(\lim\limits_{x\to 1}f(x)=3\text{.}\)</span>
 </div></article>
 </div></details></div></article><article class="project project-like" id="s_lim_formal-10"><h3 class="heading">
 <span class="type">Interactive example</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Visualizing epsilon-delta proofs.</span>
-</h3> <div class="para logical" id="s_lim_formal-10-2">
+</h3>
+<div class="para logical" id="s_lim_formal-10-2">
 <div class="para">The Geogebra interactive below provides a means of visualizing the challenge-response nature of the epsilon-delta proof of a limit claim <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\)</span> in terms of the graph of <span class="process-math">\(f\text{.}\)</span> (The window below is a bit narrow. Go to the <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra page</a><details class="ptx-footnote" aria-live="polite" id="s_lim_formal-10-2-4"><summary class="ptx-footnote__number" title="Footnote 4.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="s_lim_formal-10-2-4"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details> of the interactive for a larger rendition.) We elucidate how to parse this graphical representation.</div>
 <ul class="disc" id="s_lim_formal-10-2-5">
 <li id="s_lim_formal-10-2-5-1"><div class="para" id="s_lim_formal-10-2-5-1-1">The specific <span class="process-math">\(\epsilon\)</span>-challenge is indicated by a horizontal band centered about <span class="process-math">\(y=L\text{.}\)</span>
@@ -559,9 +587,11 @@ window.MathJax = {
 <li id="s_lim_formal-10-2-5-3"><div class="para" id="s_lim_formal-10-2-5-3-1">The game is, given a specific <span class="process-math">\(\epsilon\)</span>-challenge, find an appropriate <span class="process-math">\(\delta\)</span> such that when <span class="process-math">\(x\)</span> is within <span class="process-math">\(\delta\)</span> of <span class="process-math">\(a\text{,}\)</span> the values <span class="process-math">\(f(x)\)</span> are within <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\text{.}\)</span> Visually, this is accomplished when all points <span class="process-math">\((x,f(x))\)</span> on the segment of the graph of <span class="process-math">\(f\)</span> lying in the vertical band about <span class="process-math">\(x=a\)</span> also lie within the horizontal band about <span class="process-math">\(y=L\text{.}\)</span>
 </div></li>
 </ul>
-</div> <figure class="figure figure-like" id="fig_vis_ep_delta"><iframe id="int_geo_ep_delta" width="600" height="450" src="int_geo_ep_delta-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6<span class="period">.</span></span><span class="space"> </span>Visualizing epsilon-delta proofs. Made with <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra</a><details class="ptx-footnote" aria-live="polite" id="fig_vis_ep_delta-1-2"><summary class="ptx-footnote__number" title="Footnote 4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="fig_vis_ep_delta-1-2"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details></figcaption></figure></article><article class="remark remark-like" id="rm_find_delta"><h3 class="heading">
+</div>
+<figure class="figure figure-like" id="fig_vis_ep_delta"><iframe id="int_geo_ep_delta" width="600" height="450" src="int_geo_ep_delta-if.html"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.6<span class="period">.</span></span><span class="space"> </span>Visualizing epsilon-delta proofs. Made with <a class="external" href="https://www.geogebra.org/m/degz8kgk" target="_blank">Geogebra</a><details class="ptx-footnote" aria-live="polite" id="fig_vis_ep_delta-1-2"><summary class="ptx-footnote__number" title="Footnote 4.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="fig_vis_ep_delta-1-2"><code class="code-inline tex2jax_ignore">www.geogebra.org/m/degz8kgk</code></div></details></figcaption></figure></article><article class="remark remark-like" id="rm_find_delta"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Finding <span class="process-math">\(\delta\)</span> such that <span class="process-math">\((a-\delta, a+\delta)\subseteq S\)</span>.</span>
-</h3> <div class="para logical" id="rm_find_delta-2">
+</h3>
+<div class="para logical" id="rm_find_delta-2">
 <div class="para">In the final step of applying <a href="s_lim_formal.html#proc_epsilon_delta" class="xref" data-knowl="./knowl/xref/proc_epsilon_delta.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 4.4: Epsilon-delta proof for limits">Procedure 4.4</a> to a limit statment <span class="process-math">\(\lim\limits_{x\to a}f(x)=L\text{,}\)</span> we usually have found an open interval <span class="process-math">\((c,d)\)</span> containing <span class="process-math">\(a\text{,}\)</span> and then must find a <span class="process-math">\(\delta\)</span> such that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_epsilon_delta.html">
 \begin{equation*}
@@ -584,8 +614,9 @@ d \amp =a+(d-a)
 \end{align*}
 </div>
 <div class="para">are the distances from <span class="process-math">\(a\)</span> to the left and right endpoints of the interval.</div>
-</div> <figure class="figure figure-like" id="fig_delta_interval"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig_delta_interval-2.svg" role="img" class="contained" alt="Visualizing distances to endpoints of interval"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.8<span class="period">.</span></span><span class="space"> </span>Visualizing distances to endpoints of interval</figcaption></figure> <div class="para logical" id="rm_find_delta-4">
+</div>
+<figure class="figure figure-like" id="fig_delta_interval"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/fig_delta_interval-2.svg" role="img" class="contained" alt="Visualizing distances to endpoints of interval"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.8<span class="period">.</span></span><span class="space"> </span>Visualizing distances to endpoints of interval</figcaption></figure><div class="para logical" id="rm_find_delta-4">
 <div class="para">Setting <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\)</span> as the minimum of these distances, we now have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -593,7 +624,8 @@ d \amp =a+(d-a)
 \end{equation*}
 </div>
 <div class="para">as desired.</div>
-</div> <div class="para" id="rm_find_delta-5">Depending on the example, we can sometimes easily determine which of <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> is the minimum, giving us an explicit expression for <span class="process-math">\(\delta\text{.}\)</span> When things are too complicated, however, it is perfectly fine to set <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\text{.}\)</span>
+</div>
+<div class="para" id="rm_find_delta-5">Depending on the example, we can sometimes easily determine which of <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> is the minimum, giving us an explicit expression for <span class="process-math">\(\delta\text{.}\)</span> When things are too complicated, however, it is perfectly fine to set <span class="process-math">\(\delta=\min\{\delta_1,\delta_2\}\text{.}\)</span>
 </div></article><article class="example example-like" id="s_lim_formal-12"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span><span class="space"> </span><span class="title">Epsilon-delta: radical function.</span>
 </h3>
@@ -622,7 +654,9 @@ a&lt; b \iff a^2&lt; b^2
 </div>
 <div class="para">to apply, we need <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> to both be nonnegative. (Example: <span class="process-math">\(-3&lt; -1\text{,}\)</span> but <span class="process-math">\(9\not\lt 1\text{.}\)</span>) To deal with this, we will treat two separate cases: <span class="process-math">\(\epsilon\leq 1\)</span> and <span class="process-math">\(\epsilon&gt; 1\text{.}\)</span>
 </div>
-</div> <article class="case" id="s_lim_formal-12-3-2"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4> <div class="para logical" id="s_lim_formal-12-3-2-2">
+</div>
+<article class="case" id="s_lim_formal-12-3-2"><h4 class="heading">Case: <span class="process-math">\(\epsilon \leq 1\)</span>.</h4>
+<div class="para logical" id="s_lim_formal-12-3-2-2">
 <div class="para">When <span class="process-math">\(\epsilon \leq 1\text{,}\)</span> all terms in the last inequality above are positive, and we may continue on to conclude</div>
 <div class="displaymath process-math" id="s_lim_formal-12-3-2-2-2">
 \begin{align*}
@@ -647,7 +681,8 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 </div>
 <div class="para">Note that since <span class="process-math">\(0&lt; \epsilon\leq 1\text{,}\)</span> both <span class="process-math">\(\delta_1\)</span> and <span class="process-math">\(\delta_2\)</span> are positive. It is clear that <span class="process-math">\(3\in S\text{.}\)</span> Setting <span class="process-math">\(\delta\)</span> to be the <em class="emphasis">minimum</em> of <span class="process-math">\(\delta_1, \delta_2\text{,}\)</span> guarantees that  <span class="process-math">\((3-\delta, 3+\delta)\subseteq S\text{.}\)</span> We conclude that for any positive <span class="process-math">\(\epsilon\leq 1\text{,}\)</span> setting <span class="process-math">\(\delta=\min\{(\delta_1, \delta_2\}\text{,}\)</span> we have <span class="process-math">\(\abs{f(x)-1}&lt; \epsilon\)</span> for all <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(\abs{x-3}&lt; \delta\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="s_lim_formal-12-3-2-3">
+</div>
+<div class="para logical" id="s_lim_formal-12-3-2-3">
 <div class="para">Note: in fact, it is not difficult to see in this case that</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -655,7 +690,8 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 \end{equation*}
 </div>
 <div class="para">and so we could have more explicitly set <span class="process-math">\(\delta=\epsilon(2-\epsilon)\)</span> in this case. Nonetheless, declaring <span class="process-math">\(\delta=\min\{\delta_1, \delta_2\}\)</span> works just as well here, as well as in other examples.</div>
-</div></article> <article class="case" id="s_lim_formal-12-3-3"><h4 class="heading">Case: <span class="process-math">\(\epsilon&gt; 1\)</span>.</h4> <div class="para logical" id="s_lim_formal-12-3-3-2">
+</div></article><article class="case" id="s_lim_formal-12-3-3"><h4 class="heading">Case: <span class="process-math">\(\epsilon&gt; 1\)</span>.</h4>
+<div class="para logical" id="s_lim_formal-12-3-3-2">
 <div class="para">Now assume <span class="process-math">\(\epsilon\geq 1\text{.}\)</span> We need to find a <span class="process-math">\(\delta\)</span> such that <span class="process-math">\(0&lt; \abs{x-3}&lt; \delta\)</span> implies <span class="process-math">\(\abs{f(x)-1}&lt; \epsilon\text{.}\)</span> From the previous case (<span class="process-math">\(\epsilon\leq 1\)</span>), we know there is a <span class="process-math">\(\delta\)</span> such that <span class="process-math">\(0&lt; \abs{x-3}&lt; \delta\)</span> implies <span class="process-math">\(\abs{f(x)-1}&lt; 1\text{.}\)</span> But since <span class="process-math">\(\epsilon &gt; 1\text{,}\)</span> we have</div>
 <div class="displaymath process-math" id="s_lim_formal-12-3-3-2-10">
 \begin{align*}
@@ -664,7 +700,7 @@ S=(3-\epsilon(2-\epsilon), 3+\epsilon(2 +\epsilon))=(3-\delta_1, 3+\delta_2)\tex
 \end{align*}
 </div>
 <div class="para">as desired.</div>
-</div></article> <div class="para logical" id="s_lim_formal-12-3-4">
+</div></article><div class="para logical" id="s_lim_formal-12-3-4">
 <div class="para">Our two cases, taken together, show that for all <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt; 0\)</span> such that</div>
 <div class="displaymath process-math">
 \begin{equation*}

@@ -246,6 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
+#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
+#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -412,11 +424,19 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative at a point</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative function</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Differentiation rules</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-16.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-17.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -530,8 +550,10 @@ c^2-3c+2=0\text{,}
 <div class="para" id="th_ivt-2-1">Let <span class="process-math">\(f\)</span> be continuous on the closed interval <span class="process-math">\([a,b]\text{.}\)</span> If <span class="process-math">\(f(a)\ne f(b)\text{,}\)</span> then given any value <span class="process-math">\(d\in \R\)</span> lying strictly between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> there is an element <span class="process-math">\(c\in (a,b)\)</span> such that <span class="process-math">\(f(c)=d\text{.}\)</span>
 </div></article><article class="remark remark-like" id="rm_IVT_solutions"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span><span class="space"> </span><span class="title">IVT and existence of solutions.</span>
-</h4> <div class="para" id="rm_IVT_solutions-2">A common application of the IVT is to prove that an equation of the form <span class="process-math">\(f(x)=d\)</span> has a solution in a given open interval <span class="process-math">\((a,b)\text{.}\)</span> Indeed, if <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> and if <span class="process-math">\(d\)</span> lies strictly between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> then the IVT guarantees the existence of an element <span class="process-math">\(c\in (a,b)\)</span> satisfying <span class="process-math">\(f(c)=d\text{.}\)</span>
-</div> <div class="para" id="rm_IVT_solutions-3">Interestingly, however, this method does not actually <em class="emphasis">provide</em> the solution <span class="process-math">\(c\text{;}\)</span> it only tells us that it exists. This is probably the first time you have encountered what is called a “nonconstructive proof” in mathematics. The theorem tells us that the value <span class="process-math">\(c\)</span> exists (assuming the necessary conditions hold), but does not explicitly tell us what <span class="process-math">\(c\)</span> is.</div></article><article class="example example-like" id="eg_ivt_sine"><h4 class="heading">
+</h4>
+<div class="para" id="rm_IVT_solutions-2">A common application of the IVT is to prove that an equation of the form <span class="process-math">\(f(x)=d\)</span> has a solution in a given open interval <span class="process-math">\((a,b)\text{.}\)</span> Indeed, if <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> and if <span class="process-math">\(d\)</span> lies strictly between <span class="process-math">\(f(a)\)</span> and <span class="process-math">\(f(b)\text{,}\)</span> then the IVT guarantees the existence of an element <span class="process-math">\(c\in (a,b)\)</span> satisfying <span class="process-math">\(f(c)=d\text{.}\)</span>
+</div>
+<div class="para" id="rm_IVT_solutions-3">Interestingly, however, this method does not actually <em class="emphasis">provide</em> the solution <span class="process-math">\(c\text{;}\)</span> it only tells us that it exists. This is probably the first time you have encountered what is called a “nonconstructive proof” in mathematics. The theorem tells us that the value <span class="process-math">\(c\)</span> exists (assuming the necessary conditions hold), but does not explicitly tell us what <span class="process-math">\(c\)</span> is.</div></article><article class="example example-like" id="eg_ivt_sine"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sine equation.</span>
 </h4>
 <div class="para" id="eg_ivt_sine-2-1">Prove that the equation <span class="process-math">\(\sin x=\frac{7}{8}\)</span> has a solution that lies in the interval <span class="process-math">\((\pi/6, \pi/2)\text{.}\)</span>
@@ -588,7 +610,8 @@ x \amp f(x) \\
 </div>
 <div class="para">the IVT now implies there is a <span class="process-math">\(c\in (-2,-1)\)</span> such that <span class="process-math">\(f(c)=0\text{.}\)</span>
 </div>
-</div> <div class="para" id="eg_ivt_poly-3-2">Observe that this not only shows that <span class="process-math">\(f\)</span> has a real root, it tells us further that there is a root lying between -2 and -1. Are there any other roots of this function? Further investigation is required. We will have the tools to answer this later.</div>
+</div>
+<div class="para" id="eg_ivt_poly-3-2">Observe that this not only shows that <span class="process-math">\(f\)</span> has a real root, it tells us further that there is a root lying between -2 and -1. Are there any other roots of this function? Further investigation is required. We will have the tools to answer this later.</div>
 </div></details></div></article><article class="example example-like" id="eg_ivt_trig"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.7</span><span class="period">.</span><span class="space"> </span><span class="title">Complicated equation.</span>
 </h4>
@@ -629,7 +652,8 @@ x\amp f(x)\\
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([-\pi/2, 0]\text{,}\)</span> the IVT now implies there is an element <span class="process-math">\(c\in (\pi/2, 0)\)</span> satisfying <span class="process-math">\(f(c)=0\text{.}\)</span> Thus we have shown, not only that there is a solution, but one lying in this particular interval.</div>
-</div> <div class="para logical" id="eg_ivt_trig-3-2">
+</div>
+<div class="para logical" id="eg_ivt_trig-3-2">
 <div class="para">Note that the same reasoning tells us there is another solution between <span class="process-math">\(0\)</span> and <span class="process-math">\(\pi/2\text{.}\)</span>  That is the inequality</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -637,7 +661,8 @@ f(0)&gt; 0 &gt; f(\pi/2)
 \end{equation*}
 </div>
 <div class="para">implies there is another solution <span class="process-math">\(d\)</span> lying between <span class="process-math">\(0\)</span> and <span class="process-math">\(\pi/2\text{.}\)</span> Thus, we are able to roughly locate two solutions to the original equation, using the IVT twice.</div>
-</div> <div class="para" id="eg_ivt_trig-3-3">Note: since the given function happens to be <em class="emphasis">even</em> (<span class="process-math">\(f(-x)=f(x)\)</span>), from our first solution <span class="process-math">\(c\)</span> lying in <span class="process-math">\((-\pi/2, 0)\)</span> we obtain a second solution <span class="process-math">\(-c\)</span> lying in <span class="process-math">\((0,\pi/2)\text{.}\)</span>
+</div>
+<div class="para" id="eg_ivt_trig-3-3">Note: since the given function happens to be <em class="emphasis">even</em> (<span class="process-math">\(f(-x)=f(x)\)</span>), from our first solution <span class="process-math">\(c\)</span> lying in <span class="process-math">\((-\pi/2, 0)\)</span> we obtain a second solution <span class="process-math">\(-c\)</span> lying in <span class="process-math">\((0,\pi/2)\text{.}\)</span>
 </div>
 </div></details></div></article><div class="para logical" id="ss_ivt-8">
 <div class="para">Recall that the range of a function <span class="process-math">\(f\colon D\rightarrow \R\)</span> is the set of all outputs of <span class="process-math">\(f\text{:}\)</span>
@@ -664,7 +689,8 @@ f(0)&gt; 0 &gt; f(\pi/2)
 </div>
 <div class="para">for all <span class="process-math">\(x\in \R\text{.}\)</span> Note that so far this only tells us that the outputs of <span class="process-math">\(\sin\)</span> form a subset of <span class="process-math">\([-1,1]\text{:}\)</span> that is, this only tells us that <span class="process-math">\(\range f\subseteq [-1,1]\text{.}\)</span> To show this set inclusion is in fact a set <em class="emphasis">equality</em>, we need to show that given any <span class="process-math">\(b\in [-1,1]\text{,}\)</span> <span class="process-math">\(b\in \range f\text{:}\)</span> i.e., given any <span class="process-math">\(b\in [-1,1]\text{,}\)</span> there is an <span class="process-math">\(a\in \R\)</span> such that <span class="process-math">\(\sin(a)=b\text{.}\)</span>
 </div>
-</div> <div class="para logical" id="ss_ivt-9-3-2">
+</div>
+<div class="para logical" id="ss_ivt-9-3-2">
 <div class="para">To this end, note that <span class="process-math">\(\sin(-\pi/2)=-1\)</span> and <span class="process-math">\(\sin(\pi/2)=1\text{.}\)</span> Thus <span class="process-math">\(-1,1\in \range f\text{.}\)</span> Furthermore given any <span class="process-math">\(b\in (-1,1)\text{,}\)</span> since <span class="process-math">\(\sin\)</span> is continuous on <span class="process-math">\([-\pi/2, \pi/2]\text{,}\)</span> and since</div>
 <div class="displaymath process-math">
 \begin{equation*}
