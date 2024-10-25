@@ -255,9 +255,15 @@ window.MathJax = {
 #eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
 #eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
 #eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
-#eg_marginal-2-2 { counter-set: eg_marginal-2-2 0; }
-#eg_marginal-2-2 > li::marker { content: ""counter(eg_marginal-2-2,decimal)"."; }
-#eg_marginal-2-2 > li { counter-increment: eg_marginal-2-2; }
+#eg_dynamics_drone-3-1-1 { counter-set: eg_dynamics_drone-3-1-1 0; }
+#eg_dynamics_drone-3-1-1 > li::marker { content: ""counter(eg_dynamics_drone-3-1-1,decimal)"."; }
+#eg_dynamics_drone-3-1-1 > li { counter-increment: eg_dynamics_drone-3-1-1; }
+#eg_marginal-2-1-7 { counter-set: eg_marginal-2-1-7 0; }
+#eg_marginal-2-1-7 > li::marker { content: ""counter(eg_marginal-2-1-7,decimal)"."; }
+#eg_marginal-2-1-7 > li { counter-increment: eg_marginal-2-1-7; }
+#eg_marginal-3-1-1 { counter-set: eg_marginal-3-1-1 0; }
+#eg_marginal-3-1-1 > li::marker { content: ""counter(eg_marginal-3-1-1,decimal)"."; }
+#eg_marginal-3-1-1 > li { counter-increment: eg_marginal-3-1-1; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -592,7 +598,44 @@ h=h(t)=t^3-6t^2+9t\text{.}
 <li id="eg_dynamics_drone-2-1-4-4"><div class="para" id="eg_dynamics_drone-2-1-4-4-1">Compute (a) the displacement of the drone over the time interval <span class="process-math">\([0,3]\text{,}\)</span> and (b) the total distance traveled.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_dynamics_drone-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_dynamics_drone-3-1"></div></div></details></div></article></section><section class="subsection" id="ss_marginal_cost"><h3 class="heading hide-type">
+<div class="solutions"><details id="eg_dynamics_drone-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_dynamics_drone-3-1"><ol class="decimal" id="eg_dynamics_drone-3-1-1">
+<li id="eg_dynamics_drone-3-1-1-1"><div class="para logical" id="eg_dynamics_drone-3-1-1-1-1">
+<div class="para">We compute</div>
+<div class="displaymath process-math" id="eg_dynamics_drone-3-1-1-1-1-1">
+\begin{align*}
+v(t) \amp = \frac{dh}{dt}\\
+\amp = 3x^2-12x+9\\
+a(t) \amp = \frac{dv}{dt}\\
+\amp = 6x-12\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="eg_dynamics_drone-3-1-1-2"><div class="para logical" id="eg_dynamics_drone-3-1-1-2-1">
+<div class="para">The drone ascending or descending is equivalent to the velocity <span class="process-math">\(v\)</span> being positive or negative. It will help here to factor our expression of <span class="process-math">\(v(t)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+v(t)=3(x^2-4x+3)=3(x-3)(x-1)\text{.}
+\end{equation*}
+</div>
+<div class="para">From this we can easily sketch a graph of <span class="process-math">\(v(t)\)</span> as follows: <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_graph_v.svg" role="img" class="contained" alt="Graph of velocity function"></div> And from the graph of <span class="process-math">\(v\)</span> we see easily that <span class="process-math">\(v(t)\)</span> is positive on <span class="process-math">\([0,1]\)</span> and negative on <span class="process-math">\([1,3]\text{.}\)</span> Thus the drone ascends for the first second, then descends for the remaining two seconds.</div>
+</div></li>
+<li id="eg_dynamics_drone-3-1-1-3"><div class="para" id="eg_dynamics_drone-3-1-1-3-1">At time <span class="process-math">\(t=3\text{,}\)</span> the height of the drone is <span class="process-math">\(h(3)=0\)</span> and the velocity is <span class="process-math">\(v(3)=0\text{.}\)</span> This means that the downward velocity of the drone has slowed to 0 m per s upon impact. Dudley landed the drone safely, apparently!</div></li>
+<li id="eg_dynamics_drone-3-1-1-4">
+<div class="para logical" id="eg_dynamics_drone-3-1-1-4-1">
+<div class="para">The total displacement <span class="process-math">\(\Delta h\)</span> is given as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(3)-h(0)=0-0=0\text{.}
+\end{equation*}
+</div>
+<div class="para">To compute the total distance traveled, we must separate the interval <span class="process-math">\([0,3]\)</span> into the separate intervals where the drone ascends and descends. The basic principle here is that if movement is always in the same direction (up or down in our case) over a certain time interval, then displacement is equal to distance traveled.</div>
+</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-2">Over the time interval <span class="process-math">\([0,1]\)</span> the drone ascends from a height <span class="process-math">\(h(0)=0\)</span> meters to a height of <span class="process-math">\(h(1)=4\)</span> meters. Since the drone is always moving the same direction here, the total distance traveled over this time interval is <span class="process-math">\(4\)</span> meters.</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-3">Over the time interval <span class="process-math">\([1,3]\)</span> the drone descends from a height of <span class="process-math">\(h(1)=4\)</span> meters, to a height of <span class="process-math">\(h(0)=0\)</span> meters. Again, since the drone is always moving in the same direction, the distance traveled over this time interval is 4 meters.</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-4">We conclude that in sum the drone has traveled a distance of <span class="process-math">\(8=4+4\)</span> meters.</div>
+</li>
+</ol></div></div></details></div></article></section><section class="subsection" id="ss_marginal_cost"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Rates of change in economics</span>
 </h3>
 <div class="para" id="ss_marginal_cost-2">Derivative play a crucial role in economics, where this notion is often described in that field’s particular jargon as some variety of <em class="emphasis">marginal</em>.</div>
@@ -607,23 +650,91 @@ h=h(t)=t^3-6t^2+9t\text{.}
 <div class="para">Suppose the cost <span class="process-math">\(C\)</span> (in dollars) for a farmer to produce <span class="process-math">\(q\)</span> barrels of milk on a given day is given by</div>
 <div class="displaymath process-math">
 \begin{equation*}
-C=f(q)=100+10q-\frac{q^2}{100}+\frac{b^3}{250}\text{.}
+C=C(b)=100+10b-\frac{b^2}{100}+\frac{b^3}{250}\text{.}
 \end{equation*}
 </div>
-<div class="para">Suppose further that farmer can charge a price <span class="process-math">\(P\)</span> of</div>
+<div class="para">Suppose further that farmer can charge a price <span class="process-math">\(p=p(b)\)</span> of</div>
 <div class="displaymath process-math">
 \begin{equation*}
-P=\frac{20000}{100+b} \text{ dollar per barrel}
+p(b)=\frac{20000}{100+b} \text{ dollar per barrel}
 \end{equation*}
 </div>
 <div class="para">when producing <span class="process-math">\(b\)</span> barrels of milk.</div>
-</div> <ol class="decimal" id="eg_marginal-2-2">
-<li id="eg_marginal-2-2-1"><div class="para" id="eg_marginal-2-2-1-1">Determine the marginal cost of producing 100 barrels of milk.</div></li>
-<li id="eg_marginal-2-2-2"><div class="para" id="eg_marginal-2-2-2-1">Determine the marginal profit of producing 100 barrels of milk.</div></li>
-<li id="eg_marginal-2-2-3"><div class="para" id="eg_marginal-2-2-3-1">
-<em class="emphasis">Estimate</em> the profit of of producing 103 barrels of milk.</div></li>
+<ol class="decimal" id="eg_marginal-2-1-7">
+<li id="eg_marginal-2-1-7-1"><div class="para" id="eg_marginal-2-1-7-1-1">Determine the marginal cost of producing 100 barrels of milk, and give an easy to understand interpretation of what this means.</div></li>
+<li id="eg_marginal-2-1-7-2"><div class="para" id="eg_marginal-2-1-7-2-1">Determine the marginal profit of producing 100 barrels of milk.</div></li>
+<li id="eg_marginal-2-1-7-3"><div class="para" id="eg_marginal-2-1-7-3-1">
+<em class="emphasis">Estimate</em> the change in profit that would result in going from 100 barrels  a day to 103 barrels of day.</div></li>
 </ol>
-<div class="solutions"><details id="eg_marginal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_marginal-3-1"></div></div></details></div></article></section></section></div>
+</div>
+<div class="solutions"><details id="eg_marginal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_marginal-3-1"><ol class="decimal" id="eg_marginal-3-1-1">
+<li id="eg_marginal-3-1-1-1"><div class="para logical" id="eg_marginal-3-1-1-1-1">
+<div class="para">By definition, marginal cost (with respect to barrels $b$ produced) is given as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dC}{db}=C'(b)=10-\frac{b}{50}+\frac{3b^2}{250} \text{ dollars per barrel}\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dC}{db}\Bigr\vert_{b=100}=f'(100)=10-2+\frac{30000}{250}=128 \text{ dollars per barrel}\text{.}
+\end{equation*}
+</div>
+<div class="para">This tells us that as the farmer steps milk production from <span class="process-math">\(100\)</span> barrels, the cost increases at a rate of 128 dollars per barrel.</div>
+</div></li>
+<li id="eg_marginal-3-1-1-2"><div class="para logical" id="eg_marginal-3-1-1-2-1">
+<div class="para">Let <span class="process-math">\(R=R(b)\)</span> be the revenue earned when producing <span class="process-math">\(b\)</span> barrels of milk, under that assumption that all barrels will be purchased. We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R(b)=\underset{\text{amt. sold}}{b}\cdot \underset{\text{price}}{p(b)}=\frac{20000b}{100+b}\text{.}
+\end{equation*}
+</div>
+<div class="para">Lastly, since profit is <span class="process-math">\(P=P(b)\)</span> is defined as revenue minus cost, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(b)=R(b)-C(b)
+\end{equation*}
+</div>
+<div class="para">and thus marginal profit is</div>
+<div class="displaymath process-math" id="eg_marginal-3-1-1-2-1-6">
+\begin{align*}
+\frac{dP}{db} \amp = R'(b)-C'(b)\\
+\amp = \frac{(20000b)'(100+b)-20000b(100+b)'}{(100+b)^2}-(10-\frac{q}{50}+\frac{3q^2}{250}) \amp (\text{quot. rule}, C'(b))\\
+\amp = \frac{2000000}{(100+b)^2}-(10-\frac{q}{50}+\frac{3q^2}{250})\text{.}
+\end{align*}
+</div>
+<div class="para">The marginal profit at a production level of 100 barrels is thus</div>
+<div class="displaymath process-math" id="eg_marginal-3-1-1-2-1-7">
+\begin{align*}
+P'(100) \amp = \frac{2\times 10^6}{4\times 10^4}-C'(100)\\
+\amp = 50-128\\
+\amp = -78 \text{ dollars per barrel}\text{.}
+\end{align*}
+</div>
+<div class="para">This tells us that increasing the production from 100 barrels results in the farmer’s profit decreasing at a rate of 78 dollars per barrel. What’s going on here is that although revenue will increase by increasing production, the rate at which it increases is less than the rate at which cost increases.</div>
+</div></li>
+<li id="eg_marginal-3-1-1-3">
+<div class="para logical" id="eg_marginal-3-1-1-3-1">
+<div class="para">
+<em class="emphasis">Assuming</em> that the rate of change of profit is <em class="emphasis">constant</em>, equal to <span class="process-math">\(-78\)</span> dollars per barrel, for production levels near 100 barrels, as we increase our production from 100 barrels, the profit decreases at a constant rate of 78 dollars per barrel. Thus we estimate that profit would decrease by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+3\cdot 78=234
+\end{equation*}
+</div>
+<div class="para">dollars if we increase production from 100 to 103 barrels.</div>
+</div>
+<div class="para logical" id="eg_marginal-3-1-1-3-2">
+<div class="para">The reason this is an <em class="emphasis">estimate</em> and not necessarily the <em class="emphasis">exact</em> change in profit, is that our simplifying assumption need not be the case! That is, the rate of profit <span class="process-math">\(P'(b)\)</span> is not necessarily constant as a function of <span class="process-math">\(b\text{.}\)</span> Indeed, looking at the formula above, it most definitely is not in our case! And in fact, using our formula for <span class="process-math">\(P(b)\)</span> we can compute <span class="process-math">\(\Delta P\)</span> exactly as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P(103)-P(100)=-\frac{25074027}{101500}\approx -247.03 \text{ dollars}\text{.}
+\end{equation*}
+</div>
+</div>
+</li>
+</ol></div></div></details></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_der_rules.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-17.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
