@@ -97,7 +97,7 @@
         </statement>
         <solution>
         <p>
-        
+            
         </p>
         </solution>
         </example>
@@ -215,7 +215,7 @@
             P=\frac{20000}{100+b} \text{ dollar per barrel}
         </me>
         when producing <m>b</m> barrels of milk. 
-        </p>
+        
         <ol>
             <li>
                 <p>
@@ -233,6 +233,7 @@
                 </p>
             </li>
         </ol>
+    </p>
         </statement>
         <solution>
         <p>
