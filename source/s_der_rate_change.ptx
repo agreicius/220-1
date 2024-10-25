@@ -179,7 +179,60 @@
         </statement>
         <solution>
         <p>
-        
+            <ol>
+                <li>
+                    <p>
+                        We compute
+                        <md>
+                            <mrow>v(t) \amp = \frac{dh}{dt}</mrow>
+                            <mrow> \amp = 3x^2-12x+9</mrow>
+                            <mrow>a(t) \amp = \frac{dv}{dt}</mrow>
+                            <mrow> \amp = 6x-12</mrow>
+                        </md>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The drone ascending or descending is equivalent to the velocity <m>v</m> being positive or negative. It will help here to factor our expression of <m>v(t)</m>:
+                        <me>
+                            v(t)=3(x^2-4x+3)=3(x-3)(x-1)
+                        </me>.
+                        From this we can easily sketch a graph of <m>v(t)</m> as follows:
+                        <image xml:id="im_graph_v" width="70%">
+                            <shortdescription>Graph of velocity function</shortdescription>
+                            <sageplot>
+                                f=plot(3*(x-1)*(x-3),x,0,3.1, axes_labels=["$t$","$v$"])
+                                t1=text(r"$v=v(t)$",(1,6),fontsize=16, color="black")
+                                f+t1
+                            </sageplot>
+                        </image>
+                        And from the graph of <m>v</m> we see easily that <m>v(t)</m> is positive on <m>[0,1]</m> and negative on <m>[1,3]</m>. Thus the drone ascends for the first second, then descends for the remaining two seconds.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        At time <m>t=3</m>, the height of the drone is <m>h(3)=0</m> and the velocity is <m>v(3)=0</m>. This means that the downward velocity of the drone has slowed to 0 m per s upon impact. Dudley landed the drone safely, apparently! 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        The total displacement <m>\Delta h</m> is given as 
+                        <me>
+                            h(3)-h(0)=0-0=0
+                        </me>.
+                        To compute the total distance traveled, we must separate the interval <m>[0,3]</m> into the separate intervals where the drone ascends and descends. The basic principle here is that if movement is always in the same direction (up or down in our case) over a certain time interval, then displacement is equal to distance traveled. 
+                    </p>
+                    <p>
+                        Over the time interval <m>[0,1]</m> the drone ascends from a height <m>h(0)=0</m> meters to a height of <m>h(1)=4</m> meters. Since the drone is always moving the same direction here, the total distance traveled over this time interval is <m>4</m> meters.  
+                    </p>
+                    <p>
+                        Over the time interval <m>[1,3]</m> the drone descends from a height of <m>h(1)=4</m> meters, to a height of <m>h(0)=0</m> meters. Again, since the drone is always moving in the same direction, the distance traveled over this time interval is 4 meters. 
+                    </p>
+                    <p>
+                        We conclude that in sum the drone has traveled a distance of <m>8=4+4</m> meters. 
+                    </p>
+                </li>
+            </ol>
         </p>
         </solution>
         </example>
@@ -208,18 +261,18 @@
         <p>
         Suppose the cost <m>C</m> (in dollars) for a farmer to produce <m>q</m> barrels of milk on a given day is given by 
         <me>
-            C=f(q)=100+10q-\frac{q^2}{100}+\frac{b^3}{250}
+            C=C(b)=100+10b-\frac{b^2}{100}+\frac{b^3}{250}
         </me>. 
-        Suppose further that farmer can charge a price <m>P</m> of  
+        Suppose further that farmer can charge a price <m>p=p(b)</m> of  
         <me>
-            P=\frac{20000}{100+b} \text{ dollar per barrel}
+            p(b)=\frac{20000}{100+b} \text{ dollar per barrel}
         </me>
         when producing <m>b</m> barrels of milk. 
         
         <ol>
             <li>
                 <p>
-                    Determine the marginal cost of producing 100 barrels of milk. 
+                    Determine the marginal cost of producing 100 barrels of milk, and give an easy to understand interpretation of what this means. 
                 </p>
             </li>
             <li>
@@ -229,7 +282,7 @@
             </li>
             <li>
                 <p>
-                    <em>Estimate</em> the profit of of producing 103 barrels of milk. 
+                    <em>Estimate</em> the change in profit that would result in going from 100 barrels  a day to 103 barrels of day. 
                 </p>
             </li>
         </ol>
@@ -237,7 +290,62 @@
         </statement>
         <solution>
         <p>
-        
+        <ol>
+            <li>
+                <p>
+                    By definition, marginal cost (with respect to barrels $b$ produced) is given as 
+                    <me>
+                        \frac{dC}{db}=C'(b)=10-\frac{b}{50}+\frac{3b^2}{250} \text{ dollars per barrel}
+                    </me>.
+                    In particular, we have 
+                    <me>
+                        \frac{dC}{db}\Bigr\vert_{b=100}=f'(100)=10-2+\frac{30000}{250}=128 \text{ dollars per barrel}
+                    </me>. 
+                    This tells us that as the farmer steps milk production from <m>100</m> barrels, the cost increases at a rate of 128 dollars per barrel. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Let <m>R=R(b)</m> be the revenue earned when producing <m>b</m> barrels of milk, under that assumption that all barrels will be purchased. We have 
+                    <me>
+                        R(b)=\underset{\text{amt. sold}}{b}\cdot \underset{\text{price}}{p(b)}=\frac{20000b}{100+b}
+                    </me>.
+                    Lastly, since profit is <m>P=P(b)</m> is defined as revenue minus cost, we have 
+                    <me>
+                        P(b)=R(b)-C(b)
+                    </me>
+                    and thus marginal profit is 
+                    <md>
+                        <mrow>\frac{dP}{db} \amp = R'(b)-C'(b)</mrow>
+                        <mrow> \amp = \frac{(20000b)'(100+b)-20000b(100+b)'}{(100+b)^2}-(10-\frac{q}{50}+\frac{3q^2}{250}) \amp (\text{quot. rule}, C'(b))</mrow>
+                        <mrow> \amp = \frac{2000000}{(100+b)^2}-(10-\frac{q}{50}+\frac{3q^2}{250})</mrow>
+                    </md>.
+                    The marginal profit at a production level of 100 barrels is thus 
+                    <md>
+                        <mrow>P'(100) \amp = \frac{2\times 10^6}{4\times 10^4}-C'(100)</mrow>
+                        <mrow> \amp = 50-128</mrow>
+                        <mrow> \amp = -78 \text{ dollars per barrel}</mrow>
+                    </md>.
+                    This tells us that increasing the production from 100 barrels results in the farmer's profit decreasing at a rate of 78 dollars per barrel. What's going on here is that although revenue will increase by increasing production, the rate at which it increases is less than the rate at which cost increases. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>Assuming</em> that the rate of change of profit is <em>constant</em>, equal to <m>-78</m> dollars per barrel, for production levels near 100 barrels, as we increase our production from 100 barrels, the profit decreases at a constant rate of 78 dollars per barrel. Thus we estimate that profit would decrease by 
+                    <me>
+                        3\cdot 78=234
+                    </me>
+                    dollars if we increase production from 100 to 103 barrels.
+                </p>
+                <p>
+                    The reason this is an <em>estimate</em> and not necessarily the <em>exact</em> change in profit, is that our simplifying assumption need not be the case! That is, the rate of profit <m>P'(b)</m> is not necessarily constant as a function of <m>b</m>. Indeed, looking at the formula above, it most definitely is not in our case! And in fact, using our formula for <m>P(b)</m> we can compute <m>\Delta P</m> exactly as  
+                    <me>
+                        P(103)-P(100)=-\frac{25074027}{101500}\approx -247.03 \text{ dollars}
+                    </me>.
+                     
+                </p>
+            </li>
+        </ol>
         </p>
         </solution>
         </example>
