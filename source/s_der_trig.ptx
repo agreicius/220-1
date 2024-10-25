@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_der_trig" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivative: trig functions</title>
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Derive derivative formulas for sine and cosine using the limit definition.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Derive derivative formulas for tangent, cotangent, secant, and cosecant from the formulas for sine and cosine, using the quotient rule.                     
+                </p>
+            </li>
+            <li>
+                <p>
+                    Incorporate the new derivative formulas into derivative computations of more complicated functions. 
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    <theorem xml:id="th_der_sin_cos">
+        <title>Derivative formulas: sine and cosine</title>
+        <statement>
+            <p>
+                We have the following derivative formulas: 
+                <md>
+                    <mrow>\frac{d}{dx}\sin x \amp = \cos x \amp \frac{d}{dx}\cos x\amp =-\sin x</mrow>
+                </md>. 
+            </p>
+        </statement>
+    </theorem>
+    <example xml:id="eg_tangent_trig">
+    <title>Tangent lines: sinusoidal</title>
+    <statement>
+    <p>
+    Let <m>f(x)=\cos x-\sin x</m>. 
+    <ol>
+        <li>
+            <p>
+                Find an equation for the tangent line to the graph of <m>f</m> at <m>x=\pi/3</m>.
+            </p>
+        </li>
+        <li>
+            <p>
+                Find all points on the graph of <m>f</m> where the tangent line is horizontal. 
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    <definition xml:id="d_trig_functions">
+    <title>Trigonometric functions</title>
+    <statement>
+    <p>
+        We define the <term>tangent</term> (<m>\tan</m>), <term>cotangent</term> (<m>\cot</m>), <term>secant</term> (<m>\sec</m>), and <term>cosecant</term> (<m>\csc</m>) functions as follows:
+        <md>
+            <mrow>\tan x \amp = \frac{\sin x}{\cos x} \amp \cot x\amp =\frac{\cos x}{\sin x} </mrow>
+            <mrow>\sec x \amp =\frac{1}{\cos x} \amp \csc x\amp =\frac{1}{\sin x} </mrow>
+        </md>.
+    </p>
+    </statement>
+    </definition>
+    <theorem xml:id="th_der_trig">
+        <title>Derivative formulas: trig functions</title>
+        <statement>
+            <p>
+               We have the following derivative formulas: 
+               <md>
+                <mrow>\frac{d}{dx}\sin x \amp = \cos x \amp \frac{d}{dx}\cos x\amp =-\sin x</mrow>
+                <mrow>\frac{d}{dx}\tan x \amp = \sec^2 x \amp \frac{d}{dx}\cot x\amp =-\csc^2 x</mrow>
+                <mrow>\frac{d}{dx}\sec x \amp = \sec x\tan x \amp \frac{d}{dx}\csc x\amp =-\csc x\cot x</mrow>
+               </md>.
+            </p>
+        </statement>
+    </theorem>
+    
+    
+    
+    
+
+</section>
