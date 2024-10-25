@@ -1396,6 +1396,60 @@ var ptx_lunr_docs = [
   "body": " Marginals   Suppose the cost (in dollars) for a farmer to produce barrels of milk on a given day is given by . Suppose further that farmer can charge a price of when producing barrels of milk.   Determine the marginal cost of producing 100 barrels of milk, and give an easy to understand interpretation of what this means.    Determine the marginal profit of producing 100 barrels of milk.     Estimate the change in profit that would result in going from 100 barrels a day to 103 barrels of day.          By definition, marginal cost (with respect to barrels $b$ produced) is given as . In particular, we have . This tells us that as the farmer steps milk production from barrels, the cost increases at a rate of 128 dollars per barrel.    Let be the revenue earned when producing barrels of milk, under that assumption that all barrels will be purchased. We have . Lastly, since profit is is defined as revenue minus cost, we have and thus marginal profit is . The marginal profit at a production level of 100 barrels is thus . This tells us that increasing the production from 100 barrels results in the farmer's profit decreasing at a rate of 78 dollars per barrel. What's going on here is that although revenue will increase by increasing production, the rate at which it increases is less than the rate at which cost increases.     Assuming that the rate of change of profit is constant , equal to dollars per barrel, for production levels near 100 barrels, as we increase our production from 100 barrels, the profit decreases at a constant rate of 78 dollars per barrel. Thus we estimate that profit would decrease by dollars if we increase production from 100 to 103 barrels.  The reason this is an estimate and not necessarily the exact change in profit, is that our simplifying assumption need not be the case! That is, the rate of profit is not necessarily constant as a function of . Indeed, looking at the formula above, it most definitely is not in our case! And in fact, using our formula for we can compute exactly as .      "
 },
 {
+  "id": "s_der_trig",
+  "level": "1",
+  "url": "s_der_trig.html",
+  "type": "Section",
+  "number": "14",
+  "title": "Derivative: trig functions",
+  "body": " Derivative: trig functions     Derive derivative formulas for sine and cosine using the limit definition.    Derive derivative formulas for tangent, cotangent, secant, and cosecant from the formulas for sine and cosine, using the quotient rule.    Incorporate the new derivative formulas into derivative computations of more complicated functions.      Derivative formulas: sine and cosine   We have the following derivative formulas: .     Tangent lines: sinusoidal   Let .   Find an equation for the tangent line to the graph of at .    Find all points on the graph of where the tangent line is horizontal.            Trigonometric functions   We define the tangent ( ), cotangent ( ), secant ( ), and cosecant ( ) functions as follows: .     Derivative formulas: trig functions   We have the following derivative formulas: .    "
+},
+{
+  "id": "s_der_trig-2",
+  "level": "2",
+  "url": "s_der_trig.html#s_der_trig-2",
+  "type": "Objectives",
+  "number": "14",
+  "title": "",
+  "body": "   Derive derivative formulas for sine and cosine using the limit definition.    Derive derivative formulas for tangent, cotangent, secant, and cosecant from the formulas for sine and cosine, using the quotient rule.    Incorporate the new derivative formulas into derivative computations of more complicated functions.    "
+},
+{
+  "id": "th_der_sin_cos",
+  "level": "2",
+  "url": "s_der_trig.html#th_der_sin_cos",
+  "type": "Theorem",
+  "number": "14.1",
+  "title": "Derivative formulas: sine and cosine.",
+  "body": " Derivative formulas: sine and cosine   We have the following derivative formulas: .   "
+},
+{
+  "id": "eg_tangent_trig",
+  "level": "2",
+  "url": "s_der_trig.html#eg_tangent_trig",
+  "type": "Example",
+  "number": "14.2",
+  "title": "Tangent lines: sinusoidal.",
+  "body": " Tangent lines: sinusoidal   Let .   Find an equation for the tangent line to the graph of at .    Find all points on the graph of where the tangent line is horizontal.          "
+},
+{
+  "id": "d_trig_functions",
+  "level": "2",
+  "url": "s_der_trig.html#d_trig_functions",
+  "type": "Definition",
+  "number": "14.3",
+  "title": "Trigonometric functions.",
+  "body": " Trigonometric functions   We define the tangent ( ), cotangent ( ), secant ( ), and cosecant ( ) functions as follows: .   "
+},
+{
+  "id": "th_der_trig",
+  "level": "2",
+  "url": "s_der_trig.html#th_der_trig",
+  "type": "Theorem",
+  "number": "14.4",
+  "title": "Derivative formulas: trig functions.",
+  "body": " Derivative formulas: trig functions   We have the following derivative formulas: .   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
