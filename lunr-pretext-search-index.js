@@ -1450,6 +1450,60 @@ var ptx_lunr_docs = [
   "body": " Derivative formulas: trig functions   We have the following derivative formulas: .   "
 },
 {
+  "id": "s_chain",
+  "level": "1",
+  "url": "s_chain.html",
+  "type": "Section",
+  "number": "15",
+  "title": "Chain rule",
+  "body": " Chain rule     Understand and apply the chain rule for computing derivatives of compositions of functions.    Incorporate the chain rule with our existing rules and formulas to compute derivatives of complicated functions.     Our current list of derivative rules take into account how the derivative operation interacts with various function arithmetic operations: , addition, scalar multiplication, product, quotient. We round out this discussion by considering another very important function operation: namely, function composition.   Chain rule   Assume that the function is defined as the composition of the functions and , so that . If is differentiable at , and is differentiable at , then is differentiable at , and we have . Alternatively, using Leibniz notation, we have .     Chain rule   To compute the derivative of a function that is built from other functions using composition, proceed as follows.   Identify inner function  Identify a function so that for some function . The function might be easily identified as an inner function , or may be a common expression that appears in the definition of .    Assemble ingredients  Compute , where is computed treating simply as a new variable name.    Use chain rule  Compute , making sure to leave your final answer entirely in terms of .        Chain rule   Compute the derivative of the given function. Your answer should be a chain of equalities with steps justified.                               Inflating a balloon   The volume (in cm ) of a spherical inflatable balloon is computed as , where is the radius of the balloon (in cm).   Compute the rate of change of the volume with respect to the radius .    Suppose now that while inflating the balloon, the radius is given by the function . Compute the rate of change of with respect to . Leave your answer in terms of and .    What is the rate of change at time , assuming that the volume at this point is and the rate of inflation at is cm per s?           "
+},
+{
+  "id": "s_chain-2",
+  "level": "2",
+  "url": "s_chain.html#s_chain-2",
+  "type": "Objectives",
+  "number": "15",
+  "title": "",
+  "body": "   Understand and apply the chain rule for computing derivatives of compositions of functions.    Incorporate the chain rule with our existing rules and formulas to compute derivatives of complicated functions.    "
+},
+{
+  "id": "th_chain_rule",
+  "level": "2",
+  "url": "s_chain.html#th_chain_rule",
+  "type": "Theorem",
+  "number": "15.1",
+  "title": "Chain rule.",
+  "body": " Chain rule   Assume that the function is defined as the composition of the functions and , so that . If is differentiable at , and is differentiable at , then is differentiable at , and we have . Alternatively, using Leibniz notation, we have .   "
+},
+{
+  "id": "proc_chain",
+  "level": "2",
+  "url": "s_chain.html#proc_chain",
+  "type": "Procedure",
+  "number": "15.2",
+  "title": "Chain rule.",
+  "body": " Chain rule   To compute the derivative of a function that is built from other functions using composition, proceed as follows.   Identify inner function  Identify a function so that for some function . The function might be easily identified as an inner function , or may be a common expression that appears in the definition of .    Assemble ingredients  Compute , where is computed treating simply as a new variable name.    Use chain rule  Compute , making sure to leave your final answer entirely in terms of .      "
+},
+{
+  "id": "eg_chain_rules",
+  "level": "2",
+  "url": "s_chain.html#eg_chain_rules",
+  "type": "Example",
+  "number": "15.3",
+  "title": "Chain rule.",
+  "body": " Chain rule   Compute the derivative of the given function. Your answer should be a chain of equalities with steps justified.                             "
+},
+{
+  "id": "eg_chain_spher_balloon",
+  "level": "2",
+  "url": "s_chain.html#eg_chain_spher_balloon",
+  "type": "Example",
+  "number": "15.4",
+  "title": "Inflating a balloon.",
+  "body": " Inflating a balloon   The volume (in cm ) of a spherical inflatable balloon is computed as , where is the radius of the balloon (in cm).   Compute the rate of change of the volume with respect to the radius .    Suppose now that while inflating the balloon, the radius is given by the function . Compute the rate of change of with respect to . Leave your answer in terms of and .    What is the rate of change at time , assuming that the volume at this point is and the rate of inflation at is cm per s?          "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
