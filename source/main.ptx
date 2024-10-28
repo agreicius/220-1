@@ -30,6 +30,7 @@
     <xi:include href="s_der_rules.ptx" />
     <xi:include href="s_der_rate_change.ptx" />
     <xi:include href="s_der_trig.ptx" />
+    <xi:include href="s_chain.ptx" />
 
   <!-- </chapter> -->
     

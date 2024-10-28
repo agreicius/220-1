@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_chain" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Chain rule</title>
+
+    <objectives>
+        <ol>
+            <li>
+                <p>
+                    Understand and apply the chain rule for computing derivatives of compositions of functions. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Incorporate the chain rule with our existing rules and formulas to compute derivatives of complicated functions. 
+                </p>
+            </li>
+        </ol>
+    </objectives>
+    <p>
+        Our current list of <xref ref="th_der_rules" text="custom">derivative rules</xref> take into account how the derivative operation interacts with various function arithmetic operations: <eg/>, addition, scalar multiplication, product, quotient. We round out this discussion by considering another very important function operation: namely, function composition. 
+    </p>
+    <theorem xml:id="th_chain_rule">
+        <title>Chain rule</title>
+        
+        <statement>
+           <p>
+           Assume that the function <m>f</m> is defined as the composition of the functions <m>g</m> and <m>u</m>, so that <m>f(x)=g(u(x))</m>. If <m>u</m> is differentiable at <m>x</m>, and <m>g</m> is differentiable at <m>u(x)</m>, then <m>f</m> is differentiable at <m>x</m>, and we have 
+           <mdn>
+            <mrow xml:id="eq_chain_u">f'(x) \amp = g'(u(x))u'(x)</mrow>
+           </mdn>.
+           Alternatively, using Leibniz notation, we have 
+           <mdn>
+            <mrow xml:id="eq_chain_Leib">\frac{df}{dx} \amp = \frac{df}{du}\frac{du}{dx}</mrow>
+           </mdn>.
+        </p>
+        </statement>
+    </theorem>
+    <algorithm xml:id="proc_chain">
+        <title>Chain rule</title>
+        <statement>
+            <p>
+              To compute the derivative of a function <m>f</m> that is built from other functions using composition, proceed as follows. 
+              <ol>
+                <li>
+                    <title>Identify inner function</title>
+                    <p>
+                        Identify a function <m>u=u(x)</m> so that <m>f(x)=g(u(x))</m> for some function <m>g</m>. The function <m>u(x)</m> might be easily identified as an <q>inner function</q>, or may be a common expression that appears in the definition of <m>f</m>. 
+                    </p>
+                </li>
+                <li>
+                    <title>Assemble ingredients</title>
+                    <p>
+                        Compute 
+                        <md>
+                            <mrow>\frac{dg}{du} \amp = g'(u)</mrow>
+                            <mrow>\frac{du}{dx} \amp = u'(x)</mrow>
+                        </md>,
+                        where <m>g'(u)</m> is computed treating <m>u</m> simply as a new variable name.
+                    </p>
+                </li>
+                <li>
+                    <title>Use chain rule</title>
+                    <p>
+                        Compute 
+                        <md>
+                            <mrow>f'(x) \amp = g'(u) u'(x)</mrow>
+                            <mrow> \amp = g'(u(x))u'(x)</mrow>
+                        </md>,
+                        making sure to leave your final answer entirely in terms of <m>x</m>. 
+                    </p>
+                </li>
+              </ol>  
+            </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_chain_rules">
+    <title>Chain rule</title>
+    <statement>
+    <p>
+        Compute the derivative of the given function. Your answer should be a chain of equalities with steps justified. 
+        <ol>
+            <li>
+                <p>
+                    <m>h(s)=\sin(2s)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>f(x)=\frac{1}{x^2+2x+3}</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>g(x)=\sec(\sqrt{x})</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <m>u(t)=(t^3-t+1)^{100}\sqrt{\tan t}</m>
+                </p>
+            </li>
+        </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_chain_spher_balloon">
+    <title>Inflating a balloon</title>
+    <statement>
+    <p>
+    The volume <m>V</m> (in cm<m>^3</m>) of a spherical inflatable balloon is computed as <m>V=\frac{4}{3}\pi r^3</m>, where <m>r</m> is the radius of the balloon (in cm). 
+    <ol>
+        <li>
+            <p>
+                Compute the rate of change of the volume <m>V</m> with respect to the radius <m>r</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                Suppose now that while inflating the balloon, the radius <m>r</m> is given by the function <m>r=h(t)</m>. Compute the rate of change of <m>V</m> with respect to <m>t</m>. Leave your answer in terms of <m>h</m> and <m>h'</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                What is the rate of change at time <m>t_0</m>, assuming that the volume at this point is <m>36000 \pi</m> and the rate of inflation at <m>t_0</m> is <m>0.05</m> cm per s?
+            </p>
+        </li>
+    </ol>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    
+    
+
+</section>
