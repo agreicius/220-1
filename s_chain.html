@@ -246,12 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
 #s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
 #s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
 #s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
 #eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
 #eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
 #eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
 #eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
 #eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
 #eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
@@ -270,6 +276,9 @@ window.MathJax = {
 #eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
 #eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
 #eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
 #s_chain-2-1 { counter-set: s_chain-2-1 0; }
 #s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
 #s_chain-2-1 > li { counter-increment: s_chain-2-1; }
@@ -279,6 +288,9 @@ window.MathJax = {
 #eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
 #eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
 #eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
 #eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
 #eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
 #eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
@@ -497,7 +509,8 @@ f'(x) \amp = g'(u(x))u'(x)\text{.}\tag{15.1}
 \frac{df}{dx} \amp = \frac{df}{du}\frac{du}{dx}\text{.}\tag{15.2}
 \end{align}
 </div>
-</div></article><article class="algorithm theorem-like" id="proc_chain"><h3 class="heading">
+</div></article><div class="para" id="s_chain-5">The main difficulty in using the chain rule is being able to recognize how a given function <span class="process-math">\(f\)</span> can be described as a composition of functions <span class="process-math">\(f(x)=g(u(x))\text{.}\)</span> The procedure below is designed to help you identify the inner function <span class="process-math">\(u\)</span> in this representation. You do not need to use it when computing derivatives with the chain rule, but it may help you get the hang of this technique. See the first computation in <a href="s_chain.html#eg_chain_rules" class="xref" data-knowl="./knowl/xref/eg_chain_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 15.3: Chain rule">Example 15.3</a> for an illustration of <a href="s_chain.html#proc_chain" class="xref" data-knowl="./knowl/xref/proc_chain.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 15.2: Chain rule">Procedure 15.2</a>.</div>
+<article class="algorithm theorem-like" id="proc_chain"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
 </h3>
 <div class="para logical" id="proc_chain-2-1">
@@ -545,7 +558,59 @@ f'(x) \amp = g'(u) u'(x)\\
 <li id="eg_chain_rules-2-1-1-4"><div class="para" id="eg_chain_rules-2-1-1-4-1"><span class="process-math">\(\displaystyle u(t)=(t^3-t+1)^{100}\sqrt{\tan t}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_chain_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_chain_rules-3-1"></div></div></details></div></article><article class="example example-like" id="eg_chain_spher_balloon"><h3 class="heading">
+<div class="solutions"><details id="eg_chain_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_chain_rules-3-1"><ol class="decimal" id="eg_chain_rules-3-1-1">
+<li id="eg_chain_rules-3-1-1-1"><div class="para logical" id="eg_chain_rules-3-1-1-1-1">
+<div class="para">We will illustrate <a href="s_chain.html#proc_chain" class="xref" data-knowl="./knowl/xref/proc_chain.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 15.2: Chain rule">Procedure 15.2</a> for this example. We declare</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_chain.html">
+\begin{equation*}
+u=2s\text{,}
+\end{equation*}
+</div>
+<div class="para">from whence we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_chain.html" id="eg_chain_rules-3-1-1-1-1-3">
+\begin{align*}
+f(s) \amp = \sin u\\
+u'(s) \amp = 2\text{.}
+\end{align*}
+</div>
+<div class="para">We now compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_chain.html" id="eg_chain_rules-3-1-1-1-1-4">
+\begin{align*}
+f'(s) \amp = \frac{d}{du}(\sin u)\cdot u'(s) \amp \text{(chain rule)}\\
+\amp = \cos u\cdot 2\\
+\amp = 2\cos(2s)\text{.}
+\end{align*}
+</div>
+<div class="para">Note that we are careful to leave our final answer entirely in terms of the original variable.</div>
+</div></li>
+<li id="eg_chain_rules-3-1-1-2"><div class="para logical" id="eg_chain_rules-3-1-1-2-1">
+<div class="para">That this is a chain rule computation is more clearly seen after a little algebra:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=\frac{1}{x^2+2x+3}=(x^2+2x+3)^{-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">We now compute</div>
+<div class="displaymath process-math" id="eg_chain_rules-3-1-1-2-1-2">
+\begin{align*}
+f'(x) \amp = (-1)(x^2+2x+3)^{-2}\cdot (x^2+2x+3)' \amp \text{(chain rule)}\\
+\amp = -(x^2+2x+3)^{-2}(2x+2)\\
+\amp = -\frac{2x+2}{x^2+2x+3}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="eg_chain_rules-3-1-1-3"><div class="para logical" id="eg_chain_rules-3-1-1-3-1">
+<div class="para">We compute:</div>
+<div class="displaymath process-math" id="eg_chain_rules-3-1-1-3-1-1">
+\begin{align*}
+u'(t) \amp = \frac{d}{dt}[(t^3-t+1)^{100}]\cdot \sqrt{\tan t}+(t^3-t+1)^{100}\cdot \frac{d}{dt}[(\tan t)^{1/2}] \amp \text{(prod. rule)}\\
+\amp = 100(t^3-t+1)^{99}(t^3-t+1)'+(t^3-t+1)^{100}\cdot \frac{1}{2}(\tan t)^{-1/2}(\tan t)' \amp \text{(chain rule)}\\
+\amp = 100(t^3-t+1)^{99}(3t^2-1)+\frac{1}{2}(t^3-t+1)^{100}(\tan t)^{-1/2}\sec^2 t\\
+\amp = (t^3-t+1)^{99}\left(100(3t^2-1)+\frac{(t^3-t+1)\sec^2 t}{2\sqrt{\tan t}}\right)\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="example example-like" id="eg_chain_spher_balloon"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.4</span><span class="period">.</span><span class="space"> </span><span class="title">Inflating a balloon.</span>
 </h3>
 <div class="para logical" id="eg_chain_spher_balloon-2-1">

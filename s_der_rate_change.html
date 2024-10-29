@@ -246,12 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
 #s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
 #s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
 #s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
 #eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
 #eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
 #eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
 #eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
 #eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
 #eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
@@ -270,6 +276,9 @@ window.MathJax = {
 #eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
 #eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
 #eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
 #s_chain-2-1 { counter-set: s_chain-2-1 0; }
 #s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
 #s_chain-2-1 > li { counter-increment: s_chain-2-1; }
@@ -279,6 +288,9 @@ window.MathJax = {
 #eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
 #eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
 #eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
 #eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
 #eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
 #eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
@@ -540,7 +552,7 @@ f'=\frac{df}{ds}=\frac{dq}{ds}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Height versus age.</span>
 </h4>
 <div class="para logical" id="eg_height_age-2-1">
-<div class="para">Suppose the average height <span class="process-math">\(h\)</span> (in meters) of an individual in a population is given as a function <span class="process-math">\(h=f(a)\)</span> of their age <span class="process-math">\(a\)</span> (in years).</div>
+<div class="para">Suppose the height <span class="process-math">\(h\)</span> (in meters) of individuals in a population is modeled as a function <span class="process-math">\(h=f(a)\)</span> of their age <span class="process-math">\(a\)</span> (in years).</div>
 <ol class="decimal" id="eg_height_age-2-1-4">
 <li id="eg_height_age-2-1-4-1"><div class="para logical" id="eg_height_age-2-1-4-1-1">
 <div class="para">Interpret the two statements below in terms of the height and age of people. Your interpretation should include units, and should address all numeric details in the statements.</div>
@@ -563,7 +575,13 @@ f'(18) \amp = 0.001\text{.}
 </div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_height_age-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_height_age-3-1"></div></div></details></div></article></section><section class="subsection" id="ss_dynamics"><h3 class="heading hide-type">
+<div class="solutions"><details id="eg_height_age-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="eg_height_age-3-1">
+<li id="eg_height_age-3-1-1">
+<div class="para" id="eg_height_age-3-1-1-1">The statement <span class="process-math">\(f(12)=1.5\)</span> asserts that the height of a 12-year old in the population is 1.5 meters.</div>
+<div class="para" id="eg_height_age-3-1-1-2">The statement <span class="process-math">\(f'(12)=0.06\)</span> asserts that the rate of growth of a 12 year old in the population is <span class="process-math">\(0.06\)</span> meters per year.</div>
+</li>
+<li id="eg_height_age-3-1-2"><div class="para" id="eg_height_age-3-1-2-1">The sequence of statements tells us that the rates of growth for 12-, 15-, and 18-year olds are, respectively, 0.06, 0.025, and 0.001 meters per year. This is consistent with the fact that as we grow older, our rate of growth slows, approaching a rate of zero around age 18.</div></li>
+</ol></div></details></div></article></section><section class="subsection" id="ss_dynamics"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Position, velocity, acceleration</span>
 </h3>
 <article class="definition definition-like" id="d_pos_vel_acc"><h4 class="heading">

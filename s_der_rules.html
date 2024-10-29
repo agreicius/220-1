@@ -246,12 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
 #s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
 #s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
 #s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
 #eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
 #eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
 #eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
 #eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
 #eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
 #eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
@@ -270,6 +276,9 @@ window.MathJax = {
 #eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
 #eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
 #eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
 #s_chain-2-1 { counter-set: s_chain-2-1 0; }
 #s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
 #s_chain-2-1 > li { counter-increment: s_chain-2-1; }
@@ -279,6 +288,9 @@ window.MathJax = {
 #eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
 #eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
 #eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
 #eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
 #eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
 #eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
@@ -520,11 +532,27 @@ window.MathJax = {
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">12.2</span><span class="period">.</span><span class="space"> </span><span class="title">Power functions.</span>
 </h3>
 <div class="para" id="s_der_rules-4-2">Although we state the power function formula for general <span class="process-math">\(r\in \R\text{,}\)</span> for now we will only make use of it when <span class="process-math">\(r\)</span> is a rational number: i.e., <span class="process-math">\(r=\frac{m}{n}\text{,}\)</span> where <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers. Indeed, as of yet we have not ever defined what the expression <span class="process-math">\(x^r\)</span> means for an arbitrary real number <span class="process-math">\(r\text{.}\)</span> We can make sense of <span class="process-math">\(x^5\text{,}\)</span> <span class="process-math">\(x^{-7}\text{,}\)</span> and even <span class="process-math">\(x^{-3/2}\text{,}\)</span> but what does <span class="process-math">\(x^\pi\)</span> or <span class="process-math">\(x^{\sqrt{2}}\)</span> mean? We will have to wait until Math 220-2 to give a precise and general definition.</div></article><article class="example example-like" id="eg_der_power"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power rule: radicals.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.3</span><span class="period">.</span><span class="space"> </span><span class="title">Power function formula: radicals.</span>
 </h3>
 <div class="para" id="eg_der_power-2-1">Let <span class="process-math">\(f(x)=\sqrt[3]{x^2}\text{.}\)</span> Compute <span class="process-math">\(f'(x)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_der_power-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_power-3-1"></div></div></details></div></article><article class="theorem theorem-like" id="th_der_rules"><h3 class="heading">
+<div class="solutions"><details id="eg_der_power-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_power-3-1">
+<div class="para">The key is to convert the formula of <span class="process-math">\(f\)</span> from radical to power form:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=(x^2)^{1/3}=x^{2/3}.
+\end{equation*}
+</div>
+<div class="para">We then use the power formula to compute the derivative:</div>
+<div class="displaymath process-math" id="eg_der_power-3-1-3">
+\begin{align*}
+f'(x) \amp =\frac{2}{3}x^{-1/3} \amp \text{(power form.)}\\
+\amp \frac{2}{3x^{1/3}}\\
+\amp = \frac{2}{3\sqrt[3]{x}}\text{.}
+\end{align*}
+</div>
+<div class="para">Note that the last two steps, strictly speaking, are unnecessary for this exercise, since no specific instructions were given regarding the form of the final answer. However, it is good to get in the habit of converting fluently between power and radical notation.</div>
+</div></div></details></div></article><article class="theorem theorem-like" id="th_der_rules"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.4</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative rules.</span>
 </h3>
 <div class="para logical" id="th_der_rules-2-1"><ol class="decimal" id="th_der_rules-2-1-1">
@@ -631,17 +659,74 @@ window.MathJax = {
 <li id="eg_der_rules-2-1-3-3"><div class="para" id="eg_der_rules-2-1-3-3-1"><span class="process-math">\(\displaystyle \displaystyle f(x)=\frac{(2+\sqrt{x})(x-2)}{\sqrt[3]{x}}\)</span></div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_der_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_der_rules-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_der_higher_order"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Higher order derivatives.</span>
+<div class="solutions"><details id="eg_der_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_rules-3-1"><ol class="decimal" id="eg_der_rules-3-1-1">
+<li id="eg_der_rules-3-1-1-1"><div class="para logical" id="eg_der_rules-3-1-1-1-1">
+<div class="para">We compute</div>
+<div class="displaymath process-math" id="eg_der_rules-3-1-1-1-1-1">
+\begin{align*}
+f'(x) \amp = a_n(x^n)'+a_{n-1}(x^{n-1})'+\cdots +a_1(x)'+(a_0)' \amp \text{(lin. comb.)}\\
+\amp = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1 \amp \text{(power rule)}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="eg_der_rules-3-1-1-2"><div class="para logical" id="eg_der_rules-3-1-1-2-1">
+<div class="para">We compute</div>
+<div class="displaymath process-math" id="eg_der_rules-3-1-1-2-1-1">
+\begin{align*}
+f'(x) \amp = \frac{(3x)'(4x^2-3x+1)-3x(4x^2-3x+1)'}{(4x^2-3x+1)^2} \amp \text{(quot. rule)}\\
+\amp = \frac{3(4x^2-3x+1)-3x(8x-3)}{(4x^2-3x+1)^2}  \amp \text{(poly rule from above)}\\
+\amp = \frac{-12x^2+3}{(4x^2-3x+1)^2}\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="eg_der_rules-3-1-1-3"><div class="para logical" id="eg_der_rules-3-1-1-3-1">
+<div class="para">If we go straight into using derivative rules, we would have to use the product and quotient rules, which would be time consuming. Instead, realizing that powers of <span class="process-math">\(x\)</span> appear in all terms (above and below), we first do some algebraic preparation:</div>
+<div class="displaymath process-math" id="eg_der_rules-3-1-1-3-1-2">
+\begin{align*}
+f(x) \amp =\frac{2x+x^{3/2}-2x^{1/2}-4}{x^{1/3}}\\
+\amp = 2x^{2/3}+x^{7/6}-2x^{1/6}-4x^{-1/3}\text{.}
+\end{align*}
+</div>
+<div class="para">We can now handle the derivative computation just by using the linear combination rule and power function formulas:</div>
+<div class="displaymath process-math" id="eg_der_rules-3-1-1-3-1-3">
+\begin{align*}
+f'(x) \amp = 2(x^{2/3})'+(x^{7/6})'-2(x^{1/6})'-4(x^{-1/3})' \amp \text{lin. comb.}\\
+\amp = \frac{4}{3}x^{-1/3}+\frac{7}{6}x^{1/6}-\frac{1}{3}x^{-5/6}+\frac{4}{3}x^{-4/3} \amp \text{(power form.)}\text{.}
+\end{align*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><div class="para" id="s_der_rules-10">The first part of <a href="s_der_rules.html#eg_der_rules" class="xref" data-knowl="./knowl/xref/eg_der_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.7: Derivative rules">Example 12.7</a> provides a formula for computing the derivative of a general polynomial. This is deserving of an official result.</div>
+<article class="theorem theorem-like" id="th_der_poly"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">12.8</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative: polynomials.</span>
+</h3>
+<div class="para logical" id="th_der_poly-2-1">
+<div class="para">Given a polynomial <span class="process-math">\(f(x)=\anpoly\text{,}\)</span> where <span class="process-math">\(a_k\in \R\)</span> are fixed constants, we have</div>
+<div class="displaymath process-math" id="eq_der_poly">
+\begin{equation}
+f'(x)=na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1\text{.}\tag{12.9}
+\end{equation}
+</div>
+</div></article><article class="definition definition-like" id="d_der_higher_order"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Higher order derivatives.</span>
 </h3>
 <div class="para" id="d_der_higher_order-2-1">Let <span class="process-math">\(f\)</span> be a function with derivative <span class="process-math">\(f'=\frac{df}{dx}\text{.}\)</span> Continuing to compute derivatives in succession yields the <dfn class="terminology">higher order</dfn> derivatives of <span class="process-math">\(f\text{.}\)</span> In particular, the <dfn class="terminology">second derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f')\text{,}\)</span> and denoted as <span class="process-math">\(f''\)</span> or <span class="process-math">\(\frac{d^2 f}{dx^2}\text{;}\)</span> and the <dfn class="terminology">third derivative</dfn> is defined as <span class="process-math">\(\frac{d}{dx}(f'')\text{,}\)</span> and is denoted <span class="process-math">\(f'''\)</span> or <span class="process-math">\(\frac{d^3 f}{dx^3}\text{.}\)</span>
 </div> <div class="para" id="d_der_higher_order-2-2">More generally, for any <span class="process-math">\(n\geq 1\text{,}\)</span> the <dfn class="terminology"><span class="process-math">\(n\)</span>-th derivative of <span class="process-math">\(f\)</span></dfn> is the result of applying the derivative operation <span class="process-math">\(n\)</span> times in succession, and is denoted <span class="process-math">\(f^{(n)}\)</span> or <span class="process-math">\(\frac{d^n f}{dx^n}\)</span>
 </div></article><article class="example example-like" id="eg_higher_ders"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.9</span><span class="period">.</span><span class="space"> </span><span class="title">Higher-order derivatives.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">12.10</span><span class="period">.</span><span class="space"> </span><span class="title">Higher-order derivatives.</span>
 </h3>
 <div class="para" id="eg_higher_ders-2-1">Let <span class="process-math">\(f(x)=x-2x^2\text{.}\)</span> Compute formulas for <span class="process-math">\(f'\text{,}\)</span> <span class="process-math">\(f''\text{,}\)</span> and <span class="process-math">\(f'''\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_higher_ders-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_higher_ders-3-1"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_higher_ders-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_higher_ders-3-1">
+<div class="para">We compute the derivatives in succession:</div>
+<div class="displaymath process-math" id="eg_higher_ders-3-1-1">
+\begin{align*}
+f'(x) \amp = 1-4x \amp \text{(poly. form.)}\\
+f''(x) \amp = \frac{d}{dx}(f'(x)) \\
+\amp = (1-4x)'\\
+\amp = -4 \amp \text{(poly. form.)}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_der_function.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_rate_change.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

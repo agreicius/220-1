@@ -246,12 +246,18 @@ window.MathJax = {
 #eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
 #eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
 #eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
 #s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
 #s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
 #s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
 #eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
 #eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
 #eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
 #eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
 #eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
 #eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
@@ -270,6 +276,9 @@ window.MathJax = {
 #eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
 #eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
 #eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
 #s_chain-2-1 { counter-set: s_chain-2-1 0; }
 #s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
 #s_chain-2-1 > li { counter-increment: s_chain-2-1; }
@@ -279,6 +288,9 @@ window.MathJax = {
 #eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
 #eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
 #eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
 #eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
 #eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
 #eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
@@ -491,7 +503,25 @@ window.MathJax = {
 \frac{d}{dx}\sin x \amp = \cos x \amp \frac{d}{dx}\cos x\amp =-\sin x\text{.}
 \end{align*}
 </div>
-</div></article><article class="example example-like" id="eg_tangent_trig"><h3 class="heading">
+</div></article><details id="th_der_sin_cos-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_der_sin_cos-3-1">
+<div class="para">We prove the derivative formula for <span class="process-math">\(\sin\text{;}\)</span> the argument for <span class="process-math">\(\cos\)</span> is very similar. Using the limit definition of the derivative, we have</div>
+<div class="displaymath process-math" id="th_der_sin_cos-3-1-3">
+\begin{align*}
+\frac{d}{dx}(\sin x) \amp = \lim\limits_{h\to 0}\frac{\sin(x+h)-\sin x}{h}\\
+\amp \lim\limits_{h\to 0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{\sin x(\cos h-1)}{h}+\frac{\cos x\sin h}{h}\\
+\amp = \sin x\lim\limits_{h\to 0}\frac{\cos h-1}{h}+\cos x \lim\limits_{h\to 0}\frac{\sin h}{h} \\
+\amp = \sin x\cdot 0 +\cos x\cdot 1\\
+\amp = \cos x\text{,}
+\end{align*}
+</div>
+<div class="para">where the penultimate step makes use of our previously discussed limits</div>
+<div class="displaymath process-math" id="th_der_sin_cos-3-1-4">
+\begin{align*}
+\lim\limits_{t\to 0}\frac{\sin t}{t}  \amp =1 \amp \lim\limits_{t\to 0}\frac{\cos t-1}{t}=0  \text{.}
+\end{align*}
+</div>
+</div></article></details><article class="example example-like" id="eg_tangent_trig"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">14.2</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent lines: sinusoidal.</span>
 </h3>
 <div class="para logical" id="eg_tangent_trig-2-1">
@@ -503,7 +533,65 @@ window.MathJax = {
 <li id="eg_tangent_trig-2-1-2-2"><div class="para" id="eg_tangent_trig-2-1-2-2-1">Find all points on the graph of <span class="process-math">\(f\)</span> where the tangent line is horizontal.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_tangent_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_tangent_trig-3-1"></div></div></details></div></article><article class="definition definition-like" id="d_trig_functions"><h3 class="heading">
+<div class="solutions"><details id="eg_tangent_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_tangent_trig-3-1"><ol class="decimal" id="eg_tangent_trig-3-1-1">
+<li id="eg_tangent_trig-3-1-1-1"><div class="para logical" id="eg_tangent_trig-3-1-1-1-1">
+<div class="para">The tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=\pi/3\text{,}\)</span> passes through the point</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P=(\pi/3, f(\pi/3))=(\pi/3, \cos(\pi/3)-\sin(\pi/3))=(\pi/3, 1/2-\sqrt{3}/2).
+\end{equation*}
+</div>
+<div class="para">The slope of the tangent line here is given by <span class="process-math">\(f'(\pi/3)\text{.}\)</span> We first compute</div>
+<div class="displaymath process-math" id="eg_tangent_trig-3-1-1-1-1-5">
+\begin{align*}
+f'(x) \amp = (\cos x)'-(\sin x)' \amp \text{(lin. comb.)}\\
+\amp = -\sin x-\cos x\text{.}
+\end{align*}
+</div>
+<div class="para">Thus the slope of the tangent line is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(\pi/3)=-\sin(\pi/3)-\cos(\pi/3)=-(\frac{\sqrt{3}+1}{2})\text{,}
+\end{equation*}
+</div>
+<div class="para">We conclude that an equation for the tangent line here is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y-\frac{1-\sqrt{3}}{2}=\frac{1+\sqrt{3}}{2}(x-\frac{\pi}{3})\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="eg_tangent_trig-3-1-1-2"><div class="para logical" id="eg_tangent_trig-3-1-1-2-1">
+<div class="para">The tangent line to a point <span class="process-math">\(P=(x,f(x))\)</span> on the graph of <span class="process-math">\(f\)</span> is horizontal when its slope <span class="process-math">\(f'(x)=0\text{.}\)</span> Thus we need to find all <span class="process-math">\(x\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=-\sin x-\cos x=0\text{,}
+\end{equation*}
+</div>
+<div class="para">or equivalently,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\tan x=-1\text{.}
+\end{equation*}
+</div>
+<div class="para">The solutions to this trig equation are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\frac{3\pi}{4}+\pi n, 
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(n\)</span> is an integer. The corresponding points on the graph are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P=\left(\frac{3\pi}{4}+\pi n, f\left(\frac{3\pi}{4}+\pi n\right)\right)
+= \begin{cases}
+\left(\frac{3\pi}{4}+\pi n, -\sqrt{2}\right) \amp \text{if } n \text{ is even}\\
+\left(\frac{3\pi}{4}+\pi n, \sqrt{2}\right) \amp \text{if } n \text{ is odd}\\
+\end{cases}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="definition definition-like" id="d_trig_functions"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">14.3</span><span class="period">.</span><span class="space"> </span><span class="title">Trigonometric functions.</span>
 </h3>
 <div class="para logical" id="d_trig_functions-2-1">
