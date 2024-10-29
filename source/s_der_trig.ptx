@@ -31,6 +31,23 @@
                 </md>. 
             </p>
         </statement>
+        <proof>
+            <p>
+                We prove the derivative formula for <m>\sin</m>; the argument for <m>\cos</m> is very similar. Using the limit definition of the derivative, we have 
+                <md>
+                    <mrow>\frac{d}{dx}(\sin x) \amp = \lim\limits_{h\to 0}\frac{\sin(x+h)-\sin x}{h}</mrow>
+                    <mrow> \amp \lim\limits_{h\to 0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}</mrow>
+                    <mrow> \amp = \lim\limits_{h\to 0}\frac{\sin x(\cos h-1)}{h}+\frac{\cos x\sin h}{h}</mrow>
+                    <mrow> \amp = \sin x\lim\limits_{h\to 0}\frac{\cos h-1}{h}+\cos x \lim\limits_{h\to 0}\frac{\sin h}{h} </mrow>
+                    <mrow> \amp = \sin x\cdot 0 +\cos x\cdot 1</mrow>
+                    <mrow> \amp = \cos x</mrow>
+                </md>,
+                where the penultimate step makes use of our previously discussed limits 
+                <md>
+                    <mrow>\lim\limits_{t\to 0}\frac{\sin t}{t}  \amp =1 \amp \lim\limits_{t\to 0}\frac{\cos t-1}{t}=0  </mrow>
+                </md>.
+            </p>
+        </proof>
     </theorem>
     <example xml:id="eg_tangent_trig">
     <title>Tangent lines: sinusoidal</title>
@@ -53,7 +70,57 @@
     </statement>
     <solution>
     <p>
-    
+        <ol>
+            <li>
+                <p>
+                    The tangent line to the graph of <m>f</m> at <m>x=\pi/3</m>, passes through the point 
+                    <me>
+                        P=(\pi/3, f(\pi/3))=(\pi/3, \cos(\pi/3)-\sin(\pi/3))=(\pi/3, 1/2-\sqrt{3}/2).
+                    </me>
+                    The slope of the tangent line here is given by <m>f'(\pi/3)</m>. We first compute 
+                    <md>
+                        <mrow>f'(x) \amp = (\cos x)'-(\sin x)' \amp \text{(lin. comb.)}</mrow>
+                        <mrow> \amp = -\sin x-\cos x</mrow>
+                    </md>.
+                    Thus the slope of the tangent line is 
+                    <me>
+                        f'(\pi/3)=-\sin(\pi/3)-\cos(\pi/3)=-(\frac{\sqrt{3}+1}{2})
+                    </me>,
+                    We conclude that an equation for the tangent line here is 
+                    <me>
+                        y-\frac{1-\sqrt{3}}{2}=\frac{1+\sqrt{3}}{2}(x-\frac{\pi}{3})
+                    </me>. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The tangent line to a point <m>P=(x,f(x))</m> on the graph of <m>f</m> is horizontal when its slope <m>f'(x)=0</m>. Thus we need to find all <m>x</m> such that 
+                    <me>
+                        f'(x)=-\sin x-\cos x=0
+                    </me>,
+                    or equivalently, 
+                    <me>
+                        \tan x=-1
+                    </me>.
+                    The solutions to this trig equation are 
+                    <me>
+                        x=\frac{3\pi}{4}+\pi n, 
+                    </me>
+                    where <m>n</m> is an integer. The corresponding points on the graph are 
+                    <me>
+                        P=\left(\frac{3\pi}{4}+\pi n, f\left(\frac{3\pi}{4}+\pi n\right)\right)
+                        = \begin{cases}
+                        \left(\frac{3\pi}{4}+\pi n, -\sqrt{2}\right) \amp \text{if } n \text{ is even}\\
+                        \left(\frac{3\pi}{4}+\pi n, \sqrt{2}\right) \amp \text{if } n \text{ is odd}\\
+                        \end{cases}
+                    </me>.
+                    
+                    
+                    
+                    
+                </p>
+            </li>
+        </ol>
     </p>
     </solution>
     </example>

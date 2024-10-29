@@ -53,7 +53,7 @@
 </p>
 </remark>
 <example xml:id="eg_der_power">
-<title>Power rule: radicals</title>
+<title>Power function formula: radicals</title>
 <statement>
 <p>
 Let <m>f(x)=\sqrt[3]{x^2}</m>. Compute <m>f'(x)</m>. 
@@ -61,6 +61,17 @@ Let <m>f(x)=\sqrt[3]{x^2}</m>. Compute <m>f'(x)</m>.
 </statement>
 <solution>
 <p>
+The key is to convert the formula of <m>f</m> from radical to power form: 
+<me>
+    f(x)=(x^2)^{1/3}=x^{2/3}.
+</me>
+We then use the power formula to compute the derivative: 
+<md>
+    <mrow>f'(x) \amp =\frac{2}{3}x^{-1/3} \amp \text{(power form.)}</mrow>
+    <mrow> \amp \frac{2}{3x^{1/3}}</mrow>
+    <mrow> \amp = \frac{2}{3\sqrt[3]{x}}</mrow>
+</md>.
+Note that the last two steps, strictly speaking, are unnecessary for this exercise, since no specific instructions were given regarding the form of the final answer. However, it is good to get in the habit of converting fluently between power and radical notation. 
 
 </p>
 </solution>
@@ -193,10 +204,60 @@ Compute a formula for <m>f'</m> for the given <m>f</m>.
 </statement>
 <solution>
 <p>
-
+<ol>
+    <li>
+        <p>
+            We compute 
+            <md>
+                <mrow>f'(x) \amp = a_n(x^n)'+a_{n-1}(x^{n-1})'+\cdots +a_1(x)'+(a_0)' \amp \text{(lin. comb.)}</mrow>
+                <mrow> \amp = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1 \amp \text{(power rule)}</mrow>
+            </md>.
+        </p>
+    </li>
+    <li>
+        <p>
+           We compute 
+           <md>
+            <mrow>f'(x) \amp = \frac{(3x)'(4x^2-3x+1)-3x(4x^2-3x+1)'}{(4x^2-3x+1)^2} \amp \text{(quot. rule)}</mrow>
+            <mrow> \amp = \frac{3(4x^2-3x+1)-3x(8x-3)}{(4x^2-3x+1)^2}  \amp \text{(poly rule from above)}</mrow>
+            <mrow> \amp = \frac{-12x^2+3}{(4x^2-3x+1)^2}</mrow>
+           </md>.
+        </p>
+    </li>
+    <li>
+        <p>
+            If we go straight into using derivative rules, we would have to use the product and quotient rules, which would be time consuming. Instead, realizing that powers of <m>x</m> appear in all terms (above and below), we first do some algebraic preparation: 
+            <md>
+                <mrow>f(x) \amp =\frac{2x+x^{3/2}-2x^{1/2}-4}{x^{1/3}}</mrow>
+                <mrow> \amp = 2x^{2/3}+x^{7/6}-2x^{1/6}-4x^{-1/3}</mrow>
+            </md>.
+            We can now handle the derivative computation just by using the linear combination rule and power function formulas: 
+            <md>
+                <mrow>f'(x) \amp = 2(x^{2/3})'+(x^{7/6})'-2(x^{1/6})'-4(x^{-1/3})' \amp \text{lin. comb.}</mrow>
+                <mrow> \amp = \frac{4}{3}x^{-1/3}+\frac{7}{6}x^{1/6}-\frac{1}{3}x^{-5/6}+\frac{4}{3}x^{-4/3} \amp \text{(power form.)}</mrow>
+            </md>.
+            
+        </p>
+    </li>
+</ol>
 </p>
 </solution>
 </example>
+<p>
+    The first part of <xref ref="eg_der_rules"/> provides a formula for computing the derivative of a general polynomial. This is deserving of an official result. 
+</p>
+<theorem xml:id="th_der_poly">
+    <title>Derivative: polynomials</title>
+    <statement>
+        <p>
+          Given a polynomial <m>f(x)=\anpoly</m>, where <m>a_k\in \R</m> are fixed constants, we have 
+          <men xml:id="eq_der_poly">
+            f'(x)=na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1
+          </men>.
+        </p>
+    </statement>
+</theorem>
+
 <definition xml:id="d_der_higher_order">
 <title>Higher order derivatives</title>
 <statement>
@@ -217,7 +278,13 @@ Let <m>f(x)=x-2x^2</m>. Compute formulas for <m>f'</m>, <m>f''</m>, and <m>f'''<
 </statement>
 <solution>
 <p>
-
+We compute the derivatives in succession: 
+<md>
+    <mrow>f'(x) \amp = 1-4x \amp \text{(poly. form.)}</mrow>
+    <mrow>f''(x) \amp = \frac{d}{dx}(f'(x)) </mrow>
+    <mrow> \amp = (1-4x)'</mrow>
+    <mrow> \amp = -4 \amp \text{(poly. form.)}</mrow>
+</md>.
 </p>
 </solution>
 </example>

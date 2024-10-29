@@ -78,7 +78,7 @@
                     <mrow> \amp = \lim\limits_{h\to 0}\frac{-h}{h(\sqrt{5-(x+h)}+\sqrt{5-x})}</mrow>
                     <mrow> \amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{5-(x+h)}+\sqrt{5-x}}</mrow>
                 </md>.
-                We now note that for all <m>x\in (-\infty, 5)</m>, this last limit expression evaluates to <m>-\frac{1}{2\sqrt{5-x}</m>, after the application of simple limit rules. Thus <m>f</m> is differentiable for such elements. For <m>x=5</m>, however, the last limit becomes 
+                We now note that for all <m>x\in (-\infty, 5)</m>, this last limit expression evaluates to <m>-\frac{1}{2\sqrt{5-x}}</m>, after the application of simple limit rules. Thus <m>f</m> is differentiable for such elements. For <m>x=5</m>, however, the last limit becomes 
                 <me>
                     \lim\limits_{h\to 0}-\frac{1}{\sqrt{-h}}
                 </me>

@@ -36,6 +36,9 @@
         </p>
         </statement>
     </theorem>
+    <p>
+        The main difficulty in using the chain rule is being able to recognize how a given function <m>f</m> can be described as a composition of functions <m>f(x)=g(u(x))</m>. The procedure below is designed to help you identify the inner function <m>u</m> in this representation. You do not need to use it when computing derivatives with the chain rule, but it may help you get the hang of this technique. See the first computation in <xref ref="eg_chain_rules"/> for an illustration of <xref ref="proc_chain"/>. 
+    </p>
     <algorithm xml:id="proc_chain">
         <title>Chain rule</title>
         <statement>
@@ -105,7 +108,53 @@
     </statement>
     <solution>
     <p>
-    
+    <ol>
+        <li>
+            <p>
+                We will illustrate <xref ref="proc_chain"/> for this example. We declare 
+                <me>
+                    u=2s
+                </me>,
+                from whence we have 
+                <md>
+                    <mrow>f(s) \amp = \sin u</mrow>
+                    <mrow>u'(s) \amp = 2</mrow>
+                </md>.
+                We now compute 
+                <md>
+                    <mrow>f'(s) \amp = \frac{d}{du}(\sin u)\cdot u'(s) \amp \text{(chain rule)}</mrow>
+                    <mrow> \amp = \cos u\cdot 2</mrow>
+                    <mrow> \amp = 2\cos(2s)</mrow>
+                </md>.
+                Note that we are careful to leave our final answer entirely in terms of the original variable. 
+            </p>
+        </li>
+        <li>
+            <p>
+                That this is a chain rule computation is more clearly seen after a little algebra: 
+                <me>
+                    f(x)=\frac{1}{x^2+2x+3}=(x^2+2x+3)^{-1}
+                </me>.
+                We now compute 
+                <md>
+                    <mrow>f'(x) \amp = (-1)(x^2+2x+3)^{-2}\cdot (x^2+2x+3)' \amp \text{(chain rule)}</mrow>
+                    <mrow> \amp = -(x^2+2x+3)^{-2}(2x+2)</mrow>
+                    <mrow> \amp = -\frac{2x+2}{x^2+2x+3}</mrow>
+                </md>.
+            </p>
+        </li>
+        <li>
+            <p>
+                We compute:
+                <md>
+                    <mrow>u'(t) \amp = \frac{d}{dt}[(t^3-t+1)^{100}]\cdot \sqrt{\tan t}+(t^3-t+1)^{100}\cdot \frac{d}{dt}[(\tan t)^{1/2}] \amp \text{(prod. rule)}</mrow>
+                    <mrow> \amp = 100(t^3-t+1)^{99}(t^3-t+1)'+(t^3-t+1)^{100}\cdot \frac{1}{2}(\tan t)^{-1/2}(\tan t)' \amp \text{(chain rule)}</mrow>
+                    <mrow> \amp = 100(t^3-t+1)^{99}(3t^2-1)+\frac{1}{2}(t^3-t+1)^{100}(\tan t)^{-1/2}\sec^2 t</mrow>
+                    <mrow> \amp = (t^3-t+1)^{99}\left(100(3t^2-1)+\frac{(t^3-t+1)\sec^2 t}{2\sqrt{\tan t}}\right)</mrow>
+                </md>.
+            </p>
+        </li>
+    </ol>
     </p>
     </solution>
     </example>

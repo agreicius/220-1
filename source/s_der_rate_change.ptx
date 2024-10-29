@@ -70,7 +70,7 @@
         <title>Height versus age</title>
         <statement>
         <p>
-        Suppose the average height <m>h</m> (in meters) of an individual in a population is given as a function <m>h=f(a)</m> of their age <m>a</m> (in years). 
+        Suppose the height <m>h</m> (in meters) of individuals in a population is modeled as a function <m>h=f(a)</m> of their age <m>a</m> (in years). 
         <ol>
             <li>
                 <p>
@@ -96,9 +96,22 @@
 
         </statement>
         <solution>
-        <p>
-            
-        </p>
+            <ol>
+                <li>
+                    <p>
+                        The statement <m>f(12)=1.5</m> asserts that the height of a 12-year old in the population is 1.5 meters. 
+                     </p>
+                     <p>
+                         The statement <m>f'(12)=0.06</m> asserts that the rate of growth of a 12 year old in the population is <m>0.06</m> meters per year. 
+                     </p>
+                </li>
+                <li>
+                    <p>
+                        The sequence of statements tells us that the rates of growth for 12-, 15-, and 18-year olds are, respectively, 0.06, 0.025, and 0.001 meters per year. This is consistent with the fact that as we grow older, our rate of growth slows, approaching a rate of zero around age 18. 
+                    </p>
+                </li>
+            </ol>
+        
         </solution>
         </example>
         
