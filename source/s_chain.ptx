@@ -148,9 +148,9 @@
                 We compute:
                 <md>
                     <mrow>u'(t) \amp = \frac{d}{dt}[(t^3-t+1)^{100}]\cdot \sqrt{\tan t}+(t^3-t+1)^{100}\cdot \frac{d}{dt}[(\tan t)^{1/2}] \amp \text{(prod. rule)}</mrow>
-                    <mrow> \amp = 100(t^3-t+1)^{99}(t^3-t+1)'+(t^3-t+1)^{100}\cdot \frac{1}{2}(\tan t)^{-1/2}(\tan t)' \amp \text{(chain rule)}</mrow>
-                    <mrow> \amp = 100(t^3-t+1)^{99}(3t^2-1)+\frac{1}{2}(t^3-t+1)^{100}(\tan t)^{-1/2}\sec^2 t</mrow>
-                    <mrow> \amp = (t^3-t+1)^{99}\left(100(3t^2-1)+\frac{(t^3-t+1)\sec^2 t}{2\sqrt{\tan t}}\right)</mrow>
+                    <mrow> \amp = 100(t^3-t+1)^{99}(t^3-t+1)'\cdot \sqrt{\tan t}+(t^3-t+1)^{100}\cdot \frac{1}{2}(\tan t)^{-1/2}(\tan t)' \amp \text{(chain rule)}</mrow>
+                    <mrow> \amp = 100(t^3-t+1)^{99}(3t^2-1)\cdot \sqrt{\tan t}+\frac{1}{2}(t^3-t+1)^{100}(\tan t)^{-1/2}\sec^2 t</mrow>
+                    <mrow> \amp = (t^3-t+1)^{99}\left(100(3t^2-1)\sqrt{\tan t}+\frac{(t^3-t+1)\sec^2 t}{2\sqrt{\tan t}}\right)</mrow>
                 </md>.
             </p>
         </li>

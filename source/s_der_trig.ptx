@@ -88,7 +88,7 @@
                     </me>,
                     We conclude that an equation for the tangent line here is 
                     <me>
-                        y-\frac{1-\sqrt{3}}{2}=\frac{1+\sqrt{3}}{2}(x-\frac{\pi}{3})
+                        y-\frac{1-\sqrt{3}}{2}=-\frac{1+\sqrt{3}}{2}(x-\frac{\pi}{3})
                     </me>. 
                 </p>
             </li>
