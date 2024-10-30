@@ -210,7 +210,7 @@ Compute a formula for <m>f'</m> for the given <m>f</m>.
             We compute 
             <md>
                 <mrow>f'(x) \amp = a_n(x^n)'+a_{n-1}(x^{n-1})'+\cdots +a_1(x)'+(a_0)' \amp \text{(lin. comb.)}</mrow>
-                <mrow> \amp = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1 \amp \text{(power rule)}</mrow>
+                <mrow> \amp = na_nx^{n-1}+(n-1)a_{n-1}x^{n-2}+\cdots +2a_2x+a_1 \amp   </mrow>
             </md>.
         </p>
     </li>
