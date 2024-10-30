@@ -1513,6 +1513,87 @@ var ptx_lunr_docs = [
   "body": " Inflating a balloon   The volume (in cm ) of a spherical inflatable balloon is computed as , where is the radius of the balloon (in cm).   Compute the rate of change of the volume with respect to the radius .    Suppose now that while inflating the balloon, the radius is given by the function . Compute the rate of change of with respect to . Leave your answer in terms of and .    What is the rate of change at time , assuming that the volume at this point is and the rate of inflation at is cm per s?          We have .    When is a function of time, the volume of the ballon is also a function of time: . Using the chain rule, we have . We thus see that at any given time , the rate of change with respect to is the product of the rate of change of volume with respect to for the radius value at ( , for ) and the rate of change of with respect to time at that time . (Of course this is just as the chain rule predicts: $\\frac{dV}{dt}=\\frac{dV}{dr}\\cdot \\frac{dr}{dt}$.) This makes general sense, physically. The rate of change of the radius is acting as a multiplier for the rate of change of the volume with respect to : in particular the greater the rate at which the radius increases, the greater the rate at which the volume increases.    If volume , we have , or cm. The information about the rate of change of implies that cm per s. Thus we have .      "
 },
 {
+  "id": "s_implicit",
+  "level": "1",
+  "url": "s_implicit.html",
+  "type": "Section",
+  "number": "16",
+  "title": "Implicit differentiation",
+  "body": " Implicit differentiation     Explore the connection between curves, graphs of equations, and graphs of functions.    Identify points on curves near which the graph of the curve can be implicitly realized as the graph of a function.    Use the technique of implicit differentiation to deduce facts about derivatives of implicitly defined functions.    Understand the role of the chain rule in the technique of implicit differentiation.    Use implicit differentiation to deduce geometric properties of graphs of equations.     We begin this section with some simple observations about curves in . Currently our main way of defining such a curve is as the graph of an equation. For example, let be the unit circle centered at the origin is defined as the graph of the equation . That is, is the set of all points satisfying . We call this an implicit description of the circle as its points are not given to us explicitly via some formula; rather, to produce actual points on it is up to us to find solutions to the equation ( , , ).   Graph of   Graph of unit circle     A similar way of defining a curve in is as the graph of a function . In other words, given a function , we define its graph to be the curve consisting of all points of the form , where . Note that this description gives an explicit formula for producing points on the curve: namely, given any in the domain, the point lies on the graph.   Graph of the function   Graph of function x squared     The graph of a function can also be understood as the graph of an equation : indeed, the set of points of the form are precisely the the set of solutions to the equation . In other words, all curves that are graphs of functions can also be thought of as graphs of equations. However, not all graphs of equations are graphs of functions! Indeed, our circle above is an example of a curve that is a graph of an equation, but not the graph of a function. How do I know? It fails the vertical line test!  Life is somewhat easier for us when a curve does happen to given as the graph of a function. For example, in this scenario, we have a systematic way of determining what the tangent line to a given point is. That technique is not in general available to us for the circle , as that curve is not the graph of any function . So how can we answer questions about tangent lines to that curve. The next example illustrates a technique that we call implicit differentiation .   Implicit differentiation: circle   Use implicit differentiation to compute an equation of the tangent line to the circle at the point .      Graph of unit circle        Implicit differentiation   Suppose is a curve in defined by an equation of the form , and let be a point on such that near the curve satisfies the vertical line test.   We can think of the portion of near as the graph of an implicit function relating as a function of .    Under the assumption in (1), we can compute the derivative of this implicit function at as follows:   Replace (mentally or explicitly) each instance of in with , to emphasize that we now treat as a function of .    Take the derivative of both sides of , with respect to , taking care to treat as a function of . You will make frequent use of the chain rule, as well as potentially the product and quotient rules, when doing so.    Attempt to solve for in terms of and , yielding an expression of the form .    Compute .           Tschirnhausen cubic   The curve defined by the equation is called Tschirnhausen's cubic.   Verify that is a point on .    Use implicit differentiation to find an equation of the tangent line to at the point .    Assuming is can be understood as a function of for points on near , compute .         Tschirnhausen cubic        Ellipse tangents   Let be the ellipse defined by the equation . Find all points on where the tangent line to at is horizontal.      A rotated ellipse        Implicit: trig equation   Let the curve be defined by the equation .   Verify that is a point on this curve.    Find an equation of the tangent line to at .         Implicit function with trig equation       "
+},
+{
+  "id": "s_implicit-2",
+  "level": "2",
+  "url": "s_implicit.html#s_implicit-2",
+  "type": "Objectives",
+  "number": "16",
+  "title": "",
+  "body": "   Explore the connection between curves, graphs of equations, and graphs of functions.    Identify points on curves near which the graph of the curve can be implicitly realized as the graph of a function.    Use the technique of implicit differentiation to deduce facts about derivatives of implicitly defined functions.    Understand the role of the chain rule in the technique of implicit differentiation.    Use implicit differentiation to deduce geometric properties of graphs of equations.    "
+},
+{
+  "id": "fig_graph_circle",
+  "level": "2",
+  "url": "s_implicit.html#fig_graph_circle",
+  "type": "Figure",
+  "number": "16.1",
+  "title": "",
+  "body": " Graph of   Graph of unit circle    "
+},
+{
+  "id": "fig_graph_fun",
+  "level": "2",
+  "url": "s_implicit.html#fig_graph_fun",
+  "type": "Figure",
+  "number": "16.2",
+  "title": "",
+  "body": " Graph of the function   Graph of function x squared    "
+},
+{
+  "id": "eg_implicit_circle",
+  "level": "2",
+  "url": "s_implicit.html#eg_implicit_circle",
+  "type": "Example",
+  "number": "16.3",
+  "title": "Implicit differentiation: circle.",
+  "body": " Implicit differentiation: circle   Use implicit differentiation to compute an equation of the tangent line to the circle at the point .      Graph of unit circle      "
+},
+{
+  "id": "proc_implicit_diff",
+  "level": "2",
+  "url": "s_implicit.html#proc_implicit_diff",
+  "type": "Procedure",
+  "number": "16.4",
+  "title": "Implicit differentiation.",
+  "body": " Implicit differentiation   Suppose is a curve in defined by an equation of the form , and let be a point on such that near the curve satisfies the vertical line test.   We can think of the portion of near as the graph of an implicit function relating as a function of .    Under the assumption in (1), we can compute the derivative of this implicit function at as follows:   Replace (mentally or explicitly) each instance of in with , to emphasize that we now treat as a function of .    Take the derivative of both sides of , with respect to , taking care to treat as a function of . You will make frequent use of the chain rule, as well as potentially the product and quotient rules, when doing so.    Attempt to solve for in terms of and , yielding an expression of the form .    Compute .         "
+},
+{
+  "id": "eg_implicit_Ts",
+  "level": "2",
+  "url": "s_implicit.html#eg_implicit_Ts",
+  "type": "Example",
+  "number": "16.5",
+  "title": "Tschirnhausen cubic.",
+  "body": " Tschirnhausen cubic   The curve defined by the equation is called Tschirnhausen's cubic.   Verify that is a point on .    Use implicit differentiation to find an equation of the tangent line to at the point .    Assuming is can be understood as a function of for points on near , compute .         Tschirnhausen cubic      "
+},
+{
+  "id": "eg_implicit_ellipse",
+  "level": "2",
+  "url": "s_implicit.html#eg_implicit_ellipse",
+  "type": "Example",
+  "number": "16.6",
+  "title": "Ellipse tangents.",
+  "body": " Ellipse tangents   Let be the ellipse defined by the equation . Find all points on where the tangent line to at is horizontal.      A rotated ellipse      "
+},
+{
+  "id": "eg_implicit_trig",
+  "level": "2",
+  "url": "s_implicit.html#eg_implicit_trig",
+  "type": "Example",
+  "number": "16.7",
+  "title": "Implicit: trig equation.",
+  "body": " Implicit: trig equation   Let the curve be defined by the equation .   Verify that is a point on this curve.    Find an equation of the tangent line to at .         Implicit function with trig equation      "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
