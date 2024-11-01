@@ -174,11 +174,6 @@
                 Suppose now that while inflating the balloon, the radius <m>r</m> is given by the function <m>r=h(t)</m>. Compute the rate of change of <m>V</m> with respect to <m>t</m>. Leave your answer in terms of <m>h</m> and <m>h'</m>. 
             </p>
         </li>
-        <li>
-            <p>
-                What is the rate of change at time <m>t_0</m>, assuming that the volume at this point is <m>36000 \pi</m> and the rate of inflation at <m>t_0</m> is <m>0.05</m> cm per s?
-            </p>
-        </li>
     </ol>
     </p>
     </statement>

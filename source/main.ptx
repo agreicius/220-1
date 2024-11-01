@@ -32,6 +32,7 @@
     <xi:include href="s_der_trig.ptx" />
     <xi:include href="s_chain.ptx" />
     <xi:include href="s_implicit.ptx" />
+    <xi:include href="s_related_rates_I.ptx" />
 
   <!-- </chapter> -->
     

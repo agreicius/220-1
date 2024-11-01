@@ -75,7 +75,7 @@
         graphs of equations. However, not all graphs of equations are graphs of functions! Indeed, our circle above is an example of a curve that is a graph of an equation, but not the graph of a function. How do I know? It fails the vertical line test!
     </p>
     <p>
-        Life is somewhat easier for us when a curve does happen to given as the graph of a function. For example, in this scenario, we have a systematic way of determining what the tangent line to a given point is. That technique is not in general available to us for the circle <m>x^2+y^2=1</m>, as that curve is not the graph of any function <m>f</m>. So how can we answer questions about tangent lines to that curve. The next example illustrates a technique that we call <em>implicit differentiation</em>. We give a formal description of the technique in <xref ref="proc_implicit"/>. 
+        Life is somewhat easier for us when a curve does happen to given as the graph of a function. For example, in this scenario, we have a systematic way of determining what the tangent line to a given point is. That technique is not in general available to us for the circle <m>x^2+y^2=1</m>, as that curve is not the graph of any function <m>f</m>. So how can we answer questions about tangent lines to that curve. The next example illustrates a technique that we call <em>implicit differentiation</em>. We give a formal description of the technique in <xref ref="proc_implicit_diff"/>. 
     </p>
     <example xml:id="eg_implicit_circle">
     <title>Implicit differentiation: circle</title>
