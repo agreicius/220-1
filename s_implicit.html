@@ -309,6 +309,18 @@ window.MathJax = {
 #eg_implicit_trig-2-1-3 { counter-set: eg_implicit_trig-2-1-3 0; }
 #eg_implicit_trig-2-1-3 > li::marker { content: ""counter(eg_implicit_trig-2-1-3,decimal)"."; }
 #eg_implicit_trig-2-1-3 > li { counter-increment: eg_implicit_trig-2-1-3; }
+#proc_related_rates-2-1-1 { counter-set: proc_related_rates-2-1-1 0; }
+#proc_related_rates-2-1-1 > li::marker { content: ""counter(proc_related_rates-2-1-1,decimal)"."; }
+#proc_related_rates-2-1-1 > li { counter-increment: proc_related_rates-2-1-1; }
+#proc_related_rates-2-1-1-1-2 { counter-set: proc_related_rates-2-1-1-1-2 0; }
+#proc_related_rates-2-1-1-1-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-1-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-1-2 > li { counter-increment: proc_related_rates-2-1-1-1-2; }
+#proc_related_rates-2-1-1-2-2 { counter-set: proc_related_rates-2-1-1-2-2 0; }
+#proc_related_rates-2-1-1-2-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-2-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-2-2 > li { counter-increment: proc_related_rates-2-1-1-2-2; }
+#proc_related_rates-2-1-1-3-2 { counter-set: proc_related_rates-2-1-1-3-2 0; }
+#proc_related_rates-2-1-1-3-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-3-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-3-2 > li { counter-increment: proc_related_rates-2-1-1-3-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -328,7 +340,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_chain.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-20.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_chain.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_related_rates_I.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -489,8 +501,10 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_trig.html" class="internal"><span class="codenumber">14</span> <span class="title">Derivative: trig functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_chain.html" class="internal"><span class="codenumber">15</span> <span class="title">Chain rule</span></a></div></li>
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_implicit.html" class="internal"><span class="codenumber">16</span> <span class="title">Implicit differentiation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_I.html" class="internal"><span class="codenumber">17</span> <span class="title">Related rates I</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_II.html" class="internal"><span class="codenumber">18</span> <span class="title">Related rates II</span></a></div></li>
 <li class="toc-item toc-backmatter">
-<div class="toc-title-box"><a href="my-great-book-20.html" class="internal"><span class="title">Back Matter</span></a></div>
+<div class="toc-title-box"><a href="my-great-book-22.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
@@ -532,13 +546,14 @@ y=f(x)\text{.}
 </div>
 <div class="para">In other words, all curves that are graphs of functions can also be thought of as graphs of equations. However, not all graphs of equations are graphs of functions! Indeed, our circle above is an example of a curve that is a graph of an equation, but not the graph of a function. How do I know? It fails the vertical line test!</div>
 </div>
-<div class="para" id="s_implicit-8">Life is somewhat easier for us when a curve does happen to given as the graph of a function. For example, in this scenario, we have a systematic way of determining what the tangent line to a given point is. That technique is not in general available to us for the circle <span class="process-math">\(x^2+y^2=1\text{,}\)</span> as that curve is not the graph of any function <span class="process-math">\(f\text{.}\)</span> So how can we answer questions about tangent lines to that curve. The next example illustrates a technique that we call <em class="emphasis">implicit differentiation</em>.</div>
+<div class="para" id="s_implicit-8">Life is somewhat easier for us when a curve does happen to given as the graph of a function. For example, in this scenario, we have a systematic way of determining what the tangent line to a given point is. That technique is not in general available to us for the circle <span class="process-math">\(x^2+y^2=1\text{,}\)</span> as that curve is not the graph of any function <span class="process-math">\(f\text{.}\)</span> So how can we answer questions about tangent lines to that curve. The next example illustrates a technique that we call <em class="emphasis">implicit differentiation</em>. We give a formal description of the technique in <a href="s_implicit.html#proc_implicit_diff" class="xref" data-knowl="./knowl/xref/proc_implicit_diff.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 16.4: Implicit differentiation">Procedure 16.4</a>.</div>
 <article class="example example-like" id="eg_implicit_circle"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.3</span><span class="period">.</span><span class="space"> </span><span class="title">Implicit differentiation: circle.</span>
 </h3>
 <div class="para" id="eg_implicit_circle-2-1">Use implicit differentiation to compute an equation of the tangent line to the circle <span class="process-math">\(\mathcal{C}\colon x^2+y^2=1\)</span> at the point <span class="process-math">\(P=\left(-\frac{1}{3}, \frac{2\sqrt{2}}{3}\right)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_implicit_circle-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_implicit_circle-3-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_graph_circle_eg.svg" role="img" class="contained" alt="Graph of unit circle"></div></div></div></details></div></article><article class="algorithm theorem-like" id="proc_implicit_diff"><h3 class="heading">
+<div class="solutions"><details id="eg_implicit_circle-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_implicit_circle-3-1">The segment of <span class="process-math">\(\mathcal{C}\)</span> consisting of points lying very close to <span class="process-math">\(P\)</span> does pass the vertical line test, and thus we can think of the <span class="process-math">\(y\)</span>-coordinate value of points on this segment as being given by a function <span class="process-math">\(y=y(x)\)</span> of the <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_graph_circle_eg.svg" role="img" class="contained" alt="Graph of unit circle"></div>
+</div></div></details></div></article><article class="algorithm theorem-like" id="proc_implicit_diff"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">16.4</span><span class="period">.</span><span class="space"> </span><span class="title">Implicit differentiation.</span>
 </h3>
 <div class="para logical" id="proc_implicit_diff-2-1">
@@ -609,7 +624,7 @@ f'(a)=y'(a)=G(a,y(a))=G(a,b)\text{.}
 </div>
 <div class="solutions"><details id="eg_implicit_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_implicit_trig-3-1"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_implicit_trig.svg" role="img" class="contained" alt="Implicit function with trig equation"></div></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_chain.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-20.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_chain.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_related_rates_I.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
