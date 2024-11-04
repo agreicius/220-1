@@ -523,12 +523,93 @@ window.MathJax = {
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inflating a balloon (redux).</span>
 </h3>
 <div class="para" id="eg_balloon-2-1">The volume <span class="process-math">\(V\)</span> (in cm<span class="process-math">\(^3\)</span>) of a spherical inflatable balloon is computed as <span class="process-math">\(V=\frac{4}{3}\pi r^3\text{,}\)</span> where <span class="process-math">\(r\)</span> is the radius of the balloon (in cm).</div> <div class="para" id="eg_balloon-2-2">What is the rate of change at time <span class="process-math">\(t_0\text{,}\)</span> assuming that the volume at this point is <span class="process-math">\(36000 \pi\)</span> and the rate of inflation at <span class="process-math">\(t_0\)</span> is <span class="process-math">\(0.05\)</span> cm per s?</div>
-<div class="solutions"><details id="eg_balloon-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_balloon-3-1"></div></div></details></div></article><div class="para" id="s_related_rates_I-4">The next example is more involved as now the relationship between the relevant quantities is not directly given in terms of a formula.</div>
+<div class="solutions"><details id="eg_balloon-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_balloon-3-1">
+            <div class="para logical" id="eg_balloon-3-1-1-1">
+<div class="para">Letting <span class="process-math">\(V(t)\)</span> and <span class="process-math">\(r(t)\)</span> be the volume and radius of the balloon after <span class="process-math">\(t\)</span> seconds, we have</div>
+<div class="displaymath process-math" id="eq_volume_balloon">
+\begin{equation}
+V(t)=\frac{4}{3}\pi (r(t))^3\tag{17.1}
+\end{equation}
+</div>
+<div class="para">and hence</div>
+<div class="displaymath process-math" id="eq_volume_balloon_der">
+\begin{equation}
+V'(t)=4\pi\, r(t)^2\,  r'(t)\text{.}\tag{17.2}
+\end{equation}
+</div>
+<div class="para">It follows that the rate of change of volume <span class="process-math">\(t_0\)</span> seconds after inflating is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V'(t_0)=4\pi \, r(t_0)^2\, r'(t_0)\text{.}
+\end{equation*}
+</div>
+<div class="para">We are told that <span class="process-math">\(r'(t_0)=0.05=1/20\text{.}\)</span> Thus it remains only to determine <span class="process-math">\(r(t_0)\text{,}\)</span> the radius of the balloon at this time. We can derive this from the given fact that <span class="process-math">\(V(t_0)=36000\pi\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r(t_0)^3=\frac{3}{4}V(t_0)/\pi=27000\text{,}
+\end{equation*}
+</div>
+<div class="para">or <span class="process-math">\(r(t_0)=30\)</span> cm. We conclude that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V'(t_0)=4\pi \, r(t_0)^2\,  r'(t_0)=4\pi (30)^2\cdot \frac{1}{20}=180 \pi \text{cm^3 per second}\text{.}
+\end{equation*}
+</div>
+<div class="para">That is, at time <span class="process-math">\(t_0\)</span> the volume is increasing at a rate of <span class="process-math">\(180\pi\)</span> cm<span class="process-math">\(^3\)</span> per second.</div>
+</div>
+        </div></div></details></div></article><div class="para" id="s_related_rates_I-4">The next example is more involved as now the relationship between the relevant quantities is not directly given in terms of a formula.</div>
 <article class="example example-like" id="eg_sliding_ladder"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span><span class="space"> </span><span class="title">Sliding ladder.</span>
 </h3>
 <div class="para" id="eg_sliding_ladder-2-1">A ladder of length 5 meters leans against a vertical wall; the base of the ladder lies 3 meters from the wall. An unfortunate nudge from passerby Dudley causes the base to slide away from the wall at a rate of 1.25 m/s. How quickly is the top of the ladder sliding towards the floor at this moment?</div>
-<div class="solutions"><details id="eg_sliding_ladder-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_sliding_ladder-3-1"></div></div></details></div></article><article class="algorithm theorem-like" id="proc_related_rates"><h3 class="heading">
+<div class="solutions"><details id="eg_sliding_ladder-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_sliding_ladder-3-1">
+<div class="para">Define</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eg_sliding_ladder-3-1-1">
+\begin{align*}
+b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}\\
+h(t) \amp = \text{height of top of ladder } t \text{ sec. after nudge}\text{.}
+\end{align*}
+</div>
+<div class="para">As illustrated by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "fig_sliding_ladder_ht" missing or not unique]</code> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eq_sliding_ladder_ht">
+\begin{equation}
+b(t)^2+h(t)^2=5^2\text{.}\tag{17.3}
+\end{equation}
+</div>
+<div class="para">In terms of our introduced notation we have</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eg_sliding_ladder-3-1-4">
+\begin{align*}
+b(0) \amp = 3 \text{ m}\\
+b'(0) \amp = \frac{5}{4} \text{ m/s}\text{,}
+\end{align*}
+</div>
+<div class="para">and we wish to compute <span class="process-math">\(h'(0)\text{.}\)</span> Taking the derivative of both sides of <a href="s_related_rates_I.html#eq_sliding_ladder_ht" class="xref" data-knowl="./knowl/xref/eq_sliding_ladder_ht.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.3">(17.3)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eg_sliding_ladder-3-1-7">
+\begin{align*}
+2b(t)b'(t)+2h(t)h'(t) \amp =0\\
+h'(t) \amp = -\frac{b(t)b'(t)}{h(t)}\text{,}
+\end{align*}
+</div>
+<div class="para">and thus</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
+\begin{equation*}
+h'(0)=-\frac{b(0)b'(0)}{h(0)}=-\frac{3\cdot(5/4)}{h(0)}\text{.}
+\end{equation*}
+</div>
+<div class="para">It remains to compute <span class="process-math">\(h(0)\text{.}\)</span> Evaluating <a href="s_related_rates_I.html#eq_sliding_ladder_ht" class="xref" data-knowl="./knowl/xref/eq_sliding_ladder_ht.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.3">(17.3)</a> at <span class="process-math">\(t=0\text{,}\)</span> we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
+\begin{equation*}
+h(0)^2+9=25\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus <span class="process-math">\(h(0)=4\text{.}\)</span> We conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls=" ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
+\begin{equation*}
+h'(0)=-\frac{15/4}{4}=-\frac{15}{16} \text{ m/s}\text{.}
+\end{equation*}
+</div>
+<div class="para">In plain English, at the moment of the nudge the top of the ladder slides toward the ground at a rate of <span class="process-math">\(15/16\)</span> meters per second.</div>
+</div></div></details></div></article><article class="algorithm theorem-like" id="proc_related_rates"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span><span class="space"> </span><span class="title">Related rates.</span>
 </h3>
 <div class="para logical" id="proc_related_rates-2-1">
