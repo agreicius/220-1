@@ -17,7 +17,31 @@
     </statement>
     <solution>
     <p>
-    
+        <li>
+            <p>
+                Letting <m>V(t)</m> and <m>r(t)</m> be the volume and radius of the balloon after <m>t</m> seconds, we have 
+                <men xml:id="eq_volume_balloon">
+                    V(t)=\frac{4}{3}\pi (r(t))^3
+                </men>
+                and hence 
+                <men xml:id="eq_volume_balloon_der">
+                    V'(t)=4\pi\, r(t)^2\,  r'(t)
+                </men>.
+                It follows that the rate of change of volume <m>t_0</m> seconds after inflating is 
+                <me>
+                    V'(t_0)=4\pi \, r(t_0)^2\, r'(t_0)
+                </me>.
+                We are told that <m>r'(t_0)=0.05=1/20</m>. Thus it remains only to determine <m>r(t_0)</m>, the radius of the balloon at this time. We can derive this from the given fact that <m>V(t_0)=36000\pi</m>. Indeed, we have 
+                <me>
+                    r(t_0)^3=\frac{3}{4}V(t_0)/\pi=27000
+                </me>,
+                or <m>r(t_0)=30</m> cm. We conclude that 
+                <me>
+                    V'(t_0)=4\pi \, r(t_0)^2\,  r'(t_0)=4\pi (30)^2\cdot \frac{1}{20}=180 \pi \text{cm^3 per second}
+                </me>.
+                That is, at time <m>t_0</m> the volume is increasing at a rate of <m>180\pi</m> cm<m>^3</m> per second.
+            </p>
+        </li>
     </p>
     </solution>
     </example>
@@ -33,7 +57,38 @@
     </statement>
     <solution>
     <p>
-    
+    Define 
+    <md>
+        <mrow>b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}</mrow>
+        <mrow>h(t) \amp = \text{height of top of ladder } t \text{ sec. after nudge}</mrow>
+    </md>. 
+    As illustrated by <xref ref="fig_sliding_ladder_ht"/> we have 
+    <men xml:id="eq_sliding_ladder_ht">
+        b(t)^2+h(t)^2=5^2
+    </men>.
+    In terms of our introduced notation we have 
+    <md>
+        <mrow>b(0) \amp = 3 \text{ m}</mrow>
+        <mrow>b'(0) \amp = \frac{5}{4} \text{ m/s}</mrow>
+    </md>,
+    and we wish to compute <m>h'(0)</m>. Taking the derivative of both sides of <xref ref="eq_sliding_ladder_ht"/>, we have 
+    <md>
+        <mrow>2b(t)b'(t)+2h(t)h'(t) \amp =0</mrow>
+        <mrow>h'(t) \amp = -\frac{b(t)b'(t)}{h(t)}</mrow>
+    </md>,
+     and thus 
+     <me>
+        h'(0)=-\frac{b(0)b'(0)}{h(0)}=-\frac{3\cdot(5/4)}{h(0)}
+     </me>.
+     It remains to compute <m>h(0)</m>. Evaluating <xref ref="eq_sliding_ladder_ht"/> at <m>t=0</m>, we see that 
+     <me>
+        h(0)^2+9=25
+     </me>,
+     and thus <m>h(0)=4</m>. We conclude that 
+     <me>
+        h'(0)=-\frac{15/4}{4}=-\frac{15}{16} \text{ m/s}
+     </me>.
+     In plain English, at the moment of the nudge the top of the ladder slides toward the ground at a rate of <m>15/16</m> meters per second. 
     </p>
     </solution>
     </example>

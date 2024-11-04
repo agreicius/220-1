@@ -204,21 +204,7 @@
                 We thus see that at any given time <m>t_0</m>, the rate of change with respect to <m>t</m> is the product of the rate of change of volume with respect to <m>r</m> for the radius value at <m>t_0</m> (<ie/>, for <m>r_0=h(t_0)</m>) and the rate of change of <m>r</m> with respect to time at that time <m>t_0</m>. (Of course this is just as the chain rule predicts: $\frac{dV}{dt}=\frac{dV}{dr}\cdot \frac{dr}{dt}$.) This makes general sense, physically. The rate of change of the radius is acting as a multiplier for the rate of change of the volume with respect to <m>t</m>: in particular the greater the rate at which the radius increases, the greater the rate at which the volume increases. 
             </p>
         </li>
-        <li>
-            <p>
-                If volume <m>V=36000\pi</m>, we have 
-                <me>
-                    r^3=\frac{3}{4}V/\pi=27000
-                </me>,
-                or <m>r=h(t_0)=30</m> cm. The information about the rate of change of <m>r</m> implies that <m>h'(t_0)=0.05</m> cm per s. Thus we have  
-                <md>
-                    <mrow>\frac{dV}{dt}\Bigr\vert_{t=t_0} \amp = 4\pi (h(t_0))^2\cdot h'(t_0)</mrow>
-                    <mrow> \amp = 4\pi\cdot 900 \cdot \frac{1}{20}</mrow>
-                    <mrow> \amp = 180\pi \text{ cm}^3 \text{ per s}</mrow>
-                </md>.
-                
-            </p>
-        </li>
+        
     </ol>
     </p>
     </solution>
