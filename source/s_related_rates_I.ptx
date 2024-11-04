@@ -60,7 +60,22 @@
                                             Varying quantities should be modeled as functions of a common input quantity. Denote these quantities using function notation, taking care to define what the input variable is.  
                                         </p>
                                     </li>
+                                    <li>
+                                        <p>
+                                            A careful drawing, labeled using the function names we've introduced, often clarifies the role of different quantities in the problem. 
+                                        </p>
+                                    </li>
                                 </ul>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                            Express the numeric information provided by the problem in terms of the function notation you introduced in Step 1a.     
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Identify what the problem is asking us to compute in terms of the function notation introduced in Step 1a. We are almost always interested in some <em>rate of change</em>, and this should be expressed as the derivative of one of the functions we defined, or a specific value of that derivative.  
                             </p>
                         </li>
                         <li>
@@ -79,13 +94,7 @@
                                 </li>
                              </ul>     
                             </p>
-                        </li>
-                        <li>
-                            <p>
-                                Identify, using the mathematical notation introduced above, what the problem is asking us to compute. We are almost always interested in some <em>rate of change</em>, and this should be expressed as the derivative of one of the functions we defined above, or a specific value of that derivative.   
-                            </p>
-                        </li>
-                        
+                        </li>                        
                     </ol>
                 </li>
                 <li>
@@ -93,12 +102,12 @@
                     <ol>
                         <li>
                             <p>
-                                From the equation you established in Step 1.b, derive a new equation that relates the derivative you are interested in with known values of functions and/or derivatives of those functions. This usually amounts to computing the derivative of both sides of the original equation. 
+                                From the equation you established in Step 1d, derive a new equation that relates the derivative you are interested in with known values of functions and/or derivatives of those functions. This usually amounts to computing the derivative of both sides of the original equation. 
                             </p>
                         </li>
                         <li>
                             <p>
-                            Use the new equation you derived in Step 2.a to solve for the derivative function (or specific value thereof) you are interested in.     
+                            Use the new equation you derived in Step 2a to solve for the derivative function (or specific value thereof) you are interested in.     
                             </p>
                         </li>
                     </ol>
@@ -148,19 +157,7 @@
     </p>
     </solution>
     </example>
-    <example xml:id="eg_two_trains">
-    <title>Two trains</title>
-    <statement>
-    <p>
-    At time 1 pm a red train is traveling east toward a station at a rate of 50 km/h, while a blue train is traveling north away from the station at 100 km/h. At this moment the red train is 1 km from the station and the blue train is 0.25 km from the station. At what rate is the distance between the two trains changing at this moment in time? Take care to interpret the sign (<m>\pm</m>) of your numeric answer. 
-    </p>
-    </statement>
-    <solution>
-    <p>
     
-    </p>
-    </solution>
-    </example>
     
     
 

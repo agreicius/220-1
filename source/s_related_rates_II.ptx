@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_related_rates_II" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Related rates II</title>
+    <p>
+        We continue practicing the use of <xref ref="proc_related_rates"/> to solve related rates problems. 
+    </p>
+    <example xml:id="eg_two_trains">
+    <title>Two trains</title>
+    <statement>
+    <p>
+    At time 1 pm a red train is traveling east toward a station at a rate of 50 km/h, while a blue train is traveling north away from the station at 100 km/h. At this moment the red train is 1 km from the station and the blue train is 0.25 km from the station. At what rate is the distance between the two trains changing at this moment in time? Take care to interpret the sign (<m>\pm</m>) of your numeric answer. 
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_related_rates_similar">
+    <title>Using similar triangles</title>
+    <statement>
+    <p>
+    A light shines from the top of a pole 20 meters high. A ball is dropped from the same height at a point 12 meters away from the light pole. How fast is the shadow of the ball moving along the ground $1/2$ second later? Assume the ball falls a distance of $9.8t^2$ meters in $t$ seconds.   
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    
+    
+
+</section>
