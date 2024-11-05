@@ -16,8 +16,6 @@
     </p>
     </statement>
     <solution>
-    <p>
-        <li>
             <p>
                 Letting <m>V(t)</m> and <m>r(t)</m> be the volume and radius of the balloon after <m>t</m> seconds, we have 
                 <men xml:id="eq_volume_balloon">
@@ -41,8 +39,6 @@
                 </me>.
                 That is, at time <m>t_0</m> the volume is increasing at a rate of <m>180\pi</m> cm<m>^3</m> per second.
             </p>
-        </li>
-    </p>
     </solution>
     </example>
     <p>
@@ -62,7 +58,15 @@
         <mrow>b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}</mrow>
         <mrow>h(t) \amp = \text{height of top of ladder } t \text{ sec. after nudge}</mrow>
     </md>. 
-    As illustrated by <xref ref="fig_sliding_ladder_ht"/> we have 
+</p>
+<figure xml:id="fig_sliding_ladder_ht">
+    <caption>Functions <m>b(t)</m> and <m>h(t)</m></caption>
+    <image width="25%" source="im_sliding_ladder.png">
+        <shortdescription>Diagram of sliding ladder</shortdescription>
+    </image>
+</figure>
+<p>
+    We see easily from <xref ref="fig_sliding_ladder_ht"/> that
     <men xml:id="eq_sliding_ladder_ht">
         b(t)^2+h(t)^2=5^2
     </men>.
@@ -195,7 +199,49 @@
     </statement>
     <solution>
     <p>
-    
+        We define
+        <md>
+            <mrow>b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}</mrow>
+            <mrow>\theta(t) \amp = \text{angle btwn. ladder and floor  } t \text{ sec. after nudge}</mrow>
+        </md>.
+    </p>
+    <figure xml:id="fig_sliding_ladder_angle">
+        <caption>Functions <m>b(t)</m> and <m>\theta(t)</m></caption>
+        <image width="20%" source="im_sliding_ladder_angle.png">
+            <shortdescription>Sliding ladder diagram with angle</shortdescription>
+        </image>
+    </figure>
+        <p>
+        We wish to compute <m>\theta'(0)</m> the rate of change of the angle with respect to time at the moment of the nudge. 
+        As illustrated by <xref ref="fig_sliding_ladder_angle"/> we have 
+        <men xml:id="eq_sliding_ladder_angle">
+            \cos (\theta(t))=\frac{b(t)}{5}
+        </men>.
+        Taking the derivative of both sides with respect to <m>t</m> yields 
+        <men xml:id="eq_sliding_ladder_angle_der">
+            -\sin(\theta(t))\theta'(t)=\frac{b'(t)}{5}
+        </men>, 
+        and thus 
+        <me>
+            \theta'(t)=-\frac{b'(t)}{5\sin (\theta(t))}
+        </me>.
+        We now compute 
+        <me>
+            \theta'(0)=-\frac{b'(0)}{5\sin(\theta(0))}=-\frac{5/4}{5\sin(\theta(1))}
+        </me>,
+        using the given fact that <m>b'(0)=1.25</m> m/s. It remains to compute <m>\sin(\theta(0))</m>. At time <m>t=0</m> we have <m>\sin(\theta(0))=\frac{4}{5}</m>, as illustrated in <xref ref="fig_sliding_ladder_initial"/>. 
+        </p>
+        <figure xml:id="fig_sliding_ladder_initial">
+            <caption>Diagram at time <m>t=0</m></caption>
+            <image width="20%" source="im_sliding_ladder_angle_init.png">
+                <shortdescription>Sliding ladder diagram with angle initially</shortdescription>
+            </image>
+        </figure>
+        <p>We conclude that 
+        <me>
+            \theta'(0)=-\frac{5/4}{5\cdot 4/5}=-\frac{5}{16} \text{ rad/s}
+        </me>.
+        In plain English: at the moment of the nudge, the angle between the ladder and floor is decreasing at a rate of <m>5/16</m> radians per second.     
     </p>
     </solution>
     </example>
