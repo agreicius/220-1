@@ -249,12 +249,35 @@
     <title>Stretched rubber sheet</title>
     <statement>
     <p>
-        A 20 <m>m^2</m> rectangular rubber sheet is placed in a stretching machine. Four seconds after the machine is turned on, the width of the rubber sheet is 10 meters and expanding at a rate of 0.25 m/s. Is the height of the rubber sheet shrinking or expanding at this moment in time? How quickly is it shrinking or expanding. (Assume that during the shrinking process the rubber sheet always maintains a rectangular shape.)  
+        A 20 m<m>^2</m> rectangular rubber sheet is placed in a stretching machine. Four seconds after the machine is turned on, the width of the rubber sheet is 10 meters and expanding at a rate of 0.25 m/s. Is the height of the rubber sheet shrinking or expanding at this moment in time? How quickly is it shrinking or expanding. (Assume that during the shrinking process the area of the sheet remains constant and the sheet always maintains a rectangular shape.)  
     </p>
     </statement>
     <solution>
     <p>
-    
+    We define 
+    <md>
+        <mrow>w(t) \amp = \text{width of sheet } t \text{ sec. after mach. turned on}</mrow>
+        <mrow>h(t) \amp = \text{height of sheet } t \text{ sec. after mach. turned on}</mrow>
+    </md>.
+    In terms of our introduced notation, we have 
+    <md>
+        <mrow>w(4) \amp = 10 \text{ m}</mrow>
+        <mrow>w'(4) \amp = 1/4 \text{ m/s}</mrow>
+    </md>.
+    We wish to compute <m>h'(4)</m>, the rate of change of the height of the sheet with respect to time 4 seconds after the stretching begins.  
+    Since 
+    <men xml:id="eq_stretch_sheet">
+        20=w(t)h(t)
+    </men>
+    for all <m>t\geq 0</m>, taking the derivative of both sides of this equation with respect to <m>t</m> yields 
+    <men xml:id="eq_sheet_stretch_der">
+        0=w'(t)h(t)+w(t)h'(t)
+    </men>.
+    Thus we have <m>h'(t)=-\frac{w'(t)h(t)}{w(t)}</m>, and 
+    <me>
+        h'(1)=-\frac{w'(1)h(1)}{w(1)}=-\frac{1/4\cdot 2}{10}=-\frac{1}{20} \text{ m/s}
+    </me>,
+    where we have computed <m>h(1)=20/w(1)=20/10=2</m>, using <xref ref="eq_stretch_sheet"/>. In plain English: four seconds after the stretching begins, the height of the rubber sheet is decreasing at rate of <m>-1/20</m> radians per second. 
     </p>
     </solution>
     </example>
