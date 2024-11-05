@@ -139,7 +139,7 @@
                 <md>
                     <mrow>f'(x) \amp = (-1)(x^2+2x+3)^{-2}\cdot (x^2+2x+3)' \amp \text{(chain rule)}</mrow>
                     <mrow> \amp = -(x^2+2x+3)^{-2}(2x+2)</mrow>
-                    <mrow> \amp = -\frac{2x+2}{x^2+2x+3}</mrow>
+                    <mrow> \amp = -\frac{2x+2}{(x^2+2x+3)^2}</mrow>
                 </md>.
             </p>
         </li>
