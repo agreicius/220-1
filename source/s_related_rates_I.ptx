@@ -277,7 +277,7 @@
     <me>
         h'(1)=-\frac{w'(1)h(1)}{w(1)}=-\frac{1/4\cdot 2}{10}=-\frac{1}{20} \text{ m/s}
     </me>,
-    where we have computed <m>h(1)=20/w(1)=20/10=2</m>, using <xref ref="eq_stretch_sheet"/>. In plain English: four seconds after the stretching begins, the height of the rubber sheet is decreasing at rate of <m>-1/20</m> radians per second. 
+    where we have computed <m>h(1)=20/w(1)=20/10=2</m>, using <xref ref="eq_stretch_sheet"/>. In plain English: four seconds after the stretching begins, the height of the rubber sheet is decreasing at rate of <m>1/20</m> meters per second. 
     </p>
     </solution>
     </example>
