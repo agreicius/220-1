@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Algebraic limit technique: radicals.</span>
+</h4>
+<div class="para logical">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">Your answer should be a chain of equalities with steps justified.</div>
+</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">We use the technique of multiplying the numerator and denominator by a “conjugate radical” expression <span class="process-math">\(\sqrt{x^2+100}+10\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\amp =\lim_{x\to 0}\frac{\sqrt{x^2+100}-10}{x^2}\frac{\sqrt{x^2+100}+10}{\sqrt{x^2+100}+10} \amp \text{(repl. rule)}\\
+\amp = \lim_{x\to 0}\frac{x^2+100-100}{x^2(\sqrt{x^2+100}+10)}\\
+\amp = \lim_{x\to 0}\frac{1}{\sqrt{x^2+100}+10}\\
+\amp = \frac{1}{\sqrt{\lim\limits_{x\to 0}(x^2+100)}+\lim\limits_{x\to 0}10}
+\amp \text{(quot., sum, root)}\\
+\amp = \frac{1}{\sqrt{100}+10} \amp \text{(poly. eval.)}\\
+\amp = \frac{1}{20}\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_limit_sandwich.html#eg_lim_radical">in-context</a></span>
+</body>
+</html>
