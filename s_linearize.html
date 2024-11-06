@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Related rates I</title>
+<title>Linearization</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
@@ -358,7 +358,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_implicit.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_related_rates_II.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-23.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -519,9 +519,9 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_trig.html" class="internal"><span class="codenumber">14</span> <span class="title">Derivative: trig functions</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_chain.html" class="internal"><span class="codenumber">15</span> <span class="title">Chain rule</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_implicit.html" class="internal"><span class="codenumber">16</span> <span class="title">Implicit differentiation</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_related_rates_I.html" class="internal"><span class="codenumber">17</span> <span class="title">Related rates I</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_I.html" class="internal"><span class="codenumber">17</span> <span class="title">Related rates I</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_II.html" class="internal"><span class="codenumber">18</span> <span class="title">Related rates II</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">19</span> <span class="title">Linearization</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">19</span> <span class="title">Linearization</span></a></div></li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-23.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -534,236 +534,143 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_related_rates_I"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">17</span><span class="space"> </span><span class="title">Related rates I</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_linearize"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">19</span><span class="space"> </span><span class="title">Linearization</span>
 </h2>
-<div class="para" id="s_related_rates_I-2">Any time two functions are related via an equation, we can <em class="emphasis">deduce</em> an equation involving those functions and their derivatives by taking the derivative of both sides. When doing empirical modeling, this simple observation allows us to take an established relationship between two quantities and deduce a relationship between the rates of change of these quantities. This type of argument is at the heart of so-called <em class="emphasis">related rates</em> problems. Our example with the inflatable balloon provides a particularly easy introduction to this method, as here one quantity (volume) can be expressed entirely in terms of the other: in other words, the starting relation here is just a formula.</div>
-<article class="example example-like" id="eg_balloon"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">17.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inflating a balloon (redux).</span>
-</h3>
-<div class="para" id="eg_balloon-2-1">The volume <span class="process-math">\(V\)</span> (in cm<span class="process-math">\(^3\)</span>) of a spherical inflatable balloon is computed as <span class="process-math">\(V=\frac{4}{3}\pi r^3\text{,}\)</span> where <span class="process-math">\(r\)</span> is the radius of the balloon (in cm).</div> <div class="para" id="eg_balloon-2-2">What is the rate of change at time <span class="process-math">\(t_0\text{,}\)</span> assuming that the volume at this point is <span class="process-math">\(36000 \pi\)</span> and the rate of inflation at <span class="process-math">\(t_0\)</span> is <span class="process-math">\(0.05\)</span> cm per s?</div>
-<div class="solutions"><details id="eg_balloon-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_balloon-3-1">
-<div class="para">Letting <span class="process-math">\(V(t)\)</span> and <span class="process-math">\(r(t)\)</span> be the volume and radius of the balloon after <span class="process-math">\(t\)</span> seconds, we have</div>
-<div class="displaymath process-math" id="eq_volume_balloon">
-\begin{equation}
-V(t)=\frac{4}{3}\pi (r(t))^3\tag{17.1}
-\end{equation}
-</div>
-<div class="para">and hence</div>
-<div class="displaymath process-math" id="eq_volume_balloon_der">
-\begin{equation}
-V'(t)=4\pi\, r(t)^2\,  r'(t)\text{.}\tag{17.2}
-\end{equation}
-</div>
-<div class="para">It follows that the rate of change of volume <span class="process-math">\(t_0\)</span> seconds after inflating is</div>
-<div class="displaymath process-math">
-\begin{equation*}
-V'(t_0)=4\pi \, r(t_0)^2\, r'(t_0)\text{.}
-\end{equation*}
-</div>
-<div class="para">We are told that <span class="process-math">\(r'(t_0)=0.05=1/20\text{.}\)</span> Thus it remains only to determine <span class="process-math">\(r(t_0)\text{,}\)</span> the radius of the balloon at this time. We can derive this from the given fact that <span class="process-math">\(V(t_0)=36000\pi\text{.}\)</span> Indeed, we have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-r(t_0)^3=\frac{3}{4}V(t_0)/\pi=27000\text{,}
-\end{equation*}
-</div>
-<div class="para">or <span class="process-math">\(r(t_0)=30\)</span> cm. We conclude that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-V'(t_0)=4\pi \, r(t_0)^2\,  r'(t_0)=4\pi (30)^2\cdot \frac{1}{20}=180 \pi \text{cm^3 per second}\text{.}
-\end{equation*}
-</div>
-<div class="para">That is, at time <span class="process-math">\(t_0\)</span> the volume is increasing at a rate of <span class="process-math">\(180\pi\)</span> cm<span class="process-math">\(^3\)</span> per second.</div>
-</div></div></details></div></article><div class="para" id="s_related_rates_I-4">The next example is more involved as now the relationship between the relevant quantities is not directly given in terms of a formula.</div>
-<article class="example example-like" id="eg_sliding_ladder"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">17.2</span><span class="period">.</span><span class="space"> </span><span class="title">Sliding ladder.</span>
-</h3>
-<div class="para" id="eg_sliding_ladder-2-1">A ladder of length 5 meters leans against a vertical wall; the base of the ladder lies 3 meters from the wall. An unfortunate nudge from passerby Dudley causes the base to slide away from the wall at a rate of 1.25 m/s. How quickly is the top of the ladder sliding towards the floor at this moment?</div>
-<div class="solutions"><details id="eg_sliding_ladder-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_sliding_ladder-3-1">
-<div class="para">Define</div>
-<div class="displaymath process-math" id="eg_sliding_ladder-3-1-1">
-\begin{align*}
-b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}\\
-h(t) \amp = \text{height of top of ladder } t \text{ sec. after nudge}\text{.}
-\end{align*}
-</div>
-</div>
-<figure class="figure figure-like" id="fig_sliding_ladder_ht"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/im_sliding_ladder.png" class="contained" alt="Diagram of sliding ladder"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.3<span class="period">.</span></span><span class="space"> </span>Functions <span class="process-math">\(b(t)\)</span> and <span class="process-math">\(h(t)\)</span></figcaption></figure><div class="para logical" id="eg_sliding_ladder-3-3">
-<div class="para">We see easily from <a href="s_related_rates_I.html#fig_sliding_ladder_ht" class="xref" data-knowl="./knowl/xref/fig_sliding_ladder_ht.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 17.3">Figure 17.3</a> that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eq_sliding_ladder_ht">
-\begin{equation}
-b(t)^2+h(t)^2=5^2\text{.}\tag{17.3}
-\end{equation}
-</div>
-<div class="para">In terms of our introduced notation we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eg_sliding_ladder-3-3-3">
-\begin{align*}
-b(0) \amp = 3 \text{ m}\\
-b'(0) \amp = \frac{5}{4} \text{ m/s}\text{,}
-\end{align*}
-</div>
-<div class="para">and we wish to compute <span class="process-math">\(h'(0)\text{.}\)</span> Taking the derivative of both sides of <a href="s_related_rates_I.html#eq_sliding_ladder_ht" class="xref" data-knowl="./knowl/xref/eq_sliding_ladder_ht.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.3">(17.3)</a>, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html" id="eg_sliding_ladder-3-3-6">
-\begin{align*}
-2b(t)b'(t)+2h(t)h'(t) \amp =0\\
-h'(t) \amp = -\frac{b(t)b'(t)}{h(t)}\text{,}
-\end{align*}
-</div>
-<div class="para">and thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
-\begin{equation*}
-h'(0)=-\frac{b(0)b'(0)}{h(0)}=-\frac{3\cdot(5/4)}{h(0)}\text{.}
-\end{equation*}
-</div>
-<div class="para">It remains to compute <span class="process-math">\(h(0)\text{.}\)</span> Evaluating <a href="s_related_rates_I.html#eq_sliding_ladder_ht" class="xref" data-knowl="./knowl/xref/eq_sliding_ladder_ht.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.3">(17.3)</a> at <span class="process-math">\(t=0\text{,}\)</span> we see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
-\begin{equation*}
-h(0)^2+9=25\text{,}
-\end{equation*}
-</div>
-<div class="para">and thus <span class="process-math">\(h(0)=4\text{.}\)</span> We conclude that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html ./knowl/xref/eq_sliding_ladder_ht.html">
-\begin{equation*}
-h'(0)=-\frac{15/4}{4}=-\frac{15}{16} \text{ m/s}\text{.}
-\end{equation*}
-</div>
-<div class="para">In plain English, at the moment of the nudge the top of the ladder slides toward the ground at a rate of <span class="process-math">\(15/16\)</span> meters per second.</div>
-</div>
-</div></details></div></article><article class="algorithm theorem-like" id="proc_related_rates"><h3 class="heading">
-<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span><span class="space"> </span><span class="title">Related rates.</span>
-</h3>
-<div class="para logical" id="proc_related_rates-2-1">
-<div class="para">The following steps are useful for modeling and solving a related rates problem.</div>
-<ol class="decimal" id="proc_related_rates-2-1-1">
-<li id="proc_related_rates-2-1-1-1">
-<span class="heading"><span class="title">Model the problem.</span></span><div class="para" id="p-derived-proc_related_rates-2-1-1-1"><ol class="lower-alpha" id="proc_related_rates-2-1-1-1-2">
-<li id="proc_related_rates-2-1-1-1-2-1"><div class="para logical" id="proc_related_rates-2-1-1-1-2-1-1">
-<div class="para">Clearly define and name all important quantities in the problem.</div>
-<ul class="disc" id="proc_related_rates-2-1-1-1-2-1-1-1">
-<li id="proc_related_rates-2-1-1-1-2-1-1-1-1"><div class="para" id="proc_related_rates-2-1-1-1-2-1-1-1-1-1">Constant or static quantities should be assigned either a constant symbol or an explicit value.</div></li>
-<li id="proc_related_rates-2-1-1-1-2-1-1-1-2"><div class="para" id="proc_related_rates-2-1-1-1-2-1-1-1-2-1">Varying quantities should be modeled as functions of a common input quantity. Denote these quantities using function notation, taking care to define what the input variable is.</div></li>
-<li id="proc_related_rates-2-1-1-1-2-1-1-1-3"><div class="para" id="proc_related_rates-2-1-1-1-2-1-1-1-3-1">A careful drawing, labeled using the function names we’ve introduced, often clarifies the role of different quantities in the problem.</div></li>
-</ul>
+<article class="objectives goal-like" id="s_linearize-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_linearize-2-1">
+<li id="s_linearize-2-1-1"><div class="para" id="s_linearize-2-1-1-1">Define the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> at an input <span class="process-math">\(a\text{.}\)</span>
 </div></li>
-<li id="proc_related_rates-2-1-1-1-2-2"><div class="para" id="proc_related_rates-2-1-1-1-2-2-1">Express the numeric information provided by the problem in terms of the function notation you introduced in Step 1a.</div></li>
-<li id="proc_related_rates-2-1-1-1-2-3"><div class="para" id="proc_related_rates-2-1-1-1-2-3-1">Identify what the problem is asking us to compute in terms of the function notation introduced in Step 1a. We are almost always interested in some <em class="emphasis">rate of change</em>, and this should be expressed as the derivative of one of the functions we defined, or a specific value of that derivative.</div></li>
-<li id="proc_related_rates-2-1-1-1-2-4"><div class="para logical" id="proc_related_rates-2-1-1-1-2-4-1">
-<div class="para">Establish an equation that <em class="emphasis">relates</em> the various functions we are interested in.</div>
-<ul class="disc" id="proc_related_rates-2-1-1-1-2-4-1-2">
-<li id="proc_related_rates-2-1-1-1-2-4-1-2-1"><div class="para" id="proc_related_rates-2-1-1-1-2-4-1-2-1-1">This should be an equation relating <em class="emphasis">functions</em> of some common variable. As such this equation will look like a function identity.</div></li>
-<li id="proc_related_rates-2-1-1-1-2-4-1-2-2"><div class="para" id="proc_related_rates-2-1-1-1-2-4-1-2-2-1">A careful drawing, labeled using the function names we’ve introduced, will often help to derive this equation.</div></li>
-</ul>
+<li id="s_linearize-2-1-2"><div class="para" id="s_linearize-2-1-2-1">Understand the linearization of a function in terms of the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\((a,f(a)\text{.}\)</span>
 </div></li>
-</ol></div>
-</li>
-<li id="proc_related_rates-2-1-1-2">
-<span class="heading"><span class="title">Do calculus.</span></span><div class="para" id="p-derived-proc_related_rates-2-1-1-2"><ol class="lower-alpha" id="proc_related_rates-2-1-1-2-2">
-<li id="proc_related_rates-2-1-1-2-2-1"><div class="para" id="proc_related_rates-2-1-1-2-2-1-1">From the equation you established in Step 1d, derive a new equation that relates the derivative you are interested in with known values of functions and/or derivatives of those functions. This usually amounts to computing the derivative of both sides of the original equation.</div></li>
-<li id="proc_related_rates-2-1-1-2-2-2"><div class="para" id="proc_related_rates-2-1-1-2-2-2-1">Use the new equation you derived in Step 2a to solve for the derivative function (or specific value thereof) you are interested in.</div></li>
-</ol></div>
-</li>
-<li id="proc_related_rates-2-1-1-3">
-<span class="heading"><span class="title">Summarize.</span></span><div class="para" id="p-derived-proc_related_rates-2-1-1-3"><ol class="lower-alpha" id="proc_related_rates-2-1-1-3-2">
-<li id="proc_related_rates-2-1-1-3-2-1"><div class="para" id="proc_related_rates-2-1-1-3-2-1-1">Communicate the answer you derived in Step 2 in a plain English sentence that makes use of the language/context of the stated problem.</div></li>
-<li id="proc_related_rates-2-1-1-3-2-2"><div class="para" id="proc_related_rates-2-1-1-3-2-2-1">Make sure that you do indeed answer the problem posed and include units details if applicable.</div></li>
-</ol></div>
-</li>
+<li id="s_linearize-2-1-3"><div class="para" id="s_linearize-2-1-3-1">Investigate linearization as an approximation tool. Discuss in what sense a linearization <span class="process-math">\(L(x)\)</span> is a good approximation of a function <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+</ol></article><article class="definition definition-like" id="d_linearization"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">19.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization of a function.</span>
+</h3>
+<div class="para logical" id="d_linearization-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is differentiable at the input <span class="process-math">\(a\text{.}\)</span> The <dfn class="terminology">linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\)</span></dfn> is the affine function <span class="process-math">\(L(x)\)</span> defined as</div>
+<div class="displaymath process-math" id="eq_linearization">
+\begin{equation}
+L(x)=f'(a)(x-a)+f(a)\text{.}\tag{19.1}
+\end{equation}
+</div>
+</div></article><article class="remark remark-like" id="s_linearize-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.2</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization.</span>
+</h3>
+<div class="para" id="s_linearize-4-2">It is important to observe the “centered at <span class="process-math">\(a\)</span>” modifier in <a href="s_linearize.html#d_linearization" class="xref" data-knowl="./knowl/xref/d_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 19.1: Linearization of a function">Definition 19.1</a>. In other words, the function <span class="process-math">\(L(x)\)</span> defined in <a href="s_linearize.html#eq_linearization" class="xref" data-knowl="./knowl/xref/eq_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 19.1">(19.1)</a> depends both on <span class="process-math">\(f\)</span> and the specific input <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="example example-like" id="eg_linearization_quadratic"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">19.3</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization: quadratic.</span>
+</h3>
+<div class="para" id="eg_linearization_quadratic-2-1">Let <span class="process-math">\(f(x)=3-(x-2)^2\text{.}\)</span> Compute the linearization <span class="process-math">\(L_1\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=1\text{,}\)</span> and the linearization <span class="process-math">\(L_2\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(b=2\text{.}\)</span>
+</div>
+<div class="solutions"><details id="eg_linearization_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linearization_quadratic-3-1">
+<div class="para">First compute <span class="process-math">\(f'(x)=-2(x-2)\text{.}\)</span> Using <a href="s_linearize.html#eq_linearization" class="xref" data-knowl="./knowl/xref/eq_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 19.1">(19.1)</a>, we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_linearization.html" id="eg_linearization_quadratic-3-1-3">
+\begin{align*}
+L_1(x) \amp = f'(a)(x-a)+f(a)\\
+\amp = 2(x-1)+2 \amp (f'(1)=2, f(1)=2)\\
+L_2(x) \amp = f'(b)(x-b)+f(b)\\
+\amp = 0(x-2)+3 \amp (f'(2)=0, f(0)=3)\\
+\amp = 3\text{.}
+\end{align*}
+</div>
+<div class="para">Thus the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(1\)</span> is <span class="process-math">\(L_1(x)=2(x-1)+2\text{,}\)</span> and the linearization centered at <span class="process-math">\(2\)</span> is the constant function <span class="process-math">\(L_2(x)=3\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="remark remark-like" id="s_linearize-6"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.4</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization and tangent lines.</span>
+</h3>
+<div class="para" id="s_linearize-6-2">You may have noticed a resemblance to the formula for the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{,}\)</span> and the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\text{.}\)</span> To be precise: the <em class="emphasis">graph</em> of the linearization function <span class="process-math">\(L\)</span> is precisely the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\(P=(a,f(a))\text{.}\)</span>
+</div>
+<div class="para" id="s_linearize-6-3">By way of illustration, we graph the function <span class="process-math">\(f(x)=3-(x-2)^2\)</span> in <a href="s_linearize.html#eg_linearization_quadratic" class="xref" data-knowl="./knowl/xref/eg_linearization_quadratic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.3: Linearization: quadratic">Example 19.3</a> along with the linearizations <span class="process-math">\(L_1\)</span> and <span class="process-math">\(L_2\)</span> centered at <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> respectively.</div>
+<figure class="figure figure-like" id="fig_linearization_tangent"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_linearization_tangent.svg" role="img" class="contained" alt="Linearizations of a quadratic function"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">19.5<span class="period">.</span></span><span class="space"> </span>Linearizations of <span class="process-math">\(f(x)=3-(x-2)^2\)</span></figcaption></figure></article><article class="remark remark-like" id="s_linearize-7"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.6</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation.</span>
+</h3>
+<div class="para logical" id="s_linearize-7-2">
+<div class="para">Assume <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> and let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span> As we can show, the differentiability of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> ensures that values of the linearization <span class="process-math">\(L\)</span> are close to values of <span class="process-math">\(f\)</span> for inputs <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math" id="s_linearize-7-2-12">
+\begin{align*}
+f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a} \amp \implies  0=\lim_{x\to a}\frac{f(x)-f(a)}{x-a}-\lim\limits_{x\to a}f'(a) \amp \left(\lim\limits_{x\to a}f'(a)=f'(a)\right)\\
+\amp \implies \lim_{x\to a}\frac{f(x)-f(a)-f'(a)(x-a)}{x-a}=0\\
+\amp \implies \lim_{x\to a}\frac{f(x)-L(x)}{x-a}=0 \amp (L(x)=f'(a)(x-a)-f(a))\text{.}
+\end{align*}
+</div>
+<div class="para">Consider what the limit statement</div>
+<div class="displaymath process-math" id="eq_linearization_tangent">
+\begin{equation}
+\lim_{x\to a}\frac{f(x)-L(x)}{x-a}=0\tag{19.2}
+\end{equation}
+</div>
+<div class="para">tells us. Since <span class="process-math">\(\lim\limits_{x\to a}x-a=0\text{,}\)</span> the numerator <span class="process-math">\(f(x)-L(x)\)</span> must be close to zero for <span class="process-math">\(x\)</span> close to <span class="process-math">\(a\text{.}\)</span> Furthermore, we must have <span class="process-math">\(f(x)-L(x)\)</span> approaching zero <em class="emphasis">faster</em> than <span class="process-math">\(x-a\)</span> approaches zero. More precisely, invoking the epsilon-delta definition of the limit, we can show that for any <span class="process-math">\(\epsilon &gt; 0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{f(x)-L(x)}&lt; \epsilon \abs{x-a}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> After we introduce the <em class="emphasis">mean value theorem</em>, we will be able to give an even better quantitative description of just how good an approximation <span class="process-math">\(L(x)\)</span> is to <span class="process-math">\(f(x)\text{.}\)</span>
+</div>
+</div></article><article class="algorithm theorem-like" id="proc_lin_approx"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">19.7</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation.</span>
+</h3>
+<div class="para logical" id="proc_lin_approx-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is is differentiable at <span class="process-math">\(a\text{,}\)</span> and let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span>
+</div>
+<ol class="decimal" id="proc_lin_approx-2-1-6">
+<li id="proc_lin_approx-2-1-6-1"><div class="para logical" id="proc_lin_approx-2-1-6-1-1">
+<div class="para">For inputs <span class="process-math">\(x\)</span> close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(L(x)\)</span> is a good approximation of <span class="process-math">\(f(x)\text{:}\)</span> that is, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)\approx L(x)
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(x\)</span> close to <span class="process-math">\(a\text{.}\)</span>
+</div>
+</div></li>
+<li id="proc_lin_approx-2-1-6-2"><div class="para logical" id="proc_lin_approx-2-1-6-2-1">
+<div class="para">In paricular for an input <span class="process-math">\(b\)</span> close to <span class="process-math">\(a\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(b)\approx L(b)=f'(a)(b-a)+f(a)\text{.}
+\end{equation*}
+</div>
+</div></li>
 </ol>
-</div></article><article class="example example-like" id="eg_ladder_angle"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span><span class="space"> </span><span class="title">Sliding ladder: angle of inclination.</span>
+</div></article><article class="example example-like" id="eg_linear_approx_quadratic"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">19.8</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: quadratic.</span>
 </h3>
-<div class="para" id="eg_ladder_angle-2-1">Continuing with the setup as in <a href="s_related_rates_I.html#eg_sliding_ladder" class="xref" data-knowl="./knowl/xref/eg_sliding_ladder.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 17.2: Sliding ladder">Example 17.2</a>, at what rate is the angle between the ladder and the ground changing at the moment when the base begins sliding?</div>
-<div class="solutions"><details id="eg_ladder_angle-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_ladder_angle-3-1">
-<div class="para">We define</div>
-<div class="displaymath process-math" id="eg_ladder_angle-3-1-1">
-\begin{align*}
-b(t) \amp = \text{dist. btwn. base and wall } t \text{ sec. after nudge}\\
-\theta(t) \amp = \text{angle btwn. ladder and floor  } t \text{ sec. after nudge}\text{.}
-\end{align*}
+<div class="para logical" id="eg_linear_approx_quadratic-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=3-(x-2)^2\text{.}\)</span>
 </div>
+<ol class="decimal" id="eg_linear_approx_quadratic-2-1-2">
+<li id="eg_linear_approx_quadratic-2-1-2-1"><div class="para" id="eg_linear_approx_quadratic-2-1-2-1-1">Use the linearization <span class="process-math">\(L_1(x)\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(1\)</span> to <em class="emphasis">estimate</em> <span class="process-math">\(f(0.5)\text{.}\)</span>
+</div></li>
+<li id="eg_linear_approx_quadratic-2-1-2-2"><div class="para" id="eg_linear_approx_quadratic-2-1-2-2-1">Compare your estimate of <span class="process-math">\(f(0.5)\)</span> with the actual value. How close are the two?</div></li>
+</ol>
 </div>
-<figure class="figure figure-like" id="fig_sliding_ladder_angle"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="external/im_sliding_ladder_angle.png" class="contained" alt="Sliding ladder diagram with angle"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.6<span class="period">.</span></span><span class="space"> </span>Functions <span class="process-math">\(b(t)\)</span> and <span class="process-math">\(\theta(t)\)</span></figcaption></figure><div class="para logical" id="eg_ladder_angle-3-3">
-<div class="para">We wish to compute <span class="process-math">\(\theta'(0)\)</span> the rate of change of the angle with respect to time at the moment of the nudge. As illustrated by <a href="s_related_rates_I.html#fig_sliding_ladder_angle" class="xref" data-knowl="./knowl/xref/fig_sliding_ladder_angle.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 17.6">Figure 17.6</a> we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_angle.html ./knowl/xref/fig_sliding_ladder_initial.html" id="eq_sliding_ladder_angle">
-\begin{equation}
-\cos (\theta(t))=\frac{b(t)}{5}\text{.}\tag{17.4}
-\end{equation}
-</div>
-<div class="para">Taking the derivative of both sides with respect to <span class="process-math">\(t\)</span> yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_angle.html ./knowl/xref/fig_sliding_ladder_initial.html" id="eq_sliding_ladder_angle_der">
-\begin{equation}
--\sin(\theta(t))\theta'(t)=\frac{b'(t)}{5}\text{,}\tag{17.5}
-\end{equation}
-</div>
-<div class="para">and thus</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_angle.html ./knowl/xref/fig_sliding_ladder_initial.html">
-\begin{equation*}
-\theta'(t)=-\frac{b'(t)}{5\sin (\theta(t))}\text{.}
-\end{equation*}
-</div>
-<div class="para">We now compute</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_sliding_ladder_angle.html ./knowl/xref/fig_sliding_ladder_initial.html">
-\begin{equation*}
-\theta'(0)=-\frac{b'(0)}{5\sin(\theta(0))}=-\frac{5/4}{5\sin(\theta(1))}\text{,}
-\end{equation*}
-</div>
-<div class="para">using the given fact that <span class="process-math">\(b'(0)=1.25\)</span> m/s. It remains to compute <span class="process-math">\(\sin(\theta(0))\text{.}\)</span> At time <span class="process-math">\(t=0\)</span> we have <span class="process-math">\(\sin(\theta(0))=\frac{4}{5}\text{,}\)</span> as illustrated in <a href="s_related_rates_I.html#fig_sliding_ladder_initial" class="xref" data-knowl="./knowl/xref/fig_sliding_ladder_initial.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 17.7">Figure 17.7</a>.</div>
-</div>
-<figure class="figure figure-like" id="fig_sliding_ladder_initial"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><img src="external/im_sliding_ladder_angle_init.png" class="contained" alt="Sliding ladder diagram with angle initially"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.7<span class="period">.</span></span><span class="space"> </span>Diagram at time <span class="process-math">\(t=0\)</span></figcaption></figure><div class="para logical" id="eg_ladder_angle-3-5">
-<div class="para">We conclude that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\theta'(0)=-\frac{5/4}{5\cdot 4/5}=-\frac{5}{16} \text{ rad/s}\text{.}
-\end{equation*}
-</div>
-<div class="para">In plain English: at the moment of the nudge, the angle between the ladder and floor is decreasing at a rate of <span class="process-math">\(5/16\)</span> radians per second.</div>
-</div>
-</div></details></div></article><article class="example example-like" id="eg_stretched_rubber"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span><span class="space"> </span><span class="title">Stretched rubber sheet.</span>
+<div class="solutions"><details id="eg_linear_approx_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_quadratic-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_cuberoot"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">19.9</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: cube-root.</span>
 </h3>
-<div class="para" id="eg_stretched_rubber-2-1">A 20 m<span class="process-math">\(^2\)</span> rectangular rubber sheet is placed in a stretching machine. Four seconds after the machine is turned on, the width of the rubber sheet is 10 meters and expanding at a rate of 0.25 m/s. Is the height of the rubber sheet shrinking or expanding at this moment in time? How quickly is it shrinking or expanding. (Assume that during the shrinking process the area of the sheet remains constant and the sheet always maintains a rectangular shape.)</div>
-<div class="solutions"><details id="eg_stretched_rubber-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_stretched_rubber-3-1">
-<div class="para">We define</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_stretch_sheet.html" id="eg_stretched_rubber-3-1-1">
-\begin{align*}
-w(t) \amp = \text{width of sheet } t \text{ sec. after mach. turned on}\\
-h(t) \amp = \text{height of sheet } t \text{ sec. after mach. turned on}\text{.}
-\end{align*}
+<div class="para" id="eg_linear_approx_cuberoot-2-1">Use linear approximation to estimate <span class="process-math">\(\sqrt[3]{8.05}\text{.}\)</span>
 </div>
-<div class="para">In terms of our introduced notation, we have</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_stretch_sheet.html" id="eg_stretched_rubber-3-1-2">
-\begin{align*}
-w(4) \amp = 10 \text{ m}\\
-w'(4) \amp = 1/4 \text{ m/s}\text{.}
-\end{align*}
+<div class="solutions"><details id="eg_linear_approx_cuberoot-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_cuberoot-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_trig"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">19.10</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: trig.</span>
+</h3>
+<div class="para" id="eg_linear_approx_trig-2-1">Let <span class="process-math">\(f(x)=\tan(\pi x)\text{.}\)</span> Use linear approximation to estimate <span class="process-math">\(f(0.251)\text{.}\)</span>
 </div>
-<div class="para">We wish to compute <span class="process-math">\(h'(4)\text{,}\)</span> the rate of change of the height of the sheet with respect to time 4 seconds after the stretching begins. Since</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_stretch_sheet.html" id="eq_stretch_sheet">
-\begin{equation}
-20=w(t)h(t)\tag{17.6}
-\end{equation}
+<div class="solutions"><details id="eg_linear_approx_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_trig-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_marshmallow"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">19.11</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: marshmallow.</span>
+</h3>
+<div class="para logical" id="eg_linear_approx_marshmallow-2-1">
+<div class="para">Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.</div>
+<ol class="decimal" id="eg_linear_approx_marshmallow-2-1-1">
+<li id="eg_linear_approx_marshmallow-2-1-1-1"><div class="para" id="eg_linear_approx_marshmallow-2-1-1-1-1">Use linear approximation to <em class="emphasis">estimate</em> the change in volume of the marshmallow.</div></li>
+<li id="eg_linear_approx_marshmallow-2-1-1-2"><div class="para" id="eg_linear_approx_marshmallow-2-1-1-2-1">Compare your estimate with the actual change in volume.</div></li>
+</ol>
 </div>
-<div class="para">for all <span class="process-math">\(t\geq 0\text{,}\)</span> taking the derivative of both sides of this equation with respect to <span class="process-math">\(t\)</span> yields</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_stretch_sheet.html" id="eq_sheet_stretch_der">
-\begin{equation}
-0=w'(t)h(t)+w(t)h'(t)\text{.}\tag{17.7}
-\end{equation}
-</div>
-<div class="para">Thus we have <span class="process-math">\(h'(t)=-\frac{w'(t)h(t)}{w(t)}\text{,}\)</span> and</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_stretch_sheet.html">
-\begin{equation*}
-h'(1)=-\frac{w'(1)h(1)}{w(1)}=-\frac{1/4\cdot 2}{10}=-\frac{1}{20} \text{ m/s}\text{,}
-\end{equation*}
-</div>
-<div class="para">where we have computed <span class="process-math">\(h(1)=20/w(1)=20/10=2\text{,}\)</span> using <a href="s_related_rates_I.html#eq_stretch_sheet" class="xref" data-knowl="./knowl/xref/eq_stretch_sheet.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 17.6">(17.6)</a>. In plain English: four seconds after the stretching begins, the height of the rubber sheet is decreasing at rate of <span class="process-math">\(1/20\)</span> meters per second.</div>
-</div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_linear_approx_marshmallow-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_marshmallow-3-1"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_implicit.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_related_rates_II.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-23.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

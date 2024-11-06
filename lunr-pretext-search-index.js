@@ -1675,6 +1675,114 @@ var ptx_lunr_docs = [
   "body": " Using similar triangles   A light shines from the top of a pole 20 meters high. A ball is dropped from the same height at a point 12 meters away from the light pole. How fast is the shadow of the ball moving along the ground second later? Assume the ball falls a distance of meters in seconds.    We define .   Functions and   Diagram of lamp, ball, and shadow    Since after seconds the ball has dropped meters, and since its original height is 20 meters, we have . Next using the two similar right triangles in , we see that . We wish to compute . To do so we take the derivative of both sides of : . From this it follows that , where we have used the fact that . Lastly, to compute , we need to compute . This is determined by evaluating at and solving for . Since , we have . We conclude that . We conclude that -second after the drop the ball's shadow is traveling at a rate of 384 meters per second toward the lamp.   "
 },
 {
+  "id": "s_linearize",
+  "level": "1",
+  "url": "s_linearize.html",
+  "type": "Section",
+  "number": "19",
+  "title": "Linearization",
+  "body": " Linearization     Define the linearization of a function at an input .    Understand the linearization of a function in terms of the tangent line to the graph of at the point .    Investigate linearization as an approximation tool. Discuss in what sense a linearization is a good approximation of a function .      Linearization of a function   Assume is differentiable at the input . The linearization of centered at is the affine function defined as .     Linearization  It is important to observe the centered at modifier in . In other words, the function defined in depends both on and the specific input .    Linearization: quadratic   Let . Compute the linearization of centered at , and the linearization of centered at .    First compute . Using , we have . Thus the linearization of centered at is , and the linearization centered at is the constant function .     Linearization and tangent lines  You may have noticed a resemblance to the formula for the linearization of centered at , and the tangent line to the graph of at . To be precise: the graph of the linearization function is precisely the tangent line to the graph of at the point .  By way of illustration, we graph the function in along with the linearizations and centered at and , respectively.   Linearizations of   Linearizations of a quadratic function       Linear approximation  Assume is differentiable at , and let be the linearization of centered at . As we can show, the differentiability of at ensures that values of the linearization are close to values of for inputs near . Indeed, we have . Consider what the limit statement tells us. Since , the numerator must be close to zero for close to . Furthermore, we must have approaching zero faster than approaches zero. More precisely, invoking the epsilon-delta definition of the limit, we can show that for any , we have for all sufficiently close to . After we introduce the mean value theorem , we will be able to give an even better quantitative description of just how good an approximation is to .    Linear approximation   Assume is is differentiable at , and let be the linearization of centered at .   For inputs close to , is a good approximation of : that is, we have for close to .    In paricular for an input close to , we have .        Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?            Linear approximation: cube-root   Use linear approximation to estimate .         Linear approximation: trig   Let . Use linear approximation to estimate .         Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.           "
+},
+{
+  "id": "s_linearize-2",
+  "level": "2",
+  "url": "s_linearize.html#s_linearize-2",
+  "type": "Objectives",
+  "number": "19",
+  "title": "",
+  "body": "   Define the linearization of a function at an input .    Understand the linearization of a function in terms of the tangent line to the graph of at the point .    Investigate linearization as an approximation tool. Discuss in what sense a linearization is a good approximation of a function .    "
+},
+{
+  "id": "d_linearization",
+  "level": "2",
+  "url": "s_linearize.html#d_linearization",
+  "type": "Definition",
+  "number": "19.1",
+  "title": "Linearization of a function.",
+  "body": " Linearization of a function   Assume is differentiable at the input . The linearization of centered at is the affine function defined as .   "
+},
+{
+  "id": "s_linearize-4",
+  "level": "2",
+  "url": "s_linearize.html#s_linearize-4",
+  "type": "Remark",
+  "number": "19.2",
+  "title": "Linearization.",
+  "body": " Linearization  It is important to observe the centered at modifier in . In other words, the function defined in depends both on and the specific input .  "
+},
+{
+  "id": "eg_linearization_quadratic",
+  "level": "2",
+  "url": "s_linearize.html#eg_linearization_quadratic",
+  "type": "Example",
+  "number": "19.3",
+  "title": "Linearization: quadratic.",
+  "body": " Linearization: quadratic   Let . Compute the linearization of centered at , and the linearization of centered at .    First compute . Using , we have . Thus the linearization of centered at is , and the linearization centered at is the constant function .   "
+},
+{
+  "id": "s_linearize-6",
+  "level": "2",
+  "url": "s_linearize.html#s_linearize-6",
+  "type": "Remark",
+  "number": "19.4",
+  "title": "Linearization and tangent lines.",
+  "body": " Linearization and tangent lines  You may have noticed a resemblance to the formula for the linearization of centered at , and the tangent line to the graph of at . To be precise: the graph of the linearization function is precisely the tangent line to the graph of at the point .  By way of illustration, we graph the function in along with the linearizations and centered at and , respectively.   Linearizations of   Linearizations of a quadratic function     "
+},
+{
+  "id": "s_linearize-7",
+  "level": "2",
+  "url": "s_linearize.html#s_linearize-7",
+  "type": "Remark",
+  "number": "19.6",
+  "title": "Linear approximation.",
+  "body": " Linear approximation  Assume is differentiable at , and let be the linearization of centered at . As we can show, the differentiability of at ensures that values of the linearization are close to values of for inputs near . Indeed, we have . Consider what the limit statement tells us. Since , the numerator must be close to zero for close to . Furthermore, we must have approaching zero faster than approaches zero. More precisely, invoking the epsilon-delta definition of the limit, we can show that for any , we have for all sufficiently close to . After we introduce the mean value theorem , we will be able to give an even better quantitative description of just how good an approximation is to .  "
+},
+{
+  "id": "proc_lin_approx",
+  "level": "2",
+  "url": "s_linearize.html#proc_lin_approx",
+  "type": "Procedure",
+  "number": "19.7",
+  "title": "Linear approximation.",
+  "body": " Linear approximation   Assume is is differentiable at , and let be the linearization of centered at .   For inputs close to , is a good approximation of : that is, we have for close to .    In paricular for an input close to , we have .      "
+},
+{
+  "id": "eg_linear_approx_quadratic",
+  "level": "2",
+  "url": "s_linearize.html#eg_linear_approx_quadratic",
+  "type": "Example",
+  "number": "19.8",
+  "title": "Linear approximation: quadratic.",
+  "body": " Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?          "
+},
+{
+  "id": "eg_linear_approx_cuberoot",
+  "level": "2",
+  "url": "s_linearize.html#eg_linear_approx_cuberoot",
+  "type": "Example",
+  "number": "19.9",
+  "title": "Linear approximation: cube-root.",
+  "body": " Linear approximation: cube-root   Use linear approximation to estimate .       "
+},
+{
+  "id": "eg_linear_approx_trig",
+  "level": "2",
+  "url": "s_linearize.html#eg_linear_approx_trig",
+  "type": "Example",
+  "number": "19.10",
+  "title": "Linear approximation: trig.",
+  "body": " Linear approximation: trig   Let . Use linear approximation to estimate .       "
+},
+{
+  "id": "eg_linear_approx_marshmallow",
+  "level": "2",
+  "url": "s_linearize.html#eg_linear_approx_marshmallow",
+  "type": "Example",
+  "number": "19.11",
+  "title": "Linear approximation: marshmallow.",
+  "body": " Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.          "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
