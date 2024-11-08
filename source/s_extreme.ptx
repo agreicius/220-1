@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_extreme" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Extreme value theorem</title>
+
+    <definition xml:id="d_extrema">
+        <title>Extreme values</title>
+        <statement>
+            <p>
+               Assume <m>f</m> is defined on the set <m>D\subseteq \mathbb{R}</m>, and let <m>a</m> be an element of <m>D</m>.
+               <ul>
+                <li>
+                    <p>
+                       <m>f(a)</m> is an absolute maximum value of <m>f</m> on <m>D</m> if <m>f(a)\geq f(x)</m> for all <m>x\in D</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <m>f(a)</m> is an absolute minimum value of <m>f</m> on <m>D</m> if <m>f(a)\leq f(x)</m> for all <m>x\in D</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <m>f(a)</m> is a local maximum value of <m>f</m> on <m>D</m> if <m>f(a)\geq f(x)</m> for all <m>x\in D</m> sufficiently close to <m>a</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                       <m>f(a)</m> is a local minimum value of <m>f</m> on <m>D</m> if <m>f(a)\leq f(x)</m> for all <m>x\in D</m> sufficiently close to <m>a</m>.  
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>f(a)</m> is an extreme value of <m>f</m> on <m>D</m> if it is an absolute or local maximum or minimum value of <m>f</m> on <m>D</m>. 
+                    </p>
+                </li>
+               </ul> 
+            </p>
+        </statement>
+    </definition>
+
+    <theorem xml:id="th_extreme">
+        <title>Extreme value theorem</title>
+        <statement>
+            <p>
+                If <m>f</m> is continuous on the closed interval <m>I=[a,b]</m>, then there are inputs <m>c</m> and <m>d</m> for which <m>f(c)</m> is the absolute maximum value of <m>f</m> on <m>I</m> and <m>f(d)</m> is the absolute minimum value of <m>f</m> on <m>I</m>. In plain English: a continuous function always attains a maximum and minimum value over a closed interval <m>[a,b]</m>. 
+            </p>
+        </statement>
+        <proof>
+            <p>
+                The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called <em>compactness</em> that allows you to eventually give a beautiful one-line proof of the extreme value theorem.   
+            </p>
+        </proof>
+    </theorem>
+    <theorem xml:id="th_crit_pt">
+        <title>Critical points and extreme values</title>
+        <creator>Fermat</creator>
+        <statement>
+            <p>
+                Assume <m>f</m> is continuous on <m>D</m> and that <m>a</m> is an interior point of <m>D</m>. If <m>f(a)</m> is a local maximum or minimum value of <m>f</m> on <m>D</m>, and if <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.  
+            </p>
+        </statement>
+    </theorem>
+    <definition xml:id="d_crit_pt">
+    <title>Critical point</title>
+    <statement>
+    <p>
+    Let <m>f</m> be defined on <m>D</m>. An element <m>a\in D</m> is a <term>critical point</term> of <m>f</m> if either <m>f'(a)=0</m> or <m>f</m> is not differentiable at <m>a</m>. 
+    </p>
+    </statement>
+    </definition>
+    <algorithm xml:id="proc_extreme">
+        <title>Extreme value theorem</title>
+        <statement>
+            <p>
+                Assume <m>f</m> is continuous on the closed interval <m>I=[a,b]</m>. To determine the absolute maximum and minimum values of <m>f</m> on <m>I</m>, proceed as follows. 
+                <ol>
+                    
+                    <li>
+                        <title>Identify candidate inputs</title>
+                        <p>
+                            The candidate inputs where <m>f</m> potentially attains a maximum or minimum value consist of (i) the endpoints <m>a</m> and <m>b</m> of the interval <m>I</m> along with the set of all critical points of <m>f</m>. We determine the latter by finding all solutions to the equation 
+                            <men xml:id="eq_extreme">
+                                f'(x)=0
+                            </men>
+                            lying in <m>I</m>, and identifying all elements of <m>I</m> where <m>f</m> is not differentiable.
+                        </p>
+                    </li>
+                    <li>
+                        <title>Evaluate <m>f</m></title>
+                        <p>
+                           Evaluate <m>f</m> at all candidate inputs you found in Step 1.  
+                        </p>
+                    </li>
+                    <li>
+                        <title>Compare values</title>
+                        <p>
+                            Compare the values of <m>f</m> computed in Step 2. The maximum value in that set is the absolute maximum value of <m>f</m> on <m>I</m>; the minimum value in that set is the minimum value of <m>f</m> on <m>I</m>.   
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </algorithm>
+    <example xml:id="eg_extreme_factored_poly">
+    <title>Extreme values: factored polynomial</title>
+    <statement>
+    <p>
+        Let <m>f(x)=(x-2)^5(x-3)^5</m>. Find the absolute maximum and minimum values of <m>f</m> on the interval <m>I=[0,4]</m>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_extreme_trig">
+    <title>Extreme values: trig</title>
+    <statement>
+    <p>
+        Let <m>f(x)=x+2\cos x</m>. Find the absolute maximum and minimum values of <m>f</m> on the interval <m>I=[0,2\pi]</m>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    <example xml:id="eg_extreme_graphs">
+    <title>Distance between graphs</title>
+    <statement>
+    <p>
+    Let <m>f(x)=\sqrt[3]{x}</m> and <m>g(x)=3x</m>. Find the maximum vertical distance between the graphs of <m>f</m> and <m>g</m> on the interval <m>I=\left[-\frac{1}{\sqrt{27}}, \frac{1}{\sqrt{27}}\right]</m>
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
+    
+
+
+    
+
+</section>
