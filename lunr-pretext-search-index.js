@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright "
+  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright    "
 },
 {
   "id": "s_intro",
@@ -420,7 +420,7 @@ var ptx_lunr_docs = [
   "url": "s_limit_sandwich.html#ss_sandwich-16",
   "type": "Proof",
   "number": "1",
-  "title": "Proof of <span class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
+  "title": "Proof of <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
   "body": " Proof of  We will prove that for all . First, observer that since , we have . Thus the function is even. Since is also even, it suffices to prove for all . Furthermore, since , and since , it suffices to show for all . To this end, take any . The triangle , where , , and lies within the the sector of the unit disc determined by . (Diagram to appear sometime soon.) Elementary trigonometry tells us that ; elementary geometry tells us that . We conclude that , or equivalently, for all . Since furthermore and for , we see that for all , as desired.  "
 },
 {
@@ -501,7 +501,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#rm_find_delta",
   "type": "Remark",
   "number": "4.7",
-  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
+  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
   "body": " Finding such that  In the final step of applying to a limit statment , we usually have found an open interval containing , and then must find a such that . The following approach is useful in this regard. Observe that and thus , where , are the distances from to the left and right endpoints of the interval.   Visualizing distances to endpoints of interval   Visualizing distances to endpoints of interval     Setting as the minimum of these distances, we now have , as desired.  Depending on the example, we can sometimes easily determine which of and is the minimum, giving us an explicit expression for . When things are too complicated, however, it is perfectly fine to set .  "
 },
 {
@@ -519,7 +519,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#eg_ep_delt_quad",
   "type": "Example",
   "number": "4.10",
-  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
+  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
   "body": " Finding for specific : quadratic function   Let . It is a fact that . Verify the epsilon-delta definition for this limit statement for the specific epsilon .    We wish to find satisfying . Proceeding as in , we first solve the inequality : . Notice that in this case, the set of solutions to the inequality is a union of two intervals: . Notice further that our limit point is an element of the second interval, and that we have , where . Thus, setting , we have . It follows that , as desired.   "
 },
 {
@@ -663,7 +663,7 @@ var ptx_lunr_docs = [
   "url": "s_continuous_def.html#s_continuous_def-5",
   "type": "Remark",
   "number": "6.3",
-  "title": "Continuity at <span class=\"process-math\">\\(a\\)<\/span>.",
+  "title": "Continuity at <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(a\\)<\/span>.",
   "body": " Continuity at  Let be a function with domain . Observe that our definition of continuity (and discontinuity) only applies to elements of the domain. (In fact, it only applies to elements of the domain that are either interior points or endpoints.)  For example, consider the function with domain . Since is not an element of the domain of , we do not say that is continuous or discontinuous at .  "
 },
 {
@@ -897,7 +897,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_at_infty.html#eg_lim_at_infty_cos",
   "type": "Example",
   "number": "8.6",
-  "title": "Limit at infinity: <span class=\"process-math\">\\(\\cos\\)<\/span>.",
+  "title": "Limit at infinity: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\cos\\)<\/span>.",
   "body": " Limit at infinity:   Let .   Provide a graph of over its entire domain.    Argue graphically whether the infinite limits exist.       From the graph of in , we see visually that there are no horizontal asymptotes: in more detail, since oscillate between consistently between and as , there is no one fixed value that the values of approach. Thus the limits of at and do not exist.  Graph of   Graph of cosine       "
 },
 {
@@ -1005,7 +1005,7 @@ var ptx_lunr_docs = [
   "url": "s_infinite_limits.html#eg_infty_lim_tan",
   "type": "Example",
   "number": "9.5",
-  "title": "Vertical asymptotes: <span class=\"process-math\">\\(\\tan\\)<\/span>.",
+  "title": "Vertical asymptotes: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\tan\\)<\/span>.",
   "body": " Vertical asymptotes:   Let . Recall that the domain of is .   Sketch a graph of on its entire domain.    Find any and all vertical or horizontal asymptotes of .          The graph of is given below.  Graph of   Graph of tan        For each integer , let . We see visually that for all , and hence that each line is a vertical asymptote of the graph of .      "
 },
 {
@@ -1212,7 +1212,7 @@ var ptx_lunr_docs = [
   "url": "s_der_function.html#eg_der_func_reciprocal",
   "type": "Example",
   "number": "11.7",
-  "title": "Derivative function: <span class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
+  "title": "Derivative function: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
   "body": " Derivative function:   Let . Compute the domain of and derive a formula for .       "
 },
 {
@@ -1781,6 +1781,87 @@ var ptx_lunr_docs = [
   "number": "19.11",
   "title": "Linear approximation: marshmallow.",
   "body": " Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.          "
+},
+{
+  "id": "s_extreme",
+  "level": "1",
+  "url": "s_extreme.html",
+  "type": "Section",
+  "number": "20",
+  "title": "Extreme value theorem",
+  "body": " Extreme value theorem   Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .        Extreme value theorem   If is continuous on the closed interval , then there are inputs and for which is the absolute maximum value of on and is the absolute minimum value of on . In plain English: a continuous function always attains a maximum and minimum value over a closed interval .    The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called compactness that allows you to eventually give a beautiful one-line proof of the extreme value theorem.     Critical points and extreme values  Fermat   Assume is continuous on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .     Critical point   Let be defined on . An element is a critical point of if either or is not differentiable at .     Extreme value theorem   Assume is continuous on the closed interval . To determine the absolute maximum and minimum values of on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a maximum or minimum value consist of (i) the endpoints and of the interval along with the set of all critical points of . We determine the latter by finding all solutions to the equation lying in , and identifying all elements of where is not differentiable.    Evaluate  Evaluate at all candidate inputs you found in Step 1.    Compare values  Compare the values of computed in Step 2. The maximum value in that set is the absolute maximum value of on ; the minimum value in that set is the minimum value of on .        Extreme values: factored polynomial   Let . Find the absolute maximum and minimum values of on the interval .         Extreme values: trig   Let . Find the absolute maximum and minimum values of on the interval .         Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval         "
+},
+{
+  "id": "d_extrema",
+  "level": "2",
+  "url": "s_extreme.html#d_extrema",
+  "type": "Definition",
+  "number": "20.1",
+  "title": "Extreme values.",
+  "body": " Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .      "
+},
+{
+  "id": "th_extreme",
+  "level": "2",
+  "url": "s_extreme.html#th_extreme",
+  "type": "Theorem",
+  "number": "20.2",
+  "title": "Extreme value theorem.",
+  "body": " Extreme value theorem   If is continuous on the closed interval , then there are inputs and for which is the absolute maximum value of on and is the absolute minimum value of on . In plain English: a continuous function always attains a maximum and minimum value over a closed interval .    The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called compactness that allows you to eventually give a beautiful one-line proof of the extreme value theorem.   "
+},
+{
+  "id": "th_crit_pt",
+  "level": "2",
+  "url": "s_extreme.html#th_crit_pt",
+  "type": "Theorem",
+  "number": "20.3",
+  "title": "Critical points and extreme values.",
+  "body": " Critical points and extreme values  Fermat   Assume is continuous on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .   "
+},
+{
+  "id": "d_crit_pt",
+  "level": "2",
+  "url": "s_extreme.html#d_crit_pt",
+  "type": "Definition",
+  "number": "20.4",
+  "title": "Critical point.",
+  "body": " Critical point   Let be defined on . An element is a critical point of if either or is not differentiable at .   "
+},
+{
+  "id": "proc_extreme",
+  "level": "2",
+  "url": "s_extreme.html#proc_extreme",
+  "type": "Procedure",
+  "number": "20.5",
+  "title": "Extreme value theorem.",
+  "body": " Extreme value theorem   Assume is continuous on the closed interval . To determine the absolute maximum and minimum values of on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a maximum or minimum value consist of (i) the endpoints and of the interval along with the set of all critical points of . We determine the latter by finding all solutions to the equation lying in , and identifying all elements of where is not differentiable.    Evaluate  Evaluate at all candidate inputs you found in Step 1.    Compare values  Compare the values of computed in Step 2. The maximum value in that set is the absolute maximum value of on ; the minimum value in that set is the minimum value of on .      "
+},
+{
+  "id": "eg_extreme_factored_poly",
+  "level": "2",
+  "url": "s_extreme.html#eg_extreme_factored_poly",
+  "type": "Example",
+  "number": "20.6",
+  "title": "Extreme values: factored polynomial.",
+  "body": " Extreme values: factored polynomial   Let . Find the absolute maximum and minimum values of on the interval .       "
+},
+{
+  "id": "eg_extreme_trig",
+  "level": "2",
+  "url": "s_extreme.html#eg_extreme_trig",
+  "type": "Example",
+  "number": "20.7",
+  "title": "Extreme values: trig.",
+  "body": " Extreme values: trig   Let . Find the absolute maximum and minimum values of on the interval .       "
+},
+{
+  "id": "eg_extreme_graphs",
+  "level": "2",
+  "url": "s_extreme.html#eg_extreme_graphs",
+  "type": "Example",
+  "number": "20.8",
+  "title": "Distance between graphs.",
+  "body": " Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval        "
 },
 {
   "id": "appendix-notation",
