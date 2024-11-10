@@ -165,6 +165,13 @@
             </p>
         </statement>
     </definition>
+    <remark xml:id="rm_abs_local">
+    <title>Absolute max/min implies local max/min</title>
+    <p>
+        Assume <m>f</m> is defined on an interval <m>I</m>. Observer that as pure logical consequence of the definitions, if <m>f(a)</m> is an absolute maximum or minimum value of <m>f</m> on <m>I</m>, then it is also a local maximum or minimum value of <m>f</m> on <m>I</m>. Indeed, if <m>f(a)\geq f(x)</m> (resp. <m>f(a)\leq f(x)</m>) for <em>all</em> <m>x\in I</m>, then the inequality certainly holds for all <m>x\in I</m> <em>sufficiently close</em> to <m>a</m>. 
+    </p>
+    </remark>
+    
     <remark>
         <title>Local extreme values</title>
         <p>
@@ -200,10 +207,10 @@
     </p>
     <figure xml:id="fig_local_extrema">
         <caption>Graph of <m>f</m></caption>
-        <image xml:id="im_local_extrema" width="50%">
+        <image xml:id="im_local_extrema" width="40%">
             <shortdescription>Graph of function with various local extrema</shortdescription>
             <sageplot>
-                f=plot(-x-2,x,-5,-1, ticks=[[-4,-3,-2,-1,1,2,3,4],[-6,-5,-4,-3,-2,1,2,3,6]])
+                f=plot(-x-2,x,-4,-1, ticks=[[-4,-3,-2,-1,1,2,3,4],[-6,-5,-4,-3,-2,-1,1,2,3,6]])
                 g=plot(-(x-1)^2+3,-1,3.99)
                 C=circle((4,-6),0.1)
                 P=point((4,-2),color="blue", size=50)
@@ -218,7 +225,19 @@
     <ol>
         <li>
             <p>
-               The  
+               The function <m>f</m> has a local maximum value at the left endpoint <m>a=-4</m>: indeed, we have <m>2=f(-4)\geq f(x)</m> for all <m>x\in [-4,3)</m> (thus for all <m>x</m> sufficiently close to <m>-4</m>). The value <m>f(4)</m> at the right endpoint, somewhat surprisingly, is also a local max: for all <m>x\in (-3,4]</m> we have <m>-2=f(4)\geq f(x)</m>.
+            </p>
+            <p>
+                Additionally, we see that <m>-1=f(-1)</m> is a local minimum value of <m>f</m>, since <m>f(-1)\leq f(x)</m> for all <m>x\in (-2,0)</m>. Finally, <m>f(1)=3</m> is easily seen to be the absolute maximum value of <m>f</m> on <m>[-4,4]</m>. It follows from <xref ref="rm_abs_local"/> that <m>f(1)</m> is also a local minimum value of <m>f</m> on <m>I</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                We have already observed that <m>3=f(1)</m> is the absolute maximum value of <m>f</m> on <m>I</m>. We claim that there is no absolute minimum value. To see why, first note that <m>f(x)&gt; -4</m> for all <m>x\in I</m>. Thus, if <m>L</m> were an absolute minimum value of <m>f</m> on <m>I</m> we would have <m>L&gt; -4</m>. However, since <m>\lim_{x\to 4^+}f(x)=-4</m>, for any <m>L&gt; 4</m>, we can find an <m>x\in I</m> such that 
+                <me>
+                    L&gt; f(x) &gt; -4
+                </me>.
+                It follows that <m>f</m> has no absolute minimum value on <m>I</m>. 
             </p>
         </li>
     </ol>
@@ -235,7 +254,44 @@
                 Assume <m>f</m> is defined on <m>D</m> and that <m>a</m> is an interior point of <m>D</m>. If <m>f(a)</m> is a local maximum or minimum value of <m>f</m> on <m>D</m>, and if <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>.  
             </p>
         </statement>
+        <proof>
+            <p>
+                We will show that if <m>f(a)</m> is a local maximum value of <m>f</m> on <m>D</m> and <m>f</m> is differentiable at <m>a</m>, then <m>f'(a)=0</m>. The argument for the case where <m>f(a)</m> is a local minimum is exactly similar. 
+            </p>
+            <p>
+                Firstly, since <m>f(a)</m> is assumed to be a local maximum value, we can find an interval <m>(c,d)\subseteq D</m> containing <m>a</m> such that <m>f(a)\geq f(x)</m> for all <m>x\in (c,d)</m>.  
+            </p>
+            <p>
+                Next, since <m>f</m> is differentiable at <m>a</m>, the limit 
+                <me>
+                    \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
+                </me>
+                exists, and we have 
+                <me>
+                    f'(a)=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
+                </me>.
+                Observe further that using <xref ref="th_limit_left_right"/> we have 
+                <me>
+                    f'(a)=\lim\limits_{x\to a^-}\frac{f(x)-f(a)}{x-a} \text{ and } f'(a)=\lim\limits_{x\to a^+}\frac{f(x)-f(a)}{x-a}
+                </me>.
+                Next, since <m>f(x)\leq f(a)</m> for all <m>x</m> sufficiently close to <m>a</m> (more precisely, for all <m>x\in (c,d)</m>), <m>f(x)-f(a)\leq 0</m> for all <m>x</m> sufficiently close to <m>a</m>. It follows that 
+                <md>
+                    <mrow> \frac{f(x)-f(a)}{x-a} \amp \geq 0 \ \text{ as } x\to a^- \amp (x&lt; a \implies x-a&lt; 0) </mrow>
+                    <mrow> \frac{f(x)-f(a)}{x-a} \amp \leq 0 \ \text{ as } x\to a^+ \amp (x&gt; a \implies x-a&gt; 0) </mrow>
+                </md>,
+                and thus, taking limits, that 
+                
+                <md>
+                    <mrow>f'(a)\amp =\lim\limits_{x\to a^-}\frac{f(x)-f(a)}{x-a}\geq 0 </mrow>
+                    <mrow>f'(a)\amp =\lim\limits_{x\to a^+}\frac{f(x)-f(a)}{x-a}\leq 0 </mrow>
+                </md>.
+                Since <m>0\leq f'(a)\leq 0</m>, we conclude that <m>f'(a)=0</m>, as desired.
+            </p>
+        </proof>
     </theorem>
+    <p>
+        According to <xref ref="th_crit_pt"/>, points <m>a</m> where either <m>f</m> is not differentiable, or where <m>f'(a)=0</m> are important to us, as these are candidates where the value <m>f(a)</m> is potentially a local maximum or minimum. Accordingly, we give such inputs a special name: critical points. 
+    </p>
     <definition xml:id="d_crit_pt">
     <title>Critical point</title>
     <statement>
@@ -244,6 +300,32 @@
     </p>
     </statement>
     </definition>
+    <p>
+        Let us now do some synthesis of the above theory. Assume <m>f</m> is continuous on the closed interval <m>I=[a,b]</m>. 
+        <ul>
+            <li>
+                <p>
+                    According to <xref ref="th_extreme"/> there are inputs <m>c</m> and <m>d</m> in <m>I</m> where <m>f</m> attains its absolute maximum and minimum values, respectively.
+                </p>
+            </li>
+            <li>
+                <p>
+                    In particular, <m>f(c)</m> and <m>f(d)</m> are <em>local</em> extreme values of the function. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    According to <xref ref="th_crit_pt"/>, if <m>c</m> and <m>d</m> are interior points of <m>I</m>, then they must be critical points of <m>f</m>: <ie/>, <m>f</m> is either not differentiable at there, or <m>f'</m> is equal to zero there.  
+                </p>
+            </li>
+            <li>
+                <p>
+                    We conclude that the inputs <m>c</m> and <m>d</m> where <m>f</m> attains its absolute extreme values are either one of the endpoints, <m>a</m> or <m>b</m> of the interval, or one of the critical points of <m>f</m> in the interior <m>(a,b)</m> of the interval. 
+                </p>
+            </li>
+        </ul>  
+        Our synthesis gives rise to the following procedure for finding the absolute extreme values of a continuous function on a closed interval. 
+    </p>
     <algorithm xml:id="proc_extreme">
         <title>Extreme value theorem</title>
         <statement>
@@ -254,11 +336,11 @@
                     <li>
                         <title>Identify candidate inputs</title>
                         <p>
-                            The candidate inputs where <m>f</m> potentially attains a maximum or minimum value consist of (i) the endpoints <m>a</m> and <m>b</m> of the interval <m>I</m> along with the set of all critical points of <m>f</m>. We determine the latter by finding all solutions to the equation 
+                            The candidate inputs where <m>f</m> potentially attains a maximum or minimum value consist of (i) the endpoints <m>a</m> and <m>b</m> of the interval <m>I</m> along with the set of all critical points of <m>f</m> lying in <m>(a,b)</m>. We determine the latter by finding all solutions to the equation 
                             <men xml:id="eq_extreme">
                                 f'(x)=0
                             </men>
-                            lying in <m>I</m>, and identifying all elements of <m>I</m> where <m>f</m> is not differentiable.
+                            lying in <m>(a,b)</m>, and identifying all elements of <m>(a,b)</m> where <m>f</m> is not differentiable.
                         </p>
                     </li>
                     <li>
@@ -286,7 +368,34 @@
     </statement>
     <solution>
     <p>
-    
+    First compute 
+    <me>
+        f'(x)=5(x-2)^4(x-3)^5+5(x-2)^5(x-3)^4
+    </me>.
+    Note that <m>f</m>   is differentiable everywhere on the interval <m>I</m>, so to find critical points we find all solutions to 
+    <me>
+        f'(x)=0
+    </me>
+    lying in <m>(0,4)</m>. The key technique for solving this equation is <em>factoring</em>:
+    <md>
+        <mrow> f'(x)\amp =0 </mrow>
+        <mrow>5(x-2)^4(x-3)^5+5(x-2)^5(x-3)^4 \amp = 0</mrow>
+        <mrow>5(x-2)^4(x-3)^4((x-2)+(x-3)) \amp =0  </mrow>
+        <mrow>5(x-2)^4(x-3)^4(2x-5) \amp = 0 </mrow>
+    </md>. 
+    We now see that the last equality holds if and only if 
+    <me>
+        x=2,3,\frac{5}{2}
+    </me>.
+    These are thus our critical points. We now evaluate <m>f</m> at these critical points, as well as at the endpoints of the interval: 
+    <md>
+        <mrow>f(0) \amp = (-2)^5\cdot (-3)^5=2^5\cdot 3^5 </mrow>
+        <mrow>f(2) \amp = 0</mrow>
+        <mrow>f(5/2) \amp = (1/2)^5(-1/2)^5=-\frac{1}{2^10}</mrow>
+        <mrow>f(3) \amp = 0</mrow>
+        <mrow>f(4) \amp = 2^5\cdot 1^5=2^5</mrow>
+    </md>.
+    Comparing these values, we conclude that <m>f(0)=2^5\cdot 3^5</m> is the absolute maximum value of <m>f</m> on <m>I</m>, and <m>f(5/2)=-1/2^{10}</m> is the absolute minimum value of <m>f</m> on <m>I</m>. 
     </p>
     </solution>
     </example>
@@ -299,8 +408,41 @@
     </statement>
     <solution>
     <p>
-    
+    The function <m>f</m> is easily seen to be differentiable everywhere, with <m>f'(x)=1-2\sin x</m>. To find critical points, we solve: 
+    <md>
+        <mrow>f'(x) \amp =0</mrow>
+        <mrow>1-2\sin x \amp = 0</mrow>
+        <mrow>\sin x \amp = \frac{1}{2}</mrow>
+    </md>.
+    Reactivating our trig expertise, we realize that the solutions to the last equation come in two infinite lists: 
+    <md>
+        <mrow>x \amp = \frac{\pi}{6}+2\pi n, \hspace{10pt} n \in \Z</mrow>
+        <mrow>x \amp= \frac{5\pi}{6}+2\pi n, \hspace{10pt} n \in \Z </mrow>
+    </md>.
+    Thus the solutions lying in the interior <m>(0,2\pi)</m> of the given interval are 
+    <me>
+        x=\frac{\pi}{6}, \frac{5\pi}{6}
+    </me>.
+    Now evaluate <m>f</m> at our candidates, the two critical points and the two endpoints: 
+    <md>
+        <mrow>f(0) \amp = 2</mrow>
+        <mrow>f(\pi/6) \amp =\frac{\pi}{6}+2\cos(\pi/6)=\frac{\pi}{6}+\sqrt{3}</mrow>
+        <mrow>f(5\pi/6) \amp = 5\pi/6+2\cos(5\pi/6)=5\pi/6-\sqrt{3}</mrow>
+        <mrow>f(2\pi) \amp = 2\pi+2=2(\pi+1)</mrow>
+    </md>.
+    Admittedly, comparing these values is somewhat challenging without the use of technology. It turns out that 
+    <me>
+        f(5\pi/6)\leq f(2)\leq f(\pi/6)\leq f(2\pi)
+    </me>,
+     and thus that <m>f(5\pi/6)=5\pi/6-\sqrt{3}</m> is the absolute minimum value of <m>f</m> on <m>I</m>, and <m>f(2\pi)=2\pi+2</m> is the absolute maximum value of <m>f</m> on <m>I</m>. Below you find a graph of <m>f</m> that bears out our analysis. 
     </p>
+    <image xml:id="im_extreme_trig" width="50%">
+        <shortdescription>Graph of example function revealing the extreme values.</shortdescription>
+        <sageplot>
+            f(x)=x+2*cos(x)
+            plot(f(x),x,0,2*pi, tick_formatter=(pi,None),ticks=[[pi/6, 5*pi/6, 2*pi],[2,4,6,8]], aspect_ratio=.7)
+        </sageplot>
+    </image>
     </solution>
     </example>
     <example xml:id="eg_extreme_graphs">
@@ -312,8 +454,63 @@
     </statement>
     <solution>
     <p>
-    
+        The vertical distance point <m>(x,f(x))</m> and <m>(x,g(x))</m> on the two graphs is measured by <m>\abs{f(x)-g(x)}</m>. Thus we are interested in the extreme values of <m>h(x)=f(x)-g(x)</m> on the interval <m>I</m>. For <m>x\ne 0</m> we have 
+        <me>
+            h'(x)=f'(x)-g'(x)=\frac{1}{3}x^{-2/3}-3=\frac{1}{3(\sqrt[3]{x})^2}-3
+        </me>.
+        Note that <m>h</m> is not differentiable at <m>x=0</m>, and thus this is one of our critical points. To find the others we solve: 
+        <md>
+            <mrow>f'(x) \amp = 0</mrow>
+            <mrow> \frac{1}{3(\sqrt[3]{x})^2}-3\amp = 0 </mrow>
+            <mrow>(\sqrt[3]{x})^2 \amp= \frac{1}{9} </mrow>
+            <mrow>\sqrt[3]{x} \amp =\pm \frac{1}{3}</mrow>
+            <mrow> x \amp = \pm \frac{1}{27} </mrow>
+        </md>.
+        We now evaluate <m>h</m> at our three critical points, as well as the endpoints: 
+        <md>
+            <mrow>h(-1/\sqrt{27}) \amp = (-1/27^{1/2})^{1/3}+3/\sqrt{27} </mrow>
+            <mrow> \amp = -(1/\sqrt{3})+1/\sqrt{3}=0</mrow>
+            <mrow>h(-1/27) \amp = (-1/27)^{1/3}+3/27=-\frac{2}{9}</mrow>
+            <mrow>h(1/27) \amp = (1/27)^{1/3}-3/27=\frac{2}{9}</mrow>
+            <mrow>h(1/\sqrt{27}) \amp = (1/27^{1/2})^{1/3}-3/\sqrt{27} </mrow>
+            <mrow> \amp = (1/\sqrt{3})-1/\sqrt{3}=0</mrow>
+        </md>.
+        We conclude that <m>-\frac{2}{9}\leq h(x)\leq \frac{2}{9}</m> on <m>I</m>, or equivalently, <m>\abs{f(x)-g(x)}\leq \frac{2}{9}</m>. Thus the vertical maximal distance between the two graphs is <m>2/9</m> and this occurs at the inputs <m>x=\pm 1/27</m>. Below you find two diagrams that illustrate this result: the first depitcts the graphs of <m>f</m> and <m>g</m> separately, and the second is a graph of the difference function <m>h(x)=f(x)-g(x)</m>.   
     </p>
+    <figure xml:id="fig_dist_f_g">
+        <caption>Comparing graphs of <m>f</m> and <m>g</m></caption>
+        <sidebyside valign="bottom">
+            <figure xml:id="fig_graph_f_g">
+                <caption>Graphs of <m>f</m> and <m>g</m></caption>
+                <image xml:id="im_graph_f_g">
+                    <shortdescription>Graphs of <m>f</m> and <m>g</m></shortdescription>
+                   <sageplot>
+                    l1=[r"$-\frac{1}{\sqrt{27}}$", r"$-\frac{1}{27}$",r"$\frac{1}{27}$", r"$\frac{1}{\sqrt{27}}$"]
+                    l2=[r"$-\frac{4}{9}$",r"$-\frac{2}{9}$","",r"$\frac{2}{9}$",r"$\frac{4}{9}$" ]
+                    P=plot((real_nth_root(x, 3),3*x),x,-1/sqrt(27),1/sqrt(27), color=["blue","red"],ticks=[[-1/sqrt(27),-1/27,1/27,1/sqrt(27)],[2*x/9 for x in range(-2,3)]], tick_formatter=[l1,l2], aspect_ratio=.3)
+                    t1=text("$f(x)$",(1/27, 4/9),color="black")
+                    t2=text("$g(x)$",(4/27, 3/9),color="black")
+                    P+t1+t2
+                   </sageplot> 
+                </image>
+            </figure>
+            <figure xml:id="fig_graph_f_g_h">
+                <caption>Graphs of <m>f</m> and <m>g</m></caption>
+                <image xml:id="im_graph_f_g_h">
+                    <shortdescription>Graphs of <m>f</m>, <m>g</m>, and <m>h</m></shortdescription>
+                   <sageplot>
+                    l1=[r"$-\frac{1}{\sqrt{27}}$", r"$-\frac{1}{27}$",r"$\frac{1}{27}$", r"$\frac{1}{\sqrt{27}}$"]
+                    l2=[r"$-\frac{4}{9}$",r"$-\frac{2}{9}$","",r"$\frac{2}{9}$",r"$\frac{4}{9}$" ]
+                    P=plot((real_nth_root(x, 3),3*x,real_nth_root(x, 3)-3*x),x,-1/sqrt(27),1/sqrt(27), color=["blue","red","green"],ticks=[[-1/sqrt(27),-1/27,1/27,1/sqrt(27)],[2*x/9 for x in range(-2,3)]], tick_formatter=[l1,l2], aspect_ratio=.3)
+                    t1=text("$f(x)$",(1/27, 4/9),color="black")
+                    t2=text("$g(x)$",(4/27, 3/9),color="black")
+                    t3=text("$h(x)=f(x)-g(x)$",(5/27,1.3/9),color="black")
+                    P+t1+t2+t3
+                   </sageplot> 
+                </image>
+            </figure>
+        </sidebyside>
+    </figure>
     </solution>
     </example>
     
