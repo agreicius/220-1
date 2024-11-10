@@ -12,10 +12,47 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">20.15</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Distance between graphs.</span>
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">20.16</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Distance between graphs.</span>
 </h3>
 <div xmlns:pf="https://prefigure.org" class="para">Let <span class="process-math">\(f(x)=\sqrt[3]{x}\)</span> and <span class="process-math">\(g(x)=3x\text{.}\)</span> Find the maximum vertical distance between the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> on the interval <span class="process-math">\(I=\left[-\frac{1}{\sqrt{27}}, \frac{1}{\sqrt{27}}\right]\)</span>
 </div>
-<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_extreme.html#eg_extreme_graphs">in-context</a></span>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">The vertical distance point <span class="process-math">\((x,f(x))\)</span> and <span class="process-math">\((x,g(x))\)</span> on the two graphs is measured by <span class="process-math">\(\abs{f(x)-g(x)}\text{.}\)</span> Thus we are interested in the extreme values of <span class="process-math">\(h(x)=f(x)-g(x)\)</span> on the interval <span class="process-math">\(I\text{.}\)</span> For <span class="process-math">\(x\ne 0\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h'(x)=f'(x)-g'(x)=\frac{1}{3}x^{-2/3}-3=\frac{1}{3(\sqrt[3]{x})^2}-3\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(h\)</span> is not differentiable at <span class="process-math">\(x=0\text{,}\)</span> and thus this is one of our critical points. To find the others we solve:</div>
+<div class="displaymath process-math">
+\begin{align*}
+f'(x) \amp = 0\\
+\frac{1}{3(\sqrt[3]{x})^2}-3\amp = 0 \\
+(\sqrt[3]{x})^2 \amp= \frac{1}{9} \\
+\sqrt[3]{x} \amp =\pm \frac{1}{3}\\
+x \amp = \pm \frac{1}{27} \text{.}
+\end{align*}
+</div>
+<div class="para">We now evaluate <span class="process-math">\(h\)</span> at our three critical points, as well as the endpoints:</div>
+<div class="displaymath process-math">
+\begin{align*}
+h(-1/\sqrt{27}) \amp = (-1/27^{1/2})^{1/3}+3/\sqrt{27} \\
+\amp = -(1/\sqrt{3})+1/\sqrt{3}=0\\
+h(-1/27) \amp = (-1/27)^{1/3}+3/27=-\frac{2}{9}\\
+h(1/27) \amp = (1/27)^{1/3}-3/27=\frac{2}{9}\\
+h(1/\sqrt{27}) \amp = (1/27^{1/2})^{1/3}-3/\sqrt{27} \\
+\amp = (1/\sqrt{3})-1/\sqrt{3}=0\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(-\frac{2}{9}\leq h(x)\leq \frac{2}{9}\)</span> on <span class="process-math">\(I\text{,}\)</span> or equivalently, <span class="process-math">\(\abs{f(x)-g(x)}\leq \frac{2}{9}\text{.}\)</span> Thus the vertical maximal distance between the two graphs is <span class="process-math">\(2/9\)</span> and this occurs at the inputs <span class="process-math">\(x=\pm 1/27\text{.}\)</span> Below you find two diagrams that illustrate this result: the first depitcts the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> separately, and the second is a graph of the difference function <span class="process-math">\(h(x)=f(x)-g(x)\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel bottom" style="width:50%;"><figure class="figure figure-like"><img src="generated/sageplot/im_graph_f_g.svg" role="img" class="contained" alt="Graphs of \(f\) and \(g\)"><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure></div>
+<div class="sbspanel bottom" style="width:50%;"><figure class="figure figure-like"><img src="generated/sageplot/im_graph_f_g_h.svg" role="img" class="contained" alt="Graphs of \(f\text{,}\) \(g\text{,}\) and \(h\)"><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.17<span class="period">.</span></span><span class="space"> </span>Comparing graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_extreme.html#eg_extreme_graphs">in-context</a></span>
 </body>
 </html>

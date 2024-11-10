@@ -565,7 +565,7 @@ window.MathJax = {
 <li id="s_extreme-2-1-4"><div class="para" id="s_extreme-2-1-4-1">Identify extreme values of a function graphically.</div></li>
 <li id="s_extreme-2-1-5"><div class="para" id="s_extreme-2-1-5-1">Introduce the notion of critical points as potential inputs where a function attains a local (or absolute) maximum or minimum.</div></li>
 <li id="s_extreme-2-1-6"><div class="para" id="s_extreme-2-1-6-1">Develop a procedure that determines the absolute maximum and minimum values of a continuous function on a closed finite interval.</div></li>
-</ol></article><div class="para" id="s_extreme-3">In our remaining lessons, we will frequently take up what are called <em class="emphasis">optimization</em> questions. Roughly speaking, these are questions related to the maximum and minimum values of a function on a given set. Optimization problems are naturally important in modeling situations: when modeling a quantity <span class="process-math">\(q\)</span> as a function <span class="process-math">\(q=f(s)\)</span> of some other quantity <span class="process-math">\(s\text{,}\)</span> we naturally are interested in knowing whether it attains a maximal or minimal value, what that maximal or minimal value is (if it exists), and which inputs <span class="process-math">\(s\)</span> produces this value. The <a href="s_extreme.html#th_extreme" class="xref" data-knowl="./knowl/xref/th_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.1: Extreme value theorem">extreme value theorem</a> represents a wonderfully straightforward to this first flavor of optimization problem: it tells us that if <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\([a,b]\text{,}\)</span> then there is guaranteed to be both a maximal and minimal value. A shortcoming of this theorem is that it gives no indication of what exactly these maximum/minimum values are (or how to find them)! We amend this situation in <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.12: Extreme value theorem">Procedure 20.12</a>.</div>
+</ol></article><div class="para" id="s_extreme-3">In our remaining lessons, we will frequently take up what are called <em class="emphasis">optimization</em> questions. Roughly speaking, these are questions related to the maximum and minimum values of a function on a given set. Optimization problems are naturally important in modeling situations: when modeling a quantity <span class="process-math">\(q\)</span> as a function <span class="process-math">\(q=f(s)\)</span> of some other quantity <span class="process-math">\(s\text{,}\)</span> we naturally are interested in knowing whether it attains a maximal or minimal value, what that maximal or minimal value is (if it exists), and which inputs <span class="process-math">\(s\)</span> produces this value. The <a href="s_extreme.html#th_extreme" class="xref" data-knowl="./knowl/xref/th_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.1: Extreme value theorem">extreme value theorem</a> represents a wonderfully straightforward to this first flavor of optimization problem: it tells us that if <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\([a,b]\text{,}\)</span> then there is guaranteed to be both a maximal and minimal value. A shortcoming of this theorem is that it gives no indication of what exactly these maximum/minimum values are (or how to find them)! We amend this situation in <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.13: Extreme value theorem">Procedure 20.13</a>.</div>
 <div class="para" id="s_extreme-4">The statement of the extreme value theorem involves the notion of an absolute maximum/minimum value of a function <span class="process-math">\(f\)</span> on a given set <span class="process-math">\(D\text{.}\)</span> Imagining this is intuitively clear to the reader, we launch straight into a discussion of the extreme value theorem. Afterward, we give precise definitions both for absolute and <em class="emphasis">local</em> maximum and minimum values. If you would like to see those definitions first, see <a href="s_extreme.html#d_extrema" class="xref" data-knowl="./knowl/xref/d_extrema.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 20.6: Extreme values">Definition 20.6</a>.</div>
 <article class="theorem theorem-like" id="th_extreme"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">20.1</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme value theorem.</span>
@@ -610,16 +610,20 @@ window.MathJax = {
 <span class="process-math">\(f(a)\)</span> is an extreme value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> if it is an absolute or local maximum or minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{.}\)</span>
 </div></li>
 </ul>
-</div></article><article class="remark remark-like" id="s_extreme-11"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">20.7</span><span class="period">.</span><span class="space"> </span><span class="title">Local extreme values.</span>
+</div></article><article class="remark remark-like" id="rm_abs_local"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">20.7</span><span class="period">.</span><span class="space"> </span><span class="title">Absolute max/min implies local max/min.</span>
 </h3>
-<div class="para" id="s_extreme-11-2">In <a href="s_extreme.html#d_extrema" class="xref" data-knowl="./knowl/xref/d_extrema.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 20.6: Extreme values">Definition 20.6</a> the phrase “sufficiently close to <span class="process-math">\(a\)</span>” is used as a convenient, but slightly less than rigorous shorthand.</div>
-<div class="para" id="s_extreme-11-3">To be more precise, given an interior point <span class="process-math">\(a\in D\text{,}\)</span> we say that <span class="process-math">\(f(a)\)</span> is a local maximum (resp., minimum) value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> if there is an open interval <span class="process-math">\(I=(c,d)\subseteq D\)</span> containing <span class="process-math">\(a\)</span> such that <span class="process-math">\(f(a)\)</span> is an absolute maximum (resp., minimum) value on <span class="process-math">\(I\text{.}\)</span>
+<div class="para" id="rm_abs_local-2">Assume <span class="process-math">\(f\)</span> is defined on an interval <span class="process-math">\(I\text{.}\)</span> Observer that as pure logical consequence of the definitions, if <span class="process-math">\(f(a)\)</span> is an absolute maximum or minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> then it is also a local maximum or minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span> Indeed, if <span class="process-math">\(f(a)\geq f(x)\)</span> (resp. <span class="process-math">\(f(a)\leq f(x)\)</span>) for <em class="emphasis">all</em> <span class="process-math">\(x\in I\text{,}\)</span> then the inequality certainly holds for all <span class="process-math">\(x\in I\)</span> <em class="emphasis">sufficiently close</em> to <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="remark remark-like" id="s_extreme-12"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">20.8</span><span class="period">.</span><span class="space"> </span><span class="title">Local extreme values.</span>
+</h3>
+<div class="para" id="s_extreme-12-2">In <a href="s_extreme.html#d_extrema" class="xref" data-knowl="./knowl/xref/d_extrema.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 20.6: Extreme values">Definition 20.6</a> the phrase “sufficiently close to <span class="process-math">\(a\)</span>” is used as a convenient, but slightly less than rigorous shorthand. To be more precise in this definition we treat interior and endpoints of the set <span class="process-math">\(D\)</span> separately.</div>
+<div class="para" id="s_extreme-12-3">Given an interior point <span class="process-math">\(a\in D\text{,}\)</span> we say that <span class="process-math">\(f(a)\)</span> is a local maximum (resp., minimum) value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> if there is an open interval <span class="process-math">\(I=(c,d)\subseteq D\)</span> containing <span class="process-math">\(a\)</span> such that <span class="process-math">\(f(a)\)</span> is an absolute maximum (resp., minimum) value on <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div class="para" id="s_extreme-11-4">If <span class="process-math">\(a\)</span> is a left (resp., right) endpoint of <span class="process-math">\(D\text{,}\)</span> then <span class="process-math">\(f(a)\)</span> is a local maximum (resp., minimum) value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> if there is a half-open interval <span class="process-math">\(I=[a,c)\)</span> (resp., <span class="process-math">\(I=(c,a]\)</span>) contained in <span class="process-math">\(D\)</span> such that <span class="process-math">\(f(a)\)</span> is an absolute maximum (resp., minimum) value on <span class="process-math">\(I\text{.}\)</span>
+<div class="para" id="s_extreme-12-4">Similarly, if <span class="process-math">\(a\)</span> is a left (resp., right) endpoint of <span class="process-math">\(D\text{,}\)</span> then <span class="process-math">\(f(a)\)</span> is a local maximum (resp., minimum) value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> if there is a half-open interval <span class="process-math">\(I=[a,c)\)</span> (resp., <span class="process-math">\(I=(c,a]\)</span>) contained in <span class="process-math">\(D\)</span> such that <span class="process-math">\(f(a)\)</span> is an absolute maximum (resp., minimum) value on <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div class="para" id="s_extreme-11-5">In summary, <span class="process-math">\(f(a)\)</span> is a local maximum or minimum value on <span class="process-math">\(D\)</span> means simply that there is some interval (or half-interval) <span class="process-math">\(I\)</span> contained in <span class="process-math">\(D\)</span> on which <span class="process-math">\(f(a)\)</span> is an absolute maximum or minimum value. Thus to identify graphically the local extreme values of a function <span class="process-math">\(f\text{,}\)</span> look for inputs <span class="process-math">\(a\)</span> such that when we look at the segment of the graph of <span class="process-math">\(f\)</span> lying over a small interval around <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(f(a)\)</span> is seen to be an absolute maximum or minimum value.</div></article><article class="example example-like" id="eg_local_extrema"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.8</span><span class="period">.</span><span class="space"> </span><span class="title">Local and absolute extreme values.</span>
+<div class="para" id="s_extreme-12-5">In summary, for <span class="process-math">\(f(a)\)</span> to be a local maximum or minimum value on <span class="process-math">\(D\)</span> means simply that there is some interval (or half-interval in the endpoint case) <span class="process-math">\(I\)</span> contained in <span class="process-math">\(D\)</span> on which <span class="process-math">\(f(a)\)</span> is an absolute maximum or minimum value. Thus to identify graphically the local extreme values of a function <span class="process-math">\(f\text{,}\)</span> look for inputs <span class="process-math">\(a\)</span> such that when we restrict our gaze to the segment of the graph of <span class="process-math">\(f\)</span> lying over a small interval around <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(f(a)\)</span> is seen to be an absolute maximum or minimum value.</div></article><article class="example example-like" id="eg_local_extrema"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.9</span><span class="period">.</span><span class="space"> </span><span class="title">Local and absolute extreme values.</span>
 </h3>
 <div class="para logical" id="eg_local_extrema-2-1">
 <div class="para">A graph of the function <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I=[-4,4]\)</span> is graphed below.</div>
@@ -629,30 +633,96 @@ window.MathJax = {
 <li id="eg_local_extrema-2-1-3-2"><div class="para" id="eg_local_extrema-2-1-3-2-1">Decide whether <span class="process-math">\(f\)</span> has an absolute maximum value on <span class="process-math">\(I\text{,}\)</span> and whether <span class="process-math">\(f\)</span> has an absolute minimum value on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
-</div> <figure class="figure figure-like" id="fig_local_extrema"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_local_extrema.svg" role="img" class="contained" alt="Graph of function with various local extrema"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.9<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f\)</span></figcaption></figure><div class="solutions"><details id="eg_local_extrema-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_local_extrema-3-1"><ol class="decimal" id="eg_local_extrema-3-1-1"><li id="eg_local_extrema-3-1-1-1"><div class="para" id="eg_local_extrema-3-1-1-1-1">The</div></li></ol></div></div></details></div></article><article class="theorem theorem-like" id="th_crit_pt"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">20.10</span><span class="space"> </span><span class="creator">(Fermat)</span><span class="period">.</span><span class="space"> </span><span class="title">Critical points and extreme values.</span>
+</div> <figure class="figure figure-like" id="fig_local_extrema"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/sageplot/im_local_extrema.svg" role="img" class="contained" alt="Graph of function with various local extrema"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.10<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f\)</span></figcaption></figure><div class="solutions"><details id="eg_local_extrema-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_local_extrema-3-1"><ol class="decimal" id="eg_local_extrema-3-1-1">
+<li id="eg_local_extrema-3-1-1-1">
+<div class="para" id="eg_local_extrema-3-1-1-1-1">The function <span class="process-math">\(f\)</span> has a local maximum value at the left endpoint <span class="process-math">\(a=-4\text{:}\)</span> indeed, we have <span class="process-math">\(2=f(-4)\geq f(x)\)</span> for all <span class="process-math">\(x\in [-4,3)\)</span> (thus for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(-4\)</span>). The value <span class="process-math">\(f(4)\)</span> at the right endpoint, somewhat surprisingly, is also a local max: for all <span class="process-math">\(x\in (-3,4]\)</span> we have <span class="process-math">\(-2=f(4)\geq f(x)\text{.}\)</span>
+</div>
+<div class="para" id="eg_local_extrema-3-1-1-1-2">Additionally, we see that <span class="process-math">\(-1=f(-1)\)</span> is a local minimum value of <span class="process-math">\(f\text{,}\)</span> since <span class="process-math">\(f(-1)\leq f(x)\)</span> for all <span class="process-math">\(x\in (-2,0)\text{.}\)</span> Finally, <span class="process-math">\(f(1)=3\)</span> is easily seen to be the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\([-4,4]\text{.}\)</span> It follows from <a href="s_extreme.html#rm_abs_local" class="xref" data-knowl="./knowl/xref/rm_abs_local.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 20.7: Absolute max/min implies local max/min">Remark 20.7</a> that <span class="process-math">\(f(1)\)</span> is also a local minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\)</span>
+</div>
+</li>
+<li id="eg_local_extrema-3-1-1-2"><div class="para logical" id="eg_local_extrema-3-1-1-2-1">
+<div class="para">We have already observed that <span class="process-math">\(3=f(1)\)</span> is the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span> We claim that there is no absolute minimum value. To see why, first note that <span class="process-math">\(f(x)&gt; -4\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> Thus, if <span class="process-math">\(L\)</span> were an absolute minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\)</span> we would have <span class="process-math">\(L&gt; -4\text{.}\)</span> However, since <span class="process-math">\(\lim_{x\to 4^+}f(x)=-4\text{,}\)</span> for any <span class="process-math">\(L&gt; 4\text{,}\)</span> we can find an <span class="process-math">\(x\in I\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L&gt; f(x) &gt; -4\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that <span class="process-math">\(f\)</span> has no absolute minimum value on <span class="process-math">\(I\text{.}\)</span>
+</div>
+</div></li>
+</ol></div></div></details></div></article><article class="theorem theorem-like" id="th_crit_pt"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">20.11</span><span class="space"> </span><span class="creator">(Fermat)</span><span class="period">.</span><span class="space"> </span><span class="title">Critical points and extreme values.</span>
 </h3>
 <div class="para" id="th_crit_pt-3-1">Assume <span class="process-math">\(f\)</span> is defined on <span class="process-math">\(D\)</span> and that <span class="process-math">\(a\)</span> is an interior point of <span class="process-math">\(D\text{.}\)</span> If <span class="process-math">\(f(a)\)</span> is a local maximum or minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\text{,}\)</span> and if <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(f'(a)=0\text{.}\)</span>
-</div></article><article class="definition definition-like" id="d_crit_pt"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">20.11</span><span class="period">.</span><span class="space"> </span><span class="title">Critical point.</span>
+</div></article><details id="th_crit_pt-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_crit_pt-4-1">We will show that if <span class="process-math">\(f(a)\)</span> is a local maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(D\)</span> and <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(f'(a)=0\text{.}\)</span> The argument for the case where <span class="process-math">\(f(a)\)</span> is a local minimum is exactly similar.</div>
+<div class="para" id="th_crit_pt-4-2">Firstly, since <span class="process-math">\(f(a)\)</span> is assumed to be a local maximum value, we can find an interval <span class="process-math">\((c,d)\subseteq D\)</span> containing <span class="process-math">\(a\)</span> such that <span class="process-math">\(f(a)\geq f(x)\)</span> for all <span class="process-math">\(x\in (c,d)\text{.}\)</span>
+</div>
+<div class="para logical" id="th_crit_pt-4-3">
+<div class="para">Next, since <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\text{,}\)</span> the limit</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html">
+\begin{equation*}
+\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
+\end{equation*}
+</div>
+<div class="para">exists, and we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html">
+\begin{equation*}
+f'(a)=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Observe further that using <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html">
+\begin{equation*}
+f'(a)=\lim\limits_{x\to a^-}\frac{f(x)-f(a)}{x-a} \text{ and } f'(a)=\lim\limits_{x\to a^+}\frac{f(x)-f(a)}{x-a}\text{.}
+\end{equation*}
+</div>
+<div class="para">Next, since <span class="process-math">\(f(x)\leq f(a)\)</span> for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\)</span> (more precisely, for all <span class="process-math">\(x\in (c,d)\)</span>), <span class="process-math">\(f(x)-f(a)\leq 0\)</span> for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> It follows that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html" id="th_crit_pt-4-3-14">
+\begin{align*}
+\frac{f(x)-f(a)}{x-a} \amp \geq 0 \ \text{ as } x\to a^- \amp (x&lt; a \implies x-a&lt; 0) \\
+\frac{f(x)-f(a)}{x-a} \amp \leq 0 \ \text{ as } x\to a^+ \amp (x&gt; a \implies x-a&gt; 0) \text{,}
+\end{align*}
+</div>
+<div class="para">and thus, taking limits, that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html" id="th_crit_pt-4-3-15">
+\begin{align*}
+f'(a)\amp =\lim\limits_{x\to a^-}\frac{f(x)-f(a)}{x-a}\geq 0 \\
+f'(a)\amp =\lim\limits_{x\to a^+}\frac{f(x)-f(a)}{x-a}\leq 0 \text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(0\leq f'(a)\leq 0\text{,}\)</span> we conclude that <span class="process-math">\(f'(a)=0\text{,}\)</span> as desired.</div>
+</div></article></details><div class="para" id="s_extreme-15">According to <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a>, points <span class="process-math">\(a\)</span> where either <span class="process-math">\(f\)</span> is not differentiable, or where <span class="process-math">\(f'(a)=0\)</span> are important to us, as these are candidates where the value <span class="process-math">\(f(a)\)</span> is potentially a local maximum or minimum. Accordingly, we give such inputs a special name: critical points.</div>
+<article class="definition definition-like" id="d_crit_pt"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">20.12</span><span class="period">.</span><span class="space"> </span><span class="title">Critical point.</span>
 </h3>
 <div class="para" id="d_crit_pt-2-1">Let <span class="process-math">\(f\)</span> be defined on <span class="process-math">\(D\text{.}\)</span> An element <span class="process-math">\(a\in D\)</span> is a <dfn class="terminology">critical point</dfn> of <span class="process-math">\(f\)</span> if either <span class="process-math">\(f'(a)=0\)</span> or <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(a\text{.}\)</span>
-</div></article><article class="algorithm theorem-like" id="proc_extreme"><h3 class="heading">
-<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">20.12</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme value theorem.</span>
+</div></article><div class="para logical" id="s_extreme-17">
+<div class="para">Let us now do some synthesis of the above theory. Assume <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\(I=[a,b]\text{.}\)</span>
+</div>
+<ul class="disc" id="s_extreme-17-3">
+<li id="s_extreme-17-3-1"><div class="para" id="s_extreme-17-3-1-1">According to <a href="s_extreme.html#th_extreme" class="xref" data-knowl="./knowl/xref/th_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.1: Extreme value theorem">Theorem 20.1</a> there are inputs <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> in <span class="process-math">\(I\)</span> where <span class="process-math">\(f\)</span> attains its absolute maximum and minimum values, respectively.</div></li>
+<li id="s_extreme-17-3-2"><div class="para" id="s_extreme-17-3-2-1">In particular, <span class="process-math">\(f(c)\)</span> and <span class="process-math">\(f(d)\)</span> are <em class="emphasis">local</em> extreme values of the function.</div></li>
+<li id="s_extreme-17-3-3"><div class="para" id="s_extreme-17-3-3-1">According to <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a>, if <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> are interior points of <span class="process-math">\(I\text{,}\)</span> then they must be critical points of <span class="process-math">\(f\text{:}\)</span> i.e., <span class="process-math">\(f\)</span> is either not differentiable at there, or <span class="process-math">\(f'\)</span> is equal to zero there.</div></li>
+<li id="s_extreme-17-3-4"><div class="para" id="s_extreme-17-3-4-1">We conclude that the inputs <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> where <span class="process-math">\(f\)</span> attains its absolute extreme values are either one of the endpoints, <span class="process-math">\(a\)</span> or <span class="process-math">\(b\)</span> of the interval, or one of the critical points of <span class="process-math">\(f\)</span> in the interior <span class="process-math">\((a,b)\)</span> of the interval.</div></li>
+</ul>
+<div class="para">Our synthesis gives rise to the following procedure for finding the absolute extreme values of a continuous function on a closed interval.</div>
+</div>
+<article class="algorithm theorem-like" id="proc_extreme"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">20.13</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme value theorem.</span>
 </h3>
 <div class="para logical" id="proc_extreme-2-1">
 <div class="para">Assume <span class="process-math">\(f\)</span> is continuous on the closed interval <span class="process-math">\(I=[a,b]\text{.}\)</span> To determine the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> proceed as follows.</div>
 <ol class="decimal" id="proc_extreme-2-1-5">
 <li id="proc_extreme-2-1-5-1">
 <span class="heading"><span class="title">Identify candidate inputs.</span></span><div class="para logical" id="proc_extreme-2-1-5-1-2">
-<div class="para">The candidate inputs where <span class="process-math">\(f\)</span> potentially attains a maximum or minimum value consist of (i) the endpoints <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of the interval <span class="process-math">\(I\)</span> along with the set of all critical points of <span class="process-math">\(f\text{.}\)</span> We determine the latter by finding all solutions to the equation</div>
+<div class="para">The candidate inputs where <span class="process-math">\(f\)</span> potentially attains a maximum or minimum value consist of (i) the endpoints <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> of the interval <span class="process-math">\(I\)</span> along with the set of all critical points of <span class="process-math">\(f\)</span> lying in <span class="process-math">\((a,b)\text{.}\)</span> We determine the latter by finding all solutions to the equation</div>
 <div class="displaymath process-math" id="eq_extreme">
 \begin{equation}
 f'(x)=0\tag{20.1}
 \end{equation}
 </div>
-<div class="para">lying in <span class="process-math">\(I\text{,}\)</span> and identifying all elements of <span class="process-math">\(I\)</span> where <span class="process-math">\(f\)</span> is not differentiable.</div>
+<div class="para">lying in <span class="process-math">\((a,b)\text{,}\)</span> and identifying all elements of <span class="process-math">\((a,b)\)</span> where <span class="process-math">\(f\)</span> is not differentiable.</div>
 </div>
 </li>
 <li id="proc_extreme-2-1-5-2">
@@ -664,21 +734,139 @@ f'(x)=0\tag{20.1}
 </li>
 </ol>
 </div></article><article class="example example-like" id="eg_extreme_factored_poly"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.13</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme values: factored polynomial.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.14</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme values: factored polynomial.</span>
 </h3>
 <div class="para" id="eg_extreme_factored_poly-2-1">Let <span class="process-math">\(f(x)=(x-2)^5(x-3)^5\text{.}\)</span> Find the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I=[0,4]\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_extreme_factored_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_extreme_factored_poly-3-1"></div></div></details></div></article><article class="example example-like" id="eg_extreme_trig"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.14</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme values: trig.</span>
+<div class="solutions"><details id="eg_extreme_factored_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_extreme_factored_poly-3-1">
+<div class="para">First compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=5(x-2)^4(x-3)^5+5(x-2)^5(x-3)^4\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(f\)</span>   is differentiable everywhere on the interval <span class="process-math">\(I\text{,}\)</span> so to find critical points we find all solutions to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=0
+\end{equation*}
+</div>
+<div class="para">lying in <span class="process-math">\((0,4)\text{.}\)</span> The key technique for solving this equation is <em class="emphasis">factoring</em>:</div>
+<div class="displaymath process-math" id="eg_extreme_factored_poly-3-1-7">
+\begin{align*}
+f'(x)\amp =0 \\
+5(x-2)^4(x-3)^5+5(x-2)^5(x-3)^4 \amp = 0\\
+5(x-2)^4(x-3)^4((x-2)+(x-3)) \amp =0  \\
+5(x-2)^4(x-3)^4(2x-5) \amp = 0 \text{.}
+\end{align*}
+</div>
+<div class="para">We now see that the last equality holds if and only if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=2,3,\frac{5}{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">These are thus our critical points. We now evaluate <span class="process-math">\(f\)</span> at these critical points, as well as at the endpoints of the interval:</div>
+<div class="displaymath process-math" id="eg_extreme_factored_poly-3-1-10">
+\begin{align*}
+f(0) \amp = (-2)^5\cdot (-3)^5=2^5\cdot 3^5 \\
+f(2) \amp = 0\\
+f(5/2) \amp = (1/2)^5(-1/2)^5=-\frac{1}{2^10}\\
+f(3) \amp = 0\\
+f(4) \amp = 2^5\cdot 1^5=2^5\text{.}
+\end{align*}
+</div>
+<div class="para">Comparing these values, we conclude that <span class="process-math">\(f(0)=2^5\cdot 3^5\)</span> is the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(f(5/2)=-1/2^{10}\)</span> is the absolute minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span>
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_extreme_trig"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.15</span><span class="period">.</span><span class="space"> </span><span class="title">Extreme values: trig.</span>
 </h3>
 <div class="para" id="eg_extreme_trig-2-1">Let <span class="process-math">\(f(x)=x+2\cos x\text{.}\)</span> Find the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\(I=[0,2\pi]\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_extreme_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_extreme_trig-3-1"></div></div></details></div></article><article class="example example-like" id="eg_extreme_graphs"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.15</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between graphs.</span>
+<div class="solutions"><details id="eg_extreme_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_extreme_trig-3-1">
+<div class="para">The function <span class="process-math">\(f\)</span> is easily seen to be differentiable everywhere, with <span class="process-math">\(f'(x)=1-2\sin x\text{.}\)</span> To find critical points, we solve:</div>
+<div class="displaymath process-math" id="eg_extreme_trig-3-1-3">
+\begin{align*}
+f'(x) \amp =0\\
+1-2\sin x \amp = 0\\
+\sin x \amp = \frac{1}{2}\text{.}
+\end{align*}
+</div>
+<div class="para">Reactivating our trig expertise, we realize that the solutions to the last equation come in two infinite lists:</div>
+<div class="displaymath process-math" id="eg_extreme_trig-3-1-4">
+\begin{align*}
+x \amp = \frac{\pi}{6}+2\pi n, \hspace{10pt} n \in \Z\\
+x \amp= \frac{5\pi}{6}+2\pi n, \hspace{10pt} n \in \Z \text{.}
+\end{align*}
+</div>
+<div class="para">Thus the solutions lying in the interior <span class="process-math">\((0,2\pi)\)</span> of the given interval are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\frac{\pi}{6}, \frac{5\pi}{6}\text{.}
+\end{equation*}
+</div>
+<div class="para">Now evaluate <span class="process-math">\(f\)</span> at our candidates, the two critical points and the two endpoints:</div>
+<div class="displaymath process-math" id="eg_extreme_trig-3-1-8">
+\begin{align*}
+f(0) \amp = 2\\
+f(\pi/6) \amp =\frac{\pi}{6}+2\cos(\pi/6)=\frac{\pi}{6}+\sqrt{3}\\
+f(5\pi/6) \amp = 5\pi/6+2\cos(5\pi/6)=5\pi/6-\sqrt{3}\\
+f(2\pi) \amp = 2\pi+2=2(\pi+1)\text{.}
+\end{align*}
+</div>
+<div class="para">Admittedly, comparing these values is somewhat challenging without the use of technology. It turns out that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(5\pi/6)\leq f(2)\leq f(\pi/6)\leq f(2\pi)\text{,}
+\end{equation*}
+</div>
+<div class="para">and thus that <span class="process-math">\(f(5\pi/6)=5\pi/6-\sqrt{3}\)</span> is the absolute minimum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{,}\)</span> and <span class="process-math">\(f(2\pi)=2\pi+2\)</span> is the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(I\text{.}\)</span> Below you find a graph of <span class="process-math">\(f\)</span> that bears out our analysis.</div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_extreme_trig.svg" role="img" class="contained" alt="Graph of example function revealing the extreme values."></div>
+</div></details></div></article><article class="example example-like" id="eg_extreme_graphs"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">20.16</span><span class="period">.</span><span class="space"> </span><span class="title">Distance between graphs.</span>
 </h3>
 <div class="para" id="eg_extreme_graphs-2-1">Let <span class="process-math">\(f(x)=\sqrt[3]{x}\)</span> and <span class="process-math">\(g(x)=3x\text{.}\)</span> Find the maximum vertical distance between the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> on the interval <span class="process-math">\(I=\left[-\frac{1}{\sqrt{27}}, \frac{1}{\sqrt{27}}\right]\)</span>
 </div>
-<div class="solutions"><details id="eg_extreme_graphs-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_extreme_graphs-3-1"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_extreme_graphs-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_extreme_graphs-3-1">
+<div class="para">The vertical distance point <span class="process-math">\((x,f(x))\)</span> and <span class="process-math">\((x,g(x))\)</span> on the two graphs is measured by <span class="process-math">\(\abs{f(x)-g(x)}\text{.}\)</span> Thus we are interested in the extreme values of <span class="process-math">\(h(x)=f(x)-g(x)\)</span> on the interval <span class="process-math">\(I\text{.}\)</span> For <span class="process-math">\(x\ne 0\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h'(x)=f'(x)-g'(x)=\frac{1}{3}x^{-2/3}-3=\frac{1}{3(\sqrt[3]{x})^2}-3\text{.}
+\end{equation*}
+</div>
+<div class="para">Note that <span class="process-math">\(h\)</span> is not differentiable at <span class="process-math">\(x=0\text{,}\)</span> and thus this is one of our critical points. To find the others we solve:</div>
+<div class="displaymath process-math" id="eg_extreme_graphs-3-1-10">
+\begin{align*}
+f'(x) \amp = 0\\
+\frac{1}{3(\sqrt[3]{x})^2}-3\amp = 0 \\
+(\sqrt[3]{x})^2 \amp= \frac{1}{9} \\
+\sqrt[3]{x} \amp =\pm \frac{1}{3}\\
+x \amp = \pm \frac{1}{27} \text{.}
+\end{align*}
+</div>
+<div class="para">We now evaluate <span class="process-math">\(h\)</span> at our three critical points, as well as the endpoints:</div>
+<div class="displaymath process-math" id="eg_extreme_graphs-3-1-12">
+\begin{align*}
+h(-1/\sqrt{27}) \amp = (-1/27^{1/2})^{1/3}+3/\sqrt{27} \\
+\amp = -(1/\sqrt{3})+1/\sqrt{3}=0\\
+h(-1/27) \amp = (-1/27)^{1/3}+3/27=-\frac{2}{9}\\
+h(1/27) \amp = (1/27)^{1/3}-3/27=\frac{2}{9}\\
+h(1/\sqrt{27}) \amp = (1/27^{1/2})^{1/3}-3/\sqrt{27} \\
+\amp = (1/\sqrt{3})-1/\sqrt{3}=0\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that <span class="process-math">\(-\frac{2}{9}\leq h(x)\leq \frac{2}{9}\)</span> on <span class="process-math">\(I\text{,}\)</span> or equivalently, <span class="process-math">\(\abs{f(x)-g(x)}\leq \frac{2}{9}\text{.}\)</span> Thus the vertical maximal distance between the two graphs is <span class="process-math">\(2/9\)</span> and this occurs at the inputs <span class="process-math">\(x=\pm 1/27\text{.}\)</span> Below you find two diagrams that illustrate this result: the first depitcts the graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> separately, and the second is a graph of the difference function <span class="process-math">\(h(x)=f(x)-g(x)\text{.}\)</span>
+</div>
+</div>
+<figure class="figure figure-like" id="fig_dist_f_g"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel bottom" style="width:50%;"><figure class="figure figure-like" id="fig_graph_f_g"><img src="generated/sageplot/im_graph_f_g.svg" role="img" class="contained" alt="Graphs of \(f\) and \(g\)"><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure></div>
+<div class="sbspanel bottom" style="width:50%;"><figure class="figure figure-like" id="fig_graph_f_g_h"><img src="generated/sageplot/im_graph_f_g_h.svg" role="img" class="contained" alt="Graphs of \(f\text{,}\) \(g\text{,}\) and \(h\)"><figcaption><span class="codenumber">(b)</span><span class="space"> </span>Graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">20.17<span class="period">.</span></span><span class="space"> </span>Comparing graphs of <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span></figcaption></figure>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_linearize.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-24.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
