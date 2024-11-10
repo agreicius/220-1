@@ -1681,7 +1681,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "19",
   "title": "Linearization",
-  "body": " Linearization     Define the linearization of a function at an input .    Understand the linearization of a function in terms of the tangent line to the graph of at the point .    Investigate linearization as an approximation tool. Discuss in what sense a linearization is a good approximation of a function .      Linearization of a function   Assume is differentiable at the input . The linearization of centered at is the affine function defined as .     Linearization  It is important to observe the centered at modifier in . In other words, the function defined in depends both on and the specific input .    Linearization: quadratic   Let . Compute the linearization of centered at , and the linearization of centered at .    First compute . Using , we have . Thus the linearization of centered at is , and the linearization centered at is the constant function .     Linearization and tangent lines  You may have noticed a resemblance to the formula for the linearization of centered at , and the tangent line to the graph of at . To be precise: the graph of the linearization function is precisely the tangent line to the graph of at the point .  By way of illustration, we graph the function in along with the linearizations and centered at and , respectively.   Linearizations of   Linearizations of a quadratic function       Linear approximation  Assume is differentiable at , and let be the linearization of centered at . As we can show, the differentiability of at ensures that values of the linearization are close to values of for inputs near . Indeed, we have . Consider what the limit statement tells us. Since , the numerator must be close to zero for close to . Furthermore, we must have approaching zero faster than approaches zero. More precisely, invoking the epsilon-delta definition of the limit, we can show that for any , we have for all sufficiently close to . After we introduce the mean value theorem , we will be able to give an even better quantitative description of just how good an approximation is to .    Linear approximation   Assume is is differentiable at , and let be the linearization of centered at .   For inputs close to , is a good approximation of : that is, we have for close to .    In paricular for an input close to , we have .        Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?            Linear approximation: cube-root   Use linear approximation to estimate .         Linear approximation: trig   Let . Use linear approximation to estimate .         Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.           "
+  "body": " Linearization     Define the linearization of a function at an input .    Understand the linearization of a function in terms of the tangent line to the graph of at the point .    Investigate linearization as an approximation tool. Discuss in what sense a linearization is a good approximation of a function .      Linearization of a function   Assume is differentiable at the input . The linearization of centered at is the affine function defined as .     Linearization  It is important to observe the centered at modifier in . In other words, the function defined in depends both on and the specific input .    Linearization: quadratic   Let . Compute the linearization of centered at , and the linearization of centered at .    First compute . Using , we have . Thus the linearization of centered at is , and the linearization centered at is the constant function .     Linearization and tangent lines  You may have noticed a resemblance to the formula for the linearization of centered at , and the tangent line to the graph of at . To be precise: the graph of the linearization function is precisely the tangent line to the graph of at the point .  By way of illustration, we graph the function in along with the linearizations and centered at and , respectively.   Linearizations of   Linearizations of a quadratic function       Linear approximation  Assume is differentiable at , and let be the linearization of centered at . As we can show, the differentiability of at ensures that values of the linearization are close to values of for inputs near . Indeed, we have . Consider what the limit statement tells us. Since , the numerator must be close to zero for close to . Furthermore, we must have approaching zero faster than approaches zero. More precisely, invoking the epsilon-delta definition of the limit, we can show that for any , we have for all sufficiently close to . After we introduce the mean value theorem , we will be able to give an even better quantitative description of just how good an approximation is to .    Linear approximation   Assume is is differentiable at , and let be the linearization of centered at .   For inputs close to , is a good approximation of : that is, we have for close to .    In paricular for an input close to , we have .        Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?          Recall that we computed . Thus we have .    The exact value is . Thus our estimate is off by : , .        Linear approximation: cube-root   Use linear approximation to estimate .    To use linear approximation, we need to compute the linearization of a function centered at some input . We take , and . Why ? I can compute and easily by hand, and is reasonably close to . We first compute . The linearization of centered at is then Lastly, we estimate . Using technology we see that . Our estimate ended up being pretty close!     Linear approximation: trig   Let . Use linear approximation to estimate .    We compute the linearization of centered at . First we compute the derivative of : . It follows that the linearization centered at is . Lastly we estimate .     Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.       Since the radius and height of the marshmallow are initially equal, and since the marshmallow expands in such a way that the ratio of radius to height is preserved, we see that we always have , and thus , where . We thus treat volume as a function of the common dimension specifying both radius and height.   To estimate the change in volume, we compute the linearization of centered at . Since , we have . It follows that the change of volume can be estimated as     The exact change of volume is .       "
 },
 {
   "id": "s_linearize-2",
@@ -1753,7 +1753,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "19.8",
   "title": "Linear approximation: quadratic.",
-  "body": " Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?          "
+  "body": " Linear approximation: quadratic   Let .   Use the linearization of centered at to estimate  .    Compare your estimate of with the actual value. How close are the two?          Recall that we computed . Thus we have .    The exact value is . Thus our estimate is off by : , .      "
 },
 {
   "id": "eg_linear_approx_cuberoot",
@@ -1762,7 +1762,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "19.9",
   "title": "Linear approximation: cube-root.",
-  "body": " Linear approximation: cube-root   Use linear approximation to estimate .       "
+  "body": " Linear approximation: cube-root   Use linear approximation to estimate .    To use linear approximation, we need to compute the linearization of a function centered at some input . We take , and . Why ? I can compute and easily by hand, and is reasonably close to . We first compute . The linearization of centered at is then Lastly, we estimate . Using technology we see that . Our estimate ended up being pretty close!   "
 },
 {
   "id": "eg_linear_approx_trig",
@@ -1771,7 +1771,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "19.10",
   "title": "Linear approximation: trig.",
-  "body": " Linear approximation: trig   Let . Use linear approximation to estimate .       "
+  "body": " Linear approximation: trig   Let . Use linear approximation to estimate .    We compute the linearization of centered at . First we compute the derivative of : . It follows that the linearization centered at is . Lastly we estimate .   "
 },
 {
   "id": "eg_linear_approx_marshmallow",
@@ -1780,7 +1780,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "19.11",
   "title": "Linear approximation: marshmallow.",
-  "body": " Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.          "
+  "body": " Linear approximation: marshmallow   Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.   Use linear approximation to estimate the change in volume of the marshmallow.    Compare your estimate with the actual change in volume.       Since the radius and height of the marshmallow are initially equal, and since the marshmallow expands in such a way that the ratio of radius to height is preserved, we see that we always have , and thus , where . We thus treat volume as a function of the common dimension specifying both radius and height.   To estimate the change in volume, we compute the linearization of centered at . Since , we have . It follows that the change of volume can be estimated as     The exact change of volume is .      "
 },
 {
   "id": "s_extreme",
@@ -1789,41 +1789,86 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "20",
   "title": "Extreme value theorem",
-  "body": " Extreme value theorem   Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .        Extreme value theorem   If is continuous on the closed interval , then there are inputs and for which is the absolute maximum value of on and is the absolute minimum value of on . In plain English: a continuous function always attains a maximum and minimum value over a closed interval .    The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called compactness that allows you to eventually give a beautiful one-line proof of the extreme value theorem.     Critical points and extreme values  Fermat   Assume is continuous on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .     Critical point   Let be defined on . An element is a critical point of if either or is not differentiable at .     Extreme value theorem   Assume is continuous on the closed interval . To determine the absolute maximum and minimum values of on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a maximum or minimum value consist of (i) the endpoints and of the interval along with the set of all critical points of . We determine the latter by finding all solutions to the equation lying in , and identifying all elements of where is not differentiable.    Evaluate  Evaluate at all candidate inputs you found in Step 1.    Compare values  Compare the values of computed in Step 2. The maximum value in that set is the absolute maximum value of on ; the minimum value in that set is the minimum value of on .        Extreme values: factored polynomial   Let . Find the absolute maximum and minimum values of on the interval .         Extreme values: trig   Let . Find the absolute maximum and minimum values of on the interval .         Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval         "
+  "body": " Extreme value theorem     Use the derivative to investigate optimization questions.    Understand the extreme value theorem in the context of optimization.    Define absolute and local maximum and minimum values of a function on a given set .    Identify extreme values of a function graphically.    Introduce the notion of critical points as potential inputs where a function attains a local (or absolute) maximum or minimum.    Develop a procedure that determines the absolute maximum and minimum values of a continuous function on a closed finite interval.     In our remaining lessons, we will frequently take up what are called optimization questions. Roughly speaking, these are questions related to the maximum and minimum values of a function on a given set. Optimization problems are naturally important in modeling situations: when modeling a quantity as a function of some other quantity , we naturally are interested in knowing whether it attains a maximal or minimal value, what that maximal or minimal value is (if it exists), and which inputs produces this value. The extreme value theorem represents a wonderfully straightforward to this first flavor of optimization problem: it tells us that if is continuous on the closed interval , then there is guaranteed to be both a maximal and minimal value. A shortcoming of this theorem is that it gives no indication of what exactly these maximum\/minimum values are (or how to find them)! We amend this situation in .  The statement of the extreme value theorem involves the notion of an absolute maximum\/minimum value of a function on a given set . Imagining this is intuitively clear to the reader, we launch straight into a discussion of the extreme value theorem. Afterward, we give precise definitions both for absolute and local maximum and minimum values. If you would like to see those definitions first, see .   Extreme value theorem   If is continuous on the closed interval , then there are inputs and for which is the absolute maximum value of on and is the absolute minimum value of on . In plain English: a continuous function always attains a maximum and minimum value over a closed interval .    The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called compactness that allows you to eventually give a beautiful one-line proof of the extreme value theorem.    Although we do not give an actual proof the extreme value theorem, you can catch a glimmer of its truth by treating it graphically. Try the following: pick an interval in the -plane; pick endpoint values and for an arbitrary function and graph the corresponding points; now trace out the rest of the graph of your arbitrary , making it as wildly behaved as you like, but with the restriction that you pencil never leaves the paper ( is continuous) and the start and end values are and . You will see that now matter what function you end up sketching, it will always have reach a well-defined highest point (corresponding to the maximum value) and a well-defined lowest point (corresponding to the minimum value). The restriction that we cannot lift our pencil prevents our graph from going arbitrarily high (or low), or from getting arbitrarily close to a highest point but not actually hitting it.  Perhaps a more illustrative means of understanding the role of continuity in the extreme value theorem is to consider examples where this condition is removed.   Extreme values: discontinuous   The functions and graphed below illustrate how crucial continuity is to the extreme value theorem.   Extreme values and discontinuous functions    Graph of   Graph of has a vertical asymptote      Graph of   Graph of has a removable discontinuity       The function has infinite one-sided limits at , and as a consequence has neither a maximum nor a minimum value on the closed interval .  The function has values that get arbitrarily close to but not equal to , thanks to the removable discontinuity. As a result, has no maximum value on the interval: we have for all , and for any value less than , there is an input with .     Extreme values: open interval   As illustrated below, the function has no absolute maximum or minimum value on the open interval . This illustrates why the extreme value theorem insists that the finite interval in question must be closed .  Graph of   Graph of the tangent function         Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .        Local extreme values  In the phrase sufficiently close to is used as a convenient, but slightly less than rigorous shorthand.  To be more precise, given an interior point , we say that is a local maximum (resp., minimum) value of on if there is an open interval containing such that is an absolute maximum (resp., minimum) value on .  If is a left (resp., right) endpoint of , then is a local maximum (resp., minimum) value of on if there is a half-open interval (resp., ) contained in such that is an absolute maximum (resp., minimum) value on .  In summary, is a local maximum or minimum value on means simply that there is some interval (or half-interval) contained in on which is an absolute maximum or minimum value. Thus to identify graphically the local extreme values of a function , look for inputs such that when we look at the segment of the graph of lying over a small interval around , is seen to be an absolute maximum or minimum value.    Local and absolute extreme values   A graph of the function on the interval is graphed below.   Identify all and any inputs where has a local maximum or minimum value of on .    Decide whether has an absolute maximum value on , and whether has an absolute minimum value on .      Graph of   Graph of function with various local extrema          The        Critical points and extreme values  Fermat   Assume is defined on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .     Critical point   Let be defined on . An element is a critical point of if either or is not differentiable at .     Extreme value theorem   Assume is continuous on the closed interval . To determine the absolute maximum and minimum values of on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a maximum or minimum value consist of (i) the endpoints and of the interval along with the set of all critical points of . We determine the latter by finding all solutions to the equation lying in , and identifying all elements of where is not differentiable.    Evaluate  Evaluate at all candidate inputs you found in Step 1.    Compare values  Compare the values of computed in Step 2. The maximum value in that set is the absolute maximum value of on ; the minimum value in that set is the minimum value of on .        Extreme values: factored polynomial   Let . Find the absolute maximum and minimum values of on the interval .         Extreme values: trig   Let . Find the absolute maximum and minimum values of on the interval .         Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval         "
 },
 {
-  "id": "d_extrema",
+  "id": "s_extreme-2",
   "level": "2",
-  "url": "s_extreme.html#d_extrema",
-  "type": "Definition",
-  "number": "20.1",
-  "title": "Extreme values.",
-  "body": " Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .      "
+  "url": "s_extreme.html#s_extreme-2",
+  "type": "Objectives",
+  "number": "20",
+  "title": "",
+  "body": "   Use the derivative to investigate optimization questions.    Understand the extreme value theorem in the context of optimization.    Define absolute and local maximum and minimum values of a function on a given set .    Identify extreme values of a function graphically.    Introduce the notion of critical points as potential inputs where a function attains a local (or absolute) maximum or minimum.    Develop a procedure that determines the absolute maximum and minimum values of a continuous function on a closed finite interval.    "
 },
 {
   "id": "th_extreme",
   "level": "2",
   "url": "s_extreme.html#th_extreme",
   "type": "Theorem",
-  "number": "20.2",
+  "number": "20.1",
   "title": "Extreme value theorem.",
   "body": " Extreme value theorem   If is continuous on the closed interval , then there are inputs and for which is the absolute maximum value of on and is the absolute minimum value of on . In plain English: a continuous function always attains a maximum and minimum value over a closed interval .    The proof of this intuitive statement is just beyond our reach in terms of our current conceptual framework: we are missing only the notion of least upper bounds. In later math courses, like real analysis and topology, you develop an exceedingly important concept called compactness that allows you to eventually give a beautiful one-line proof of the extreme value theorem.   "
+},
+{
+  "id": "eg_extreme_discontinuous",
+  "level": "2",
+  "url": "s_extreme.html#eg_extreme_discontinuous",
+  "type": "Example",
+  "number": "20.2",
+  "title": "Extreme values: discontinuous.",
+  "body": " Extreme values: discontinuous   The functions and graphed below illustrate how crucial continuity is to the extreme value theorem.   Extreme values and discontinuous functions    Graph of   Graph of has a vertical asymptote      Graph of   Graph of has a removable discontinuity       The function has infinite one-sided limits at , and as a consequence has neither a maximum nor a minimum value on the closed interval .  The function has values that get arbitrarily close to but not equal to , thanks to the removable discontinuity. As a result, has no maximum value on the interval: we have for all , and for any value less than , there is an input with .   "
+},
+{
+  "id": "eg_extreme_open",
+  "level": "2",
+  "url": "s_extreme.html#eg_extreme_open",
+  "type": "Example",
+  "number": "20.4",
+  "title": "Extreme values: open interval.",
+  "body": " Extreme values: open interval   As illustrated below, the function has no absolute maximum or minimum value on the open interval . This illustrates why the extreme value theorem insists that the finite interval in question must be closed .  Graph of   Graph of the tangent function       "
+},
+{
+  "id": "d_extrema",
+  "level": "2",
+  "url": "s_extreme.html#d_extrema",
+  "type": "Definition",
+  "number": "20.6",
+  "title": "Extreme values.",
+  "body": " Extreme values   Assume is defined on the set , and let be an element of .    is an absolute maximum value of on if for all .     is an absolute minimum value of on if for all .     is a local maximum value of on if for all sufficiently close to .     is a local minimum value of on if for all sufficiently close to .     is an extreme value of on if it is an absolute or local maximum or minimum value of on .      "
+},
+{
+  "id": "s_extreme-11",
+  "level": "2",
+  "url": "s_extreme.html#s_extreme-11",
+  "type": "Remark",
+  "number": "20.7",
+  "title": "Local extreme values.",
+  "body": " Local extreme values  In the phrase sufficiently close to is used as a convenient, but slightly less than rigorous shorthand.  To be more precise, given an interior point , we say that is a local maximum (resp., minimum) value of on if there is an open interval containing such that is an absolute maximum (resp., minimum) value on .  If is a left (resp., right) endpoint of , then is a local maximum (resp., minimum) value of on if there is a half-open interval (resp., ) contained in such that is an absolute maximum (resp., minimum) value on .  In summary, is a local maximum or minimum value on means simply that there is some interval (or half-interval) contained in on which is an absolute maximum or minimum value. Thus to identify graphically the local extreme values of a function , look for inputs such that when we look at the segment of the graph of lying over a small interval around , is seen to be an absolute maximum or minimum value.  "
+},
+{
+  "id": "eg_local_extrema",
+  "level": "2",
+  "url": "s_extreme.html#eg_local_extrema",
+  "type": "Example",
+  "number": "20.8",
+  "title": "Local and absolute extreme values.",
+  "body": " Local and absolute extreme values   A graph of the function on the interval is graphed below.   Identify all and any inputs where has a local maximum or minimum value of on .    Decide whether has an absolute maximum value on , and whether has an absolute minimum value on .      Graph of   Graph of function with various local extrema          The      "
 },
 {
   "id": "th_crit_pt",
   "level": "2",
   "url": "s_extreme.html#th_crit_pt",
   "type": "Theorem",
-  "number": "20.3",
+  "number": "20.10",
   "title": "Critical points and extreme values.",
-  "body": " Critical points and extreme values  Fermat   Assume is continuous on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .   "
+  "body": " Critical points and extreme values  Fermat   Assume is defined on and that is an interior point of . If is a local maximum or minimum value of on , and if is differentiable at , then .   "
 },
 {
   "id": "d_crit_pt",
   "level": "2",
   "url": "s_extreme.html#d_crit_pt",
   "type": "Definition",
-  "number": "20.4",
+  "number": "20.11",
   "title": "Critical point.",
   "body": " Critical point   Let be defined on . An element is a critical point of if either or is not differentiable at .   "
 },
@@ -1832,7 +1877,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_extreme.html#proc_extreme",
   "type": "Procedure",
-  "number": "20.5",
+  "number": "20.12",
   "title": "Extreme value theorem.",
   "body": " Extreme value theorem   Assume is continuous on the closed interval . To determine the absolute maximum and minimum values of on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a maximum or minimum value consist of (i) the endpoints and of the interval along with the set of all critical points of . We determine the latter by finding all solutions to the equation lying in , and identifying all elements of where is not differentiable.    Evaluate  Evaluate at all candidate inputs you found in Step 1.    Compare values  Compare the values of computed in Step 2. The maximum value in that set is the absolute maximum value of on ; the minimum value in that set is the minimum value of on .      "
 },
@@ -1841,7 +1886,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_extreme.html#eg_extreme_factored_poly",
   "type": "Example",
-  "number": "20.6",
+  "number": "20.13",
   "title": "Extreme values: factored polynomial.",
   "body": " Extreme values: factored polynomial   Let . Find the absolute maximum and minimum values of on the interval .       "
 },
@@ -1850,7 +1895,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_extreme.html#eg_extreme_trig",
   "type": "Example",
-  "number": "20.7",
+  "number": "20.14",
   "title": "Extreme values: trig.",
   "body": " Extreme values: trig   Let . Find the absolute maximum and minimum values of on the interval .       "
 },
@@ -1859,7 +1904,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "s_extreme.html#eg_extreme_graphs",
   "type": "Example",
-  "number": "20.8",
+  "number": "20.15",
   "title": "Distance between graphs.",
   "body": " Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval        "
 },

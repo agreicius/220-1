@@ -336,9 +336,24 @@ window.MathJax = {
 #eg_linear_approx_quadratic-2-1-2 { counter-set: eg_linear_approx_quadratic-2-1-2 0; }
 #eg_linear_approx_quadratic-2-1-2 > li::marker { content: ""counter(eg_linear_approx_quadratic-2-1-2,decimal)"."; }
 #eg_linear_approx_quadratic-2-1-2 > li { counter-increment: eg_linear_approx_quadratic-2-1-2; }
+#eg_linear_approx_quadratic-3-1-1 { counter-set: eg_linear_approx_quadratic-3-1-1 0; }
+#eg_linear_approx_quadratic-3-1-1 > li::marker { content: ""counter(eg_linear_approx_quadratic-3-1-1,decimal)"."; }
+#eg_linear_approx_quadratic-3-1-1 > li { counter-increment: eg_linear_approx_quadratic-3-1-1; }
 #eg_linear_approx_marshmallow-2-1-1 { counter-set: eg_linear_approx_marshmallow-2-1-1 0; }
 #eg_linear_approx_marshmallow-2-1-1 > li::marker { content: ""counter(eg_linear_approx_marshmallow-2-1-1,decimal)"."; }
 #eg_linear_approx_marshmallow-2-1-1 > li { counter-increment: eg_linear_approx_marshmallow-2-1-1; }
+#eg_linear_approx_marshmallow-3-1-8 { counter-set: eg_linear_approx_marshmallow-3-1-8 0; }
+#eg_linear_approx_marshmallow-3-1-8 > li::marker { content: ""counter(eg_linear_approx_marshmallow-3-1-8,decimal)"."; }
+#eg_linear_approx_marshmallow-3-1-8 > li { counter-increment: eg_linear_approx_marshmallow-3-1-8; }
+#s_extreme-2-1 { counter-set: s_extreme-2-1 0; }
+#s_extreme-2-1 > li::marker { content: ""counter(s_extreme-2-1,decimal)"."; }
+#s_extreme-2-1 > li { counter-increment: s_extreme-2-1; }
+#eg_local_extrema-2-1-3 { counter-set: eg_local_extrema-2-1-3 0; }
+#eg_local_extrema-2-1-3 > li::marker { content: ""counter(eg_local_extrema-2-1-3,decimal)"."; }
+#eg_local_extrema-2-1-3 > li { counter-increment: eg_local_extrema-2-1-3; }
+#eg_local_extrema-3-1-1 { counter-set: eg_local_extrema-3-1-1 0; }
+#eg_local_extrema-3-1-1 > li::marker { content: ""counter(eg_local_extrema-3-1-1,decimal)"."; }
+#eg_local_extrema-3-1-1 > li { counter-increment: eg_local_extrema-3-1-1; }
 #proc_extreme-2-1-5 { counter-set: proc_extreme-2-1-5 0; }
 #proc_extreme-2-1-5 > li::marker { content: ""counter(proc_extreme-2-1-5,decimal)"."; }
 #proc_extreme-2-1-5 > li { counter-increment: proc_extreme-2-1-5; }
@@ -652,17 +667,87 @@ f(b)\approx L(b)=f'(a)(b-a)+f(a)\text{.}
 <li id="eg_linear_approx_quadratic-2-1-2-2"><div class="para" id="eg_linear_approx_quadratic-2-1-2-2-1">Compare your estimate of <span class="process-math">\(f(0.5)\)</span> with the actual value. How close are the two?</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_linear_approx_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_quadratic-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_cuberoot"><h3 class="heading">
+<div class="solutions"><details id="eg_linear_approx_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_quadratic-3-1"><ol class="decimal" id="eg_linear_approx_quadratic-3-1-1">
+<li id="eg_linear_approx_quadratic-3-1-1-1"><div class="para logical" id="eg_linear_approx_quadratic-3-1-1-1-1">
+<div class="para">Recall that we computed <span class="process-math">\(L_1(x)=2(x-1)+2\text{.}\)</span> Thus we have</div>
+<div class="displaymath process-math" id="eg_linear_approx_quadratic-3-1-1-1-1-2">
+\begin{align*}
+f(1/2) \amp \approx L_1(1/2)\\
+\amp = 2(-1/2)+2\\
+\amp = 1\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="eg_linear_approx_quadratic-3-1-1-2"><div class="para" id="eg_linear_approx_quadratic-3-1-1-2-1">The exact value is <span class="process-math">\(f(1/2)=3-(1/2-2)^2=3-9/4=3/4\text{.}\)</span> Thus our estimate is off by <span class="process-math">\(1/4\text{:}\)</span> i.e., <span class="process-math">\(\abs{L_1(1/2)-f(1/2)}=1/4\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_cuberoot"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.9</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: cube-root.</span>
 </h3>
 <div class="para" id="eg_linear_approx_cuberoot-2-1">Use linear approximation to estimate <span class="process-math">\(\sqrt[3]{8.05}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_linear_approx_cuberoot-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_cuberoot-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_trig"><h3 class="heading">
+<div class="solutions"><details id="eg_linear_approx_cuberoot-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_cuberoot-3-1">
+<div class="para">To use linear approximation, we need to compute the linearization of a function <span class="process-math">\(f\)</span> centered at some input <span class="process-math">\(a\text{.}\)</span> We take <span class="process-math">\(f(x)\sqrt[3]{x}\text{,}\)</span> and <span class="process-math">\(a=8\text{.}\)</span> Why <span class="process-math">\(a=8\text{?}\)</span> I can compute <span class="process-math">\(f(8)\)</span> and <span class="process-math">\(f'(8)\)</span> easily by hand, and <span class="process-math">\(8.05\)</span> is reasonably close to <span class="process-math">\(8\text{.}\)</span> We first compute</div>
+<div class="displaymath process-math" id="eg_linear_approx_cuberoot-3-1-10">
+\begin{align*}
+f'(x) \amp =(x^{1/3})'\\
+\amp =\frac{1}{3}x^{-2/3}\text{.}
+\end{align*}
+</div>
+<div class="para">The linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=8\)</span> is then</div>
+<div class="displaymath process-math" id="eg_linear_approx_cuberoot-3-1-13">
+\begin{align*}
+L(x) \amp = f'(8)(x-8)+f(8)\\
+\amp =\frac{1}{12}(x-8)+2 \amp (8^{1/3}=2, 8^{-2/3}=1/(\sqrt[3]{8})^2=1/4)
+\end{align*}
+</div>
+<div class="para">Lastly, we estimate</div>
+<div class="displaymath process-math" id="eg_linear_approx_cuberoot-3-1-14">
+\begin{align*}
+f(8.05) \amp \approx L(8.05)\\
+\amp = \frac{1}{12}\cdot 0.05+2\\
+\amp \frac{1}{240}+2 \amp (0.05=1/20)\\
+\amp = \frac{481}{240}\text{.}
+\end{align*}
+</div>
+<div class="para">Using technology we see that</div>
+<div class="displaymath process-math" id="eg_linear_approx_cuberoot-3-1-15">
+\begin{align*}
+f(8.05) \amp = 2.0041580\dots \\
+\frac{481}{240} \amp = 2.0041666\dots\text{.}
+\end{align*}
+</div>
+<div class="para">Our estimate ended up being pretty close!</div>
+</div></div></details></div></article><article class="example example-like" id="eg_linear_approx_trig"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.10</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: trig.</span>
 </h3>
 <div class="para" id="eg_linear_approx_trig-2-1">Let <span class="process-math">\(f(x)=\tan(\pi x)\text{.}\)</span> Use linear approximation to estimate <span class="process-math">\(f(0.251)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_linear_approx_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_trig-3-1"></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_marshmallow"><h3 class="heading">
+<div class="solutions"><details id="eg_linear_approx_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_trig-3-1">
+<div class="para">We compute the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=\frac{1}{4}=0.25\text{.}\)</span> First we compute the derivative of <span class="process-math">\(f\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="eg_linear_approx_trig-3-1-5">
+\begin{align*}
+f'(x) \amp = \sec^2(\pi x) (\pi x)' \amp \text{(chain)}\\
+\amp = \pi \sec^2(\pi x)\text{.}
+\end{align*}
+</div>
+<div class="para">It follows that the linearization centered at <span class="process-math">\(\frac{1}{4}\)</span> is</div>
+<div class="displaymath process-math" id="eg_linear_approx_trig-3-1-7">
+\begin{align*}
+L(x) \amp = f'(1/4)(x-1/4)+f(1/4)\\
+\amp = 2\pi(x-1/4)+1 \amp (\tan(\pi/4)=1, \sec^2(\pi/4)=1/(\sqrt{2}/2)^2=2) \text{.}
+\end{align*}
+</div>
+<div class="para">Lastly we estimate</div>
+<div class="displaymath process-math" id="eg_linear_approx_trig-3-1-8">
+\begin{align*}
+f(0.251) \amp \approx L(0.251)\\
+\amp = 2\pi (0.251-0.25)+1 \amp (1/4=0.25)\\
+\amp = 2\pi(0.001)+1\\
+\amp = \frac{\pi}{500}+1\text{.}
+\end{align*}
+</div>
+</div></div></details></div></article><article class="example example-like" id="eg_linear_approx_marshmallow"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.11</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: marshmallow.</span>
 </h3>
 <div class="para logical" id="eg_linear_approx_marshmallow-2-1">
@@ -672,7 +757,42 @@ f(b)\approx L(b)=f'(a)(b-a)+f(a)\text{.}
 <li id="eg_linear_approx_marshmallow-2-1-1-2"><div class="para" id="eg_linear_approx_marshmallow-2-1-1-2-1">Compare your estimate with the actual change in volume.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_linear_approx_marshmallow-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_linear_approx_marshmallow-3-1"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_linear_approx_marshmallow-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_marshmallow-3-1">
+<div class="para">Since the radius <span class="process-math">\(r\)</span> and height <span class="process-math">\(h\)</span> of the marshmallow are initially equal, and since the marshmallow expands in such a way that the ratio of radius to height is preserved, we see that we always have <span class="process-math">\(r=h\text{,}\)</span> and thus</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V=\pi r^2 h=\pi x^3\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x=r=h\text{.}\)</span> We thus treat volume <span class="process-math">\(V=f(x)=\pi x^3\)</span> as a function of the common dimension <span class="process-math">\(x\)</span> specifying both radius and height.</div>
+<ol class="decimal" id="eg_linear_approx_marshmallow-3-1-8">
+<li id="eg_linear_approx_marshmallow-3-1-8-1"><div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-1-1">
+<div class="para">To estimate the change in volume, we compute the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(V=f(x)\)</span> centered at <span class="process-math">\(1\text{.}\)</span> Since <span class="process-math">\(f'(x)=3\pi x^2\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(x)=f'(1)(x-1)+f(1)=3\pi (x-1)+\pi\text{.}
+\end{equation*}
+</div>
+<div class="para">It follows that the change of volume <span class="process-math">\(\Delta V=f(1.2)-f(1)\)</span> can be estimated as</div>
+<div class="displaymath process-math" id="eg_linear_approx_marshmallow-3-1-8-1-1-7">
+\begin{align*}
+\Delta V \amp = f(1.2)-f(1)\\
+\amp \approx L(1.2)-f(1) \amp (L(1.2)\approx f(1.2)\\
+\amp = 3\pi(0.2)=\frac{3\pi }{5}=0.6\, \pi
+\end{align*}
+</div>
+</div></li>
+<li id="eg_linear_approx_marshmallow-3-1-8-2"><div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-2-1">
+<div class="para">The exact change of volume is</div>
+<div class="displaymath process-math" id="eg_linear_approx_marshmallow-3-1-8-2-1-1">
+\begin{align*}
+f(1.2)-f(1) \amp = \pi (1.2)^3-\pi \\
+\amp = 0.728\, \pi \text{.}
+\end{align*}
+</div>
+</div></li>
+</ol>
+</div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_extreme.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
