@@ -36,6 +36,7 @@
     <xi:include href="s_related_rates_II.ptx" />
     <xi:include href="s_linearization.ptx" />
     <xi:include href="s_extreme.ptx" />
+    <xi:include href="s_mean_value.ptx" />
 
   <!-- </chapter> -->
     
