@@ -164,7 +164,7 @@
             <p>
                 Assume <m>f</m> is twice differentiable on an interval <m>I</m> containing <m>a</m> as in interior point. Let <m>L(x)=f'(a)(x-a)+f(a)</m> be the linearization of <m>f</m> centered at <m>a</m>. For all <m>x\in I</m> we have 
                 <me>
-                    f(x)-L(x)=\frac{f''(c)}}{2}(x-a)^2
+                    f(x)-L(x)=\frac{f''(c)}{2}(x-a)^2
                 </me>.
                 As a result, if <m>\abs{f''(x)}\leq M</m> for some constant <m>M\in \R</m> and all <m>x\in I</m>, then we have 
                 <me>
