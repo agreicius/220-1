@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Derivative: at a point</title>
+<title>Mean value theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
@@ -379,7 +379,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_infinite_limits.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_der_function.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_extreme.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-25.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -526,7 +526,7 @@ window.MathJax = {
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
 <li class="toc-item toc-section">
@@ -544,7 +544,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_II.html" class="internal"><span class="codenumber">18</span> <span class="title">Related rates II</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">19</span> <span class="title">Linearization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_extreme.html" class="internal"><span class="codenumber">20</span> <span class="title">Extreme value theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">21</span> <span class="title">Mean value theorem</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">21</span> <span class="title">Mean value theorem</span></a></div></li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-25.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
@@ -557,232 +557,122 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_der_at_point"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">10</span><span class="space"> </span><span class="title">Derivative: at a point</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_mean_value"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">21</span><span class="space"> </span><span class="title">Mean value theorem</span>
 </h2>
-<article class="objectives goal-like" id="s_der_at_point-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="decimal" id="s_der_at_point-2-1">
-<li id="s_der_at_point-2-1-1"><div class="para" id="s_der_at_point-2-1-1-1">Give formal limit definition of the derivative of a function at a point.</div></li>
-<li id="s_der_at_point-2-1-2"><div class="para" id="s_der_at_point-2-1-2-1">Understand the different quotient of a function in terms of rates of change and slopes of secants.</div></li>
-<li id="s_der_at_point-2-1-3"><div class="para" id="s_der_at_point-2-1-3-1">Understand the derivative of a function at a point both as an instantaneous rate of change, and as the slope of the tangent line to the graph at that point.</div></li>
-</ol></article><div class="para" id="s_der_at_point-3">We will launch directly into an unmotivated definition of the derivative of a function <span class="process-math">\(f\)</span> at a point, and then motivate this definition retroactively in terms of important properties of <span class="process-math">\(f\)</span> and its graph.</div>
-<article class="definition definition-like" id="d_der_at_point"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at a point.</span>
+<article class="objectives goal-like" id="s_mean_value-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_mean_value-2-1">
+<li id="s_mean_value-2-1-1"><div class="para" id="s_mean_value-2-1-1-1">Derive Rolle’s theorem and the mean value theorem (MVT) as consequences of <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a>.</div></li>
+<li id="s_mean_value-2-1-2"><div class="para" id="s_mean_value-2-1-2-1">Interpret Rolle’s theorem and the MVT both geometrically (in terms of tangent lines) and physically (in terms of instantaneous rates of change).</div></li>
+<li id="s_mean_value-2-1-3"><div class="para" id="s_mean_value-2-1-3-1">Derive consequences of the MVT to various mathematical applications: e.g., characterization of functions <span class="process-math">\(f\)</span> satisfying <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\text{,}\)</span>  existence of roots of functions within specific intervals, inequalities.</div></li>
+</ol></article><article class="theorem theorem-like" id="th_rolles"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rolle’s theorem.</span>
 </h3>
-<div class="para logical" id="d_der_at_point-2-1">
-<div class="para">Suppose <span class="process-math">\(a\in \R\)</span> is an interior point or endpoint of the domain of <span class="process-math">\(f\text{.}\)</span> We say that <span class="process-math">\(f\)</span> is <dfn class="terminology">differentiable</dfn> at <span class="process-math">\(a\)</span> if the limit</div>
-<div class="displaymath process-math" id="eq_der_at_point_h">
+<div class="para" id="th_rolles-2-1">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> If <span class="process-math">\(f(a)=f(b)\text{,}\)</span> then there is an input <span class="process-math">\(c\in [a,b]\)</span> satisfying <span class="process-math">\(f'(c)=0\text{.}\)</span>
+</div></article><details id="th_rolles-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_rolles-3-1">Let <span class="process-math">\(C=f(a)=f(b)\)</span> be the common value of <span class="process-math">\(f\)</span> at the endpoints.  If <span class="process-math">\(f(x)=C\)</span> for <em class="emphasis">all</em> inputs <span class="process-math">\(x\in [a,b]\)</span> (i.e., <span class="process-math">\(f\)</span> is a constant function), then <span class="process-math">\(f'(x)=0\)</span> for all inputs <span class="process-math">\(x\in (a,b)\text{,}\)</span> and our desired conclusion is trivially satisfied.</div>
+<div class="para" id="th_rolles-3-2">Assume now that <span class="process-math">\(f\)</span> is not constant. Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> there are points <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> in <span class="process-math">\([a,b]\)</span> where <span class="process-math">\(f\)</span> attains its absolute maximum and minimum values. Since <span class="process-math">\(f\)</span> is not constant on <span class="process-math">\([a,b]\text{,}\)</span> we must have <span class="process-math">\(f(c)\ne C\)</span> or <span class="process-math">\(f(d)\ne C\text{.}\)</span> Assume without loss of generality that <span class="process-math">\(f(c)\ne C\)</span> is an absolute extreme value of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> The input <span class="process-math">\(c\)</span> must be an interior point of <span class="process-math">\([a,b]\text{,}\)</span> since <span class="process-math">\(f(c)\ne f(a)\)</span> and <span class="process-math">\(f(c)\ne f(b)\text{.}\)</span> Since <span class="process-math">\(f\)</span> is differentiable everywhere on <span class="process-math">\((a,b)\text{,}\)</span> <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a> implies <span class="process-math">\(f'(c)=0\text{,}\)</span> as desired.</div></article></details><article class="remark remark-like" id="s_mean_value-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">21.2</span><span class="period">.</span><span class="space"> </span><span class="title">Interpretations of Rolle’s theorem.</span>
+</h3>
+<div class="para" id="s_mean_value-4-2">Let <span class="process-math">\(f\)</span> satisfy the assumptions of Rolle’s theorem on the interval <span class="process-math">\([a,b]\text{.}\)</span>
+</div>
+<div class="para" id="s_mean_value-4-3">Geometrically, we interpret Rolle’s theorem as follows: if the endpoints of the graph of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b]\)</span> lie on the same horizontal line, then there is an input <span class="process-math">\(c\in (a,b)\)</span> for which the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\)</span> is horizontal.</div>
+<div class="para" id="s_mean_value-4-4">In terms of rate of change, we interpret Rolle’s theorem as follows: if the <em class="emphasis">average</em> rate of change of <span class="process-math">\(f\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is equal to zero, then there is an input <span class="process-math">\(c\in (a,b)\)</span> where the <em class="emphasis">instantaneous</em> rate of change <span class="process-math">\(f'(c)\)</span> is equal to zero.</div></article><div class="para" id="s_mean_value-5">Rolle’s theorem turns out to be a special case of the <a href="s_mean_value.html#th_mean_value" class="xref" data-knowl="./knowl/xref/th_mean_value.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 21.3: Mean value theorem (MVT)">mean value theorem</a>, where the function in question satisfies <span class="process-math">\(f(a)=f(b)\text{.}\)</span> As a peculiar twist, however, the mean value theorem can also be seen as just a “tilted” version of Rolle’s theorem. In logical terms, the two theorems, though quite different in content, are logically equivalent!</div>
+<article class="theorem theorem-like" id="th_mean_value"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem (MVT).</span>
+</h3>
+<div class="para logical" id="th_mean_value-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> There is an input <span class="process-math">\(c\in (a,b)\)</span> satisfying</div>
+<div class="displaymath process-math" id="eq_mean_value">
 \begin{equation}
-\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h},\tag{10.1}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}\tag{21.1}
 \end{equation}
 </div>
-<div class="para">or equivalently, the limit</div>
-<div class="displaymath process-math" id="eq_der_at_point_ab">
-\begin{equation}
-\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}\text{,}\tag{10.2}
-\end{equation}
+</div></article><details id="th_mean_value-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_mean_value-3-1">
+<div class="para">We employ a little trick that reveals MVT to be a simple consequence of Rolle’s theorem. Define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g(x)=f(x)-\frac{f(b)-f(a)}{(b-a)}(x-a)\text{.}
+\end{equation*}
 </div>
-<div class="para">exists. When this is the case, we call this limit the <dfn class="terminology">derivative</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\text{,}\)</span> denoted <span class="process-math">\(f'(a)\text{:}\)</span> i.e.,</div>
-<div class="displaymath process-math" id="eq_der_at_point">
-\begin{equation}
-f'(a)= \lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}\text{.}\tag{10.3}
-\end{equation}
+<div class="para">As is easily verified, <span class="process-math">\(g\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> differentiable on <span class="process-math">\((a,b)\)</span> and satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html" id="th_mean_value-3-1-5">
+\begin{align}
+g(a) \amp =g(b)=f(a)\tag{21.2}\\
+g'(x) \amp = f'(x)-\frac{f(b)-f(a)}{(b-a)}\text{.}\tag{21.3}
+\end{align}
 </div>
-</div></article><article class="remark remark-like" id="s_der_at_point-5"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at a point.</span>
+<div class="para">Applying Rolle’s theorem to <span class="process-math">\(g\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> we conlude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g'(c)=0
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(c\in (a,b)\text{.}\)</span> We conclude, using <a href="s_mean_value.html#th_mean_value-3-1-5" class="xref" data-knowl="./knowl/xref/eq_mean_gprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 21.3">(21.3)</a> we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+0=f'(c)-\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article></details><article class="example example-like" id="eg_mvt_speeding"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.4</span><span class="period">.</span><span class="space"> </span><span class="title">Speeding motorist.</span>
 </h3>
-<div class="para logical" id="s_der_at_point-5-2">
-<div class="para">Implicit in our definition is that the two limit expressions</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rm_affine_sub.html" id="s_der_at_point-5-2-1">
-\begin{align*}
-\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h} \amp \amp \lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
-\end{align*}
-</div>
-<div class="para">are equivalent, in the sense that the one exists if and only if the other exists, in which case both are equal. This is seen to be true by invoking an appropriate affine substitution, which according to <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a>, preserves the value of a limit.</div>
-</div>
-<div class="para" id="s_der_at_point-5-3">In more detail, the <span class="process-math">\(x\to a\)</span> limit can be transformed to the <span class="process-math">\(h\to 0\)</span> limit by using the substitution <span class="process-math">\(h=x-a\text{;}\)</span> and conversely, the <span class="process-math">\(h\to 0\)</span> limit can be transformed to the <span class="process-math">\(x\to a\)</span> limit using the substitution <span class="process-math">\(x=h+a\text{.}\)</span>
-</div></article><article class="remark remark-like" id="s_der_at_point-6"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span><span class="space"> </span><span class="title">Limit definition of derivative.</span>
+<div class="para" id="eg_mvt_speeding-2-1">While traveling in Ontario, Dudley pilots his motor car along Queen Elizabeth Way (aka the QEW). The posted speed limit along this stretch of motorway is 120 km per hr. At 12 pm Dudley passes St. Catherines, and by 12:25 pm he reaches Hamilton, which is 60 km down the road. Prove: at some point during this excursion Dudley has exceeded the speed limit!</div>
+<div class="solutions"><details id="eg_mvt_speeding-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mvt_speeding-3-1"></div></div></details></div></article><article class="corollary theorem-like" id="cor_constant_functions"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.5</span><span class="period">.</span><span class="space"> </span><span class="title">Constant function characterization.</span>
 </h3>
-<div class="para logical" id="s_der_at_point-6-2">
-<div class="para">Note that the limit</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lim\limits_{h\to 0}\frac{f(a+h)-f(a)}{h}
-\end{equation*}
-</div>
-<div class="para">always involves a denominator that approaches 0 as <span class="process-math">\(h\to 0\text{.}\)</span> This means we can <em class="emphasis">never</em> apply the quotient rule to such a limit directly; we will <em class="emphasis">always</em> have to do some algebra (or the like) to get to a place where we can potentially use limit rules.</div>
-</div></article><article class="example example-like" id="eg_der_at_point"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative at point: elementary.</span>
+<div class="para" id="cor_constant_functions-2-1">Assume <span class="process-math">\(f\)</span> is differentiable on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> As a consequence, a function is constant on an interval <span class="process-math">\(I\)</span> if and only if its derivative values are identically equal to zero.</div></article><article class="corollary theorem-like" id="cor_same_derivative"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.6</span><span class="period">.</span><span class="space"> </span><span class="title">Functions with identical derivatives.</span>
 </h3>
-<div class="para logical" id="eg_der_at_point-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=x^2\text{.}\)</span>
+<div class="para logical" id="cor_same_derivative-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f'(x)=g'(x)\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then there is a constant <span class="process-math">\(C\in \R\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=g(x)+C
+\end{equation*}
 </div>
-<ol class="decimal" id="eg_der_at_point-2-1-2">
-<li id="eg_der_at_point-2-1-2-1"><div class="para" id="eg_der_at_point-2-1-2-1-1">Show that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(-2\)</span> and compute <span class="process-math">\(f'(-2)\)</span> using the limit definition of the derivative.</div></li>
-<li id="eg_der_at_point-2-1-2-2"><div class="para" id="eg_der_at_point-2-1-2-2-1">More generally, fix any <span class="process-math">\(a\in \R\text{.}\)</span> Show that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(a\)</span> and compute <span class="process-math">\(f'(a)\)</span> using the limit definition of the derivative.</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="eg_der_at_point-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_at_point-3-1"><ol class="decimal" id="eg_der_at_point-3-1-1">
-<li id="eg_der_at_point-3-1-1-1"><div class="para logical" id="eg_der_at_point-3-1-1-1-1">
-<div class="para">We compute</div>
-<div class="displaymath process-math" id="eg_der_at_point-3-1-1-1-1-1">
-\begin{align*}
-\lim\limits_{h\to 0 }\frac{f(-2+h)-f(-2)}{h} \amp = 
-\lim\limits_{h\to 0}\frac{(-2+h)^2-4}{h} \\
-\amp = \lim\limits_{h\to 0}\frac{4-4h+h^2-4}{h}\\
-\amp = \lim\limits_{h\to 0}\frac{h(-4+h)}{h}\\
-\amp = \lim\limits_{h\to 0}-4+h\\
-\amp = -4 \amp \text{(poly. eval.)}\text{.}
-\end{align*}
-</div>
-<div class="para">Since the limit exists, we conclude that <span class="process-math">\(f\)</span> is differentiable at <span class="process-math">\(-2\text{,}\)</span> and that <span class="process-math">\(f'(-2)=-4\text{.}\)</span>
-</div>
-</div></li>
-<li id="eg_der_at_point-3-1-1-2"><div class="para logical" id="eg_der_at_point-3-1-1-2-1">
-<div class="para">The computation above is very similar for an arbitrary constant <span class="process-math">\(a\in \R\text{:}\)</span>
-</div>
-<div class="displaymath process-math" id="eg_der_at_point-3-1-1-2-1-2">
-\begin{align*}
-\lim\limits_{h\to 0 }\frac{f(a+h)-f(a)}{h} \amp = 
-\lim\limits_{h\to 0}\frac{(a+h)^2-a^2}{h} \\
-\amp = \lim\limits_{h\to 0}\frac{a^2+2ah+h^2-a^2}{h}\\
-\amp = \lim\limits_{h\to 0}\frac{h(2a+h)}{h}\\
-\amp = \lim\limits_{h\to 0}2a+h\\
-\amp = 2a \amp \text{(poly. eval.)}\text{.}
-\end{align*}
-</div>
-<div class="para">We conclude that <span class="process-math">\(f\)</span> is differentiable at all <span class="process-math">\(a\in \R\text{,}\)</span> and that <span class="process-math">\(f'(a)=2a\text{.}\)</span>
-</div>
-</div></li>
-</ol></div></div></details></div></article><article class="definition definition-like" id="d_difference_quot"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span><span class="space"> </span><span class="title">Difference quotient.</span>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> In plain English, if two functions have identical derivative functions over an interval <span class="process-math">\(I\text{,}\)</span> then they differ by a constant.</div>
+</div></article><article class="example example-like" id="eg_mean_roots"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.7</span><span class="period">.</span><span class="space"> </span><span class="title">Number of roots.</span>
 </h3>
-<div class="para logical" id="d_difference_quot-2-1">
-<div class="para">Let <span class="process-math">\(f\)</span> be a function. Given two distinct points <span class="process-math">\(a\ne b\)</span> in the domain of <span class="process-math">\(f\text{,}\)</span> the value</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{f(b)-f(a)}{b-a}
-\end{equation*}
+<div class="para" id="eg_mean_roots-2-1">Show that the function <span class="process-math">\(f(x)=x^3-27x-7\)</span> has exactly one root in the interval <span class="process-math">\(I=[-2,2]\text{.}\)</span>
 </div>
-<div class="para">is called a <dfn class="terminology">difference</dfn> quotient of <span class="process-math">\(f\text{.}\)</span> We have two useful ways of understanding this quantity.</div>
-<ul class="disc" id="d_difference_quot-2-1-7">
-<li id="d_difference_quot-2-1-7-1">
-<span class="heading"><span class="title">Average rate of change.</span></span><div class="para logical" id="d_difference_quot-2-1-7-1-2">
-<div class="para">The difference quotient <span class="process-math">\(\frac{f(b)-f(a)}{b-a}\)</span> is called the <dfn class="terminology">average rate of change</dfn> of <span class="process-math">\(f\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> In this context we often use the <span class="process-math">\(\Delta\)</span> notation below to emphasize the relation to changing values of <span class="process-math">\(f\text{:}\)</span>
-</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\frac{f(b)-f(a)}{b-a}=\frac{\Delta f}{\Delta x}=\frac{\Delta y}{\Delta x}\text{,}
-\end{equation*}
-</div>
-<div class="para">where <span class="process-math">\(y=f(x)\text{.}\)</span>
-</div>
-</div>
-</li>
-<li id="d_difference_quot-2-1-7-2">
-<span class="heading"><span class="title">Slope of secant line.</span></span><div class="para logical" id="d_difference_quot-2-1-7-2-2">
-<div class="para">Consider the points <span class="process-math">\(P=(a,f(a))\)</span> and <span class="process-math">\(Q=(b,f(b))\text{,}\)</span> which lie on the graph of <span class="process-math">\(f\text{.}\)</span> The unique line <span class="process-math">\(L\)</span> in <span class="process-math">\(\R^2\)</span> that passes through <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> is called the <dfn class="terminology">secant line</dfn> on <span class="process-math">\(f\)</span> between <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{.}\)</span> This line can be defined, using point-slope form with respect to <span class="process-math">\(P=(a,f(a))\text{,}\)</span> by the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-y-f(a)=\underset{\text{slope}}{\underbrace{\left (\frac{f(b)-f(a)}{b-a}\right)}}(x-a)\text{.}
-\end{equation*}
-</div>
-<div class="para">We recognize in this context that the difference quotient <span class="process-math">\(\frac{f(b)-f(a)}{b-a}\)</span> is the slope of the secant line <span class="process-math">\(L\text{.}\)</span>
-</div>
-</div>
-</li>
-</ul>
-</div></article><article class="definition definition-like" id="d_der_interpretations"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative interpretations.</span>
+<div class="solutions"><details id="eg_mean_roots-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mean_roots-3-1"></div></div></details></div></article><article class="example example-like" id="eg_mean_inequality"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.8</span><span class="period">.</span><span class="space"> </span><span class="title">Interesting inequality.</span>
 </h3>
-<div class="para logical" id="d_der_interpretations-2-1">
-<div class="para">Let <span class="process-math">\(f\)</span> be differentiable at the point <span class="process-math">\(a\text{.}\)</span>
+<div class="para" id="eg_mean_inequality-2-1">Prove that <span class="process-math">\(\sqrt{1+x}&lt;  1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
 </div>
-<ol class="decimal" id="d_der_interpretations-2-1-3">
-<li id="d_der_interpretations-2-1-3-1">
-<span class="heading"><span class="title">Instantaneous rate of change.</span></span><div class="para logical" id="d_der_interpretations-2-1-3-1-2">
-<div class="para">We call the derivative value</div>
-<div class="displaymath process-math">
-\begin{equation*}
-f'(a)=\lim\limits_{h\to 0}\frac{f(h+a)-f(a)}{h}=\lim\limits_{x\to a}\frac{f(x)-f(a)}{x-a}
-\end{equation*}
-</div>
-<div class="para">the <dfn class="terminology">instantaneous rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> with respect to <span class="process-math">\(x\)</span></dfn>, or more simply, the rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> with respect to <span class="process-math">\(a\text{.}\)</span>
-</div>
-</div>
-</li>
-<li id="d_der_interpretations-2-1-3-2">
-<span class="heading"><span class="title">Tangent line.</span></span><div class="para logical" id="d_der_interpretations-2-1-3-2-2">
-<div class="para">Let <span class="process-math">\(P=(a,f(a))\text{.}\)</span> The <dfn class="terminology">tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(P\)</span></dfn> (or <dfn class="terminology">at <span class="process-math">\(x=a\)</span></dfn>) is the line <span class="process-math">\(L\)</span> defined by the equation</div>
-<div class="displaymath process-math">
-\begin{equation*}
-y-f(a)=f'(a)(x-a)\text{.}
-\end{equation*}
-</div>
-<div class="para">In this context, we see that the derivative of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\)</span> is the slope of the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(P\text{.}\)</span>
-</div>
-</div>
-</li>
-</ol>
-</div></article><article class="example example-like" id="eg_der_at_point_tangent"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span><span class="space"> </span><span class="title">Tangent line at point.</span>
+<div class="solutions">
+<details id="eg_mean_inequality-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="eg_mean_inequality-3-1">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Observe that <span class="process-math">\(h(0)=0\)</span> and <span class="process-math">\(h(3)=-1/2\text{.}\)</span>
+</div></div></details><details id="eg_mean_inequality-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mean_inequality-4-1"></div></div></details>
+</div></article><div class="para" id="s_mean_value-12">For the curious, we end with a useful corollary of the mean value theorem that yields a numerically more precise description of how good of an approximation the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> centered at <span class="process-math">\(a\)</span> is for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span> This result (and its proof) will not be assessed on any quiz or exam in this course.</div>
+<article class="corollary theorem-like" id="cor_mean_taylor"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.9</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s theorem (<span class="process-math">\(k=1\)</span>).</span>
 </h3>
-<div class="para logical" id="eg_der_at_point_tangent-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span>
-</div>
-<ol class="decimal" id="eg_der_at_point_tangent-2-1-2">
-<li id="eg_der_at_point_tangent-2-1-2-1"><div class="para" id="eg_der_at_point_tangent-2-1-2-1-1">Sketch the graph of <span class="process-math">\(f\text{.}\)</span>
-</div></li>
-<li id="eg_der_at_point_tangent-2-1-2-2"><div class="para" id="eg_der_at_point_tangent-2-1-2-2-1">Find an equation for the tangent line <span class="process-math">\(L\)</span> to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span>
-</div></li>
-<li id="eg_der_at_point_tangent-2-1-2-3"><div class="para" id="eg_der_at_point_tangent-2-1-2-3-1">Add <span class="process-math">\(L\)</span> to your sketch of the graph of <span class="process-math">\(f\text{.}\)</span>
-</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="eg_der_at_point_tangent-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_der_at_point_tangent-3-1"><ol class="decimal" id="eg_der_at_point_tangent-3-1-1">
-<li id="eg_der_at_point_tangent-3-1-1-1">
-<div class="para" id="eg_der_at_point_tangent-3-1-1-1-1">Below you find the graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{.}\)</span> How do we come up with something like this by hand. The quick and dirty way is to remember what the graph of $g(x)=\sqrt{x}$ and realize that the graph of <span class="process-math">\(f\)</span> will have roughly the same shape, but perhaps shifted/scaled/reflected. A matter of a few plotted points (e.g., <span class="process-math">\((5,0)\text{,}\)</span> <span class="process-math">\((4,1)\text{,}\)</span> <span class="process-math">\((1,2)\)</span>), will then give us something like the following.</div>
-<figure class="figure figure-like" id="fig_graph_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\)</span></figcaption></figure>
-</li>
-<li id="eg_der_at_point_tangent-3-1-1-2">
-<div class="para logical" id="eg_der_at_point_tangent-3-1-1-2-1">
-<div class="para">Let <span class="process-math">\(L\)</span> be the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=1\text{.}\)</span> By definition the slope of <span class="process-math">\(L\)</span> is <span class="process-math">\(f'(1)\text{,}\)</span> which we now compute:</div>
-<div class="displaymath process-math" id="eg_der_at_point_tangent-3-1-1-2-1-6">
-\begin{align*}
-f'(1) \amp = \lim\limits_{h\to 0}\frac{f(1+h)-f(1)}{h}\\
-\amp = \lim\limits_{h\to 0}\frac{\sqrt{5-(1+h)}-\sqrt{5-1}}{h}\\
-\amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}\\
-\amp = \lim\limits_{h\to 0}\frac{\sqrt{4-h}-2}{h}\cdot\frac{\sqrt{4-h}+2}{\sqrt{4-h}+2}\\
-\amp =\lim\limits_{h\to 0}\frac{4-h-4}{h(\sqrt{4-h}+2)} \\
-\amp = \lim\limits_{h\to 0}\frac{-h}{h\sqrt{4-h}+2}\\
-\amp = \lim\limits_{h\to 0}-\frac{1}{\sqrt{4-h}+2}\\
-\amp = -\frac{1}{4} \amp \text{(cont.)}\text{,}
-\end{align*}
-</div>
-<div class="para">where the last step uses the fact that <span class="process-math">\(g(h)=-\frac{1}{\sqrt{4-h}+2}\)</span> is continuous at <span class="process-math">\(0\text{.}\)</span>
-</div>
-</div>
-<div class="para logical" id="eg_der_at_point_tangent-3-1-1-2-2">
-<div class="para">We conclude that  the slope of <span class="process-math">\(L\)</span> is <span class="process-math">\(f'(1)=-\frac{1}{4}\text{.}\)</span> We now use point-slope form to find an equation for <span class="process-math">\(L\text{.}\)</span> By definition the tangent line <span class="process-math">\(L\)</span> passes through the point <span class="process-math">\(P=(1,f(1))=(1,2)\)</span> on the graph of <span class="process-math">\(f\text{.}\)</span> With respect to this point we have the following point-slope equation for <span class="process-math">\(L\text{:}\)</span>
-</div>
+<div class="para logical" id="cor_mean_taylor-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is twice differentiable on an interval <span class="process-math">\(I\)</span> containing <span class="process-math">\(a\)</span> as in interior point. Let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span> For all <span class="process-math">\(x\in I\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
-y-2=-\frac{1}{4}(x-1)\text{.}
+f(x)-L(x)=\frac{f''(c)}}{2}(x-a)^2\text{.}
 \end{equation*}
 </div>
+<div class="para">As a result, if <span class="process-math">\(\abs{f''(x)}\leq M\)</span> for some constant <span class="process-math">\(M\in \R\)</span> and all <span class="process-math">\(x\in I\text{,}\)</span> then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{f(x)-L(x)}\leq \frac{M}{2}\abs{x-a}^2
+\end{equation*}
 </div>
-</li>
-<li id="eg_der_at_point_tangent-3-1-1-3">
-<div class="para" id="eg_der_at_point_tangent-3-1-1-3-1">We now add both the point <span class="process-math">\(P\)</span> and the tangent line <span class="process-math">\(L\)</span> to our graph of <span class="process-math">\(f\text{.}\)</span>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
 </div>
-<figure class="figure figure-like" id="fig_graph_tangent_radical"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_tang_radical.svg" role="img" class="contained" alt="Graph of radical of 5-x together with tangent"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.9<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\sqrt{5-x}\text{,}\)</span> <span class="process-math">\(P\text{,}\)</span> and <span class="process-math">\(L\)</span></figcaption></figure>
-</li>
-</ol></div></div></details></div></article></section></div>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_infinite_limits.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_function.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_extreme.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-25.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

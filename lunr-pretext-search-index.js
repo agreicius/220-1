@@ -1918,6 +1918,105 @@ var ptx_lunr_docs = [
   "body": " Distance between graphs   Let and . Find the maximum vertical distance between the graphs of and on the interval     The vertical distance point and on the two graphs is measured by . Thus we are interested in the extreme values of on the interval . For we have . Note that is not differentiable at , and thus this is one of our critical points. To find the others we solve: . We now evaluate at our three critical points, as well as the endpoints: . We conclude that on , or equivalently, . Thus the vertical maximal distance between the two graphs is and this occurs at the inputs . Below you find two diagrams that illustrate this result: the first depitcts the graphs of and separately, and the second is a graph of the difference function .   Comparing graphs of and    Graphs of and   Graphs of and      Graphs of and   Graphs of , , and        "
 },
 {
+  "id": "s_mean_value",
+  "level": "1",
+  "url": "s_mean_value.html",
+  "type": "Section",
+  "number": "21",
+  "title": "Mean value theorem",
+  "body": " Mean value theorem     Derive Rolle's theorem and the mean value theorem (MVT) as consequences of .    Interpret Rolle's theorem and the MVT both geometrically (in terms of tangent lines) and physically (in terms of instantaneous rates of change).    Derive consequences of the MVT to various mathematical applications: , characterization of functions satisfying for all , existence of roots of functions within specific intervals, inequalities.      Rolle's theorem   Assume is continuous on and differentiable on . If , then there is an input satisfying .    Let be the common value of at the endpoints. If for all inputs ( , is a constant function), then for all inputs , and our desired conclusion is trivially satisfied.  Assume now that is not constant. Since is continuous on there are points and in where attains its absolute maximum and minimum values. Since is not constant on , we must have or . Assume without loss of generality that is an absolute extreme value of on . The input must be an interior point of , since and . Since is differentiable everywhere on , implies , as desired.     Interpretations of Rolle's theorem  Let satisfy the assumptions of Rolle's theorem on the interval .  Geometrically, we interpret Rolle's theorem as follows: if the endpoints of the graph of over lie on the same horizontal line, then there is an input for which the tangent line to the graph of at is horizontal.  In terms of rate of change, we interpret Rolle's theorem as follows: if the average rate of change of between and is equal to zero, then there is an input where the instantaneous rate of change is equal to zero.   Rolle's theorem turns out to be a special case of the mean value theorem , where the function in question satisfies . As a peculiar twist, however, the mean value theorem can also be seen as just a tilted version of Rolle's theorem. In logical terms, the two theorems, though quite different in content, are logically equivalent!   Mean value theorem (MVT)   Assume is continuous on and differentiable on . There is an input satisfying .    We employ a little trick that reveals MVT to be a simple consequence of Rolle's theorem. Define . As is easily verified, is continuous on , differentiable on and satisfies . Applying Rolle's theorem to on , we conlude that for some . We conclude, using we conclude that , or equivalently , as desired.     Speeding motorist   While traveling in Ontario, Dudley pilots his motor car along Queen Elizabeth Way (aka the QEW). The posted speed limit along this stretch of motorway is 120 km per hr. At 12 pm Dudley passes St. Catherines, and by 12:25 pm he reaches Hamilton, which is 60 km down the road. Prove: at some point during this excursion Dudley has exceeded the speed limit!         Constant function characterization   Assume is differentiable on an interval . If satisfies for all , then is a constant function on . As a consequence, a function is constant on an interval if and only if its derivative values are identically equal to zero.     Functions with identical derivatives   Assume and are differentiable on an interval . If for all , then there is a constant satisfying for all . In plain English, if two functions have identical derivative functions over an interval , then they differ by a constant.     Number of roots   Show that the function has exactly one root in the interval .         Interesting inequality   Prove that for all .    Consider . We wish to show that for all . Observe that and .        For the curious, we end with a useful corollary of the mean value theorem that yields a numerically more precise description of how good of an approximation the linearization of a function centered at is for near . This result (and its proof) will not be assessed on any quiz or exam in this course.   Taylor's theorem ( )   Assume is twice differentiable on an interval containing as in interior point. Let be the linearization of centered at . For all we have . As a result, if for some constant and all , then we have for all .    "
+},
+{
+  "id": "s_mean_value-2",
+  "level": "2",
+  "url": "s_mean_value.html#s_mean_value-2",
+  "type": "Objectives",
+  "number": "21",
+  "title": "",
+  "body": "   Derive Rolle's theorem and the mean value theorem (MVT) as consequences of .    Interpret Rolle's theorem and the MVT both geometrically (in terms of tangent lines) and physically (in terms of instantaneous rates of change).    Derive consequences of the MVT to various mathematical applications: , characterization of functions satisfying for all , existence of roots of functions within specific intervals, inequalities.    "
+},
+{
+  "id": "th_rolles",
+  "level": "2",
+  "url": "s_mean_value.html#th_rolles",
+  "type": "Theorem",
+  "number": "21.1",
+  "title": "Rolle’s theorem.",
+  "body": " Rolle's theorem   Assume is continuous on and differentiable on . If , then there is an input satisfying .    Let be the common value of at the endpoints. If for all inputs ( , is a constant function), then for all inputs , and our desired conclusion is trivially satisfied.  Assume now that is not constant. Since is continuous on there are points and in where attains its absolute maximum and minimum values. Since is not constant on , we must have or . Assume without loss of generality that is an absolute extreme value of on . The input must be an interior point of , since and . Since is differentiable everywhere on , implies , as desired.   "
+},
+{
+  "id": "s_mean_value-4",
+  "level": "2",
+  "url": "s_mean_value.html#s_mean_value-4",
+  "type": "Remark",
+  "number": "21.2",
+  "title": "Interpretations of Rolle’s theorem.",
+  "body": " Interpretations of Rolle's theorem  Let satisfy the assumptions of Rolle's theorem on the interval .  Geometrically, we interpret Rolle's theorem as follows: if the endpoints of the graph of over lie on the same horizontal line, then there is an input for which the tangent line to the graph of at is horizontal.  In terms of rate of change, we interpret Rolle's theorem as follows: if the average rate of change of between and is equal to zero, then there is an input where the instantaneous rate of change is equal to zero.  "
+},
+{
+  "id": "th_mean_value",
+  "level": "2",
+  "url": "s_mean_value.html#th_mean_value",
+  "type": "Theorem",
+  "number": "21.3",
+  "title": "Mean value theorem (MVT).",
+  "body": " Mean value theorem (MVT)   Assume is continuous on and differentiable on . There is an input satisfying .    We employ a little trick that reveals MVT to be a simple consequence of Rolle's theorem. Define . As is easily verified, is continuous on , differentiable on and satisfies . Applying Rolle's theorem to on , we conlude that for some . We conclude, using we conclude that , or equivalently , as desired.   "
+},
+{
+  "id": "eg_mvt_speeding",
+  "level": "2",
+  "url": "s_mean_value.html#eg_mvt_speeding",
+  "type": "Example",
+  "number": "21.4",
+  "title": "Speeding motorist.",
+  "body": " Speeding motorist   While traveling in Ontario, Dudley pilots his motor car along Queen Elizabeth Way (aka the QEW). The posted speed limit along this stretch of motorway is 120 km per hr. At 12 pm Dudley passes St. Catherines, and by 12:25 pm he reaches Hamilton, which is 60 km down the road. Prove: at some point during this excursion Dudley has exceeded the speed limit!       "
+},
+{
+  "id": "cor_constant_functions",
+  "level": "2",
+  "url": "s_mean_value.html#cor_constant_functions",
+  "type": "Corollary",
+  "number": "21.5",
+  "title": "Constant function characterization.",
+  "body": " Constant function characterization   Assume is differentiable on an interval . If satisfies for all , then is a constant function on . As a consequence, a function is constant on an interval if and only if its derivative values are identically equal to zero.   "
+},
+{
+  "id": "cor_same_derivative",
+  "level": "2",
+  "url": "s_mean_value.html#cor_same_derivative",
+  "type": "Corollary",
+  "number": "21.6",
+  "title": "Functions with identical derivatives.",
+  "body": " Functions with identical derivatives   Assume and are differentiable on an interval . If for all , then there is a constant satisfying for all . In plain English, if two functions have identical derivative functions over an interval , then they differ by a constant.   "
+},
+{
+  "id": "eg_mean_roots",
+  "level": "2",
+  "url": "s_mean_value.html#eg_mean_roots",
+  "type": "Example",
+  "number": "21.7",
+  "title": "Number of roots.",
+  "body": " Number of roots   Show that the function has exactly one root in the interval .       "
+},
+{
+  "id": "eg_mean_inequality",
+  "level": "2",
+  "url": "s_mean_value.html#eg_mean_inequality",
+  "type": "Example",
+  "number": "21.8",
+  "title": "Interesting inequality.",
+  "body": " Interesting inequality   Prove that for all .    Consider . We wish to show that for all . Observe that and .       "
+},
+{
+  "id": "cor_mean_taylor",
+  "level": "2",
+  "url": "s_mean_value.html#cor_mean_taylor",
+  "type": "Corollary",
+  "number": "21.9",
+  "title": "Taylor’s theorem (<span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(k=1\\)<\/span>).",
+  "body": " Taylor's theorem ( )   Assume is twice differentiable on an interval containing as in interior point. Let be the linearization of centered at . For all we have . As a result, if for some constant and all , then we have for all .   "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
