@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Examples</title>
+<title>Monotonictiy and first derivative test</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
@@ -403,7 +403,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="appendix-thms.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book-26.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-interactives.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_mean_value.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="my-great-book-26.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -569,249 +569,144 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">19</span> <span class="title">Linearization</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_extreme.html" class="internal"><span class="codenumber">20</span> <span class="title">Extreme value theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">21</span> <span class="title">Mean value theorem</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_first_der_test.html" class="internal"><span class="codenumber">22</span> <span class="title">Monotonictiy and first derivative test</span></a></div></li>
-<li class="toc-item toc-backmatter contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_first_der_test.html" class="internal"><span class="codenumber">22</span> <span class="title">Monotonictiy and first derivative test</span></a></div></li>
+<li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="my-great-book-26.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></div></li>
-<li class="toc-item toc-appendix active"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-interactives.html" class="internal"><span class="codenumber">E</span> <span class="title">Interactives and computational cells</span></a></div></li>
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="appendix" id="appendix-egs"><h2 class="heading">
-<span class="type">Appendix</span><span class="space"> </span><span class="codenumber">D</span><span class="space"> </span><span class="title">Examples</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_first_der_test"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">22</span><span class="space"> </span><span class="title">Monotonictiy and first derivative test</span>
 </h2>
-<h3 class="heading hide-type" title="Section 1: Introduction to the course">
-<span class="codenumber">1</span><span class="space"> </span><span class="title">Introduction to the course</span>
+<article class="definition definition-like" id="d_monotonic"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">22.1</span><span class="period">.</span><span class="space"> </span><span class="title">Increasing, decreasing, monotonic.</span>
 </h3>
-<div>
-<a href="s_intro.html#eg_implied_domain" class="xref" data-knowl="./knowl/list-of/eg_implied_domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.4: Implied domain">Example 1.4</a> Implied domain</div>
-<div>
-<a href="s_intro.html#ss_calc_science_-9" class="xref" data-knowl="./knowl/list-of/ss_calc_science_-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.6: Range versus codomain">Example 1.6</a> Range versus codomain</div>
-<h3 class="heading hide-type" title="Section 2: Limits: informal definition">
-<span class="codenumber">2</span><span class="space"> </span><span class="title">Limits: informal definition</span>
-</h3>
-<div>
-<a href="s_limits_naive.html#eg_function_behavior" class="xref" data-knowl="./knowl/list-of/eg_function_behavior.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2: Function behavior">Example 2.2</a> Function behavior</div>
-<div>
-<a href="s_limits_naive.html#subsec-naive-definition-of-limit-8" class="xref" data-knowl="./knowl/list-of/subsec-naive-definition-of-limit-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.7: Limit description of graph">Example 2.7</a> Limit description of graph</div>
-<div>
-<a href="s_limits_naive.html#subsec-naive-definition-of-limit-9" class="xref" data-knowl="./knowl/list-of/subsec-naive-definition-of-limit-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.8: Limit as compared to value">Example 2.8</a> Limit as compared to value</div>
-<div>
-<a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/list-of/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a> Using limit rules</div>
-<div>
-<a href="s_limits_naive.html#eg_poly_eval" class="xref" data-knowl="./knowl/list-of/eg_poly_eval.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.18: Polynomial evaluation">Example 2.18</a> Polynomial evaluation</div>
-<div>
-<a href="s_limits_naive.html#eg_lim_quot_fail" class="xref" data-knowl="./knowl/list-of/eg_lim_quot_fail.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.19: Quotient rule does not apply">Example 2.19</a> Quotient rule does not apply</div>
-<h3 class="heading hide-type" title="Section 3: Limits: algebraic technique and sandwich theorem">
-<span class="codenumber">3</span><span class="space"> </span><span class="title">Limits: algebraic technique and sandwich theorem</span>
-</h3>
-<div>
-<a href="s_limit_sandwich.html#eg_lim_factor" class="xref" data-knowl="./knowl/list-of/eg_lim_factor.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.1: Algebraic limit technique: factoring">Example 3.1</a> Algebraic limit technique: factoring</div>
-<div>
-<a href="s_limit_sandwich.html#eg_limit_clear_denom" class="xref" data-knowl="./knowl/list-of/eg_limit_clear_denom.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.2: Algebraic limit technique: clear denominator">Example 3.2</a> Algebraic limit technique: clear denominator</div>
-<div>
-<a href="s_limit_sandwich.html#eg_lim_radical" class="xref" data-knowl="./knowl/list-of/eg_lim_radical.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.3: Algebraic limit technique: radicals">Example 3.3</a> Algebraic limit technique: radicals</div>
-<div>
-<a href="s_limit_sandwich.html#eg_sandwich_easy" class="xref" data-knowl="./knowl/list-of/eg_sandwich_easy.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.7: Sandwich theorem: easy">Example 3.7</a> Sandwich theorem: easy</div>
-<div>
-<a href="s_limit_sandwich.html#ss_sandwich-8" class="xref" data-knowl="./knowl/list-of/ss_sandwich-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.8: Sandwich theorem: less easy">Example 3.8</a> Sandwich theorem: less easy</div>
-<h3 class="heading hide-type" title="Section 4: Limits: formal definition">
-<span class="codenumber">4</span><span class="space"> </span><span class="title">Limits: formal definition</span>
-</h3>
-<div>
-<a href="s_lim_formal.html#eg_ep_delt_affine" class="xref" data-knowl="./knowl/list-of/eg_ep_delt_affine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.5: Epsilon-delta: affine function">Example 4.5</a> Epsilon-delta: affine function</div>
-<div>
-<a href="s_lim_formal.html#s_lim_formal-12" class="xref" data-knowl="./knowl/list-of/s_lim_formal-12.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.9: Epsilon-delta: radical function">Example 4.9</a> Epsilon-delta: radical function</div>
-<div>
-<a href="s_lim_formal.html#eg_ep_delt_quad" class="xref" data-knowl="./knowl/list-of/eg_ep_delt_quad.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.10: Finding \delta for specific \epsilon quadratic function">Example 4.10</a> Finding <span class="process-math">\(\delta\)</span> for specific <span class="process-math">\(\epsilon\text{:}\)</span> quadratic function</div>
-<h3 class="heading hide-type" title="Section 5: One-sided limits">
-<span class="codenumber">5</span><span class="space"> </span><span class="title">One-sided limits</span>
-</h3>
-<div>
-<a href="s_one_sided.html#eg_one_sided_graph" class="xref" data-knowl="./knowl/list-of/eg_one_sided_graph.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.2: Visualizing one-sided limits">Example 5.2</a> Visualizing one-sided limits</div>
-<div>
-<a href="s_one_sided.html#ss_one_sided_test-5" class="xref" data-knowl="./knowl/list-of/ss_one_sided_test-5.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.7: The sign function">Example 5.7</a> The sign function</div>
-<div>
-<a href="s_one_sided.html#eg_classic_trig" class="xref" data-knowl="./knowl/list-of/eg_classic_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.9: Classic trig limits">Example 5.9</a> Classic trig limits</div>
-<h3 class="heading hide-type" title="Section 6: Continuity: definition">
-<span class="codenumber">6</span><span class="space"> </span><span class="title">Continuity: definition</span>
-</h3>
-<div>
-<a href="s_continuous_def.html#eg_cont_endpoint" class="xref" data-knowl="./knowl/list-of/eg_cont_endpoint.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.5: Continuity at endpoint">Example 6.5</a> Continuity at endpoint</div>
-<div>
-<a href="s_continuous_def.html#eg_cont_graph" class="xref" data-knowl="./knowl/list-of/eg_cont_graph.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.7: Continuity: graphical">Example 6.7</a> Continuity: graphical</div>
-<div>
-<a href="s_continuous_def.html#eg_cont_on_domain" class="xref" data-knowl="./knowl/list-of/eg_cont_on_domain.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.9: Continuous everywhere">Example 6.9</a> Continuous everywhere</div>
-<div>
-<a href="s_continuous_def.html#eg_cont_rules" class="xref" data-knowl="./knowl/list-of/eg_cont_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.13: Continuity rules">Example 6.13</a> Continuity rules</div>
-<h3 class="heading hide-type" title="Section 7: Continuity: intermediate value theorem">
-<span class="codenumber">7</span><span class="space"> </span><span class="title">Continuity: intermediate value theorem</span>
-</h3>
-<div>
-<a href="s_cont_ivt.html#eg_cont_piecewise" class="xref" data-knowl="./knowl/list-of/eg_cont_piecewise.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.1: Continuity: piecewise">Example 7.1</a> Continuity: piecewise</div>
-<div>
-<a href="s_cont_ivt.html#eg_ivt_sine" class="xref" data-knowl="./knowl/list-of/eg_ivt_sine.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.5: Sine equation">Example 7.5</a> Sine equation</div>
-<div>
-<a href="s_cont_ivt.html#eg_ivt_poly" class="xref" data-knowl="./knowl/list-of/eg_ivt_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.6: Roots of polynomials">Example 7.6</a> Roots of polynomials</div>
-<div>
-<a href="s_cont_ivt.html#eg_ivt_trig" class="xref" data-knowl="./knowl/list-of/eg_ivt_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.7: Complicated equation">Example 7.7</a> Complicated equation</div>
-<div>
-<a href="s_cont_ivt.html#ss_ivt-9" class="xref" data-knowl="./knowl/list-of/ss_ivt-9.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 7.8: Range of sine">Example 7.8</a> Range of sine</div>
-<h3 class="heading hide-type" title="Section 8: Limits at infinity">
-<span class="codenumber">8</span><span class="space"> </span><span class="title">Limits at infinity</span>
-</h3>
-<div>
-<a href="s_lim_at_infty.html#eg_lim_at_infty_cos" class="xref" data-knowl="./knowl/list-of/eg_lim_at_infty_cos.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.6: Limit at infinity: \cos">Example 8.6</a> Limit at infinity: <span class="process-math">\(\cos\)</span>
+<div class="para logical" id="d_monotonic-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is defined on the interval <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div>
-<a href="s_lim_at_infty.html#eg_lim_infty_rational_function" class="xref" data-knowl="./knowl/list-of/eg_lim_infty_rational_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.11: Limit at infinity: rational function">Example 8.11</a> Limit at infinity: rational function</div>
-<div>
-<a href="s_lim_at_infty.html#eg_lim_infty_radical" class="xref" data-knowl="./knowl/list-of/eg_lim_infty_radical.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.12: Limit at infinity: radical function">Example 8.12</a> Limit at infinity: radical function</div>
-<h3 class="heading hide-type" title="Section 9: Infinite limits">
-<span class="codenumber">9</span><span class="space"> </span><span class="title">Infinite limits</span>
+<ul class="disc" id="d_monotonic-2-1-3">
+<li id="d_monotonic-2-1-3-1"><div class="para" id="d_monotonic-2-1-3-1-1">
+<span class="process-math">\(f\)</span> is <dfn class="terminology">increasing</dfn> on <span class="process-math">\(I\)</span> if <span class="process-math">\(a&lt; b\)</span> implies <span class="process-math">\(f(a)&lt; f(b)\)</span> for all <span class="process-math">\(a,b\in I\text{.}\)</span>
+</div></li>
+<li id="d_monotonic-2-1-3-2"><div class="para" id="d_monotonic-2-1-3-2-1">
+<span class="process-math">\(f\)</span> is <dfn class="terminology">decreasing</dfn> on <span class="process-math">\(I\)</span> if <span class="process-math">\(a&lt; b\)</span> implies <span class="process-math">\(f(a)&gt; f(b)\)</span> for all <span class="process-math">\(a,b\in I\text{.}\)</span>
+</div></li>
+<li id="d_monotonic-2-1-3-3"><div class="para" id="d_monotonic-2-1-3-3-1">
+<span class="process-math">\(f\)</span> is <dfn class="terminology">monotonic</dfn> on <span class="process-math">\(I\)</span> if it is either increasing on <span class="process-math">\(I\)</span> or decreasing on <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><article class="theorem theorem-like" id="th_monoton"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">22.2</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative and monotonicity.</span>
 </h3>
-<div>
-<a href="s_infinite_limits.html#eg_infty_lim_tan" class="xref" data-knowl="./knowl/list-of/eg_infty_lim_tan.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.5: Vertical asymptotes: \tan">Example 9.5</a> Vertical asymptotes: <span class="process-math">\(\tan\)</span>
+<div class="para logical" id="th_monoton-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(I\text{.}\)</span>
 </div>
-<div>
-<a href="s_infinite_limits.html#eg_infty_lim_elem" class="xref" data-knowl="./knowl/list-of/eg_infty_lim_elem.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.9: Infinite limit: elementary examples">Example 9.9</a> Infinite limit: elementary examples</div>
-<div>
-<a href="s_infinite_limits.html#eg_infty_lim_poly" class="xref" data-knowl="./knowl/list-of/eg_infty_lim_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.10: Infinite limit: polynomial">Example 9.10</a> Infinite limit: polynomial</div>
-<div>
-<a href="s_infinite_limits.html#eg_vert_hor_asym" class="xref" data-knowl="./knowl/list-of/eg_vert_hor_asym.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 9.12: Asymptotes: rational function">Example 9.12</a> Asymptotes: rational function</div>
-<h3 class="heading hide-type" title="Section 10: Derivative: at a point">
-<span class="codenumber">10</span><span class="space"> </span><span class="title">Derivative: at a point</span>
+<ol class="decimal" id="th_monoton-2-1-3">
+<li id="th_monoton-2-1-3-1"><div class="para" id="th_monoton-2-1-3-1-1">If <span class="process-math">\(f'(a)=0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+<li id="th_monoton-2-1-3-2"><div class="para" id="th_monoton-2-1-3-2-1">If <span class="process-math">\(f'(a)&gt; 0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+<li id="th_monoton-2-1-3-3"><div class="para" id="th_monoton-2-1-3-3-1">If <span class="process-math">\(f'(a)&lt; 0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is decreasing on <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="example example-like" id="eg_monoton_poly"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.3</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: polynomial.</span>
 </h3>
-<div>
-<a href="s_der_at_point.html#eg_der_at_point" class="xref" data-knowl="./knowl/list-of/eg_der_at_point.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.4: Derivative at point: elementary">Example 10.4</a> Derivative at point: elementary</div>
-<div>
-<a href="s_der_at_point.html#eg_der_at_point_tangent" class="xref" data-knowl="./knowl/list-of/eg_der_at_point_tangent.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 10.7: Tangent line at point">Example 10.7</a> Tangent line at point</div>
-<h3 class="heading hide-type" title="Section 11: Derivative: function">
-<span class="codenumber">11</span><span class="space"> </span><span class="title">Derivative: function</span>
+<div class="para" id="eg_monoton_poly-2-1">Let <span class="process-math">\(f(x)=3x^5-5x^3\text{.}\)</span> Find all intervals where <span class="process-math">\(f\)</span> is increasing, and all intervals where <span class="process-math">\(f\)</span> is decreasing.</div>
+<div class="solutions"><details id="eg_monoton_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_monoton_poly-3-1"></div></div></details></div></article><article class="example example-like" id="eg_monoton_recip"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.4</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: reciprocal.</span>
 </h3>
-<div>
-<a href="s_der_function.html#eg_der_func_rad" class="xref" data-knowl="./knowl/list-of/eg_der_func_rad.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 11.2: Derivative function: radical">Example 11.2</a> Derivative function: radical</div>
-<div>
-<a href="s_der_function.html#eg_der_funct_abs" class="xref" data-knowl="./knowl/list-of/eg_der_funct_abs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 11.5: Derivative function: absolute value">Example 11.5</a> Derivative function: absolute value</div>
-<div>
-<a href="s_der_function.html#eg_der_func_reciprocal" class="xref" data-knowl="./knowl/list-of/eg_der_func_reciprocal.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 11.7: Derivative function: \frac{1}{x}">Example 11.7</a> Derivative function: <span class="process-math">\(\frac{1}{x}\)</span>
+<div class="para" id="eg_monoton_recip-2-1">Let <span class="process-math">\(f(x)=\frac{1}{x}\)</span> with domain <span class="process-math">\(D=\R-\{0\}\text{.}\)</span> Find all intervals where <span class="process-math">\(f\)</span> is increasing, and all intervals where <span class="process-math">\(f\)</span> is decreasing.</div>
+<div class="solutions"><details id="eg_monoton_recip-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_monoton_recip-3-1"></div></div></details></div></article><article class="algorithm theorem-like" id="proc_intervals_monoto"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">22.5</span><span class="period">.</span><span class="space"> </span><span class="title">Intervals of monotonicity.</span>
+</h3>
+<div class="para logical" id="proc_intervals_monoto-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\(D\text{.}\)</span> To determine the intervals where <span class="process-math">\(f\)</span> is increasing or decreasing, proceed as follows.</div>
+<ol class="decimal" id="proc_intervals_monoto-2-1-4">
+<li id="proc_intervals_monoto-2-1-4-1"><div class="para" id="proc_intervals_monoto-2-1-4-1-1">Find all critical points of <span class="process-math">\(f\)</span> in <span class="process-math">\(D\)</span>
+</div></li>
+<li id="proc_intervals_monoto-2-1-4-2"><div class="para" id="proc_intervals_monoto-2-1-4-2-1">Draw a real line representation of <span class="process-math">\(D\)</span> that includes the critical points you found in Step 1.</div></li>
+<li id="proc_intervals_monoto-2-1-4-3"><div class="para logical" id="proc_intervals_monoto-2-1-4-3-1">
+<div class="para">Make a <dfn class="terminology">sign diagram</dfn> of your real line representation of <span class="process-math">\(D\text{.}\)</span>
 </div>
-<h3 class="heading hide-type" title="Section 12: Derivative: rules">
-<span class="codenumber">12</span><span class="space"> </span><span class="title">Derivative: rules</span>
+<ol class="lower-alpha" id="proc_intervals_monoto-2-1-4-3-1-3">
+<li id="proc_intervals_monoto-2-1-4-3-1-3-1"><div class="para" id="proc_intervals_monoto-2-1-4-3-1-3-1-1">Label the top part of this diagram <span class="process-math">\(f'\)</span> and indicate with <span class="process-math">\(\pm\)</span> the sign of <span class="process-math">\(f'\)</span> on a given interval.</div></li>
+<li id="proc_intervals_monoto-2-1-4-3-1-3-2"><div class="para" id="proc_intervals_monoto-2-1-4-3-1-3-2-1">(Optional). Label the bottom part of the diagam <span class="process-math">\(f\)</span> and indicate with arrows whether <span class="process-math">\(f\)</span> is increasing or decreasing on a given interval.</div></li>
+</ol>
+</div></li>
+</ol>
+</div></article><article class="theorem theorem-like" id="th_first_der_test"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">22.6</span><span class="period">.</span><span class="space"> </span><span class="title">First derivative test.</span>
 </h3>
-<div>
-<a href="s_der_rules.html#eg_der_power" class="xref" data-knowl="./knowl/list-of/eg_der_power.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.3: Power function formula: radicals">Example 12.3</a> Power function formula: radicals</div>
-<div>
-<a href="s_der_rules.html#eg_der_rules" class="xref" data-knowl="./knowl/list-of/eg_der_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.7: Derivative rules">Example 12.7</a> Derivative rules</div>
-<div>
-<a href="s_der_rules.html#eg_higher_ders" class="xref" data-knowl="./knowl/list-of/eg_higher_ders.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.10: Higher-order derivatives">Example 12.10</a> Higher-order derivatives</div>
-<h3 class="heading hide-type" title="Section 13: Derivative as rate of change">
-<span class="codenumber">13</span><span class="space"> </span><span class="title">Derivative as rate of change</span>
+<div class="para logical" id="th_first_der_test-2-1">
+<div class="para">Assume that <span class="process-math">\(c\)</span> is a critical point of the function <span class="process-math">\(f\text{,}\)</span> and that <span class="process-math">\(f\)</span> is differentiable near, but not necessarily at <span class="process-math">\(c\text{.}\)</span>
+</div>
+<ol class="decimal" id="th_first_der_test-2-1-5">
+<li id="th_first_der_test-2-1-5-1"><div class="para" id="th_first_der_test-2-1-5-1-1">If the sign of <span class="process-math">\(f'\)</span> changes from positive to negative at <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is a local maximum value of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="th_first_der_test-2-1-5-2"><div class="para" id="th_first_der_test-2-1-5-2-1">If the sign of <span class="process-math">\(f'\)</span> changes from negative to positive at <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is a local minimum value of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="th_first_der_test-2-1-5-3"><div class="para" id="th_first_der_test-2-1-5-3-1">If <span class="process-math">\(f'\)</span> is nonzero near <span class="process-math">\(c\)</span> and the sign does not change at <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(f(c)\)</span> is neither a local maximum value nor a local minimum value of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="algorithm theorem-like" id="proc_class_crit_pts"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">22.7</span><span class="period">.</span><span class="space"> </span><span class="title">Classify critical points: first derivative test.</span>
 </h3>
-<div>
-<a href="s_der_rate_change.html#eg_height_age" class="xref" data-knowl="./knowl/list-of/eg_height_age.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 13.2: Height versus age">Example 13.2</a> Height versus age</div>
-<div>
-<a href="s_der_rate_change.html#eg_dynamics_drone" class="xref" data-knowl="./knowl/list-of/eg_dynamics_drone.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 13.4: Drone">Example 13.4</a> Drone</div>
-<div>
-<a href="s_der_rate_change.html#eg_marginal" class="xref" data-knowl="./knowl/list-of/eg_marginal.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 13.6: Marginals">Example 13.6</a> Marginals</div>
-<h3 class="heading hide-type" title="Section 14: Derivative: trig functions">
-<span class="codenumber">14</span><span class="space"> </span><span class="title">Derivative: trig functions</span>
+<div class="para logical" id="proc_class_crit_pts-2-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be continuous on the set <span class="process-math">\(D\text{.}\)</span> To find and classify all critical points of <span class="process-math">\(f\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither, proceed as follows.</div>
+<ol class="decimal" id="proc_class_crit_pts-2-1-6">
+<li id="proc_class_crit_pts-2-1-6-1"><div class="para" id="proc_class_crit_pts-2-1-6-1-1">Find all critical points of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="proc_class_crit_pts-2-1-6-2"><div class="para" id="proc_class_crit_pts-2-1-6-2-1">Make a sign diagram of <span class="process-math">\(f'\text{.}\)</span>
+</div></li>
+<li id="proc_class_crit_pts-2-1-6-3"><div class="para" id="proc_class_crit_pts-2-1-6-3-1">For each critical point <span class="process-math">\(a\)</span> of <span class="process-math">\(f\text{,}\)</span> use <a href="s_first_der_test.html#th_first_der_test" class="xref" data-knowl="./knowl/xref/th_first_der_test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.6: First derivative test">Theorem 22.6</a> and your sign diagram to determine whether <span class="process-math">\(f(a)\)</span> is a local maximum value of <span class="process-math">\(f\text{,}\)</span> local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
+</ol>
+</div></article><article class="example example-like" id="eg_first_der_test_poly"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.8</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: polynomial.</span>
 </h3>
-<div>
-<a href="s_der_trig.html#eg_tangent_trig" class="xref" data-knowl="./knowl/list-of/eg_tangent_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 14.2: Tangent lines: sinusoidal">Example 14.2</a> Tangent lines: sinusoidal</div>
-<h3 class="heading hide-type" title="Section 15: Chain rule">
-<span class="codenumber">15</span><span class="space"> </span><span class="title">Chain rule</span>
+<div class="para logical" id="eg_first_der_test_poly-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=3x^5-5x^3\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_first_der_test_poly-2-1-2">
+<li id="eg_first_der_test_poly-2-1-2-1"><div class="para" id="eg_first_der_test_poly-2-1-2-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="eg_first_der_test_poly-2-1-2-2"><div class="para" id="eg_first_der_test_poly-2-1-2-2-1">Classify each critical point of <span class="process-math">\(f\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_first_der_test_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_poly-3-1"></div></div></details></div></article><article class="example example-like" id="eg_first_der_test_trig"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.9</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: trig.</span>
 </h3>
-<div>
-<a href="s_chain.html#eg_chain_rules" class="xref" data-knowl="./knowl/list-of/eg_chain_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 15.3: Chain rule">Example 15.3</a> Chain rule</div>
-<div>
-<a href="s_chain.html#eg_chain_spher_balloon" class="xref" data-knowl="./knowl/list-of/eg_chain_spher_balloon.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 15.4: Inflating a balloon">Example 15.4</a> Inflating a balloon</div>
-<h3 class="heading hide-type" title="Section 16: Implicit differentiation">
-<span class="codenumber">16</span><span class="space"> </span><span class="title">Implicit differentiation</span>
+<div class="para logical" id="eg_first_der_test_trig-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=2\cos x+\sqrt{2}\cos^2 x\)</span> and let <span class="process-math">\(I=[\pi/2, 3\pi/2]\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_first_der_test_trig-2-1-3">
+<li id="eg_first_der_test_trig-2-1-3-1"><div class="para" id="eg_first_der_test_trig-2-1-3-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\)</span> within <span class="process-math">\(I\text{.}\)</span>
+</div></li>
+<li id="eg_first_der_test_trig-2-1-3-2"><div class="para" id="eg_first_der_test_trig-2-1-3-2-1">Classify each critical point of <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_first_der_test_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_trig-3-1"></div></div></details></div></article><article class="example example-like" id="eg_first_der_test_rad"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.10</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: radical.</span>
 </h3>
-<div>
-<a href="s_implicit.html#eg_implicit_circle" class="xref" data-knowl="./knowl/list-of/eg_implicit_circle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 16.3: Implicit differentiation: circle">Example 16.3</a> Implicit differentiation: circle</div>
-<div>
-<a href="s_implicit.html#eg_implicit_Ts" class="xref" data-knowl="./knowl/list-of/eg_implicit_Ts.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 16.5: Tschirnhausen cubic">Example 16.5</a> Tschirnhausen cubic</div>
-<div>
-<a href="s_implicit.html#eg_implicit_ellipse" class="xref" data-knowl="./knowl/list-of/eg_implicit_ellipse.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 16.6: Ellipse tangents">Example 16.6</a> Ellipse tangents</div>
-<div>
-<a href="s_implicit.html#eg_implicit_trig" class="xref" data-knowl="./knowl/list-of/eg_implicit_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 16.7: Implicit: trig equation">Example 16.7</a> Implicit: trig equation</div>
-<h3 class="heading hide-type" title="Section 17: Related rates I">
-<span class="codenumber">17</span><span class="space"> </span><span class="title">Related rates I</span>
-</h3>
-<div>
-<a href="s_related_rates_I.html#eg_balloon" class="xref" data-knowl="./knowl/list-of/eg_balloon.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 17.1: Inflating a balloon (redux)">Example 17.1</a> Inflating a balloon (redux)</div>
-<div>
-<a href="s_related_rates_I.html#eg_sliding_ladder" class="xref" data-knowl="./knowl/list-of/eg_sliding_ladder.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 17.2: Sliding ladder">Example 17.2</a> Sliding ladder</div>
-<div>
-<a href="s_related_rates_I.html#eg_ladder_angle" class="xref" data-knowl="./knowl/list-of/eg_ladder_angle.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 17.5: Sliding ladder: angle of inclination">Example 17.5</a> Sliding ladder: angle of inclination</div>
-<div>
-<a href="s_related_rates_I.html#eg_stretched_rubber" class="xref" data-knowl="./knowl/list-of/eg_stretched_rubber.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 17.8: Stretched rubber sheet">Example 17.8</a> Stretched rubber sheet</div>
-<h3 class="heading hide-type" title="Section 18: Related rates II">
-<span class="codenumber">18</span><span class="space"> </span><span class="title">Related rates II</span>
-</h3>
-<div>
-<a href="s_related_rates_II.html#eg_two_trains" class="xref" data-knowl="./knowl/list-of/eg_two_trains.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 18.1: Two trains">Example 18.1</a> Two trains</div>
-<div>
-<a href="s_related_rates_II.html#eg_related_rates_similar" class="xref" data-knowl="./knowl/list-of/eg_related_rates_similar.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 18.3: Using similar triangles">Example 18.3</a> Using similar triangles</div>
-<h3 class="heading hide-type" title="Section 19: Linearization">
-<span class="codenumber">19</span><span class="space"> </span><span class="title">Linearization</span>
-</h3>
-<div>
-<a href="s_linearize.html#eg_linearization_quadratic" class="xref" data-knowl="./knowl/list-of/eg_linearization_quadratic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.3: Linearization: quadratic">Example 19.3</a> Linearization: quadratic</div>
-<div>
-<a href="s_linearize.html#eg_linear_approx_quadratic" class="xref" data-knowl="./knowl/list-of/eg_linear_approx_quadratic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.8: Linear approximation: quadratic">Example 19.8</a> Linear approximation: quadratic</div>
-<div>
-<a href="s_linearize.html#eg_linear_approx_cuberoot" class="xref" data-knowl="./knowl/list-of/eg_linear_approx_cuberoot.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.9: Linear approximation: cube-root">Example 19.9</a> Linear approximation: cube-root</div>
-<div>
-<a href="s_linearize.html#eg_linear_approx_trig" class="xref" data-knowl="./knowl/list-of/eg_linear_approx_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.10: Linear approximation: trig">Example 19.10</a> Linear approximation: trig</div>
-<div>
-<a href="s_linearize.html#eg_linear_approx_marshmallow" class="xref" data-knowl="./knowl/list-of/eg_linear_approx_marshmallow.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.11: Linear approximation: marshmallow">Example 19.11</a> Linear approximation: marshmallow</div>
-<h3 class="heading hide-type" title="Section 20: Extreme value theorem">
-<span class="codenumber">20</span><span class="space"> </span><span class="title">Extreme value theorem</span>
-</h3>
-<div>
-<a href="s_extreme.html#eg_extreme_discontinuous" class="xref" data-knowl="./knowl/list-of/eg_extreme_discontinuous.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.2: Extreme values: discontinuous">Example 20.2</a> Extreme values: discontinuous</div>
-<div>
-<a href="s_extreme.html#eg_extreme_open" class="xref" data-knowl="./knowl/list-of/eg_extreme_open.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.4: Extreme values: open interval">Example 20.4</a> Extreme values: open interval</div>
-<div>
-<a href="s_extreme.html#eg_local_extrema" class="xref" data-knowl="./knowl/list-of/eg_local_extrema.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.9: Local and absolute extreme values">Example 20.9</a> Local and absolute extreme values</div>
-<div>
-<a href="s_extreme.html#eg_extreme_factored_poly" class="xref" data-knowl="./knowl/list-of/eg_extreme_factored_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.14: Extreme values: factored polynomial">Example 20.14</a> Extreme values: factored polynomial</div>
-<div>
-<a href="s_extreme.html#eg_extreme_trig" class="xref" data-knowl="./knowl/list-of/eg_extreme_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.15: Extreme values: trig">Example 20.15</a> Extreme values: trig</div>
-<div>
-<a href="s_extreme.html#eg_extreme_graphs" class="xref" data-knowl="./knowl/list-of/eg_extreme_graphs.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 20.16: Distance between graphs">Example 20.16</a> Distance between graphs</div>
-<h3 class="heading hide-type" title="Section 21: Mean value theorem">
-<span class="codenumber">21</span><span class="space"> </span><span class="title">Mean value theorem</span>
-</h3>
-<div>
-<a href="s_mean_value.html#eg_mvt_speeding" class="xref" data-knowl="./knowl/list-of/eg_mvt_speeding.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 21.4: Speeding motorist">Example 21.4</a> Speeding motorist</div>
-<div>
-<a href="s_mean_value.html#eg_mean_roots" class="xref" data-knowl="./knowl/list-of/eg_mean_roots.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 21.7: Number of roots">Example 21.7</a> Number of roots</div>
-<div>
-<a href="s_mean_value.html#eg_mean_inequality" class="xref" data-knowl="./knowl/list-of/eg_mean_inequality.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 21.8: Interesting inequality">Example 21.8</a> Interesting inequality</div>
-<h3 class="heading hide-type" title="Section 22: Monotonictiy and first derivative test">
-<span class="codenumber">22</span><span class="space"> </span><span class="title">Monotonictiy and first derivative test</span>
-</h3>
-<div>
-<a href="s_first_der_test.html#eg_monoton_poly" class="xref" data-knowl="./knowl/list-of/eg_monoton_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.3: Monotonicity: polynomial">Example 22.3</a> Monotonicity: polynomial</div>
-<div>
-<a href="s_first_der_test.html#eg_monoton_recip" class="xref" data-knowl="./knowl/list-of/eg_monoton_recip.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.4: Monotonicity: reciprocal">Example 22.4</a> Monotonicity: reciprocal</div>
-<div>
-<a href="s_first_der_test.html#eg_first_der_test_poly" class="xref" data-knowl="./knowl/list-of/eg_first_der_test_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.8: Monotonicity and critical points: polynomial">Example 22.8</a> Monotonicity and critical points: polynomial</div>
-<div>
-<a href="s_first_der_test.html#eg_first_der_test_trig" class="xref" data-knowl="./knowl/list-of/eg_first_der_test_trig.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.9: Monotonicity and critical points: trig">Example 22.9</a> Monotonicity and critical points: trig</div>
-<div>
-<a href="s_first_der_test.html#eg_first_der_test_rad" class="xref" data-knowl="./knowl/list-of/eg_first_der_test_rad.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.10: Monotonicity and critical points: radical">Example 22.10</a> Monotonicity and critical points: radical</div></section></div>
+<div class="para logical" id="eg_first_der_test_rad-2-1">
+<div class="para">Let <span class="process-math">\(f(x)=x\, \sqrt{7-x^2}\text{.}\)</span>
+</div>
+<ol class="decimal" id="eg_first_der_test_rad-2-1-2">
+<li id="eg_first_der_test_rad-2-1-2-1"><div class="para" id="eg_first_der_test_rad-2-1-2-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="eg_first_der_test_rad-2-1-2-2"><div class="para" id="eg_first_der_test_rad-2-1-2-2-1">Classify each critical point of <span class="process-math">\(f\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="eg_first_der_test_rad-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_rad-3-1"></div></div></details></div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="appendix-thms.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-interactives.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_mean_value.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-26.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

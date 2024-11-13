@@ -2017,6 +2017,105 @@ var ptx_lunr_docs = [
   "body": " Taylor's theorem ( )   Assume is twice differentiable on an interval containing as in interior point. Let be the linearization of centered at . For all we have . As a result, if for some constant and all , then we have for all .   "
 },
 {
+  "id": "s_first_der_test",
+  "level": "1",
+  "url": "s_first_der_test.html",
+  "type": "Section",
+  "number": "22",
+  "title": "Monotonictiy and first derivative test",
+  "body": " Monotonictiy and first derivative test   Increasing, decreasing, monotonic   Assume is defined on the interval .    is increasing on if implies for all .     is decreasing on if implies for all .     is monotonic on if it is either increasing on or decreasing on .        Derivative and monotonicity   Assume is continuous on the interval .   If for all interior points , then is a constant function on .    If for all interior points , then is increasing on .    If for all interior points , then is decreasing on .        Monotonicity: polynomial   Let . Find all intervals where is increasing, and all intervals where is decreasing.         Monotonicity: reciprocal   Let with domain . Find all intervals where is increasing, and all intervals where is decreasing.         Intervals of monotonicity   Assume is continuous on . To determine the intervals where is increasing or decreasing, proceed as follows.   Find all critical points of in     Draw a real line representation of that includes the critical points you found in Step 1.    Make a sign diagram of your real line representation of .   Label the top part of this diagram and indicate with the sign of on a given interval.    (Optional). Label the bottom part of the diagam and indicate with arrows whether is increasing or decreasing on a given interval.           First derivative test   Assume that is a critical point of the function , and that is differentiable near, but not necessarily at .   If the sign of changes from positive to negative at , then is a local maximum value of .    If the sign of changes from negative to positive at , then is a local minimum value of .    If is nonzero near and the sign does not change at , then is neither a local maximum value nor a local minimum value of .        Classify critical points: first derivative test   Let be continuous on the set . To find and classify all critical points of as corresponding to a local maximum value of , a local minimum value of , or neither, proceed as follows.   Find all critical points of .    Make a sign diagram of .    For each critical point of , use and your sign diagram to determine whether is a local maximum value of , local minimum value of , or neither.        Monotonicity and critical points: polynomial   Let .   Apply to find the intervals of monotonicity of .    Classify each critical point of as corresponding to a local maximum value of , a local minimum value of , or neither.            Monotonicity and critical points: trig   Let and let .   Apply to find the intervals of monotonicity of within .    Classify each critical point of in as corresponding to a local maximum value of , a local minimum value of , or neither.            Monotonicity and critical points: radical   Let .   Apply to find the intervals of monotonicity of .    Classify each critical point of as corresponding to a local maximum value of , a local minimum value of , or neither.           "
+},
+{
+  "id": "d_monotonic",
+  "level": "2",
+  "url": "s_first_der_test.html#d_monotonic",
+  "type": "Definition",
+  "number": "22.1",
+  "title": "Increasing, decreasing, monotonic.",
+  "body": " Increasing, decreasing, monotonic   Assume is defined on the interval .    is increasing on if implies for all .     is decreasing on if implies for all .     is monotonic on if it is either increasing on or decreasing on .      "
+},
+{
+  "id": "th_monoton",
+  "level": "2",
+  "url": "s_first_der_test.html#th_monoton",
+  "type": "Theorem",
+  "number": "22.2",
+  "title": "Derivative and monotonicity.",
+  "body": " Derivative and monotonicity   Assume is continuous on the interval .   If for all interior points , then is a constant function on .    If for all interior points , then is increasing on .    If for all interior points , then is decreasing on .      "
+},
+{
+  "id": "eg_monoton_poly",
+  "level": "2",
+  "url": "s_first_der_test.html#eg_monoton_poly",
+  "type": "Example",
+  "number": "22.3",
+  "title": "Monotonicity: polynomial.",
+  "body": " Monotonicity: polynomial   Let . Find all intervals where is increasing, and all intervals where is decreasing.       "
+},
+{
+  "id": "eg_monoton_recip",
+  "level": "2",
+  "url": "s_first_der_test.html#eg_monoton_recip",
+  "type": "Example",
+  "number": "22.4",
+  "title": "Monotonicity: reciprocal.",
+  "body": " Monotonicity: reciprocal   Let with domain . Find all intervals where is increasing, and all intervals where is decreasing.       "
+},
+{
+  "id": "proc_intervals_monoto",
+  "level": "2",
+  "url": "s_first_der_test.html#proc_intervals_monoto",
+  "type": "Procedure",
+  "number": "22.5",
+  "title": "Intervals of monotonicity.",
+  "body": " Intervals of monotonicity   Assume is continuous on . To determine the intervals where is increasing or decreasing, proceed as follows.   Find all critical points of in     Draw a real line representation of that includes the critical points you found in Step 1.    Make a sign diagram of your real line representation of .   Label the top part of this diagram and indicate with the sign of on a given interval.    (Optional). Label the bottom part of the diagam and indicate with arrows whether is increasing or decreasing on a given interval.         "
+},
+{
+  "id": "th_first_der_test",
+  "level": "2",
+  "url": "s_first_der_test.html#th_first_der_test",
+  "type": "Theorem",
+  "number": "22.6",
+  "title": "First derivative test.",
+  "body": " First derivative test   Assume that is a critical point of the function , and that is differentiable near, but not necessarily at .   If the sign of changes from positive to negative at , then is a local maximum value of .    If the sign of changes from negative to positive at , then is a local minimum value of .    If is nonzero near and the sign does not change at , then is neither a local maximum value nor a local minimum value of .      "
+},
+{
+  "id": "proc_class_crit_pts",
+  "level": "2",
+  "url": "s_first_der_test.html#proc_class_crit_pts",
+  "type": "Procedure",
+  "number": "22.7",
+  "title": "Classify critical points: first derivative test.",
+  "body": " Classify critical points: first derivative test   Let be continuous on the set . To find and classify all critical points of as corresponding to a local maximum value of , a local minimum value of , or neither, proceed as follows.   Find all critical points of .    Make a sign diagram of .    For each critical point of , use and your sign diagram to determine whether is a local maximum value of , local minimum value of , or neither.      "
+},
+{
+  "id": "eg_first_der_test_poly",
+  "level": "2",
+  "url": "s_first_der_test.html#eg_first_der_test_poly",
+  "type": "Example",
+  "number": "22.8",
+  "title": "Monotonicity and critical points: polynomial.",
+  "body": " Monotonicity and critical points: polynomial   Let .   Apply to find the intervals of monotonicity of .    Classify each critical point of as corresponding to a local maximum value of , a local minimum value of , or neither.          "
+},
+{
+  "id": "eg_first_der_test_trig",
+  "level": "2",
+  "url": "s_first_der_test.html#eg_first_der_test_trig",
+  "type": "Example",
+  "number": "22.9",
+  "title": "Monotonicity and critical points: trig.",
+  "body": " Monotonicity and critical points: trig   Let and let .   Apply to find the intervals of monotonicity of within .    Classify each critical point of in as corresponding to a local maximum value of , a local minimum value of , or neither.          "
+},
+{
+  "id": "eg_first_der_test_rad",
+  "level": "2",
+  "url": "s_first_der_test.html#eg_first_der_test_rad",
+  "type": "Example",
+  "number": "22.10",
+  "title": "Monotonicity and critical points: radical.",
+  "body": " Monotonicity and critical points: radical   Let .   Apply to find the intervals of monotonicity of .    Classify each critical point of as corresponding to a local maximum value of , a local minimum value of , or neither.          "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
