@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="s_first_der_test" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title>Monotonictiy and first derivative test</title>
+    <title>Monotonicity and first derivative test</title>
 <definition xml:id="d_monotonic">
     <title>Increasing, decreasing, monotonic</title>
     <statement>
