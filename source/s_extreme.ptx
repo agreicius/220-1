@@ -225,7 +225,7 @@
     <ol>
         <li>
             <p>
-               The function <m>f</m> has a local maximum value at the left endpoint <m>a=-4</m>: indeed, we have <m>2=f(-4)\geq f(x)</m> for all <m>x\in [-4,3)</m> (thus for all <m>x</m> sufficiently close to <m>-4</m>). The value <m>f(4)</m> at the right endpoint, somewhat surprisingly, is also a local max: for all <m>x\in (-3,4]</m> we have <m>-2=f(4)\geq f(x)</m>.
+               The function <m>f</m> has a local maximum value at the left endpoint <m>a=-4</m>: indeed, we have <m>2=f(-4)\geq f(x)</m> for all <m>x\in [-4,-3)</m> (thus for all <m>x</m> sufficiently close to <m>-4</m>). The value <m>f(4)</m> at the right endpoint, somewhat surprisingly, is also a local max: for all <m>x\in (3,4]</m> we have <m>-2=f(4)\geq f(x)</m>.
             </p>
             <p>
                 Additionally, we see that <m>-1=f(-1)</m> is a local minimum value of <m>f</m>, since <m>f(-1)\leq f(x)</m> for all <m>x\in (-2,0)</m>. Finally, <m>f(1)=3</m> is easily seen to be the absolute maximum value of <m>f</m> on <m>[-4,4]</m>. It follows from <xref ref="rm_abs_local"/> that <m>f(1)</m> is also a local minimum value of <m>f</m> on <m>I</m>
