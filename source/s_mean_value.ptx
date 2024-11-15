@@ -107,15 +107,30 @@
         <title>Constant function characterization</title>
         <statement>
             <p>
-                Assume <m>f</m> is differentiable on an interval <m>I</m>. If <m>f</m> satisfies <m>f'(x)=0</m> for all <m>x\in I</m>, then <m>f</m> is a constant function on <m>I</m>. As a consequence, a function is constant on an interval <m>I</m> if and only if its derivative values are identically equal to zero. 
+                Assume <m>f</m> is continuous on an interval <m>I</m>. If <m>f</m> satisfies <m>f'(x)=0</m> for all interior points <m>x\in I</m>, then <m>f</m> is a constant function on <m>I</m>. As a consequence, a function is constant on an interval <m>I</m> if and only if its derivative is the zero function on <m>I</m>. 
             </p>
         </statement>
+        <proof>
+            <p>
+                Take any two distinct points <m>c,d\in I</m>. We may assume without loss of generality that <m>c&lt; d</m>. The assumptions on <m>f</m> guarantee that it is both continuous (since differentiable) on <m>[c,d]</m> and differentiable on the interior of <m>(c,d)</m>. The mean value theorem then implies that we have 
+                <me>
+                    f'(e)=\frac{f(d)-f(c)}{d-c}
+                </me>
+                for some <m>e\in (c,d)</m>. By assumption, however, we have <m>f'(e)=0</m>. But then 
+                <md>
+                    <mrow>f'(e)=\frac{f(d)-f(c)}{d-c}\amp \implies 0=\frac{f(d)-f(c)}{d-c}</mrow>
+                    <mrow>\amp\implies f(d)-f(c)=0</mrow>
+                    <mrow>\amp\implies f(c)=f(d)</mrow>
+                </md>.
+                We have shown that for any <m>c,d\in I</m> we have <m>f(c)=f(d)</m>. In other words, <m>f</m> is a constant function on <m>I</m>, as desired. 
+            </p>
+        </proof>
     </corollary>
     <corollary xml:id="cor_same_derivative">
         <title>Functions with identical derivatives </title>
         <statement>
             <p>
-                Assume <m>f</m> and <m>g</m> are differentiable on an interval <m>I</m>. If <m>f'(x)=g'(x)</m> for all <m>x\in I</m>, then there is a constant <m>C\in \R</m> satisfying
+                Assume <m>f</m> and <m>g</m> are continuous on an interval <m>I</m>. If <m>f'(x)=g'(x)</m> for all interior points <m>x\in I</m>, then there is a constant <m>C\in \R</m> satisfying
                 <me>
                     f(x)=g(x)+C
                 </me>
@@ -123,6 +138,20 @@
                In plain English, if two functions have identical derivative functions over an interval <m>I</m>, then they differ by a constant. 
             </p>
         </statement>
+        <proof>
+            <p>
+                Let <m>h(x)=f(x)-g(x)</m>. Since 
+                <me>
+                    h'(x)=f'(x)-g'(x)=0
+                </me>
+                for all interior points <m>x\in I</m>, we conclude by <xref ref="cor_constant_functions"/> that <m>h</m> is a constant function on <m>I</m>: <ie/>, there is a constant <m>C</m> such that <m>h(x)=C</m> for all <m>x\in I</m>. But then 
+                <md>
+                    <mrow>h(x) =C \text{ for all } x\in I\amp \implies f(x)-g(x)=C \text{ for all } x\in I</mrow>
+                    <mrow> \amp \implies f(x)=g(x)+C \text{ for all } x\in I</mrow>
+                </md>,
+                as desired. 
+            </p>
+        </proof>
     </corollary>
     <example xml:id="eg_mean_roots">
     <title>Number of roots</title>
@@ -133,8 +162,25 @@
     </statement>
     <solution>
     <p>
-    
+    Since <m>f</m> is continuous everywhere, and satisfies <m>f(-2)&gt; 0</m> and <m>f(2)&lt; 0</m>, the intermediate value theorem implies there is an element <m>c\in [-2,2]</m> satisfying <m>f(c)=0</m>: <ie/>, <m>f</m> has at least one root <m>c\in [-2,2]</m>. It remains to show that <m>c</m> is the only root of <m>f</m> in <m>[-2,2]</m>. 
     </p>
+    <p>
+        Suppose by contradiction that <m>f</m> had two distinct roots <m>c,d\in [-2,2]</m>. Without loss of generality, we can assume <m>c&lt; d</m>. Since <m>f</m> is differentiable everywhere, the mean value theorem would imply that there exists  <m>e\in (c,d)</m> satifying 
+        <me>
+            f'(e)=\frac{f(d)-f(c)}{d-c}=\frac{0-0}{d-c}=0
+        </me>,
+        where we have used the fact that <m>f(c)=f(d)=0</m> since <m>c</m> and <m>d</m> are roots of <m>f</m>. But this is impossible since, as the derivative <m>f'(x)=3x^2-27</m> satisfies <m>f'(x)&lt; 0</m> for all <m>x\in [-2,2]</m>. (See diagram below.) Since we have reached a contradiction, we conclude that there is only one root of <m>f</m> lying in <m>[-2,2]</m>, as desired. 
+    </p>
+    <figure xml:id="fig_mean_eg">
+        <caption>Graph of <m>f'(x)=3x^2-27</m></caption>
+        <image xml:id="im_mean_eg" width="50%">
+            <shortdescription>Graph of derivative of f</shortdescription>
+            <sageplot>
+            f=plot(3*x^2-27, x,-2,2)
+            f
+            </sageplot>
+        </image>
+    </figure>
     </solution>
     </example>
     <example xml:id="eg_mean_inequality">
@@ -146,12 +192,26 @@
     </statement>
     <hint>
         <p>
-            Consider <m>h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)</m>. We wish to show that <m>h(x)&lt; 0</m> for all <m>x&gt; 0</m>. Observe that <m>h(0)=0</m> and <m>h(3)=-1/2</m>. 
+            Consider <m>h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)</m>. We wish to show that <m>h(x)&lt; 0</m> for all <m>x&gt; 0</m>. 
         </p>
     </hint>
     <solution>
     <p>
-    
+    Let <m>h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)</m>. The desired inequality is equivalent to the inequality <m>h(x)&lt; 0</m> for all <m>x&gt; 0</m>, which we now endeavor to demonstrate. First observe that <m>h'(x)&lt; 0</m> for all <m>x&gt; 0</m>. Indeed, we have 
+    <md>
+        <mrow>h'(x) \amp = \frac{1}{2\sqrt{1+x}}-\frac{1}{2}</mrow>
+        <mrow> \amp &lt; \frac{1}{2}-\frac{1}{2} \amp (x&gt; 0\implies \sqrt{1+x}&gt; 1)</mrow>
+        <mrow> \amp = 0</mrow>
+    </md>.
+    Next, since <m>h</m> is continuous on and differentiable on <m>[0,\infty)</m>, given any <m>x&gt; 0</m>, the mean value theorem implies that there exists a <m>c\in (0,x)</m> satisfying 
+    <me>
+        h'(c)=\frac{h(x)-h(0)}{x-0}=\frac{h(x)-0}{x}=\frac{h(x)}{x}
+    </me>. 
+    This implies 
+    <me>
+        h(x)=xh'(c)&lt; 0
+    </me>,
+    since <m>x&gt; 0</m> and <m>h'(c)&lt; 0</m>. We have shown that <m>h(x)&lt; 0</m> for all <m>x&gt;0 </m>, and hence that <m>\sqrt{1+x}&lt; 1+\frac{1}{2}x</m> for all <m>x&gt; 0</m>. 
     </p>
     </solution>
     </example>
@@ -173,6 +233,11 @@
                 for all <m>x\in I</m>. 
             </p>
         </statement>
+        <proof>
+            <p>
+                See text. 
+            </p>
+        </proof>
     </corollary>
 
 </section>
