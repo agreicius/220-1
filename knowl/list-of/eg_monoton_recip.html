@@ -12,9 +12,17 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">22.4</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Monotonicity: reciprocal.</span>
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">22.3</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Monotonicity: reciprocal.</span>
 </h3>
-<div xmlns:pf="https://prefigure.org" class="para">Let <span class="process-math">\(f(x)=\frac{1}{x}\)</span> with domain <span class="process-math">\(D=\R-\{0\}\text{.}\)</span> Find all intervals where <span class="process-math">\(f\)</span> is increasing, and all intervals where <span class="process-math">\(f\)</span> is decreasing.</div>
-<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_first_der_test.html#eg_monoton_recip">in-context</a></span>
+<div xmlns:pf="https://prefigure.org" class="para">Let <span class="process-math">\(f(x)=\frac{1}{x}\)</span> with domain <span class="process-math">\(D=\R-\{0\}\text{.}\)</span> Observe that <span class="process-math">\(f'(x)=-1/x^2\)</span> is negative for all <span class="process-math">\(x\in D\text{.}\)</span> However it is not true that <span class="process-math">\(f\)</span> is decreasing on its entire domain <span class="process-math">\(D\text{:}\)</span> indeed, we have <span class="process-math">\(-1&lt; 1\text{,}\)</span>  and yet <span class="process-math">\(-1=f(-1)\not&gt; f(1)=1\text{.}\)</span>
+</div> <div xmlns:pf="https://prefigure.org" class="para logical">
+<div class="para">What went wrong here? Why couldn’t we apply <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a>? The answer is that <span class="process-math">\(D\)</span> is not an interval! In fact we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_monoton.html ./knowl/xref/th_monoton.html">
+\begin{equation*}
+D=\underset{I_1}{(-\infty, 0)}\cup \underset{I_2}{(0,\infty)}\text{,}
+\end{equation*}
+</div>
+<div class="para">a union of two intervals. We are permitted to apply <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a> to <span class="process-math">\(I_1\)</span> and <span class="process-math">\(I_2\)</span> separately to conclude that <span class="process-math">\(f\)</span> is decreasing on each of these intervals, but this does not imply that it is increasing on their union.</div>
+</div></article><span class="incontext"><a class="internal" href="s_first_der_test.html#eg_monoton_recip">in-context</a></span>
 </body>
 </html>

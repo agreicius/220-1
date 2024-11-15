@@ -375,9 +375,6 @@ window.MathJax = {
 #proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
 #proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
 #proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
-#eg_first_der_test_poly-2-1-2 { counter-set: eg_first_der_test_poly-2-1-2 0; }
-#eg_first_der_test_poly-2-1-2 > li::marker { content: ""counter(eg_first_der_test_poly-2-1-2,decimal)"."; }
-#eg_first_der_test_poly-2-1-2 > li { counter-increment: eg_first_der_test_poly-2-1-2; }
 #eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
 #eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
 #eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
@@ -609,22 +606,79 @@ window.MathJax = {
 <div class="para">Assume <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(I\text{.}\)</span>
 </div>
 <ol class="decimal" id="th_monoton-2-1-3">
-<li id="th_monoton-2-1-3-1"><div class="para" id="th_monoton-2-1-3-1-1">If <span class="process-math">\(f'(a)=0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span>
+<li id="th_monoton-2-1-3-1"><div class="para" id="th_monoton-2-1-3-1-1">If <span class="process-math">\(f'(x)=0\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
-<li id="th_monoton-2-1-3-2"><div class="para" id="th_monoton-2-1-3-2-1">If <span class="process-math">\(f'(a)&gt; 0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\(I\text{.}\)</span>
+<li id="th_monoton-2-1-3-2"><div class="para" id="th_monoton-2-1-3-2-1">If <span class="process-math">\(f'(x)&gt; 0\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
-<li id="th_monoton-2-1-3-3"><div class="para" id="th_monoton-2-1-3-3-1">If <span class="process-math">\(f'(a)&lt; 0\)</span> for all interior points <span class="process-math">\(a\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is decreasing on <span class="process-math">\(I\text{.}\)</span>
+<li id="th_monoton-2-1-3-3"><div class="para" id="th_monoton-2-1-3-3-1">If <span class="process-math">\(f'(x)&lt; 0\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is decreasing on <span class="process-math">\(I\text{.}\)</span>
 </div></li>
 </ol>
-</div></article><article class="example example-like" id="eg_monoton_poly"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.3</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: polynomial.</span>
+</div></article><details id="th_monoton-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_monoton-3-1">Statement (1) is identical to <a href="s_mean_value.html#cor_constant_functions" class="xref" data-knowl="./knowl/xref/cor_constant_functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 21.5: Constant function characterization">Corollary 21.5</a>, which we have already proved.</div>
+<div class="para logical" id="th_monoton-3-2">
+<div class="para">The proofs of (2) and (3) are nearly identical. We prove (2). Assume <span class="process-math">\(f'(x)&gt; 0\)</span> for all interior points <span class="process-math">\(x\in I\text{.}\)</span> Suppose <span class="process-math">\(a,b\in I\)</span> satisfy <span class="process-math">\(a&lt; b\text{.}\)</span> Since the function <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{,}\)</span> the mean value theorem implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(c\in (a,b)\text{.}\)</span> But then, after a little algebra, we see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(b)=f'(c)(b-a)+f(a)&gt; f(a)\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(f'(c)&gt; 0\)</span> by assumption. Thus we have shown</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a&lt; b\implies f(a)&lt; f(b)
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(a,b\in I\text{.}\)</span> In other words, <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\(I\text{.}\)</span>
+</div>
+</div></article></details><div class="para" id="s_first_der_test-4">Before putting <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a> to good analytic work on some example functions, we first illustrate that we cannot apply the theorem if the underlying set is not an <em class="emphasis">interval</em>.</div>
+<article class="example example-like" id="eg_monoton_recip"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.3</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: reciprocal.</span>
+</h3>
+<div class="para" id="eg_monoton_recip-2-1">Let <span class="process-math">\(f(x)=\frac{1}{x}\)</span> with domain <span class="process-math">\(D=\R-\{0\}\text{.}\)</span> Observe that <span class="process-math">\(f'(x)=-1/x^2\)</span> is negative for all <span class="process-math">\(x\in D\text{.}\)</span> However it is not true that <span class="process-math">\(f\)</span> is decreasing on its entire domain <span class="process-math">\(D\text{:}\)</span> indeed, we have <span class="process-math">\(-1&lt; 1\text{,}\)</span>  and yet <span class="process-math">\(-1=f(-1)\not&gt; f(1)=1\text{.}\)</span>
+</div> <div class="para logical" id="eg_monoton_recip-2-2">
+<div class="para">What went wrong here? Why couldn’t we apply <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a>? The answer is that <span class="process-math">\(D\)</span> is not an interval! In fact we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_monoton.html ./knowl/xref/th_monoton.html">
+\begin{equation*}
+D=\underset{I_1}{(-\infty, 0)}\cup \underset{I_2}{(0,\infty)}\text{,}
+\end{equation*}
+</div>
+<div class="para">a union of two intervals. We are permitted to apply <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a> to <span class="process-math">\(I_1\)</span> and <span class="process-math">\(I_2\)</span> separately to conclude that <span class="process-math">\(f\)</span> is decreasing on each of these intervals, but this does not imply that it is increasing on their union.</div>
+</div></article><div class="para" id="s_first_der_test-6">According to <a href="s_first_der_test.html#th_monoton" class="xref" data-knowl="./knowl/xref/th_monoton.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.2: Derivative and monotonicity">Theorem 22.2</a> determining the sets on which a function <span class="process-math">\(f\)</span> is increasing/decreasing essentially amounts to solving the inequalities <span class="process-math">\(f'(x)&gt; 0\)</span> and <span class="process-math">\(f'(x)&lt; 0\text{.}\)</span> This is most efficiently done using a <em class="emphasis">sign diagram</em> of <span class="process-math">\(f'\text{,}\)</span> as illustrated in the next example and defined more precisely in <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a>.</div>
+<article class="example example-like" id="eg_monoton_poly"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.4</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: polynomial.</span>
 </h3>
 <div class="para" id="eg_monoton_poly-2-1">Let <span class="process-math">\(f(x)=3x^5-5x^3\text{.}\)</span> Find all intervals where <span class="process-math">\(f\)</span> is increasing, and all intervals where <span class="process-math">\(f\)</span> is decreasing.</div>
-<div class="solutions"><details id="eg_monoton_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_monoton_poly-3-1"></div></div></details></div></article><article class="example example-like" id="eg_monoton_recip"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.4</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity: reciprocal.</span>
-</h3>
-<div class="para" id="eg_monoton_recip-2-1">Let <span class="process-math">\(f(x)=\frac{1}{x}\)</span> with domain <span class="process-math">\(D=\R-\{0\}\text{.}\)</span> Find all intervals where <span class="process-math">\(f\)</span> is increasing, and all intervals where <span class="process-math">\(f\)</span> is decreasing.</div>
-<div class="solutions"><details id="eg_monoton_recip-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_monoton_recip-3-1"></div></div></details></div></article><article class="algorithm theorem-like" id="proc_intervals_monoto"><h3 class="heading">
+<div class="solutions"><details id="eg_monoton_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_monoton_poly-3-1">
+<div class="para">We compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x)=15x^4-15x^2=15x^2(x^2-1)=15x^2(x-1)(x+1)\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(f'\)</span> is continuous, and since <span class="process-math">\(0,1,-1\)</span> are the only roots of <span class="process-math">\(f'\text{,}\)</span> the intermediate value theorem implies that <span class="process-math">\(f'\)</span> is either always positive or always negative on each of the resulting intervals <span class="process-math">\((-\infty,-1),(-1,0),(0,1),(1,\infty)\text{.}\)</span> This means we can determine the sign of <span class="process-math">\(f'\)</span> on each interval by evaluating it at one test point. It is easy to see that</div>
+<div class="displaymath process-math" id="eg_monoton_poly-3-1-8">
+\begin{align*}
+f'(-2) \amp &gt; 0\\
+f'(-1/2)  \amp &lt; 0 \\
+f'(1/2) \amp &lt; 0\\
+f'(2) \amp &gt; 0\text{.}
+\end{align*}
+</div>
+<div class="para">Thus the sign of <span class="process-math">\(f'\)</span> for various portions of the real line is described by the following <em class="emphasis">sign diagram</em>.</div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_diag_poly.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div>
+<div class="para" id="eg_monoton_poly-3-3">Note that underneath the information about the sign of <span class="process-math">\(f'\text{,}\)</span> we have indicated the implied increasing/decreasing behavior of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<div class="para" id="eg_monoton_poly-3-4">From the sign diagram we conclude that <span class="process-math">\(f\)</span> is increasing on the intervals <span class="process-math">\((-\infty, -1]\)</span> and <span class="process-math">\([1,\infty)\text{,}\)</span> and decreasing on the interval <span class="process-math">\([-1,1]\text{.}\)</span>
+</div>
+</div></details></div></article><div class="para" id="s_first_der_test-8">Let’s give a formal description of the technique used in the example above.</div>
+<article class="algorithm theorem-like" id="proc_intervals_monoto"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">22.5</span><span class="period">.</span><span class="space"> </span><span class="title">Intervals of monotonicity.</span>
 </h3>
 <div class="para logical" id="proc_intervals_monoto-2-1">
@@ -669,31 +723,69 @@ window.MathJax = {
 <li id="proc_class_crit_pts-2-1-6-3"><div class="para" id="proc_class_crit_pts-2-1-6-3-1">For each critical point <span class="process-math">\(a\)</span> of <span class="process-math">\(f\text{,}\)</span> use <a href="s_first_der_test.html#th_first_der_test" class="xref" data-knowl="./knowl/xref/th_first_der_test.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 22.6: First derivative test">Theorem 22.6</a> and your sign diagram to determine whether <span class="process-math">\(f(a)\)</span> is a local maximum value of <span class="process-math">\(f\text{,}\)</span> local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
 </ol>
 </div></article><article class="example example-like" id="eg_first_der_test_poly"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.8</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: polynomial.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.8</span><span class="period">.</span><span class="space"> </span><span class="title">Classifying critical points: polynomial.</span>
 </h3>
-<div class="para logical" id="eg_first_der_test_poly-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=3x^5-5x^3\text{.}\)</span>
-</div>
-<ol class="decimal" id="eg_first_der_test_poly-2-1-2">
-<li id="eg_first_der_test_poly-2-1-2-1"><div class="para" id="eg_first_der_test_poly-2-1-2-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\text{.}\)</span>
-</div></li>
-<li id="eg_first_der_test_poly-2-1-2-2"><div class="para" id="eg_first_der_test_poly-2-1-2-2-1">Classify each critical point of <span class="process-math">\(f\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="eg_first_der_test_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_poly-3-1"></div></div></details></div></article><article class="example example-like" id="eg_first_der_test_trig"><h3 class="heading">
+<div class="para" id="eg_first_der_test_poly-2-1">Let <span class="process-math">\(f(x)=3x^5-5x^3\text{.}\)</span> Find all critical points of <span class="process-math">\(f\text{,}\)</span> and for each critical point <span class="process-math">\(a\)</span> classify <span class="process-math">\(f(a)\)</span> as a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div>
+<div class="solutions"><details id="eg_first_der_test_poly-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_poly-3-1">In the course of the sign diagram from <a href="s_first_der_test.html#eg_monoton_poly" class="xref" data-knowl="./knowl/xref/eg_monoton_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.4: Monotonicity: polynomial">Example 22.4</a> we saw that <span class="process-math">\(x=-1,0,1\)</span> were the critical points of <span class="process-math">\(f\text{.}\)</span> Since the sign of <span class="process-math">\(f'\)</span> switches from positive to negative at <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(f(-1)\)</span> is a local maximum value of <span class="process-math">\(f\text{;}\)</span> since the sign of <span class="process-math">\(f'\)</span> switches from negative to positive at <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(f(1)\)</span> is a local maximum value of <span class="process-math">\(f\text{.}\)</span> Since <span class="process-math">\(f'(x)\ne 0\)</span> for <span class="process-math">\(x\)</span> close to <span class="process-math">\(0\)</span> and since the sign of <span class="process-math">\(f'\)</span> does not switch at <span class="process-math">\(x=0\text{,}\)</span> we see that <span class="process-math">\(f(0)\)</span> is neither a local maximum nor a local minimum value.</div></div></details></div></article><article class="example example-like" id="eg_first_der_test_trig"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">22.9</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: trig.</span>
 </h3>
 <div class="para logical" id="eg_first_der_test_trig-2-1">
 <div class="para">Let <span class="process-math">\(f(x)=2\cos x+\sqrt{2}\cos^2 x\)</span> and let <span class="process-math">\(I=[\pi/2, 3\pi/2]\text{.}\)</span>
 </div>
 <ol class="decimal" id="eg_first_der_test_trig-2-1-3">
-<li id="eg_first_der_test_trig-2-1-3-1"><div class="para" id="eg_first_der_test_trig-2-1-3-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\)</span> within <span class="process-math">\(I\text{.}\)</span>
+<li id="eg_first_der_test_trig-2-1-3-1"><div class="para" id="eg_first_der_test_trig-2-1-3-1-1">Find all critical points of <span class="process-math">\(f\text{,}\)</span> and for each critical point <span class="process-math">\(a\)</span> classify <span class="process-math">\(f(a)\)</span> as a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
+<li id="eg_first_der_test_trig-2-1-3-2"><div class="para" id="eg_first_der_test_trig-2-1-3-2-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\)</span> within <span class="process-math">\(I\text{.}\)</span>
 </div></li>
-<li id="eg_first_der_test_trig-2-1-3-2"><div class="para" id="eg_first_der_test_trig-2-1-3-2-1">Classify each critical point of <span class="process-math">\(f\)</span> in <span class="process-math">\(I\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
 </ol>
 </div>
-<div class="solutions"><details id="eg_first_der_test_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_trig-3-1"></div></div></details></div></article><article class="example example-like" id="eg_first_der_test_rad"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.10</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: radical.</span>
+<div class="solutions"><details id="eg_first_der_test_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_first_der_test_trig-3-1">
+<div class="para">We first compute</div>
+<div class="displaymath process-math" id="eg_first_der_test_trig-3-1-1">
+\begin{align*}
+f'(x) \amp = -2\sin x-\sqrt{2}\cos x\sin x=-2\sin x(1+\sqrt{2}\cos x) \text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(f\)</span> is differentiable everywhere, critical points of <span class="process-math">\(f\)</span> are solutions to <span class="process-math">\(f'(x)=0\text{.}\)</span> We thus solve:</div>
+<div class="displaymath process-math" id="eg_first_der_test_trig-3-1-5">
+\begin{align*}
+f'(x) \amp =0\\
+-2\sin x(1+\sqrt{2}\cos x) \amp = 0\\
+\sin x =0 \amp\text{ or } 1+\sqrt{2}\cos x=0 \\
+\sin x =0 \amp \text{ or } \cos x=-\frac{1}{\sqrt{2}} \text{.}
+\end{align*}
+</div>
+<div class="para">We have <span class="process-math">\(\sin x=0\)</span> if and only if <span class="process-math">\(x=\pi n\)</span> for some integer <span class="process-math">\(n\in \Z\text{.}\)</span> Only one of these solutions lies in <span class="process-math">\(I=[\pi/2,3\pi /2]\text{:}\)</span> namely, <span class="process-math">\(x=\pi\text{.}\)</span> Next, observing that <span class="process-math">\(1/\sqrt{2}=\sqrt{2}/2\text{,}\)</span> and recalling facts about the unit circle, we see that <span class="process-math">\(x\)</span> solves <span class="process-math">\(\cos x=-1/\sqrt{2}=-\sqrt{2}/2\)</span> if and only if</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=\frac{3\pi }{4}+2\pi n \text{ or } x=\frac{5\pi }{4}+2\pi n
+\end{equation*}
+</div>
+<div class="para">for some integer <span class="process-math">\(n\in \Z\text{.}\)</span> There are exactly two such solutions lying in <span class="process-math">\([\pi/2, 3\pi/2]\text{:}\)</span> namely, <span class="process-math">\(x=3\pi/4\)</span> and <span class="process-math">\(x=5\pi /4\text{.}\)</span> In conclusion, the critical points of <span class="process-math">\(f\)</span> are <span class="process-math">\(3\pi/4, \pi, 5\pi/4\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="eg_first_der_test_trig-3-2">
+<div class="para">To finish the problem essentially all we have to do is produce the sign diagram of <span class="process-math">\(f'\text{.}\)</span> The one below was produced by performing the following test point evaluations:</div>
+<div class="displaymath process-math" id="eg_first_der_test_trig-3-2-2">
+\begin{align*}
+f'(2\pi/3) \amp = -2(\sqrt{3}/2)(1-\sqrt{2}/2)&lt; 0 \\
+f'(5\pi/6) \amp = -2(1/2)(1-\sqrt{6}/2)&gt; 0 \amp (\sqrt{6}&gt; 2)\\
+f'(7\pi/6) \amp = -2(-1/2)(1-\sqrt{2}/2)&lt;  0 \amp (\sqrt{6}&gt; 2)\\
+f'(4\pi/3) \amp = -2(-\sqrt{3}/2)(1-\sqrt{2}/2)&gt; 0 \text{.}
+\end{align*}
+</div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_first_der_test_trig.svg" role="img" class="contained" alt="Sign diagram of derivative of trig function"></div>
+<div class="para" id="eg_first_der_test_trig-3-4">It follows that <span class="process-math">\(f(3\pi/4)\)</span> is a local minimum value, <span class="process-math">\(f(\pi)\)</span> is a local maximum value, and <span class="process-math">\(f(5\pi/4)\)</span> is a local minimum value of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<div class="para" id="eg_first_der_test_trig-3-5">Furthermore, we see that within the interval <span class="process-math">\([\pi,3\pi/2]\)</span> the function <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\([\pi,3\pi/4]\)</span> and <span class="process-math">\([\pi, 5\pi /4]\text{,}\)</span>  and decreasing on <span class="process-math">\([3\pi/4, \pi]\)</span> and <span class="process-math">\([5\pi/4, 3\pi /2]\text{.}\)</span>
+</div>
+<div class="para" id="eg_first_der_test_trig-3-6">We verify our conclusions below with the actual graph of <span class="process-math">\(f\)</span> on <span class="process-math">\([\pi, 3\pi/2]\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="fig_first_der_test_trig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/fig_first_der_test_trig-2.svg" role="img" class="contained" alt="Graph of the trig function of the example"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">22.10<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=2\cos x+\sqrt{2}\cos^2 x\)</span></figcaption></figure>
+</div></details></div></article><article class="example example-like" id="eg_first_der_test_rad"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.11</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: radical.</span>
 </h3>
 <div class="para logical" id="eg_first_der_test_rad-2-1">
 <div class="para">Let <span class="process-math">\(f(x)=x\, \sqrt{7-x^2}\text{.}\)</span>

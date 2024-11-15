@@ -12,13 +12,36 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">21.8</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Interesting inequality.</span>
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">21.9</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Interesting inequality.</span>
 </h3>
 <div xmlns:pf="https://prefigure.org" class="para">Prove that <span class="process-math">\(\sqrt{1+x}&lt;  1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
 </div>
 <div class="solutions">
-<details xmlns:pf="https://prefigure.org" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Observe that <span class="process-math">\(h(0)=0\)</span> and <span class="process-math">\(h(3)=-1/2\text{.}\)</span>
-</div></div></details><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details>
+<details xmlns:pf="https://prefigure.org" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div></div></details><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> The desired inequality is equivalent to the inequality <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{,}\)</span> which we now endeavor to demonstrate. First observe that <span class="process-math">\(h'(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+h'(x) \amp = \frac{1}{2\sqrt{1+x}}-\frac{1}{2}\\
+\amp &lt; \frac{1}{2}-\frac{1}{2} \amp (x&gt; 0\implies \sqrt{1+x}&gt; 1)\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">Next, since <span class="process-math">\(h\)</span> is continuous on and differentiable on <span class="process-math">\([0,\infty)\text{,}\)</span> given any <span class="process-math">\(x&gt; 0\text{,}\)</span> the mean value theorem implies that there exists a <span class="process-math">\(c\in (0,x)\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h'(c)=\frac{h(x)-h(0)}{x-0}=\frac{h(x)-0}{x}=\frac{h(x)}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x)=xh'(c)&lt; 0\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(x&gt; 0\)</span> and <span class="process-math">\(h'(c)&lt; 0\text{.}\)</span> We have shown that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt;0 \text{,}\)</span> and hence that <span class="process-math">\(\sqrt{1+x}&lt; 1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div>
+</div></div></details>
 </div></article><span class="incontext"><a class="internal" href="s_mean_value.html#eg_mean_inequality">in-context</a></span>
 </body>
 </html>

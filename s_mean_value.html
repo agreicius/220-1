@@ -375,9 +375,6 @@ window.MathJax = {
 #proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
 #proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
 #proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
-#eg_first_der_test_poly-2-1-2 { counter-set: eg_first_der_test_poly-2-1-2 0; }
-#eg_first_der_test_poly-2-1-2 > li::marker { content: ""counter(eg_first_der_test_poly-2-1-2,decimal)"."; }
-#eg_first_der_test_poly-2-1-2 > li { counter-increment: eg_first_der_test_poly-2-1-2; }
 #eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
 #eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
 #eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
@@ -652,33 +649,102 @@ f'(c)=\frac{f(b)-f(a)}{b-a}\text{,}
 <div class="solutions"><details id="eg_mvt_speeding-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mvt_speeding-3-1"></div></div></details></div></article><article class="corollary theorem-like" id="cor_constant_functions"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.5</span><span class="period">.</span><span class="space"> </span><span class="title">Constant function characterization.</span>
 </h3>
-<div class="para" id="cor_constant_functions-2-1">Assume <span class="process-math">\(f\)</span> is differentiable on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> As a consequence, a function is constant on an interval <span class="process-math">\(I\)</span> if and only if its derivative values are identically equal to zero.</div></article><article class="corollary theorem-like" id="cor_same_derivative"><h3 class="heading">
+<div class="para" id="cor_constant_functions-2-1">Assume <span class="process-math">\(f\)</span> is continuous on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f'(x)=0\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> As a consequence, a function is constant on an interval <span class="process-math">\(I\)</span> if and only if its derivative is the zero function on <span class="process-math">\(I\text{.}\)</span>
+</div></article><details id="cor_constant_functions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_constant_functions-3-1">
+<div class="para">Take any two distinct points <span class="process-math">\(c,d\in I\text{.}\)</span> We may assume without loss of generality that <span class="process-math">\(c&lt; d\text{.}\)</span> The assumptions on <span class="process-math">\(f\)</span> guarantee that it is both continuous (since differentiable) on <span class="process-math">\([c,d]\)</span> and differentiable on the interior of <span class="process-math">\((c,d)\text{.}\)</span> The mean value theorem then implies that we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(e)=\frac{f(d)-f(c)}{d-c}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(e\in (c,d)\text{.}\)</span> By assumption, however, we have <span class="process-math">\(f'(e)=0\text{.}\)</span> But then</div>
+<div class="displaymath process-math" id="cor_constant_functions-3-1-9">
+\begin{align*}
+f'(e)=\frac{f(d)-f(c)}{d-c}\amp \implies 0=\frac{f(d)-f(c)}{d-c}\\
+\amp\implies f(d)-f(c)=0\\
+\amp\implies f(c)=f(d)\text{.}
+\end{align*}
+</div>
+<div class="para">We have shown that for any <span class="process-math">\(c,d\in I\)</span> we have <span class="process-math">\(f(c)=f(d)\text{.}\)</span> In other words, <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{,}\)</span> as desired.</div>
+</div></article></details><article class="corollary theorem-like" id="cor_same_derivative"><h3 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.6</span><span class="period">.</span><span class="space"> </span><span class="title">Functions with identical derivatives.</span>
 </h3>
 <div class="para logical" id="cor_same_derivative-2-1">
-<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are differentiable on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f'(x)=g'(x)\)</span> for all <span class="process-math">\(x\in I\text{,}\)</span> then there is a constant <span class="process-math">\(C\in \R\)</span> satisfying</div>
+<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f'(x)=g'(x)\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then there is a constant <span class="process-math">\(C\in \R\)</span> satisfying</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f(x)=g(x)+C
 \end{equation*}
 </div>
 <div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> In plain English, if two functions have identical derivative functions over an interval <span class="process-math">\(I\text{,}\)</span> then they differ by a constant.</div>
-</div></article><article class="example example-like" id="eg_mean_roots"><h3 class="heading">
+</div></article><details id="cor_same_derivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_same_derivative-3-1">
+<div class="para">Let <span class="process-math">\(h(x)=f(x)-g(x)\text{.}\)</span> Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_constant_functions.html">
+\begin{equation*}
+h'(x)=f'(x)-g'(x)=0
+\end{equation*}
+</div>
+<div class="para">for all interior points <span class="process-math">\(x\in I\text{,}\)</span> we conclude by <a href="s_mean_value.html#cor_constant_functions" class="xref" data-knowl="./knowl/xref/cor_constant_functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 21.5: Constant function characterization">Corollary 21.5</a> that <span class="process-math">\(h\)</span> is a constant function on <span class="process-math">\(I\text{:}\)</span> i.e., there is a constant <span class="process-math">\(C\)</span> such that <span class="process-math">\(h(x)=C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> But then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_constant_functions.html" id="cor_same_derivative-3-1-11">
+\begin{align*}
+h(x) =C \text{ for all } x\in I\amp \implies f(x)-g(x)=C \text{ for all } x\in I\\
+\amp \implies f(x)=g(x)+C \text{ for all } x\in I\text{,}
+\end{align*}
+</div>
+<div class="para">as desired.</div>
+</div></article></details><article class="example example-like" id="eg_mean_roots"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">21.7</span><span class="period">.</span><span class="space"> </span><span class="title">Number of roots.</span>
 </h3>
 <div class="para" id="eg_mean_roots-2-1">Show that the function <span class="process-math">\(f(x)=x^3-27x-7\)</span> has exactly one root in the interval <span class="process-math">\(I=[-2,2]\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_mean_roots-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mean_roots-3-1"></div></div></details></div></article><article class="example example-like" id="eg_mean_inequality"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.8</span><span class="period">.</span><span class="space"> </span><span class="title">Interesting inequality.</span>
+<div class="solutions"><details id="eg_mean_roots-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_mean_roots-3-1">Since <span class="process-math">\(f\)</span> is continuous everywhere, and satisfies <span class="process-math">\(f(-2)&gt; 0\)</span> and <span class="process-math">\(f(2)&lt; 0\text{,}\)</span> the intermediate value theorem implies there is an element <span class="process-math">\(c\in [-2,2]\)</span> satisfying <span class="process-math">\(f(c)=0\text{:}\)</span> i.e., <span class="process-math">\(f\)</span> has at least one root <span class="process-math">\(c\in [-2,2]\text{.}\)</span> It remains to show that <span class="process-math">\(c\)</span> is the only root of <span class="process-math">\(f\)</span> in <span class="process-math">\([-2,2]\text{.}\)</span>
+</div>
+<div class="para logical" id="eg_mean_roots-3-2">
+<div class="para">Suppose by contradiction that <span class="process-math">\(f\)</span> had two distinct roots <span class="process-math">\(c,d\in [-2,2]\text{.}\)</span> Without loss of generality, we can assume <span class="process-math">\(c&lt; d\text{.}\)</span> Since <span class="process-math">\(f\)</span> is differentiable everywhere, the mean value theorem would imply that there exists  <span class="process-math">\(e\in (c,d)\)</span> satifying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(e)=\frac{f(d)-f(c)}{d-c}=\frac{0-0}{d-c}=0\text{,}
+\end{equation*}
+</div>
+<div class="para">where we have used the fact that <span class="process-math">\(f(c)=f(d)=0\)</span> since <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> are roots of <span class="process-math">\(f\text{.}\)</span> But this is impossible since, as the derivative <span class="process-math">\(f'(x)=3x^2-27\)</span> satisfies <span class="process-math">\(f'(x)&lt; 0\)</span> for all <span class="process-math">\(x\in [-2,2]\text{.}\)</span> (See diagram below.) Since we have reached a contradiction, we conclude that there is only one root of <span class="process-math">\(f\)</span> lying in <span class="process-math">\([-2,2]\text{,}\)</span> as desired.</div>
+</div>
+<figure class="figure figure-like" id="fig_mean_eg"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_mean_eg.svg" role="img" class="contained" alt="Graph of derivative of f"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f'(x)=3x^2-27\)</span></figcaption></figure>
+</div></details></div></article><article class="example example-like" id="eg_mean_inequality"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.9</span><span class="period">.</span><span class="space"> </span><span class="title">Interesting inequality.</span>
 </h3>
 <div class="para" id="eg_mean_inequality-2-1">Prove that <span class="process-math">\(\sqrt{1+x}&lt;  1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
 </div>
 <div class="solutions">
-<details id="eg_mean_inequality-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="eg_mean_inequality-3-1">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Observe that <span class="process-math">\(h(0)=0\)</span> and <span class="process-math">\(h(3)=-1/2\text{.}\)</span>
-</div></div></details><details id="eg_mean_inequality-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mean_inequality-4-1"></div></div></details>
+<details id="eg_mean_inequality-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="eg_mean_inequality-3-1">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div></div></details><details id="eg_mean_inequality-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_mean_inequality-4-1">
+<div class="para">Let <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> The desired inequality is equivalent to the inequality <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{,}\)</span> which we now endeavor to demonstrate. First observe that <span class="process-math">\(h'(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math" id="eg_mean_inequality-4-1-6">
+\begin{align*}
+h'(x) \amp = \frac{1}{2\sqrt{1+x}}-\frac{1}{2}\\
+\amp &lt; \frac{1}{2}-\frac{1}{2} \amp (x&gt; 0\implies \sqrt{1+x}&gt; 1)\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">Next, since <span class="process-math">\(h\)</span> is continuous on and differentiable on <span class="process-math">\([0,\infty)\text{,}\)</span> given any <span class="process-math">\(x&gt; 0\text{,}\)</span> the mean value theorem implies that there exists a <span class="process-math">\(c\in (0,x)\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h'(c)=\frac{h(x)-h(0)}{x-0}=\frac{h(x)-0}{x}=\frac{h(x)}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x)=xh'(c)&lt; 0\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(x&gt; 0\)</span> and <span class="process-math">\(h'(c)&lt; 0\text{.}\)</span> We have shown that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt;0 \text{,}\)</span> and hence that <span class="process-math">\(\sqrt{1+x}&lt; 1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div>
+</div></div></details>
 </div></article><div class="para" id="s_mean_value-12">For the curious, we end with a useful corollary of the mean value theorem that yields a numerically more precise description of how good of an approximation the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> centered at <span class="process-math">\(a\)</span> is for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span> This result (and its proof) will not be assessed on any quiz or exam in this course.</div>
 <article class="corollary theorem-like" id="cor_mean_taylor"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.9</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s theorem (<span class="process-math">\(k=1\)</span>).</span>
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.10</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s theorem (<span class="process-math">\(k=1\)</span>).</span>
 </h3>
 <div class="para logical" id="cor_mean_taylor-2-1">
 <div class="para">Assume <span class="process-math">\(f\)</span> is twice differentiable on an interval <span class="process-math">\(I\)</span> containing <span class="process-math">\(a\)</span> as in interior point. Let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span> For all <span class="process-math">\(x\in I\)</span> we have</div>
@@ -695,7 +761,7 @@ f(x)-L(x)=\frac{f''(c)}{2}(x-a)^2\text{.}
 </div>
 <div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
 </div>
-</div></article></section></div>
+</div></article><details id="cor_mean_taylor-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor_mean_taylor-3-1">See text.</div></article></details></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_extreme.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_first_der_test.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
