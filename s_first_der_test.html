@@ -378,9 +378,6 @@ window.MathJax = {
 #eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
 #eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
 #eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
-#eg_first_der_test_rad-2-1-2 { counter-set: eg_first_der_test_rad-2-1-2 0; }
-#eg_first_der_test_rad-2-1-2 > li::marker { content: ""counter(eg_first_der_test_rad-2-1-2,decimal)"."; }
-#eg_first_der_test_rad-2-1-2 > li { counter-increment: eg_first_der_test_rad-2-1-2; }
 </style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
@@ -764,9 +761,12 @@ x=\frac{3\pi }{4}+2\pi n \text{ or } x=\frac{5\pi }{4}+2\pi n
 <div class="para">for some integer <span class="process-math">\(n\in \Z\text{.}\)</span> There are exactly two such solutions lying in <span class="process-math">\([\pi/2, 3\pi/2]\text{:}\)</span> namely, <span class="process-math">\(x=3\pi/4\)</span> and <span class="process-math">\(x=5\pi /4\text{.}\)</span> In conclusion, the critical points of <span class="process-math">\(f\)</span> are <span class="process-math">\(3\pi/4, \pi, 5\pi/4\text{.}\)</span>
 </div>
 </div>
-<div class="para logical" id="eg_first_der_test_trig-3-2">
-<div class="para">To finish the problem essentially all we have to do is produce the sign diagram of <span class="process-math">\(f'\text{.}\)</span> The one below was produced by performing the following test point evaluations:</div>
-<div class="displaymath process-math" id="eg_first_der_test_trig-3-2-2">
+<div class="para" id="eg_first_der_test_trig-3-2">To finish the problem essentially all we have to do is produce the sign diagram of <span class="process-math">\(f'\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_first_der_test_trig.svg" role="img" class="contained" alt="Sign diagram of derivative of trig function"></div>
+<div class="para logical" id="eg_first_der_test_trig-3-4">
+<div class="para">This was produced by performing the following test point evaluations:</div>
+<div class="displaymath process-math" id="eg_first_der_test_trig-3-4-1">
 \begin{align*}
 f'(2\pi/3) \amp = -2(\sqrt{3}/2)(1-\sqrt{2}/2)&lt; 0 \\
 f'(5\pi/6) \amp = -2(1/2)(1-\sqrt{6}/2)&gt; 0 \amp (\sqrt{6}&gt; 2)\\
@@ -775,28 +775,56 @@ f'(4\pi/3) \amp = -2(-\sqrt{3}/2)(1-\sqrt{2}/2)&gt; 0 \text{.}
 \end{align*}
 </div>
 </div>
-<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/im_first_der_test_trig.svg" role="img" class="contained" alt="Sign diagram of derivative of trig function"></div>
-<div class="para" id="eg_first_der_test_trig-3-4">It follows that <span class="process-math">\(f(3\pi/4)\)</span> is a local minimum value, <span class="process-math">\(f(\pi)\)</span> is a local maximum value, and <span class="process-math">\(f(5\pi/4)\)</span> is a local minimum value of <span class="process-math">\(f\text{.}\)</span>
+<div class="para" id="eg_first_der_test_trig-3-5">It follows that <span class="process-math">\(f(3\pi/4)\)</span> is a local minimum value, <span class="process-math">\(f(\pi)\)</span> is a local maximum value, and <span class="process-math">\(f(5\pi/4)\)</span> is a local minimum value of <span class="process-math">\(f\text{.}\)</span>
 </div>
-<div class="para" id="eg_first_der_test_trig-3-5">Furthermore, we see that within the interval <span class="process-math">\([\pi,3\pi/2]\)</span> the function <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\([\pi,3\pi/4]\)</span> and <span class="process-math">\([\pi, 5\pi /4]\text{,}\)</span>  and decreasing on <span class="process-math">\([3\pi/4, \pi]\)</span> and <span class="process-math">\([5\pi/4, 3\pi /2]\text{.}\)</span>
+<div class="para" id="eg_first_der_test_trig-3-6">Furthermore, we see that within the interval <span class="process-math">\([\pi,3\pi/2]\)</span> the function <span class="process-math">\(f\)</span> is increasing on <span class="process-math">\([\pi,3\pi/4]\)</span> and <span class="process-math">\([\pi, 5\pi /4]\text{,}\)</span>  and decreasing on <span class="process-math">\([3\pi/4, \pi]\)</span> and <span class="process-math">\([5\pi/4, 3\pi /2]\text{.}\)</span>
 </div>
-<div class="para" id="eg_first_der_test_trig-3-6">We verify our conclusions below with the actual graph of <span class="process-math">\(f\)</span> on <span class="process-math">\([\pi, 3\pi/2]\text{.}\)</span>
+<div class="para" id="eg_first_der_test_trig-3-7">We verify our conclusions below with the actual graph of <span class="process-math">\(f\)</span> on <span class="process-math">\([\pi, 3\pi/2]\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="fig_first_der_test_trig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/fig_first_der_test_trig-2.svg" role="img" class="contained" alt="Graph of the trig function of the example"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">22.10<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=2\cos x+\sqrt{2}\cos^2 x\)</span></figcaption></figure>
 </div></details></div></article><article class="example example-like" id="eg_first_der_test_rad"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">22.11</span><span class="period">.</span><span class="space"> </span><span class="title">Monotonicity and critical points: radical.</span>
 </h3>
-<div class="para logical" id="eg_first_der_test_rad-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=x\, \sqrt{7-x^2}\text{.}\)</span>
+<div class="para" id="eg_first_der_test_rad-2-1">Let <span class="process-math">\(f(x)=x\, \sqrt{7-x^2}\text{.}\)</span> Find all critical points of <span class="process-math">\(f\text{,}\)</span> and for each critical point <span class="process-math">\(a\)</span> classify <span class="process-math">\(f(a)\)</span> as a local maximum value of <span class="process-math">\(f\text{,}\)</span> local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div>
+<div class="solutions"><details id="eg_first_der_test_rad-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_first_der_test_rad-3-1">
+<div class="para">Note first that the implied domain <span class="process-math">\(D\)</span> of <span class="process-math">\(f\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_class_crit_pts.html">
+\begin{equation*}
+D=\{x\in \R\colon 7-x^2\geq 0\}=\{x\in \R\colon -\sqrt{7}\leq x\leq \sqrt{7}\}=[-\sqrt{7},\sqrt{7}]\text{.}
+\end{equation*}
 </div>
-<ol class="decimal" id="eg_first_der_test_rad-2-1-2">
-<li id="eg_first_der_test_rad-2-1-2-1"><div class="para" id="eg_first_der_test_rad-2-1-2-1-1">Apply <a href="s_first_der_test.html#proc_intervals_monoto" class="xref" data-knowl="./knowl/xref/proc_intervals_monoto.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.5: Intervals of monotonicity">Procedure 22.5</a> to find the intervals of monotonicity of <span class="process-math">\(f\text{.}\)</span>
-</div></li>
-<li id="eg_first_der_test_rad-2-1-2-2"><div class="para" id="eg_first_der_test_rad-2-1-2-2-1">Classify each critical point of <span class="process-math">\(f\)</span> as corresponding to a local maximum value of <span class="process-math">\(f\text{,}\)</span> a local minimum value of <span class="process-math">\(f\text{,}\)</span> or neither.</div></li>
-</ol>
+<div class="para">Following <a href="s_first_der_test.html#proc_class_crit_pts" class="xref" data-knowl="./knowl/xref/proc_class_crit_pts.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 22.7: Classify critical points: first derivative test">Procedure 22.7</a>, we first determine the critical points of <span class="process-math">\(f\text{.}\)</span> Note first that in this case <span class="process-math">\(f\)</span> is not differentiable at <span class="process-math">\(\pm \sqrt{7}\text{,}\)</span> making these critical points.  Next, for all <span class="process-math">\(x\ne \pm \sqrt{7}\text{,}\)</span> we compute <span class="process-math">\(f'(x)\)</span> using the product and chain rules:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_class_crit_pts.html" id="eg_first_der_test_rad-3-1-10">
+\begin{align*}
+f'(x) \amp =\sqrt{7-x^2}-\frac{x^2}{\sqrt{7-x^2}} \\
+\amp =\frac{1}{\sqrt{7-x^2}}(7-x^2-x^2)\\
+\amp \frac{7-2x^2}{\sqrt{7-x^2}}\text{.}
+\end{align*}
 </div>
-<div class="solutions"><details id="eg_first_der_test_rad-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_first_der_test_rad-3-1"></div></div></details></div></article></section></div>
+<div class="para">It follows that we have <span class="process-math">\(f'(x)=0\)</span> if and only if <span class="process-math">\(7-2x^2=0\text{,}\)</span> or equivalently, <span class="process-math">\(x=\pm \sqrt{7/2}\text{.}\)</span> We conclude that there are in total four critical points: <span class="process-math">\(x=\pm \sqrt{7}\)</span> (where <span class="process-math">\(f\)</span> is not differentiable), and <span class="process-math">\(x=\pm\sqrt{7/2}\text{.}\)</span>
+</div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_first_der_test_rad.svg" role="img" class="contained" alt="Sign diagram for derivative of example function"></div>
+<div class="para logical" id="eg_first_der_test_rad-3-3">
+<div class="para">This diagram was the result of the following test point evaluations of <span class="process-math">\(f'\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="eg_first_der_test_rad-3-3-2">
+\begin{align*}
+f'(-2) \amp = -\frac{1}{\sqrt{3}}&lt; 0 \\
+f'(0) \amp = \frac{7}{\sqrt{7}}&gt; 0\\
+f'(2) \amp = -\frac{1}{\sqrt{3}}&lt; 0 \text{.}
+\end{align*}
+</div>
+<div class="para">Note that <span class="process-math">\(\sqrt{7/2}&lt; 2&lt; \sqrt{7}\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="eg_first_der_test_rad-3-4">We conclude that <span class="process-math">\(f(-\sqrt{7})\)</span> and <span class="process-math">\(f(\sqrt{7/2})\)</span> are local maximum values, and <span class="process-math">\(f(-\sqrt{7/2}\)</span> and <span class="process-math">\(f(\sqrt{7}\)</span> are local minimum values. These conclusions are verified by the actual graph of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="fig_im_first_der_test_rad_graph"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/fig_im_first_der_test_rad_graph-2.svg" role="img" class="contained" alt="Graph of the original function of the example"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">22.12<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=x\, \sqrt{7-x^2}\)</span></figcaption></figure>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_mean_value.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="my-great-book-26.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
