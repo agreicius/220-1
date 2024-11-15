@@ -284,13 +284,7 @@ We have <m>\sin x=0</m> if and only if <m>x=\pi n</m> for some integer <m>n\in \
 for some integer <m>n\in \Z</m>. There are exactly two such solutions lying in <m>[\pi/2, 3\pi/2]</m>: namely, <m>x=3\pi/4</m> and <m>x=5\pi /4</m>. In conclusion, the critical points of <m>f</m> are <m>3\pi/4, \pi, 5\pi/4</m>. 
 </p>
 <p>
-    To finish the problem essentially all we have to do is produce the sign diagram of <m>f'</m>. The one below was produced by performing the following test point evaluations: 
-    <md>
-        <mrow>f'(2\pi/3) \amp = -2(\sqrt{3}/2)(1-\sqrt{2}/2)&lt; 0 </mrow>
-        <mrow>f'(5\pi/6) \amp = -2(1/2)(1-\sqrt{6}/2)&gt; 0 \amp (\sqrt{6}&gt; 2)</mrow>
-        <mrow>f'(7\pi/6) \amp = -2(-1/2)(1-\sqrt{2}/2)&lt;  0 \amp (\sqrt{6}&gt; 2)</mrow>
-        <mrow>f'(4\pi/3) \amp = -2(-\sqrt{3}/2)(1-\sqrt{2}/2)&gt; 0 </mrow>
-    </md>.
+    To finish the problem essentially all we have to do is produce the sign diagram of <m>f'</m>. 
 </p>
 <image xml:id="im_first_der_test_trig">
     <shortdescription>Sign diagram of derivative of trig function</shortdescription>
@@ -314,6 +308,15 @@ for some integer <m>n\in \Z</m>. There are exactly two such solutions lying in <
         \end{tikzpicture}
     </latex-image>
 </image>
+<p>
+    This was produced by performing the following test point evaluations: 
+    <md>
+        <mrow>f'(2\pi/3) \amp = -2(\sqrt{3}/2)(1-\sqrt{2}/2)&lt; 0 </mrow>
+        <mrow>f'(5\pi/6) \amp = -2(1/2)(1-\sqrt{6}/2)&gt; 0 \amp (\sqrt{6}&gt; 2)</mrow>
+        <mrow>f'(7\pi/6) \amp = -2(-1/2)(1-\sqrt{2}/2)&lt;  0 \amp (\sqrt{6}&gt; 2)</mrow>
+        <mrow>f'(4\pi/3) \amp = -2(-\sqrt{3}/2)(1-\sqrt{2}/2)&gt; 0 </mrow>
+    </md>.
+</p>
 <p>
     It follows that <m>f(3\pi/4)</m> is a local minimum value, <m>f(\pi)</m> is a local maximum value, and <m>f(5\pi/4)</m> is a local minimum value of <m>f</m>. 
 </p>
@@ -341,25 +344,68 @@ for some integer <m>n\in \Z</m>. There are exactly two such solutions lying in <
     <title>Monotonicity and critical points: radical</title>
     <statement>
     <p>
-        Let <m>f(x)=x\, \sqrt{7-x^2}</m>. 
-        <ol>
-            <li>
-                <p>
-                    Apply <xref ref="proc_intervals_monoto"/> to find the intervals of monotonicity of <m>f</m>. 
-                </p>
-            </li>
-            <li>
-                <p>
-                    Classify each critical point of <m>f</m> as corresponding to a local maximum value of <m>f</m>, a local minimum value of <m>f</m>, or neither. 
-                </p>
-            </li>
-        </ol>
+        Let <m>f(x)=x\, \sqrt{7-x^2}</m>. Find all critical points of <m>f</m>, and for each critical point <m>a</m> classify <m>f(a)</m> as a local maximum value of <m>f</m>, local minimum value of <m>f</m>, or neither. 
     </p>
     </statement>
     <solution>
     <p>
-    
+    Note first that the implied domain <m>D</m> of <m>f</m> is 
+    <me>
+        D=\{x\in \R\colon 7-x^2\geq 0\}=\{x\in \R\colon -\sqrt{7}\leq x\leq \sqrt{7}\}=[-\sqrt{7},\sqrt{7}]
+    </me>.
+    Following <xref ref="proc_class_crit_pts"/>, we first determine the critical points of <m>f</m>. Note first that in this case <m>f</m> is not differentiable at <m>\pm \sqrt{7}</m>, making these critical points.  Next, for all <m>x\ne \pm \sqrt{7}</m>, we compute <m>f'(x)</m> using the product and chain rules:
+    <md>
+        <mrow>f'(x) \amp =\sqrt{7-x^2}-\frac{x^2}{\sqrt{7-x^2}} </mrow>
+        <mrow> \amp =\frac{1}{\sqrt{7-x^2}}(7-x^2-x^2)</mrow>
+        <mrow> \amp \frac{7-2x^2}{\sqrt{7-x^2}}</mrow>
+    </md>.
+    It follows that we have <m>f'(x)=0</m> if and only if <m>7-2x^2=0</m>, or equivalently, <m>x=\pm \sqrt{7/2}</m>. We conclude that there are in total four critical points: <m>x=\pm \sqrt{7}</m> (where <m>f</m> is not differentiable), and <m>x=\pm\sqrt{7/2}</m>. 
     </p>
+    <image xml:id="im_first_der_test_rad" width="70%">
+        <shortdescription>Sign diagram for derivative of example function</shortdescription>
+        <latex-image>
+            \begin{tikzpicture}
+            \begin{tikzpicture}
+            \draw (1,0) -- (7,0);
+            \path foreach \X/\Y  in 
+             {1/-\sqrt{7}, 3/-\sqrt{\frac{7}{2}}, 5/\sqrt{\frac{7}{2}}, 7/\sqrt{7}}
+                { (\X,0) node[circle,fill,inner sep=0.5mm,
+                   label=below:{$\Y$}]  {}};
+                \draw (0,.5) node {$f'\colon$};
+                \draw (0,-1) node{$f\colon $};
+           \draw(2,.5) node{$-$};
+           \draw(4,.5) node{$+$};
+           \draw(6,.5) node{$-$};
+           \draw(2,-1) node{$\searrow$};
+           \draw(4,-1) node{$\nearrow$};
+           \draw(6,-1) node{$\searrow$};
+    \end{tikzpicture}
+            \end{tikzpicture}
+        </latex-image>
+    </image>
+    <p>
+        This diagram was the result of the following test point evaluations of <m>f'</m>: 
+        <md>
+            <mrow>f'(-2) \amp = -\frac{1}{\sqrt{3}}&lt; 0 </mrow>
+            <mrow>f'(0) \amp = \frac{7}{\sqrt{7}}&gt; 0</mrow>
+            <mrow>f'(2) \amp = -\frac{1}{\sqrt{3}}&lt; 0 </mrow>
+        </md>.
+        Note that <m>\sqrt{7/2}&lt; 2&lt; \sqrt{7}</m>.
+    </p>
+    <p>
+        We conclude that <m>f(-\sqrt{7})</m> and <m>f(\sqrt{7/2})</m> are local maximum values, and <m>f(-\sqrt{7/2}</m> and <m>f(\sqrt{7}</m> are local minimum values. These conclusions are verified by the actual graph of <m>f</m>.
+    </p>
+    <figure xml:id="fig_im_first_der_test_rad_graph">
+        <caption>Graph of <m>f(x)=x\, \sqrt{7-x^2}</m></caption>
+        <image>
+            <shortdescription>Graph of the original function of the example</shortdescription>
+            <sageplot>
+                l=[r"$-\sqrt{7}$",r"$-\sqrt{\frac{7}{2}}$",r"$\sqrt{\frac{7}{2}}$", r"$\sqrt{7}$"]
+                f=plot(x*sqrt(7-x^2),x,-sqrt(7),sqrt(7), ticks=[[-sqrt(7),-sqrt(7/2),sqrt(7/2),sqrt(7)],[-3,-2,-1,1,2,3]], tick_formatter=[l,None])
+                f
+            </sageplot>
+        </image>
+    </figure>
     </solution>
     </example>
 
