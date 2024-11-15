@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Limits at infinity</title>
+<title>Back Matter</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
@@ -412,7 +412,7 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_cont_ivt.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_infinite_limits.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_concavity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -557,7 +557,7 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_ivt" class="internal"><span class="title">Intermediate value theorem</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
@@ -580,7 +580,7 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">21</span> <span class="title">Mean value theorem</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_first_der_test.html" class="internal"><span class="codenumber">22</span> <span class="title">Monotonicity and first derivative test</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_concavity.html" class="internal"><span class="codenumber">23</span> <span class="title">Concavity and inflection points</span></a></div></li>
-<li class="toc-item toc-backmatter">
+<li class="toc-item toc-backmatter active">
 <div class="toc-title-box"><a href="my-great-book-27.html" class="internal"><span class="title">Back Matter</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
@@ -592,176 +592,16 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_lim_at_infty"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">8</span><span class="space"> </span><span class="title">Limits at infinity</span>
-</h2>
-<article class="objectives goal-like" id="s_lim_at_infty-2"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="decimal" id="s_lim_at_infty-2-1">
-<li id="s_lim_at_infty-2-1-1"><div class="para" id="s_lim_at_infty-2-1-1-1">Give formal definition of limit of function at (plus and minus) infinity.</div></li>
-<li id="s_lim_at_infty-2-1-2"><div class="para" id="s_lim_at_infty-2-1-2-1">Investigate limits at infinity graphically.</div></li>
-<li id="s_lim_at_infty-2-1-3"><div class="para" id="s_lim_at_infty-2-1-3-1">Introduce valid rules and formulas for limits at infinity.</div></li>
-<li id="s_lim_at_infty-2-1-4"><div class="para" id="s_lim_at_infty-2-1-4-1">Evaluate limits at infinity using limit rules and formulas.</div></li>
-<li id="s_lim_at_infty-2-1-5"><div class="para" id="s_lim_at_infty-2-1-5-1">Define horizontal asymptotes using language of limits at infinity.</div></li>
-</ol></article><div class="para" id="s_lim_at_infty-3">We motivated the introduction of limit notation as a useful and precise way of describing the behavior of the values of a function <span class="process-math">\(f\)</span> as its inputs approach a fixed real number <span class="process-math">\(a\in \R\text{.}\)</span> It is natural to ask, however, how the values of <span class="process-math">\(f\)</span> vary as inputs move off to infinity in the positive or negative direction. For example, suppose the number of sales <span class="process-math">\(s\)</span> of a product is given as a function <span class="process-math">\(s=f(t)\text{,}\)</span> where <span class="process-math">\(t\)</span> is the number of days since the product’s introduction to the market. Naturally, a sales team would be interested in what happens to <span class="process-math">\(f(t)\)</span> as <span class="process-math">\(t\)</span> goes to infinity. The definition below makes rigorous sense of this “going to infinity” business. Notice that it is not so very different than our usual epsilon-delta definition of the limit.</div>
-<article class="definition definition-like" id="d_lim_at_infty"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span><span class="space"> </span><span class="title">Limits at infinity.</span>
-</h3>
-<div class="para logical" id="d_lim_at_infty-2-1"><ol class="decimal" id="d_lim_at_infty-2-1-1">
-<li id="d_lim_at_infty-2-1-1-1">
-<span class="heading"><span class="title">Limit at <span class="process-math">\(\infty\)</span>.</span></span><div class="para logical" id="d_lim_at_infty-2-1-1-1-2">
-<div class="para">Suppose <span class="process-math">\(f\)</span> is defined on an open interval of the form <span class="process-math">\((a,\infty)\text{.}\)</span> We say that the <dfn class="terminology">limit of <span class="process-math">\(f\)</span> at positive infinity (or at <span class="process-math">\(\infty\)</span>)</dfn> exists if there is a value <span class="process-math">\(L\)</span> satisfying the following property: for all <span class="process-math">\(\epsilon&gt; 0\text{,}\)</span> there exists a <span class="process-math">\(M\geq a\)</span> such that if <span class="process-math">\(x&gt; M\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Using logical shorthand:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\text{for all } \epsilon&gt; 0, \text{ there is } M\geq a, \text{ s.t.
-} x&gt; M\implies \abs{f(x)-L}&lt; \epsilon\text{.}
-\end{equation*}
-</div>
-<div class="para">When this is the case, we call <span class="process-math">\(L\)</span> the limit of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches positive infinity (or <span class="process-math">\(\infty\)</span>), and write</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lim_{x\to \infty}f(x)=L\text{.}
-\end{equation*}
-</div>
-</div>
-</li>
-<li id="d_lim_at_infty-2-1-1-2">
-<span class="heading"><span class="title">Limit at <span class="process-math">\(-\infty\)</span>.</span></span><div class="para logical" id="d_lim_at_infty-2-1-1-2-2">
-<div class="para">Suppose <span class="process-math">\(f\)</span> is defined on an open interval of the form <span class="process-math">\((-\infty,a)\text{.}\)</span> We say that the <dfn class="terminology">limit of <span class="process-math">\(f\)</span> at negative infinity (or at <span class="process-math">\(-\infty\)</span>)</dfn> exists if there is a value <span class="process-math">\(L\)</span> satisfying the following property: for all <span class="process-math">\(\epsilon&gt; 0\text{,}\)</span> there exists a <span class="process-math">\(M\leq a\)</span> such that if <span class="process-math">\(x&lt; M\text{,}\)</span> then <span class="process-math">\(\abs{f(x)-L}&lt; \epsilon\text{.}\)</span> Using logical shorthand:</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\text{for all } \epsilon&gt; 0, \text{ there is } M\leq a, \text{ s.t.
-} x&lt; M\implies \abs{f(x)-L}&lt; \epsilon\text{.}
-\end{equation*}
-</div>
-<div class="para">When this is the case, we call <span class="process-math">\(L\)</span> the limit of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches negative infinity (or <span class="process-math">\(-\infty\)</span>), and write</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lim_{x\to -\infty}f(x)=L\text{.}
-\end{equation*}
-</div>
-</div>
-</li>
-</ol></div></article><article class="remark remark-like" id="s_lim_at_infty-5"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.2</span><span class="period">.</span><span class="space"> </span><span class="title">Limits at infinity: informal.</span>
-</h3>
-<div class="para" id="s_lim_at_infty-5-2">Informally, we have <span class="process-math">\(\lim\limits_{x\to \infty}f(x)=L\)</span> if we can make <span class="process-math">\(f(x)\)</span> arbitrarily close to <span class="process-math">\(L\)</span> for all inputs <span class="process-math">\(x\)</span> that are sufficiently large and positive. It is useful to think of the <span class="process-math">\(M\)</span> in the formal definition as a large <em class="emphasis">positive</em> number such that <span class="process-math">\(f(x)\)</span> is guaranteed to be within <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\)</span> for all <span class="process-math">\(x\)</span> is greater than (i.e., to the right of) <span class="process-math">\(M\text{.}\)</span>
-</div>
-<div class="para" id="s_lim_at_infty-5-3">Similarly, we have <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)=L\)</span> if we can make <span class="process-math">\(f(x)\)</span> arbitrarily close to <span class="process-math">\(L\)</span> for all inputs <span class="process-math">\(x\)</span> that are sufficiently large and negative. In this case, it is useful to think of the <span class="process-math">\(M\)</span> in the formal definition as a large <em class="emphasis">negative</em> number such that <span class="process-math">\(f(x)\)</span> is guaranteed to be within <span class="process-math">\(\epsilon\)</span> of <span class="process-math">\(L\)</span> for all <span class="process-math">\(x\)</span> less than (i.e., to the left of) <span class="process-math">\(M\text{.}\)</span>
-</div></article><article class="remark remark-like" id="s_lim_at_infty-6"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span><span class="space"> </span><span class="title">At infinity versus at a point.</span>
-</h3>
-<div class="para logical" id="s_lim_at_infty-6-2">
-<div class="para">The limit at infinity notation is very similar to the limit at a point notation:</div>
-<div class="displaymath process-math" id="s_lim_at_infty-6-2-1">
-\begin{align*}
-\lim\limits_{x\to \infty}f(x) \amp =L \amp \lim\limits_{x\to a}f(x)\amp =L\text{.}
-\end{align*}
-</div>
-<div class="para">That said, do not make the mistake of thinking that we are somehow treating infinity as if it were an actual real number. Think of our new notation as an extended version of our old notation. The ‘<span class="process-math">\(x\to\infty\)</span>’ in the subscript is just a sort of shorthand for saying “as <span class="process-math">\(x\)</span> gets sufficiently large and positive”. In fact, so useful is this <span class="process-math">\(x\to \infty\)</span> shorthand, that you will see us use it frequently on its own, outside of the limit notation.</div>
-</div></article><div class="para logical" id="s_lim_at_infty-7">
-<div class="para">Graphically speaking, if <span class="process-math">\(\lim\limits_{x\to \infty}f(x)=L\text{,}\)</span> then the <span class="process-math">\(y\)</span>-values of points on the graph of <span class="process-math">\(f\)</span> will get closer and closer to <span class="process-math">\(L\text{,}\)</span> as <span class="process-math">\(x\to \infty\text{.}\)</span> This means the graph of <span class="process-math">\(f\)</span> will get arbitrarily close to the horizontal line <span class="process-math">\(y=L\)</span> for points lying further and further to the right. A similar observation holds if the limit at <span class="process-math">\(-\infty\)</span> exists. This is illustrated in <a href="s_lim_at_infty.html#fig_lim_at_infty" class="xref" data-knowl="./knowl/xref/fig_lim_at_infty.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.4">Figure 8.4</a> for the graph of a function <span class="process-math">\(f\)</span> that satisfies</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_lim_at_infty.html" id="s_lim_at_infty-7-11">
-\begin{align*}
-\lim\limits_{x\to \infty}f(x) \amp =1 \amp  \lim\limits_{x\to -\infty}f(x)\amp =-2\text{.}
-\end{align*}
-</div>
-</div>
-<figure class="figure figure-like" id="fig_lim_at_infty"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/fig_lim_at_infty-2.svg" role="img" class="contained" alt="Graph of function with horizontal asymptotes"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4<span class="period">.</span></span><span class="space"> </span>Graph of function <span class="process-math">\(f\)</span> satisfying <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)=-2\)</span> and <span class="process-math">\(\lim\limits_{x\to \infty}f(x)=1\)</span></figcaption></figure><div class="para" id="s_lim_at_infty-9">When a curve in the plane behaves in such a manner, we say that it has a horizontal asymptote. We give a formal definition of this below for the graph of a function, using limit-at-infinity notation.</div>
-<article class="definition definition-like" id="d_horizontal_asymptote"><h3 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span><span class="space"> </span><span class="title">Horizontal asymptote.</span>
-</h3>
-<div class="para" id="d_horizontal_asymptote-2-1">The line <span class="process-math">\(y=L\)</span> is a <dfn class="terminology">horizontal asymptote</dfn> of the graph of a function <span class="process-math">\(f\)</span> if <span class="process-math">\(\lim\limits_{x\to \infty}f(x)=L\)</span> or <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)=L\text{.}\)</span>
-</div></article><div class="para" id="s_lim_at_infty-11">The existence or nonexistence of horizontal asymptotes for the graph of a function gives us an easy visual way of deciding whether limits at infinity exist.</div>
-<article class="example example-like" id="eg_lim_at_infty_cos"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: <span class="process-math">\(\cos\)</span>.</span>
-</h3>
-<div class="para logical" id="eg_lim_at_infty_cos-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=\cos x\text{.}\)</span>
-</div>
-<ol class="decimal" id="eg_lim_at_infty_cos-2-1-2">
-<li id="eg_lim_at_infty_cos-2-1-2-1"><div class="para" id="eg_lim_at_infty_cos-2-1-2-1-1">Provide a graph of <span class="process-math">\(f\)</span> over its entire domain.</div></li>
-<li id="eg_lim_at_infty_cos-2-1-2-2"><div class="para" id="eg_lim_at_infty_cos-2-1-2-2-1">Argue graphically whether the infinite limits <span class="process-math">\(\lim\limits_{x\to \pm \infty}f(x)\)</span> exist.</div></li>
-</ol>
-</div>
-<div class="solutions"><details id="eg_lim_at_infty_cos-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_lim_at_infty_cos-3-1">From the graph of <span class="process-math">\(f(x)=\cos x\)</span> in <a href="s_lim_at_infty.html#fig_graph_cos" class="xref" data-knowl="./knowl/xref/fig_graph_cos.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.7">Figure 8.7</a>, we see visually that there are no horizontal asymptotes: in more detail, since <span class="process-math">\(f(x)\)</span> oscillate between consistently between <span class="process-math">\(-1\)</span> and <span class="process-math">\(1\)</span> as <span class="process-math">\(x\to \pm \infty\text{,}\)</span> there is no one fixed value <span class="process-math">\(L\)</span> that the values of <span class="process-math">\(f\)</span> approach. Thus the limits of <span class="process-math">\(f\)</span> at <span class="process-math">\(\infty\)</span> and <span class="process-math">\(-\infty\)</span> do not exist. <figure class="figure figure-like" id="fig_graph_cos"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_graph_cos.svg" role="img" class="contained" alt="Graph of cosine"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.7<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x)=\cos x\)</span></figcaption></figure>
-</div></div></details></div></article><div class="para" id="s_lim_at_infty-13">Fix a positive integer <span class="process-math">\(n\)</span> and define <span class="process-math">\(f\colon \R-\{0\}\rightarrow \R\)</span> as <span class="process-math">\(f(x)=\frac{1}{x^n}\text{.}\)</span> We recall that the graph of such a function looks like one of the graphs in <a href="s_lim_at_infty.html#fig_reciprocal" class="xref" data-knowl="./knowl/xref/fig_reciprocal.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.8">Figure 8.8</a>, depending on whether <span class="process-math">\(n\)</span> is even or odd.</div>
-<figure class="figure figure-like" id="fig_reciprocal"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel middle" style="width:50%;"><figure class="figure figure-like" id="fig_recip_odd"><img src="generated/sageplot/fig_recip_odd-2.svg" role="img" class="contained" alt="Graph of reciprocal power function"><figcaption><span class="codenumber">(a)</span><span class="space"> </span><span class="process-math">\(n\)</span> odd</figcaption></figure></div>
-<div class="sbspanel middle" style="width:50%;"><figure class="figure figure-like" id="fig_recip_even"><img src="generated/sageplot/fig_recip_even-2.svg" role="img" class="contained" alt="Graph of reciprocal power function"><figcaption><span class="codenumber">(b)</span><span class="space"> </span><span class="process-math">\(n\)</span> even</figcaption></figure></div>
-</div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.8<span class="period">.</span></span><span class="space"> </span>Graphs of <span class="process-math">\(f(x)=\frac{1}{x^n}\text{,}\)</span> for positive integer <span class="process-math">\(n\text{.}\)</span></figcaption></figure><div class="para logical" id="s_lim_at_infty-15">
-<div class="para">In all cases we see that the graph of any such function <span class="process-math">\(f(x)=\frac{1}{x^n}\)</span> has <span class="process-math">\(y=0\)</span> both as a right and left asymptote. This suggests that</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lim_{x\to \infty}\frac{1}{x^n}=\lim_{x\to -\infty}\frac{1}{x^n}=0\text{.}
-\end{equation*}
-</div>
-<div class="para">The theorem below makes this observation official.</div>
-</div>
-<article class="theorem theorem-like" id="th_recip_powers"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: reciprocal power functions.</span>
-</h3>
-<div class="para logical" id="th_recip_powers-2-1">
-<div class="para">Let <span class="process-math">\(f(x)=\frac{1}{x^n}\text{,}\)</span> where <span class="process-math">\(n\)</span> is a positive integer. We have</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\lim_{x\to \infty}\frac{1}{x^n}=\lim_{x\to -\infty}\frac{1}{x^n}=0\text{.}
-\end{equation*}
-</div>
-</div></article><article class="remark remark-like" id="s_lim_at_infty-17"><h3 class="heading">
-<span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity laws.</span>
-</h3>
-<div class="para" id="s_lim_at_infty-17-2">It is not so surprising that “at infinity” limits satisfy “at infinity” versions of the limit rules in <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a>, as we as the sandwich theorem. Note, however, that our various “evaluation limit formulas” (e.g., polynomial evaluation) do not extend to limits at infinity, as it simply makes no sense to evaluate a function <span class="process-math">\(f\)</span> at <span class="process-math">\(\infty\text{:}\)</span> that is, it simply makes no sense to write <span class="process-math">\(f(\infty)\)</span> or <span class="process-math">\(f(-\infty)\text{.}\)</span>
-</div>
-<div class="para" id="s_lim_at_infty-17-3">It is worth stating explicitly the  “at infinity” version of the <a href="s_limits_naive.html#th_lim_repl" class="xref" data-knowl="./knowl/xref/th_lim_repl.html" data-reveal-label="Reveal" data-close-label="Close" title="Item 8: Replacement rule">replacement rule</a>, which has a slightly different flavor than the original version. We do so only for positive infinity: suppose <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are defined on an open interval <span class="process-math">\((a,\infty)\)</span> and that <span class="process-math">\(\lim\limits_{x\to \infty}g(x)\)</span> exists; if there exists an <span class="process-math">\(M\geq a\)</span> such that <span class="process-math">\(f(x)=g(x)\)</span> for all <span class="process-math">\(x\geq M\text{,}\)</span> then <span class="process-math">\(\lim\limits_{x\to \infty}f(x)=\lim\limits_{x\to \infty}g(x)\text{.}\)</span> In plain English: if <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <em class="emphasis">eventually</em> equal to one another, than their limits at <span class="process-math">\(\infty\)</span> are equal.</div></article><div class="para" id="s_lim_at_infty-18">The formulas in <a href="s_lim_at_infty.html#th_recip_powers" class="xref" data-knowl="./knowl/xref/th_recip_powers.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.9: Limit at infinity: reciprocal power functions">Theorem 8.9</a> give us a decent starting point in terms of computing limits at infinity. Combining these formulas and with limit rules, we can compute limits at infinity for more complicated functions. In order to make use of <a href="s_lim_at_infty.html#th_recip_powers" class="xref" data-knowl="./knowl/xref/th_recip_powers.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.9: Limit at infinity: reciprocal power functions">Theorem 8.9</a>, however, we often have to include an algebra step first.</div>
-<article class="example example-like" id="eg_lim_infty_rational_function"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: rational function.</span>
-</h3>
-<div class="para" id="eg_lim_infty_rational_function-2-1">Let <span class="process-math">\(f(x)=\displaystyle\frac{3x^3-100x}{4\abs{x}^3+x^2+1}\text{.}\)</span> Compute <span class="process-math">\(\lim\limits_{x\to \infty}f(x)\)</span> and <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)\text{.}\)</span>
-</div>
-<div class="solutions"><details id="eg_lim_infty_rational_function-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_infty_rational_function-3-1">
-<div class="para">Note that both the numerator and denominator approach <span class="process-math">\(\pm \infty\)</span> as <span class="process-math">\(x\to \pm \infty\text{.}\)</span> Our intuition is that the highest power of <span class="process-math">\(x\)</span> is the “dominant” term for large <span class="process-math">\(x\text{.}\)</span> To crystallize this intuition algebraically, we factor out the <span class="process-math">\(x^3\)</span> in the top and bottom, after first dealing with the absolute value:</div>
-<div class="displaymath process-math" id="eg_lim_infty_rational_function-3-1-7">
-\begin{align*}
-\lim\limits_{x\to \infty} \frac{3x^3-100x}{4\abs{x}^3+x^2+1}\amp = 
-\lim\limits_{x\to \infty}\frac{3x^3-100x}{4x^3+x^2+1} \amp (x\geq 0\implies \abs{x}=x) \\
-\amp = \lim\limits_{x\to \infty}\frac{x^3(3-\frac{100}{x^2})}{x^3(4+\frac{1}{x}+\frac{1}{x^3})}\\
-\amp = \lim\limits_{x\to \infty}\frac{3-\frac{100}{x^2}}{4+\frac{1}{x}+\frac{1}{x^3}} \amp (\text{repl.}) \\
-\amp\frac{3-100\lim\limits_{x\to\infty }\frac{1}{x^2}}{4+\lim\limits_{x\to\infty }\frac{1}{x}+\lim\limits_{x\to\infty }\frac{1}{x^3}} \amp (\text{quot., sum, scal. mult.}) \\
-\amp = \frac{4+0}{3+0+0} \amp (1/x^n\to 0)\\
-\amp = \frac{4}{3}\\
-\lim\limits_{x\to -\infty} \frac{3x^3-100x}{4\abs{x}^3+x^2+1}\amp = 
-\lim\limits_{x\to -\infty}\frac{3x^3-100x}{-4x^3+x^2+1} \amp (x\leq 0\implies \abs{x}=-x) \\
-\amp = \lim\limits_{x\to -\infty}\frac{x^3(3-\frac{100}{x^2})}{x^3(-4+\frac{1}{x}+\frac{1}{x^3})}\\
-\amp = \lim\limits_{x\to -\infty}\frac{3-\frac{100}{x^2}}{-4+\frac{1}{x}+\frac{1}{x^3}} \amp (\text{repl.}) \\
-\amp\frac{3-100\lim\limits_{x\to-\infty }\frac{1}{x^2}}{-4+\lim\limits_{x\to-\infty }\frac{1}{x}+\lim\limits_{x\to-\infty }\frac{1}{x^3}} \amp (\text{quot., sum, scal. mult.}) \\
-\amp = \frac{4+0}{-3+0+0} \amp (1/x^n\to 0)\\
-\amp = -\frac{4}{3}\text{.}
-\end{align*}
-</div>
-</div></div></details></div></article><article class="example example-like" id="eg_lim_infty_radical"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span><span class="space"> </span><span class="title">Limit at infinity: radical function.</span>
-</h3>
-<div class="para" id="eg_lim_infty_radical-2-1">Let <span class="process-math">\(f(x)=\displaystyle \frac{\sqrt{x^2+4}}{2x^2+1}\text{.}\)</span> Compute <span class="process-math">\(\lim\limits_{x\to -\infty}f(x)\text{.}\)</span>
-</div>
-<div class="solutions"><details id="eg_lim_infty_radical-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_infty_radical-3-1">
-<div class="para">Again we have a situation where the numerator and denominator both approach <span class="process-math">\(\infty\text{.}\)</span> Using the same intuition as above, we guess that the <span class="process-math">\(x^2\)</span> term under the radical is the dominant one, as is the  <span class="process-math">\(x^2\)</span> term in the denominator. We make rigorous this intuition by factoring these out. Note how we must be careful with the radical simplification. In particular, we use the fact that <span class="process-math">\(\sqrt{x^2}=\abs{x}\text{,}\)</span> and then deal with the absolute value appropriately:</div>
-<div class="displaymath process-math" id="eg_lim_infty_radical-3-1-5">
-\begin{align*}
-\lim\limits_{x\to -\infty}\frac{\sqrt{x^2+4}}{2x^2+1} \amp = \lim\limits_{x\to -\infty}\frac{\sqrt{x^2(1+4/x^2)}}{x^2(2+1/x^2)} \\
-\amp = \lim\limits_{x\to -\infty}\frac{\abs{x}\sqrt{1+4/x^2}}{x^2(2+1/x^2)}\\
-\amp =\lim\limits_{x\to -\infty}\frac{-x\sqrt{1+4/x^2}}{x^2(2+1/x^2)} \amp (x\leq 0\implies \abs{x}=-x)\\
-\amp = \lim\limits_{x\to -\infty }-\frac{1}{x}\cdot\frac{\sqrt{1+4/x^2}}{x(2+1/x^2)}\\
-\amp = -\lim\limits_{x\to -\infty }\frac{1}{x}\cdot \frac{-\sqrt{1+4 \lim\limits_{x\to -\infty}1/x^2}}{2+\lim\limits_{x\to -\infty}1/x^2} \amp \text{(prod., quot., root, sum)}\\
-\amp = 0\cdot \frac{\sqrt{1+0}}{2+0} \amp (1/x^n\to 0)\\
-\amp = 0\text{.}
-\end{align*}
-</div>
-</div></div></details></div></article></section></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="backmatter" id="my-great-book-27"><nav class="summary-links"><ul>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></li>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></li>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></li>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></li>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-interactives.html" class="internal"><span class="codenumber">E</span> <span class="title">Interactives and computational cells</span></a></li>
+<li xmlns:pf="https://prefigure.org"><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></li>
+</ul></nav></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="s_cont_ivt.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_infinite_limits.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="s_concavity.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="appendix-notation.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

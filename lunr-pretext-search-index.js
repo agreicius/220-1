@@ -2116,6 +2116,105 @@ var ptx_lunr_docs = [
   "body": " Monotonicity and critical points: radical   Let . Find all critical points of , and for each critical point classify as a local maximum value of , local minimum value of , or neither.    Note first that the implied domain of is . Following , we first determine the critical points of . Note first that in this case is not differentiable at , making these critical points. Next, for all , we compute using the product and chain rules: . It follows that we have if and only if , or equivalently, . We conclude that there are in total four critical points: (where is not differentiable), and .   Sign diagram for derivative of example function    This diagram was the result of the following test point evaluations of : . Note that .  We conclude that and are local maximum values, and and are local minimum values. These conclusions are verified by the actual graph of .   Graph of   Graph of the original function of the example      "
 },
 {
+  "id": "s_concavity",
+  "level": "1",
+  "url": "s_concavity.html",
+  "type": "Section",
+  "number": "23",
+  "title": "Concavity and inflection points",
+  "body": " Concavity and inflection points   Logistic growth   A logistic function is often used to model a quantity whose growth is prevented from being unlimited by some external factors. These functions are used, for example, to model the growth of a population, or the growth of sales of a product. Below you find the graph of this type of function.   Graph of logsitic growth function   Graph of logistic growth function        What does the apparent horizontal asymptote of tells us about the quantity as a function of time?    Give a detailed qualitative description of the rate of change of with respect to over the interval .    Give a detailed qualitative description of the rate of change of with respect to over the interval . Explain why this description makes sense in light of the long term growth of .    Do you notice anything interesting about the value of at ?            Concavity and inflection points   Assume is differentiable on the open interval .    is concave up on if is increasing on .     is concave down on if is decreasing on .    If the graph of has a well-defined tangent line at , and if the concavity of changes at , then is called an inflection point of , and we say that has an inflection point at the input .        Concavity  Graphically speaking, a function will be concave up over an interval if the graph of over bends upward (or is smiley ), and it is concave down if the graph of over bends downward (or is frowny ).    Inflection points  The somewhat convoluted definition of an inflection point is designed to allow inflection points to exist at an input even if the function is not differentiable at .  For example, the function is not differentiable at , but the graph of still has a well-defined tangent line at the point : the issue is only that that tangent line is vertical. Our definition allows for to potentially be an inflection point. Indeed, we see that is an inflection point: is increasing for and decreasing for ; thus is concave up to the left of and concave down to the right of .  On the other hand, consider the function . Although the concavity changes at (from up to down), the graph of does not have a tangent line at , and thus does not qualify as an inflection point.   Applying to , we immediately derive the following theorem.    Assume is twice differentiable on the open interval .   If for all , then is concave up on .    If for all , then is concave down on .    If has an inflection point at , then .        Concavity and inflection points   Assume is defined on a set . To determine intervals of constant concavity of and identify inflection points proceed as follows.   Make a sign diagram of over . Indicate on your real line any inputs where is zero or undefined.   Label the top part of the diagram and indicate with the sign of on a given interval.    (Optional). Label the bottom part of the diagram and indicate with or the concavity of on the given interval.       For each input where is either zero or undefined, decide using and whether has an inflection point at .        Concavity: radical function   Let . Find the intervals of constant concavity of and identify any inputs where has an inflection point.         Concavity: polynomial   Let . Find the intervals of constant concavity of and identify any inputs where has an inflection point.         Second derivative test   Assume is continuous on an open interval containing .   If and , then is a local minimum value of .    If and , then is a local maximum value of .    If and , then nothing can be concluded about the critical point . In other words, our text is inconclusive in this case.        Second derivative test: polynomial   Let . Find all critical points of , and for each critical point  attempt to use to classify as a local maximum value or local minimum value.        "
+},
+{
+  "id": "eg_concavity_logistic_growth",
+  "level": "2",
+  "url": "s_concavity.html#eg_concavity_logistic_growth",
+  "type": "Example",
+  "number": "23.1",
+  "title": "Logistic growth.",
+  "body": " Logistic growth   A logistic function is often used to model a quantity whose growth is prevented from being unlimited by some external factors. These functions are used, for example, to model the growth of a population, or the growth of sales of a product. Below you find the graph of this type of function.   Graph of logsitic growth function   Graph of logistic growth function        What does the apparent horizontal asymptote of tells us about the quantity as a function of time?    Give a detailed qualitative description of the rate of change of with respect to over the interval .    Give a detailed qualitative description of the rate of change of with respect to over the interval . Explain why this description makes sense in light of the long term growth of .    Do you notice anything interesting about the value of at ?          "
+},
+{
+  "id": "d_concav_inflect",
+  "level": "2",
+  "url": "s_concavity.html#d_concav_inflect",
+  "type": "Definition",
+  "number": "23.3",
+  "title": "Concavity and inflection points.",
+  "body": " Concavity and inflection points   Assume is differentiable on the open interval .    is concave up on if is increasing on .     is concave down on if is decreasing on .    If the graph of has a well-defined tangent line at , and if the concavity of changes at , then is called an inflection point of , and we say that has an inflection point at the input .      "
+},
+{
+  "id": "s_concavity-4",
+  "level": "2",
+  "url": "s_concavity.html#s_concavity-4",
+  "type": "Remark",
+  "number": "23.4",
+  "title": "Concavity.",
+  "body": " Concavity  Graphically speaking, a function will be concave up over an interval if the graph of over bends upward (or is smiley ), and it is concave down if the graph of over bends downward (or is frowny ).  "
+},
+{
+  "id": "s_concavity-5",
+  "level": "2",
+  "url": "s_concavity.html#s_concavity-5",
+  "type": "Remark",
+  "number": "23.5",
+  "title": "Inflection points.",
+  "body": " Inflection points  The somewhat convoluted definition of an inflection point is designed to allow inflection points to exist at an input even if the function is not differentiable at .  For example, the function is not differentiable at , but the graph of still has a well-defined tangent line at the point : the issue is only that that tangent line is vertical. Our definition allows for to potentially be an inflection point. Indeed, we see that is an inflection point: is increasing for and decreasing for ; thus is concave up to the left of and concave down to the right of .  On the other hand, consider the function . Although the concavity changes at (from up to down), the graph of does not have a tangent line at , and thus does not qualify as an inflection point.  "
+},
+{
+  "id": "th_concavity",
+  "level": "2",
+  "url": "s_concavity.html#th_concavity",
+  "type": "Theorem",
+  "number": "23.6",
+  "title": "",
+  "body": "  Assume is twice differentiable on the open interval .   If for all , then is concave up on .    If for all , then is concave down on .    If has an inflection point at , then .      "
+},
+{
+  "id": "proc_concavity",
+  "level": "2",
+  "url": "s_concavity.html#proc_concavity",
+  "type": "Procedure",
+  "number": "23.7",
+  "title": "Concavity and inflection points.",
+  "body": " Concavity and inflection points   Assume is defined on a set . To determine intervals of constant concavity of and identify inflection points proceed as follows.   Make a sign diagram of over . Indicate on your real line any inputs where is zero or undefined.   Label the top part of the diagram and indicate with the sign of on a given interval.    (Optional). Label the bottom part of the diagram and indicate with or the concavity of on the given interval.       For each input where is either zero or undefined, decide using and whether has an inflection point at .      "
+},
+{
+  "id": "eg_concavity_rad",
+  "level": "2",
+  "url": "s_concavity.html#eg_concavity_rad",
+  "type": "Example",
+  "number": "23.8",
+  "title": "Concavity: radical function.",
+  "body": " Concavity: radical function   Let . Find the intervals of constant concavity of and identify any inputs where has an inflection point.       "
+},
+{
+  "id": "eg_concavity_poly",
+  "level": "2",
+  "url": "s_concavity.html#eg_concavity_poly",
+  "type": "Example",
+  "number": "23.9",
+  "title": "Concavity: polynomial.",
+  "body": " Concavity: polynomial   Let . Find the intervals of constant concavity of and identify any inputs where has an inflection point.       "
+},
+{
+  "id": "th_second_der",
+  "level": "2",
+  "url": "s_concavity.html#th_second_der",
+  "type": "Theorem",
+  "number": "23.10",
+  "title": "Second derivative test.",
+  "body": " Second derivative test   Assume is continuous on an open interval containing .   If and , then is a local minimum value of .    If and , then is a local maximum value of .    If and , then nothing can be concluded about the critical point . In other words, our text is inconclusive in this case.      "
+},
+{
+  "id": "eg_second_der",
+  "level": "2",
+  "url": "s_concavity.html#eg_second_der",
+  "type": "Example",
+  "number": "23.11",
+  "title": "Second derivative test: polynomial.",
+  "body": " Second derivative test: polynomial   Let . Find all critical points of , and for each critical point  attempt to use to classify as a local maximum value or local minimum value.       "
+},
+{
   "id": "appendix-notation",
   "level": "1",
   "url": "appendix-notation.html",
