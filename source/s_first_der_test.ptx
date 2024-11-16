@@ -241,7 +241,7 @@ Thus the sign of <m>f'</m> for various portions of the real line is described by
     </statement>
     <solution>
     <p>
-    In the course of the sign diagram from <xref ref="eg_monoton_poly"/> we saw that <m>x=-1,0,1</m> were the critical points of <m>f</m>. Since the sign of <m>f'</m> switches from positive to negative at <m>-1</m>, <m>f(-1)</m> is a local maximum value of <m>f</m>; since the sign of <m>f'</m> switches from negative to positive at <m>1</m>, <m>f(1)</m> is a local maximum value of <m>f</m>. Since <m>f'(x)\ne 0</m> for <m>x</m> close to <m>0</m> and since the sign of <m>f'</m> does not switch at <m>x=0</m>, we see that <m>f(0)</m> is neither a local maximum nor a local minimum value. 
+    In the course of the sign diagram from <xref ref="eg_monoton_poly"/> we saw that <m>x=-1,0,1</m> were the critical points of <m>f</m>. Since the sign of <m>f'</m> switches from positive to negative at <m>-1</m>, <m>f(-1)</m> is a local maximum value of <m>f</m>; since the sign of <m>f'</m> switches from negative to positive at <m>1</m>, <m>f(1)</m> is a local minimum value of <m>f</m>. Since <m>f'(x)\ne 0</m> for <m>x</m> close to <m>0</m> and since the sign of <m>f'</m> does not switch at <m>x=0</m>, we see that <m>f(0)</m> is neither a local maximum nor a local minimum value. 
     </p>
     </solution>
     </example>
