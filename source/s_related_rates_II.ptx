@@ -32,13 +32,15 @@
                 \end{array}
                 </mrow>
         </md>.
+    </p>
         <figure xml:id="fig_two_trains">
             <caption>Functions <m>r(t)</m>, <m>b(t)</m>, <m>d(t)</m>.</caption>
             <image source="im_two_trains.png" width="50%">
                 <shortdescription>Diagram of red and blue trains</shortdescription>
             </image>
         </figure>
-        It follows easily from <xref ref="fig_two_trains"/> that  
+        <p>
+            It follows easily from <xref ref="fig_two_trains"/> that  
         <men xml:id="eq_two_trains">
             d(t)^2=r(t)^2+b(t)^2
         </men>.
