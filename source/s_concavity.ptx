@@ -49,7 +49,31 @@
     </statement>
     <solution>
     <p>
-    
+    <ol>
+        <li>
+            <p>
+               The function <m>Q(t)</m> is increasing on its entire domain, with a horizontal asymptote of <m>y=L</m>, meaning that <m>\lim\limits_{t\to \infty}Q(t)=L</m>. This means the quantity <m>Q</m> is always growing, approaches a ceiling value of <m>L</m>, but never reaches that value. (The value <m>L</m> in a logistic function like this is called the <term>carrying capacity</term> of <m>Q</m> in modeling contexts.)
+            </p>
+        </li>
+        <li>
+            <p>
+                As always, the rate of change of <m>Q</m> with respect to <m>t</m> is the derivative function <m>\frac{dQ}{dt}=Q'(t)</m>.  We see that for <m>t\in [0,t_2]</m> the slope of the tangent line to the graph of <m>Q</m> at <m>t</m> is positive, and gets more positive as <m>t</m> increases. This means that <m>Q'(t)</m> is positive and increasing. In terms of <m>Q</m>, this means that <m>Q</m> is increasing <em>at an increasing rate</em> over this interval.   
+            </p>
+        </li>
+        <li>
+            <p>
+                Similar reasoning shows that for <m>t\in [t_2, t_6]</m> the rate of change <m>Q'(t)</m> is positive but getting less positive (<ie/>, <m>Q'</m> is decreasing). In terms of <m>Q</m>, this means that <m>Q</m> is increasing <em>at a decreasing rate</em> over this interval. This makes sense in terms of the limiting value <m>L</m> of <m>Q</m>: since <m>Q</m> cannot exceed this value, its rate of increase must level off as it gets closer in value to <m>L</m>. 
+            </p>
+        </li>
+        <li>
+            <p>
+                It appears that <m>Q(t_2)=\frac{L}{2}</m>. As it turns out, this is a special property that holds for all logistic functions. In more detail, our previous analysis identifies <m>t_2</m> as the unique inflection point of the function <m>Q(t)</m>. (See <xref ref="d_concav_inflect"/>.) In the modeling context <m>t_2</m> is sometimes called a <term>point of diminishing returns</term>, since the rate of increase of <m>Q</m> levels off after that point. It turns out that for any logistic function the value of the function at this point in time is always equal to <m>L/2</m>, half of the carrying capacity <m>L</m>. 
+            </p>
+            <p>
+                This property of logistic functions is useful for predicting the ceiling value of a quantity you are studying. Imagine you take daily measurements of a growing population of bacteria that you believe is accurately modeled by a logistic function. From that data you can compute the <em>average rate of change</em> over each day, which you interpret as an <em>estimate</em> of the <em>instantaneous rate of change</em> of growth each day. On the first day that you notice your rate of growth estimate has decreased from the previous day, you conclude that you have reached (approximately) the point of diminishing returns. If the population on that day is <m>Q_0</m>, you estimate that the ceiling of the population is <m>2Q_0</m>.    
+            </p>
+        </li>
+    </ol>
     </p>
     </solution>
     </example>
