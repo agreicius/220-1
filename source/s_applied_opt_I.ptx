@@ -17,6 +17,26 @@
             </li>
         </ol>
     </objectives>
+    <example xml:id="eg_square_to_box">
+    <title>Box of maximum volume</title>
+    <statement>
+    <p>
+    A square piece of cardboard of dimension <m>2</m> meters is made into a box by cutting squares of equal dimension out of each corner and folding up the sides. (See <xref ref="fig_square_to_box"/>.) Find the dimension of the cutout squares that maximizes the volume of the resulting box. 
+    </p>
+    <figure xml:id="fig_square_to_box">
+        <caption>A box from a square</caption>
+        <image width="70%" source="square_to_box.png">
+            <shortdescription>A square to a box</shortdescription>
+        </image>
+    </figure>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
     <algorithm xml:id="proc_applied_opt">
         <title>Applied optimization</title>
         <statement>
@@ -118,6 +138,20 @@
                </p>
         </statement>
     </algorithm>
+    <example xml:id="eg_fence_perimeter">
+    <title>Minimal fence perimeter</title>
+    <statement>
+    <p>
+    Farmer Dudley is building a rectangular pen for his iguanas. He will use the 50 meter long side of his barn as one side of the pen, and will construct fencing for the remaining three sides of the pen. The pen must have a total area of 200 m<m>^2</m>. What is the minimum length of fencing Dudley must build to create an iguana pen matching these specifications.   
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
+    
     <p>
         It is often the case that the domain <m>D</m> of the function we wish to optimize is <em>not</em> of the simple form <m>[a,b]</m>, where <xref ref="proc_extreme"/> applies. The following generalization comes in handy in such situations. 
     </p>
