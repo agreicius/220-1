@@ -41,6 +41,7 @@
     <xi:include href="s_concavity.ptx" />
     <xi:include href="s_curve_sketch_I.ptx" />
     <xi:include href="s_curve_sketch_II.ptx" />
+    <xi:include href="s_applied_opt_I.ptx" />
 
   <!-- </chapter> -->
     
