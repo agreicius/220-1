@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright    "
+  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright "
 },
 {
   "id": "s_intro",
@@ -420,7 +420,7 @@ var ptx_lunr_docs = [
   "url": "s_limit_sandwich.html#ss_sandwich-16",
   "type": "Proof",
   "number": "1",
-  "title": "Proof of <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
+  "title": "Proof of <span class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
   "body": " Proof of  We will prove that for all . First, observer that since , we have . Thus the function is even. Since is also even, it suffices to prove for all . Furthermore, since , and since , it suffices to show for all . To this end, take any . The triangle , where , , and lies within the the sector of the unit disc determined by . (Diagram to appear sometime soon.) Elementary trigonometry tells us that ; elementary geometry tells us that . We conclude that , or equivalently, for all . Since furthermore and for , we see that for all , as desired.  "
 },
 {
@@ -501,7 +501,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#rm_find_delta",
   "type": "Remark",
   "number": "4.7",
-  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
   "body": " Finding such that  In the final step of applying to a limit statment , we usually have found an open interval containing , and then must find a such that . The following approach is useful in this regard. Observe that and thus , where , are the distances from to the left and right endpoints of the interval.   Visualizing distances to endpoints of interval   Visualizing distances to endpoints of interval     Setting as the minimum of these distances, we now have , as desired.  Depending on the example, we can sometimes easily determine which of and is the minimum, giving us an explicit expression for . When things are too complicated, however, it is perfectly fine to set .  "
 },
 {
@@ -519,7 +519,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#eg_ep_delt_quad",
   "type": "Example",
   "number": "4.10",
-  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
   "body": " Finding for specific : quadratic function   Let . It is a fact that . Verify the epsilon-delta definition for this limit statement for the specific epsilon .    We wish to find satisfying . Proceeding as in , we first solve the inequality : . Notice that in this case, the set of solutions to the inequality is a union of two intervals: . Notice further that our limit point is an element of the second interval, and that we have , where . Thus, setting , we have . It follows that , as desired.   "
 },
 {
@@ -663,7 +663,7 @@ var ptx_lunr_docs = [
   "url": "s_continuous_def.html#s_continuous_def-5",
   "type": "Remark",
   "number": "6.3",
-  "title": "Continuity at <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(a\\)<\/span>.",
+  "title": "Continuity at <span class=\"process-math\">\\(a\\)<\/span>.",
   "body": " Continuity at  Let be a function with domain . Observe that our definition of continuity (and discontinuity) only applies to elements of the domain. (In fact, it only applies to elements of the domain that are either interior points or endpoints.)  For example, consider the function with domain . Since is not an element of the domain of , we do not say that is continuous or discontinuous at .  "
 },
 {
@@ -897,7 +897,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_at_infty.html#eg_lim_at_infty_cos",
   "type": "Example",
   "number": "8.6",
-  "title": "Limit at infinity: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\cos\\)<\/span>.",
+  "title": "Limit at infinity: <span class=\"process-math\">\\(\\cos\\)<\/span>.",
   "body": " Limit at infinity:   Let .   Provide a graph of over its entire domain.    Argue graphically whether the infinite limits exist.       From the graph of in , we see visually that there are no horizontal asymptotes: in more detail, since oscillate between consistently between and as , there is no one fixed value that the values of approach. Thus the limits of at and do not exist.  Graph of   Graph of cosine       "
 },
 {
@@ -1005,7 +1005,7 @@ var ptx_lunr_docs = [
   "url": "s_infinite_limits.html#eg_infty_lim_tan",
   "type": "Example",
   "number": "9.5",
-  "title": "Vertical asymptotes: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\tan\\)<\/span>.",
+  "title": "Vertical asymptotes: <span class=\"process-math\">\\(\\tan\\)<\/span>.",
   "body": " Vertical asymptotes:   Let . Recall that the domain of is .   Sketch a graph of on its entire domain.    Find any and all vertical or horizontal asymptotes of .          The graph of is given below.  Graph of   Graph of tan        For each integer , let . We see visually that for all , and hence that each line is a vertical asymptote of the graph of .      "
 },
 {
@@ -1212,7 +1212,7 @@ var ptx_lunr_docs = [
   "url": "s_der_function.html#eg_der_func_reciprocal",
   "type": "Example",
   "number": "11.7",
-  "title": "Derivative function: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
+  "title": "Derivative function: <span class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
   "body": " Derivative function:   Let . Compute the domain of and derive a formula for .       "
 },
 {
@@ -2013,7 +2013,7 @@ var ptx_lunr_docs = [
   "url": "s_mean_value.html#cor_mean_taylor",
   "type": "Corollary",
   "number": "21.10",
-  "title": "Taylor’s theorem (<span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(k=1\\)<\/span>).",
+  "title": "Taylor’s theorem (<span class=\"process-math\">\\(k=1\\)<\/span>).",
   "body": " Taylor's theorem ( )   Assume is twice differentiable on an interval containing as in interior point. Let be the linearization of centered at . For all we have . As a result, if for some constant and all , then we have for all .    See text.   "
 },
 {
@@ -2221,7 +2221,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "24",
   "title": "Curve sketching I",
-  "body": " Curve sketching I     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketching   When asked to give an accurate sketch of the graph of a function , we seek to produce a sketch that accurately reflects the following properties:   the domain of ;     - and -intercepts of ;    horizontal asymptotes, and more generally, the endpoint behavior of ( , limits of as approaches endpoints of );    vertical asymptotes;    critical points of , classified as points where attains a local maximum value, a local minimum value, or neither;    intervals of monotonicity of ( , intervals where is either increasing or decreasing);    intervals of constant concavity of ;    inflection points of .        Curve sketch: polynomial   Provide a graph of that includes all the details listed in .         Curve sketching: rational function   Provide a graph of that includes all the details listed in .        "
+  "body": " Curve sketching I     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketching   When asked to give an accurate sketch of the graph of a function , we seek to produce a sketch that accurately reflects the following properties:   the domain of ;     - and -intercepts of ;    horizontal asymptotes, and more generally, the endpoint behavior of ( , limits of as approaches endpoints of );    vertical asymptotes;    critical points of , classified as points where attains a local maximum value, a local minimum value, or neither;    intervals of monotonicity of ( , intervals where is either increasing or decreasing);    intervals of constant concavity of ;    inflection points of .        Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  Since is differentiable everywhere, the critical points of are the roots of . We first compute . Now solve .      Curve sketching: rational function   Provide a graph of that includes all the details listed in .        "
 },
 {
   "id": "s_curve_sketch_I-2",
@@ -2248,7 +2248,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "24.2",
   "title": "Curve sketch: polynomial.",
-  "body": " Curve sketch: polynomial   Provide a graph of that includes all the details listed in .       "
+  "body": " Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  Since is differentiable everywhere, the critical points of are the roots of . We first compute . Now solve .    "
 },
 {
   "id": "eg_curve_rational",
@@ -2266,7 +2266,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "25",
   "title": "Curve sketching II",
-  "body": " Curve sketching II     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketch: trig   Provide a graph of that includes all the details listed in to the best of your abilities .         Curve sketching: rational function   Provide a graph of that includes all the details listed in .        "
+  "body": " Curve sketching II     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketch: trig   Provide a graph of that includes all the details listed in to the best of your abilities .      Domain and intercepts      Endpoint behavior and vertical asymptotes      Critical points and intervals of monotonicity      Concavity and inflection points         Curve sketching: rational function   Provide a graph of that includes all the details listed in .      Domain and intercepts  The domain of is . The point is both the unique -intercept and the -intercept.    Endpoint behavior and vertical asymptotes      Critical points and intervals of monotonicity      Concavity and inflection points        "
 },
 {
   "id": "s_curve_sketch_II-2",
@@ -2284,7 +2284,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "25.1",
   "title": "Curve sketch: trig.",
-  "body": " Curve sketch: trig   Provide a graph of that includes all the details listed in to the best of your abilities .       "
+  "body": " Curve sketch: trig   Provide a graph of that includes all the details listed in to the best of your abilities .      Domain and intercepts      Endpoint behavior and vertical asymptotes      Critical points and intervals of monotonicity      Concavity and inflection points       "
 },
 {
   "id": "eg_curve_radical",
@@ -2293,7 +2293,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "25.2",
   "title": "Curve sketching: rational function.",
-  "body": " Curve sketching: rational function   Provide a graph of that includes all the details listed in .       "
+  "body": " Curve sketching: rational function   Provide a graph of that includes all the details listed in .      Domain and intercepts  The domain of is . The point is both the unique -intercept and the -intercept.    Endpoint behavior and vertical asymptotes      Critical points and intervals of monotonicity      Concavity and inflection points       "
 },
 {
   "id": "s_applied_opt_I",
@@ -2302,7 +2302,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "26",
   "title": "Applied optimization",
-  "body": " Applied optimization     Model real world questions as an optimization problem about a function .    Use calculus techniques to fully analyze a modeled optimization problem and provide an answer in the form of a complete sentence.      Box of maximum volume   A square piece of cardboard of dimension meters is made into a box by cutting squares of equal dimension out of each corner and folding up the sides. (See .) Find the dimension of the cutout squares that maximizes the volume of the resulting box.   A box from a square   A square to a box           Applied optimization   The following steps are useful for modeling and solving a word problem involving optimization.   Model the problem     Make a detailed, labeled diagram summarizing the situation described.    Clearly define and name all important quantities in the problem.    Write down any important equations or formulas involving the quantities at play.    Identify the quantity that is to be optimized.   Look for language suggesting maximum or minimum values: , largest , most , greatest , smallest , least , .          Solve optimization problem     Express the quantity we wish to optimize as a function of exactly one variable.   If the quantity appears to be given as a function of more than one independent variable, look for a constraint equation that allows us to reduce to exactly one independent variable.    Make explicit what the domain of this function is, using the context of the problem.       Translate the given word problem as one of our types of optimization problems ( , EVT, find\/classify critical points, curve sketching, ) for the function .    Use an appropriate procedure ( , EVT procedure, find\/classify critical points, curve sketching, ) to solve the given optimization problem.   The domain of plays an important role in this step. In particular, pay attention to whether or not is a closed finite interval.          Summarize     Communicate the answer you derived in Step 2 in a plain English sentence that makes use of the language\/context of the stated problem.    Make sure that you do indeed answer the problem posed and include units details if applicable.           Minimal fence perimeter   Farmer Dudley is building a rectangular pen for his iguanas. He will use the 50 meter long side of his barn as one side of the pen, and will construct fencing for the remaining three sides of the pen. The pen must have a total area of 200 m . What is the minimum length of fencing Dudley must build to create an iguana pen matching these specifications.        It is often the case that the domain of the function we wish to optimize is not of the simple form , where applies. The following generalization comes in handy in such situations.   Generalized extreme value theorem   Let be an interval of any sort ( , can be open, closed, or neither, and can be finite or infinite), and let and be the (possibly infinite) left and right endpoints of . Assume is continuous on . To investigate whether attains a maximum or minimum value on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a local maximum or minimum value consist of the (i) any finite endpoints of that are elements of , and (ii) any critical points of lying in .    Evaluate  Evaluate at all candidates you found in Step 1. Let be the minimum of these values, and let be the maximum of these values.    Evaluate endpoint limits  Evaluate the two endpoint limits and . (In the case where the given endpoint is infinite, the one-sided limit is understood simply as the corresponding limit at infinity.)    Compare , , and endpoint limits  Assume that each limit in Step 3 either exists or is infinite.   If neither of the endpoint limits from Step 3 is less than or equal to , then is the absolute minimum value of on . Otherwise, there is no absolute minimum value.    If neither of the endpoint limits from Step 3 is greater than or equal to , then is the absolute maximum value of on . Otherwise, there is no absolute maximum value.          "
+  "body": " Applied optimization     Model real world questions as an optimization problem about a function .    Use calculus techniques to fully analyze a modeled optimization problem and provide an answer in the form of a complete sentence.      Box of maximum volume   A square piece of cardboard of dimension meters is made into a box by cutting squares of equal dimension out of each corner and folding up the sides. (See .) Find the dimension of the cutout squares that maximizes the volume of the resulting box.   A box from a square   A square to a box           Applied optimization   The following steps are useful for modeling and solving a word problem involving optimization.   Model the problem     Make a detailed, labeled diagram summarizing the situation described.    Clearly define and name all important quantities in the problem.    Write down any important equations or formulas involving the quantities at play.    Identify the quantity that is to be optimized.   Look for language suggesting maximum or minimum values: , largest , most , greatest , smallest , least , .          Solve optimization problem     Express the quantity we wish to optimize as a function of exactly one variable.   If the quantity appears to be given as a function of more than one independent variable, look for a constraint equation that allows us to reduce to exactly one independent variable.    Make explicit what the domain of this function is, using the context of the problem.       Translate the given word problem as one of our types of optimization problems ( , EVT, find\/classify critical points, curve sketching, ) for the function .    Use an appropriate procedure ( , EVT procedure, find\/classify critical points, curve sketching, ) to solve the given optimization problem.   The domain of plays an important role in this step. In particular, pay attention to whether or not is a closed finite interval.          Summarize     Communicate the answer you derived in Step 2 in a plain English sentence that makes use of the language\/context of the stated problem.    Make sure that you do indeed answer the problem posed and include units details if applicable.           Minimal fence perimeter   Farmer Dudley is building a rectangular pen for his iguanas. He will use the 50 meter long side of his barn as one side of the pen, and will construct fencing for the remaining three sides of the pen. The pen must have a total area of 200 m . What is the minimum length of fencing Dudley must build to create an iguana pen matching these specifications.        It is often the case that the domain of the function we wish to optimize is not of the simple form , where applies. The following generalization comes in handy in such situations.   Generalized extreme value theorem   Let be an interval of any sort ( , can be open, closed, or neither, and can be finite or infinite), and let and be the (possibly infinite) left and right endpoints of . Assume is continuous on . To investigate whether attains a maximum or minimum value on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a local maximum or minimum value consist of the (i) any finite endpoints of that are elements of , and (ii) any critical points of lying in .    Evaluate  Evaluate at all candidates you found in Step 1. Let be the minimum of these values, and let be the maximum of these values.    Evaluate endpoint limits  Evaluate the two endpoint limits and . (In the case where the given endpoint is infinite, the one-sided limit is understood simply as the corresponding limit at infinity.)    Compare , , and endpoint limits  Assume that each limit in Step 3 either exists or is infinite.   If neither of the endpoint limits from Step 3 is less than or equal to , then is the absolute minimum value of on . Otherwise, there is no absolute minimum value.    If neither of the endpoint limits from Step 3 is greater than or equal to , then is the absolute maximum value of on . Otherwise, there is no absolute maximum value.           Closest point on parabola   Find the on the parabola whose distance to is the smallest possible. The distance between two points and in is defined as .        "
 },
 {
   "id": "s_applied_opt_I-2",
@@ -2348,6 +2348,42 @@ var ptx_lunr_docs = [
   "number": "26.5",
   "title": "Generalized extreme value theorem.",
   "body": " Generalized extreme value theorem   Let be an interval of any sort ( , can be open, closed, or neither, and can be finite or infinite), and let and be the (possibly infinite) left and right endpoints of . Assume is continuous on . To investigate whether attains a maximum or minimum value on , proceed as follows.   Identify candidate inputs  The candidate inputs where potentially attains a local maximum or minimum value consist of the (i) any finite endpoints of that are elements of , and (ii) any critical points of lying in .    Evaluate  Evaluate at all candidates you found in Step 1. Let be the minimum of these values, and let be the maximum of these values.    Evaluate endpoint limits  Evaluate the two endpoint limits and . (In the case where the given endpoint is infinite, the one-sided limit is understood simply as the corresponding limit at infinity.)    Compare , , and endpoint limits  Assume that each limit in Step 3 either exists or is infinite.   If neither of the endpoint limits from Step 3 is less than or equal to , then is the absolute minimum value of on . Otherwise, there is no absolute minimum value.    If neither of the endpoint limits from Step 3 is greater than or equal to , then is the absolute maximum value of on . Otherwise, there is no absolute maximum value.         "
+},
+{
+  "id": "eg_point_parab",
+  "level": "2",
+  "url": "s_applied_opt_I.html#eg_point_parab",
+  "type": "Example",
+  "number": "26.6",
+  "title": "Closest point on parabola.",
+  "body": " Closest point on parabola   Find the on the parabola whose distance to is the smallest possible. The distance between two points and in is defined as .       "
+},
+{
+  "id": "s_applied_opt_II",
+  "level": "1",
+  "url": "s_applied_opt_II.html",
+  "type": "Section",
+  "number": "27",
+  "title": "Applied optimization II",
+  "body": " Applied optimization II   Snowy campus walk   Dudley stands at the southeast corner of a 1 km square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?         Optimizing revenues   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?        "
+},
+{
+  "id": "eg_",
+  "level": "2",
+  "url": "s_applied_opt_II.html#eg_",
+  "type": "Example",
+  "number": "27.1",
+  "title": "Snowy campus walk.",
+  "body": " Snowy campus walk   Dudley stands at the southeast corner of a 1 km square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?       "
+},
+{
+  "id": "eg_TV_revenue",
+  "level": "2",
+  "url": "s_applied_opt_II.html#eg_TV_revenue",
+  "type": "Example",
+  "number": "27.2",
+  "title": "Optimizing revenues.",
+  "body": " Optimizing revenues   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?       "
 },
 {
   "id": "appendix-notation",
