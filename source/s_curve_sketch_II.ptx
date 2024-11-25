@@ -27,7 +27,30 @@ Provide a graph of <m>f(x)=\sin x+\sin^2 x</m> that includes all the details lis
 </statement>
 <solution>
 <p>
-
+    <case>
+        <title>Domain and intercepts</title>
+        <p>
+        
+        </p>
+        </case>
+        <case>
+        <title>Endpoint behavior and vertical asymptotes</title>
+        <p>
+        
+        </p>
+        </case>
+        <case>
+        <title>Critical points and intervals of monotonicity</title>
+        <p>
+        
+        </p>
+        </case>
+        <case>
+        <title>Concavity and inflection points</title>
+        <p>
+        
+        </p>
+        </case>
 </p>
 </solution>
 </example>
@@ -40,6 +63,33 @@ Provide a graph of <m>f(x)=\sin x+\sin^2 x</m> that includes all the details lis
 </statement>
 <solution>
 <p>
+<case>
+<title>Domain and intercepts</title>
+<p>
+The domain of <m>f</m> is <m>[0,1)\cup (1,\infty)</m>. The point <m>(0,0)</m> is both the unique <m>x</m>-intercept and the <m>y</m>-intercept.  
+</p>
+</case>
+<case>
+<title>Endpoint behavior and vertical asymptotes</title>
+<p>
+
+</p>
+</case>
+<case>
+<title>Critical points and intervals of monotonicity</title>
+<p>
+
+</p>
+</case>
+<case>
+<title>Concavity and inflection points</title>
+<p>
+
+</p>
+</case>
+
+
+
 
 </p>
 </solution>

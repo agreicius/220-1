@@ -201,6 +201,22 @@
             </p>
         </statement>
     </algorithm>
+    <example xml:id="eg_point_parab">
+    <title>Closest point on parabola</title>
+    <statement>
+    <p>
+    Find the <m>Q</m> on the parabola <m>y=1-x^2</m> whose distance to <m>P=(-3,1)</m> is the smallest possible. The distance between two points <m>P_1=(x_1,y_1)</m> and <m>P_2=(x_2,y_2)</m> in <m>\R^2</m> is defined as 
+    <me>
+        d(P_1,P_2)=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
+    </me>.
+    </p>
+    </statement>
+    <solution>
+    <p>
+    
+    </p>
+    </solution>
+    </example>
     
 
 </section>
