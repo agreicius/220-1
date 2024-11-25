@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="s_applied_opt_II" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Applied optimization II</title>
+
+<example xml:id="eg_">
+<title>Snowy campus walk</title>
+<statement>
+<p>
+Dudley stands at the southeast corner of a 1 km<m>^2</m> square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. 
+
+If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?  
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+<example xml:id="eg_TV_revenue">
+<title>Optimizing revenue</title>
+<statement>
+<p>
+The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue? 
+</p>
+</statement>
+<solution>
+<p>
+
+</p>
+</solution>
+</example>
+
+    
+
+</section>
