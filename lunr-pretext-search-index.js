@@ -2365,7 +2365,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "27",
   "title": "Applied optimization II",
-  "body": " Applied optimization II   Snowy campus walk   Dudley stands at the southeast corner of a 1 km square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?         Optimizing revenues   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?        "
+  "body": " Applied optimization II   Snowy campus walk   Dudley stands at the southeast corner of a 1 km square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?         Optimizing revenue   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?        "
 },
 {
   "id": "eg_",
@@ -2382,8 +2382,8 @@ var ptx_lunr_docs = [
   "url": "s_applied_opt_II.html#eg_TV_revenue",
   "type": "Example",
   "number": "27.2",
-  "title": "Optimizing revenues.",
-  "body": " Optimizing revenues   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?       "
+  "title": "Optimizing revenue.",
+  "body": " Optimizing revenue   The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?       "
 },
 {
   "id": "appendix-notation",
