@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.1</span><span class="period">.</span><span class="space"> </span><span class="title">Derivative formulas: sine and cosine.</span>
+</h3>
+<div class="para logical">
+<div class="para">We have the following derivative formulas:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dx}\sin x \amp = \cos x \amp \frac{d}{dx}\cos x\amp =-\sin x\text{.}
+\end{align*}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We prove the derivative formula for <span class="process-math">\(\sin\text{;}\)</span> the argument for <span class="process-math">\(\cos\)</span> is very similar. Using the limit definition of the derivative, we have</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dx}(\sin x) \amp = \lim\limits_{h\to 0}\frac{\sin(x+h)-\sin x}{h}\\
+\amp \lim\limits_{h\to 0}\frac{\sin x\cos h+\cos x\sin h-\sin x}{h}\\
+\amp = \lim\limits_{h\to 0}\frac{\sin x(\cos h-1)}{h}+\frac{\cos x\sin h}{h}\\
+\amp = \sin x\lim\limits_{h\to 0}\frac{\cos h-1}{h}+\cos x \lim\limits_{h\to 0}\frac{\sin h}{h} \\
+\amp = \sin x\cdot 0 +\cos x\cdot 1\\
+\amp = \cos x\text{,}
+\end{align*}
+</div>
+<div class="para">where the penultimate step makes use of our previously discussed limits</div>
+<div class="displaymath process-math">
+\begin{align*}
+\lim\limits_{t\to 0}\frac{\sin t}{t}  \amp =1 \amp \lim\limits_{t\to 0}\frac{\cos t-1}{t}=0  \text{.}
+\end{align*}
+</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_der_trig.html#th_der_sin_cos">in-context</a></span>
+</body>
+</html>

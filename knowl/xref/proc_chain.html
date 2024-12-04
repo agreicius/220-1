@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="algorithm theorem-like"><h3 class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span><span class="space"> </span><span class="title">Chain rule.</span>
+</h3>
+<div class="para logical">
+<div class="para">To compute the derivative of a function <span class="process-math">\(f\)</span> that is built from other functions using composition, proceed as follows.</div>
+<ol class="decimal" id="proc_chain-2-1-2">
+<li>
+<span class="heading"><span class="title">Identify inner function.</span></span><div class="para">Identify a function <span class="process-math">\(u=u(x)\)</span> so that <span class="process-math">\(f(x)=g(u(x))\)</span> for some function <span class="process-math">\(g\text{.}\)</span> The function <span class="process-math">\(u(x)\)</span> might be easily identified as an “inner function”, or may be a common expression that appears in the definition of <span class="process-math">\(f\text{.}\)</span>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Assemble ingredients.</span></span><div class="para logical">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+\frac{dg}{du} \amp = g'(u)\\
+\frac{du}{dx} \amp = u'(x)\text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(g'(u)\)</span> is computed treating <span class="process-math">\(u\)</span> simply as a new variable name.</div>
+</div>
+</li>
+<li>
+<span class="heading"><span class="title">Use chain rule.</span></span><div class="para logical">
+<div class="para">Compute</div>
+<div class="displaymath process-math">
+\begin{align*}
+f'(x) \amp = g'(u) u'(x)\\
+\amp = g'(u(x))u'(x)\text{,}
+\end{align*}
+</div>
+<div class="para">making sure to leave your final answer entirely in terms of <span class="process-math">\(x\text{.}\)</span>
+</div>
+</div>
+</li>
+</ol>
+</div></article><span class="incontext"><a class="internal" href="s_chain.html#proc_chain">in-context</a></span>
+</body>
+</html>
