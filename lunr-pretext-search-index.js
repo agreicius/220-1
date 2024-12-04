@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Front Matter",
   "number": "",
   "title": "Front Matter",
-  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright "
+  "body": " Aaron Greicius  Department of Mathematics  Northwestern University    copyright    "
 },
 {
   "id": "s_intro",
@@ -420,7 +420,7 @@ var ptx_lunr_docs = [
   "url": "s_limit_sandwich.html#ss_sandwich-16",
   "type": "Proof",
   "number": "1",
-  "title": "Proof of <span class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
+  "title": "Proof of <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\abs{\\sin\\theta}\\leq \\abs{\\theta}\\)<\/span>.",
   "body": " Proof of  We will prove that for all . First, observer that since , we have . Thus the function is even. Since is also even, it suffices to prove for all . Furthermore, since , and since , it suffices to show for all . To this end, take any . The triangle , where , , and lies within the the sector of the unit disc determined by . (Diagram to appear sometime soon.) Elementary trigonometry tells us that ; elementary geometry tells us that . We conclude that , or equivalently, for all . Since furthermore and for , we see that for all , as desired.  "
 },
 {
@@ -501,7 +501,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#rm_find_delta",
   "type": "Remark",
   "number": "4.7",
-  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
+  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> such that <span class=\"process-math\">\\((a-\\delta, a+\\delta)\\subseteq S\\)<\/span>.",
   "body": " Finding such that  In the final step of applying to a limit statment , we usually have found an open interval containing , and then must find a such that . The following approach is useful in this regard. Observe that and thus , where , are the distances from to the left and right endpoints of the interval.   Visualizing distances to endpoints of interval   Visualizing distances to endpoints of interval     Setting as the minimum of these distances, we now have , as desired.  Depending on the example, we can sometimes easily determine which of and is the minimum, giving us an explicit expression for . When things are too complicated, however, it is perfectly fine to set .  "
 },
 {
@@ -519,7 +519,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_formal.html#eg_ep_delt_quad",
   "type": "Example",
   "number": "4.10",
-  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
+  "title": "Finding <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\delta\\)<\/span> for specific <span class=\"process-math\">\\(\\epsilon\\text{:}\\)<\/span> quadratic function.",
   "body": " Finding for specific : quadratic function   Let . It is a fact that . Verify the epsilon-delta definition for this limit statement for the specific epsilon .    We wish to find satisfying . Proceeding as in , we first solve the inequality : . Notice that in this case, the set of solutions to the inequality is a union of two intervals: . Notice further that our limit point is an element of the second interval, and that we have , where . Thus, setting , we have . It follows that , as desired.   "
 },
 {
@@ -663,7 +663,7 @@ var ptx_lunr_docs = [
   "url": "s_continuous_def.html#s_continuous_def-5",
   "type": "Remark",
   "number": "6.3",
-  "title": "Continuity at <span class=\"process-math\">\\(a\\)<\/span>.",
+  "title": "Continuity at <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(a\\)<\/span>.",
   "body": " Continuity at  Let be a function with domain . Observe that our definition of continuity (and discontinuity) only applies to elements of the domain. (In fact, it only applies to elements of the domain that are either interior points or endpoints.)  For example, consider the function with domain . Since is not an element of the domain of , we do not say that is continuous or discontinuous at .  "
 },
 {
@@ -897,7 +897,7 @@ var ptx_lunr_docs = [
   "url": "s_lim_at_infty.html#eg_lim_at_infty_cos",
   "type": "Example",
   "number": "8.6",
-  "title": "Limit at infinity: <span class=\"process-math\">\\(\\cos\\)<\/span>.",
+  "title": "Limit at infinity: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\cos\\)<\/span>.",
   "body": " Limit at infinity:   Let .   Provide a graph of over its entire domain.    Argue graphically whether the infinite limits exist.       From the graph of in , we see visually that there are no horizontal asymptotes: in more detail, since oscillate between consistently between and as , there is no one fixed value that the values of approach. Thus the limits of at and do not exist.  Graph of   Graph of cosine       "
 },
 {
@@ -1005,7 +1005,7 @@ var ptx_lunr_docs = [
   "url": "s_infinite_limits.html#eg_infty_lim_tan",
   "type": "Example",
   "number": "9.5",
-  "title": "Vertical asymptotes: <span class=\"process-math\">\\(\\tan\\)<\/span>.",
+  "title": "Vertical asymptotes: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\tan\\)<\/span>.",
   "body": " Vertical asymptotes:   Let . Recall that the domain of is .   Sketch a graph of on its entire domain.    Find any and all vertical or horizontal asymptotes of .          The graph of is given below.  Graph of   Graph of tan        For each integer , let . We see visually that for all , and hence that each line is a vertical asymptote of the graph of .      "
 },
 {
@@ -1212,7 +1212,7 @@ var ptx_lunr_docs = [
   "url": "s_der_function.html#eg_der_func_reciprocal",
   "type": "Example",
   "number": "11.7",
-  "title": "Derivative function: <span class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
+  "title": "Derivative function: <span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(\\frac{1}{x}\\)<\/span>.",
   "body": " Derivative function:   Let . Compute the domain of and derive a formula for .       "
 },
 {
@@ -2013,7 +2013,7 @@ var ptx_lunr_docs = [
   "url": "s_mean_value.html#cor_mean_taylor",
   "type": "Corollary",
   "number": "21.10",
-  "title": "Taylor’s theorem (<span class=\"process-math\">\\(k=1\\)<\/span>).",
+  "title": "Taylor’s theorem (<span xmlns:pf=\"https:\/\/prefigure.org\" class=\"process-math\">\\(k=1\\)<\/span>).",
   "body": " Taylor's theorem ( )   Assume is twice differentiable on an interval containing as in interior point. Let be the linearization of centered at . For all we have . As a result, if for some constant and all , then we have for all .    See text.   "
 },
 {
@@ -2221,7 +2221,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "24",
   "title": "Curve sketching I",
-  "body": " Curve sketching I     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketching   When asked to give an accurate sketch of the graph of a function , we seek to produce a sketch that accurately reflects the following properties:   the domain of ;     - and -intercepts of ;    horizontal asymptotes, and more generally, the endpoint behavior of ( , limits of as approaches endpoints of );    vertical asymptotes;    critical points of , classified as points where attains a local maximum value, a local minimum value, or neither;    intervals of monotonicity of ( , intervals where is either increasing or decreasing);    intervals of constant concavity of ;    inflection points of .        Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  We saw in that the critical points of are , that is a local maximum value, is a local minimum value, and is neither, that is increasing on the intervals and and decreasing on the interval . All of this information is summarized by the sign diagram of .   Sign diagram for derivative of f      Concavity and inflection points  We analyzed the concavity of in . The sign diagram we produced there gives a nice summary of the situation.   Sign diagram for second derivative of f    In particular, observe that we have inflection points at the inputs .    Important points  Our analysis is more or less complete. We should first, however, make a table of values (to the best of our abilities) for all important points on our graph. . Finally we put everything together into a single sketch.  Graph of function         Curve sketching: rational function   Provide a graph of that includes all the details listed in .    For the sake of space, our solution will be slightly more terse than in the previous example. We first observe that the domain of is and that is both the - and -intercept.  Since is continuous everywhere on , it has not vertical asymptotes. Using , we see easily that , and thus that is a horizontal asymptote of .  Next we compute . The sign diagrams for and are given below.    Sign diagram for derivative of f     Sign diagram for derivative of f     We see then that has a single critical point at , that is a local minimum value of , and that is decreasing on and increasing on . Furthermore, has inflection points at and , is concave down on and , and concave up on .  To finish our analysis we make a table of values of important points: . Putting everything together, we obtain a graph like the following.   Graph of function      "
+  "body": " Curve sketching I     Bring all our calculus tools to bear on the analysis of a real-valued function . In more detail: determine the domain, the -intercept and any -intercepts; compute the limit of the function at endpoints of the domain and determine whether there are horizontal asymptotes; determine whether there are vertical asymptotes; find and classify all critical points of ; determine the intervals of monotonicity; determine intervals of constant concavity; identify any inflection points.    Express the results of our analysis of a function's behavior in the form of a detailed sketch.      Curve sketching   When asked to give an accurate sketch of the graph of a function , we seek to produce a sketch that accurately reflects the following properties:   the domain of ;     - and -intercepts of ;    horizontal asymptotes, and more generally, the endpoint behavior of ( , limits of as approaches endpoints of );    vertical asymptotes;    critical points of , classified as points where attains a local maximum value, a local minimum value, or neither;    intervals of monotonicity of ( , intervals where is either increasing or decreasing);    intervals of constant concavity of ;    inflection points of .        Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  We saw in that the critical points of are , that is a local maximum value, is a local minimum value, and is neither, that is increasing on the intervals and and decreasing on the interval . All of this information is summarized by the sign diagram of .   Sign diagram for derivative of f      Concavity and inflection points  We analyzed the concavity of in       Curve sketching: rational function   Provide a graph of that includes all the details listed in .        "
 },
 {
   "id": "s_curve_sketch_I-2",
@@ -2248,7 +2248,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "24.2",
   "title": "Curve sketch: polynomial.",
-  "body": " Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  We saw in that the critical points of are , that is a local maximum value, is a local minimum value, and is neither, that is increasing on the intervals and and decreasing on the interval . All of this information is summarized by the sign diagram of .   Sign diagram for derivative of f      Concavity and inflection points  We analyzed the concavity of in . The sign diagram we produced there gives a nice summary of the situation.   Sign diagram for second derivative of f    In particular, observe that we have inflection points at the inputs .    Important points  Our analysis is more or less complete. We should first, however, make a table of values (to the best of our abilities) for all important points on our graph. . Finally we put everything together into a single sketch.  Graph of function       "
+  "body": " Curve sketch: polynomial   Provide a graph of that includes all the details listed in .     Domain and intercepts  The domain of is . The -intercept of the graph of is .  To find the -intercepts we solve: . Thus the -intercepts are .    Endpoint behavior and vertical asymptotes  Since is continuous at all points of , there are no vertical asymptotes.  For endpoint behavior, we compute . In particular, we see that there are no horizontal asymptotes of the graph of .    Critical points and intervals of monotonicity  We saw in that the critical points of are , that is a local maximum value, is a local minimum value, and is neither, that is increasing on the intervals and and decreasing on the interval . All of this information is summarized by the sign diagram of .   Sign diagram for derivative of f      Concavity and inflection points  We analyzed the concavity of in     "
 },
 {
   "id": "eg_curve_rational",
@@ -2257,7 +2257,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "24.3",
   "title": "Curve sketching: rational function.",
-  "body": " Curve sketching: rational function   Provide a graph of that includes all the details listed in .    For the sake of space, our solution will be slightly more terse than in the previous example. We first observe that the domain of is and that is both the - and -intercept.  Since is continuous everywhere on , it has not vertical asymptotes. Using , we see easily that , and thus that is a horizontal asymptote of .  Next we compute . The sign diagrams for and are given below.    Sign diagram for derivative of f     Sign diagram for derivative of f     We see then that has a single critical point at , that is a local minimum value of , and that is decreasing on and increasing on . Furthermore, has inflection points at and , is concave down on and , and concave up on .  To finish our analysis we make a table of values of important points: . Putting everything together, we obtain a graph like the following.   Graph of function     "
+  "body": " Curve sketching: rational function   Provide a graph of that includes all the details listed in .       "
 },
 {
   "id": "s_curve_sketch_II",

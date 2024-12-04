@@ -12,10 +12,10 @@
 </head>
 <body class="ignore-math">
 <article class="example example-like"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">24.2</span><span class="period">.</span><span class="space"> </span><span class="title">Curve sketch: polynomial.</span>
+<span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">24.2</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Curve sketch: polynomial.</span>
 </h3>
-<div class="para">Provide a graph of <span class="process-math">\(f(x)=3x^5-5x^3\)</span> that includes all the details listed in <a href="s_curve_sketch_I.html#proc_curve_sketching" class="xref" data-knowl="./knowl/xref/proc_curve_sketching.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 24.1: Curve sketching">Procedure 24.1</a>.</div>
-<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div xmlns:pf="https://prefigure.org" class="para">Provide a graph of <span class="process-math">\(f(x)=3x^5-5x^3\)</span> that includes all the details listed in <a href="s_curve_sketch_I.html#proc_curve_sketching" class="xref" data-knowl="./knowl/xref/proc_curve_sketching.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 24.1: Curve sketching">Procedure 24.1</a>.</div>
+<div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
 <article class="case"><h4 class="heading">Domain and intercepts.</h4>
 <div class="para">The domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(\R=(-\infty, \infty)\text{.}\)</span> The <span class="process-math">\(y\)</span>-intercept of the graph of <span class="process-math">\(f\)</span> is <span class="process-math">\((0,f(0))=(0,0)\text{.}\)</span>
 </div>
@@ -52,27 +52,7 @@ x=0 \amp\text{ or } x=\pm\sqrt{5/3} \text{.}
 <div class="para">We saw in <a href="s_first_der_test.html#eg_first_der_test_poly" class="xref" data-knowl="./knowl/xref/eg_first_der_test_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.8: Classifying critical points: polynomial">Example 22.8</a> that the critical points of <span class="process-math">\(f\)</span> are <span class="process-math">\(x=-1,0,1\text{,}\)</span> that <span class="process-math">\(f(-1)\)</span> is a local maximum value, <span class="process-math">\(f(1)\)</span> is a local minimum value, and <span class="process-math">\(f(0)\)</span> is neither, that <span class="process-math">\(f\)</span> is increasing on the intervals <span class="process-math">\((-\infty, -1]\)</span> and <span class="process-math">\([1,\infty)\)</span> and decreasing on the interval <span class="process-math">\([-1,1]\text{.}\)</span> All of this information is summarized by the sign diagram of <span class="process-math">\(f'\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_diag_poly_2.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div></article><article class="case"><h4 class="heading">Concavity and inflection points.</h4>
-<div class="para">We analyzed the concavity of <span class="process-math">\(f\)</span> in  <a href="s_concavity.html#eg_concavity_poly" class="xref" data-knowl="./knowl/xref/eg_concavity_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 23.9: Concavity: polynomial">Example 23.9</a>. The sign diagram we produced there gives a nice summary of the situation.</div>
-<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_diag_second_2.svg" role="img" class="contained" alt="Sign diagram for second derivative of f"></div>
-<div class="para">In particular, observe that we have inflection points at the inputs <span class="process-math">\(x=-1/\sqrt{2}, 0, 1/\sqrt{2}\text{.}\)</span>
-</div></article><article class="case"><h4 class="heading">Important points.</h4>
-<div class="para logical">
-<div class="para">Our analysis is more or less complete. We should first, however, make a table of values (to the best of our abilities) for all important points on our graph.</div>
-<div class="displaymath process-math">
-\begin{equation*}
-\begin{array}{r|l}
-x \amp f(x) \\
-\hline 
-0\amp 0 \\
--1 \amp 2 \\
-1 \amp -2 \\
--\frac{1}{\sqrt{2}} \amp -(3(2)^{-5/2}+5(2)^{-3/2}) \\
-\frac{1}{\sqrt{2}} \amp (3(2)^{-5/2}+5(2)^{-3/2})
-\end{array}\text{.}
-\end{equation*}
-</div>
-<div class="para">Finally we put everything together into a single sketch. <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_curve_sketch_poly.svg" role="img" class="contained" alt="Graph of function"></div>
-</div>
+<div class="para">We analyzed the concavity of <span class="process-math">\(f\)</span> in  <a href="s_concavity.html#eg_concavity_poly" class="xref" data-knowl="./knowl/xref/eg_concavity_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 23.9: Concavity: polynomial">Example 23.9</a>
 </div></article>
 </div></details></div></article><span class="incontext"><a class="internal" href="s_curve_sketch_I.html#eg_curve_poly">in-context</a></span>
 </body>
