@@ -694,13 +694,68 @@ x=0 \amp\text{ or } x=\pm\sqrt{5/3} \text{.}
 <div class="para" id="eg_curve_poly-3-3-2">We saw in <a href="s_first_der_test.html#eg_first_der_test_poly" class="xref" data-knowl="./knowl/xref/eg_first_der_test_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.8: Classifying critical points: polynomial">Example 22.8</a> that the critical points of <span class="process-math">\(f\)</span> are <span class="process-math">\(x=-1,0,1\text{,}\)</span> that <span class="process-math">\(f(-1)\)</span> is a local maximum value, <span class="process-math">\(f(1)\)</span> is a local minimum value, and <span class="process-math">\(f(0)\)</span> is neither, that <span class="process-math">\(f\)</span> is increasing on the intervals <span class="process-math">\((-\infty, -1]\)</span> and <span class="process-math">\([1,\infty)\)</span> and decreasing on the interval <span class="process-math">\([-1,1]\text{.}\)</span> All of this information is summarized by the sign diagram of <span class="process-math">\(f'\text{.}\)</span>
 </div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_diag_poly_2.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div></article><article class="case" id="eg_curve_poly-3-4"><h4 class="heading">Concavity and inflection points.</h4>
-<div class="para" id="eg_curve_poly-3-4-2">We analyzed the concavity of <span class="process-math">\(f\)</span> in  <a href="s_concavity.html#eg_concavity_poly" class="xref" data-knowl="./knowl/xref/eg_concavity_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 23.9: Concavity: polynomial">Example 23.9</a>
+<div class="para" id="eg_curve_poly-3-4-2">We analyzed the concavity of <span class="process-math">\(f\)</span> in  <a href="s_concavity.html#eg_concavity_poly" class="xref" data-knowl="./knowl/xref/eg_concavity_poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 23.9: Concavity: polynomial">Example 23.9</a>. The sign diagram we produced there gives a nice summary of the situation.</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_diag_second_2.svg" role="img" class="contained" alt="Sign diagram for second derivative of f"></div>
+<div class="para" id="eg_curve_poly-3-4-4">In particular, observe that we have inflection points at the inputs <span class="process-math">\(x=-1/\sqrt{2}, 0, 1/\sqrt{2}\text{.}\)</span>
+</div></article><article class="case" id="eg_curve_poly-3-5"><h4 class="heading">Important points.</h4>
+<div class="para logical" id="eg_curve_poly-3-5-2">
+<div class="para">Our analysis is more or less complete. We should first, however, make a table of values (to the best of our abilities) for all important points on our graph.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{r|l}
+x \amp f(x) \\
+\hline 
+0\amp 0 \\
+-1 \amp 2 \\
+1 \amp -2 \\
+-\frac{1}{\sqrt{2}} \amp -(3(2)^{-5/2}+5(2)^{-3/2}) \\
+\frac{1}{\sqrt{2}} \amp (3(2)^{-5/2}+5(2)^{-3/2})
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">Finally we put everything together into a single sketch. <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_curve_sketch_poly.svg" role="img" class="contained" alt="Graph of function"></div>
+</div>
 </div></article>
 </div></details></div></article><article class="example example-like" id="eg_curve_rational"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">24.3</span><span class="period">.</span><span class="space"> </span><span class="title">Curve sketching: rational function.</span>
 </h3>
 <div class="para" id="eg_curve_rational-2-1">Provide a graph of <span class="process-math">\(f(x)=\frac{x^2}{x^2+3}\)</span> that includes all the details listed in <a href="s_curve_sketch_I.html#proc_curve_sketching" class="xref" data-knowl="./knowl/xref/proc_curve_sketching.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 24.1: Curve sketching">Procedure 24.1</a>.</div>
-<div class="solutions"><details id="eg_curve_rational-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_curve_rational-3-1"></div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_curve_rational-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_curve_rational-3-1">For the sake of space, our solution will be slightly more terse than in the previous example. We first observe that the domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(\R\)</span> and that <span class="process-math">\((0,0)\)</span> is both the <span class="process-math">\(x\)</span>- and <span class="process-math">\(y\)</span>-intercept.</div>
+<div class="para" id="eg_curve_rational-3-2">Since <span class="process-math">\(f\)</span> is continuous everywhere on <span class="process-math">\(\R\text{,}\)</span> it has not vertical asymptotes. Using <a href="s_infinite_limits.html#th_rational_function" class="xref" data-knowl="./knowl/xref/th_rational_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 9.11: Limit at infinity: rational functions">Theorem 9.11</a>, we see easily that <span class="process-math">\(\lim\limits_{x\to \pm \infty}f(x)=1\text{,}\)</span> and thus that <span class="process-math">\(y=1\)</span> is a horizontal asymptote of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<div class="para logical" id="eg_curve_rational-3-3">
+<div class="para">Next we compute</div>
+<div class="displaymath process-math" id="eg_curve_rational-3-3-1">
+\begin{align*}
+f'(x) \amp = \frac{6x}{(x^2+3)^2}\\
+f''(x) \amp = \frac{18(x-1)(x+1)}{(x^2+3)^3} \text{.}
+\end{align*}
+</div>
+<div class="para">The sign diagrams for <span class="process-math">\(f'\)</span> and <span class="process-math">\(f''\)</span> are given below.</div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel middle" style="width:40%;"><img src="generated/latex-image/im_sign_der_rat.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div>
+<div class="sbspanel middle" style="width:60%;"><img src="generated/latex-image/im_sign_2der_rat.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div>
+</div></div>
+<div class="para" id="eg_curve_rational-3-5">We see then that <span class="process-math">\(f\)</span> has a single critical point at <span class="process-math">\(x=0\text{,}\)</span> that <span class="process-math">\(f(0)\)</span> is a local minimum value of <span class="process-math">\(f\text{,}\)</span> and that <span class="process-math">\(f\)</span> is decreasing on <span class="process-math">\((-\infty, 0)\)</span> and increasing on <span class="process-math">\((0,\infty)\text{.}\)</span> Furthermore, <span class="process-math">\(f\)</span> has inflection points at <span class="process-math">\(x=-1\)</span> and <span class="process-math">\(x=1\text{,}\)</span> is concave down on <span class="process-math">\((-\infty, -1)\)</span> and <span class="process-math">\((1,\infty)\text{,}\)</span> and concave up on <span class="process-math">\((-1,1)\text{.}\)</span>
+</div>
+<div class="para logical" id="eg_curve_rational-3-6">
+<div class="para">To finish our analysis we make a table of values of important points:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}
+x\amp f(x) \\
+0 \amp 0 \\
+-1 \amp \frac{1}{4} \\
+1  \amp \frac{1}{4}
+\end{array}\text{.}
+\end{equation*}
+</div>
+<div class="para">Putting everything together, we obtain a graph like the following.</div>
+</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_curve_sketch_rat.svg" role="img" class="contained" alt="Graph of function"></div>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_concavity.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_curve_sketch_II.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
