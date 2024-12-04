@@ -141,8 +141,31 @@ We saw in <xref ref="eg_first_der_test_poly"/> that the critical points of <m>f<
 <case>
 <title>Concavity and inflection points</title>
 <p>
-We analyzed the concavity of <m>f</m> in  <xref ref="eg_concavity_poly"/> 
+We analyzed the concavity of <m>f</m> in  <xref ref="eg_concavity_poly"/>. The sign diagram we produced there gives a nice summary of the situation. 
 </p>
+<image xml:id="im_sign_diag_second_2" width="70%">
+    <shortdescription>Sign diagram for second derivative of f</shortdescription>
+    <latex-image>
+        \begin{tikzpicture}
+        \draw (0,0) -- (7,0);
+        \path foreach \X/\Y  in 
+         {2/-\frac{1}{\sqrt{2}}, 4/0, 6/\frac{1}{\sqrt{2}}}
+            { (\X,0) node[circle,fill,inner sep=0.5mm,
+               label=below:{$\Y$}]  {}};
+            \draw (.25,.5) node {$f''\colon$};
+            \draw (.25,-.5) node{$f\colon $};
+       \draw(1,.5) node{$-$};
+       \draw(3,.5) node{$+$};
+       \draw(5,.5) node{$-$};
+       \draw(7,.5) node{$+$};
+       \draw(1,-.5) node{$\cap$};
+       \draw(3,-.5) node{$\cup$};
+       \draw(5,-.5) node{$\cap$};
+       \draw(7,-.5) node{$\cup$};
+        \end{tikzpicture}
+
+    </latex-image>
+</image>
 </case>
 
 </solution>
