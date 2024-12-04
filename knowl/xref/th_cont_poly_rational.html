@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions.</span>
+</h3>
+<div class="para logical"><ol class="decimal" id="th_cont_poly_rational-2-1-1">
+<li>
+<span class="heading"><span class="title">Absolute value.</span></span><div class="para">The function <span class="process-math">\(f(x)=\abs{x}\)</span> is continuous everywhere on its domain. In other words, the absolute value function is a continuous function.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Polynomials and rational functions.</span></span><div class="para">If <span class="process-math">\(f\)</span> is either a polynomial or a rational function, then <span class="process-math">\(f\)</span> is continuous everywhere on its domain. In other words, polynomials and rational functions are continuous functions.</div>
+</li>
+<li>
+<span class="heading"><span class="title">Trigonometric functions.</span></span><div class="para">The functions <span class="process-math">\(f(x)=\sin x\text{,}\)</span> <span class="process-math">\(g(x)=\cos x\text{,}\)</span> and <span class="process-math">\(h(x)=\tan x\)</span> are continuous everywhere on their domains. In other words, <span class="process-math">\(\sin\text{,}\)</span> <span class="process-math">\(\cos\text{,}\)</span> and <span class="process-math">\(\tan\)</span> are continuous functions.</div>
+</li>
+</ol></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical"><ol class="decimal" id="th_cont_poly_rational-3-1-1">
+<li><div class="para">This is a direct consequence of <a href="s_continuous_def.html#d_continuity" class="xref" data-knowl="./knowl/xref/d_continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2: Continuity">Definition 6.2</a> and <a href="s_limit_sandwich.html#th_abs_lim" class="xref" data-knowl="./knowl/xref/th_abs_lim.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.11: Limits and absolute value">Theorem 3.11</a>.</div></li>
+<li><div class="para">This is a direct consequence of <a href="s_continuous_def.html#d_continuity" class="xref" data-knowl="./knowl/xref/d_continuity.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 6.2: Continuity">Definition 6.2</a> and <a href="s_limits_naive.html#cor_poly_rational" class="xref" data-knowl="./knowl/xref/cor_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.17: Evaluation (polynomials and rational functions)">Corollary 2.17</a>.</div></li>
+<li><div class="para logical">
+<div class="para">This result actually requires some work, since currently we only have an evaluation limit formula for sine at <span class="process-math">\(0\text{.}\)</span> This gives us a chance to illustrate the affine substitution technique again. (See <a href="s_one_sided.html#rm_affine_sub" class="xref" data-knowl="./knowl/xref/rm_affine_sub.html" data-reveal-label="Reveal" data-close-label="Close" title="Remark 5.10: Affine substitution in limits">Remark 5.10</a>.) Take any <span class="process-math">\(a\in \R\text{.}\)</span> We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/rm_affine_sub.html ./knowl/xref/th_lim_sine_cos.html">
+\begin{align*}
+\lim_{x\to a}\sin x\amp = \lim_{x\to a}\sin ((x-a)+a) \\
+\amp = \lim_{x\to a}(\sin(x-a)\cos a+\cos(x-a)\sin a) \amp \text{(trig. ident.)}\\
+\amp = \lim_{x\to a}\sin(x-a)\lim_{x\to a}\cos a+\lim_{x\to a}\cos(x-a)\lim_{x\to a}\sin a \amp \text{(sum, prod. rule.)}\\
+\amp = \lim_{x\to a}\sin(x-a)\cos a+\lim_{x\to a}\cos(x-a)\sin a \amp \text{(const. rule)}\\
+\amp = (\lim_{t\to 0}\sin(t))\cos a+(\lim_{t\to 0})\cos(t)\sin a \amp (\text{subst. } t=x-a)\\
+\amp =0\cos a+1\sin a \amp (\knowl{./knowl/xref/th_lim_sine_cos.html}{\text{3.12}})\\
+\amp = \sin a\text{.}
+\end{align*}
+</div>
+<div class="para">The computation shows both that (i) the limit of <span class="process-math">\(\sin\)</span> exists at <span class="process-math">\(a\text{,}\)</span> and (ii) the limit agrees with the value of <span class="process-math">\(\sin\)</span> at <span class="process-math">\(a\text{.}\)</span> We conclude that <span class="process-math">\(\sin\)</span> is continuous at <span class="process-math">\(a\text{.}\)</span> Since <span class="process-math">\(a\)</span> was arbitrary, we conclude that <span class="process-math">\(f\)</span> is continuous everywhere, hence continuous.</div>
+</div></li>
+</ol></div></article></details><span class="incontext"><a class="internal" href="s_continuous_def.html#th_cont_poly_rational">in-context</a></span>
+</body>
+</html>

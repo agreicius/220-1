@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mean value theorem</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#s_intro-2-1 { counter-set: s_intro-2-1 0; }
+#s_intro-2-1 > li::marker { content: ""counter(s_intro-2-1,decimal)"."; }
+#s_intro-2-1 > li { counter-increment: s_intro-2-1; }
+#ss_keys_success-2-1 { counter-set: ss_keys_success-2-1 0; }
+#ss_keys_success-2-1 > li::marker { content: ""counter(ss_keys_success-2-1,decimal)"."; }
+#ss_keys_success-2-1 > li { counter-increment: ss_keys_success-2-1; }
+#s_limits_naive-2-1 { counter-set: s_limits_naive-2-1 0; }
+#s_limits_naive-2-1 > li::marker { content: ""counter(s_limits_naive-2-1,decimal)"."; }
+#s_limits_naive-2-1 > li { counter-increment: s_limits_naive-2-1; }
+#th_lim_const_id-2-1-1 { counter-set: th_lim_const_id-2-1-1 0; }
+#th_lim_const_id-2-1-1 > li::marker { content: ""counter(th_lim_const_id-2-1-1,decimal)"."; }
+#th_lim_const_id-2-1-1 > li { counter-increment: th_lim_const_id-2-1-1; }
+#th_lim_rules-2-1-6 { counter-set: th_lim_rules-2-1-6 0; }
+#th_lim_rules-2-1-6 > li::marker { content: ""counter(th_lim_rules-2-1-6,decimal)"."; }
+#th_lim_rules-2-1-6 > li { counter-increment: th_lim_rules-2-1-6; }
+#cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
+#cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
+#cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
+#s_limit_sandwich-2-1 { counter-set: s_limit_sandwich-2-1 0; }
+#s_limit_sandwich-2-1 > li::marker { content: ""counter(s_limit_sandwich-2-1,decimal)"."; }
+#s_limit_sandwich-2-1 > li { counter-increment: s_limit_sandwich-2-1; }
+#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
+#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
+#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
+#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
+#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
+#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
+#th_abs_lim-2-1-1 { counter-set: th_abs_lim-2-1-1 0; }
+#th_abs_lim-2-1-1 > li::marker { content: ""counter(th_abs_lim-2-1-1,decimal)"."; }
+#th_abs_lim-2-1-1 > li { counter-increment: th_abs_lim-2-1-1; }
+#th_abs_lim-3-1-1 { counter-set: th_abs_lim-3-1-1 0; }
+#th_abs_lim-3-1-1 > li::marker { content: ""counter(th_abs_lim-3-1-1,decimal)"."; }
+#th_abs_lim-3-1-1 > li { counter-increment: th_abs_lim-3-1-1; }
+#th_lim_sine_cos-2-1-1 { counter-set: th_lim_sine_cos-2-1-1 0; }
+#th_lim_sine_cos-2-1-1 > li::marker { content: ""counter(th_lim_sine_cos-2-1-1,decimal)"."; }
+#th_lim_sine_cos-2-1-1 > li { counter-increment: th_lim_sine_cos-2-1-1; }
+#th_lim_sine_cos-3-1-1 { counter-set: th_lim_sine_cos-3-1-1 0; }
+#th_lim_sine_cos-3-1-1 > li::marker { content: ""counter(th_lim_sine_cos-3-1-1,decimal)"."; }
+#th_lim_sine_cos-3-1-1 > li { counter-increment: th_lim_sine_cos-3-1-1; }
+#s_lim_formal-2-1 { counter-set: s_lim_formal-2-1 0; }
+#s_lim_formal-2-1 > li::marker { content: ""counter(s_lim_formal-2-1,decimal)"."; }
+#s_lim_formal-2-1 > li { counter-increment: s_lim_formal-2-1; }
+#proc_epsilon_delta-2-1-4 { counter-set: proc_epsilon_delta-2-1-4 0; }
+#proc_epsilon_delta-2-1-4 > li::marker { content: ""counter(proc_epsilon_delta-2-1-4,decimal)"."; }
+#proc_epsilon_delta-2-1-4 > li { counter-increment: proc_epsilon_delta-2-1-4; }
+#th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
+#th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
+#th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
+#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
+#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
+#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
+#d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
+#d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
+#d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
+#d_limit_extended-2-1-3 { counter-set: d_limit_extended-2-1-3 0; }
+#d_limit_extended-2-1-3 > li::marker { content: ""counter(d_limit_extended-2-1-3,decimal)"."; }
+#d_limit_extended-2-1-3 > li { counter-increment: d_limit_extended-2-1-3; }
+#th_trig_lims-2-1-1 { counter-set: th_trig_lims-2-1-1 0; }
+#th_trig_lims-2-1-1 > li::marker { content: ""counter(th_trig_lims-2-1-1,decimal)"."; }
+#th_trig_lims-2-1-1 > li { counter-increment: th_trig_lims-2-1-1; }
+#d_continuity-2-1-12 { counter-set: d_continuity-2-1-12 0; }
+#d_continuity-2-1-12 > li::marker { content: "("counter(d_continuity-2-1-12,lower-roman)")"; }
+#d_continuity-2-1-12 > li { counter-increment: d_continuity-2-1-12; }
+#th_cont_poly_rational-2-1-1 { counter-set: th_cont_poly_rational-2-1-1 0; }
+#th_cont_poly_rational-2-1-1 > li::marker { content: ""counter(th_cont_poly_rational-2-1-1,decimal)"."; }
+#th_cont_poly_rational-2-1-1 > li { counter-increment: th_cont_poly_rational-2-1-1; }
+#th_cont_poly_rational-3-1-1 { counter-set: th_cont_poly_rational-3-1-1 0; }
+#th_cont_poly_rational-3-1-1 > li::marker { content: ""counter(th_cont_poly_rational-3-1-1,decimal)"."; }
+#th_cont_poly_rational-3-1-1 > li { counter-increment: th_cont_poly_rational-3-1-1; }
+#th_cont_rules-2-1-4 { counter-set: th_cont_rules-2-1-4 0; }
+#th_cont_rules-2-1-4 > li::marker { content: ""counter(th_cont_rules-2-1-4,decimal)"."; }
+#th_cont_rules-2-1-4 > li { counter-increment: th_cont_rules-2-1-4; }
+#s_cont_ivt-2-1 { counter-set: s_cont_ivt-2-1 0; }
+#s_cont_ivt-2-1 > li::marker { content: ""counter(s_cont_ivt-2-1,decimal)"."; }
+#s_cont_ivt-2-1 > li { counter-increment: s_cont_ivt-2-1; }
+#eg_cont_piecewise-2-1-4 { counter-set: eg_cont_piecewise-2-1-4 0; }
+#eg_cont_piecewise-2-1-4 > li::marker { content: ""counter(eg_cont_piecewise-2-1-4,decimal)"."; }
+#eg_cont_piecewise-2-1-4 > li { counter-increment: eg_cont_piecewise-2-1-4; }
+#eg_cont_piecewise-3-1-1 { counter-set: eg_cont_piecewise-3-1-1 0; }
+#eg_cont_piecewise-3-1-1 > li::marker { content: ""counter(eg_cont_piecewise-3-1-1,decimal)"."; }
+#eg_cont_piecewise-3-1-1 > li { counter-increment: eg_cont_piecewise-3-1-1; }
+#eg_cont_piecewise-3-1-1-2-1-4 { counter-set: eg_cont_piecewise-3-1-1-2-1-4 0; }
+#eg_cont_piecewise-3-1-1-2-1-4 > li::marker { content: "("counter(eg_cont_piecewise-3-1-1-2-1-4,lower-roman)")"; }
+#eg_cont_piecewise-3-1-1-2-1-4 > li { counter-increment: eg_cont_piecewise-3-1-1-2-1-4; }
+#s_lim_at_infty-2-1 { counter-set: s_lim_at_infty-2-1 0; }
+#s_lim_at_infty-2-1 > li::marker { content: ""counter(s_lim_at_infty-2-1,decimal)"."; }
+#s_lim_at_infty-2-1 > li { counter-increment: s_lim_at_infty-2-1; }
+#d_lim_at_infty-2-1-1 { counter-set: d_lim_at_infty-2-1-1 0; }
+#d_lim_at_infty-2-1-1 > li::marker { content: ""counter(d_lim_at_infty-2-1-1,decimal)"."; }
+#d_lim_at_infty-2-1-1 > li { counter-increment: d_lim_at_infty-2-1-1; }
+#eg_lim_at_infty_cos-2-1-2 { counter-set: eg_lim_at_infty_cos-2-1-2 0; }
+#eg_lim_at_infty_cos-2-1-2 > li::marker { content: ""counter(eg_lim_at_infty_cos-2-1-2,decimal)"."; }
+#eg_lim_at_infty_cos-2-1-2 > li { counter-increment: eg_lim_at_infty_cos-2-1-2; }
+#s_infinite_limits-2-1 { counter-set: s_infinite_limits-2-1 0; }
+#s_infinite_limits-2-1 > li::marker { content: ""counter(s_infinite_limits-2-1,decimal)"."; }
+#s_infinite_limits-2-1 > li { counter-increment: s_infinite_limits-2-1; }
+#d_infty_lims-2-1-2 { counter-set: d_infty_lims-2-1-2 0; }
+#d_infty_lims-2-1-2 > li::marker { content: ""counter(d_infty_lims-2-1-2,decimal)"."; }
+#d_infty_lims-2-1-2 > li { counter-increment: d_infty_lims-2-1-2; }
+#rm_infty_lims-2-7 { counter-set: rm_infty_lims-2-7 0; }
+#rm_infty_lims-2-7 > li::marker { content: "("counter(rm_infty_lims-2-7,lower-alpha)")"; }
+#rm_infty_lims-2-7 > li { counter-increment: rm_infty_lims-2-7; }
+#eg_infty_lim_tan-2-1-4 { counter-set: eg_infty_lim_tan-2-1-4 0; }
+#eg_infty_lim_tan-2-1-4 > li::marker { content: ""counter(eg_infty_lim_tan-2-1-4,decimal)"."; }
+#eg_infty_lim_tan-2-1-4 > li { counter-increment: eg_infty_lim_tan-2-1-4; }
+#eg_infty_lim_tan-3-1-1 { counter-set: eg_infty_lim_tan-3-1-1 0; }
+#eg_infty_lim_tan-3-1-1 > li::marker { content: ""counter(eg_infty_lim_tan-3-1-1,decimal)"."; }
+#eg_infty_lim_tan-3-1-1 > li { counter-increment: eg_infty_lim_tan-3-1-1; }
+#th_infinite_limit-2-1-5 { counter-set: th_infinite_limit-2-1-5 0; }
+#th_infinite_limit-2-1-5 > li::marker { content: ""counter(th_infinite_limit-2-1-5,decimal)"."; }
+#th_infinite_limit-2-1-5 > li { counter-increment: th_infinite_limit-2-1-5; }
+#eg_infty_lim_elem-2-1-3 { counter-set: eg_infty_lim_elem-2-1-3 0; }
+#eg_infty_lim_elem-2-1-3 > li::marker { content: ""counter(eg_infty_lim_elem-2-1-3,decimal)"."; }
+#eg_infty_lim_elem-2-1-3 > li { counter-increment: eg_infty_lim_elem-2-1-3; }
+#eg_infty_lim_elem-3-1-1 { counter-set: eg_infty_lim_elem-3-1-1 0; }
+#eg_infty_lim_elem-3-1-1 > li::marker { content: ""counter(eg_infty_lim_elem-3-1-1,decimal)"."; }
+#eg_infty_lim_elem-3-1-1 > li { counter-increment: eg_infty_lim_elem-3-1-1; }
+#th_rational_function-2-1-5 { counter-set: th_rational_function-2-1-5 0; }
+#th_rational_function-2-1-5 > li::marker { content: ""counter(th_rational_function-2-1-5,decimal)"."; }
+#th_rational_function-2-1-5 > li { counter-increment: th_rational_function-2-1-5; }
+#s_der_at_point-2-1 { counter-set: s_der_at_point-2-1 0; }
+#s_der_at_point-2-1 > li::marker { content: ""counter(s_der_at_point-2-1,decimal)"."; }
+#s_der_at_point-2-1 > li { counter-increment: s_der_at_point-2-1; }
+#eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
+#eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
+#eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
+#eg_der_at_point-3-1-1 { counter-set: eg_der_at_point-3-1-1 0; }
+#eg_der_at_point-3-1-1 > li::marker { content: ""counter(eg_der_at_point-3-1-1,decimal)"."; }
+#eg_der_at_point-3-1-1 > li { counter-increment: eg_der_at_point-3-1-1; }
+#d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
+#d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
+#d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
+#eg_der_at_point_tangent-2-1-2 { counter-set: eg_der_at_point_tangent-2-1-2 0; }
+#eg_der_at_point_tangent-2-1-2 > li::marker { content: ""counter(eg_der_at_point_tangent-2-1-2,decimal)"."; }
+#eg_der_at_point_tangent-2-1-2 > li { counter-increment: eg_der_at_point_tangent-2-1-2; }
+#eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
+#eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
+#eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
+#s_der_function-2-1 { counter-set: s_der_function-2-1 0; }
+#s_der_function-2-1 > li::marker { content: ""counter(s_der_function-2-1,decimal)"."; }
+#s_der_function-2-1 > li { counter-increment: s_der_function-2-1; }
+#eg_der_func_rad-2-1-3 { counter-set: eg_der_func_rad-2-1-3 0; }
+#eg_der_func_rad-2-1-3 > li::marker { content: ""counter(eg_der_func_rad-2-1-3,decimal)"."; }
+#eg_der_func_rad-2-1-3 > li { counter-increment: eg_der_func_rad-2-1-3; }
+#eg_der_func_rad-3-1-1 { counter-set: eg_der_func_rad-3-1-1 0; }
+#eg_der_func_rad-3-1-1 > li::marker { content: ""counter(eg_der_func_rad-3-1-1,decimal)"."; }
+#eg_der_func_rad-3-1-1 > li { counter-increment: eg_der_func_rad-3-1-1; }
+#eg_der_funct_abs-2-1-2 { counter-set: eg_der_funct_abs-2-1-2 0; }
+#eg_der_funct_abs-2-1-2 > li::marker { content: ""counter(eg_der_funct_abs-2-1-2,decimal)"."; }
+#eg_der_funct_abs-2-1-2 > li { counter-increment: eg_der_funct_abs-2-1-2; }
+#th_der_formulas_basic-2-1-1 { counter-set: th_der_formulas_basic-2-1-1 0; }
+#th_der_formulas_basic-2-1-1 > li::marker { content: ""counter(th_der_formulas_basic-2-1-1,decimal)"."; }
+#th_der_formulas_basic-2-1-1 > li { counter-increment: th_der_formulas_basic-2-1-1; }
+#th_der_rules-2-1-1 { counter-set: th_der_rules-2-1-1 0; }
+#th_der_rules-2-1-1 > li::marker { content: ""counter(th_der_rules-2-1-1,decimal)"."; }
+#th_der_rules-2-1-1 > li { counter-increment: th_der_rules-2-1-1; }
+#eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
+#eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
+#eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_dynamics_drone-3-1-1 { counter-set: eg_dynamics_drone-3-1-1 0; }
+#eg_dynamics_drone-3-1-1 > li::marker { content: ""counter(eg_dynamics_drone-3-1-1,decimal)"."; }
+#eg_dynamics_drone-3-1-1 > li { counter-increment: eg_dynamics_drone-3-1-1; }
+#eg_marginal-2-1-7 { counter-set: eg_marginal-2-1-7 0; }
+#eg_marginal-2-1-7 > li::marker { content: ""counter(eg_marginal-2-1-7,decimal)"."; }
+#eg_marginal-2-1-7 > li { counter-increment: eg_marginal-2-1-7; }
+#eg_marginal-3-1-1 { counter-set: eg_marginal-3-1-1 0; }
+#eg_marginal-3-1-1 > li::marker { content: ""counter(eg_marginal-3-1-1,decimal)"."; }
+#eg_marginal-3-1-1 > li { counter-increment: eg_marginal-3-1-1; }
+#s_der_trig-2-1 { counter-set: s_der_trig-2-1 0; }
+#s_der_trig-2-1 > li::marker { content: ""counter(s_der_trig-2-1,decimal)"."; }
+#s_der_trig-2-1 > li { counter-increment: s_der_trig-2-1; }
+#eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
+#eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
+#eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
+#s_chain-2-1 { counter-set: s_chain-2-1 0; }
+#s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
+#s_chain-2-1 > li { counter-increment: s_chain-2-1; }
+#proc_chain-2-1-2 { counter-set: proc_chain-2-1-2 0; }
+#proc_chain-2-1-2 > li::marker { content: ""counter(proc_chain-2-1-2,decimal)"."; }
+#proc_chain-2-1-2 > li { counter-increment: proc_chain-2-1-2; }
+#eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
+#eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
+#eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
+#eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
+#eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
+#eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
+#eg_chain_spher_balloon-3-1-1 { counter-set: eg_chain_spher_balloon-3-1-1 0; }
+#eg_chain_spher_balloon-3-1-1 > li::marker { content: ""counter(eg_chain_spher_balloon-3-1-1,decimal)"."; }
+#eg_chain_spher_balloon-3-1-1 > li { counter-increment: eg_chain_spher_balloon-3-1-1; }
+#s_implicit-2-1 { counter-set: s_implicit-2-1 0; }
+#s_implicit-2-1 > li::marker { content: ""counter(s_implicit-2-1,decimal)"."; }
+#s_implicit-2-1 > li { counter-increment: s_implicit-2-1; }
+#proc_implicit_diff-2-1-8 { counter-set: proc_implicit_diff-2-1-8 0; }
+#proc_implicit_diff-2-1-8 > li::marker { content: ""counter(proc_implicit_diff-2-1-8,decimal)"."; }
+#proc_implicit_diff-2-1-8 > li { counter-increment: proc_implicit_diff-2-1-8; }
+#eg_implicit_Ts-2-1-3 { counter-set: eg_implicit_Ts-2-1-3 0; }
+#eg_implicit_Ts-2-1-3 > li::marker { content: ""counter(eg_implicit_Ts-2-1-3,decimal)"."; }
+#eg_implicit_Ts-2-1-3 > li { counter-increment: eg_implicit_Ts-2-1-3; }
+#eg_implicit_Ts-3-1-1 { counter-set: eg_implicit_Ts-3-1-1 0; }
+#eg_implicit_Ts-3-1-1 > li::marker { content: ""counter(eg_implicit_Ts-3-1-1,decimal)"."; }
+#eg_implicit_Ts-3-1-1 > li { counter-increment: eg_implicit_Ts-3-1-1; }
+#eg_implicit_trig-2-1-3 { counter-set: eg_implicit_trig-2-1-3 0; }
+#eg_implicit_trig-2-1-3 > li::marker { content: ""counter(eg_implicit_trig-2-1-3,decimal)"."; }
+#eg_implicit_trig-2-1-3 > li { counter-increment: eg_implicit_trig-2-1-3; }
+#eg_implicit_trig-3-1-1 { counter-set: eg_implicit_trig-3-1-1 0; }
+#eg_implicit_trig-3-1-1 > li::marker { content: ""counter(eg_implicit_trig-3-1-1,decimal)"."; }
+#eg_implicit_trig-3-1-1 > li { counter-increment: eg_implicit_trig-3-1-1; }
+#proc_related_rates-2-1-1 { counter-set: proc_related_rates-2-1-1 0; }
+#proc_related_rates-2-1-1 > li::marker { content: ""counter(proc_related_rates-2-1-1,decimal)"."; }
+#proc_related_rates-2-1-1 > li { counter-increment: proc_related_rates-2-1-1; }
+#proc_related_rates-2-1-1-1-2 { counter-set: proc_related_rates-2-1-1-1-2 0; }
+#proc_related_rates-2-1-1-1-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-1-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-1-2 > li { counter-increment: proc_related_rates-2-1-1-1-2; }
+#proc_related_rates-2-1-1-2-2 { counter-set: proc_related_rates-2-1-1-2-2 0; }
+#proc_related_rates-2-1-1-2-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-2-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-2-2 > li { counter-increment: proc_related_rates-2-1-1-2-2; }
+#proc_related_rates-2-1-1-3-2 { counter-set: proc_related_rates-2-1-1-3-2 0; }
+#proc_related_rates-2-1-1-3-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-3-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-3-2 > li { counter-increment: proc_related_rates-2-1-1-3-2; }
+#s_linearize-2-1 { counter-set: s_linearize-2-1 0; }
+#s_linearize-2-1 > li::marker { content: ""counter(s_linearize-2-1,decimal)"."; }
+#s_linearize-2-1 > li { counter-increment: s_linearize-2-1; }
+#proc_lin_approx-2-1-6 { counter-set: proc_lin_approx-2-1-6 0; }
+#proc_lin_approx-2-1-6 > li::marker { content: ""counter(proc_lin_approx-2-1-6,decimal)"."; }
+#proc_lin_approx-2-1-6 > li { counter-increment: proc_lin_approx-2-1-6; }
+#eg_linear_approx_quadratic-2-1-2 { counter-set: eg_linear_approx_quadratic-2-1-2 0; }
+#eg_linear_approx_quadratic-2-1-2 > li::marker { content: ""counter(eg_linear_approx_quadratic-2-1-2,decimal)"."; }
+#eg_linear_approx_quadratic-2-1-2 > li { counter-increment: eg_linear_approx_quadratic-2-1-2; }
+#eg_linear_approx_quadratic-3-1-1 { counter-set: eg_linear_approx_quadratic-3-1-1 0; }
+#eg_linear_approx_quadratic-3-1-1 > li::marker { content: ""counter(eg_linear_approx_quadratic-3-1-1,decimal)"."; }
+#eg_linear_approx_quadratic-3-1-1 > li { counter-increment: eg_linear_approx_quadratic-3-1-1; }
+#eg_linear_approx_marshmallow-2-1-1 { counter-set: eg_linear_approx_marshmallow-2-1-1 0; }
+#eg_linear_approx_marshmallow-2-1-1 > li::marker { content: ""counter(eg_linear_approx_marshmallow-2-1-1,decimal)"."; }
+#eg_linear_approx_marshmallow-2-1-1 > li { counter-increment: eg_linear_approx_marshmallow-2-1-1; }
+#eg_linear_approx_marshmallow-3-1-8 { counter-set: eg_linear_approx_marshmallow-3-1-8 0; }
+#eg_linear_approx_marshmallow-3-1-8 > li::marker { content: ""counter(eg_linear_approx_marshmallow-3-1-8,decimal)"."; }
+#eg_linear_approx_marshmallow-3-1-8 > li { counter-increment: eg_linear_approx_marshmallow-3-1-8; }
+#s_extreme-2-1 { counter-set: s_extreme-2-1 0; }
+#s_extreme-2-1 > li::marker { content: ""counter(s_extreme-2-1,decimal)"."; }
+#s_extreme-2-1 > li { counter-increment: s_extreme-2-1; }
+#eg_local_extrema-2-1-3 { counter-set: eg_local_extrema-2-1-3 0; }
+#eg_local_extrema-2-1-3 > li::marker { content: ""counter(eg_local_extrema-2-1-3,decimal)"."; }
+#eg_local_extrema-2-1-3 > li { counter-increment: eg_local_extrema-2-1-3; }
+#eg_local_extrema-3-1-1 { counter-set: eg_local_extrema-3-1-1 0; }
+#eg_local_extrema-3-1-1 > li::marker { content: ""counter(eg_local_extrema-3-1-1,decimal)"."; }
+#eg_local_extrema-3-1-1 > li { counter-increment: eg_local_extrema-3-1-1; }
+#proc_extreme-2-1-5 { counter-set: proc_extreme-2-1-5 0; }
+#proc_extreme-2-1-5 > li::marker { content: ""counter(proc_extreme-2-1-5,decimal)"."; }
+#proc_extreme-2-1-5 > li { counter-increment: proc_extreme-2-1-5; }
+#s_mean_value-2-1 { counter-set: s_mean_value-2-1 0; }
+#s_mean_value-2-1 > li::marker { content: ""counter(s_mean_value-2-1,decimal)"."; }
+#s_mean_value-2-1 > li { counter-increment: s_mean_value-2-1; }
+#th_monoton-2-1-3 { counter-set: th_monoton-2-1-3 0; }
+#th_monoton-2-1-3 > li::marker { content: ""counter(th_monoton-2-1-3,decimal)"."; }
+#th_monoton-2-1-3 > li { counter-increment: th_monoton-2-1-3; }
+#proc_intervals_monoto-2-1-4 { counter-set: proc_intervals_monoto-2-1-4 0; }
+#proc_intervals_monoto-2-1-4 > li::marker { content: ""counter(proc_intervals_monoto-2-1-4,decimal)"."; }
+#proc_intervals_monoto-2-1-4 > li { counter-increment: proc_intervals_monoto-2-1-4; }
+#proc_intervals_monoto-2-1-4-3-1-3 { counter-set: proc_intervals_monoto-2-1-4-3-1-3 0; }
+#proc_intervals_monoto-2-1-4-3-1-3 > li::marker { content: "("counter(proc_intervals_monoto-2-1-4-3-1-3,lower-alpha)")"; }
+#proc_intervals_monoto-2-1-4-3-1-3 > li { counter-increment: proc_intervals_monoto-2-1-4-3-1-3; }
+#th_first_der_test-2-1-5 { counter-set: th_first_der_test-2-1-5 0; }
+#th_first_der_test-2-1-5 > li::marker { content: ""counter(th_first_der_test-2-1-5,decimal)"."; }
+#th_first_der_test-2-1-5 > li { counter-increment: th_first_der_test-2-1-5; }
+#proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
+#proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
+#proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
+#eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
+#eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
+#eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
+#eg_concavity_logistic_growth-2-3-1 { counter-set: eg_concavity_logistic_growth-2-3-1 0; }
+#eg_concavity_logistic_growth-2-3-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-2-3-1,decimal)"."; }
+#eg_concavity_logistic_growth-2-3-1 > li { counter-increment: eg_concavity_logistic_growth-2-3-1; }
+#eg_concavity_logistic_growth-3-1-1 { counter-set: eg_concavity_logistic_growth-3-1-1 0; }
+#eg_concavity_logistic_growth-3-1-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-3-1-1,decimal)"."; }
+#eg_concavity_logistic_growth-3-1-1 > li { counter-increment: eg_concavity_logistic_growth-3-1-1; }
+#th_concavity-1-1-3 { counter-set: th_concavity-1-1-3 0; }
+#th_concavity-1-1-3 > li::marker { content: ""counter(th_concavity-1-1-3,decimal)"."; }
+#th_concavity-1-1-3 > li { counter-increment: th_concavity-1-1-3; }
+#proc_concavity-2-1-4 { counter-set: proc_concavity-2-1-4 0; }
+#proc_concavity-2-1-4 > li::marker { content: ""counter(proc_concavity-2-1-4,decimal)"."; }
+#proc_concavity-2-1-4 > li { counter-increment: proc_concavity-2-1-4; }
+#proc_concavity-2-1-4-1-1-4 { counter-set: proc_concavity-2-1-4-1-1-4 0; }
+#proc_concavity-2-1-4-1-1-4 > li::marker { content: "("counter(proc_concavity-2-1-4-1-1-4,lower-alpha)")"; }
+#proc_concavity-2-1-4-1-1-4 > li { counter-increment: proc_concavity-2-1-4-1-1-4; }
+#th_second_der-2-1-3 { counter-set: th_second_der-2-1-3 0; }
+#th_second_der-2-1-3 > li::marker { content: ""counter(th_second_der-2-1-3,decimal)"."; }
+#th_second_der-2-1-3 > li { counter-increment: th_second_der-2-1-3; }
+#s_curve_sketch_I-2-1 { counter-set: s_curve_sketch_I-2-1 0; }
+#s_curve_sketch_I-2-1 > li::marker { content: ""counter(s_curve_sketch_I-2-1,decimal)"."; }
+#s_curve_sketch_I-2-1 > li { counter-increment: s_curve_sketch_I-2-1; }
+#proc_curve_sketching-2-1-2 { counter-set: proc_curve_sketching-2-1-2 0; }
+#proc_curve_sketching-2-1-2 > li::marker { content: ""counter(proc_curve_sketching-2-1-2,decimal)"."; }
+#proc_curve_sketching-2-1-2 > li { counter-increment: proc_curve_sketching-2-1-2; }
+#s_curve_sketch_II-2-1 { counter-set: s_curve_sketch_II-2-1 0; }
+#s_curve_sketch_II-2-1 > li::marker { content: ""counter(s_curve_sketch_II-2-1,decimal)"."; }
+#s_curve_sketch_II-2-1 > li { counter-increment: s_curve_sketch_II-2-1; }
+#s_applied_opt_I-2-1 { counter-set: s_applied_opt_I-2-1 0; }
+#s_applied_opt_I-2-1 > li::marker { content: ""counter(s_applied_opt_I-2-1,decimal)"."; }
+#s_applied_opt_I-2-1 > li { counter-increment: s_applied_opt_I-2-1; }
+#proc_applied_opt-2-1-1 { counter-set: proc_applied_opt-2-1-1 0; }
+#proc_applied_opt-2-1-1 > li::marker { content: ""counter(proc_applied_opt-2-1-1,decimal)"."; }
+#proc_applied_opt-2-1-1 > li { counter-increment: proc_applied_opt-2-1-1; }
+#proc_applied_opt-2-1-1-1-2-1 { counter-set: proc_applied_opt-2-1-1-1-2-1 0; }
+#proc_applied_opt-2-1-1-1-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-1-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-1-2-1 > li { counter-increment: proc_applied_opt-2-1-1-1-2-1; }
+#proc_applied_opt-2-1-1-2-2-1 { counter-set: proc_applied_opt-2-1-1-2-2-1 0; }
+#proc_applied_opt-2-1-1-2-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-2-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-2-2-1 > li { counter-increment: proc_applied_opt-2-1-1-2-2-1; }
+#proc_applied_opt-2-1-1-3-2-1 { counter-set: proc_applied_opt-2-1-1-3-2-1 0; }
+#proc_applied_opt-2-1-1-3-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-3-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-3-2-1 > li { counter-increment: proc_applied_opt-2-1-1-3-2-1; }
+#proc_gen_EVT-2-1-12 { counter-set: proc_gen_EVT-2-1-12 0; }
+#proc_gen_EVT-2-1-12 > li::marker { content: ""counter(proc_gen_EVT-2-1-12,decimal)"."; }
+#proc_gen_EVT-2-1-12 > li { counter-increment: proc_gen_EVT-2-1-12; }
+</style>
+</head>
+<body id="nusinglediffcalc" class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<p class="byline">Aaron Greicius</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_extreme.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_first_der_test.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+  \newcommand{\Q}{{\mathbb Q}}
+  \newcommand{\R}{{\mathbb R}}
+  \newcommand{\C}{{\mathbb C}}
+  \newcommand{\T}{{\mathbb T}}
+  \newcommand{\F}{{\mathbb F}}
+  \newcommand{\PP}{{\mathbb P}}
+  \newcommand{\HH}{{\mathbb H}}
+  \newcommand{\compose}{\circ}
+  \newcommand{\bolda}{{\mathbf a}}
+  \newcommand{\boldb}{{\mathbf b}}
+  \newcommand{\boldc}{{\mathbf c}}
+  \newcommand{\boldd}{{\mathbf d}}
+  \newcommand{\bolde}{{\mathbf e}}
+  \newcommand{\boldi}{{\mathbf i}}
+  \newcommand{\boldj}{{\mathbf j}}
+  \newcommand{\boldk}{{\mathbf k}}
+  \newcommand{\boldn}{{\mathbf n}}
+  \newcommand{\boldp}{{\mathbf p}}
+  \newcommand{\boldq}{{\mathbf q}}
+  \newcommand{\boldr}{{\mathbf r}}
+  \newcommand{\bolds}{{\mathbf s}}
+  \newcommand{\boldt}{{\mathbf t}}
+  \newcommand{\boldu}{{\mathbf u}}
+  \newcommand{\boldv}{{\mathbf v}}
+  \newcommand{\boldw}{{\mathbf w}}
+  \newcommand{\boldx}{{\mathbf x}}
+  \newcommand{\boldy}{{\mathbf y}}
+  \newcommand{\boldz}{{\mathbf z}}
+  \newcommand{\boldzero}{{\mathbf 0}}
+  \newcommand{\boldmod}{\boldsymbol{ \bmod }}
+  \newcommand{\boldT}{{\mathbf T}}
+  \newcommand{\boldN}{{\mathbf N}}
+  \newcommand{\boldB}{{\mathbf B}}
+  \newcommand{\boldF}{{\mathbf F}}
+  \newcommand{\boldS}{{\mathbf S}}
+  \newcommand{\boldE}{{\mathbf E}}
+  \newcommand{\boldG}{{\mathbf G}}
+  \newcommand{\boldK}{{\mathbf K}}
+  \newcommand{\boldL}{{\mathbf L}}
+  \DeclareMathOperator{\lns}{lns}
+  \DeclareMathOperator{\lcm}{lcm}
+  \DeclareMathOperator{\Span}{span}
+  \DeclareMathOperator{\tr}{tr}
+  \DeclareMathOperator{\NS}{null}
+  \DeclareMathOperator{\RS}{row}
+  \DeclareMathOperator{\CS}{col}
+  \DeclareMathOperator{\im}{im}
+  \DeclareMathOperator{\range}{range}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\nullity}{nullity}
+  \DeclareMathOperator{\sign}{sign}
+  \DeclareMathOperator{\Fix}{Fix}
+  \DeclareMathOperator{\Aff}{Aff}
+  \DeclareMathOperator{\Frac}{Frac}
+  \DeclareMathOperator{\Ann}{Ann}
+  \DeclareMathOperator{\Tor}{Tor}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\mdeg}{mdeg}
+  \DeclareMathOperator{\Lt}{Lt}
+  \DeclareMathOperator{\Lc}{Lc}
+  \DeclareMathOperator{\disc}{disc}
+  \DeclareMathOperator{\Frob}{Frob}
+  \DeclareMathOperator{\adj}{adj}
+  \DeclareMathOperator{\curl}{curl}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\diver}{div}
+  \DeclareMathOperator{\flux}{flux}
+  \DeclareMathOperator{\Hom}{Hom}
+  \DeclareMathOperator{\ab}{ab}
+
+
+  \newcommand{\surjects}{\twoheadrightarrow}
+  \newcommand{\injects}{\hookrightarrow}
+  \newcommand{\bijects}{\leftrightarrow}
+  \newcommand{\isomto}{\overset{\sim}{\rightarrow}}
+  \newcommand{\floor}[1]{\lfloor#1\rfloor}
+  \newcommand{\ceiling}[1]{\left\lceil#1\right\rceil}
+  \newcommand{\mclass}[2][m]{[#2]_{#1}}
+  \newcommand{\val}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\valuation}[2][]{\left\lvert #2\right\rvert_{#1}}
+  \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+  \newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+  \newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+  \newcommand{\pder}[2]{\frac{\partial#1}{\partial#2}}
+  \newcommand{\normalin}{\trianglelefteq}
+  \newcommand{\angvec}[1]{\langle #1\rangle}
+  \newcommand{\varpoly}[2]{#1_{#2}x^{#2}+#1_{#2-1}x^{#2-1}\cdots +#1_1x+#1_0}
+  \newcommand{\varpower}[1][a]{#1_0+#1_1x+#1_1x^2+\cdots}
+  \newcommand{\limasto}[2][x]{\lim_{#1\rightarrow #2}}
+  \newenvironment{linsys}[2][m]{
+  \begin{array}[#1]{@{}*{#2}{rc}r@{}}
+  }{
+  \end{array}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_intro.html#ss_course_resources" class="internal"><span class="title">Course resources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_intro.html#ss_keys_success" class="internal"><span class="title">Keys to success</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_intro.html#ss_calc_science_" class="internal"><span class="title">Calculus as the science of functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_intro.html#ss_sets" class="internal"><span class="title">Set definitions and notation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of the limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_limit_sandwich.html" class="internal"><span class="codenumber">3</span> <span class="title">Limits: algebraic technique and sandwich theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_alg_tech" class="internal"><span class="title">Algebraic techniques</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limit_sandwich.html#ss_sandwich" class="internal"><span class="title">Sandwich theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_formal.html" class="internal"><span class="codenumber">4</span> <span class="title">Limits: formal definition</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_one_sided.html" class="internal"><span class="codenumber">5</span> <span class="title">One-sided limits</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_one_sided.html#ss_def" class="internal"><span class="title">Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_one_sided.html#ss_one_sided_test" class="internal"><span class="title">One-sided limits test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_one_sided.html#ss_trig_lims" class="internal"><span class="title">Classic trig limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_continuous_def.html" class="internal"><span class="codenumber">6</span> <span class="title">Continuity: definition</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_cont_ivt.html" class="internal"><span class="codenumber">7</span> <span class="title">Continuity: intermediate value theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_piecewise" class="internal"><span class="title">Continuity of piecewise defined functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_cont_ivt.html#ss_ivt" class="internal"><span class="title">Intermediate value theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">8</span> <span class="title">Limits at infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">9</span> <span class="title">Infinite limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_trig.html" class="internal"><span class="codenumber">14</span> <span class="title">Derivative: trig functions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_chain.html" class="internal"><span class="codenumber">15</span> <span class="title">Chain rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_implicit.html" class="internal"><span class="codenumber">16</span> <span class="title">Implicit differentiation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_I.html" class="internal"><span class="codenumber">17</span> <span class="title">Related rates I</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_II.html" class="internal"><span class="codenumber">18</span> <span class="title">Related rates II</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">19</span> <span class="title">Linearization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_extreme.html" class="internal"><span class="codenumber">20</span> <span class="title">Extreme value theorem</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">21</span> <span class="title">Mean value theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_first_der_test.html" class="internal"><span class="codenumber">22</span> <span class="title">Monotonicity and first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_concavity.html" class="internal"><span class="codenumber">23</span> <span class="title">Concavity and inflection points</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_curve_sketch_I.html" class="internal"><span class="codenumber">24</span> <span class="title">Curve sketching I</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_curve_sketch_II.html" class="internal"><span class="codenumber">25</span> <span class="title">Curve sketching II</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_applied_opt_I.html" class="internal"><span class="codenumber">26</span> <span class="title">Applied optimization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_applied_opt_II.html" class="internal"><span class="codenumber">27</span> <span class="title">Applied optimization II</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="my-great-book-31.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C</span> <span class="title">Theory and procedures</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-interactives.html" class="internal"><span class="codenumber">E</span> <span class="title">Interactives and computational cells</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-dicta.html" class="internal"><span class="codenumber">F</span> <span class="title">Dicta, fiats, etc.</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_mean_value"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">21</span><span class="space"> </span><span class="title">Mean value theorem</span>
+</h2>
+<article class="objectives goal-like" id="s_mean_value-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ol class="decimal" id="s_mean_value-2-1">
+<li id="s_mean_value-2-1-1"><div class="para" id="s_mean_value-2-1-1-1">Derive Rolle’s theorem and the mean value theorem (MVT) as consequences of <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a>.</div></li>
+<li id="s_mean_value-2-1-2"><div class="para" id="s_mean_value-2-1-2-1">Interpret Rolle’s theorem and the MVT both geometrically (in terms of tangent lines) and physically (in terms of instantaneous rates of change).</div></li>
+<li id="s_mean_value-2-1-3"><div class="para" id="s_mean_value-2-1-3-1">Derive consequences of the MVT to various mathematical applications: e.g., characterization of functions <span class="process-math">\(f\)</span> satisfying <span class="process-math">\(f'(x)=0\)</span> for all <span class="process-math">\(x\text{,}\)</span>  existence of roots of functions within specific intervals, inequalities.</div></li>
+</ol></article><article class="theorem theorem-like" id="th_rolles"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rolle’s theorem.</span>
+</h3>
+<div class="para" id="th_rolles-2-1">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> If <span class="process-math">\(f(a)=f(b)\text{,}\)</span> then there is an input <span class="process-math">\(c\in [a,b]\)</span> satisfying <span class="process-math">\(f'(c)=0\text{.}\)</span>
+</div></article><details id="th_rolles-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="th_rolles-3-1">Let <span class="process-math">\(C=f(a)=f(b)\)</span> be the common value of <span class="process-math">\(f\)</span> at the endpoints.  If <span class="process-math">\(f(x)=C\)</span> for <em class="emphasis">all</em> inputs <span class="process-math">\(x\in [a,b]\)</span> (i.e., <span class="process-math">\(f\)</span> is a constant function), then <span class="process-math">\(f'(x)=0\)</span> for all inputs <span class="process-math">\(x\in (a,b)\text{,}\)</span> and our desired conclusion is trivially satisfied.</div>
+<div class="para" id="th_rolles-3-2">Assume now that <span class="process-math">\(f\)</span> is not constant. Since <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> there are points <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> in <span class="process-math">\([a,b]\)</span> where <span class="process-math">\(f\)</span> attains its absolute maximum and minimum values. Since <span class="process-math">\(f\)</span> is not constant on <span class="process-math">\([a,b]\text{,}\)</span> we must have <span class="process-math">\(f(c)\ne C\)</span> or <span class="process-math">\(f(d)\ne C\text{.}\)</span> Assume without loss of generality that <span class="process-math">\(f(c)\ne C\)</span> is an absolute extreme value of <span class="process-math">\(f\)</span> on <span class="process-math">\([a,b]\text{.}\)</span> The input <span class="process-math">\(c\)</span> must be an interior point of <span class="process-math">\([a,b]\text{,}\)</span> since <span class="process-math">\(f(c)\ne f(a)\)</span> and <span class="process-math">\(f(c)\ne f(b)\text{.}\)</span> Since <span class="process-math">\(f\)</span> is differentiable everywhere on <span class="process-math">\((a,b)\text{,}\)</span> <a href="s_extreme.html#th_crit_pt" class="xref" data-knowl="./knowl/xref/th_crit_pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 20.11: Critical points and extreme values">Theorem 20.11</a> implies <span class="process-math">\(f'(c)=0\text{,}\)</span> as desired.</div></article></details><article class="remark remark-like" id="s_mean_value-4"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">21.2</span><span class="period">.</span><span class="space"> </span><span class="title">Interpretations of Rolle’s theorem.</span>
+</h3>
+<div class="para" id="s_mean_value-4-2">Let <span class="process-math">\(f\)</span> satisfy the assumptions of Rolle’s theorem on the interval <span class="process-math">\([a,b]\text{.}\)</span>
+</div>
+<div class="para" id="s_mean_value-4-3">Geometrically, we interpret Rolle’s theorem as follows: if the endpoints of the graph of <span class="process-math">\(f\)</span> over <span class="process-math">\([a,b]\)</span> lie on the same horizontal line, then there is an input <span class="process-math">\(c\in (a,b)\)</span> for which the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(c\)</span> is horizontal.</div>
+<div class="para" id="s_mean_value-4-4">In terms of rate of change, we interpret Rolle’s theorem as follows: if the <em class="emphasis">average</em> rate of change of <span class="process-math">\(f\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is equal to zero, then there is an input <span class="process-math">\(c\in (a,b)\)</span> where the <em class="emphasis">instantaneous</em> rate of change <span class="process-math">\(f'(c)\)</span> is equal to zero.</div></article><div class="para" id="s_mean_value-5">Rolle’s theorem turns out to be a special case of the <a href="s_mean_value.html#th_mean_value" class="xref" data-knowl="./knowl/xref/th_mean_value.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 21.3: Mean value theorem (MVT)">mean value theorem</a>, where the function in question satisfies <span class="process-math">\(f(a)=f(b)\text{.}\)</span> As a peculiar twist, however, the mean value theorem can also be seen as just a “tilted” version of Rolle’s theorem. In logical terms, the two theorems, though quite different in content, are logically equivalent!</div>
+<article class="theorem theorem-like" id="th_mean_value"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem (MVT).</span>
+</h3>
+<div class="para logical" id="th_mean_value-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> There is an input <span class="process-math">\(c\in (a,b)\)</span> satisfying</div>
+<div class="displaymath process-math" id="eq_mean_value">
+\begin{equation}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}\tag{21.1}
+\end{equation}
+</div>
+</div></article><details id="th_mean_value-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="th_mean_value-3-1">
+<div class="para">We employ a little trick that reveals MVT to be a simple consequence of Rolle’s theorem. Define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g(x)=f(x)-\frac{f(b)-f(a)}{(b-a)}(x-a)\text{.}
+\end{equation*}
+</div>
+<div class="para">As is easily verified, <span class="process-math">\(g\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> differentiable on <span class="process-math">\((a,b)\)</span> and satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html" id="th_mean_value-3-1-5">
+\begin{align}
+g(a) \amp =g(b)=f(a)\tag{21.2}\\
+g'(x) \amp = f'(x)-\frac{f(b)-f(a)}{(b-a)}\text{.}\tag{21.3}
+\end{align}
+</div>
+<div class="para">Applying Rolle’s theorem to <span class="process-math">\(g\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> we conlude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g'(c)=0
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(c\in (a,b)\text{.}\)</span> We conclude, using <a href="s_mean_value.html#th_mean_value-3-1-5" class="xref" data-knowl="./knowl/xref/eq_mean_gprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 21.3">(21.3)</a> we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+0=f'(c)-\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article></details><article class="example example-like" id="eg_mvt_speeding"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.4</span><span class="period">.</span><span class="space"> </span><span class="title">Speeding motorist.</span>
+</h3>
+<div class="para" id="eg_mvt_speeding-2-1">While traveling in Ontario, Dudley pilots his motor car along Queen Elizabeth Way (aka the QEW). The posted speed limit along this stretch of motorway is 120 km per hr. At 12 pm Dudley passes St. Catherines, and by 12:25 pm he reaches Hamilton, which is 60 km down the road. Prove: at some point during this excursion Dudley has exceeded the speed limit!</div>
+<div class="solutions"><details id="eg_mvt_speeding-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_mvt_speeding-3-1"></div></div></details></div></article><article class="corollary theorem-like" id="cor_constant_functions"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.5</span><span class="period">.</span><span class="space"> </span><span class="title">Constant function characterization.</span>
+</h3>
+<div class="para" id="cor_constant_functions-2-1">Assume <span class="process-math">\(f\)</span> is continuous on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f\)</span> satisfies <span class="process-math">\(f'(x)=0\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{.}\)</span> As a consequence, a function is constant on an interval <span class="process-math">\(I\)</span> if and only if its derivative is the zero function on <span class="process-math">\(I\text{.}\)</span>
+</div></article><details id="cor_constant_functions-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_constant_functions-3-1">
+<div class="para">Take any two distinct points <span class="process-math">\(c,d\in I\text{.}\)</span> We may assume without loss of generality that <span class="process-math">\(c&lt; d\text{.}\)</span> The assumptions on <span class="process-math">\(f\)</span> guarantee that it is both continuous (since differentiable) on <span class="process-math">\([c,d]\)</span> and differentiable on the interior of <span class="process-math">\((c,d)\text{.}\)</span> The mean value theorem then implies that we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(e)=\frac{f(d)-f(c)}{d-c}
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(e\in (c,d)\text{.}\)</span> By assumption, however, we have <span class="process-math">\(f'(e)=0\text{.}\)</span> But then</div>
+<div class="displaymath process-math" id="cor_constant_functions-3-1-9">
+\begin{align*}
+f'(e)=\frac{f(d)-f(c)}{d-c}\amp \implies 0=\frac{f(d)-f(c)}{d-c}\\
+\amp\implies f(d)-f(c)=0\\
+\amp\implies f(c)=f(d)\text{.}
+\end{align*}
+</div>
+<div class="para">We have shown that for any <span class="process-math">\(c,d\in I\)</span> we have <span class="process-math">\(f(c)=f(d)\text{.}\)</span> In other words, <span class="process-math">\(f\)</span> is a constant function on <span class="process-math">\(I\text{,}\)</span> as desired.</div>
+</div></article></details><article class="corollary theorem-like" id="cor_same_derivative"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.6</span><span class="period">.</span><span class="space"> </span><span class="title">Functions with identical derivatives.</span>
+</h3>
+<div class="para logical" id="cor_same_derivative-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are continuous on an interval <span class="process-math">\(I\text{.}\)</span> If <span class="process-math">\(f'(x)=g'(x)\)</span> for all interior points <span class="process-math">\(x\in I\text{,}\)</span> then there is a constant <span class="process-math">\(C\in \R\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=g(x)+C
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span> In plain English, if two functions have identical derivative functions over an interval <span class="process-math">\(I\text{,}\)</span> then they differ by a constant.</div>
+</div></article><details id="cor_same_derivative-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cor_same_derivative-3-1">
+<div class="para">Let <span class="process-math">\(h(x)=f(x)-g(x)\text{.}\)</span> Since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_constant_functions.html">
+\begin{equation*}
+h'(x)=f'(x)-g'(x)=0
+\end{equation*}
+</div>
+<div class="para">for all interior points <span class="process-math">\(x\in I\text{,}\)</span> we conclude by <a href="s_mean_value.html#cor_constant_functions" class="xref" data-knowl="./knowl/xref/cor_constant_functions.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 21.5: Constant function characterization">Corollary 21.5</a> that <span class="process-math">\(h\)</span> is a constant function on <span class="process-math">\(I\text{:}\)</span> i.e., there is a constant <span class="process-math">\(C\)</span> such that <span class="process-math">\(h(x)=C\)</span> for all <span class="process-math">\(x\in I\text{.}\)</span> But then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor_constant_functions.html" id="cor_same_derivative-3-1-11">
+\begin{align*}
+h(x) =C \text{ for all } x\in I\amp \implies f(x)-g(x)=C \text{ for all } x\in I\\
+\amp \implies f(x)=g(x)+C \text{ for all } x\in I\text{,}
+\end{align*}
+</div>
+<div class="para">as desired.</div>
+</div></article></details><article class="example example-like" id="eg_mean_roots"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.7</span><span class="period">.</span><span class="space"> </span><span class="title">Number of roots.</span>
+</h3>
+<div class="para" id="eg_mean_roots-2-1">Show that the function <span class="process-math">\(f(x)=x^3-27x-7\)</span> has exactly one root in the interval <span class="process-math">\(I=[-2,2]\text{.}\)</span>
+</div>
+<div class="solutions"><details id="eg_mean_roots-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_mean_roots-3-1">Since <span class="process-math">\(f\)</span> is continuous everywhere, and satisfies <span class="process-math">\(f(-2)&gt; 0\)</span> and <span class="process-math">\(f(2)&lt; 0\text{,}\)</span> the intermediate value theorem implies there is an element <span class="process-math">\(c\in [-2,2]\)</span> satisfying <span class="process-math">\(f(c)=0\text{:}\)</span> i.e., <span class="process-math">\(f\)</span> has at least one root <span class="process-math">\(c\in [-2,2]\text{.}\)</span> It remains to show that <span class="process-math">\(c\)</span> is the only root of <span class="process-math">\(f\)</span> in <span class="process-math">\([-2,2]\text{.}\)</span>
+</div>
+<div class="para logical" id="eg_mean_roots-3-2">
+<div class="para">Suppose by contradiction that <span class="process-math">\(f\)</span> had two distinct roots <span class="process-math">\(c,d\in [-2,2]\text{.}\)</span> Without loss of generality, we can assume <span class="process-math">\(c&lt; d\text{.}\)</span> Since <span class="process-math">\(f\)</span> is differentiable everywhere, the mean value theorem would imply that there exists  <span class="process-math">\(e\in (c,d)\)</span> satifying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(e)=\frac{f(d)-f(c)}{d-c}=\frac{0-0}{d-c}=0\text{,}
+\end{equation*}
+</div>
+<div class="para">where we have used the fact that <span class="process-math">\(f(c)=f(d)=0\)</span> since <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> are roots of <span class="process-math">\(f\text{.}\)</span> But this is impossible since, as the derivative <span class="process-math">\(f'(x)=3x^2-27\)</span> satisfies <span class="process-math">\(f'(x)&lt; 0\)</span> for all <span class="process-math">\(x\in [-2,2]\text{.}\)</span> (See diagram below.) Since we have reached a contradiction, we conclude that there is only one root of <span class="process-math">\(f\)</span> lying in <span class="process-math">\([-2,2]\text{,}\)</span> as desired.</div>
+</div>
+<figure class="figure figure-like" id="fig_mean_eg"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/im_mean_eg.svg" role="img" class="contained" alt="Graph of derivative of f"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.8<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f'(x)=3x^2-27\)</span></figcaption></figure>
+</div></details></div></article><article class="example example-like" id="eg_mean_inequality"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">21.9</span><span class="period">.</span><span class="space"> </span><span class="title">Interesting inequality.</span>
+</h3>
+<div class="para" id="eg_mean_inequality-2-1">Prove that <span class="process-math">\(\sqrt{1+x}&lt;  1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div>
+<div class="solutions">
+<details id="eg_mean_inequality-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="eg_mean_inequality-3-1">Consider <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> We wish to show that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div></div></details><details id="eg_mean_inequality-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_mean_inequality-4-1">
+<div class="para">Let <span class="process-math">\(h(x)=\sqrt{1+x}-(1+\frac{1}{2}x)\text{.}\)</span> The desired inequality is equivalent to the inequality <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{,}\)</span> which we now endeavor to demonstrate. First observe that <span class="process-math">\(h'(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Indeed, we have</div>
+<div class="displaymath process-math" id="eg_mean_inequality-4-1-6">
+\begin{align*}
+h'(x) \amp = \frac{1}{2\sqrt{1+x}}-\frac{1}{2}\\
+\amp &lt; \frac{1}{2}-\frac{1}{2} \amp (x&gt; 0\implies \sqrt{1+x}&gt; 1)\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">Next, since <span class="process-math">\(h\)</span> is continuous on and differentiable on <span class="process-math">\([0,\infty)\text{,}\)</span> given any <span class="process-math">\(x&gt; 0\text{,}\)</span> the mean value theorem implies that there exists a <span class="process-math">\(c\in (0,x)\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h'(c)=\frac{h(x)-h(0)}{x-0}=\frac{h(x)-0}{x}=\frac{h(x)}{x}\text{.}
+\end{equation*}
+</div>
+<div class="para">This implies</div>
+<div class="displaymath process-math">
+\begin{equation*}
+h(x)=xh'(c)&lt; 0\text{,}
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(x&gt; 0\)</span> and <span class="process-math">\(h'(c)&lt; 0\text{.}\)</span> We have shown that <span class="process-math">\(h(x)&lt; 0\)</span> for all <span class="process-math">\(x&gt;0 \text{,}\)</span> and hence that <span class="process-math">\(\sqrt{1+x}&lt; 1+\frac{1}{2}x\)</span> for all <span class="process-math">\(x&gt; 0\text{.}\)</span>
+</div>
+</div></div></details>
+</div></article><div class="para" id="s_mean_value-12">For the curious, we end with a useful corollary of the mean value theorem that yields a numerically more precise description of how good of an approximation the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> centered at <span class="process-math">\(a\)</span> is for <span class="process-math">\(x\)</span> near <span class="process-math">\(a\text{.}\)</span> This result (and its proof) will not be assessed on any quiz or exam in this course.</div>
+<article class="corollary theorem-like" id="cor_mean_taylor"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">21.10</span><span class="period">.</span><span class="space"> </span><span class="title">Taylor’s theorem (<span class="process-math">\(k=1\)</span>).</span>
+</h3>
+<div class="para logical" id="cor_mean_taylor-2-1">
+<div class="para">Assume <span class="process-math">\(f\)</span> is twice differentiable on an interval <span class="process-math">\(I\)</span> containing <span class="process-math">\(a\)</span> as in interior point. Let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span> For all <span class="process-math">\(x\in I\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)-L(x)=\frac{f''(c)}{2}(x-a)^2\text{.}
+\end{equation*}
+</div>
+<div class="para">As a result, if <span class="process-math">\(\abs{f''(x)}\leq M\)</span> for some constant <span class="process-math">\(M\in \R\)</span> and all <span class="process-math">\(x\in I\text{,}\)</span> then we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\abs{f(x)-L(x)}\leq \frac{M}{2}\abs{x-a}^2
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(x\in I\text{.}\)</span>
+</div>
+</div></article><details id="cor_mean_taylor-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor_mean_taylor-3-1">See text.</div></article></details></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="s_extreme.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_first_der_test.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

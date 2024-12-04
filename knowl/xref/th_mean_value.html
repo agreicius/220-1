@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.3</span><span class="period">.</span><span class="space"> </span><span class="title">Mean value theorem (MVT).</span>
+</h3>
+<div class="para logical">
+<div class="para">Assume <span class="process-math">\(f\)</span> is continuous on <span class="process-math">\([a,b]\)</span> and differentiable on <span class="process-math">\((a,b)\text{.}\)</span> There is an input <span class="process-math">\(c\in (a,b)\)</span> satisfying</div>
+<div class="displaymath process-math">
+\begin{equation}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{.}\tag{21.1}
+\end{equation}
+</div>
+</div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We employ a little trick that reveals MVT to be a simple consequence of Rolle’s theorem. Define</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g(x)=f(x)-\frac{f(b)-f(a)}{(b-a)}(x-a)\text{.}
+\end{equation*}
+</div>
+<div class="para">As is easily verified, <span class="process-math">\(g\)</span> is continuous on <span class="process-math">\([a,b]\text{,}\)</span> differentiable on <span class="process-math">\((a,b)\)</span> and satisfies</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{align}
+g(a) \amp =g(b)=f(a)\tag{21.2}\\
+g'(x) \amp = f'(x)-\frac{f(b)-f(a)}{(b-a)}\text{.}\tag{21.3}
+\end{align}
+</div>
+<div class="para">Applying Rolle’s theorem to <span class="process-math">\(g\)</span> on <span class="process-math">\([a,b]\text{,}\)</span> we conlude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+g'(c)=0
+\end{equation*}
+</div>
+<div class="para">for some <span class="process-math">\(c\in (a,b)\text{.}\)</span> We conclude, using <a href="s_mean_value.html#th_mean_value-3-1-5" class="xref" data-knowl="./knowl/xref/eq_mean_gprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 21.3">(21.3)</a> we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+0=f'(c)-\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_mean_gprime.html">
+\begin{equation*}
+f'(c)=\frac{f(b)-f(a)}{b-a}\text{,}
+\end{equation*}
+</div>
+<div class="para">as desired.</div>
+</div></article></details><span class="incontext"><a class="internal" href="s_mean_value.html#th_mean_value">in-context</a></span>
+</body>
+</html>

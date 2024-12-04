@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.7</span><span class="period">.</span><span class="space"> </span><span class="title">The sign function.</span>
+</h4>
+<div class="para logical">
+<div class="para">The <dfn class="terminology">sign function</dfn> is the function <span class="process-math">\(f\)</span> with domain</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D=\R-\{0\}=\{x\in \R\colon x\ne 0\}
+\end{equation*}
+</div>
+<div class="para">defined as <span class="process-math">\(f(x)=\frac{x}{\abs{x}}\text{.}\)</span>
+</div>
+</div> <div class="para">Use <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> to decide whether <span class="process-math">\(\lim_{x\to 0}f(x)\)</span> exists.</div>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical">
+<div class="para">We compute the left and right limits of <span class="process-math">\(f\)</span> at <span class="process-math">\(0\)</span> separately. As you will see, the piecewise nature of the definition of <span class="process-math">\(\abs{x}\)</span> will make these quite easy.</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_limit_left_right.html">
+\begin{align*}
+\lim_{x\to 0^+}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^+}\frac{x}{x} \amp (x\geq 0\implies \abs{x}=x) \\
+\amp = \lim\limits_{x\to 0^+}1\\
+\amp = 1\\
+\lim_{x\to 0^-}\frac{x}{\abs{x}} \amp = \lim\limits_{x\to 0^-}\frac{x}{-x} \amp (x\leq 0\implies \abs{x}=-x) \\
+\amp = \lim\limits_{x\to 0^+}-1\\
+\amp = -1\text{.}
+\end{align*}
+</div>
+<div class="para">We thus see that the two one-sided limits exist, but are not equal to one another. We conclude, using <a href="s_one_sided.html#th_limit_left_right" class="xref" data-knowl="./knowl/xref/th_limit_left_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.6: One-sided limits test">Theorem 5.6</a> that the limit of <span class="process-math">\(f\)</span> at 0 does not exist.</div>
+</div></div></details></div></article><span class="incontext"><a class="internal" href="s_one_sided.html#ss_one_sided_test-5">in-context</a></span>
+</body>
+</html>
