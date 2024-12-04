@@ -138,6 +138,12 @@ We saw in <xref ref="eg_first_der_test_poly"/> that the critical points of <m>f<
     </latex-image>
 </image>
 </case>
+<case>
+<title>Concavity and inflection points</title>
+<p>
+We analyzed the concavity of <m>f</m> in  <xref ref="eg_concavity_poly"/> 
+</p>
+</case>
 
 </solution>
 </example>
