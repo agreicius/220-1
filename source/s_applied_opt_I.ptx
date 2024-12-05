@@ -31,6 +31,12 @@
     </figure>
     </statement>
     <solution>
+        <figure xml:id="fig_square_to_box_detail">
+            <caption>More detailed square-to-box diagram</caption>
+            <image width="70%" source="square_to_box_detail.png">
+            <shortdescription>More detailed square-to-box diagram</shortdescription>
+        </image>
+        </figure>
     <p>
     Let <m>x</m> be the dimension of the cutout squares. The resulting box would have height <m>x</m>, and width and length both equal to <m>2-2x</m>. Its volume would thus be 
     <me>
@@ -165,6 +171,12 @@
     </p>
     </statement>
     <solution>
+        <figure xml:id="fig_dud_pen">
+            <caption>Dudley's iguana pen</caption>
+            <image width="50%" source="dudley_pen.png">
+            <shortdescription>Dudley's iguana pen</shortdescription>
+        </image>
+        </figure>
     <p>
     Let <m>x</m> and <m>y</m> be the dimensions of the pen, where <m>x</m> is the length of the barn that Dudley makes use of. Since the area <m>A=xy</m> of the pen must be 200 m<m>^2</m>, we see that <m>x</m> and <m>y</m> must satisfy
     <men xml:id="eq_const_Dud">
@@ -229,7 +241,7 @@ f
     </example>
     
     <p>
-        As we saw in the last example it is often the case that the domain <m>D</m> of the function we wish to optimize is <em>not</em> of the simple form <m>[a,b]</m>, where <xref ref="proc_extreme"/> applies. The following generalization comes in handy in such situations. 
+        As we saw in the last example it is often the case that the domain <m>D</m> of the function we wish to optimize is <em>not</em> of the simple form <m>[a,b]</m>, where <xref ref="proc_extreme"/> applies. In <xref ref="eg_fence_perimeter"/>, we were optimizing a function on the interval <m>(0,50]</m>, and had to rely on our wits a bit to convince ourselves that we have found an absolute extreme value. The following generalization of the extreme value theorem gives a more systematic procedure for finding absolute extreme values in such situations. 
     </p>
     <algorithm xml:id="proc_gen_EVT">
         <title>Generalized extreme value theorem</title>
@@ -277,6 +289,21 @@ f
             </p>
         </statement>
     </algorithm>
+    <example xml:id="eg_fence_perimeter_2">
+    <title>Minimal fence perimeter (reprise)</title>
+    <statement>
+    <p>
+    Let's use <xref ref="proc_gen_EVT"/> to complete the last steps of our argument in <xref ref="eg_fence_perimeter"/>. We were trying to find the absolute minimum value of <m>f(x)=x+\frac{400}{x}</m> on the half-open interval <m>I=(0,50]</m>, and had determined that <m>x=20</m> was the sole critical point of <m>f</m>. <xref ref="proc_gen_EVT"/> instructs us to evaluate <m>f</m> at <m>x=20</m> and <m>x=50</m>, and compute the limit at <m>0</m>: 
+    <md>
+        <mrow>\lim\limits_{x\to 0^+ }f(x) \amp = \lim\limits_{x\to 0^+ }x+\frac{400}{x}=\infty \amp (\text{type } 0+\infty) </mrow>
+        <mrow>f(20) \amp = 20+20=40</mrow>
+        <mrow>f(50)\amp =50+400/50=58 </mrow>
+    </md>.
+    We conclude that <m>f(20)=40</m> is the absolute minimum value of <m>f</m> on <m>(0,50]</m> (and that <m>f</m> has no absolute maximum value). 
+    </p>
+    </statement>
+    </example>
+    
     <example xml:id="eg_point_parab">
     <title>Closest point on parabola</title>
     <statement>
@@ -288,8 +315,58 @@ f
     </p>
     </statement>
     <solution>
+        <figure xml:id="fig_point_parbola">
+            <caption>Distance between <m>P</m> and points on parabola <m>y=1-x^2</m></caption>
+            <image xml:id="im_point_parabola" width="60%">
+                <shortdescription>Diagram of point P and parabola</shortdescription>
+                <sageplot>
+                C=plot(1-x^2, x,-3,2, ymax=2, ymin=-5)
+                P=point((-3,1),color="red", size=50)
+                Q=point((-2,-3),color="red", size=50)
+                L=line([(-3,1),(-2,-3)],color="red", linestyle="dotted")
+                t1=text("$P$", (-3,1.5), color="black", fontsize=16)
+                t2=text("$Q=(x,1-x^2)$", (-1.75,-3.5), color="black", fontsize=16)
+                C+P+Q+L+t1+t2
+                </sageplot>
+            </image>
+        </figure>
     <p>
-    
+        The distance from <m>P</m> to an arbitrary point 
+        <me>
+            Q=(x,y)=(x,1-x^2)
+        </me>
+        on <m>\mathcal{C}</m> is given by 
+        <me>
+            d=f(x)=\sqrt{(-3-x)^2+(1-(1-x^2))^2}=\sqrt{(x+3)^2+x^4}
+        </me>.
+        Since the <m>x</m>-coordinate of <m>Q</m> can be any real number, we wish to find the minimum value of <m>f</m> on <m>\R=(-\infty, \infty)</m>. We follow <xref ref="proc_gen_EVT"/>. 
+    </p>
+    <p>
+        Since <m>f</m> is differentiable everywhere, its critical points are solutions to <m>f'(x)=0</m>. We solve: 
+        <md>
+            <mrow>f'(x) \amp = 0</mrow>
+            <mrow>\frac{2(x+3)+4x^3}{2\sqrt{(x+3)^2+x^4}} \amp = 0 </mrow>
+            <mrow>4x^3+2x+6 \amp =0</mrow>
+        </md>,
+        where the last step follows from the fact that a quotient is equal to zero precisely when its numerator is equal to zero. 
+    </p>
+    <p>
+        Let <m>g(x)=4x^3+2x+6</m>. In general it is not so easy to find roots of a cubic polynomial. However, recall the fact that if <m>g</m> has an <em>integer</em> root, it must be a divisor of <m>6</m>. Trying a few divisors (<m>\pm 1, \pm 2, \pm 3, \pm 6</m>), we easily see that <m>g(-1)=0</m>, and hence that <m>(x+1)</m> is a factor of <m>g(x)</m>, Using polynomial long division, we see that 
+        <me>
+            g(x)=(x+1)(4x^2-4x-3).
+        </me>
+        Furthermore, using the quadratic formula, we see that the <m>4x^2-4x-3</m> has no real roots. Thus the root of <m>g</m> (and only critical point of <m>f</m>) is <m>x=-1</m>. 
+    </p>
+    <p>
+        According to <xref ref="proc_gen_EVT"/>, to investigate extreme values of <m>f</m> on <m>(-\infty, \infty)</m> we should evaluate <m>f</m> at <m>x=-1</m> and compute the limits of <m>f</m> at <m>\pm \infty</m>: 
+        <md>
+            <mrow>f(-1) \amp = \sqrt{4+1}=\sqrt{5}</mrow>
+            <mrow>\lim\limits_{x\to \pm \infty}f(x) \amp =\lim\limits_{x\to \pm \infty}\sqrt{(x+3)^2+x^4}=\infty \amp (\text{type } \sqrt{\infty})</mrow>
+        </md>,
+        where the limit at infinity computations follow from the fact that <m>(x+3)^2+x^4\to \infty</m> as <m>x\to \pm \infty</m>. 
+    </p>
+    <p>
+        We conclude that <m>f(-1)=\sqrt{5}</m> is the absolute minimum value of <m>f</m>, and thus that <m>Q=(-1,0)</m> is the point on <m>\mathcal{C}</m> closest to <m>P</m>. 
     </p>
     </solution>
     </example>
