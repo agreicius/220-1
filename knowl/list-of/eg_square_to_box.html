@@ -15,6 +15,35 @@
 <span class="type">Example</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="codenumber">26.1</span><span xmlns:pf="https://prefigure.org" class="period">.</span><span xmlns:pf="https://prefigure.org" class="space"> </span><span class="title">Box of maximum volume.</span>
 </h3>
 <div xmlns:pf="https://prefigure.org" class="para">A square piece of cardboard of dimension <span class="process-math">\(2\)</span> meters is made into a box by cutting squares of equal dimension out of each corner and folding up the sides. (See <a href="s_applied_opt_I.html#fig_square_to_box" class="xref" data-knowl="./knowl/xref/fig_square_to_box.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 26.2">Figure 26.2</a>.) Find the dimension of the cutout squares that maximizes the volume of the resulting box.</div> <figure class="figure figure-like"><div xmlns:pf="https://prefigure.org" class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/square_to_box.png" class="contained" alt="A square to a box"></div>
-<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">26.2<span class="period">.</span></span><span class="space"> </span>A box from a square</figcaption></figure><div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para"></div></div></details></div></article><span class="incontext"><a class="internal" href="s_applied_opt_I.html#eg_square_to_box">in-context</a></span>
+<figcaption xmlns:pf="https://prefigure.org"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">26.2<span class="period">.</span></span><span class="space"> </span>A box from a square</figcaption></figure><div class="solutions"><details xmlns:pf="https://prefigure.org" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(x\)</span> be the dimension of the cutout squares. The resulting box would have height <span class="process-math">\(x\text{,}\)</span> and width and length both equal to <span class="process-math">\(2-2x\text{.}\)</span> Its volume would thus be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+V=f(x)=x(2-2x)(2-2x)=4x(x-1)^2\text{.}
+\end{equation*}
+</div>
+<div class="para">Since the cutout square dimension <span class="process-math">\(x\)</span> can range from <span class="process-math">\(0\)</span> to <span class="process-math">\(1\text{,}\)</span>  we see that we wish to find the minimal value of <span class="process-math">\(V=f(x)\)</span> on the interval <span class="process-math">\([0,1]\text{.}\)</span> We have reduced the question to an extreme value theorem problem!</div>
+</div>
+<div class="para logical">
+<div class="para">Following <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.13: Extreme value theorem">Procedure 20.13</a>, we compute</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html">
+\begin{align*}
+f'(x) \amp =4((x-1)^2+2x(x-1))\\
+\amp = 4(x-1)(3x-1)\text{.}
+\end{align*}
+</div>
+<div class="para">From this factored form we see easily that the critical points of <span class="process-math">\(f\)</span> are <span class="process-math">\(x=1\)</span> and <span class="process-math">\(x=\frac{1}{3}\text{.}\)</span> Now evaluate <span class="process-math">\(f\)</span> at the endpoints of <span class="process-math">\([0,1]\)</span> and the critical points:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html">
+\begin{align*}
+f(0) \amp = 0\\
+f(1/3) \amp = 4\cdot \frac{1}{3}(-2/3)^2\\
+\amp = \frac{16}{9}\\
+f(1) \amp = 0\text{.}
+\end{align*}
+</div>
+<div class="para">We conclude that choosing the dimension of the cutout square to be <span class="process-math">\(x=1/3\)</span> meters results in a box of largest possible volume.</div>
+</div>
+</div></details></div></article><span class="incontext"><a class="internal" href="s_applied_opt_I.html#eg_square_to_box">in-context</a></span>
 </body>
 </html>
