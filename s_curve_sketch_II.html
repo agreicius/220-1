@@ -685,11 +685,14 @@ x \amp f(x) \\
 \end{array}  
 \end{equation*}
 </div>
-<div class="para">we can obtain the following sketch of <span class="process-math">\(f\)</span> on <span class="process-math">\([0,2\pi]\text{.}\)</span> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_curve_sketch_trig_interval.svg" role="img" class="contained" alt="Graph of f on restricted domain"></div> As mentioned above, using the periodicity of <span class="process-math">\(f\text{,}\)</span> we get a full sketch of <span class="process-math">\(f\)</span> on <span class="process-math">\(\R\)</span> by “cutting and pasting”.</div>
+<div class="para">we can obtain the following sketch of <span class="process-math">\(f\)</span> on <span class="process-math">\([0,2\pi]\text{.}\)</span>
 </div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_curve_sketch_trig_interval.svg" role="img" class="contained" alt="Graph of f on restricted domain"></div>
+<div class="para" id="eg_curve_trig-3-6">As mentioned above, using the periodicity of <span class="process-math">\(f\text{,}\)</span> we get a full sketch of <span class="process-math">\(f\)</span> on <span class="process-math">\(\R\)</span> by “cutting and pasting”.</div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_curve_sketch_trig_full.svg" role="img" class="contained" alt="Graph of f over all reals"></div>
-<div class="para" id="eg_curve_trig-3-6">Note that as a result of the periodicity of <span class="process-math">\(f\text{,}\)</span> the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the domain <span class="process-math">\(\R\)</span> are equal to the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0,2\pi]\text{.}\)</span> From our table of values above, which includes evaluations at all critical points in <span class="process-math">\([0,2\pi]\text{,}\)</span> along with <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.13: Extreme value theorem">Procedure 20.13</a>, we see that <span class="process-math">\(f(\pi/2)=2\)</span> is the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(\R\text{,}\)</span> and <span class="process-math">\(f(7\pi/6)=f(11\pi/6)=-1/4\)</span> is the absolute minimum value.</div>
-<div class="para logical" id="eg_curve_trig-3-7">
+<div class="para" id="eg_curve_trig-3-8">Note that as a result of the periodicity of <span class="process-math">\(f\text{,}\)</span> the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the domain <span class="process-math">\(\R\)</span> are equal to the absolute maximum and minimum values of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0,2\pi]\text{.}\)</span> From our table of values above, which includes evaluations at all critical points in <span class="process-math">\([0,2\pi]\text{,}\)</span> along with <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.13: Extreme value theorem">Procedure 20.13</a>, we see that <span class="process-math">\(f(\pi/2)=2\)</span> is the absolute maximum value of <span class="process-math">\(f\)</span> on <span class="process-math">\(\R\text{,}\)</span> and <span class="process-math">\(f(7\pi/6)=f(11\pi/6)=-1/4\)</span> is the absolute minimum value.</div>
+<div class="para logical" id="eg_curve_trig-3-9">
 <div class="para">What about the concavity of <span class="process-math">\(f\)</span> and inflection points? The second derivative</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -700,8 +703,8 @@ f''(x)=-4\sin ^2(x)-\sin x+2
 </div>
 </div>
 <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_trig_inflect.svg" role="img" class="contained" alt="Graph with inflection points"></div>
-<div class="para" id="eg_curve_trig-3-9">Can we at least verify this algebraically? Yes, we can!</div>
-<div class="para logical" id="eg_curve_trig-3-10">
+<div class="para" id="eg_curve_trig-3-11">Can we at least verify this algebraically? Yes, we can!</div>
+<div class="para logical" id="eg_curve_trig-3-12">
 <div class="para">Let <span class="process-math">\(u=\sin x\text{,}\)</span> so that <span class="process-math">\(f''(x)=-4u^2-u+2\text{.}\)</span> We can solve <span class="process-math">\(f''(x)=0\)</span> for <span class="process-math">\(u\)</span> using the quadratic equation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -709,7 +712,7 @@ u=\frac{-1\pm \sqrt{33}}{8}\text{.}
 \end{equation*}
 </div>
 <div class="para">Thus we have a potential inflection point at points <span class="process-math">\(x\in [0,2\pi]\)</span> satisfying</div>
-<div class="displaymath process-math" id="eg_curve_trig-3-10-7">
+<div class="displaymath process-math" id="eg_curve_trig-3-12-7">
 \begin{align*}
 \sin x \amp =\frac{-1+\sqrt{33}}{8} \amp \sin x\amp =\frac{-1-\sqrt{33}}{8} \text{.}
 \end{align*}
@@ -721,13 +724,70 @@ u=\frac{-1\pm \sqrt{33}}{8}\text{.}
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">25.2</span><span class="period">.</span><span class="space"> </span><span class="title">Curve sketching: rational function.</span>
 </h3>
 <div class="para" id="eg_curve_radical-2-1">Provide a graph of <span class="process-math">\(f(x)=\frac{\sqrt{x}}{x-1}\)</span> that includes all the details listed in <a href="s_curve_sketch_I.html#proc_curve_sketching" class="xref" data-knowl="./knowl/xref/proc_curve_sketching.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 24.1: Curve sketching">Procedure 24.1</a>.</div>
-<div class="solutions"><details id="eg_curve_radical-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_curve_radical-3-1">
-<article class="case" id="eg_curve_radical-3-1-1"><h4 class="heading">Domain and intercepts.</h4>
-<div class="para" id="eg_curve_radical-3-1-1-2">The domain of <span class="process-math">\(f\)</span> is <span class="process-math">\([0,1)\cup (1,\infty)\text{.}\)</span> The point <span class="process-math">\((0,0)\)</span> is both the unique <span class="process-math">\(x\)</span>-intercept and the <span class="process-math">\(y\)</span>-intercept.</div></article> <article class="case" id="eg_curve_radical-3-1-2"><h4 class="heading">Endpoint behavior and vertical asymptotes.</h4>
-<div class="para" id="eg_curve_radical-3-1-2-2"></div></article> <article class="case" id="eg_curve_radical-3-1-3"><h4 class="heading">Critical points and intervals of monotonicity.</h4>
-<div class="para" id="eg_curve_radical-3-1-3-2"></div></article> <article class="case" id="eg_curve_radical-3-1-4"><h4 class="heading">Concavity and inflection points.</h4>
-<div class="para" id="eg_curve_radical-3-1-4-2"></div></article>
-</div></div></details></div></article></section></div>
+<div class="solutions"><details id="eg_curve_radical-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="eg_curve_radical-3-1">The domain of <span class="process-math">\(f\)</span> is <span class="process-math">\(D=[0,1)\cup (1,\infty)\text{,}\)</span> and <span class="process-math">\((0,0)\)</span> is both the <span class="process-math">\(y\)</span>-intercept and the sole <span class="process-math">\(x\)</span>-intercept.</div>
+<div class="para logical" id="eg_curve_radical-3-2">
+<div class="para">Since <span class="process-math">\(f\)</span> is continuous at <span class="process-math">\(x=0\text{,}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\lim\limits_{x\to 0^+}f(x)=f(0)=0\text{.}
+\end{equation*}
+</div>
+<div class="para">Next we compute</div>
+<div class="displaymath process-math" id="eg_curve_radical-3-2-4">
+\begin{align*}
+\lim\limits_{x\to \infty}f(x) \amp = \lim\limits_{x\to \infty}\frac{\sqrt{x}}{x(1-1/x)} \\
+\amp =\lim\limits_{x\to \infty}\frac{1}{\sqrt{x}}\cdot \frac{1}{1-1/x} \\
+\amp = \lim\limits_{x\to \infty}\frac{1}{\sqrt{x}}\lim\limits_{x\to \infty}\frac{1}{1-1/x}\\
+\amp = 0\cdot \frac{1}{\lim\limits_{x\to \infty}1-\lim\limits_{x\to \infty}1/x}\\
+\amp = 0\cdot 1=0\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(y=0\)</span> is a horizontal asymptote of <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="eg_curve_radical-3-3">
+<div class="para">The only candidate for a vertical asymptote of <span class="process-math">\(f\)</span> is <span class="process-math">\(x=1\text{.}\)</span> We compute</div>
+<div class="displaymath process-math" id="eg_curve_radical-3-3-3">
+\begin{align*}
+\lim\limits_{x\to 1^-}\frac{\sqrt{x}}{x-1} \amp = -\infty \amp (\text{type } 1/0)\\
+\lim\limits_{x\to 1^+}\frac{\sqrt{x}}{x-1} \amp = \infty \amp (\text{type } 1/0)\text{.}
+\end{align*}
+</div>
+<div class="para">In particular, we see that <span class="process-math">\(x=1\)</span> is a vertical asymptote of the graph of <span class="process-math">\(f\text{.}\)</span>
+</div>
+</div>
+<div class="para logical" id="eg_curve_radical-3-4">
+<div class="para">Moving on, after some careful simplification, we see that</div>
+<div class="displaymath process-math" id="eg_curve_radical-3-4-1">
+\begin{align*}
+f'(x) \amp =-\frac{x+1}{2\sqrt{x}(x-1)^2} \\
+f''(x) \amp = \frac{3x^2+6x-1}{4x^{3/2}(x-1)^3}
+\end{align*}
+</div>
+<div class="para">for all <span class="process-math">\(x&gt; 0\text{.}\)</span> Note that both <span class="process-math">\(f'\)</span> and <span class="process-math">\(f''\)</span> are both undefined at <span class="process-math">\(0\text{.}\)</span> It follows that <span class="process-math">\(x=0\)</span> is the only critical point of <span class="process-math">\(f\text{.}\)</span> We now compute the sign diagram of <span class="process-math">\(f'\text{.}\)</span>
+</div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/im_sign_der_rad.svg" role="img" class="contained" alt="Sign diagram for derivative of f"></div>
+<div class="para" id="eg_curve_radical-3-6">Not in particular that <span class="process-math">\(f\)</span> is decreasing on its entire domain.</div>
+<div class="para logical" id="eg_curve_radical-3-7">
+<div class="para">To produce the sign diagram of <span class="process-math">\(f''\)</span> we first solve</div>
+<div class="displaymath process-math" id="eg_curve_radical-3-7-2">
+\begin{align*}
+f''(x) \amp = 0\\
+3x^2+6x-1 \amp = 0 \\
+x \amp = \frac{-6\pm \sqrt{48}}{6}\\
+\amp = -1\pm \frac{2\sqrt{3}}{3}\text{.}
+\end{align*}
+</div>
+<div class="para">Since only <span class="process-math">\(-1+2\sqrt{3}/3\)</span> lies in the domain of <span class="process-math">\(f\text{,}\)</span> we obtain the following sign diagram for <span class="process-math">\(f''\text{.}\)</span>
+</div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/im_sign_2nd_der_rad.svg" role="img" class="contained" alt="Sign diagram for second derivative of f"></div>
+<div class="para" id="eg_curve_radical-3-9">Putting it all together, we get a graph like the following.</div>
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/sageplot/im_curve_sketch_rad.svg" role="img" class="contained" alt="Graph of f"></div>
+<div class="para" id="eg_curve_radical-3-11">Observe how easy it would be to overlook the inflection point (the sole point plotted above in red) without our careful analysis.</div>
+</div></details></div></article></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="s_curve_sketch_I.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_applied_opt_I.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
