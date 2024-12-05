@@ -90,6 +90,7 @@ With a little work, choosing our test points carefully, we produce the following
         \end{array}  
     </me>
 we can obtain the following sketch of <m>f</m> on <m>[0,2\pi]</m>. 
+</p>
 <image xml:id="im_curve_sketch_trig_interval" width="70%">
     <shortdescription>Graph of f on restricted domain</shortdescription>
     <sageplot>
@@ -105,7 +106,8 @@ V=point((pi,0),color="red",size=50)
 C+P+Q+R+S+T+U+V
     </sageplot>
 </image>
-As mentioned above, using the periodicity of <m>f</m>, we get a full sketch of <m>f</m> on <m>\R</m> by <q>cutting and pasting</q>.
+<p>
+    As mentioned above, using the periodicity of <m>f</m>, we get a full sketch of <m>f</m> on <m>\R</m> by <q>cutting and pasting</q>.
 </p>
 <image xml:id="im_curve_sketch_trig_full" width="70%">
     <shortdescription>Graph of f over all reals</shortdescription>
@@ -163,34 +165,107 @@ C+P+Q+R+S
 </statement>
 <solution>
 <p>
-<case>
-<title>Domain and intercepts</title>
-<p>
-The domain of <m>f</m> is <m>[0,1)\cup (1,\infty)</m>. The point <m>(0,0)</m> is both the unique <m>x</m>-intercept and the <m>y</m>-intercept.  
+    The domain of <m>f</m> is <m>D=[0,1)\cup (1,\infty)</m>, and <m>(0,0)</m> is both the <m>y</m>-intercept and the sole <m>x</m>-intercept. 
 </p>
-</case>
-<case>
-<title>Endpoint behavior and vertical asymptotes</title>
 <p>
-
+    Since <m>f</m> is continuous at <m>x=0</m>, we have 
+    <me>
+        \lim\limits_{x\to 0^+}f(x)=f(0)=0
+    </me>.
+     Next we compute 
+    <md>
+        <mrow>\lim\limits_{x\to \infty}f(x) \amp = \lim\limits_{x\to \infty}\frac{\sqrt{x}}{x(1-1/x)} </mrow>
+        <mrow> \amp =\lim\limits_{x\to \infty}\frac{1}{\sqrt{x}}\cdot \frac{1}{1-1/x} </mrow>
+        <mrow> \amp = \lim\limits_{x\to \infty}\frac{1}{\sqrt{x}}\lim\limits_{x\to \infty}\frac{1}{1-1/x}</mrow>
+        <mrow> \amp = 0\cdot \frac{1}{\lim\limits_{x\to \infty}1-\lim\limits_{x\to \infty}1/x}</mrow>
+        <mrow> \amp = 0\cdot 1=0</mrow>
+    </md>.
+    Thus <m>y=0</m> is a horizontal asymptote of <m>f</m>. 
 </p>
-</case>
-<case>
-<title>Critical points and intervals of monotonicity</title>
 <p>
-
+    The only candidate for a vertical asymptote of <m>f</m> is <m>x=1</m>. We compute 
+    <md>
+        <mrow>\lim\limits_{x\to 1^-}\frac{\sqrt{x}}{x-1} \amp = -\infty \amp (\text{type } 1/0)</mrow>
+        <mrow>\lim\limits_{x\to 1^+}\frac{\sqrt{x}}{x-1} \amp = \infty \amp (\text{type } 1/0)</mrow>
+    </md>.
+    In particular, we see that <m>x=1</m> is a vertical asymptote of the graph of <m>f</m>. 
 </p>
-</case>
-<case>
-<title>Concavity and inflection points</title>
 <p>
-
+    Moving on, after some careful simplification, we see that 
+    <md>
+        <mrow>f'(x) \amp =-\frac{x+1}{2\sqrt{x}(x-1)^2} </mrow>
+        <mrow>f''(x) \amp = \frac{3x^2+6x-1}{4x^{3/2}(x-1)^3}</mrow>
+    </md> 
+    for all <m>x&gt; 0</m>. Note that both <m>f'</m> and <m>f''</m> are both undefined at <m>0</m>. It follows that <m>x=0</m> is the only critical point of <m>f</m>. We now compute the sign diagram of <m>f'</m>. 
+    </p>
+     <image xml:id="im_sign_der_rad" width="50%">
+    <shortdescription>Sign diagram for derivative of f</shortdescription>
+    <latex-image>
+        \begin{tikzpicture}
+        \draw (1,0) -- (5,0);
+        \path foreach \X/\Y  in 
+         {1/0, 3/1}
+           { (\X,0) node[circle,fill,inner sep=0.5mm,
+               label=below:{$\Y$}]  {}};
+            \draw (.25,.5) node {$f'\colon$};
+            \draw (.25,-.5) node{$f\colon $};
+       \draw(2,.5) node{$-$};
+       \draw(4,.5) node{$-$};
+       \draw(2,-.5) node{$\searrow$};
+       \draw(4,-.5) node{$\searrow$};
+        \end{tikzpicture}
+    </latex-image>
+</image>
+<p>
+    Not in particular that <m>f</m> is decreasing on its entire domain. 
 </p>
-</case>
+<p>
+    To produce the sign diagram of <m>f''</m> we first solve
+    <md>
+        <mrow>f''(x) \amp = 0</mrow>
+        <mrow>3x^2+6x-1 \amp = 0 </mrow>
+        <mrow>x \amp = \frac{-6\pm \sqrt{48}}{6}</mrow>
+        <mrow> \amp = -1\pm \frac{2\sqrt{3}}{3}</mrow>
+    </md>.
+    Since only <m>-1+2\sqrt{3}/3</m> lies in the domain of <m>f</m>, we obtain the following sign diagram for <m>f''</m>. 
+</p>
+ <image xml:id="im_sign_2nd_der_rad" width="70%">
+    <shortdescription>Sign diagram for second derivative of f</shortdescription>
+    <latex-image>
+        \begin{tikzpicture}
+        \draw (1,0) -- (7,0);
+        \path foreach \X/\Y  in 
+         {1/0, 3/-1+\frac{2\sqrt{3}}{3},5/1}
+            { (\X,0) node[circle,fill,inner sep=0.5mm,
+               label=below:{$\Y$}]  {}};
+            \draw (.25,.5) node {$f''\colon$};
+            \draw (.25,-1) node{$f\colon $};
+       \draw(2,.5) node{$+$};
+       \draw(4,.5) node{$-$};
+       \draw(6,.5) node{$+$};
+       \draw(2,-1) node{$\cup$};
+       \draw(4,-1) node{$\cap$};
+       \draw(6,-1) node{$\cup$};
+        \end{tikzpicture}
 
-
-
-
+    </latex-image>
+</image>
+<p>
+    Putting it all together, we get a graph like the following.
+</p>
+<image xml:id="im_curve_sketch_rad" width="100%">
+    <shortdescription>Graph of f</shortdescription>
+    <sageplot>
+f(x)=sqrt(x)/(x-1)
+C=plot(f(x),x,0,3,detect_poles=show, ymin=-10, ymax=10, aspect_ratio=1/10)
+P=point((-1+2*sqrt(3)/3,f(-1+2*sqrt(3)/3)),color="red", size=50)
+L=line([(1,-10),(1,10)],color="red",linestyle="dotted")
+M=line([(0,0),(3,0)],color="red",linestyle="dotted")
+C+M+P+L
+    </sageplot>
+</image>
+<p>
+    Observe how easy it would be to overlook the inflection point (the sole point plotted above in red) without our careful analysis. 
 </p>
 </solution>
 </example>
