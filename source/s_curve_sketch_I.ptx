@@ -272,8 +272,9 @@ The sign diagrams for <m>f'</m> and <m>f''</m> are given below.
     </p>
     <p>To finish our analysis we make a table of values of important points: 
     <me>
-        \begin{array}
+        \begin{array}{r|l}
         x\amp f(x) \\
+        \hline
         0 \amp 0 \\
         -1 \amp \frac{1}{4} \\
         1  \amp \frac{1}{4}
@@ -296,8 +297,6 @@ The sign diagrams for <m>f'</m> and <m>f''</m> are given below.
 
 </solution>
 </example>
-<p>
-    Hello PreTeXt! 
-</p>
+
 
 </section>
