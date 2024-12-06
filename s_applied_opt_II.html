@@ -629,12 +629,51 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_applied_opt_II"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">27</span><span class="space"> </span><span class="title">Applied optimization II</span>
 </h2>
-<article class="example example-like" id="eg_"><h3 class="heading">
+<article class="example example-like" id="eg_dudley_walk"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">27.1</span><span class="period">.</span><span class="space"> </span><span class="title">Snowy campus walk.</span>
 </h3>
-<div class="para" id="eg_-2-1">Dudley stands at the southeast corner of a 1 km<span class="process-math">\(^2\)</span> square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?</div>
-<div class="solutions"><details id="eg_-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_-3-1"></div></div></details></div></article><article class="example example-like" id="eg_TV_revenue"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">27.2</span><span class="period">.</span><span class="space"> </span><span class="title">Optimizing revenue.</span>
+<div class="para" id="eg_dudley_walk-2-1">Dudley stands at the southeast corner of a 1 km<span class="process-math">\(^2\)</span> square field on campus that is currently covered in snow. He is hurrying to get to his calculus course taking place in the mathematics building at the northwest corner of the field. Dudley plans on first walking (at constant speed) along some portion of the ploughed east-west path that runs along the southern border of the field, and then cutting across the snowy field to head directly toward the mathematics building (at constant speed). Because of the snowy conditions, Dudley can move twice as fast on the ploughed path than he can when walking across the field. If Dudley wants to get to the mathematics building as quickly as possible, how far along the ploughed path should he walk before cutting across the field?</div>
+<div class="solutions"><details id="eg_dudley_walk-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<figure class="figure figure-like" id="fig_dudley_walk"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/dudley_path.png" class="contained" alt="Dudley’s snowy walk"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">27.2<span class="period">.</span></span><span class="space"> </span>Dudley’s snowy walk</figcaption></figure><div class="para logical" id="eg_dudley_walk-3-2">
+<div class="para">Let <span class="process-math">\(x\)</span> be the distance Dudley walks along the east-west ploughed path, in which he walks a distance of <span class="process-math">\(\sqrt{1+(1-x)^2}\)</span> through the snowy field. Let <span class="process-math">\(s\)</span> be the constant speed at which Dudley can walk through the snowy field; it follows that he moves at maximum speed <span class="process-math">\(2s\)</span> along the ploughed path. Using the (distance)=(rate)<span class="process-math">\(\times\)</span>(time) formula for objects traveling at constant speed, we see that the total time <span class="process-math">\(T\)</span> it takes for Dudley to get to the math building taking such a path is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html">
+\begin{equation*}
+T=f(x)=\frac{x}{2s}+\frac{\sqrt{1+(1-x)^2}}{s}\text{.}
+\end{equation*}
+</div>
+<div class="para">We wish to find the minimum value of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0,1]\text{.}\)</span> We follow <a href="s_extreme.html#proc_extreme" class="xref" data-knowl="./knowl/xref/proc_extreme.html" data-reveal-label="Reveal" data-close-label="Close" title="Procedure 20.13: Extreme value theorem">Procedure 20.13</a>. Since <span class="process-math">\(f\)</span> is differentiable everywhere, its critical points are the solutions to <span class="process-math">\(f'(x)=0\text{.}\)</span> We solve (treating <span class="process-math">\(s\)</span> as a constant):</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html" id="eg_dudley_walk-3-2-14">
+\begin{align*}
+f'(x) \amp =0\\
+\frac{1}{2s}\amp +\frac{-2(1-x)}{2s\sqrt{1+(1-x)^2}} = 0 \\
+\frac{1}{2s} \amp= \frac{1-x}{s\sqrt{1+(1-x)^2}} \\
+2(1-x) \amp =\sqrt{1+(1-x)^2}\\
+4(1-x)^2\amp =1+(1-x)^2 \\
+3(1-x)^2 \amp= 1 \\
+(1-x)^2 \amp = \frac{1}{3}\\
+(1-x) \amp = \pm \frac{1}{\sqrt{3}} \\
+x \amp = 1 \pm \frac{1}{\sqrt{3}} \text{.}
+\end{align*}
+</div>
+<div class="para">Thus the only critical point of <span class="process-math">\(f\)</span> in <span class="process-math">\([0,1]\)</span> is <span class="process-math">\(1-\frac{1}{\sqrt{3}}\text{.}\)</span> After evaluating <span class="process-math">\(f\)</span> at the critical point and the endpoints and doing some careful algebra, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html" id="eg_dudley_walk-3-2-19">
+\begin{align*}
+f(0) \amp = \frac{\sqrt{2}}{s}=\\
+f(1-1/\sqrt{3}) \amp = \frac{1}{s}\left(\frac{1+\sqrt{3}}{2}\right)\\
+f(1) \amp = \frac{3}{2s}\text{.}
+\end{align*}
+</div>
+<div class="para">Although not totally obvious, you can show by hand that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proc_extreme.html">
+\begin{equation*}
+\frac{1+\sqrt{3}}{2} &lt; \sqrt{2} &lt; \frac{3}{2}
+\end{equation*}
+</div>
+<div class="para">from whence it follows that <span class="process-math">\(f(1-1/\sqrt{3})\)</span> is the minimal value of <span class="process-math">\(T=f(x)\)</span> on <span class="process-math">\([0,1]\text{.}\)</span> Thus Dudley should travel a distance of <span class="process-math">\(1-1/\sqrt{3}\)</span> km along the ploughed path before heading across the snowy field. Godspeed, Dudley!</div>
+</div>
+</div></details></div></article><article class="example example-like" id="eg_TV_revenue"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">27.3</span><span class="period">.</span><span class="space"> </span><span class="title">Optimizing revenue.</span>
 </h3>
 <div class="para" id="eg_TV_revenue-2-1">The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue?</div>
 <div class="solutions"><details id="eg_TV_revenue-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para" id="eg_TV_revenue-3-1"></div></div></details></div></article></section></div>
