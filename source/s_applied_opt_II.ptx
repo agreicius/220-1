@@ -54,12 +54,39 @@ from whence it follows that <m>f(1-1/\sqrt{3})</m> is the minimal value of <m>T=
 <title>Optimizing revenue</title>
 <statement>
 <p>
-The starting price of a certain model of television is $450. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue? 
+The starting price of a certain model of television is $450. At this price point there are 1000 weekly sales of the television. A marketing team discovers that for each discount of $10 applied to the TV price, the number of weekly sales increases by 100 per week. How should the company price the television in order to maximize weekly revenue? 
 </p>
 </statement>
 <solution>
 <p>
-
+Let <m>d</m> be the number of ten-dollar discounts applied to the starting price. According to our marketers, the number of weekly sales <m>S</m> if applying <m>d</m> ten-dollar discounts to the price is 
+<me>
+    S=1000+100d
+</me>.
+Thus as a function of <m>d</m>, our weekly revenue is 
+<me>
+    R=(\text{no. sales})\times (\text{price})=(1000+100d)(450-10d)
+</me>.
+We wish to maximize the function <m>R=f(d)=(1000+100d)(450-10d)</m> for <m>d\in [0, 45]</m>. (We have <m>d\leq 45</m> as we do not want the price of the television to be negative!)
+</p>
+<p>
+    We apply <xref ref="proc_extreme"/>. We first compute 
+    <md>
+        <mrow>f'(d) \amp = 100(450-10d)-10(1000+100d) \amp \text{(prod. rule)}</mrow>
+        <mrow> \amp = 1000(35-2d)</mrow>
+    </md>.
+    It follows that the only critical point of <m>f</m> in <m>[0,45]</m> is <m>d=35/2</m>. Now evaluate at the endpoints and the critical point: 
+    <md>
+        <mrow>f(0) \amp = 450\cdot 1000=450,000</mrow>
+        <mrow>f(35/2) \amp = 756, 250</mrow>
+        <mrow>f(45) \amp = 0</mrow>
+    </md>
+    Thus revenue is maximized when offering <m>35/2</m> ten-dollar discounts to the price of the televion. In other words, the television should be offered at a price of 
+    <me>
+        450-10\cdot 35/2=275
+    </me>
+    dollars. 
+    
 </p>
 </solution>
 </example>
