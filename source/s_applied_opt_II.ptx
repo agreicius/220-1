@@ -3,7 +3,7 @@
 <section xml:id="s_applied_opt_II" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Applied optimization II</title>
 
-<example xml:id="eg_">
+<example xml:id="eg_dudley_walk">
 <title>Snowy campus walk</title>
 <statement>
 <p>
@@ -13,8 +13,40 @@ If Dudley wants to get to the mathematics building as quickly as possible, how f
 </p>
 </statement>
 <solution>
+<figure xml:id="fig_dudley_walk">
+        <caption>Dudley's snowy walk</caption>
+        <image width="70%" source="dudley_path.png">
+            <shortdescription>Dudley's snowy walk</shortdescription>
+        </image>
+    </figure>
 <p>
-
+Let <m>x</m> be the distance Dudley walks along the east-west ploughed path, in which he walks a distance of <m>\sqrt{1+(1-x)^2}</m> through the snowy field. Let <m>s</m> be the constant speed at which Dudley can walk through the snowy field; it follows that he moves at maximum speed <m>2s</m> along the ploughed path. Using the (distance)=(rate)<m>\times</m>(time) formula for objects traveling at constant speed, we see that the total time <m>T</m> it takes for Dudley to get to the math building taking such a path is 
+<me>
+    T=f(x)=\frac{x}{2s}+\frac{\sqrt{1+(1-x)^2}}{s}
+</me>.
+We wish to find the minimum value of <m>f</m> on the interval <m>[0,1]</m>. We follow <xref ref="proc_extreme"/>. Since <m>f</m> is differentiable everywhere, its critical points are the solutions to <m>f'(x)=0</m>. We solve (treating <m>s</m> as a constant): 
+<md>
+    <mrow>f'(x) \amp =0</mrow>
+    <mrow>\frac{1}{2s}\amp +\frac{-2(1-x)}{2s\sqrt{1+(1-x)^2}} = 0 </mrow>
+    <mrow>\frac{1}{2s} \amp= \frac{1-x}{s\sqrt{1+(1-x)^2}} </mrow>
+    <mrow>2(1-x) \amp =\sqrt{1+(1-x)^2}</mrow>
+    <mrow> 4(1-x)^2\amp =1+(1-x)^2 </mrow>
+    <mrow> 3(1-x)^2 \amp= 1 </mrow>
+    <mrow>(1-x)^2 \amp = \frac{1}{3}</mrow>
+    <mrow> (1-x) \amp = \pm \frac{1}{\sqrt{3}} </mrow>
+    <mrow>  x \amp = 1 \pm \frac{1}{\sqrt{3}} </mrow>
+</md>.
+Thus the only critical point of <m>f</m> in <m>[0,1]</m> is <m>1-\frac{1}{\sqrt{3}}</m>. After evaluating <m>f</m> at the critical point and the endpoints and doing some careful algebra, we see that  
+<md>
+    <mrow>f(0) \amp = \frac{\sqrt{2}}{s}=</mrow>
+    <mrow>f(1-1/\sqrt{3}) \amp = \frac{1}{s}\left(\frac{1+\sqrt{3}}{2}\right)</mrow>
+    <mrow>f(1) \amp = \frac{3}{2s}</mrow>
+</md>.
+Although not totally obvious, you can show by hand that 
+<me>
+    \frac{1+\sqrt{3}}{2} &lt; \sqrt{2} &lt; \frac{3}{2}
+</me>
+from whence it follows that <m>f(1-1/\sqrt{3})</m> is the minimal value of <m>T=f(x)</m> on <m>[0,1]</m>. Thus Dudley should travel a distance of <m>1-1/\sqrt{3}</m> km along the ploughed path before heading across the snowy field. Godspeed, Dudley! 
 </p>
 </solution>
 </example>
