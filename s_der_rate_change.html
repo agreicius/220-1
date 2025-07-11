@@ -5,13 +5,25 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Derivative as rate of change</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -67,371 +79,49 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<style>
-#s_intro-2-1 { counter-set: s_intro-2-1 0; }
-#s_intro-2-1 > li::marker { content: ""counter(s_intro-2-1,decimal)"."; }
-#s_intro-2-1 > li { counter-increment: s_intro-2-1; }
-#ss_keys_success-2-1 { counter-set: ss_keys_success-2-1 0; }
-#ss_keys_success-2-1 > li::marker { content: ""counter(ss_keys_success-2-1,decimal)"."; }
-#ss_keys_success-2-1 > li { counter-increment: ss_keys_success-2-1; }
-#s_limits_naive-2-1 { counter-set: s_limits_naive-2-1 0; }
-#s_limits_naive-2-1 > li::marker { content: ""counter(s_limits_naive-2-1,decimal)"."; }
-#s_limits_naive-2-1 > li { counter-increment: s_limits_naive-2-1; }
-#th_lim_const_id-2-1-1 { counter-set: th_lim_const_id-2-1-1 0; }
-#th_lim_const_id-2-1-1 > li::marker { content: ""counter(th_lim_const_id-2-1-1,decimal)"."; }
-#th_lim_const_id-2-1-1 > li { counter-increment: th_lim_const_id-2-1-1; }
-#th_lim_rules-2-1-6 { counter-set: th_lim_rules-2-1-6 0; }
-#th_lim_rules-2-1-6 > li::marker { content: ""counter(th_lim_rules-2-1-6,decimal)"."; }
-#th_lim_rules-2-1-6 > li { counter-increment: th_lim_rules-2-1-6; }
-#cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
-#cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
-#cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
-#s_limit_sandwich-2-1 { counter-set: s_limit_sandwich-2-1 0; }
-#s_limit_sandwich-2-1 > li::marker { content: ""counter(s_limit_sandwich-2-1,decimal)"."; }
-#s_limit_sandwich-2-1 > li { counter-increment: s_limit_sandwich-2-1; }
-#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
-#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
-#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
-#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
-#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
-#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
-#th_abs_lim-2-1-1 { counter-set: th_abs_lim-2-1-1 0; }
-#th_abs_lim-2-1-1 > li::marker { content: ""counter(th_abs_lim-2-1-1,decimal)"."; }
-#th_abs_lim-2-1-1 > li { counter-increment: th_abs_lim-2-1-1; }
-#th_abs_lim-3-1-1 { counter-set: th_abs_lim-3-1-1 0; }
-#th_abs_lim-3-1-1 > li::marker { content: ""counter(th_abs_lim-3-1-1,decimal)"."; }
-#th_abs_lim-3-1-1 > li { counter-increment: th_abs_lim-3-1-1; }
-#th_lim_sine_cos-2-1-1 { counter-set: th_lim_sine_cos-2-1-1 0; }
-#th_lim_sine_cos-2-1-1 > li::marker { content: ""counter(th_lim_sine_cos-2-1-1,decimal)"."; }
-#th_lim_sine_cos-2-1-1 > li { counter-increment: th_lim_sine_cos-2-1-1; }
-#th_lim_sine_cos-3-1-1 { counter-set: th_lim_sine_cos-3-1-1 0; }
-#th_lim_sine_cos-3-1-1 > li::marker { content: ""counter(th_lim_sine_cos-3-1-1,decimal)"."; }
-#th_lim_sine_cos-3-1-1 > li { counter-increment: th_lim_sine_cos-3-1-1; }
-#s_lim_formal-2-1 { counter-set: s_lim_formal-2-1 0; }
-#s_lim_formal-2-1 > li::marker { content: ""counter(s_lim_formal-2-1,decimal)"."; }
-#s_lim_formal-2-1 > li { counter-increment: s_lim_formal-2-1; }
-#proc_epsilon_delta-2-1-4 { counter-set: proc_epsilon_delta-2-1-4 0; }
-#proc_epsilon_delta-2-1-4 > li::marker { content: ""counter(proc_epsilon_delta-2-1-4,decimal)"."; }
-#proc_epsilon_delta-2-1-4 > li { counter-increment: proc_epsilon_delta-2-1-4; }
-#th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
-#th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
-#th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
-#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
-#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
-#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
-#d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
-#d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
-#d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
-#d_limit_extended-2-1-3 { counter-set: d_limit_extended-2-1-3 0; }
-#d_limit_extended-2-1-3 > li::marker { content: ""counter(d_limit_extended-2-1-3,decimal)"."; }
-#d_limit_extended-2-1-3 > li { counter-increment: d_limit_extended-2-1-3; }
-#th_trig_lims-2-1-1 { counter-set: th_trig_lims-2-1-1 0; }
-#th_trig_lims-2-1-1 > li::marker { content: ""counter(th_trig_lims-2-1-1,decimal)"."; }
-#th_trig_lims-2-1-1 > li { counter-increment: th_trig_lims-2-1-1; }
-#d_continuity-2-1-12 { counter-set: d_continuity-2-1-12 0; }
-#d_continuity-2-1-12 > li::marker { content: "("counter(d_continuity-2-1-12,lower-roman)")"; }
-#d_continuity-2-1-12 > li { counter-increment: d_continuity-2-1-12; }
-#th_cont_poly_rational-2-1-1 { counter-set: th_cont_poly_rational-2-1-1 0; }
-#th_cont_poly_rational-2-1-1 > li::marker { content: ""counter(th_cont_poly_rational-2-1-1,decimal)"."; }
-#th_cont_poly_rational-2-1-1 > li { counter-increment: th_cont_poly_rational-2-1-1; }
-#th_cont_poly_rational-3-1-1 { counter-set: th_cont_poly_rational-3-1-1 0; }
-#th_cont_poly_rational-3-1-1 > li::marker { content: ""counter(th_cont_poly_rational-3-1-1,decimal)"."; }
-#th_cont_poly_rational-3-1-1 > li { counter-increment: th_cont_poly_rational-3-1-1; }
-#th_cont_rules-2-1-4 { counter-set: th_cont_rules-2-1-4 0; }
-#th_cont_rules-2-1-4 > li::marker { content: ""counter(th_cont_rules-2-1-4,decimal)"."; }
-#th_cont_rules-2-1-4 > li { counter-increment: th_cont_rules-2-1-4; }
-#s_cont_ivt-2-1 { counter-set: s_cont_ivt-2-1 0; }
-#s_cont_ivt-2-1 > li::marker { content: ""counter(s_cont_ivt-2-1,decimal)"."; }
-#s_cont_ivt-2-1 > li { counter-increment: s_cont_ivt-2-1; }
-#eg_cont_piecewise-2-1-4 { counter-set: eg_cont_piecewise-2-1-4 0; }
-#eg_cont_piecewise-2-1-4 > li::marker { content: ""counter(eg_cont_piecewise-2-1-4,decimal)"."; }
-#eg_cont_piecewise-2-1-4 > li { counter-increment: eg_cont_piecewise-2-1-4; }
-#eg_cont_piecewise-3-1-1 { counter-set: eg_cont_piecewise-3-1-1 0; }
-#eg_cont_piecewise-3-1-1 > li::marker { content: ""counter(eg_cont_piecewise-3-1-1,decimal)"."; }
-#eg_cont_piecewise-3-1-1 > li { counter-increment: eg_cont_piecewise-3-1-1; }
-#eg_cont_piecewise-3-1-1-2-1-4 { counter-set: eg_cont_piecewise-3-1-1-2-1-4 0; }
-#eg_cont_piecewise-3-1-1-2-1-4 > li::marker { content: "("counter(eg_cont_piecewise-3-1-1-2-1-4,lower-roman)")"; }
-#eg_cont_piecewise-3-1-1-2-1-4 > li { counter-increment: eg_cont_piecewise-3-1-1-2-1-4; }
-#s_lim_at_infty-2-1 { counter-set: s_lim_at_infty-2-1 0; }
-#s_lim_at_infty-2-1 > li::marker { content: ""counter(s_lim_at_infty-2-1,decimal)"."; }
-#s_lim_at_infty-2-1 > li { counter-increment: s_lim_at_infty-2-1; }
-#d_lim_at_infty-2-1-1 { counter-set: d_lim_at_infty-2-1-1 0; }
-#d_lim_at_infty-2-1-1 > li::marker { content: ""counter(d_lim_at_infty-2-1-1,decimal)"."; }
-#d_lim_at_infty-2-1-1 > li { counter-increment: d_lim_at_infty-2-1-1; }
-#eg_lim_at_infty_cos-2-1-2 { counter-set: eg_lim_at_infty_cos-2-1-2 0; }
-#eg_lim_at_infty_cos-2-1-2 > li::marker { content: ""counter(eg_lim_at_infty_cos-2-1-2,decimal)"."; }
-#eg_lim_at_infty_cos-2-1-2 > li { counter-increment: eg_lim_at_infty_cos-2-1-2; }
-#s_infinite_limits-2-1 { counter-set: s_infinite_limits-2-1 0; }
-#s_infinite_limits-2-1 > li::marker { content: ""counter(s_infinite_limits-2-1,decimal)"."; }
-#s_infinite_limits-2-1 > li { counter-increment: s_infinite_limits-2-1; }
-#d_infty_lims-2-1-2 { counter-set: d_infty_lims-2-1-2 0; }
-#d_infty_lims-2-1-2 > li::marker { content: ""counter(d_infty_lims-2-1-2,decimal)"."; }
-#d_infty_lims-2-1-2 > li { counter-increment: d_infty_lims-2-1-2; }
-#rm_infty_lims-2-7 { counter-set: rm_infty_lims-2-7 0; }
-#rm_infty_lims-2-7 > li::marker { content: "("counter(rm_infty_lims-2-7,lower-alpha)")"; }
-#rm_infty_lims-2-7 > li { counter-increment: rm_infty_lims-2-7; }
-#eg_infty_lim_tan-2-1-4 { counter-set: eg_infty_lim_tan-2-1-4 0; }
-#eg_infty_lim_tan-2-1-4 > li::marker { content: ""counter(eg_infty_lim_tan-2-1-4,decimal)"."; }
-#eg_infty_lim_tan-2-1-4 > li { counter-increment: eg_infty_lim_tan-2-1-4; }
-#eg_infty_lim_tan-3-1-1 { counter-set: eg_infty_lim_tan-3-1-1 0; }
-#eg_infty_lim_tan-3-1-1 > li::marker { content: ""counter(eg_infty_lim_tan-3-1-1,decimal)"."; }
-#eg_infty_lim_tan-3-1-1 > li { counter-increment: eg_infty_lim_tan-3-1-1; }
-#th_infinite_limit-2-1-5 { counter-set: th_infinite_limit-2-1-5 0; }
-#th_infinite_limit-2-1-5 > li::marker { content: ""counter(th_infinite_limit-2-1-5,decimal)"."; }
-#th_infinite_limit-2-1-5 > li { counter-increment: th_infinite_limit-2-1-5; }
-#eg_infty_lim_elem-2-1-3 { counter-set: eg_infty_lim_elem-2-1-3 0; }
-#eg_infty_lim_elem-2-1-3 > li::marker { content: ""counter(eg_infty_lim_elem-2-1-3,decimal)"."; }
-#eg_infty_lim_elem-2-1-3 > li { counter-increment: eg_infty_lim_elem-2-1-3; }
-#eg_infty_lim_elem-3-1-1 { counter-set: eg_infty_lim_elem-3-1-1 0; }
-#eg_infty_lim_elem-3-1-1 > li::marker { content: ""counter(eg_infty_lim_elem-3-1-1,decimal)"."; }
-#eg_infty_lim_elem-3-1-1 > li { counter-increment: eg_infty_lim_elem-3-1-1; }
-#th_rational_function-2-1-5 { counter-set: th_rational_function-2-1-5 0; }
-#th_rational_function-2-1-5 > li::marker { content: ""counter(th_rational_function-2-1-5,decimal)"."; }
-#th_rational_function-2-1-5 > li { counter-increment: th_rational_function-2-1-5; }
-#s_der_at_point-2-1 { counter-set: s_der_at_point-2-1 0; }
-#s_der_at_point-2-1 > li::marker { content: ""counter(s_der_at_point-2-1,decimal)"."; }
-#s_der_at_point-2-1 > li { counter-increment: s_der_at_point-2-1; }
-#eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
-#eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
-#eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
-#eg_der_at_point-3-1-1 { counter-set: eg_der_at_point-3-1-1 0; }
-#eg_der_at_point-3-1-1 > li::marker { content: ""counter(eg_der_at_point-3-1-1,decimal)"."; }
-#eg_der_at_point-3-1-1 > li { counter-increment: eg_der_at_point-3-1-1; }
-#d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
-#d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
-#d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
-#eg_der_at_point_tangent-2-1-2 { counter-set: eg_der_at_point_tangent-2-1-2 0; }
-#eg_der_at_point_tangent-2-1-2 > li::marker { content: ""counter(eg_der_at_point_tangent-2-1-2,decimal)"."; }
-#eg_der_at_point_tangent-2-1-2 > li { counter-increment: eg_der_at_point_tangent-2-1-2; }
-#eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
-#eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
-#eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
-#s_der_function-2-1 { counter-set: s_der_function-2-1 0; }
-#s_der_function-2-1 > li::marker { content: ""counter(s_der_function-2-1,decimal)"."; }
-#s_der_function-2-1 > li { counter-increment: s_der_function-2-1; }
-#eg_der_func_rad-2-1-3 { counter-set: eg_der_func_rad-2-1-3 0; }
-#eg_der_func_rad-2-1-3 > li::marker { content: ""counter(eg_der_func_rad-2-1-3,decimal)"."; }
-#eg_der_func_rad-2-1-3 > li { counter-increment: eg_der_func_rad-2-1-3; }
-#eg_der_func_rad-3-1-1 { counter-set: eg_der_func_rad-3-1-1 0; }
-#eg_der_func_rad-3-1-1 > li::marker { content: ""counter(eg_der_func_rad-3-1-1,decimal)"."; }
-#eg_der_func_rad-3-1-1 > li { counter-increment: eg_der_func_rad-3-1-1; }
-#eg_der_funct_abs-2-1-2 { counter-set: eg_der_funct_abs-2-1-2 0; }
-#eg_der_funct_abs-2-1-2 > li::marker { content: ""counter(eg_der_funct_abs-2-1-2,decimal)"."; }
-#eg_der_funct_abs-2-1-2 > li { counter-increment: eg_der_funct_abs-2-1-2; }
-#th_der_formulas_basic-2-1-1 { counter-set: th_der_formulas_basic-2-1-1 0; }
-#th_der_formulas_basic-2-1-1 > li::marker { content: ""counter(th_der_formulas_basic-2-1-1,decimal)"."; }
-#th_der_formulas_basic-2-1-1 > li { counter-increment: th_der_formulas_basic-2-1-1; }
-#th_der_rules-2-1-1 { counter-set: th_der_rules-2-1-1 0; }
-#th_der_rules-2-1-1 > li::marker { content: ""counter(th_der_rules-2-1-1,decimal)"."; }
-#th_der_rules-2-1-1 > li { counter-increment: th_der_rules-2-1-1; }
-#eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
-#eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
-#eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
-#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
-#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
-#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
-#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
-#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
-#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
-#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
-#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
-#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
-#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
-#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
-#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
-#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
-#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
-#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
-#eg_dynamics_drone-3-1-1 { counter-set: eg_dynamics_drone-3-1-1 0; }
-#eg_dynamics_drone-3-1-1 > li::marker { content: ""counter(eg_dynamics_drone-3-1-1,decimal)"."; }
-#eg_dynamics_drone-3-1-1 > li { counter-increment: eg_dynamics_drone-3-1-1; }
-#eg_marginal-2-1-7 { counter-set: eg_marginal-2-1-7 0; }
-#eg_marginal-2-1-7 > li::marker { content: ""counter(eg_marginal-2-1-7,decimal)"."; }
-#eg_marginal-2-1-7 > li { counter-increment: eg_marginal-2-1-7; }
-#eg_marginal-3-1-1 { counter-set: eg_marginal-3-1-1 0; }
-#eg_marginal-3-1-1 > li::marker { content: ""counter(eg_marginal-3-1-1,decimal)"."; }
-#eg_marginal-3-1-1 > li { counter-increment: eg_marginal-3-1-1; }
-#s_der_trig-2-1 { counter-set: s_der_trig-2-1 0; }
-#s_der_trig-2-1 > li::marker { content: ""counter(s_der_trig-2-1,decimal)"."; }
-#s_der_trig-2-1 > li { counter-increment: s_der_trig-2-1; }
-#eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
-#eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
-#eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
-#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
-#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
-#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
-#s_chain-2-1 { counter-set: s_chain-2-1 0; }
-#s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
-#s_chain-2-1 > li { counter-increment: s_chain-2-1; }
-#proc_chain-2-1-2 { counter-set: proc_chain-2-1-2 0; }
-#proc_chain-2-1-2 > li::marker { content: ""counter(proc_chain-2-1-2,decimal)"."; }
-#proc_chain-2-1-2 > li { counter-increment: proc_chain-2-1-2; }
-#eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
-#eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
-#eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
-#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
-#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
-#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
-#eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
-#eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
-#eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
-#eg_chain_spher_balloon-3-1-1 { counter-set: eg_chain_spher_balloon-3-1-1 0; }
-#eg_chain_spher_balloon-3-1-1 > li::marker { content: ""counter(eg_chain_spher_balloon-3-1-1,decimal)"."; }
-#eg_chain_spher_balloon-3-1-1 > li { counter-increment: eg_chain_spher_balloon-3-1-1; }
-#s_implicit-2-1 { counter-set: s_implicit-2-1 0; }
-#s_implicit-2-1 > li::marker { content: ""counter(s_implicit-2-1,decimal)"."; }
-#s_implicit-2-1 > li { counter-increment: s_implicit-2-1; }
-#proc_implicit_diff-2-1-8 { counter-set: proc_implicit_diff-2-1-8 0; }
-#proc_implicit_diff-2-1-8 > li::marker { content: ""counter(proc_implicit_diff-2-1-8,decimal)"."; }
-#proc_implicit_diff-2-1-8 > li { counter-increment: proc_implicit_diff-2-1-8; }
-#eg_implicit_Ts-2-1-3 { counter-set: eg_implicit_Ts-2-1-3 0; }
-#eg_implicit_Ts-2-1-3 > li::marker { content: ""counter(eg_implicit_Ts-2-1-3,decimal)"."; }
-#eg_implicit_Ts-2-1-3 > li { counter-increment: eg_implicit_Ts-2-1-3; }
-#eg_implicit_Ts-3-1-1 { counter-set: eg_implicit_Ts-3-1-1 0; }
-#eg_implicit_Ts-3-1-1 > li::marker { content: ""counter(eg_implicit_Ts-3-1-1,decimal)"."; }
-#eg_implicit_Ts-3-1-1 > li { counter-increment: eg_implicit_Ts-3-1-1; }
-#eg_implicit_trig-2-1-3 { counter-set: eg_implicit_trig-2-1-3 0; }
-#eg_implicit_trig-2-1-3 > li::marker { content: ""counter(eg_implicit_trig-2-1-3,decimal)"."; }
-#eg_implicit_trig-2-1-3 > li { counter-increment: eg_implicit_trig-2-1-3; }
-#eg_implicit_trig-3-1-1 { counter-set: eg_implicit_trig-3-1-1 0; }
-#eg_implicit_trig-3-1-1 > li::marker { content: ""counter(eg_implicit_trig-3-1-1,decimal)"."; }
-#eg_implicit_trig-3-1-1 > li { counter-increment: eg_implicit_trig-3-1-1; }
-#proc_related_rates-2-1-1 { counter-set: proc_related_rates-2-1-1 0; }
-#proc_related_rates-2-1-1 > li::marker { content: ""counter(proc_related_rates-2-1-1,decimal)"."; }
-#proc_related_rates-2-1-1 > li { counter-increment: proc_related_rates-2-1-1; }
-#proc_related_rates-2-1-1-1-2 { counter-set: proc_related_rates-2-1-1-1-2 0; }
-#proc_related_rates-2-1-1-1-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-1-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-1-2 > li { counter-increment: proc_related_rates-2-1-1-1-2; }
-#proc_related_rates-2-1-1-2-2 { counter-set: proc_related_rates-2-1-1-2-2 0; }
-#proc_related_rates-2-1-1-2-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-2-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-2-2 > li { counter-increment: proc_related_rates-2-1-1-2-2; }
-#proc_related_rates-2-1-1-3-2 { counter-set: proc_related_rates-2-1-1-3-2 0; }
-#proc_related_rates-2-1-1-3-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-3-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-3-2 > li { counter-increment: proc_related_rates-2-1-1-3-2; }
-#s_linearize-2-1 { counter-set: s_linearize-2-1 0; }
-#s_linearize-2-1 > li::marker { content: ""counter(s_linearize-2-1,decimal)"."; }
-#s_linearize-2-1 > li { counter-increment: s_linearize-2-1; }
-#proc_lin_approx-2-1-6 { counter-set: proc_lin_approx-2-1-6 0; }
-#proc_lin_approx-2-1-6 > li::marker { content: ""counter(proc_lin_approx-2-1-6,decimal)"."; }
-#proc_lin_approx-2-1-6 > li { counter-increment: proc_lin_approx-2-1-6; }
-#eg_linear_approx_quadratic-2-1-2 { counter-set: eg_linear_approx_quadratic-2-1-2 0; }
-#eg_linear_approx_quadratic-2-1-2 > li::marker { content: ""counter(eg_linear_approx_quadratic-2-1-2,decimal)"."; }
-#eg_linear_approx_quadratic-2-1-2 > li { counter-increment: eg_linear_approx_quadratic-2-1-2; }
-#eg_linear_approx_quadratic-3-1-1 { counter-set: eg_linear_approx_quadratic-3-1-1 0; }
-#eg_linear_approx_quadratic-3-1-1 > li::marker { content: ""counter(eg_linear_approx_quadratic-3-1-1,decimal)"."; }
-#eg_linear_approx_quadratic-3-1-1 > li { counter-increment: eg_linear_approx_quadratic-3-1-1; }
-#eg_linear_approx_marshmallow-2-1-1 { counter-set: eg_linear_approx_marshmallow-2-1-1 0; }
-#eg_linear_approx_marshmallow-2-1-1 > li::marker { content: ""counter(eg_linear_approx_marshmallow-2-1-1,decimal)"."; }
-#eg_linear_approx_marshmallow-2-1-1 > li { counter-increment: eg_linear_approx_marshmallow-2-1-1; }
-#eg_linear_approx_marshmallow-3-1-8 { counter-set: eg_linear_approx_marshmallow-3-1-8 0; }
-#eg_linear_approx_marshmallow-3-1-8 > li::marker { content: ""counter(eg_linear_approx_marshmallow-3-1-8,decimal)"."; }
-#eg_linear_approx_marshmallow-3-1-8 > li { counter-increment: eg_linear_approx_marshmallow-3-1-8; }
-#s_extreme-2-1 { counter-set: s_extreme-2-1 0; }
-#s_extreme-2-1 > li::marker { content: ""counter(s_extreme-2-1,decimal)"."; }
-#s_extreme-2-1 > li { counter-increment: s_extreme-2-1; }
-#eg_local_extrema-2-1-3 { counter-set: eg_local_extrema-2-1-3 0; }
-#eg_local_extrema-2-1-3 > li::marker { content: ""counter(eg_local_extrema-2-1-3,decimal)"."; }
-#eg_local_extrema-2-1-3 > li { counter-increment: eg_local_extrema-2-1-3; }
-#eg_local_extrema-3-1-1 { counter-set: eg_local_extrema-3-1-1 0; }
-#eg_local_extrema-3-1-1 > li::marker { content: ""counter(eg_local_extrema-3-1-1,decimal)"."; }
-#eg_local_extrema-3-1-1 > li { counter-increment: eg_local_extrema-3-1-1; }
-#proc_extreme-2-1-5 { counter-set: proc_extreme-2-1-5 0; }
-#proc_extreme-2-1-5 > li::marker { content: ""counter(proc_extreme-2-1-5,decimal)"."; }
-#proc_extreme-2-1-5 > li { counter-increment: proc_extreme-2-1-5; }
-#s_mean_value-2-1 { counter-set: s_mean_value-2-1 0; }
-#s_mean_value-2-1 > li::marker { content: ""counter(s_mean_value-2-1,decimal)"."; }
-#s_mean_value-2-1 > li { counter-increment: s_mean_value-2-1; }
-#th_monoton-2-1-3 { counter-set: th_monoton-2-1-3 0; }
-#th_monoton-2-1-3 > li::marker { content: ""counter(th_monoton-2-1-3,decimal)"."; }
-#th_monoton-2-1-3 > li { counter-increment: th_monoton-2-1-3; }
-#proc_intervals_monoto-2-1-4 { counter-set: proc_intervals_monoto-2-1-4 0; }
-#proc_intervals_monoto-2-1-4 > li::marker { content: ""counter(proc_intervals_monoto-2-1-4,decimal)"."; }
-#proc_intervals_monoto-2-1-4 > li { counter-increment: proc_intervals_monoto-2-1-4; }
-#proc_intervals_monoto-2-1-4-3-1-3 { counter-set: proc_intervals_monoto-2-1-4-3-1-3 0; }
-#proc_intervals_monoto-2-1-4-3-1-3 > li::marker { content: "("counter(proc_intervals_monoto-2-1-4-3-1-3,lower-alpha)")"; }
-#proc_intervals_monoto-2-1-4-3-1-3 > li { counter-increment: proc_intervals_monoto-2-1-4-3-1-3; }
-#th_first_der_test-2-1-5 { counter-set: th_first_der_test-2-1-5 0; }
-#th_first_der_test-2-1-5 > li::marker { content: ""counter(th_first_der_test-2-1-5,decimal)"."; }
-#th_first_der_test-2-1-5 > li { counter-increment: th_first_der_test-2-1-5; }
-#proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
-#proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
-#proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
-#eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
-#eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
-#eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
-#eg_concavity_logistic_growth-2-3-1 { counter-set: eg_concavity_logistic_growth-2-3-1 0; }
-#eg_concavity_logistic_growth-2-3-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-2-3-1,decimal)"."; }
-#eg_concavity_logistic_growth-2-3-1 > li { counter-increment: eg_concavity_logistic_growth-2-3-1; }
-#eg_concavity_logistic_growth-3-1-1 { counter-set: eg_concavity_logistic_growth-3-1-1 0; }
-#eg_concavity_logistic_growth-3-1-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-3-1-1,decimal)"."; }
-#eg_concavity_logistic_growth-3-1-1 > li { counter-increment: eg_concavity_logistic_growth-3-1-1; }
-#th_concavity-1-1-3 { counter-set: th_concavity-1-1-3 0; }
-#th_concavity-1-1-3 > li::marker { content: ""counter(th_concavity-1-1-3,decimal)"."; }
-#th_concavity-1-1-3 > li { counter-increment: th_concavity-1-1-3; }
-#proc_concavity-2-1-4 { counter-set: proc_concavity-2-1-4 0; }
-#proc_concavity-2-1-4 > li::marker { content: ""counter(proc_concavity-2-1-4,decimal)"."; }
-#proc_concavity-2-1-4 > li { counter-increment: proc_concavity-2-1-4; }
-#proc_concavity-2-1-4-1-1-4 { counter-set: proc_concavity-2-1-4-1-1-4 0; }
-#proc_concavity-2-1-4-1-1-4 > li::marker { content: "("counter(proc_concavity-2-1-4-1-1-4,lower-alpha)")"; }
-#proc_concavity-2-1-4-1-1-4 > li { counter-increment: proc_concavity-2-1-4-1-1-4; }
-#th_second_der-2-1-3 { counter-set: th_second_der-2-1-3 0; }
-#th_second_der-2-1-3 > li::marker { content: ""counter(th_second_der-2-1-3,decimal)"."; }
-#th_second_der-2-1-3 > li { counter-increment: th_second_der-2-1-3; }
-#s_curve_sketch_I-2-1 { counter-set: s_curve_sketch_I-2-1 0; }
-#s_curve_sketch_I-2-1 > li::marker { content: ""counter(s_curve_sketch_I-2-1,decimal)"."; }
-#s_curve_sketch_I-2-1 > li { counter-increment: s_curve_sketch_I-2-1; }
-#proc_curve_sketching-2-1-2 { counter-set: proc_curve_sketching-2-1-2 0; }
-#proc_curve_sketching-2-1-2 > li::marker { content: ""counter(proc_curve_sketching-2-1-2,decimal)"."; }
-#proc_curve_sketching-2-1-2 > li { counter-increment: proc_curve_sketching-2-1-2; }
-#s_curve_sketch_II-2-1 { counter-set: s_curve_sketch_II-2-1 0; }
-#s_curve_sketch_II-2-1 > li::marker { content: ""counter(s_curve_sketch_II-2-1,decimal)"."; }
-#s_curve_sketch_II-2-1 > li { counter-increment: s_curve_sketch_II-2-1; }
-#s_applied_opt_I-2-1 { counter-set: s_applied_opt_I-2-1 0; }
-#s_applied_opt_I-2-1 > li::marker { content: ""counter(s_applied_opt_I-2-1,decimal)"."; }
-#s_applied_opt_I-2-1 > li { counter-increment: s_applied_opt_I-2-1; }
-#proc_applied_opt-2-1-1 { counter-set: proc_applied_opt-2-1-1 0; }
-#proc_applied_opt-2-1-1 > li::marker { content: ""counter(proc_applied_opt-2-1-1,decimal)"."; }
-#proc_applied_opt-2-1-1 > li { counter-increment: proc_applied_opt-2-1-1; }
-#proc_applied_opt-2-1-1-1-2-1 { counter-set: proc_applied_opt-2-1-1-1-2-1 0; }
-#proc_applied_opt-2-1-1-1-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-1-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-1-2-1 > li { counter-increment: proc_applied_opt-2-1-1-1-2-1; }
-#proc_applied_opt-2-1-1-2-2-1 { counter-set: proc_applied_opt-2-1-1-2-2-1 0; }
-#proc_applied_opt-2-1-1-2-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-2-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-2-2-1 > li { counter-increment: proc_applied_opt-2-1-1-2-2-1; }
-#proc_applied_opt-2-1-1-3-2-1 { counter-set: proc_applied_opt-2-1-1-3-2-1 0; }
-#proc_applied_opt-2-1-1-3-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-3-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-3-2-1 > li { counter-increment: proc_applied_opt-2-1-1-3-2-1; }
-#proc_gen_EVT-2-1-12 { counter-set: proc_gen_EVT-2-1-12 0; }
-#proc_gen_EVT-2-1-12 > li::marker { content: ""counter(proc_gen_EVT-2-1-12,decimal)"."; }
-#proc_gen_EVT-2-1-12 > li { counter-increment: proc_gen_EVT-2-1-12; }
-</style>
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus</span> <span class="subtitle">Kursobjekt</span></a></h1>
 <p class="byline">Aaron Greicius</p>
-</div>
-</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -442,7 +132,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_der_rules.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_der_trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_der_rules.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_der_trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -545,7 +236,7 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></div>
@@ -592,9 +283,9 @@ window.MathJax = {
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">10</span> <span class="title">Derivative: at a point</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">11</span> <span class="title">Derivative: function</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">12</span> <span class="title">Derivative: rules</span></a></div></li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">13</span> <span class="title">Derivative as rate of change</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
@@ -626,14 +317,23 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_der_rate_change"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_der_rate_change"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">13</span><span class="space"> </span><span class="title">Derivative as rate of change</span>
 </h2>
 <article class="objectives goal-like" id="s_der_rate_change-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ol class="decimal" id="s_der_rate_change-2-1">
-<li id="s_der_rate_change-2-1-1"><div class="para" id="s_der_rate_change-2-1-1-1">Understand and use the rate of change interpretation of the derivative.</div></li>
-<li id="s_der_rate_change-2-1-2"><div class="para" id="s_der_rate_change-2-1-2-1">Apply the rate of change interpretation to the position, velocity, and acceleration functions of an object.</div></li>
-</ol></article><section class="subsection" id="ss_der_rate_of"><h3 class="heading hide-type">
+<li id="s_der_rate_change-2-1-1">
+<div class="para" id="s_der_rate_change-2-1-1-1">Understand and use the rate of change interpretation of the derivative.<div class="autopermalink" data-description="Paragraph"><a href="#s_der_rate_change-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective 13.1"><a href="#s_der_rate_change-2-1-1" title="Copy heading and permalink for Objective 13.1" aria-label="Copy heading and permalink for Objective 13.1">🔗</a></div>
+</li>
+<li id="s_der_rate_change-2-1-2">
+<div class="para" id="s_der_rate_change-2-1-2-1">Apply the rate of change interpretation to the position, velocity, and acceleration functions of an object.<div class="autopermalink" data-description="Paragraph"><a href="#s_der_rate_change-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective 13.2"><a href="#s_der_rate_change-2-1-2" title="Copy heading and permalink for Objective 13.2" aria-label="Copy heading and permalink for Objective 13.2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Objectives 13"><a href="#s_der_rate_change-2" title="Copy heading and permalink for Objectives 13" aria-label="Copy heading and permalink for Objectives 13">🔗</a></div></article><section class="subsection" id="ss_der_rate_of"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Rate of change</span>
 </h3>
 <div class="para logical" id="ss_der_rate_of-2">
@@ -650,6 +350,7 @@ f'(a)=\lim\limits_{b\to a}\frac{f(b)-f(a)}{b-a}\text{,}
 \end{equation}
 </div>
 <div class="para">as the <em class="emphasis">average rate of change</em> of <span class="process-math">\(f\)</span> between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> The idea is that as <span class="process-math">\(b\to a\text{,}\)</span> the <em class="emphasis">average</em> rate of change computed as by <a href="s_der_rate_change.html#eq_avg_rate" class="xref" data-knowl="./knowl/xref/eq_avg_rate.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 13.1">(13.1)</a> gets closer and closer to an <em class="emphasis">instantaneous</em> rate of change of <span class="process-math">\(f\)</span> at <span class="process-math">\(a\text{.}\)</span> This is the motivation behind the definition of instantaneous rate of change given in <a href="s_der_at_point.html#d_der_interpretations" class="xref" data-knowl="./knowl/xref/d_der_interpretations.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 10.6: Derivative interpretations">Definition 10.6</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ss_der_rate_of-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="algorithm theorem-like" id="proc_rate_of_change"><h4 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rate of change interpretations.</span>
@@ -675,7 +376,9 @@ f'=\frac{df}{ds}=\frac{dq}{ds}
 </div>
 <div class="para">For each choice of <span class="process-math">\(s_1\text{,}\)</span> the difference quotient gives an <em class="emphasis">approximation</em> of the instantaneous rate of change of <span class="process-math">\(q\)</span> with respect to <span class="process-math">\(s\)</span> at <span class="process-math">\(s=s_0\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proc_rate_of_change-2-1-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item: Difference quotient"><a href="#proc_rate_of_change-2-1-7-1" title="Copy heading and permalink for Item: Difference quotient" aria-label="Copy heading and permalink for Item: Difference quotient">🔗</a></div>
 </li>
 <li id="proc_rate_of_change-2-1-7-2">
 <span class="heading"><span class="title">Rate of change of <span class="process-math">\(q\)</span> with respect to <span class="process-math">\(s\)</span>.</span></span><div class="para logical" id="proc_rate_of_change-2-1-7-2-2">
@@ -686,16 +389,21 @@ f'=\frac{df}{ds}=\frac{dq}{ds}
 \text{w/r to } s \text{ at } s_0 \end{array}\right) = f'(s_0)  \ \text{ units  }q \text{ per } \text{units } s \tag{13.2}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proc_rate_of_change-2-1-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item: Rate of change of q with respect to s"><a href="#proc_rate_of_change-2-1-7-2" title="Copy heading and permalink for Item: Rate of change of q with respect to s" aria-label="Copy heading and permalink for Item: Rate of change of q with respect to s">🔗</a></div>
 </li>
 </ul>
-</div></article><article class="example example-like" id="eg_height_age"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#proc_rate_of_change-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Procedure 13.1: Rate of change interpretations"><a href="#proc_rate_of_change" title="Copy heading and permalink for Procedure 13.1: Rate of change interpretations" aria-label="Copy heading and permalink for Procedure 13.1: Rate of change interpretations">🔗</a></div></article><article class="example example-like" id="eg_height_age"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.2</span><span class="period">.</span><span class="space"> </span><span class="title">Height versus age.</span>
 </h4>
 <div class="para logical" id="eg_height_age-2-1">
 <div class="para">Suppose the height <span class="process-math">\(h\)</span> (in meters) of individuals in a population is modeled as a function <span class="process-math">\(h=f(a)\)</span> of their age <span class="process-math">\(a\)</span> (in years).</div>
 <ol class="decimal" id="eg_height_age-2-1-4">
-<li id="eg_height_age-2-1-4-1"><div class="para logical" id="eg_height_age-2-1-4-1-1">
+<li id="eg_height_age-2-1-4-1">
+<div class="para logical" id="eg_height_age-2-1-4-1-1">
 <div class="para">Interpret the two statements below in terms of the height and age of people. Your interpretation should include units, and should address all numeric details in the statements.</div>
 <div class="displaymath process-math" id="eg_height_age-2-1-4-1-1-1">
 \begin{align*}
@@ -703,8 +411,12 @@ f(12)\amp =  1.5\\
 f'(12) \amp = 0.06 \text{.}
 \end{align*}
 </div>
-</div></li>
-<li id="eg_height_age-2-1-4-2"><div class="para logical" id="eg_height_age-2-1-4-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_height_age-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_height_age-2-1-4-2">
+<div class="para logical" id="eg_height_age-2-1-4-2-1">
 <div class="para">What does the following sequence of statements tell us about the relation of height versus age? Be specific.</div>
 <div class="displaymath process-math" id="eg_height_age-2-1-4-2-1-1">
 \begin{align*}
@@ -713,16 +425,31 @@ f'(15) \amp = 0.025\\
 f'(18) \amp = 0.001\text{.}
 \end{align*}
 </div>
-</div></li>
-</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_height_age-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="eg_height_age-3-1">
-<li id="eg_height_age-3-1-1">
-<div class="para" id="eg_height_age-3-1-1-1">The statement <span class="process-math">\(f(12)=1.5\)</span> asserts that the height of a 12-year old in the population is 1.5 meters.</div>
-<div class="para" id="eg_height_age-3-1-1-2">The statement <span class="process-math">\(f'(12)=0.06\)</span> asserts that the rate of growth of a 12 year old in the population is <span class="process-math">\(0.06\)</span> meters per year.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_height_age-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="eg_height_age-3-1-2"><div class="para" id="eg_height_age-3-1-2-1">The sequence of statements tells us that the rates of growth for 12-, 15-, and 18-year olds are, respectively, 0.06, 0.025, and 0.001 meters per year. This is consistent with the fact that as we grow older, our rate of growth slows, approaching a rate of zero around age 18.</div></li>
-</ol></div></details></div></article></section><section class="subsection" id="ss_dynamics"><h3 class="heading hide-type">
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_height_age-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<ol class="decimal" id="eg_height_age-3-1">
+<li id="eg_height_age-3-1-1">
+<div class="para" id="eg_height_age-3-1-1-1">The statement <span class="process-math">\(f(12)=1.5\)</span> asserts that the height of a 12-year old in the population is 1.5 meters.<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_height_age-3-1-1-2">The statement <span class="process-math">\(f'(12)=0.06\)</span> asserts that the rate of growth of a 12 year old in the population is <span class="process-math">\(0.06\)</span> meters per year.<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-3-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_height_age-3-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_height_age-3-1-2">
+<div class="para" id="eg_height_age-3-1-2-1">The sequence of statements tells us that the rates of growth for 12-, 15-, and 18-year olds are, respectively, 0.06, 0.025, and 0.001 meters per year. This is consistent with the fact that as we grow older, our rate of growth slows, approaching a rate of zero around age 18.<div class="autopermalink" data-description="Paragraph"><a href="#eg_height_age-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_height_age-3-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Solution 13.2.1"><a href="#eg_height_age-3" title="Copy heading and permalink for Solution 13.2.1" aria-label="Copy heading and permalink for Solution 13.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 13.2: Height versus age"><a href="#eg_height_age" title="Copy heading and permalink for Example 13.2: Height versus age" aria-label="Copy heading and permalink for Example 13.2: Height versus age">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Rate of change"><a href="#ss_der_rate_of" title="Copy heading and permalink for Subsection: Rate of change" aria-label="Copy heading and permalink for Subsection: Rate of change">🔗</a></div></section><section class="subsection" id="ss_dynamics"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Position, velocity, acceleration</span>
 </h3>
 <article class="definition definition-like" id="d_pos_vel_acc"><h4 class="heading">
@@ -732,10 +459,14 @@ f'(18) \amp = 0.001\text{.}
 <div class="para">Suppose an object moves along an oriented axis with origin <span class="process-math">\(O\text{.}\)</span> To simplify the units discussion, we assume below that distance is measured in meters (m) and time is measured in seconds (s).</div>
 <ul class="disc" id="d_pos_vel_acc-1-1-2">
 <li id="d_pos_vel_acc-1-1-2-1">
-<span class="heading"><span class="title">Position.</span></span><div class="para" id="d_pos_vel_acc-1-1-2-1-2">At any given time <span class="process-math">\(t\text{,}\)</span> the <dfn class="terminology">position</dfn> <span class="process-math">\(x(t)\)</span> of the object is its <em class="emphasis">directed distance</em> (positive or negative) to the origin.</div>
+<span class="heading"><span class="title">Position.</span></span><div class="para" id="d_pos_vel_acc-1-1-2-1-2">At any given time <span class="process-math">\(t\text{,}\)</span> the <dfn class="terminology">position</dfn> <span class="process-math">\(x(t)\)</span> of the object is its <em class="emphasis">directed distance</em> (positive or negative) to the origin.<div class="autopermalink" data-description="Paragraph"><a href="#d_pos_vel_acc-1-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Position"><a href="#d_pos_vel_acc-1-1-2-1" title="Copy heading and permalink for Item: Position" aria-label="Copy heading and permalink for Item: Position">🔗</a></div>
 </li>
 <li id="d_pos_vel_acc-1-1-2-2">
-<span class="heading"><span class="title">Displacement.</span></span><div class="para" id="d_pos_vel_acc-1-1-2-2-2">Given times <span class="process-math">\(t_0&lt; t_1\text{,}\)</span> the <dfn class="terminology">displacement</dfn> of the object from time <span class="process-math">\(t_0\)</span> to time <span class="process-math">\(t_1\)</span> is the difference <span class="process-math">\(x(t_1)-x(t_0)\text{,}\)</span> often denoted as <span class="process-math">\(\Delta x\)</span> for short.</div>
+<span class="heading"><span class="title">Displacement.</span></span><div class="para" id="d_pos_vel_acc-1-1-2-2-2">Given times <span class="process-math">\(t_0&lt; t_1\text{,}\)</span> the <dfn class="terminology">displacement</dfn> of the object from time <span class="process-math">\(t_0\)</span> to time <span class="process-math">\(t_1\)</span> is the difference <span class="process-math">\(x(t_1)-x(t_0)\text{,}\)</span> often denoted as <span class="process-math">\(\Delta x\)</span> for short.<div class="autopermalink" data-description="Paragraph"><a href="#d_pos_vel_acc-1-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Displacement"><a href="#d_pos_vel_acc-1-1-2-2" title="Copy heading and permalink for Item: Displacement" aria-label="Copy heading and permalink for Item: Displacement">🔗</a></div>
 </li>
 <li id="d_pos_vel_acc-1-1-2-3">
 <span class="heading"><span class="title">Velocity.</span></span><div class="para logical" id="d_pos_vel_acc-1-1-2-3-2">
@@ -747,7 +478,9 @@ v(t)=\frac{dx}{dt}=x'(t) \text{ m/s}\text{.}
 </div>
 <div class="para">Values of velocity can be positive or negative. We define the <dfn class="terminology">speed</dfn> <span class="process-math">\(s(t)\)</span> of the object at time <span class="process-math">\(t\)</span> as <span class="process-math">\(s(t)=\abs{v(t)}.\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_pos_vel_acc-1-1-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item: Velocity"><a href="#d_pos_vel_acc-1-1-2-3" title="Copy heading and permalink for Item: Velocity" aria-label="Copy heading and permalink for Item: Velocity">🔗</a></div>
 </li>
 <li id="d_pos_vel_acc-1-1-2-4">
 <span class="heading"><span class="title">Acceleration.</span></span><div class="para logical" id="d_pos_vel_acc-1-1-2-4-2">
@@ -757,10 +490,14 @@ v(t)=\frac{dx}{dt}=x'(t) \text{ m/s}\text{.}
 a(t) \amp =\frac{dv}{dt}=v'(t)=x''(t) \text{ (m/s) per s}\text{.}
 \end{align*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#d_pos_vel_acc-1-1-2-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item: Acceleration"><a href="#d_pos_vel_acc-1-1-2-4" title="Copy heading and permalink for Item: Acceleration" aria-label="Copy heading and permalink for Item: Acceleration">🔗</a></div>
 </li>
 </ul>
-</div></article><article class="example example-like" id="eg_dynamics_drone"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#d_pos_vel_acc-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 13.3"><a href="#d_pos_vel_acc" title="Copy heading and permalink for Definition 13.3" aria-label="Copy heading and permalink for Definition 13.3">🔗</a></div></article><article class="example example-like" id="eg_dynamics_drone"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span><span class="space"> </span><span class="title">Drone.</span>
 </h4>
 <div class="para logical" id="eg_dynamics_drone-2-1">
@@ -771,14 +508,34 @@ h=h(t)=t^3-6t^2+9t\text{.}
 \end{equation*}
 </div>
 <ol class="decimal" id="eg_dynamics_drone-2-1-4">
-<li id="eg_dynamics_drone-2-1-4-1"><div class="para" id="eg_dynamics_drone-2-1-4-1-1">Derive formulas for the velocity <span class="process-math">\(v(t)\text{,}\)</span> speed <span class="process-math">\(s(t)\text{,}\)</span> and acceleration <span class="process-math">\(a(t)\)</span> of the drone <span class="process-math">\(t\)</span> seconds after Dudley takes control.</div></li>
-<li id="eg_dynamics_drone-2-1-4-2"><div class="para" id="eg_dynamics_drone-2-1-4-2-1">Find the time intervals when the drone is ascending, and the time intervals when it is descending.</div></li>
-<li id="eg_dynamics_drone-2-1-4-3"><div class="para" id="eg_dynamics_drone-2-1-4-3-1">Describe the end of Dudley’s flight at time <span class="process-math">\(t=3\)</span> seconds. Where is the drone? Did a fatal crash happen?</div></li>
-<li id="eg_dynamics_drone-2-1-4-4"><div class="para" id="eg_dynamics_drone-2-1-4-4-1">Compute (a) the displacement of the drone over the time interval <span class="process-math">\([0,3]\text{,}\)</span> and (b) the total distance traveled.</div></li>
-</ol>
+<li id="eg_dynamics_drone-2-1-4-1">
+<div class="para" id="eg_dynamics_drone-2-1-4-1-1">Derive formulas for the velocity <span class="process-math">\(v(t)\text{,}\)</span> speed <span class="process-math">\(s(t)\text{,}\)</span> and acceleration <span class="process-math">\(a(t)\)</span> of the drone <span class="process-math">\(t\)</span> seconds after Dudley takes control.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-2-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_dynamics_drone-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_dynamics_drone-3-1"><ol class="decimal" id="eg_dynamics_drone-3-1-1">
-<li id="eg_dynamics_drone-3-1-1-1"><div class="para logical" id="eg_dynamics_drone-3-1-1-1-1">
+<div class="autopermalink" data-description="Item 1"><a href="#eg_dynamics_drone-2-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_dynamics_drone-2-1-4-2">
+<div class="para" id="eg_dynamics_drone-2-1-4-2-1">Find the time intervals when the drone is ascending, and the time intervals when it is descending.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-2-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_dynamics_drone-2-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_dynamics_drone-2-1-4-3">
+<div class="para" id="eg_dynamics_drone-2-1-4-3-1">Describe the end of Dudley’s flight at time <span class="process-math">\(t=3\)</span> seconds. Where is the drone? Did a fatal crash happen?<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-2-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_dynamics_drone-2-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="eg_dynamics_drone-2-1-4-4">
+<div class="para" id="eg_dynamics_drone-2-1-4-4-1">Compute (a) the displacement of the drone over the time interval <span class="process-math">\([0,3]\text{,}\)</span> and (b) the total distance traveled.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-2-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#eg_dynamics_drone-2-1-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_dynamics_drone-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_dynamics_drone-3-1">
+<ol class="decimal" id="eg_dynamics_drone-3-1-1">
+<li id="eg_dynamics_drone-3-1-1-1">
+<div class="para logical" id="eg_dynamics_drone-3-1-1-1-1">
 <div class="para">We compute</div>
 <div class="displaymath process-math" id="eg_dynamics_drone-3-1-1-1-1-1">
 \begin{align*}
@@ -788,8 +545,12 @@ a(t) \amp = \frac{dv}{dt}\\
 \amp = 6x-12\text{.}
 \end{align*}
 </div>
-</div></li>
-<li id="eg_dynamics_drone-3-1-1-2"><div class="para logical" id="eg_dynamics_drone-3-1-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_dynamics_drone-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_dynamics_drone-3-1-1-2">
+<div class="para logical" id="eg_dynamics_drone-3-1-1-2-1">
 <div class="para">The drone ascending or descending is equivalent to the velocity <span class="process-math">\(v\)</span> being positive or negative. It will help here to factor our expression of <span class="process-math">\(v(t)\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -798,8 +559,15 @@ v(t)=3(x^2-4x+3)=3(x-3)(x-1)\text{.}
 \end{equation*}
 </div>
 <div class="para">From this we can easily sketch a graph of <span class="process-math">\(v(t)\)</span> as follows: <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/im_graph_v.svg" role="img" class="contained" alt="Graph of velocity function"></div> And from the graph of <span class="process-math">\(v\)</span> we see easily that <span class="process-math">\(v(t)\)</span> is positive on <span class="process-math">\([0,1]\)</span> and negative on <span class="process-math">\([1,3]\text{.}\)</span> Thus the drone ascends for the first second, then descends for the remaining two seconds.</div>
-</div></li>
-<li id="eg_dynamics_drone-3-1-1-3"><div class="para" id="eg_dynamics_drone-3-1-1-3-1">At time <span class="process-math">\(t=3\text{,}\)</span> the height of the drone is <span class="process-math">\(h(3)=0\)</span> and the velocity is <span class="process-math">\(v(3)=0\text{.}\)</span> This means that the downward velocity of the drone has slowed to 0 m per s upon impact. Dudley landed the drone safely, apparently!</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_dynamics_drone-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_dynamics_drone-3-1-1-3">
+<div class="para" id="eg_dynamics_drone-3-1-1-3-1">At time <span class="process-math">\(t=3\text{,}\)</span> the height of the drone is <span class="process-math">\(h(3)=0\)</span> and the velocity is <span class="process-math">\(v(3)=0\text{.}\)</span> This means that the downward velocity of the drone has slowed to 0 m per s upon impact. Dudley landed the drone safely, apparently!<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_dynamics_drone-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
 <li id="eg_dynamics_drone-3-1-1-4">
 <div class="para logical" id="eg_dynamics_drone-3-1-1-4-1">
 <div class="para">The total displacement <span class="process-math">\(\Delta h\)</span> is given as</div>
@@ -809,20 +577,33 @@ h(3)-h(0)=0-0=0\text{.}
 \end{equation*}
 </div>
 <div class="para">To compute the total distance traveled, we must separate the interval <span class="process-math">\([0,3]\)</span> into the separate intervals where the drone ascends and descends. The basic principle here is that if movement is always in the same direction (up or down in our case) over a certain time interval, then displacement is equal to distance traveled.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="eg_dynamics_drone-3-1-1-4-2">Over the time interval <span class="process-math">\([0,1]\)</span> the drone ascends from a height <span class="process-math">\(h(0)=0\)</span> meters to a height of <span class="process-math">\(h(1)=4\)</span> meters. Since the drone is always moving the same direction here, the total distance traveled over this time interval is <span class="process-math">\(4\)</span> meters.</div>
-<div class="para" id="eg_dynamics_drone-3-1-1-4-3">Over the time interval <span class="process-math">\([1,3]\)</span> the drone descends from a height of <span class="process-math">\(h(1)=4\)</span> meters, to a height of <span class="process-math">\(h(0)=0\)</span> meters. Again, since the drone is always moving in the same direction, the distance traveled over this time interval is 4 meters.</div>
-<div class="para" id="eg_dynamics_drone-3-1-1-4-4">We conclude that in sum the drone has traveled a distance of <span class="process-math">\(8=4+4\)</span> meters.</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-2">Over the time interval <span class="process-math">\([0,1]\)</span> the drone ascends from a height <span class="process-math">\(h(0)=0\)</span> meters to a height of <span class="process-math">\(h(1)=4\)</span> meters. Since the drone is always moving the same direction here, the total distance traveled over this time interval is <span class="process-math">\(4\)</span> meters.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-3">Over the time interval <span class="process-math">\([1,3]\)</span> the drone descends from a height of <span class="process-math">\(h(1)=4\)</span> meters, to a height of <span class="process-math">\(h(0)=0\)</span> meters. Again, since the drone is always moving in the same direction, the distance traveled over this time interval is 4 meters.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_dynamics_drone-3-1-1-4-4">We conclude that in sum the drone has traveled a distance of <span class="process-math">\(8=4+4\)</span> meters.<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1-1-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#eg_dynamics_drone-3-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
-</ol></div></div></details></div></article></section><section class="subsection" id="ss_marginal_cost"><h3 class="heading hide-type">
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_dynamics_drone-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.4.1"><a href="#eg_dynamics_drone-3" title="Copy heading and permalink for Solution 13.4.1" aria-label="Copy heading and permalink for Solution 13.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 13.4: Drone"><a href="#eg_dynamics_drone" title="Copy heading and permalink for Example 13.4: Drone" aria-label="Copy heading and permalink for Example 13.4: Drone">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Position, velocity, acceleration"><a href="#ss_dynamics" title="Copy heading and permalink for Subsection: Position, velocity, acceleration" aria-label="Copy heading and permalink for Subsection: Position, velocity, acceleration">🔗</a></div></section><section class="subsection" id="ss_marginal_cost"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Rates of change in economics</span>
 </h3>
-<div class="para" id="ss_marginal_cost-2">Derivative play a crucial role in economics, where this notion is often described in that field’s particular jargon as some variety of <em class="emphasis">marginal</em>.</div>
+<div class="para" id="ss_marginal_cost-2">Derivative play a crucial role in economics, where this notion is often described in that field’s particular jargon as some variety of <em class="emphasis">marginal</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_marginal_cost-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="d_marginals"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span><span class="space"> </span><span class="title">Marginal cost, revenue, profit.</span>
 </h4>
-<div class="para" id="d_marginals-2-1">Suppose the cost <span class="process-math">\(C\)</span> (in dollars) of making a product is modeled as a function <span class="process-math">\(C=f(q)\)</span> of the total quantity of the good produced. The <dfn class="terminology">marginal cost function</dfn> is defined as <span class="process-math">\(f'=\frac{dC}{dq}\text{.}\)</span> Thus <span class="process-math">\(f'(q_0)\)</span> computes the marginal cost (in dollars per unit producion) at a current level of production <span class="process-math">\(q=q_0\text{:}\)</span> this is the rate of change of cost with respect to quantity produced at the given production level <span class="process-math">\(q=q_0\text{.}\)</span>
-</div> <div class="para" id="d_marginals-2-2">We get notions of <dfn class="terminology">marginal revenue</dfn> and <dfn class="terminology">marginal profit</dfn> by replacing the cost function above with a revenue or profit function.</div></article><article class="example example-like" id="eg_marginal"><h4 class="heading">
+<div class="para" id="d_marginals-2-1">Suppose the cost <span class="process-math">\(C\)</span> (in dollars) of making a product is modeled as a function <span class="process-math">\(C=f(q)\)</span> of the total quantity of the good produced. The <dfn class="terminology">marginal cost function</dfn> is defined as <span class="process-math">\(f'=\frac{dC}{dq}\text{.}\)</span> Thus <span class="process-math">\(f'(q_0)\)</span> computes the marginal cost (in dollars per unit producion) at a current level of production <span class="process-math">\(q=q_0\text{:}\)</span> this is the rate of change of cost with respect to quantity produced at the given production level <span class="process-math">\(q=q_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_marginals-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="d_marginals-2-2">We get notions of <dfn class="terminology">marginal revenue</dfn> and <dfn class="terminology">marginal profit</dfn> by replacing the cost function above with a revenue or profit function.<div class="autopermalink" data-description="Paragraph"><a href="#d_marginals-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 13.5: Marginal cost, revenue, profit"><a href="#d_marginals" title="Copy heading and permalink for Definition 13.5: Marginal cost, revenue, profit" aria-label="Copy heading and permalink for Definition 13.5: Marginal cost, revenue, profit">🔗</a></div></article><article class="example example-like" id="eg_marginal"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span><span class="space"> </span><span class="title">Marginals.</span>
 </h4>
 <div class="para logical" id="eg_marginal-2-1">
@@ -840,14 +621,30 @@ p(b)=\frac{20000}{100+b} \text{ dollar per barrel}
 </div>
 <div class="para">when producing <span class="process-math">\(b\)</span> barrels of milk.</div>
 <ol class="decimal" id="eg_marginal-2-1-7">
-<li id="eg_marginal-2-1-7-1"><div class="para" id="eg_marginal-2-1-7-1-1">Determine the marginal cost of producing 100 barrels of milk, and give an easy to understand interpretation of what this means.</div></li>
-<li id="eg_marginal-2-1-7-2"><div class="para" id="eg_marginal-2-1-7-2-1">Determine the marginal profit of producing 100 barrels of milk.</div></li>
-<li id="eg_marginal-2-1-7-3"><div class="para" id="eg_marginal-2-1-7-3-1">
-<em class="emphasis">Estimate</em> the change in profit that would result in going from 100 barrels  a day to 103 barrels of day.</div></li>
-</ol>
+<li id="eg_marginal-2-1-7-1">
+<div class="para" id="eg_marginal-2-1-7-1-1">Determine the marginal cost of producing 100 barrels of milk, and give an easy to understand interpretation of what this means.<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-2-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_marginal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_marginal-3-1"><ol class="decimal" id="eg_marginal-3-1-1">
-<li id="eg_marginal-3-1-1-1"><div class="para logical" id="eg_marginal-3-1-1-1-1">
+<div class="autopermalink" data-description="Item 1"><a href="#eg_marginal-2-1-7-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_marginal-2-1-7-2">
+<div class="para" id="eg_marginal-2-1-7-2-1">Determine the marginal profit of producing 100 barrels of milk.<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-2-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_marginal-2-1-7-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_marginal-2-1-7-3">
+<div class="para" id="eg_marginal-2-1-7-3-1">
+<em class="emphasis">Estimate</em> the change in profit that would result in going from 100 barrels  a day to 103 barrels of day.<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-2-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_marginal-2-1-7-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_marginal-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_marginal-3-1">
+<ol class="decimal" id="eg_marginal-3-1-1">
+<li id="eg_marginal-3-1-1-1">
+<div class="para logical" id="eg_marginal-3-1-1-1-1">
 <div class="para">By definition, marginal cost (with respect to barrels $b$ produced) is given as</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -861,8 +658,12 @@ p(b)=\frac{20000}{100+b} \text{ dollar per barrel}
 \end{equation*}
 </div>
 <div class="para">This tells us that as the farmer steps milk production from <span class="process-math">\(100\)</span> barrels, the cost increases at a rate of 128 dollars per barrel.</div>
-</div></li>
-<li id="eg_marginal-3-1-1-2"><div class="para logical" id="eg_marginal-3-1-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#eg_marginal-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_marginal-3-1-1-2">
+<div class="para logical" id="eg_marginal-3-1-1-2-1">
 <div class="para">Let <span class="process-math">\(R=R(b)\)</span> be the revenue earned when producing <span class="process-math">\(b\)</span> barrels of milk, under that assumption that all barrels will be purchased. We have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -892,7 +693,10 @@ P'(100) \amp = \frac{2\times 10^6}{4\times 10^4}-C'(100)\\
 \end{align*}
 </div>
 <div class="para">This tells us that increasing the production from 100 barrels results in the farmer’s profit decreasing at a rate of 78 dollars per barrel. What’s going on here is that although revenue will increase by increasing production, the rate at which it increases is less than the rate at which cost increases.</div>
-</div></li>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#eg_marginal-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
 <li id="eg_marginal-3-1-1-3">
 <div class="para logical" id="eg_marginal-3-1-1-3-1">
 <div class="para">
@@ -903,6 +707,7 @@ P'(100) \amp = \frac{2\times 10^6}{4\times 10^4}-C'(100)\\
 \end{equation*}
 </div>
 <div class="para">dollars if we increase production from 100 to 103 barrels.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="eg_marginal-3-1-1-3-2">
 <div class="para">The reason this is an <em class="emphasis">estimate</em> and not necessarily the <em class="emphasis">exact</em> change in profit, is that our simplifying assumption need not be the case! That is, the rate of profit <span class="process-math">\(P'(b)\)</span> is not necessarily constant as a function of <span class="process-math">\(b\text{.}\)</span> Indeed, looking at the formula above, it most definitely is not in our case! And in fact, using our formula for <span class="process-math">\(P(b)\)</span> we can compute <span class="process-math">\(\Delta P\)</span> exactly as</div>
@@ -911,15 +716,22 @@ P'(100) \amp = \frac{2\times 10^6}{4\times 10^4}-C'(100)\\
 P(103)-P(100)=-\frac{25074027}{101500}\approx -247.03 \text{ dollars}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-3-1-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 3"><a href="#eg_marginal-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-</ol></div></div></details></div></article></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="s_der_rules.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_trig.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_marginal-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 13.6.1"><a href="#eg_marginal-3" title="Copy heading and permalink for Solution 13.6.1" aria-label="Copy heading and permalink for Solution 13.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 13.6: Marginals"><a href="#eg_marginal" title="Copy heading and permalink for Example 13.6: Marginals" aria-label="Copy heading and permalink for Example 13.6: Marginals">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Rates of change in economics"><a href="#ss_marginal_cost" title="Copy heading and permalink for Subsection: Rates of change in economics" aria-label="Copy heading and permalink for Subsection: Rates of change in economics">🔗</a></div></section><div class="autopermalink" data-description="Section 13: Derivative as rate of change"><a href="#s_der_rate_change" title="Copy heading and permalink for Section 13: Derivative as rate of change" aria-label="Copy heading and permalink for Section 13: Derivative as rate of change">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="s_der_rules.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_der_trig.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

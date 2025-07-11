@@ -5,13 +5,25 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Limits: informal definition</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -67,371 +79,49 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<style>
-#s_intro-2-1 { counter-set: s_intro-2-1 0; }
-#s_intro-2-1 > li::marker { content: ""counter(s_intro-2-1,decimal)"."; }
-#s_intro-2-1 > li { counter-increment: s_intro-2-1; }
-#ss_keys_success-2-1 { counter-set: ss_keys_success-2-1 0; }
-#ss_keys_success-2-1 > li::marker { content: ""counter(ss_keys_success-2-1,decimal)"."; }
-#ss_keys_success-2-1 > li { counter-increment: ss_keys_success-2-1; }
-#s_limits_naive-2-1 { counter-set: s_limits_naive-2-1 0; }
-#s_limits_naive-2-1 > li::marker { content: ""counter(s_limits_naive-2-1,decimal)"."; }
-#s_limits_naive-2-1 > li { counter-increment: s_limits_naive-2-1; }
-#th_lim_const_id-2-1-1 { counter-set: th_lim_const_id-2-1-1 0; }
-#th_lim_const_id-2-1-1 > li::marker { content: ""counter(th_lim_const_id-2-1-1,decimal)"."; }
-#th_lim_const_id-2-1-1 > li { counter-increment: th_lim_const_id-2-1-1; }
-#th_lim_rules-2-1-6 { counter-set: th_lim_rules-2-1-6 0; }
-#th_lim_rules-2-1-6 > li::marker { content: ""counter(th_lim_rules-2-1-6,decimal)"."; }
-#th_lim_rules-2-1-6 > li { counter-increment: th_lim_rules-2-1-6; }
-#cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
-#cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
-#cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
-#s_limit_sandwich-2-1 { counter-set: s_limit_sandwich-2-1 0; }
-#s_limit_sandwich-2-1 > li::marker { content: ""counter(s_limit_sandwich-2-1,decimal)"."; }
-#s_limit_sandwich-2-1 > li { counter-increment: s_limit_sandwich-2-1; }
-#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
-#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
-#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
-#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
-#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
-#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
-#th_abs_lim-2-1-1 { counter-set: th_abs_lim-2-1-1 0; }
-#th_abs_lim-2-1-1 > li::marker { content: ""counter(th_abs_lim-2-1-1,decimal)"."; }
-#th_abs_lim-2-1-1 > li { counter-increment: th_abs_lim-2-1-1; }
-#th_abs_lim-3-1-1 { counter-set: th_abs_lim-3-1-1 0; }
-#th_abs_lim-3-1-1 > li::marker { content: ""counter(th_abs_lim-3-1-1,decimal)"."; }
-#th_abs_lim-3-1-1 > li { counter-increment: th_abs_lim-3-1-1; }
-#th_lim_sine_cos-2-1-1 { counter-set: th_lim_sine_cos-2-1-1 0; }
-#th_lim_sine_cos-2-1-1 > li::marker { content: ""counter(th_lim_sine_cos-2-1-1,decimal)"."; }
-#th_lim_sine_cos-2-1-1 > li { counter-increment: th_lim_sine_cos-2-1-1; }
-#th_lim_sine_cos-3-1-1 { counter-set: th_lim_sine_cos-3-1-1 0; }
-#th_lim_sine_cos-3-1-1 > li::marker { content: ""counter(th_lim_sine_cos-3-1-1,decimal)"."; }
-#th_lim_sine_cos-3-1-1 > li { counter-increment: th_lim_sine_cos-3-1-1; }
-#s_lim_formal-2-1 { counter-set: s_lim_formal-2-1 0; }
-#s_lim_formal-2-1 > li::marker { content: ""counter(s_lim_formal-2-1,decimal)"."; }
-#s_lim_formal-2-1 > li { counter-increment: s_lim_formal-2-1; }
-#proc_epsilon_delta-2-1-4 { counter-set: proc_epsilon_delta-2-1-4 0; }
-#proc_epsilon_delta-2-1-4 > li::marker { content: ""counter(proc_epsilon_delta-2-1-4,decimal)"."; }
-#proc_epsilon_delta-2-1-4 > li { counter-increment: proc_epsilon_delta-2-1-4; }
-#th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
-#th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
-#th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
-#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
-#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
-#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
-#d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
-#d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
-#d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
-#d_limit_extended-2-1-3 { counter-set: d_limit_extended-2-1-3 0; }
-#d_limit_extended-2-1-3 > li::marker { content: ""counter(d_limit_extended-2-1-3,decimal)"."; }
-#d_limit_extended-2-1-3 > li { counter-increment: d_limit_extended-2-1-3; }
-#th_trig_lims-2-1-1 { counter-set: th_trig_lims-2-1-1 0; }
-#th_trig_lims-2-1-1 > li::marker { content: ""counter(th_trig_lims-2-1-1,decimal)"."; }
-#th_trig_lims-2-1-1 > li { counter-increment: th_trig_lims-2-1-1; }
-#d_continuity-2-1-12 { counter-set: d_continuity-2-1-12 0; }
-#d_continuity-2-1-12 > li::marker { content: "("counter(d_continuity-2-1-12,lower-roman)")"; }
-#d_continuity-2-1-12 > li { counter-increment: d_continuity-2-1-12; }
-#th_cont_poly_rational-2-1-1 { counter-set: th_cont_poly_rational-2-1-1 0; }
-#th_cont_poly_rational-2-1-1 > li::marker { content: ""counter(th_cont_poly_rational-2-1-1,decimal)"."; }
-#th_cont_poly_rational-2-1-1 > li { counter-increment: th_cont_poly_rational-2-1-1; }
-#th_cont_poly_rational-3-1-1 { counter-set: th_cont_poly_rational-3-1-1 0; }
-#th_cont_poly_rational-3-1-1 > li::marker { content: ""counter(th_cont_poly_rational-3-1-1,decimal)"."; }
-#th_cont_poly_rational-3-1-1 > li { counter-increment: th_cont_poly_rational-3-1-1; }
-#th_cont_rules-2-1-4 { counter-set: th_cont_rules-2-1-4 0; }
-#th_cont_rules-2-1-4 > li::marker { content: ""counter(th_cont_rules-2-1-4,decimal)"."; }
-#th_cont_rules-2-1-4 > li { counter-increment: th_cont_rules-2-1-4; }
-#s_cont_ivt-2-1 { counter-set: s_cont_ivt-2-1 0; }
-#s_cont_ivt-2-1 > li::marker { content: ""counter(s_cont_ivt-2-1,decimal)"."; }
-#s_cont_ivt-2-1 > li { counter-increment: s_cont_ivt-2-1; }
-#eg_cont_piecewise-2-1-4 { counter-set: eg_cont_piecewise-2-1-4 0; }
-#eg_cont_piecewise-2-1-4 > li::marker { content: ""counter(eg_cont_piecewise-2-1-4,decimal)"."; }
-#eg_cont_piecewise-2-1-4 > li { counter-increment: eg_cont_piecewise-2-1-4; }
-#eg_cont_piecewise-3-1-1 { counter-set: eg_cont_piecewise-3-1-1 0; }
-#eg_cont_piecewise-3-1-1 > li::marker { content: ""counter(eg_cont_piecewise-3-1-1,decimal)"."; }
-#eg_cont_piecewise-3-1-1 > li { counter-increment: eg_cont_piecewise-3-1-1; }
-#eg_cont_piecewise-3-1-1-2-1-4 { counter-set: eg_cont_piecewise-3-1-1-2-1-4 0; }
-#eg_cont_piecewise-3-1-1-2-1-4 > li::marker { content: "("counter(eg_cont_piecewise-3-1-1-2-1-4,lower-roman)")"; }
-#eg_cont_piecewise-3-1-1-2-1-4 > li { counter-increment: eg_cont_piecewise-3-1-1-2-1-4; }
-#s_lim_at_infty-2-1 { counter-set: s_lim_at_infty-2-1 0; }
-#s_lim_at_infty-2-1 > li::marker { content: ""counter(s_lim_at_infty-2-1,decimal)"."; }
-#s_lim_at_infty-2-1 > li { counter-increment: s_lim_at_infty-2-1; }
-#d_lim_at_infty-2-1-1 { counter-set: d_lim_at_infty-2-1-1 0; }
-#d_lim_at_infty-2-1-1 > li::marker { content: ""counter(d_lim_at_infty-2-1-1,decimal)"."; }
-#d_lim_at_infty-2-1-1 > li { counter-increment: d_lim_at_infty-2-1-1; }
-#eg_lim_at_infty_cos-2-1-2 { counter-set: eg_lim_at_infty_cos-2-1-2 0; }
-#eg_lim_at_infty_cos-2-1-2 > li::marker { content: ""counter(eg_lim_at_infty_cos-2-1-2,decimal)"."; }
-#eg_lim_at_infty_cos-2-1-2 > li { counter-increment: eg_lim_at_infty_cos-2-1-2; }
-#s_infinite_limits-2-1 { counter-set: s_infinite_limits-2-1 0; }
-#s_infinite_limits-2-1 > li::marker { content: ""counter(s_infinite_limits-2-1,decimal)"."; }
-#s_infinite_limits-2-1 > li { counter-increment: s_infinite_limits-2-1; }
-#d_infty_lims-2-1-2 { counter-set: d_infty_lims-2-1-2 0; }
-#d_infty_lims-2-1-2 > li::marker { content: ""counter(d_infty_lims-2-1-2,decimal)"."; }
-#d_infty_lims-2-1-2 > li { counter-increment: d_infty_lims-2-1-2; }
-#rm_infty_lims-2-7 { counter-set: rm_infty_lims-2-7 0; }
-#rm_infty_lims-2-7 > li::marker { content: "("counter(rm_infty_lims-2-7,lower-alpha)")"; }
-#rm_infty_lims-2-7 > li { counter-increment: rm_infty_lims-2-7; }
-#eg_infty_lim_tan-2-1-4 { counter-set: eg_infty_lim_tan-2-1-4 0; }
-#eg_infty_lim_tan-2-1-4 > li::marker { content: ""counter(eg_infty_lim_tan-2-1-4,decimal)"."; }
-#eg_infty_lim_tan-2-1-4 > li { counter-increment: eg_infty_lim_tan-2-1-4; }
-#eg_infty_lim_tan-3-1-1 { counter-set: eg_infty_lim_tan-3-1-1 0; }
-#eg_infty_lim_tan-3-1-1 > li::marker { content: ""counter(eg_infty_lim_tan-3-1-1,decimal)"."; }
-#eg_infty_lim_tan-3-1-1 > li { counter-increment: eg_infty_lim_tan-3-1-1; }
-#th_infinite_limit-2-1-5 { counter-set: th_infinite_limit-2-1-5 0; }
-#th_infinite_limit-2-1-5 > li::marker { content: ""counter(th_infinite_limit-2-1-5,decimal)"."; }
-#th_infinite_limit-2-1-5 > li { counter-increment: th_infinite_limit-2-1-5; }
-#eg_infty_lim_elem-2-1-3 { counter-set: eg_infty_lim_elem-2-1-3 0; }
-#eg_infty_lim_elem-2-1-3 > li::marker { content: ""counter(eg_infty_lim_elem-2-1-3,decimal)"."; }
-#eg_infty_lim_elem-2-1-3 > li { counter-increment: eg_infty_lim_elem-2-1-3; }
-#eg_infty_lim_elem-3-1-1 { counter-set: eg_infty_lim_elem-3-1-1 0; }
-#eg_infty_lim_elem-3-1-1 > li::marker { content: ""counter(eg_infty_lim_elem-3-1-1,decimal)"."; }
-#eg_infty_lim_elem-3-1-1 > li { counter-increment: eg_infty_lim_elem-3-1-1; }
-#th_rational_function-2-1-5 { counter-set: th_rational_function-2-1-5 0; }
-#th_rational_function-2-1-5 > li::marker { content: ""counter(th_rational_function-2-1-5,decimal)"."; }
-#th_rational_function-2-1-5 > li { counter-increment: th_rational_function-2-1-5; }
-#s_der_at_point-2-1 { counter-set: s_der_at_point-2-1 0; }
-#s_der_at_point-2-1 > li::marker { content: ""counter(s_der_at_point-2-1,decimal)"."; }
-#s_der_at_point-2-1 > li { counter-increment: s_der_at_point-2-1; }
-#eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
-#eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
-#eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
-#eg_der_at_point-3-1-1 { counter-set: eg_der_at_point-3-1-1 0; }
-#eg_der_at_point-3-1-1 > li::marker { content: ""counter(eg_der_at_point-3-1-1,decimal)"."; }
-#eg_der_at_point-3-1-1 > li { counter-increment: eg_der_at_point-3-1-1; }
-#d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
-#d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
-#d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
-#eg_der_at_point_tangent-2-1-2 { counter-set: eg_der_at_point_tangent-2-1-2 0; }
-#eg_der_at_point_tangent-2-1-2 > li::marker { content: ""counter(eg_der_at_point_tangent-2-1-2,decimal)"."; }
-#eg_der_at_point_tangent-2-1-2 > li { counter-increment: eg_der_at_point_tangent-2-1-2; }
-#eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
-#eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
-#eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
-#s_der_function-2-1 { counter-set: s_der_function-2-1 0; }
-#s_der_function-2-1 > li::marker { content: ""counter(s_der_function-2-1,decimal)"."; }
-#s_der_function-2-1 > li { counter-increment: s_der_function-2-1; }
-#eg_der_func_rad-2-1-3 { counter-set: eg_der_func_rad-2-1-3 0; }
-#eg_der_func_rad-2-1-3 > li::marker { content: ""counter(eg_der_func_rad-2-1-3,decimal)"."; }
-#eg_der_func_rad-2-1-3 > li { counter-increment: eg_der_func_rad-2-1-3; }
-#eg_der_func_rad-3-1-1 { counter-set: eg_der_func_rad-3-1-1 0; }
-#eg_der_func_rad-3-1-1 > li::marker { content: ""counter(eg_der_func_rad-3-1-1,decimal)"."; }
-#eg_der_func_rad-3-1-1 > li { counter-increment: eg_der_func_rad-3-1-1; }
-#eg_der_funct_abs-2-1-2 { counter-set: eg_der_funct_abs-2-1-2 0; }
-#eg_der_funct_abs-2-1-2 > li::marker { content: ""counter(eg_der_funct_abs-2-1-2,decimal)"."; }
-#eg_der_funct_abs-2-1-2 > li { counter-increment: eg_der_funct_abs-2-1-2; }
-#th_der_formulas_basic-2-1-1 { counter-set: th_der_formulas_basic-2-1-1 0; }
-#th_der_formulas_basic-2-1-1 > li::marker { content: ""counter(th_der_formulas_basic-2-1-1,decimal)"."; }
-#th_der_formulas_basic-2-1-1 > li { counter-increment: th_der_formulas_basic-2-1-1; }
-#th_der_rules-2-1-1 { counter-set: th_der_rules-2-1-1 0; }
-#th_der_rules-2-1-1 > li::marker { content: ""counter(th_der_rules-2-1-1,decimal)"."; }
-#th_der_rules-2-1-1 > li { counter-increment: th_der_rules-2-1-1; }
-#eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
-#eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
-#eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
-#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
-#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
-#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
-#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
-#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
-#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
-#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
-#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
-#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
-#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
-#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
-#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
-#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
-#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
-#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
-#eg_dynamics_drone-3-1-1 { counter-set: eg_dynamics_drone-3-1-1 0; }
-#eg_dynamics_drone-3-1-1 > li::marker { content: ""counter(eg_dynamics_drone-3-1-1,decimal)"."; }
-#eg_dynamics_drone-3-1-1 > li { counter-increment: eg_dynamics_drone-3-1-1; }
-#eg_marginal-2-1-7 { counter-set: eg_marginal-2-1-7 0; }
-#eg_marginal-2-1-7 > li::marker { content: ""counter(eg_marginal-2-1-7,decimal)"."; }
-#eg_marginal-2-1-7 > li { counter-increment: eg_marginal-2-1-7; }
-#eg_marginal-3-1-1 { counter-set: eg_marginal-3-1-1 0; }
-#eg_marginal-3-1-1 > li::marker { content: ""counter(eg_marginal-3-1-1,decimal)"."; }
-#eg_marginal-3-1-1 > li { counter-increment: eg_marginal-3-1-1; }
-#s_der_trig-2-1 { counter-set: s_der_trig-2-1 0; }
-#s_der_trig-2-1 > li::marker { content: ""counter(s_der_trig-2-1,decimal)"."; }
-#s_der_trig-2-1 > li { counter-increment: s_der_trig-2-1; }
-#eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
-#eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
-#eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
-#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
-#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
-#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
-#s_chain-2-1 { counter-set: s_chain-2-1 0; }
-#s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
-#s_chain-2-1 > li { counter-increment: s_chain-2-1; }
-#proc_chain-2-1-2 { counter-set: proc_chain-2-1-2 0; }
-#proc_chain-2-1-2 > li::marker { content: ""counter(proc_chain-2-1-2,decimal)"."; }
-#proc_chain-2-1-2 > li { counter-increment: proc_chain-2-1-2; }
-#eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
-#eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
-#eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
-#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
-#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
-#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
-#eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
-#eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
-#eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
-#eg_chain_spher_balloon-3-1-1 { counter-set: eg_chain_spher_balloon-3-1-1 0; }
-#eg_chain_spher_balloon-3-1-1 > li::marker { content: ""counter(eg_chain_spher_balloon-3-1-1,decimal)"."; }
-#eg_chain_spher_balloon-3-1-1 > li { counter-increment: eg_chain_spher_balloon-3-1-1; }
-#s_implicit-2-1 { counter-set: s_implicit-2-1 0; }
-#s_implicit-2-1 > li::marker { content: ""counter(s_implicit-2-1,decimal)"."; }
-#s_implicit-2-1 > li { counter-increment: s_implicit-2-1; }
-#proc_implicit_diff-2-1-8 { counter-set: proc_implicit_diff-2-1-8 0; }
-#proc_implicit_diff-2-1-8 > li::marker { content: ""counter(proc_implicit_diff-2-1-8,decimal)"."; }
-#proc_implicit_diff-2-1-8 > li { counter-increment: proc_implicit_diff-2-1-8; }
-#eg_implicit_Ts-2-1-3 { counter-set: eg_implicit_Ts-2-1-3 0; }
-#eg_implicit_Ts-2-1-3 > li::marker { content: ""counter(eg_implicit_Ts-2-1-3,decimal)"."; }
-#eg_implicit_Ts-2-1-3 > li { counter-increment: eg_implicit_Ts-2-1-3; }
-#eg_implicit_Ts-3-1-1 { counter-set: eg_implicit_Ts-3-1-1 0; }
-#eg_implicit_Ts-3-1-1 > li::marker { content: ""counter(eg_implicit_Ts-3-1-1,decimal)"."; }
-#eg_implicit_Ts-3-1-1 > li { counter-increment: eg_implicit_Ts-3-1-1; }
-#eg_implicit_trig-2-1-3 { counter-set: eg_implicit_trig-2-1-3 0; }
-#eg_implicit_trig-2-1-3 > li::marker { content: ""counter(eg_implicit_trig-2-1-3,decimal)"."; }
-#eg_implicit_trig-2-1-3 > li { counter-increment: eg_implicit_trig-2-1-3; }
-#eg_implicit_trig-3-1-1 { counter-set: eg_implicit_trig-3-1-1 0; }
-#eg_implicit_trig-3-1-1 > li::marker { content: ""counter(eg_implicit_trig-3-1-1,decimal)"."; }
-#eg_implicit_trig-3-1-1 > li { counter-increment: eg_implicit_trig-3-1-1; }
-#proc_related_rates-2-1-1 { counter-set: proc_related_rates-2-1-1 0; }
-#proc_related_rates-2-1-1 > li::marker { content: ""counter(proc_related_rates-2-1-1,decimal)"."; }
-#proc_related_rates-2-1-1 > li { counter-increment: proc_related_rates-2-1-1; }
-#proc_related_rates-2-1-1-1-2 { counter-set: proc_related_rates-2-1-1-1-2 0; }
-#proc_related_rates-2-1-1-1-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-1-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-1-2 > li { counter-increment: proc_related_rates-2-1-1-1-2; }
-#proc_related_rates-2-1-1-2-2 { counter-set: proc_related_rates-2-1-1-2-2 0; }
-#proc_related_rates-2-1-1-2-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-2-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-2-2 > li { counter-increment: proc_related_rates-2-1-1-2-2; }
-#proc_related_rates-2-1-1-3-2 { counter-set: proc_related_rates-2-1-1-3-2 0; }
-#proc_related_rates-2-1-1-3-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-3-2,lower-alpha)")"; }
-#proc_related_rates-2-1-1-3-2 > li { counter-increment: proc_related_rates-2-1-1-3-2; }
-#s_linearize-2-1 { counter-set: s_linearize-2-1 0; }
-#s_linearize-2-1 > li::marker { content: ""counter(s_linearize-2-1,decimal)"."; }
-#s_linearize-2-1 > li { counter-increment: s_linearize-2-1; }
-#proc_lin_approx-2-1-6 { counter-set: proc_lin_approx-2-1-6 0; }
-#proc_lin_approx-2-1-6 > li::marker { content: ""counter(proc_lin_approx-2-1-6,decimal)"."; }
-#proc_lin_approx-2-1-6 > li { counter-increment: proc_lin_approx-2-1-6; }
-#eg_linear_approx_quadratic-2-1-2 { counter-set: eg_linear_approx_quadratic-2-1-2 0; }
-#eg_linear_approx_quadratic-2-1-2 > li::marker { content: ""counter(eg_linear_approx_quadratic-2-1-2,decimal)"."; }
-#eg_linear_approx_quadratic-2-1-2 > li { counter-increment: eg_linear_approx_quadratic-2-1-2; }
-#eg_linear_approx_quadratic-3-1-1 { counter-set: eg_linear_approx_quadratic-3-1-1 0; }
-#eg_linear_approx_quadratic-3-1-1 > li::marker { content: ""counter(eg_linear_approx_quadratic-3-1-1,decimal)"."; }
-#eg_linear_approx_quadratic-3-1-1 > li { counter-increment: eg_linear_approx_quadratic-3-1-1; }
-#eg_linear_approx_marshmallow-2-1-1 { counter-set: eg_linear_approx_marshmallow-2-1-1 0; }
-#eg_linear_approx_marshmallow-2-1-1 > li::marker { content: ""counter(eg_linear_approx_marshmallow-2-1-1,decimal)"."; }
-#eg_linear_approx_marshmallow-2-1-1 > li { counter-increment: eg_linear_approx_marshmallow-2-1-1; }
-#eg_linear_approx_marshmallow-3-1-8 { counter-set: eg_linear_approx_marshmallow-3-1-8 0; }
-#eg_linear_approx_marshmallow-3-1-8 > li::marker { content: ""counter(eg_linear_approx_marshmallow-3-1-8,decimal)"."; }
-#eg_linear_approx_marshmallow-3-1-8 > li { counter-increment: eg_linear_approx_marshmallow-3-1-8; }
-#s_extreme-2-1 { counter-set: s_extreme-2-1 0; }
-#s_extreme-2-1 > li::marker { content: ""counter(s_extreme-2-1,decimal)"."; }
-#s_extreme-2-1 > li { counter-increment: s_extreme-2-1; }
-#eg_local_extrema-2-1-3 { counter-set: eg_local_extrema-2-1-3 0; }
-#eg_local_extrema-2-1-3 > li::marker { content: ""counter(eg_local_extrema-2-1-3,decimal)"."; }
-#eg_local_extrema-2-1-3 > li { counter-increment: eg_local_extrema-2-1-3; }
-#eg_local_extrema-3-1-1 { counter-set: eg_local_extrema-3-1-1 0; }
-#eg_local_extrema-3-1-1 > li::marker { content: ""counter(eg_local_extrema-3-1-1,decimal)"."; }
-#eg_local_extrema-3-1-1 > li { counter-increment: eg_local_extrema-3-1-1; }
-#proc_extreme-2-1-5 { counter-set: proc_extreme-2-1-5 0; }
-#proc_extreme-2-1-5 > li::marker { content: ""counter(proc_extreme-2-1-5,decimal)"."; }
-#proc_extreme-2-1-5 > li { counter-increment: proc_extreme-2-1-5; }
-#s_mean_value-2-1 { counter-set: s_mean_value-2-1 0; }
-#s_mean_value-2-1 > li::marker { content: ""counter(s_mean_value-2-1,decimal)"."; }
-#s_mean_value-2-1 > li { counter-increment: s_mean_value-2-1; }
-#th_monoton-2-1-3 { counter-set: th_monoton-2-1-3 0; }
-#th_monoton-2-1-3 > li::marker { content: ""counter(th_monoton-2-1-3,decimal)"."; }
-#th_monoton-2-1-3 > li { counter-increment: th_monoton-2-1-3; }
-#proc_intervals_monoto-2-1-4 { counter-set: proc_intervals_monoto-2-1-4 0; }
-#proc_intervals_monoto-2-1-4 > li::marker { content: ""counter(proc_intervals_monoto-2-1-4,decimal)"."; }
-#proc_intervals_monoto-2-1-4 > li { counter-increment: proc_intervals_monoto-2-1-4; }
-#proc_intervals_monoto-2-1-4-3-1-3 { counter-set: proc_intervals_monoto-2-1-4-3-1-3 0; }
-#proc_intervals_monoto-2-1-4-3-1-3 > li::marker { content: "("counter(proc_intervals_monoto-2-1-4-3-1-3,lower-alpha)")"; }
-#proc_intervals_monoto-2-1-4-3-1-3 > li { counter-increment: proc_intervals_monoto-2-1-4-3-1-3; }
-#th_first_der_test-2-1-5 { counter-set: th_first_der_test-2-1-5 0; }
-#th_first_der_test-2-1-5 > li::marker { content: ""counter(th_first_der_test-2-1-5,decimal)"."; }
-#th_first_der_test-2-1-5 > li { counter-increment: th_first_der_test-2-1-5; }
-#proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
-#proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
-#proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
-#eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
-#eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
-#eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
-#eg_concavity_logistic_growth-2-3-1 { counter-set: eg_concavity_logistic_growth-2-3-1 0; }
-#eg_concavity_logistic_growth-2-3-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-2-3-1,decimal)"."; }
-#eg_concavity_logistic_growth-2-3-1 > li { counter-increment: eg_concavity_logistic_growth-2-3-1; }
-#eg_concavity_logistic_growth-3-1-1 { counter-set: eg_concavity_logistic_growth-3-1-1 0; }
-#eg_concavity_logistic_growth-3-1-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-3-1-1,decimal)"."; }
-#eg_concavity_logistic_growth-3-1-1 > li { counter-increment: eg_concavity_logistic_growth-3-1-1; }
-#th_concavity-1-1-3 { counter-set: th_concavity-1-1-3 0; }
-#th_concavity-1-1-3 > li::marker { content: ""counter(th_concavity-1-1-3,decimal)"."; }
-#th_concavity-1-1-3 > li { counter-increment: th_concavity-1-1-3; }
-#proc_concavity-2-1-4 { counter-set: proc_concavity-2-1-4 0; }
-#proc_concavity-2-1-4 > li::marker { content: ""counter(proc_concavity-2-1-4,decimal)"."; }
-#proc_concavity-2-1-4 > li { counter-increment: proc_concavity-2-1-4; }
-#proc_concavity-2-1-4-1-1-4 { counter-set: proc_concavity-2-1-4-1-1-4 0; }
-#proc_concavity-2-1-4-1-1-4 > li::marker { content: "("counter(proc_concavity-2-1-4-1-1-4,lower-alpha)")"; }
-#proc_concavity-2-1-4-1-1-4 > li { counter-increment: proc_concavity-2-1-4-1-1-4; }
-#th_second_der-2-1-3 { counter-set: th_second_der-2-1-3 0; }
-#th_second_der-2-1-3 > li::marker { content: ""counter(th_second_der-2-1-3,decimal)"."; }
-#th_second_der-2-1-3 > li { counter-increment: th_second_der-2-1-3; }
-#s_curve_sketch_I-2-1 { counter-set: s_curve_sketch_I-2-1 0; }
-#s_curve_sketch_I-2-1 > li::marker { content: ""counter(s_curve_sketch_I-2-1,decimal)"."; }
-#s_curve_sketch_I-2-1 > li { counter-increment: s_curve_sketch_I-2-1; }
-#proc_curve_sketching-2-1-2 { counter-set: proc_curve_sketching-2-1-2 0; }
-#proc_curve_sketching-2-1-2 > li::marker { content: ""counter(proc_curve_sketching-2-1-2,decimal)"."; }
-#proc_curve_sketching-2-1-2 > li { counter-increment: proc_curve_sketching-2-1-2; }
-#s_curve_sketch_II-2-1 { counter-set: s_curve_sketch_II-2-1 0; }
-#s_curve_sketch_II-2-1 > li::marker { content: ""counter(s_curve_sketch_II-2-1,decimal)"."; }
-#s_curve_sketch_II-2-1 > li { counter-increment: s_curve_sketch_II-2-1; }
-#s_applied_opt_I-2-1 { counter-set: s_applied_opt_I-2-1 0; }
-#s_applied_opt_I-2-1 > li::marker { content: ""counter(s_applied_opt_I-2-1,decimal)"."; }
-#s_applied_opt_I-2-1 > li { counter-increment: s_applied_opt_I-2-1; }
-#proc_applied_opt-2-1-1 { counter-set: proc_applied_opt-2-1-1 0; }
-#proc_applied_opt-2-1-1 > li::marker { content: ""counter(proc_applied_opt-2-1-1,decimal)"."; }
-#proc_applied_opt-2-1-1 > li { counter-increment: proc_applied_opt-2-1-1; }
-#proc_applied_opt-2-1-1-1-2-1 { counter-set: proc_applied_opt-2-1-1-1-2-1 0; }
-#proc_applied_opt-2-1-1-1-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-1-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-1-2-1 > li { counter-increment: proc_applied_opt-2-1-1-1-2-1; }
-#proc_applied_opt-2-1-1-2-2-1 { counter-set: proc_applied_opt-2-1-1-2-2-1 0; }
-#proc_applied_opt-2-1-1-2-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-2-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-2-2-1 > li { counter-increment: proc_applied_opt-2-1-1-2-2-1; }
-#proc_applied_opt-2-1-1-3-2-1 { counter-set: proc_applied_opt-2-1-1-3-2-1 0; }
-#proc_applied_opt-2-1-1-3-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-3-2-1,lower-alpha)")"; }
-#proc_applied_opt-2-1-1-3-2-1 > li { counter-increment: proc_applied_opt-2-1-1-3-2-1; }
-#proc_gen_EVT-2-1-12 { counter-set: proc_gen_EVT-2-1-12 0; }
-#proc_gen_EVT-2-1-12 > li::marker { content: ""counter(proc_gen_EVT-2-1-12,decimal)"."; }
-#proc_gen_EVT-2-1-12 > li { counter-increment: proc_gen_EVT-2-1-12; }
-</style>
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.8.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus:</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus</span> <span class="subtitle">Kursobjekt</span></a></h1>
 <p class="byline">Aaron Greicius</p>
-</div>
-</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -442,7 +132,8 @@ window.MathJax = {
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -545,7 +236,7 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></div>
@@ -556,9 +247,9 @@ window.MathJax = {
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_intro.html#ss_sets" class="internal"><span class="title">Set definitions and notation</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">2</span> <span class="title">Limits: informal definition</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of the limit</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li>
 </ul>
@@ -626,18 +317,32 @@ window.MathJax = {
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_limits_naive"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_limits_naive"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2</span><span class="space"> </span><span class="title">Limits: informal definition</span>
 </h2>
 <article class="objectives goal-like" id="s_limits_naive-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ol class="decimal" id="s_limits_naive-2-1">
-<li id="s_limits_naive-2-1-1"><div class="para" id="s_limits_naive-2-1-1-1">Give an informal definition of the limit of a function <span class="process-math">\(f\)</span> at a given value.</div></li>
-<li id="s_limits_naive-2-1-2"><div class="para" id="s_limits_naive-2-1-2-1">Investigate the existence and/or value of a function graphically, by examining a a graph.</div></li>
-<li id="s_limits_naive-2-1-3"><div class="para" id="s_limits_naive-2-1-3-1">Use rigorous limit laws to compute limits of functions <span class="process-math">\(f\)</span> formed from other functions using common arithmetic operations.</div></li>
-</ol></article><section class="subsection" id="subsec-naive-definition-of-limit"><h3 class="heading hide-type">
+<li id="s_limits_naive-2-1-1">
+<div class="para" id="s_limits_naive-2-1-1-1">Give an informal definition of the limit of a function <span class="process-math">\(f\)</span> at a given value.<div class="autopermalink" data-description="Paragraph"><a href="#s_limits_naive-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective 2.1"><a href="#s_limits_naive-2-1-1" title="Copy heading and permalink for Objective 2.1" aria-label="Copy heading and permalink for Objective 2.1">🔗</a></div>
+</li>
+<li id="s_limits_naive-2-1-2">
+<div class="para" id="s_limits_naive-2-1-2-1">Investigate the existence and/or value of a function graphically, by examining a a graph.<div class="autopermalink" data-description="Paragraph"><a href="#s_limits_naive-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective 2.2"><a href="#s_limits_naive-2-1-2" title="Copy heading and permalink for Objective 2.2" aria-label="Copy heading and permalink for Objective 2.2">🔗</a></div>
+</li>
+<li id="s_limits_naive-2-1-3">
+<div class="para" id="s_limits_naive-2-1-3-1">Use rigorous limit laws to compute limits of functions <span class="process-math">\(f\)</span> formed from other functions using common arithmetic operations.<div class="autopermalink" data-description="Paragraph"><a href="#s_limits_naive-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective 2.3"><a href="#s_limits_naive-2-1-3" title="Copy heading and permalink for Objective 2.3" aria-label="Copy heading and permalink for Objective 2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Objectives 2"><a href="#s_limits_naive-2" title="Copy heading and permalink for Objectives 2" aria-label="Copy heading and permalink for Objectives 2">🔗</a></div></article><section class="subsection" id="subsec-naive-definition-of-limit"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Informal definition of the limit</span>
 </h3>
-<div class="para" id="subsec-naive-definition-of-limit-2">Many of the questions we will study in regard to functions revolve around how the output of a function <span class="process-math">\(f\)</span> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em class="emphasis">limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is.</div>
+<div class="para" id="subsec-naive-definition-of-limit-2">Many of the questions we will study in regard to functions revolve around how the output of a function <span class="process-math">\(f\)</span> changes with respect to its input. As such we want to develop useful and precise language and tools for describing this relation. The <em class="emphasis">limit</em> of a function, defined informally here and rigorously later, is one such tool. Before getting to its informal definition, we illustrate with a graphical example the type of statements we wish to formalize with limit language. First, a reminder about what the graph of a function is.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="d_function_graph"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Graph of function.</span>
 </h4>
@@ -650,21 +355,29 @@ window.MathJax = {
 </div>
 <div class="para">In other words the graph of <span class="process-math">\(f\)</span> is the set of all points <span class="process-math">\(P\)</span> in the <span class="process-math">\(xy\)</span>-plane of the form <span class="process-math">\(P=(x,f(x))\text{,}\)</span> where <span class="process-math">\(x\in D\text{.}\)</span>
 </div>
-</div></article><article class="example example-like" id="eg_function_behavior"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#d_function_graph-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.1: Graph of function"><a href="#d_function_graph" title="Copy heading and permalink for Definition 2.1: Graph of function" aria-label="Copy heading and permalink for Definition 2.1: Graph of function">🔗</a></div></article><article class="example example-like" id="eg_function_behavior"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Function behavior.</span>
 </h4>
-<div class="para" id="eg_function_behavior-2-1">Suppose <span class="process-math">\(f\)</span> is the function whose graph is given below.</div> <figure class="figure figure-like" id="fig_limit_naive"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig_limit_naive-2.svg" role="img" class="contained" alt="Graph of complicated function"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span>Graph of function <span class="process-math">\(f\)</span></figcaption></figure> <div class="para" id="eg_function_behavior-2-3">Describe how the output <span class="process-math">\(f(x)\)</span> behaves as the input <span class="process-math">\(x\)</span> approaches each of the values <span class="process-math">\(a,b,c,d,e\text{.}\)</span> For some of these values, you might consider how <span class="process-math">\(x\)</span> approaches from the left and right separately.</div>
+<div class="para" id="eg_function_behavior-2-1">Suppose <span class="process-math">\(f\)</span> is the function whose graph is given below.<div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <figure class="figure figure-like" id="fig_limit_naive"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/fig_limit_naive-2.svg" role="img" class="contained" alt="Graph of complicated function"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.3<span class="period">.</span></span><span class="space"> </span>Graph of function <span class="process-math">\(f\)</span><div class="autopermalink" data-description="Figure 2.3"><a href="#fig_limit_naive" title="Copy heading and permalink for Figure 2.3" aria-label="Copy heading and permalink for Figure 2.3">🔗</a></div></figcaption></figure> <div class="para" id="eg_function_behavior-2-3">Describe how the output <span class="process-math">\(f(x)\)</span> behaves as the input <span class="process-math">\(x\)</span> approaches each of the values <span class="process-math">\(a,b,c,d,e\text{.}\)</span> For some of these values, you might consider how <span class="process-math">\(x\)</span> approaches from the left and right separately.<div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="solutions"><details id="eg_function_behavior-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="eg_function_behavior-3-1">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\text{,}\)</span> either from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function get arbitrarily large and negative.</div>
-<div class="para" id="eg_function_behavior-3-2">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(b\)</span> from the left, the values <span class="process-math">\(f(x)\)</span> of <span class="process-math">\(f\)</span> get closer and closer to <span class="process-math">\(0\text{.}\)</span> However, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(b\)</span> from the right, the values <span class="process-math">\(f(x)\)</span> get closer and closer to <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="eg_function_behavior-3-1">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\text{,}\)</span> either from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function get arbitrarily large and negative.<div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="eg_function_behavior-3-3">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(c\)</span> from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function approach the real number <span class="process-math">\(M\text{.}\)</span> We also happen to have <span class="process-math">\(f(c)=B\text{:}\)</span> i.e., the value of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=c\)</span> is equal to <span class="process-math">\(B\text{.}\)</span>
+<div class="para" id="eg_function_behavior-3-2">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(b\)</span> from the left, the values <span class="process-math">\(f(x)\)</span> of <span class="process-math">\(f\)</span> get closer and closer to <span class="process-math">\(0\text{.}\)</span> However, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(b\)</span> from the right, the values <span class="process-math">\(f(x)\)</span> get closer and closer to <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="eg_function_behavior-3-4">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the left, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(C\text{.}\)</span> However, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the right, the values <span class="process-math">\(f(x)\)</span> oscillate wildly above and below <span class="process-math">\(C\)</span> and do not seem to approach any single value.</div>
-<div class="para" id="eg_function_behavior-3-5">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(e\)</span> from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(D\text{.}\)</span> Interestingly, however, the actual value of <span class="process-math">\(f\)</span> at the input <span class="process-math">\(x=e\)</span> is not equal to <span class="process-math">\(D\text{.}\)</span>
+<div class="para" id="eg_function_behavior-3-3">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(c\)</span> from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function approach the real number <span class="process-math">\(M\text{.}\)</span> We also happen to have <span class="process-math">\(f(c)=B\text{:}\)</span> i.e., the value of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=c\)</span> is equal to <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></div></article><article class="remark remark-like" id="rm_greater_less_large"><h4 class="heading">
+<div class="para" id="eg_function_behavior-3-4">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the left, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(C\text{.}\)</span> However, as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(d\)</span> from the right, the values <span class="process-math">\(f(x)\)</span> oscillate wildly above and below <span class="process-math">\(C\)</span> and do not seem to approach any single value.<div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_function_behavior-3-5">As <span class="process-math">\(x\)</span> approaches <span class="process-math">\(e\)</span> from the left or right, the values <span class="process-math">\(f(x)\)</span> of the function approach <span class="process-math">\(D\text{.}\)</span> Interestingly, however, the actual value of <span class="process-math">\(f\)</span> at the input <span class="process-math">\(x=e\)</span> is not equal to <span class="process-math">\(D\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_function_behavior-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.1"><a href="#eg_function_behavior-3" title="Copy heading and permalink for Solution 2.2.1" aria-label="Copy heading and permalink for Solution 2.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.2: Function behavior"><a href="#eg_function_behavior" title="Copy heading and permalink for Example 2.2: Function behavior" aria-label="Copy heading and permalink for Example 2.2: Function behavior">🔗</a></div></article><article class="remark remark-like" id="rm_greater_less_large"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Large and small, greater than and less thanLarge and small, greater than and less than</span>
 </h4>
 <div class="para logical" id="rm_greater_less_large-3">
@@ -675,6 +388,7 @@ window.MathJax = {
 \end{align*}
 </div>
 <div class="para">In more detail we say that the first sequence gets arbitrarily large and positive, while the second sequence gets arbitrarily large and negative.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rm_greater_less_large-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="rm_greater_less_large-4">
 <div class="para">Contrast this with the use of “greater than” and “less than”. These refer specifically to the ordering relation <span class="process-math">\(&lt;\)</span> defined on <span class="process-math">\(\R\text{:}\)</span> i.e.,</div>
@@ -685,14 +399,17 @@ x \text{ is greater than } y \amp \iff x&gt; y \text{.}
 \end{align*}
 </div>
 <div class="para">The <span class="process-math">\(&lt;\)</span> relation is related to, but not completely determined by size of numbers. A good way of thinking of the <span class="process-math">\(&lt;\)</span> relation geometrically is in terms of position on the real number line: we have <span class="process-math">\(x&lt; y\)</span> if and only if <span class="process-math">\(x\)</span> lies to the left of <span class="process-math">\(y\)</span> as points on the number line.  Thus, the number <span class="process-math">\(-100\)</span> is <em class="emphasis">less than</em> the number <span class="process-math">\(1\)</span> (since  <span class="process-math">\(-100 &lt; 1\)</span>), even though <span class="process-math">\(1\)</span> is <em class="emphasis">smaller</em> than <span class="process-math">\(-100\)</span> (since <span class="process-math">\(\abs{1}&lt; \abs{100}\)</span>).</div>
-</div></article><article class="definition definition-like" id="d_defined_at"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#rm_greater_less_large-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.4: Large and small, greater than and less thanLarge and small, greater than and less than"><a href="#rm_greater_less_large" title="Copy heading and permalink for Remark 2.4: Large and small, greater than and less thanLarge and small, greater than and less than" aria-label="Copy heading and permalink for Remark 2.4: Large and small, greater than and less thanLarge and small, greater than and less than">🔗</a></div></article><article class="definition definition-like" id="d_defined_at"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Function defined on set.</span>
 </h4>
-<div class="para" id="d_defined_at-2-1">Let <span class="process-math">\(f\)</span> be a function with domain <span class="process-math">\(D\text{.}\)</span> Given <span class="process-math">\(a\in \R\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">defined</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(a\)</span> is an element of the domain: i.e., <span class="process-math">\(a\in D\text{.}\)</span> Similarly, given a subset <span class="process-math">\(A\subseteq \R\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is defined on <span class="process-math">\(A\)</span> if <span class="process-math">\(A\)</span> is included in the domain: i.e., <span class="process-math">\(A\subseteq D\text{.}\)</span>
-</div></article><article class="definition definition-like" id="d_limit_informal"><h4 class="heading">
+<div class="para" id="d_defined_at-2-1">Let <span class="process-math">\(f\)</span> be a function with domain <span class="process-math">\(D\text{.}\)</span> Given <span class="process-math">\(a\in \R\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is <dfn class="terminology">defined</dfn> at <span class="process-math">\(a\)</span> if <span class="process-math">\(a\)</span> is an element of the domain: i.e., <span class="process-math">\(a\in D\text{.}\)</span> Similarly, given a subset <span class="process-math">\(A\subseteq \R\text{,}\)</span> we say that <span class="process-math">\(f\)</span> is defined on <span class="process-math">\(A\)</span> if <span class="process-math">\(A\)</span> is included in the domain: i.e., <span class="process-math">\(A\subseteq D\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_defined_at-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.5: Function defined on set"><a href="#d_defined_at" title="Copy heading and permalink for Definition 2.5: Function defined on set" aria-label="Copy heading and permalink for Definition 2.5: Function defined on set">🔗</a></div></article><article class="definition definition-like" id="d_limit_informal"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Limit (informal).</span>
 </h4>
-<div class="para" id="d_limit_informal-2-1">Suppose <span class="process-math">\(f\)</span> is a function defined everywhere on an open interval containing the point <span class="process-math">\(a\in \R\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. We say that the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> exists if there is a value <span class="process-math">\(L\)</span> such that the function value <span class="process-math">\(f(x)\)</span> can be made arbitrarily close to <span class="process-math">\(L\)</span> provided <span class="process-math">\(x\)</span> is sufficiently close (but not equal) to <span class="process-math">\(a\text{.}\)</span>
+<div class="para" id="d_limit_informal-2-1">Suppose <span class="process-math">\(f\)</span> is a function defined everywhere on an open interval containing the point <span class="process-math">\(a\in \R\text{,}\)</span> except possibly at <span class="process-math">\(a\)</span> itself. We say that the <dfn class="terminology">limit</dfn> of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> exists if there is a value <span class="process-math">\(L\)</span> such that the function value <span class="process-math">\(f(x)\)</span> can be made arbitrarily close to <span class="process-math">\(L\)</span> provided <span class="process-math">\(x\)</span> is sufficiently close (but not equal) to <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#d_limit_informal-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para logical" id="d_limit_informal-2-2">
 <div class="para">When this is the case, we call <span class="process-math">\(L\)</span> the limit of <span class="process-math">\(f\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(a\)</span> and write</div>
 <div class="displaymath process-math" id="eq_limit_informal">
@@ -701,19 +418,27 @@ x \text{ is greater than } y \amp \iff x&gt; y \text{.}
 \end{equation}
 </div>
 <div class="para">When the limit does not exist we will say that <span class="process-math">\(\lim\limits_{x\to a}f(x)\)</span> does not exist.</div>
-</div></article><article class="example example-like" id="subsec-naive-definition-of-limit-8"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#d_limit_informal-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 2.6: Limit (informal)"><a href="#d_limit_informal" title="Copy heading and permalink for Definition 2.6: Limit (informal)" aria-label="Copy heading and permalink for Definition 2.6: Limit (informal)">🔗</a></div></article><article class="example example-like" id="subsec-naive-definition-of-limit-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Limit description of graph.</span>
 </h4>
-<div class="para" id="subsec-naive-definition-of-limit-8-2-1">Let <span class="process-math">\(f\)</span> be the function with graph given in <a href="s_limits_naive.html#fig_limit_naive" class="xref" data-knowl="./knowl/xref/fig_limit_naive.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3">Figure 2.3</a>. Use the language and notation of limits to describe the behavior of <span class="process-math">\(f\)</span> for inputs <span class="process-math">\(x\)</span> near the values <span class="process-math">\(a,b,c,d,e\text{.}\)</span>
+<div class="para" id="subsec-naive-definition-of-limit-8-2-1">Let <span class="process-math">\(f\)</span> be the function with graph given in <a href="s_limits_naive.html#fig_limit_naive" class="xref" data-knowl="./knowl/xref/fig_limit_naive.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.3">Figure 2.3</a>. Use the language and notation of limits to describe the behavior of <span class="process-math">\(f\)</span> for inputs <span class="process-math">\(x\)</span> near the values <span class="process-math">\(a,b,c,d,e\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="solutions"><details id="subsec-naive-definition-of-limit-8-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para" id="subsec-naive-definition-of-limit-8-3-1">The limit <span class="process-math">\(\lim\limits_{x\to a}f(x)\)</span> does not exist. There is no value <span class="process-math">\(L\)</span> that <span class="process-math">\(f(x)\)</span> approaches for inputs <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> Indeed, as <span class="process-math">\(x\)</span> gets arbitrarily close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(f(x)\)</span> becomes arbitrarily large and negative.</div>
-<div class="para" id="subsec-naive-definition-of-limit-8-3-2">The limit <span class="process-math">\(\lim\limits_{x\to b}f(x)\)</span> does not exist. If <span class="process-math">\(x\)</span> is arbitrarily close to <span class="process-math">\(b\text{,}\)</span> and less than <span class="process-math">\(b\)</span> (to the left), then the values <span class="process-math">\(f(x)\)</span> gets arbitrarily close to <span class="process-math">\(0\text{;}\)</span> thus if the limit existed it would have to be equal to <span class="process-math">\(0\text{.}\)</span> And yet for inputs <span class="process-math">\(x\)</span> arbitrarily close to <span class="process-math">\(b\)</span> but greater than <span class="process-math">\(b\)</span> (to the right), the values <span class="process-math">\(f(x)\)</span> are greater than <span class="process-math">\(1\text{:}\)</span> i.e., they get no closer than a distance of <span class="process-math">\(1\)</span> from the value <span class="process-math">\(0\text{.}\)</span> This implies <span class="process-math">\(0\)</span> is not the limit, and hence that no limit exists.</div>
-<div class="para" id="subsec-naive-definition-of-limit-8-3-3">We have <span class="process-math">\(\lim\limits_{x\to c}f(x)=B\text{.}\)</span> Since <span class="process-math">\(B=f(c)\text{,}\)</span> we have <span class="process-math">\(\lim\limits_{x\to c}f(x)=f(c)\)</span> in this case.</div>
-<div class="para" id="subsec-naive-definition-of-limit-8-3-4">The limit <span class="process-math">\(\lim\limits_{x\to d}f(x)\)</span> does not exist. See the explanation in <a href="s_limits_naive.html#eg_function_behavior" class="xref" data-knowl="./knowl/xref/eg_function_behavior.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2: Function behavior">Example 2.2</a>.</div>
-<div class="para" id="subsec-naive-definition-of-limit-8-3-5">We have <span class="process-math">\(\lim\limits_{x\to e}f(x)=D\text{.}\)</span> Note that in this case <span class="process-math">\(e\)</span> is an element of the domain and <span class="process-math">\(\lim\limits_{x\to e}f(x)\ne f(e)\text{.}\)</span>
+<div class="para" id="subsec-naive-definition-of-limit-8-3-1">The limit <span class="process-math">\(\lim\limits_{x\to a}f(x)\)</span> does not exist. There is no value <span class="process-math">\(L\)</span> that <span class="process-math">\(f(x)\)</span> approaches for inputs <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> Indeed, as <span class="process-math">\(x\)</span> gets arbitrarily close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(f(x)\)</span> becomes arbitrarily large and negative.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-</div></details></div></article><article class="example example-like" id="subsec-naive-definition-of-limit-9"><h4 class="heading">
+<div class="para" id="subsec-naive-definition-of-limit-8-3-2">The limit <span class="process-math">\(\lim\limits_{x\to b}f(x)\)</span> does not exist. If <span class="process-math">\(x\)</span> is arbitrarily close to <span class="process-math">\(b\text{,}\)</span> and less than <span class="process-math">\(b\)</span> (to the left), then the values <span class="process-math">\(f(x)\)</span> gets arbitrarily close to <span class="process-math">\(0\text{;}\)</span> thus if the limit existed it would have to be equal to <span class="process-math">\(0\text{.}\)</span> And yet for inputs <span class="process-math">\(x\)</span> arbitrarily close to <span class="process-math">\(b\)</span> but greater than <span class="process-math">\(b\)</span> (to the right), the values <span class="process-math">\(f(x)\)</span> are greater than <span class="process-math">\(1\text{:}\)</span> i.e., they get no closer than a distance of <span class="process-math">\(1\)</span> from the value <span class="process-math">\(0\text{.}\)</span> This implies <span class="process-math">\(0\)</span> is not the limit, and hence that no limit exists.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-naive-definition-of-limit-8-3-3">We have <span class="process-math">\(\lim\limits_{x\to c}f(x)=B\text{.}\)</span> Since <span class="process-math">\(B=f(c)\text{,}\)</span> we have <span class="process-math">\(\lim\limits_{x\to c}f(x)=f(c)\)</span> in this case.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-naive-definition-of-limit-8-3-4">The limit <span class="process-math">\(\lim\limits_{x\to d}f(x)\)</span> does not exist. See the explanation in <a href="s_limits_naive.html#eg_function_behavior" class="xref" data-knowl="./knowl/xref/eg_function_behavior.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2: Function behavior">Example 2.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-naive-definition-of-limit-8-3-5">We have <span class="process-math">\(\lim\limits_{x\to e}f(x)=D\text{.}\)</span> Note that in this case <span class="process-math">\(e\)</span> is an element of the domain and <span class="process-math">\(\lim\limits_{x\to e}f(x)\ne f(e)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-8-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.7.1"><a href="#subsec-naive-definition-of-limit-8-3" title="Copy heading and permalink for Solution 2.7.1" aria-label="Copy heading and permalink for Solution 2.7.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.7: Limit description of graph"><a href="#subsec-naive-definition-of-limit-8" title="Copy heading and permalink for Example 2.7: Limit description of graph" aria-label="Copy heading and permalink for Example 2.7: Limit description of graph">🔗</a></div></article><article class="example example-like" id="subsec-naive-definition-of-limit-9"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Limit as compared to value.</span>
 </h4>
 <div class="para logical" id="subsec-naive-definition-of-limit-9-2-1">
@@ -729,20 +454,28 @@ x+1 \amp \text{if } x\ne 1\\
 </div>
 <div class="para">For each function discuss the limit behavior at <span class="process-math">\(x=1\)</span> as compared with the value of the function at <span class="process-math">\(x=1\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-naive-definition-of-limit-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="subsec-naive-definition-of-limit-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_f"><img src="generated/sageplot/fig_limit_f-2.svg" role="img" class="contained" alt="Graph of f"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.9<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f\)</span></figcaption></figure></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_g"><img src="generated/sageplot/fig_limit_g-2.svg" role="img" class="contained" alt="Graph of g"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.10<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(g\)</span></figcaption></figure></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_h"><img src="generated/sageplot/fig_limit_h-2.svg" role="img" class="contained" alt="Graph of h"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(h\)</span></figcaption></figure></div>
-</div></div></div></details></div></article></section><section class="subsection" id="ss_limit_laws"><h3 class="heading hide-type">
+<div class="solutions"><details id="subsec-naive-definition-of-limit-9-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_f"><img src="generated/sageplot/fig_limit_f-2.svg" role="img" class="contained" alt="Graph of f"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.9<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f\)</span><div class="autopermalink" data-description="Figure 2.9"><a href="#fig_limit_f" title="Copy heading and permalink for Figure 2.9" aria-label="Copy heading and permalink for Figure 2.9">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_g"><img src="generated/sageplot/fig_limit_g-2.svg" role="img" class="contained" alt="Graph of g"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.10<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(g\)</span><div class="autopermalink" data-description="Figure 2.10"><a href="#fig_limit_g" title="Copy heading and permalink for Figure 2.10" aria-label="Copy heading and permalink for Figure 2.10">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel top" style="width:33.3333333333333%;"><figure class="figure figure-like" id="fig_limit_h"><img src="generated/sageplot/fig_limit_h-2.svg" role="img" class="contained" alt="Graph of h"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.11<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(h\)</span><div class="autopermalink" data-description="Figure 2.11"><a href="#fig_limit_h" title="Copy heading and permalink for Figure 2.11" aria-label="Copy heading and permalink for Figure 2.11">🔗</a></div></figcaption></figure></div>
+</div></div>
+<div class="autopermalink" data-description="Solution 2.8.1"><a href="#subsec-naive-definition-of-limit-9-3" title="Copy heading and permalink for Solution 2.8.1" aria-label="Copy heading and permalink for Solution 2.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.8: Limit as compared to value"><a href="#subsec-naive-definition-of-limit-9" title="Copy heading and permalink for Example 2.8: Limit as compared to value" aria-label="Copy heading and permalink for Example 2.8: Limit as compared to value">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Informal definition of the limit"><a href="#subsec-naive-definition-of-limit" title="Copy heading and permalink for Subsection: Informal definition of the limit" aria-label="Copy heading and permalink for Subsection: Informal definition of the limit">🔗</a></div></section><section class="subsection" id="ss_limit_laws"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Limit rules</span>
 </h3>
-<div class="para" id="ss_limit_laws-2">We now state some useful limit formulas and rules. These will give us a means of breaking down the limit computation of a complicated function into limits of simpler functions. Technically speaking we must prove the validity of each of these rules and formulas; however this would be a fool’s errand until we have a rigorous definition of the limit to work with. Such a definition will be provided in the near future, though even then we will not concern ourselves overly with proofs; we are more interested in learning how to make valid use of the rules.</div>
-<div class="para" id="ss_limit_laws-3">Our first theorem gives us <em class="emphasis">formulas</em> for computing the limits of particular types of functions: constant functions, and the identity function.</div>
+<div class="para" id="ss_limit_laws-2">We now state some useful limit formulas and rules. These will give us a means of breaking down the limit computation of a complicated function into limits of simpler functions. Technically speaking we must prove the validity of each of these rules and formulas; however this would be a fool’s errand until we have a rigorous definition of the limit to work with. Such a definition will be provided in the near future, though even then we will not concern ourselves overly with proofs; we are more interested in learning how to make valid use of the rules.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ss_limit_laws-3">Our first theorem gives us <em class="emphasis">formulas</em> for computing the limits of particular types of functions: constant functions, and the identity function.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="th_lim_const_id"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Constant and identity functions.</span>
 </h4>
-<div class="para logical" id="th_lim_const_id-2-1"><ol class="decimal" id="th_lim_const_id-2-1-1">
+<div class="para logical" id="th_lim_const_id-2-1">
+<ol class="decimal" id="th_lim_const_id-2-1-1">
 <li id="th_lim_const">
 <span class="heading"><span class="title">Constant function.</span></span><div class="para logical" id="th_lim_const-2">
 <div class="para">Fix a real number <span class="process-math">\(c\in \R\)</span> and let <span class="process-math">\(h\colon \R\rightarrow \R\)</span> be the constant function defined as <span class="process-math">\(h(x)=c\)</span> for all <span class="process-math">\(x\in \R\text{.}\)</span> Given any <span class="process-math">\(a\in \R\)</span> we have</div>
@@ -751,7 +484,9 @@ x+1 \amp \text{if } x\ne 1\\
 \lim_{x\to a}h(x)=\lim_{x\to a}c=c\text{.}\tag{2.2}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_lim_const-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 1: Constant function"><a href="#th_lim_const" title="Copy heading and permalink for Item 1: Constant function" aria-label="Copy heading and permalink for Item 1: Constant function">🔗</a></div>
 </li>
 <li id="th_lim_id">
 <span class="heading"><span class="title">Identity function.</span></span><div class="para logical" id="th_lim_id-2">
@@ -761,9 +496,15 @@ x+1 \amp \text{if } x\ne 1\\
 \lim_{x\to a}\id(x)=\lim_{x\to a}x=a\text{.}\tag{2.3}
 \end{equation}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_lim_id-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 2: Identity function"><a href="#th_lim_id" title="Copy heading and permalink for Item 2: Identity function" aria-label="Copy heading and permalink for Item 2: Identity function">🔗</a></div>
 </li>
-</ol></div></article><div class="para" id="ss_limit_laws-5">In contrast to the last theorem, our next theorem does not provide any formulas per se, but rather gives us rules governing how limits interact with various <em class="emphasis">function operations</em>.</div>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#th_lim_const_id-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.12: Constant and identity functions"><a href="#th_lim_const_id" title="Copy heading and permalink for Theorem 2.12: Constant and identity functions" aria-label="Copy heading and permalink for Theorem 2.12: Constant and identity functions">🔗</a></div></article><div class="para" id="ss_limit_laws-5">In contrast to the last theorem, our next theorem does not provide any formulas per se, but rather gives us rules governing how limits interact with various <em class="emphasis">function operations</em>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="th_lim_rules"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span><span class="space"> </span><span class="title">Limit rules.</span>
 </h4>
@@ -772,49 +513,72 @@ x+1 \amp \text{if } x\ne 1\\
 </div>
 <ol class="decimal" id="th_lim_rules-2-1-6">
 <li id="th_lim_sum">
-<span class="heading"><span class="title">Sum rule.</span></span><div class="para" id="th_lim_sum-2"><span class="process-math">\(\lim\limits_{x\to a}
-\left(f(x)+g(x)\right)=\lim\limits_{x\to a}f(x)+\lim\limits_{x\to a}g(x)\text{.}\)</span></div>
+<span class="heading"><span class="title">Sum rule.</span></span><div class="para" id="th_lim_sum-2">
+<span class="process-math">\(\lim\limits_{x\to a}
+\left(f(x)+g(x)\right)=\lim\limits_{x\to a}f(x)+\lim\limits_{x\to a}g(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_lim_sum-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1: Sum rule"><a href="#th_lim_sum" title="Copy heading and permalink for Item 1: Sum rule" aria-label="Copy heading and permalink for Item 1: Sum rule">🔗</a></div>
 </li>
 <li id="th_lim_diff">
-<span class="heading"><span class="title">Difference rule.</span></span><div class="para" id="th_lim_diff-2"><span class="process-math">\(\lim\limits_{x\to a}\left(f(x)-g(x)\right)=\lim\limits_{x\to a}f(x)-\lim\limits_{x\to a}g(x)\text{.}\)</span></div>
+<span class="heading"><span class="title">Difference rule.</span></span><div class="para" id="th_lim_diff-2">
+<span class="process-math">\(\lim\limits_{x\to a}\left(f(x)-g(x)\right)=\lim\limits_{x\to a}f(x)-\lim\limits_{x\to a}g(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_lim_diff-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2: Difference rule"><a href="#th_lim_diff" title="Copy heading and permalink for Item 2: Difference rule" aria-label="Copy heading and permalink for Item 2: Difference rule">🔗</a></div>
 </li>
 <li id="th_scal_mult">
 <span class="heading"><span class="title">Scalar multiple rule.</span></span><div class="para" id="th_scal_mult-2">
-<span class="process-math">\(\lim\limits_{x\to a}\left(cf(x)\right)=c\lim\limits_{x\to a}f(x)\)</span> for all <span class="process-math">\(c\in \R\text{.}\)</span>
+<span class="process-math">\(\lim\limits_{x\to a}\left(cf(x)\right)=c\lim\limits_{x\to a}f(x)\)</span> for all <span class="process-math">\(c\in \R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_scal_mult-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 3: Scalar multiple rule"><a href="#th_scal_mult" title="Copy heading and permalink for Item 3: Scalar multiple rule" aria-label="Copy heading and permalink for Item 3: Scalar multiple rule">🔗</a></div>
 </li>
 <li id="th_prod">
-<span class="heading"><span class="title">Product rule.</span></span><div class="para" id="th_prod-2"><span class="process-math">\(\lim\limits_{x\to a}\left(f(x)g(x)\right)=\lim\limits_{x\to a}f(x)\, \lim\limits_{x\to a}g(x)\text{.}\)</span></div>
+<span class="heading"><span class="title">Product rule.</span></span><div class="para" id="th_prod-2">
+<span class="process-math">\(\lim\limits_{x\to a}\left(f(x)g(x)\right)=\lim\limits_{x\to a}f(x)\, \lim\limits_{x\to a}g(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_prod-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4: Product rule"><a href="#th_prod" title="Copy heading and permalink for Item 4: Product rule" aria-label="Copy heading and permalink for Item 4: Product rule">🔗</a></div>
 </li>
 <li id="th_lim_quot">
 <span class="heading"><span class="title">Quotient rule.</span></span><div class="para" id="th_lim_quot-2">If <span class="process-math">\(\lim\limits_{x\to a}g(x)\ne 0\text{,}\)</span> then <span class="process-math">\(\displaystyle
 \lim\limits_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim\limits_{x\to a}f(x)}{\lim\limits_{x\to a}g(x)}
-\text{.}\)</span>
+\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_lim_quot-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 5: Quotient rule"><a href="#th_lim_quot" title="Copy heading and permalink for Item 5: Quotient rule" aria-label="Copy heading and permalink for Item 5: Quotient rule">🔗</a></div>
 </li>
 <li id="th_lim_rules-2-1-6-6">
 <span class="heading"><span class="title">Power rule.</span></span><div class="para" id="th_lim_rules-2-1-6-6-2">
-<span class="process-math">\(\lim\limits_{x\to a}[f(x)]^n=\left[\lim\limits_{x\to a}f(x)\right]^n\)</span> for all positive integers <span class="process-math">\(n\text{.}\)</span>
+<span class="process-math">\(\lim\limits_{x\to a}[f(x)]^n=\left[\lim\limits_{x\to a}f(x)\right]^n\)</span> for all positive integers <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_lim_rules-2-1-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 6: Power rule"><a href="#th_lim_rules-2-1-6-6" title="Copy heading and permalink for Item 6: Power rule" aria-label="Copy heading and permalink for Item 6: Power rule">🔗</a></div>
 </li>
 <li id="th_lim_rules-2-1-6-7">
 <span class="heading"><span class="title">Root rule.</span></span><div class="para" id="th_lim_rules-2-1-6-7-2">
-<span class="process-math">\(\lim\limits_{x\to a}\sqrt[n]{f(x)}=\sqrt[n]{\lim\limits_{x\to a}f(x)}\)</span> for all positive integers <span class="process-math">\(n\text{,}\)</span> where we must assume <span class="process-math">\(\lim\limits_{x\to a}f(x)\)</span> is positive if <span class="process-math">\(n\)</span> is even.</div>
+<span class="process-math">\(\lim\limits_{x\to a}\sqrt[n]{f(x)}=\sqrt[n]{\lim\limits_{x\to a}f(x)}\)</span> for all positive integers <span class="process-math">\(n\text{,}\)</span> where we must assume <span class="process-math">\(\lim\limits_{x\to a}f(x)\)</span> is positive if <span class="process-math">\(n\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#th_lim_rules-2-1-6-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7: Root rule"><a href="#th_lim_rules-2-1-6-7" title="Copy heading and permalink for Item 7: Root rule" aria-label="Copy heading and permalink for Item 7: Root rule">🔗</a></div>
 </li>
 <li id="th_lim_repl">
-<span class="heading"><span class="title">Replacement rule.</span></span><div class="para" id="th_lim_repl-2">If <span class="process-math">\(h\)</span> is a function satisfying <span class="process-math">\(h(x)=f(x)\)</span> for all <span class="process-math">\(x\ne a\)</span> in an open interval about <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}h(x)\text{.}\)</span>
+<span class="heading"><span class="title">Replacement rule.</span></span><div class="para" id="th_lim_repl-2">If <span class="process-math">\(h\)</span> is a function satisfying <span class="process-math">\(h(x)=f(x)\)</span> for all <span class="process-math">\(x\ne a\)</span> in an open interval about <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\lim\limits_{x\to a}f(x)=\lim\limits_{x\to a}h(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#th_lim_repl-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 8: Replacement rule"><a href="#th_lim_repl" title="Copy heading and permalink for Item 8: Replacement rule" aria-label="Copy heading and permalink for Item 8: Replacement rule">🔗</a></div>
 </li>
 </ol>
-</div></article><article class="remark remark-like" id="ss_limit_laws-7"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#th_lim_rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 2.13: Limit rules"><a href="#th_lim_rules" title="Copy heading and permalink for Theorem 2.13: Limit rules" aria-label="Copy heading and permalink for Theorem 2.13: Limit rules">🔗</a></div></article><article class="remark remark-like" id="ss_limit_laws-7"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span><span class="space"> </span><span class="title">Limit rules.</span>
 </h4>
-<div class="para" id="ss_limit_laws-7-2">It is useful to think of <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> as giving us a bunch of algebraic rules for computing limits of functions defined using addition, subtraction, multiplication, etc. For the most part these rules tell us that we can “bring the limit into” various operations: for example, the first two rules tell us that we can bring the limit into sums and differences of functions. Or better, using plain English, they tell us that the limit of a sum (of functions) is the sum of the limits, and that the limit of a difference (of functions) is the difference of the limits.</div>
-<div class="para" id="ss_limit_laws-7-3">In fact most of the rules in <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> can be nicely summarized in plain English (e.g., “the limit of a product is the product of the limits”, “the limit of an <span class="process-math">\(n\)</span>-th power is the <span class="process-math">\(n\)</span>-th power of the limit”), and these summaries are helpful for remembering how the limit interacts with function operations.</div></article><article class="remark remark-like" id="ss_limit_laws-8"><h4 class="heading">
+<div class="para" id="ss_limit_laws-7-2">It is useful to think of <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> as giving us a bunch of algebraic rules for computing limits of functions defined using addition, subtraction, multiplication, etc. For the most part these rules tell us that we can “bring the limit into” various operations: for example, the first two rules tell us that we can bring the limit into sums and differences of functions. Or better, using plain English, they tell us that the limit of a sum (of functions) is the sum of the limits, and that the limit of a difference (of functions) is the difference of the limits.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ss_limit_laws-7-3">In fact most of the rules in <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> can be nicely summarized in plain English (e.g., “the limit of a product is the product of the limits”, “the limit of an <span class="process-math">\(n\)</span>-th power is the <span class="process-math">\(n\)</span>-th power of the limit”), and these summaries are helpful for remembering how the limit interacts with function operations.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.14: Limit rules"><a href="#ss_limit_laws-7" title="Copy heading and permalink for Remark 2.14: Limit rules" aria-label="Copy heading and permalink for Remark 2.14: Limit rules">🔗</a></div></article><article class="remark remark-like" id="ss_limit_laws-8"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule.</span>
 </h4>
-<div class="para" id="ss_limit_laws-8-2">Assume as in <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> that <span class="process-math">\(\lim_{x\to a}f(x)\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)\)</span> exist and consider the limit <span class="process-math">\(\lim_{x\to a}\frac{f(x)}{g(x)}\text{.}\)</span> Mark well that we can only make use of the quotient rule if <span class="process-math">\(\lim_{x\to a}g(x)\ne 0\text{,}\)</span> in which case we can conclude that the limit of the quotient is the quotient of the limits.</div>
-<div class="para" id="ss_limit_laws-8-3">Note further that in the case where <span class="process-math">\(\lim_{x\to a}g(x)=0\text{,}\)</span> we cannot automatically conclude that the limit <span class="process-math">\(\lim_{x\to a}\frac{f(x)}{g(x)}\)</span> does not exist; it simply the case that we cannot make use of the quotient rule to evaluate this limit. When this happens, we must look to other means for investigating the limit. See <a href="s_limits_naive.html#eg_lim_quot_fail" class="xref" data-knowl="./knowl/xref/eg_lim_quot_fail.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.19: Quotient rule does not apply">Example 2.19</a>.</div></article><article class="example example-like" id="eg_lim_rules"><h4 class="heading">
+<div class="para" id="ss_limit_laws-8-2">Assume as in <a href="s_limits_naive.html#th_lim_rules" class="xref" data-knowl="./knowl/xref/th_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.13: Limit rules">Theorem 2.13</a> that <span class="process-math">\(\lim_{x\to a}f(x)\)</span> and <span class="process-math">\(\lim_{x\to a}g(x)\)</span> exist and consider the limit <span class="process-math">\(\lim_{x\to a}\frac{f(x)}{g(x)}\text{.}\)</span> Mark well that we can only make use of the quotient rule if <span class="process-math">\(\lim_{x\to a}g(x)\ne 0\text{,}\)</span> in which case we can conclude that the limit of the quotient is the quotient of the limits.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ss_limit_laws-8-3">Note further that in the case where <span class="process-math">\(\lim_{x\to a}g(x)=0\text{,}\)</span> we cannot automatically conclude that the limit <span class="process-math">\(\lim_{x\to a}\frac{f(x)}{g(x)}\)</span> does not exist; it simply the case that we cannot make use of the quotient rule to evaluate this limit. When this happens, we must look to other means for investigating the limit. See <a href="s_limits_naive.html#eg_lim_quot_fail" class="xref" data-knowl="./knowl/xref/eg_lim_quot_fail.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.19: Quotient rule does not apply">Example 2.19</a>.<div class="autopermalink" data-description="Paragraph"><a href="#ss_limit_laws-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 2.15: Quotient rule"><a href="#ss_limit_laws-8" title="Copy heading and permalink for Remark 2.15: Quotient rule" aria-label="Copy heading and permalink for Remark 2.15: Quotient rule">🔗</a></div></article><article class="example example-like" id="eg_lim_rules"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span><span class="space"> </span><span class="title">Using limit rules.</span>
 </h4>
 <div class="para logical" id="eg_lim_rules-2-1">
@@ -824,8 +588,11 @@ x+1 \amp \text{if } x\ne 1\\
 \lim_{x\to -2}\frac{x^3+x+1}{\sqrt[3]{4x^2+11}}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_lim_rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_lim_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_rules-3-1"><div class="displaymath process-math" id="eg_lim_rules-3-1-1">
+<div class="solutions"><details id="eg_lim_rules-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_lim_rules-3-1">
+<div class="displaymath process-math" id="eg_lim_rules-3-1-1">
 \begin{align*}
 \lim_{x\to -2}\frac{x^3+x+1}{\sqrt[3]{4x^2+11}} \amp = \frac{\lim\limits_{x\to -2}(x^3+x+1)}{\lim\limits_{x\to -2}\sqrt[3]{4x^2+11}}
 \amp \text{(quot. rule)}\\
@@ -838,10 +605,16 @@ x+1 \amp \text{if } x\ne 1\\
 \amp =-\frac{9}{\sqrt[3]{4(-2)^2+11}} \amp \text{(ident. rule)}\\
 \amp =-\frac{9}{\sqrt[3]{27}}=-3\text{.}
 \end{align*}
-</div></div></div></details></div></article><article class="corollary theorem-like" id="cor_poly_rational"><h4 class="heading">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_lim_rules-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.16.1"><a href="#eg_lim_rules-3" title="Copy heading and permalink for Solution 2.16.1" aria-label="Copy heading and permalink for Solution 2.16.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.16: Using limit rules"><a href="#eg_lim_rules" title="Copy heading and permalink for Example 2.16: Using limit rules" aria-label="Copy heading and permalink for Example 2.16: Using limit rules">🔗</a></div></article><article class="corollary theorem-like" id="cor_poly_rational"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span><span class="space"> </span><span class="title">Evaluation (polynomials and rational functions).</span>
 </h4>
-<div class="para logical" id="cor_poly_rational-2-1"><ol class="decimal" id="cor_poly_rational-2-1-1">
+<div class="para logical" id="cor_poly_rational-2-1">
+<ol class="decimal" id="cor_poly_rational-2-1-1">
 <li id="cor_poly_rational-2-1-1-1">
 <span class="heading"><span class="title">Polynomial evaluation.</span></span><div class="para logical" id="cor_poly_rational-2-1-1-1-2">
 <div class="para">Let <span class="process-math">\(f(x)=\anpoly\)</span> be a polynomial. Given any <span class="process-math">\(a\in \R\text{,}\)</span> we have</div>
@@ -850,7 +623,9 @@ x+1 \amp \text{if } x\ne 1\\
 \lim\limits_{x\to a}f(x)=f(a)\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_poly_rational-2-1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 1: Polynomial evaluation"><a href="#cor_poly_rational-2-1-1-1" title="Copy heading and permalink for Item 1: Polynomial evaluation" aria-label="Copy heading and permalink for Item 1: Polynomial evaluation">🔗</a></div>
 </li>
 <li id="cor_poly_rational-2-1-1-2">
 <span class="heading"><span class="title">Rational evaluation.</span></span><div class="para logical" id="cor_poly_rational-2-1-1-2-2">
@@ -860,13 +635,20 @@ x+1 \amp \text{if } x\ne 1\\
 \lim\limits_{x\to a}\frac{f(x)}{g(x)}=\frac{f(a)}{g(a)}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_poly_rational-2-1-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="autopermalink" data-description="Item 2: Rational evaluation"><a href="#cor_poly_rational-2-1-1-2" title="Copy heading and permalink for Item 2: Rational evaluation" aria-label="Copy heading and permalink for Item 2: Rational evaluation">🔗</a></div>
 </li>
-</ol></div></article><article class="example example-like" id="eg_poly_eval"><h4 class="heading">
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#cor_poly_rational-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 2.17: Evaluation (polynomials and rational functions)"><a href="#cor_poly_rational" title="Copy heading and permalink for Corollary 2.17: Evaluation (polynomials and rational functions)" aria-label="Copy heading and permalink for Corollary 2.17: Evaluation (polynomials and rational functions)">🔗</a></div></article><article class="example example-like" id="eg_poly_eval"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span><span class="space"> </span><span class="title">Polynomial evaluation.</span>
 </h4>
-<div class="para" id="eg_poly_eval-2-1">Give a simplified computation of the limit in <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a> using <a href="s_limits_naive.html#cor_poly_rational" class="xref" data-knowl="./knowl/xref/cor_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.17: Evaluation (polynomials and rational functions)">Corollary 2.17</a>.</div>
-<div class="solutions"><details id="eg_poly_eval-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_poly_eval-3-1">
+<div class="para" id="eg_poly_eval-2-1">Give a simplified computation of the limit in <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a> using <a href="s_limits_naive.html#cor_poly_rational" class="xref" data-knowl="./knowl/xref/cor_poly_rational.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 2.17: Evaluation (polynomials and rational functions)">Corollary 2.17</a>.<div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_eval-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="eg_poly_eval-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_poly_eval-3-1">
 <div class="para">The polynomial evaluation formula allows us to skip a few steps in our computation from <a href="s_limits_naive.html#eg_lim_rules" class="xref" data-knowl="./knowl/xref/eg_lim_rules.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.16: Using limit rules">Example 2.16</a>:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eg_lim_rules.html" id="eg_poly_eval-3-1-2">
 \begin{align*}
@@ -879,7 +661,11 @@ x+1 \amp \text{if } x\ne 1\\
 \amp =-\frac{9}{\sqrt[3]{27}}=-3\text{.}
 \end{align*}
 </div>
-</div></div></details></div></article><article class="example example-like" id="eg_lim_quot_fail"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_poly_eval-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.18.1"><a href="#eg_poly_eval-3" title="Copy heading and permalink for Solution 2.18.1" aria-label="Copy heading and permalink for Solution 2.18.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.18: Polynomial evaluation"><a href="#eg_poly_eval" title="Copy heading and permalink for Example 2.18: Polynomial evaluation" aria-label="Copy heading and permalink for Example 2.18: Polynomial evaluation">🔗</a></div></article><article class="example example-like" id="eg_lim_quot_fail"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span><span class="space"> </span><span class="title">Quotient rule does not apply.</span>
 </h4>
 <div class="para logical" id="eg_lim_quot_fail-2-1">
@@ -889,8 +675,10 @@ x+1 \amp \text{if } x\ne 1\\
 \lim_{x\to 1}\frac{x^2-1}{x-1}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_lim_quot_fail-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_lim_quot_fail-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_lim_quot_fail-3-1">
+<div class="solutions"><details id="eg_lim_quot_fail-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_lim_quot_fail-3-1">
 <div class="para">Note that since the limit of the denominator function is 0, we are not able to use the quotient (or rational function) rule. We begin instead with some algebra:</div>
 <div class="displaymath process-math" id="eg_lim_quot_fail-3-1-1">
 \begin{align*}
@@ -899,13 +687,17 @@ x+1 \amp \text{if } x\ne 1\\
 \amp =2 \amp \text{(poly eval.)}\text{.}
 \end{align*}
 </div>
-</div></div></details></div></article></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="s_intro.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg_lim_quot_fail-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.19.1"><a href="#eg_lim_quot_fail-3" title="Copy heading and permalink for Solution 2.19.1" aria-label="Copy heading and permalink for Solution 2.19.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 2.19: Quotient rule does not apply"><a href="#eg_lim_quot_fail" title="Copy heading and permalink for Example 2.19: Quotient rule does not apply" aria-label="Copy heading and permalink for Example 2.19: Quotient rule does not apply">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Limit rules"><a href="#ss_limit_laws" title="Copy heading and permalink for Subsection: Limit rules" aria-label="Copy heading and permalink for Subsection: Limit rules">🔗</a></div></section><div class="autopermalink" data-description="Section 2: Limits: informal definition"><a href="#s_limits_naive" title="Copy heading and permalink for Section 2: Limits: informal definition" aria-label="Copy heading and permalink for Section 2: Limits: informal definition">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="s_intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_limit_sandwich.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
