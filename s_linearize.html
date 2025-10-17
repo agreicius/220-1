@@ -5,25 +5,13 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red">
-<!--******************************************-->
-<!--*  Authored with PreTeXt                 *-->
-<!--*  pretextbook.org                       *-->
-<!--*  Theme: default-legacy                 *-->
-<!--*  Palette:                              *-->
-<!--******************************************-->
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Linearization</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:pf="https://prefigure.org" property="og:type" content="article">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -79,49 +67,371 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="article">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
-<!--** Runestone components to run locally in reader's browser **-->
-<!--** No external communication:                              **-->
-<!--**     log level is 0, Runestone Services are disabled     **-->
-<script type="text/javascript">
-eBookConfig = {};
-eBookConfig.useRunestoneServices = false;
-eBookConfig.host = 'http://127.0.0.1:8000';
-eBookConfig.course = 'PTX_Course_Title_Here';
-eBookConfig.basecourse = 'PTX_Base_Course';
-eBookConfig.isLoggedIn = false;
-eBookConfig.email = '';
-eBookConfig.isInstructor = false;
-eBookConfig.logLevel = 0;
-eBookConfig.username = '';
-eBookConfig.readings = null;
-eBookConfig.activities = null;
-eBookConfig.downloadsEnabled = false;
-eBookConfig.allow_pairs = false;
-eBookConfig.enableScratchAC = false;
-eBookConfig.build_info = "";
-eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.8.4';
-eBookConfig.jobehost = '';
-eBookConfig.proxyuri_runs = '';
-eBookConfig.proxyuri_files = '';
-eBookConfig.enable_chatcodes =  false;
-</script>
-<!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.962d00926ef9460e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.2e7f40e86ae7d163.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script>
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#s_intro-2-1 { counter-set: s_intro-2-1 0; }
+#s_intro-2-1 > li::marker { content: ""counter(s_intro-2-1,decimal)"."; }
+#s_intro-2-1 > li { counter-increment: s_intro-2-1; }
+#ss_keys_success-2-1 { counter-set: ss_keys_success-2-1 0; }
+#ss_keys_success-2-1 > li::marker { content: ""counter(ss_keys_success-2-1,decimal)"."; }
+#ss_keys_success-2-1 > li { counter-increment: ss_keys_success-2-1; }
+#s_limits_naive-2-1 { counter-set: s_limits_naive-2-1 0; }
+#s_limits_naive-2-1 > li::marker { content: ""counter(s_limits_naive-2-1,decimal)"."; }
+#s_limits_naive-2-1 > li { counter-increment: s_limits_naive-2-1; }
+#th_lim_const_id-2-1-1 { counter-set: th_lim_const_id-2-1-1 0; }
+#th_lim_const_id-2-1-1 > li::marker { content: ""counter(th_lim_const_id-2-1-1,decimal)"."; }
+#th_lim_const_id-2-1-1 > li { counter-increment: th_lim_const_id-2-1-1; }
+#th_lim_rules-2-1-6 { counter-set: th_lim_rules-2-1-6 0; }
+#th_lim_rules-2-1-6 > li::marker { content: ""counter(th_lim_rules-2-1-6,decimal)"."; }
+#th_lim_rules-2-1-6 > li { counter-increment: th_lim_rules-2-1-6; }
+#cor_poly_rational-2-1-1 { counter-set: cor_poly_rational-2-1-1 0; }
+#cor_poly_rational-2-1-1 > li::marker { content: ""counter(cor_poly_rational-2-1-1,decimal)"."; }
+#cor_poly_rational-2-1-1 > li { counter-increment: cor_poly_rational-2-1-1; }
+#s_limit_sandwich-2-1 { counter-set: s_limit_sandwich-2-1 0; }
+#s_limit_sandwich-2-1 > li::marker { content: ""counter(s_limit_sandwich-2-1,decimal)"."; }
+#s_limit_sandwich-2-1 > li { counter-increment: s_limit_sandwich-2-1; }
+#proc_sandwich-2-1-2 { counter-set: proc_sandwich-2-1-2 0; }
+#proc_sandwich-2-1-2 > li::marker { content: ""counter(proc_sandwich-2-1-2,decimal)"."; }
+#proc_sandwich-2-1-2 > li { counter-increment: proc_sandwich-2-1-2; }
+#proc_sandwich-2-1-2-1-1-3 { counter-set: proc_sandwich-2-1-2-1-1-3 0; }
+#proc_sandwich-2-1-2-1-1-3 > li::marker { content: "("counter(proc_sandwich-2-1-2-1-1-3,lower-alpha)")"; }
+#proc_sandwich-2-1-2-1-1-3 > li { counter-increment: proc_sandwich-2-1-2-1-1-3; }
+#th_abs_lim-2-1-1 { counter-set: th_abs_lim-2-1-1 0; }
+#th_abs_lim-2-1-1 > li::marker { content: ""counter(th_abs_lim-2-1-1,decimal)"."; }
+#th_abs_lim-2-1-1 > li { counter-increment: th_abs_lim-2-1-1; }
+#th_abs_lim-3-1-1 { counter-set: th_abs_lim-3-1-1 0; }
+#th_abs_lim-3-1-1 > li::marker { content: ""counter(th_abs_lim-3-1-1,decimal)"."; }
+#th_abs_lim-3-1-1 > li { counter-increment: th_abs_lim-3-1-1; }
+#th_lim_sine_cos-2-1-1 { counter-set: th_lim_sine_cos-2-1-1 0; }
+#th_lim_sine_cos-2-1-1 > li::marker { content: ""counter(th_lim_sine_cos-2-1-1,decimal)"."; }
+#th_lim_sine_cos-2-1-1 > li { counter-increment: th_lim_sine_cos-2-1-1; }
+#th_lim_sine_cos-3-1-1 { counter-set: th_lim_sine_cos-3-1-1 0; }
+#th_lim_sine_cos-3-1-1 > li::marker { content: ""counter(th_lim_sine_cos-3-1-1,decimal)"."; }
+#th_lim_sine_cos-3-1-1 > li { counter-increment: th_lim_sine_cos-3-1-1; }
+#s_lim_formal-2-1 { counter-set: s_lim_formal-2-1 0; }
+#s_lim_formal-2-1 > li::marker { content: ""counter(s_lim_formal-2-1,decimal)"."; }
+#s_lim_formal-2-1 > li { counter-increment: s_lim_formal-2-1; }
+#proc_epsilon_delta-2-1-4 { counter-set: proc_epsilon_delta-2-1-4 0; }
+#proc_epsilon_delta-2-1-4 > li::marker { content: ""counter(proc_epsilon_delta-2-1-4,decimal)"."; }
+#proc_epsilon_delta-2-1-4 > li { counter-increment: proc_epsilon_delta-2-1-4; }
+#th_inequalities-2-1-1 { counter-set: th_inequalities-2-1-1 0; }
+#th_inequalities-2-1-1 > li::marker { content: ""counter(th_inequalities-2-1-1,decimal)"."; }
+#th_inequalities-2-1-1 > li { counter-increment: th_inequalities-2-1-1; }
+#s_one_sided-2-1 { counter-set: s_one_sided-2-1 0; }
+#s_one_sided-2-1 > li::marker { content: ""counter(s_one_sided-2-1,decimal)"."; }
+#s_one_sided-2-1 > li { counter-increment: s_one_sided-2-1; }
+#d_one_sided_limits-2-1-3 { counter-set: d_one_sided_limits-2-1-3 0; }
+#d_one_sided_limits-2-1-3 > li::marker { content: ""counter(d_one_sided_limits-2-1-3,decimal)"."; }
+#d_one_sided_limits-2-1-3 > li { counter-increment: d_one_sided_limits-2-1-3; }
+#d_limit_extended-2-1-3 { counter-set: d_limit_extended-2-1-3 0; }
+#d_limit_extended-2-1-3 > li::marker { content: ""counter(d_limit_extended-2-1-3,decimal)"."; }
+#d_limit_extended-2-1-3 > li { counter-increment: d_limit_extended-2-1-3; }
+#th_trig_lims-2-1-1 { counter-set: th_trig_lims-2-1-1 0; }
+#th_trig_lims-2-1-1 > li::marker { content: ""counter(th_trig_lims-2-1-1,decimal)"."; }
+#th_trig_lims-2-1-1 > li { counter-increment: th_trig_lims-2-1-1; }
+#d_continuity-2-1-12 { counter-set: d_continuity-2-1-12 0; }
+#d_continuity-2-1-12 > li::marker { content: "("counter(d_continuity-2-1-12,lower-roman)")"; }
+#d_continuity-2-1-12 > li { counter-increment: d_continuity-2-1-12; }
+#th_cont_poly_rational-2-1-1 { counter-set: th_cont_poly_rational-2-1-1 0; }
+#th_cont_poly_rational-2-1-1 > li::marker { content: ""counter(th_cont_poly_rational-2-1-1,decimal)"."; }
+#th_cont_poly_rational-2-1-1 > li { counter-increment: th_cont_poly_rational-2-1-1; }
+#th_cont_poly_rational-3-1-1 { counter-set: th_cont_poly_rational-3-1-1 0; }
+#th_cont_poly_rational-3-1-1 > li::marker { content: ""counter(th_cont_poly_rational-3-1-1,decimal)"."; }
+#th_cont_poly_rational-3-1-1 > li { counter-increment: th_cont_poly_rational-3-1-1; }
+#th_cont_rules-2-1-4 { counter-set: th_cont_rules-2-1-4 0; }
+#th_cont_rules-2-1-4 > li::marker { content: ""counter(th_cont_rules-2-1-4,decimal)"."; }
+#th_cont_rules-2-1-4 > li { counter-increment: th_cont_rules-2-1-4; }
+#s_cont_ivt-2-1 { counter-set: s_cont_ivt-2-1 0; }
+#s_cont_ivt-2-1 > li::marker { content: ""counter(s_cont_ivt-2-1,decimal)"."; }
+#s_cont_ivt-2-1 > li { counter-increment: s_cont_ivt-2-1; }
+#eg_cont_piecewise-2-1-4 { counter-set: eg_cont_piecewise-2-1-4 0; }
+#eg_cont_piecewise-2-1-4 > li::marker { content: ""counter(eg_cont_piecewise-2-1-4,decimal)"."; }
+#eg_cont_piecewise-2-1-4 > li { counter-increment: eg_cont_piecewise-2-1-4; }
+#eg_cont_piecewise-3-1-1 { counter-set: eg_cont_piecewise-3-1-1 0; }
+#eg_cont_piecewise-3-1-1 > li::marker { content: ""counter(eg_cont_piecewise-3-1-1,decimal)"."; }
+#eg_cont_piecewise-3-1-1 > li { counter-increment: eg_cont_piecewise-3-1-1; }
+#eg_cont_piecewise-3-1-1-2-1-4 { counter-set: eg_cont_piecewise-3-1-1-2-1-4 0; }
+#eg_cont_piecewise-3-1-1-2-1-4 > li::marker { content: "("counter(eg_cont_piecewise-3-1-1-2-1-4,lower-roman)")"; }
+#eg_cont_piecewise-3-1-1-2-1-4 > li { counter-increment: eg_cont_piecewise-3-1-1-2-1-4; }
+#s_lim_at_infty-2-1 { counter-set: s_lim_at_infty-2-1 0; }
+#s_lim_at_infty-2-1 > li::marker { content: ""counter(s_lim_at_infty-2-1,decimal)"."; }
+#s_lim_at_infty-2-1 > li { counter-increment: s_lim_at_infty-2-1; }
+#d_lim_at_infty-2-1-1 { counter-set: d_lim_at_infty-2-1-1 0; }
+#d_lim_at_infty-2-1-1 > li::marker { content: ""counter(d_lim_at_infty-2-1-1,decimal)"."; }
+#d_lim_at_infty-2-1-1 > li { counter-increment: d_lim_at_infty-2-1-1; }
+#eg_lim_at_infty_cos-2-1-2 { counter-set: eg_lim_at_infty_cos-2-1-2 0; }
+#eg_lim_at_infty_cos-2-1-2 > li::marker { content: ""counter(eg_lim_at_infty_cos-2-1-2,decimal)"."; }
+#eg_lim_at_infty_cos-2-1-2 > li { counter-increment: eg_lim_at_infty_cos-2-1-2; }
+#s_infinite_limits-2-1 { counter-set: s_infinite_limits-2-1 0; }
+#s_infinite_limits-2-1 > li::marker { content: ""counter(s_infinite_limits-2-1,decimal)"."; }
+#s_infinite_limits-2-1 > li { counter-increment: s_infinite_limits-2-1; }
+#d_infty_lims-2-1-2 { counter-set: d_infty_lims-2-1-2 0; }
+#d_infty_lims-2-1-2 > li::marker { content: ""counter(d_infty_lims-2-1-2,decimal)"."; }
+#d_infty_lims-2-1-2 > li { counter-increment: d_infty_lims-2-1-2; }
+#rm_infty_lims-2-7 { counter-set: rm_infty_lims-2-7 0; }
+#rm_infty_lims-2-7 > li::marker { content: "("counter(rm_infty_lims-2-7,lower-alpha)")"; }
+#rm_infty_lims-2-7 > li { counter-increment: rm_infty_lims-2-7; }
+#eg_infty_lim_tan-2-1-4 { counter-set: eg_infty_lim_tan-2-1-4 0; }
+#eg_infty_lim_tan-2-1-4 > li::marker { content: ""counter(eg_infty_lim_tan-2-1-4,decimal)"."; }
+#eg_infty_lim_tan-2-1-4 > li { counter-increment: eg_infty_lim_tan-2-1-4; }
+#eg_infty_lim_tan-3-1-1 { counter-set: eg_infty_lim_tan-3-1-1 0; }
+#eg_infty_lim_tan-3-1-1 > li::marker { content: ""counter(eg_infty_lim_tan-3-1-1,decimal)"."; }
+#eg_infty_lim_tan-3-1-1 > li { counter-increment: eg_infty_lim_tan-3-1-1; }
+#th_infinite_limit-2-1-5 { counter-set: th_infinite_limit-2-1-5 0; }
+#th_infinite_limit-2-1-5 > li::marker { content: ""counter(th_infinite_limit-2-1-5,decimal)"."; }
+#th_infinite_limit-2-1-5 > li { counter-increment: th_infinite_limit-2-1-5; }
+#eg_infty_lim_elem-2-1-3 { counter-set: eg_infty_lim_elem-2-1-3 0; }
+#eg_infty_lim_elem-2-1-3 > li::marker { content: ""counter(eg_infty_lim_elem-2-1-3,decimal)"."; }
+#eg_infty_lim_elem-2-1-3 > li { counter-increment: eg_infty_lim_elem-2-1-3; }
+#eg_infty_lim_elem-3-1-1 { counter-set: eg_infty_lim_elem-3-1-1 0; }
+#eg_infty_lim_elem-3-1-1 > li::marker { content: ""counter(eg_infty_lim_elem-3-1-1,decimal)"."; }
+#eg_infty_lim_elem-3-1-1 > li { counter-increment: eg_infty_lim_elem-3-1-1; }
+#th_rational_function-2-1-5 { counter-set: th_rational_function-2-1-5 0; }
+#th_rational_function-2-1-5 > li::marker { content: ""counter(th_rational_function-2-1-5,decimal)"."; }
+#th_rational_function-2-1-5 > li { counter-increment: th_rational_function-2-1-5; }
+#s_der_at_point-2-1 { counter-set: s_der_at_point-2-1 0; }
+#s_der_at_point-2-1 > li::marker { content: ""counter(s_der_at_point-2-1,decimal)"."; }
+#s_der_at_point-2-1 > li { counter-increment: s_der_at_point-2-1; }
+#eg_der_at_point-2-1-2 { counter-set: eg_der_at_point-2-1-2 0; }
+#eg_der_at_point-2-1-2 > li::marker { content: ""counter(eg_der_at_point-2-1-2,decimal)"."; }
+#eg_der_at_point-2-1-2 > li { counter-increment: eg_der_at_point-2-1-2; }
+#eg_der_at_point-3-1-1 { counter-set: eg_der_at_point-3-1-1 0; }
+#eg_der_at_point-3-1-1 > li::marker { content: ""counter(eg_der_at_point-3-1-1,decimal)"."; }
+#eg_der_at_point-3-1-1 > li { counter-increment: eg_der_at_point-3-1-1; }
+#d_der_interpretations-2-1-3 { counter-set: d_der_interpretations-2-1-3 0; }
+#d_der_interpretations-2-1-3 > li::marker { content: ""counter(d_der_interpretations-2-1-3,decimal)"."; }
+#d_der_interpretations-2-1-3 > li { counter-increment: d_der_interpretations-2-1-3; }
+#eg_der_at_point_tangent-2-1-2 { counter-set: eg_der_at_point_tangent-2-1-2 0; }
+#eg_der_at_point_tangent-2-1-2 > li::marker { content: ""counter(eg_der_at_point_tangent-2-1-2,decimal)"."; }
+#eg_der_at_point_tangent-2-1-2 > li { counter-increment: eg_der_at_point_tangent-2-1-2; }
+#eg_der_at_point_tangent-3-1-1 { counter-set: eg_der_at_point_tangent-3-1-1 0; }
+#eg_der_at_point_tangent-3-1-1 > li::marker { content: ""counter(eg_der_at_point_tangent-3-1-1,decimal)"."; }
+#eg_der_at_point_tangent-3-1-1 > li { counter-increment: eg_der_at_point_tangent-3-1-1; }
+#s_der_function-2-1 { counter-set: s_der_function-2-1 0; }
+#s_der_function-2-1 > li::marker { content: ""counter(s_der_function-2-1,decimal)"."; }
+#s_der_function-2-1 > li { counter-increment: s_der_function-2-1; }
+#eg_der_func_rad-2-1-3 { counter-set: eg_der_func_rad-2-1-3 0; }
+#eg_der_func_rad-2-1-3 > li::marker { content: ""counter(eg_der_func_rad-2-1-3,decimal)"."; }
+#eg_der_func_rad-2-1-3 > li { counter-increment: eg_der_func_rad-2-1-3; }
+#eg_der_func_rad-3-1-1 { counter-set: eg_der_func_rad-3-1-1 0; }
+#eg_der_func_rad-3-1-1 > li::marker { content: ""counter(eg_der_func_rad-3-1-1,decimal)"."; }
+#eg_der_func_rad-3-1-1 > li { counter-increment: eg_der_func_rad-3-1-1; }
+#eg_der_funct_abs-2-1-2 { counter-set: eg_der_funct_abs-2-1-2 0; }
+#eg_der_funct_abs-2-1-2 > li::marker { content: ""counter(eg_der_funct_abs-2-1-2,decimal)"."; }
+#eg_der_funct_abs-2-1-2 > li { counter-increment: eg_der_funct_abs-2-1-2; }
+#th_der_formulas_basic-2-1-1 { counter-set: th_der_formulas_basic-2-1-1 0; }
+#th_der_formulas_basic-2-1-1 > li::marker { content: ""counter(th_der_formulas_basic-2-1-1,decimal)"."; }
+#th_der_formulas_basic-2-1-1 > li { counter-increment: th_der_formulas_basic-2-1-1; }
+#th_der_rules-2-1-1 { counter-set: th_der_rules-2-1-1 0; }
+#th_der_rules-2-1-1 > li::marker { content: ""counter(th_der_rules-2-1-1,decimal)"."; }
+#th_der_rules-2-1-1 > li { counter-increment: th_der_rules-2-1-1; }
+#eg_der_rules-2-1-3 { counter-set: eg_der_rules-2-1-3 0; }
+#eg_der_rules-2-1-3 > li::marker { content: ""counter(eg_der_rules-2-1-3,decimal)"."; }
+#eg_der_rules-2-1-3 > li { counter-increment: eg_der_rules-2-1-3; }
+#eg_der_rules-3-1-1 { counter-set: eg_der_rules-3-1-1 0; }
+#eg_der_rules-3-1-1 > li::marker { content: ""counter(eg_der_rules-3-1-1,decimal)"."; }
+#eg_der_rules-3-1-1 > li { counter-increment: eg_der_rules-3-1-1; }
+#s_der_rate_change-2-1 { counter-set: s_der_rate_change-2-1 0; }
+#s_der_rate_change-2-1 > li::marker { content: ""counter(s_der_rate_change-2-1,decimal)"."; }
+#s_der_rate_change-2-1 > li { counter-increment: s_der_rate_change-2-1; }
+#eg_height_age-2-1-4 { counter-set: eg_height_age-2-1-4 0; }
+#eg_height_age-2-1-4 > li::marker { content: ""counter(eg_height_age-2-1-4,decimal)"."; }
+#eg_height_age-2-1-4 > li { counter-increment: eg_height_age-2-1-4; }
+#eg_height_age-3-1 { counter-set: eg_height_age-3-1 0; }
+#eg_height_age-3-1 > li::marker { content: ""counter(eg_height_age-3-1,decimal)"."; }
+#eg_height_age-3-1 > li { counter-increment: eg_height_age-3-1; }
+#eg_dynamics_drone-2-1-4 { counter-set: eg_dynamics_drone-2-1-4 0; }
+#eg_dynamics_drone-2-1-4 > li::marker { content: ""counter(eg_dynamics_drone-2-1-4,decimal)"."; }
+#eg_dynamics_drone-2-1-4 > li { counter-increment: eg_dynamics_drone-2-1-4; }
+#eg_dynamics_drone-3-1-1 { counter-set: eg_dynamics_drone-3-1-1 0; }
+#eg_dynamics_drone-3-1-1 > li::marker { content: ""counter(eg_dynamics_drone-3-1-1,decimal)"."; }
+#eg_dynamics_drone-3-1-1 > li { counter-increment: eg_dynamics_drone-3-1-1; }
+#eg_marginal-2-1-7 { counter-set: eg_marginal-2-1-7 0; }
+#eg_marginal-2-1-7 > li::marker { content: ""counter(eg_marginal-2-1-7,decimal)"."; }
+#eg_marginal-2-1-7 > li { counter-increment: eg_marginal-2-1-7; }
+#eg_marginal-3-1-1 { counter-set: eg_marginal-3-1-1 0; }
+#eg_marginal-3-1-1 > li::marker { content: ""counter(eg_marginal-3-1-1,decimal)"."; }
+#eg_marginal-3-1-1 > li { counter-increment: eg_marginal-3-1-1; }
+#s_der_trig-2-1 { counter-set: s_der_trig-2-1 0; }
+#s_der_trig-2-1 > li::marker { content: ""counter(s_der_trig-2-1,decimal)"."; }
+#s_der_trig-2-1 > li { counter-increment: s_der_trig-2-1; }
+#eg_tangent_trig-2-1-2 { counter-set: eg_tangent_trig-2-1-2 0; }
+#eg_tangent_trig-2-1-2 > li::marker { content: ""counter(eg_tangent_trig-2-1-2,decimal)"."; }
+#eg_tangent_trig-2-1-2 > li { counter-increment: eg_tangent_trig-2-1-2; }
+#eg_tangent_trig-3-1-1 { counter-set: eg_tangent_trig-3-1-1 0; }
+#eg_tangent_trig-3-1-1 > li::marker { content: ""counter(eg_tangent_trig-3-1-1,decimal)"."; }
+#eg_tangent_trig-3-1-1 > li { counter-increment: eg_tangent_trig-3-1-1; }
+#s_chain-2-1 { counter-set: s_chain-2-1 0; }
+#s_chain-2-1 > li::marker { content: ""counter(s_chain-2-1,decimal)"."; }
+#s_chain-2-1 > li { counter-increment: s_chain-2-1; }
+#proc_chain-2-1-2 { counter-set: proc_chain-2-1-2 0; }
+#proc_chain-2-1-2 > li::marker { content: ""counter(proc_chain-2-1-2,decimal)"."; }
+#proc_chain-2-1-2 > li { counter-increment: proc_chain-2-1-2; }
+#eg_chain_rules-2-1-1 { counter-set: eg_chain_rules-2-1-1 0; }
+#eg_chain_rules-2-1-1 > li::marker { content: ""counter(eg_chain_rules-2-1-1,decimal)"."; }
+#eg_chain_rules-2-1-1 > li { counter-increment: eg_chain_rules-2-1-1; }
+#eg_chain_rules-3-1-1 { counter-set: eg_chain_rules-3-1-1 0; }
+#eg_chain_rules-3-1-1 > li::marker { content: ""counter(eg_chain_rules-3-1-1,decimal)"."; }
+#eg_chain_rules-3-1-1 > li { counter-increment: eg_chain_rules-3-1-1; }
+#eg_chain_spher_balloon-2-1-5 { counter-set: eg_chain_spher_balloon-2-1-5 0; }
+#eg_chain_spher_balloon-2-1-5 > li::marker { content: ""counter(eg_chain_spher_balloon-2-1-5,decimal)"."; }
+#eg_chain_spher_balloon-2-1-5 > li { counter-increment: eg_chain_spher_balloon-2-1-5; }
+#eg_chain_spher_balloon-3-1-1 { counter-set: eg_chain_spher_balloon-3-1-1 0; }
+#eg_chain_spher_balloon-3-1-1 > li::marker { content: ""counter(eg_chain_spher_balloon-3-1-1,decimal)"."; }
+#eg_chain_spher_balloon-3-1-1 > li { counter-increment: eg_chain_spher_balloon-3-1-1; }
+#s_implicit-2-1 { counter-set: s_implicit-2-1 0; }
+#s_implicit-2-1 > li::marker { content: ""counter(s_implicit-2-1,decimal)"."; }
+#s_implicit-2-1 > li { counter-increment: s_implicit-2-1; }
+#proc_implicit_diff-2-1-8 { counter-set: proc_implicit_diff-2-1-8 0; }
+#proc_implicit_diff-2-1-8 > li::marker { content: ""counter(proc_implicit_diff-2-1-8,decimal)"."; }
+#proc_implicit_diff-2-1-8 > li { counter-increment: proc_implicit_diff-2-1-8; }
+#eg_implicit_Ts-2-1-3 { counter-set: eg_implicit_Ts-2-1-3 0; }
+#eg_implicit_Ts-2-1-3 > li::marker { content: ""counter(eg_implicit_Ts-2-1-3,decimal)"."; }
+#eg_implicit_Ts-2-1-3 > li { counter-increment: eg_implicit_Ts-2-1-3; }
+#eg_implicit_Ts-3-1-1 { counter-set: eg_implicit_Ts-3-1-1 0; }
+#eg_implicit_Ts-3-1-1 > li::marker { content: ""counter(eg_implicit_Ts-3-1-1,decimal)"."; }
+#eg_implicit_Ts-3-1-1 > li { counter-increment: eg_implicit_Ts-3-1-1; }
+#eg_implicit_trig-2-1-3 { counter-set: eg_implicit_trig-2-1-3 0; }
+#eg_implicit_trig-2-1-3 > li::marker { content: ""counter(eg_implicit_trig-2-1-3,decimal)"."; }
+#eg_implicit_trig-2-1-3 > li { counter-increment: eg_implicit_trig-2-1-3; }
+#eg_implicit_trig-3-1-1 { counter-set: eg_implicit_trig-3-1-1 0; }
+#eg_implicit_trig-3-1-1 > li::marker { content: ""counter(eg_implicit_trig-3-1-1,decimal)"."; }
+#eg_implicit_trig-3-1-1 > li { counter-increment: eg_implicit_trig-3-1-1; }
+#proc_related_rates-2-1-1 { counter-set: proc_related_rates-2-1-1 0; }
+#proc_related_rates-2-1-1 > li::marker { content: ""counter(proc_related_rates-2-1-1,decimal)"."; }
+#proc_related_rates-2-1-1 > li { counter-increment: proc_related_rates-2-1-1; }
+#proc_related_rates-2-1-1-1-2 { counter-set: proc_related_rates-2-1-1-1-2 0; }
+#proc_related_rates-2-1-1-1-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-1-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-1-2 > li { counter-increment: proc_related_rates-2-1-1-1-2; }
+#proc_related_rates-2-1-1-2-2 { counter-set: proc_related_rates-2-1-1-2-2 0; }
+#proc_related_rates-2-1-1-2-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-2-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-2-2 > li { counter-increment: proc_related_rates-2-1-1-2-2; }
+#proc_related_rates-2-1-1-3-2 { counter-set: proc_related_rates-2-1-1-3-2 0; }
+#proc_related_rates-2-1-1-3-2 > li::marker { content: "("counter(proc_related_rates-2-1-1-3-2,lower-alpha)")"; }
+#proc_related_rates-2-1-1-3-2 > li { counter-increment: proc_related_rates-2-1-1-3-2; }
+#s_linearize-2-1 { counter-set: s_linearize-2-1 0; }
+#s_linearize-2-1 > li::marker { content: ""counter(s_linearize-2-1,decimal)"."; }
+#s_linearize-2-1 > li { counter-increment: s_linearize-2-1; }
+#proc_lin_approx-2-1-6 { counter-set: proc_lin_approx-2-1-6 0; }
+#proc_lin_approx-2-1-6 > li::marker { content: ""counter(proc_lin_approx-2-1-6,decimal)"."; }
+#proc_lin_approx-2-1-6 > li { counter-increment: proc_lin_approx-2-1-6; }
+#eg_linear_approx_quadratic-2-1-2 { counter-set: eg_linear_approx_quadratic-2-1-2 0; }
+#eg_linear_approx_quadratic-2-1-2 > li::marker { content: ""counter(eg_linear_approx_quadratic-2-1-2,decimal)"."; }
+#eg_linear_approx_quadratic-2-1-2 > li { counter-increment: eg_linear_approx_quadratic-2-1-2; }
+#eg_linear_approx_quadratic-3-1-1 { counter-set: eg_linear_approx_quadratic-3-1-1 0; }
+#eg_linear_approx_quadratic-3-1-1 > li::marker { content: ""counter(eg_linear_approx_quadratic-3-1-1,decimal)"."; }
+#eg_linear_approx_quadratic-3-1-1 > li { counter-increment: eg_linear_approx_quadratic-3-1-1; }
+#eg_linear_approx_marshmallow-2-1-1 { counter-set: eg_linear_approx_marshmallow-2-1-1 0; }
+#eg_linear_approx_marshmallow-2-1-1 > li::marker { content: ""counter(eg_linear_approx_marshmallow-2-1-1,decimal)"."; }
+#eg_linear_approx_marshmallow-2-1-1 > li { counter-increment: eg_linear_approx_marshmallow-2-1-1; }
+#eg_linear_approx_marshmallow-3-1-8 { counter-set: eg_linear_approx_marshmallow-3-1-8 0; }
+#eg_linear_approx_marshmallow-3-1-8 > li::marker { content: ""counter(eg_linear_approx_marshmallow-3-1-8,decimal)"."; }
+#eg_linear_approx_marshmallow-3-1-8 > li { counter-increment: eg_linear_approx_marshmallow-3-1-8; }
+#s_extreme-2-1 { counter-set: s_extreme-2-1 0; }
+#s_extreme-2-1 > li::marker { content: ""counter(s_extreme-2-1,decimal)"."; }
+#s_extreme-2-1 > li { counter-increment: s_extreme-2-1; }
+#eg_local_extrema-2-1-3 { counter-set: eg_local_extrema-2-1-3 0; }
+#eg_local_extrema-2-1-3 > li::marker { content: ""counter(eg_local_extrema-2-1-3,decimal)"."; }
+#eg_local_extrema-2-1-3 > li { counter-increment: eg_local_extrema-2-1-3; }
+#eg_local_extrema-3-1-1 { counter-set: eg_local_extrema-3-1-1 0; }
+#eg_local_extrema-3-1-1 > li::marker { content: ""counter(eg_local_extrema-3-1-1,decimal)"."; }
+#eg_local_extrema-3-1-1 > li { counter-increment: eg_local_extrema-3-1-1; }
+#proc_extreme-2-1-5 { counter-set: proc_extreme-2-1-5 0; }
+#proc_extreme-2-1-5 > li::marker { content: ""counter(proc_extreme-2-1-5,decimal)"."; }
+#proc_extreme-2-1-5 > li { counter-increment: proc_extreme-2-1-5; }
+#s_mean_value-2-1 { counter-set: s_mean_value-2-1 0; }
+#s_mean_value-2-1 > li::marker { content: ""counter(s_mean_value-2-1,decimal)"."; }
+#s_mean_value-2-1 > li { counter-increment: s_mean_value-2-1; }
+#th_monoton-2-1-3 { counter-set: th_monoton-2-1-3 0; }
+#th_monoton-2-1-3 > li::marker { content: ""counter(th_monoton-2-1-3,decimal)"."; }
+#th_monoton-2-1-3 > li { counter-increment: th_monoton-2-1-3; }
+#proc_intervals_monoto-2-1-4 { counter-set: proc_intervals_monoto-2-1-4 0; }
+#proc_intervals_monoto-2-1-4 > li::marker { content: ""counter(proc_intervals_monoto-2-1-4,decimal)"."; }
+#proc_intervals_monoto-2-1-4 > li { counter-increment: proc_intervals_monoto-2-1-4; }
+#proc_intervals_monoto-2-1-4-3-1-3 { counter-set: proc_intervals_monoto-2-1-4-3-1-3 0; }
+#proc_intervals_monoto-2-1-4-3-1-3 > li::marker { content: "("counter(proc_intervals_monoto-2-1-4-3-1-3,lower-alpha)")"; }
+#proc_intervals_monoto-2-1-4-3-1-3 > li { counter-increment: proc_intervals_monoto-2-1-4-3-1-3; }
+#th_first_der_test-2-1-5 { counter-set: th_first_der_test-2-1-5 0; }
+#th_first_der_test-2-1-5 > li::marker { content: ""counter(th_first_der_test-2-1-5,decimal)"."; }
+#th_first_der_test-2-1-5 > li { counter-increment: th_first_der_test-2-1-5; }
+#proc_class_crit_pts-2-1-6 { counter-set: proc_class_crit_pts-2-1-6 0; }
+#proc_class_crit_pts-2-1-6 > li::marker { content: ""counter(proc_class_crit_pts-2-1-6,decimal)"."; }
+#proc_class_crit_pts-2-1-6 > li { counter-increment: proc_class_crit_pts-2-1-6; }
+#eg_first_der_test_trig-2-1-3 { counter-set: eg_first_der_test_trig-2-1-3 0; }
+#eg_first_der_test_trig-2-1-3 > li::marker { content: ""counter(eg_first_der_test_trig-2-1-3,decimal)"."; }
+#eg_first_der_test_trig-2-1-3 > li { counter-increment: eg_first_der_test_trig-2-1-3; }
+#eg_concavity_logistic_growth-2-3-1 { counter-set: eg_concavity_logistic_growth-2-3-1 0; }
+#eg_concavity_logistic_growth-2-3-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-2-3-1,decimal)"."; }
+#eg_concavity_logistic_growth-2-3-1 > li { counter-increment: eg_concavity_logistic_growth-2-3-1; }
+#eg_concavity_logistic_growth-3-1-1 { counter-set: eg_concavity_logistic_growth-3-1-1 0; }
+#eg_concavity_logistic_growth-3-1-1 > li::marker { content: ""counter(eg_concavity_logistic_growth-3-1-1,decimal)"."; }
+#eg_concavity_logistic_growth-3-1-1 > li { counter-increment: eg_concavity_logistic_growth-3-1-1; }
+#th_concavity-1-1-3 { counter-set: th_concavity-1-1-3 0; }
+#th_concavity-1-1-3 > li::marker { content: ""counter(th_concavity-1-1-3,decimal)"."; }
+#th_concavity-1-1-3 > li { counter-increment: th_concavity-1-1-3; }
+#proc_concavity-2-1-4 { counter-set: proc_concavity-2-1-4 0; }
+#proc_concavity-2-1-4 > li::marker { content: ""counter(proc_concavity-2-1-4,decimal)"."; }
+#proc_concavity-2-1-4 > li { counter-increment: proc_concavity-2-1-4; }
+#proc_concavity-2-1-4-1-1-4 { counter-set: proc_concavity-2-1-4-1-1-4 0; }
+#proc_concavity-2-1-4-1-1-4 > li::marker { content: "("counter(proc_concavity-2-1-4-1-1-4,lower-alpha)")"; }
+#proc_concavity-2-1-4-1-1-4 > li { counter-increment: proc_concavity-2-1-4-1-1-4; }
+#th_second_der-2-1-3 { counter-set: th_second_der-2-1-3 0; }
+#th_second_der-2-1-3 > li::marker { content: ""counter(th_second_der-2-1-3,decimal)"."; }
+#th_second_der-2-1-3 > li { counter-increment: th_second_der-2-1-3; }
+#s_curve_sketch_I-2-1 { counter-set: s_curve_sketch_I-2-1 0; }
+#s_curve_sketch_I-2-1 > li::marker { content: ""counter(s_curve_sketch_I-2-1,decimal)"."; }
+#s_curve_sketch_I-2-1 > li { counter-increment: s_curve_sketch_I-2-1; }
+#proc_curve_sketching-2-1-2 { counter-set: proc_curve_sketching-2-1-2 0; }
+#proc_curve_sketching-2-1-2 > li::marker { content: ""counter(proc_curve_sketching-2-1-2,decimal)"."; }
+#proc_curve_sketching-2-1-2 > li { counter-increment: proc_curve_sketching-2-1-2; }
+#s_curve_sketch_II-2-1 { counter-set: s_curve_sketch_II-2-1 0; }
+#s_curve_sketch_II-2-1 > li::marker { content: ""counter(s_curve_sketch_II-2-1,decimal)"."; }
+#s_curve_sketch_II-2-1 > li { counter-increment: s_curve_sketch_II-2-1; }
+#s_applied_opt_I-2-1 { counter-set: s_applied_opt_I-2-1 0; }
+#s_applied_opt_I-2-1 > li::marker { content: ""counter(s_applied_opt_I-2-1,decimal)"."; }
+#s_applied_opt_I-2-1 > li { counter-increment: s_applied_opt_I-2-1; }
+#proc_applied_opt-2-1-1 { counter-set: proc_applied_opt-2-1-1 0; }
+#proc_applied_opt-2-1-1 > li::marker { content: ""counter(proc_applied_opt-2-1-1,decimal)"."; }
+#proc_applied_opt-2-1-1 > li { counter-increment: proc_applied_opt-2-1-1; }
+#proc_applied_opt-2-1-1-1-2-1 { counter-set: proc_applied_opt-2-1-1-1-2-1 0; }
+#proc_applied_opt-2-1-1-1-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-1-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-1-2-1 > li { counter-increment: proc_applied_opt-2-1-1-1-2-1; }
+#proc_applied_opt-2-1-1-2-2-1 { counter-set: proc_applied_opt-2-1-1-2-2-1 0; }
+#proc_applied_opt-2-1-1-2-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-2-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-2-2-1 > li { counter-increment: proc_applied_opt-2-1-1-2-2-1; }
+#proc_applied_opt-2-1-1-3-2-1 { counter-set: proc_applied_opt-2-1-1-3-2-1 0; }
+#proc_applied_opt-2-1-1-3-2-1 > li::marker { content: "("counter(proc_applied_opt-2-1-1-3-2-1,lower-alpha)")"; }
+#proc_applied_opt-2-1-1-3-2-1 > li { counter-increment: proc_applied_opt-2-1-1-3-2-1; }
+#proc_gen_EVT-2-1-12 { counter-set: proc_gen_EVT-2-1-12 0; }
+#proc_gen_EVT-2-1-12 > li::marker { content: ""counter(proc_gen_EVT-2-1-12,decimal)"."; }
+#proc_gen_EVT-2-1-12 > li { counter-increment: proc_gen_EVT-2-1-12; }
+</style>
 </head>
 <body id="nusinglediffcalc" class="pretext article ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus</span> <span class="subtitle">Kursobjekt</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Math 220-1 Single-variable differential calculus:</span> <span class="subtitle">Kursobjekt</span></a></h1>
 <p class="byline">Aaron Greicius</p>
-</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+</div>
+</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -132,8 +442,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_extreme.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_extreme.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\Z}{{\mathbb Z}}
   \newcommand{\Q}{{\mathbb Q}}
   \newcommand{\R}{{\mathbb R}}
   \newcommand{\C}{{\mathbb C}}
@@ -236,7 +545,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="s_intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to the course</span></a></div>
@@ -317,28 +626,18 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="s_linearize"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="s_linearize"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">19</span><span class="space"> </span><span class="title">Linearization</span>
 </h2>
 <article class="objectives goal-like" id="s_linearize-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ol class="decimal" id="s_linearize-2-1">
-<li id="s_linearize-2-1-1">
-<div class="para" id="s_linearize-2-1-1-1">Define the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> at an input <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Objective 19.1"><a href="#s_linearize-2-1-1" title="Copy heading and permalink for Objective 19.1" aria-label="Copy heading and permalink for Objective 19.1">🔗</a></div>
-</li>
-<li id="s_linearize-2-1-2">
-<div class="para" id="s_linearize-2-1-2-1">Understand the linearization of a function in terms of the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\((a,f(a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Objective 19.2"><a href="#s_linearize-2-1-2" title="Copy heading and permalink for Objective 19.2" aria-label="Copy heading and permalink for Objective 19.2">🔗</a></div>
-</li>
-<li id="s_linearize-2-1-3">
-<div class="para" id="s_linearize-2-1-3-1">Investigate linearization as an approximation tool. Discuss in what sense a linearization <span class="process-math">\(L(x)\)</span> is a good approximation of a function <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Objective 19.3"><a href="#s_linearize-2-1-3" title="Copy heading and permalink for Objective 19.3" aria-label="Copy heading and permalink for Objective 19.3">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Objectives 19"><a href="#s_linearize-2" title="Copy heading and permalink for Objectives 19" aria-label="Copy heading and permalink for Objectives 19">🔗</a></div></article><article class="definition definition-like" id="d_linearization"><h3 class="heading">
+<li id="s_linearize-2-1-1"><div class="para" id="s_linearize-2-1-1-1">Define the linearization <span class="process-math">\(L(x)\)</span> of a function <span class="process-math">\(f(x)\)</span> at an input <span class="process-math">\(a\text{.}\)</span>
+</div></li>
+<li id="s_linearize-2-1-2"><div class="para" id="s_linearize-2-1-2-1">Understand the linearization of a function in terms of the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\((a,f(a)\text{.}\)</span>
+</div></li>
+<li id="s_linearize-2-1-3"><div class="para" id="s_linearize-2-1-3-1">Investigate linearization as an approximation tool. Discuss in what sense a linearization <span class="process-math">\(L(x)\)</span> is a good approximation of a function <span class="process-math">\(f(x)\text{.}\)</span>
+</div></li>
+</ol></article><article class="definition definition-like" id="d_linearization"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">19.1</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization of a function.</span>
 </h3>
 <div class="para logical" id="d_linearization-2-1">
@@ -348,20 +647,16 @@ eBookConfig.enable_chatcodes =  false;
 L(x)=f'(a)(x-a)+f(a)\text{.}\tag{19.1}
 \end{equation}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#d_linearization-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Definition 19.1: Linearization of a function"><a href="#d_linearization" title="Copy heading and permalink for Definition 19.1: Linearization of a function" aria-label="Copy heading and permalink for Definition 19.1: Linearization of a function">🔗</a></div></article><article class="remark remark-like" id="s_linearize-4"><h3 class="heading">
+</div></article><article class="remark remark-like" id="s_linearize-4"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.2</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization.</span>
 </h3>
-<div class="para" id="s_linearize-4-2">It is important to observe the “centered at <span class="process-math">\(a\)</span>” modifier in <a href="s_linearize.html#d_linearization" class="xref" data-knowl="./knowl/xref/d_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 19.1: Linearization of a function">Definition 19.1</a>. In other words, the function <span class="process-math">\(L(x)\)</span> defined in <a href="s_linearize.html#eq_linearization" class="xref" data-knowl="./knowl/xref/eq_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 19.1">(19.1)</a> depends both on <span class="process-math">\(f\)</span> and the specific input <span class="process-math">\(a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 19.2: Linearization"><a href="#s_linearize-4" title="Copy heading and permalink for Remark 19.2: Linearization" aria-label="Copy heading and permalink for Remark 19.2: Linearization">🔗</a></div></article><article class="example example-like" id="eg_linearization_quadratic"><h3 class="heading">
+<div class="para" id="s_linearize-4-2">It is important to observe the “centered at <span class="process-math">\(a\)</span>” modifier in <a href="s_linearize.html#d_linearization" class="xref" data-knowl="./knowl/xref/d_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 19.1: Linearization of a function">Definition 19.1</a>. In other words, the function <span class="process-math">\(L(x)\)</span> defined in <a href="s_linearize.html#eq_linearization" class="xref" data-knowl="./knowl/xref/eq_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 19.1">(19.1)</a> depends both on <span class="process-math">\(f\)</span> and the specific input <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="example example-like" id="eg_linearization_quadratic"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.3</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization: quadratic.</span>
 </h3>
-<div class="para" id="eg_linearization_quadratic-2-1">Let <span class="process-math">\(f(x)=3-(x-2)^2\text{.}\)</span> Compute the linearization <span class="process-math">\(L_1\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=1\text{,}\)</span> and the linearization <span class="process-math">\(L_2\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(b=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_linearization_quadratic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_linearization_quadratic-2-1">Let <span class="process-math">\(f(x)=3-(x-2)^2\text{.}\)</span> Compute the linearization <span class="process-math">\(L_1\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=1\text{,}\)</span> and the linearization <span class="process-math">\(L_2\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(b=2\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_linearization_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_linearization_quadratic-3-1">
+<div class="solutions"><details id="eg_linearization_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linearization_quadratic-3-1">
 <div class="para">First compute <span class="process-math">\(f'(x)=-2(x-2)\text{.}\)</span> Using <a href="s_linearize.html#eq_linearization" class="xref" data-knowl="./knowl/xref/eq_linearization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 19.1">(19.1)</a>, we have</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_linearization.html" id="eg_linearization_quadratic-3-1-3">
 \begin{align*}
@@ -374,19 +669,14 @@ L_2(x) \amp = f'(b)(x-b)+f(b)\\
 </div>
 <div class="para">Thus the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(1\)</span> is <span class="process-math">\(L_1(x)=2(x-1)+2\text{,}\)</span> and the linearization centered at <span class="process-math">\(2\)</span> is the constant function <span class="process-math">\(L_2(x)=3\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linearization_quadratic-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 19.3.1"><a href="#eg_linearization_quadratic-3" title="Copy heading and permalink for Solution 19.3.1" aria-label="Copy heading and permalink for Solution 19.3.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 19.3: Linearization: quadratic"><a href="#eg_linearization_quadratic" title="Copy heading and permalink for Example 19.3: Linearization: quadratic" aria-label="Copy heading and permalink for Example 19.3: Linearization: quadratic">🔗</a></div></article><article class="remark remark-like" id="s_linearize-6"><h3 class="heading">
+</div></div></details></div></article><article class="remark remark-like" id="s_linearize-6"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.4</span><span class="period">.</span><span class="space"> </span><span class="title">Linearization and tangent lines.</span>
 </h3>
-<div class="para" id="s_linearize-6-2">You may have noticed a resemblance to the formula for the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{,}\)</span> and the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\text{.}\)</span> To be precise: the <em class="emphasis">graph</em> of the linearization function <span class="process-math">\(L\)</span> is precisely the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\(P=(a,f(a))\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="s_linearize-6-2">You may have noticed a resemblance to the formula for the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{,}\)</span> and the tangent line to the graph of <span class="process-math">\(f\)</span> at <span class="process-math">\(x=a\text{.}\)</span> To be precise: the <em class="emphasis">graph</em> of the linearization function <span class="process-math">\(L\)</span> is precisely the tangent line to the graph of <span class="process-math">\(f\)</span> at the point <span class="process-math">\(P=(a,f(a))\text{.}\)</span>
 </div>
-<div class="para" id="s_linearize-6-3">By way of illustration, we graph the function <span class="process-math">\(f(x)=3-(x-2)^2\)</span> in <a href="s_linearize.html#eg_linearization_quadratic" class="xref" data-knowl="./knowl/xref/eg_linearization_quadratic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.3: Linearization: quadratic">Example 19.3</a> along with the linearizations <span class="process-math">\(L_1\)</span> and <span class="process-math">\(L_2\)</span> centered at <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> respectively.<div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
+<div class="para" id="s_linearize-6-3">By way of illustration, we graph the function <span class="process-math">\(f(x)=3-(x-2)^2\)</span> in <a href="s_linearize.html#eg_linearization_quadratic" class="xref" data-knowl="./knowl/xref/eg_linearization_quadratic.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 19.3: Linearization: quadratic">Example 19.3</a> along with the linearizations <span class="process-math">\(L_1\)</span> and <span class="process-math">\(L_2\)</span> centered at <span class="process-math">\(1\)</span> and <span class="process-math">\(2\text{,}\)</span> respectively.</div>
 <figure class="figure figure-like" id="fig_linearization_tangent"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/sageplot/im_linearization_tangent.svg" role="img" class="contained" alt="Linearizations of a quadratic function"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">19.5<span class="period">.</span></span><span class="space"> </span>Linearizations of <span class="process-math">\(f(x)=3-(x-2)^2\)</span><div class="autopermalink" data-description="Figure 19.5"><a href="#fig_linearization_tangent" title="Copy heading and permalink for Figure 19.5" aria-label="Copy heading and permalink for Figure 19.5">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Remark 19.4: Linearization and tangent lines"><a href="#s_linearize-6" title="Copy heading and permalink for Remark 19.4: Linearization and tangent lines" aria-label="Copy heading and permalink for Remark 19.4: Linearization and tangent lines">🔗</a></div></article><article class="remark remark-like" id="s_linearize-7"><h3 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">19.5<span class="period">.</span></span><span class="space"> </span>Linearizations of <span class="process-math">\(f(x)=3-(x-2)^2\)</span></figcaption></figure></article><article class="remark remark-like" id="s_linearize-7"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">19.6</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation.</span>
 </h3>
 <div class="para logical" id="s_linearize-7-2">
@@ -412,17 +702,14 @@ f'(a)=\lim_{x\to a}\frac{f(x)-f(a)}{x-a} \amp \implies  0=\lim_{x\to a}\frac{f(x
 </div>
 <div class="para">for all <span class="process-math">\(x\)</span> sufficiently close to <span class="process-math">\(a\text{.}\)</span> After we introduce the <em class="emphasis">mean value theorem</em>, we will be able to give an even better quantitative description of just how good an approximation <span class="process-math">\(L(x)\)</span> is to <span class="process-math">\(f(x)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#s_linearize-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Remark 19.6: Linear approximation"><a href="#s_linearize-7" title="Copy heading and permalink for Remark 19.6: Linear approximation" aria-label="Copy heading and permalink for Remark 19.6: Linear approximation">🔗</a></div></article><article class="algorithm theorem-like" id="proc_lin_approx"><h3 class="heading">
+</div></article><article class="algorithm theorem-like" id="proc_lin_approx"><h3 class="heading">
 <span class="type">Procedure</span><span class="space"> </span><span class="codenumber">19.7</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation.</span>
 </h3>
 <div class="para logical" id="proc_lin_approx-2-1">
 <div class="para">Assume <span class="process-math">\(f\)</span> is is differentiable at <span class="process-math">\(a\text{,}\)</span> and let <span class="process-math">\(L(x)=f'(a)(x-a)+f(a)\)</span> be the linearization of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a\text{.}\)</span>
 </div>
 <ol class="decimal" id="proc_lin_approx-2-1-6">
-<li id="proc_lin_approx-2-1-6-1">
-<div class="para logical" id="proc_lin_approx-2-1-6-1-1">
+<li id="proc_lin_approx-2-1-6-1"><div class="para logical" id="proc_lin_approx-2-1-6-1-1">
 <div class="para">For inputs <span class="process-math">\(x\)</span> close to <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(L(x)\)</span> is a good approximation of <span class="process-math">\(f(x)\text{:}\)</span> that is, we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -431,50 +718,30 @@ f(x)\approx L(x)
 </div>
 <div class="para">for <span class="process-math">\(x\)</span> close to <span class="process-math">\(a\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#proc_lin_approx-2-1-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#proc_lin_approx-2-1-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="proc_lin_approx-2-1-6-2">
-<div class="para logical" id="proc_lin_approx-2-1-6-2-1">
+</div></li>
+<li id="proc_lin_approx-2-1-6-2"><div class="para logical" id="proc_lin_approx-2-1-6-2-1">
 <div class="para">In paricular for an input <span class="process-math">\(b\)</span> close to <span class="process-math">\(a\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
 f(b)\approx L(b)=f'(a)(b-a)+f(a)\text{.}
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#proc_lin_approx-2-1-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#proc_lin_approx-2-1-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
+</div></li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#proc_lin_approx-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Procedure 19.7: Linear approximation"><a href="#proc_lin_approx" title="Copy heading and permalink for Procedure 19.7: Linear approximation" aria-label="Copy heading and permalink for Procedure 19.7: Linear approximation">🔗</a></div></article><article class="example example-like" id="eg_linear_approx_quadratic"><h3 class="heading">
+</div></article><article class="example example-like" id="eg_linear_approx_quadratic"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.8</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: quadratic.</span>
 </h3>
 <div class="para logical" id="eg_linear_approx_quadratic-2-1">
 <div class="para">Let <span class="process-math">\(f(x)=3-(x-2)^2\text{.}\)</span>
 </div>
 <ol class="decimal" id="eg_linear_approx_quadratic-2-1-2">
-<li id="eg_linear_approx_quadratic-2-1-2-1">
-<div class="para" id="eg_linear_approx_quadratic-2-1-2-1-1">Use the linearization <span class="process-math">\(L_1(x)\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(1\)</span> to <em class="emphasis">estimate</em> <span class="process-math">\(f(0.5)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_linear_approx_quadratic-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="eg_linear_approx_quadratic-2-1-2-2">
-<div class="para" id="eg_linear_approx_quadratic-2-1-2-2-1">Compare your estimate of <span class="process-math">\(f(0.5)\)</span> with the actual value. How close are the two?<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_linear_approx_quadratic-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
+<li id="eg_linear_approx_quadratic-2-1-2-1"><div class="para" id="eg_linear_approx_quadratic-2-1-2-1-1">Use the linearization <span class="process-math">\(L_1(x)\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(1\)</span> to <em class="emphasis">estimate</em> <span class="process-math">\(f(0.5)\text{.}\)</span>
+</div></li>
+<li id="eg_linear_approx_quadratic-2-1-2-2"><div class="para" id="eg_linear_approx_quadratic-2-1-2-2-1">Compare your estimate of <span class="process-math">\(f(0.5)\)</span> with the actual value. How close are the two?</div></li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_linear_approx_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_linear_approx_quadratic-3-1">
-<ol class="decimal" id="eg_linear_approx_quadratic-3-1-1">
-<li id="eg_linear_approx_quadratic-3-1-1-1">
-<div class="para logical" id="eg_linear_approx_quadratic-3-1-1-1-1">
+<div class="solutions"><details id="eg_linear_approx_quadratic-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_quadratic-3-1"><ol class="decimal" id="eg_linear_approx_quadratic-3-1-1">
+<li id="eg_linear_approx_quadratic-3-1-1-1"><div class="para logical" id="eg_linear_approx_quadratic-3-1-1-1-1">
 <div class="para">Recall that we computed <span class="process-math">\(L_1(x)=2(x-1)+2\text{.}\)</span> Thus we have</div>
 <div class="displaymath process-math" id="eg_linear_approx_quadratic-3-1-1-1-1-2">
 \begin{align*}
@@ -483,27 +750,15 @@ f(1/2) \amp \approx L_1(1/2)\\
 \amp = 1\text{.}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_linear_approx_quadratic-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="eg_linear_approx_quadratic-3-1-1-2">
-<div class="para" id="eg_linear_approx_quadratic-3-1-1-2-1">The exact value is <span class="process-math">\(f(1/2)=3-(1/2-2)^2=3-9/4=3/4\text{.}\)</span> Thus our estimate is off by <span class="process-math">\(1/4\text{:}\)</span> i.e., <span class="process-math">\(\abs{L_1(1/2)-f(1/2)}=1/4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_linear_approx_quadratic-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-</ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_quadratic-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 19.8.1"><a href="#eg_linear_approx_quadratic-3" title="Copy heading and permalink for Solution 19.8.1" aria-label="Copy heading and permalink for Solution 19.8.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 19.8: Linear approximation: quadratic"><a href="#eg_linear_approx_quadratic" title="Copy heading and permalink for Example 19.8: Linear approximation: quadratic" aria-label="Copy heading and permalink for Example 19.8: Linear approximation: quadratic">🔗</a></div></article><article class="example example-like" id="eg_linear_approx_cuberoot"><h3 class="heading">
+</div></li>
+<li id="eg_linear_approx_quadratic-3-1-1-2"><div class="para" id="eg_linear_approx_quadratic-3-1-1-2-1">The exact value is <span class="process-math">\(f(1/2)=3-(1/2-2)^2=3-9/4=3/4\text{.}\)</span> Thus our estimate is off by <span class="process-math">\(1/4\text{:}\)</span> i.e., <span class="process-math">\(\abs{L_1(1/2)-f(1/2)}=1/4\text{.}\)</span>
+</div></li>
+</ol></div></div></details></div></article><article class="example example-like" id="eg_linear_approx_cuberoot"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.9</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: cube-root.</span>
 </h3>
-<div class="para" id="eg_linear_approx_cuberoot-2-1">Use linear approximation to estimate <span class="process-math">\(\sqrt[3]{8.05}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_cuberoot-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_linear_approx_cuberoot-2-1">Use linear approximation to estimate <span class="process-math">\(\sqrt[3]{8.05}\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_linear_approx_cuberoot-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_linear_approx_cuberoot-3-1">
+<div class="solutions"><details id="eg_linear_approx_cuberoot-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_cuberoot-3-1">
 <div class="para">To use linear approximation, we need to compute the linearization of a function <span class="process-math">\(f\)</span> centered at some input <span class="process-math">\(a\text{.}\)</span> We take <span class="process-math">\(f(x)\sqrt[3]{x}\text{,}\)</span> and <span class="process-math">\(a=8\text{.}\)</span> Why <span class="process-math">\(a=8\text{?}\)</span> I can compute <span class="process-math">\(f(8)\)</span> and <span class="process-math">\(f'(8)\)</span> easily by hand, and <span class="process-math">\(8.05\)</span> is reasonably close to <span class="process-math">\(8\text{.}\)</span> We first compute</div>
 <div class="displaymath process-math" id="eg_linear_approx_cuberoot-3-1-10">
 \begin{align*}
@@ -535,17 +790,12 @@ f(8.05) \amp = 2.0041580\dots \\
 \end{align*}
 </div>
 <div class="para">Our estimate ended up being pretty close!</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_cuberoot-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 19.9.1"><a href="#eg_linear_approx_cuberoot-3" title="Copy heading and permalink for Solution 19.9.1" aria-label="Copy heading and permalink for Solution 19.9.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 19.9: Linear approximation: cube-root"><a href="#eg_linear_approx_cuberoot" title="Copy heading and permalink for Example 19.9: Linear approximation: cube-root" aria-label="Copy heading and permalink for Example 19.9: Linear approximation: cube-root">🔗</a></div></article><article class="example example-like" id="eg_linear_approx_trig"><h3 class="heading">
+</div></div></details></div></article><article class="example example-like" id="eg_linear_approx_trig"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.10</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: trig.</span>
 </h3>
-<div class="para" id="eg_linear_approx_trig-2-1">Let <span class="process-math">\(f(x)=\tan(\pi x)\text{.}\)</span> Use linear approximation to estimate <span class="process-math">\(f(0.251)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_trig-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="eg_linear_approx_trig-2-1">Let <span class="process-math">\(f(x)=\tan(\pi x)\text{.}\)</span> Use linear approximation to estimate <span class="process-math">\(f(0.251)\text{.}\)</span>
 </div>
-<div class="solutions"><details id="eg_linear_approx_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_linear_approx_trig-3-1">
+<div class="solutions"><details id="eg_linear_approx_trig-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_trig-3-1">
 <div class="para">We compute the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(f\)</span> centered at <span class="process-math">\(a=\frac{1}{4}=0.25\text{.}\)</span> First we compute the derivative of <span class="process-math">\(f\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="eg_linear_approx_trig-3-1-5">
@@ -570,31 +820,17 @@ f(0.251) \amp \approx L(0.251)\\
 \amp = \frac{\pi}{500}+1\text{.}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_trig-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 19.10.1"><a href="#eg_linear_approx_trig-3" title="Copy heading and permalink for Solution 19.10.1" aria-label="Copy heading and permalink for Solution 19.10.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 19.10: Linear approximation: trig"><a href="#eg_linear_approx_trig" title="Copy heading and permalink for Example 19.10: Linear approximation: trig" aria-label="Copy heading and permalink for Example 19.10: Linear approximation: trig">🔗</a></div></article><article class="example example-like" id="eg_linear_approx_marshmallow"><h3 class="heading">
+</div></div></details></div></article><article class="example example-like" id="eg_linear_approx_marshmallow"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">19.11</span><span class="period">.</span><span class="space"> </span><span class="title">Linear approximation: marshmallow.</span>
 </h3>
 <div class="para logical" id="eg_linear_approx_marshmallow-2-1">
 <div class="para">Dudley places a cylindrical marshmallow in the microwave, causing it to expand such a manner that the ratio of its height and radius is preserved. Initially the height and radius of the marshmallow are both equal to 2 centimeters; when Dudley removes the marshmallow the height and radius are both equal to 2.1 centimeters.</div>
 <ol class="decimal" id="eg_linear_approx_marshmallow-2-1-1">
-<li id="eg_linear_approx_marshmallow-2-1-1-1">
-<div class="para" id="eg_linear_approx_marshmallow-2-1-1-1-1">Use linear approximation to <em class="emphasis">estimate</em> the change in volume of the marshmallow.<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-2-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_linear_approx_marshmallow-2-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="eg_linear_approx_marshmallow-2-1-1-2">
-<div class="para" id="eg_linear_approx_marshmallow-2-1-1-2-1">Compare your estimate with the actual change in volume.<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_linear_approx_marshmallow-2-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
+<li id="eg_linear_approx_marshmallow-2-1-1-1"><div class="para" id="eg_linear_approx_marshmallow-2-1-1-1-1">Use linear approximation to <em class="emphasis">estimate</em> the change in volume of the marshmallow.</div></li>
+<li id="eg_linear_approx_marshmallow-2-1-1-2"><div class="para" id="eg_linear_approx_marshmallow-2-1-1-2-1">Compare your estimate with the actual change in volume.</div></li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="eg_linear_approx_marshmallow-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
-<div class="para logical" id="eg_linear_approx_marshmallow-3-1">
+<div class="solutions"><details id="eg_linear_approx_marshmallow-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="eg_linear_approx_marshmallow-3-1">
 <div class="para">Since the radius <span class="process-math">\(r\)</span> and height <span class="process-math">\(h\)</span> of the marshmallow are initially equal, and since the marshmallow expands in such a way that the ratio of radius to height is preserved, we see that we always have <span class="process-math">\(r=h\text{,}\)</span> and thus</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -603,8 +839,7 @@ V=\pi r^2 h=\pi x^3\text{,}
 </div>
 <div class="para">where <span class="process-math">\(x=r=h\text{.}\)</span> We thus treat volume <span class="process-math">\(V=f(x)=\pi x^3\)</span> as a function of the common dimension <span class="process-math">\(x\)</span> specifying both radius and height.</div>
 <ol class="decimal" id="eg_linear_approx_marshmallow-3-1-8">
-<li id="eg_linear_approx_marshmallow-3-1-8-1">
-<div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-1-1">
+<li id="eg_linear_approx_marshmallow-3-1-8-1"><div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-1-1">
 <div class="para">To estimate the change in volume, we compute the linearization <span class="process-math">\(L\)</span> of <span class="process-math">\(V=f(x)\)</span> centered at <span class="process-math">\(2\text{.}\)</span> Since <span class="process-math">\(f'(x)=3\pi x^2\text{,}\)</span> we have</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -619,12 +854,8 @@ L(x)=f'(2)(x-2)+f(2)=12\pi (x-2)+8\pi\text{.}
 \amp = 12\pi(0.1)=\frac{12\pi }{10}=1.2\, \pi
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-3-1-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#eg_linear_approx_marshmallow-3-1-8-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="eg_linear_approx_marshmallow-3-1-8-2">
-<div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-2-1">
+</div></li>
+<li id="eg_linear_approx_marshmallow-3-1-8-2"><div class="para logical" id="eg_linear_approx_marshmallow-3-1-8-2-1">
 <div class="para">The exact change of volume is</div>
 <div class="displaymath process-math" id="eg_linear_approx_marshmallow-3-1-8-2-1-1">
 \begin{align*}
@@ -632,22 +863,15 @@ f(2.1)-f(2) \amp = \pi (2.1)^3-8\pi \\
 \amp = (1.261) \pi \text{.}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-3-1-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Item 2"><a href="#eg_linear_approx_marshmallow-3-1-8-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
+</div></li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#eg_linear_approx_marshmallow-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" data-description="Solution 19.11.1"><a href="#eg_linear_approx_marshmallow-3" title="Copy heading and permalink for Solution 19.11.1" aria-label="Copy heading and permalink for Solution 19.11.1">🔗</a></div>
-</div></details></div>
-<div class="autopermalink" data-description="Example 19.11: Linear approximation: marshmallow"><a href="#eg_linear_approx_marshmallow" title="Copy heading and permalink for Example 19.11: Linear approximation: marshmallow" aria-label="Copy heading and permalink for Example 19.11: Linear approximation: marshmallow">🔗</a></div></article><div class="autopermalink" data-description="Section 19: Linearization"><a href="#s_linearize" title="Copy heading and permalink for Section 19: Linearization" aria-label="Copy heading and permalink for Section 19: Linearization">🔗</a></div></section></div>
-<div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_extreme.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></div></details></div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="s_related_rates_II.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_extreme.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 </body>
 </html>
